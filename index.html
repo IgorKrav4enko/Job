@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Aurora Effect</title>
+    <style>
+        body {
+            margin: 0;
+            background: #000; /* Темний фон як основа */
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .aurora-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            filter: blur(80px); /* Головний секрет — сильне розмиття */
+            opacity: 0.7;
+        }
+
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            mix-blend-mode: screen;
+            animation: move 20s infinite alternate;
+        }
+
+        /* Різні кольори для "хвиль" */
+        .blob-1 { background: #00ffcc; left: -10%; top: -10%; }
+        .blob-2 { background: #3333ff; right: -10%; top: 20%; animation-duration: 25s; }
+        .blob-3 { background: #ff00ff; left: 20%; bottom: -10%; animation-duration: 15s; }
+
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(20vw, 30vh) scale(1.5); }
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <h1 style="color: white; position: relative; font-family: sans-serif; text-align: center; margin-top: 20%;">
+        Ефект Аврори
+    </h1>
+</body>
+</html>
