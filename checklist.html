@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Structy Checklist</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#161616",
+            paper: "#f6f3ea",
+            accent: "#e76f51",
+            accentDark: "#bf4b2f",
+            mint: "#2a9d8f",
+            sand: "#e9c46a",
+            line: "#d8d1c2"
+          },
+          fontFamily: {
+            heading: ["Manrope", "sans-serif"],
+            body: ["Space Grotesk", "sans-serif"]
+          },
+          boxShadow: {
+            card: "0 20px 45px rgba(22, 22, 22, 0.08)"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-paper text-ink font-body">
+  <main class="max-w-6xl mx-auto px-6 py-10 md:px-10">
+    <section class="rounded-[28px] bg-white shadow-card border border-line overflow-hidden">
+      <div class="bg-[radial-gradient(circle_at_top_left,_rgba(233,196,106,0.35),_transparent_35%),linear-gradient(135deg,_#161616,_#252525)] text-white p-8 md:p-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="uppercase tracking-[0.35em] text-xs text-sand mb-3">Template Page</p>
+            <h1 class="font-heading text-4xl md:text-5xl font-extrabold leading-tight">Structy Task Checklist</h1>
+            <p class="mt-4 text-white/75 max-w-2xl">Шаблонна сторінка для відмітки прогресу по задачах. Чекбокси зберігаються локально у браузері.</p>
+          </div>
+          <div class="flex gap-3">
+            <a class="inline-flex items-center justify-center rounded-full bg-white text-ink px-5 py-3 font-semibold hover:bg-sand transition-colors" href="./index.html">На головну</a>
+            <a class="inline-flex items-center justify-center rounded-full border border-white/30 px-5 py-3 font-semibold hover:bg-white/10 transition-colors" href="./structy.md" target="_blank">Відкрити source</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-8 md:p-10">
+        <div class="grid gap-6 md:grid-cols-[1.2fr_0.8fr] items-start">
+          <section class="rounded-3xl border border-line bg-paper/70 p-6">
+            <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div>
+                <p class="text-sm uppercase tracking-[0.25em] text-accent">Progress</p>
+                <h2 class="font-heading text-2xl font-extrabold mt-2">Вибрані задачі</h2>
+              </div>
+              <button class="rounded-full border border-line px-4 py-2 text-sm font-semibold hover:border-accent hover:text-accent transition-colors" id="reset-progress" type="button">Скинути всі чекбокси</button>
+            </div>
+
+            <div class="mt-6 h-4 rounded-full bg-white border border-line overflow-hidden">
+              <div class="h-full bg-mint transition-all duration-300" id="progress-bar" style="width: 0%"></div>
+            </div>
+            <p class="mt-3 text-sm text-ink/70"><span class="font-bold text-ink" id="progress-text">0 / 6</span> задач виконано</p>
+
+            <div class="mt-8 space-y-4" id="checklist">
+              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
+                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="is-prime" type="checkbox" />
+                <span>
+                  <span class="block font-heading text-lg font-bold">is prime</span>
+                  <span class="block text-sm text-ink/70 mt-1">Introduction • перевірка числа на простоту</span>
+                </span>
+              </label>
+
+              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
+                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="fizz-buzz" type="checkbox" />
+                <span>
+                  <span class="block font-heading text-lg font-bold">fizz buzz</span>
+                  <span class="block text-sm text-ink/70 mt-1">Big O • базова практика циклів та умов</span>
+                </span>
+              </label>
+
+              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
+                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="anagrams" type="checkbox" />
+                <span>
+                  <span class="block font-heading text-lg font-bold">anagrams</span>
+                  <span class="block text-sm text-ink/70 mt-1">Hashing • рядки та підрахунок частот</span>
+                </span>
+              </label>
+
+              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
+                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="most-frequent-char" type="checkbox" />
+                <span>
+                  <span class="block font-heading text-lg font-bold">most frequent char</span>
+                  <span class="block text-sm text-ink/70 mt-1">Hashing • пошук символу з найбільшою частотою</span>
+                </span>
+              </label>
+
+              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
+                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="pair-sum" type="checkbox" />
+                <span>
+                  <span class="block font-heading text-lg font-bold">pair sum</span>
+                  <span class="block text-sm text-ink/70 mt-1">Hashing • two sum через словник</span>
+                </span>
+              </label>
+
+              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
+                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="pair-product" type="checkbox" />
+                <span>
+                  <span class="block font-heading text-lg font-bold">pair product</span>
+                  <span class="block text-sm text-ink/70 mt-1">Hashing • пошук пари по добутку</span>
+                </span>
+              </label>
+            </div>
+          </section>
+
+          <aside class="space-y-6">
+            <section class="rounded-3xl bg-ink text-white p-6">
+              <p class="uppercase tracking-[0.25em] text-xs text-sand">Quick Links</p>
+              <div class="mt-5 space-y-3">
+                <a class="block rounded-2xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 transition-colors" href="./tasks.html" target="_blank">
+                  <span class="block font-heading text-lg font-bold">tasks.html</span>
+                  <span class="block text-sm text-white/65 mt-1">Переглянути список задач окремою сторінкою</span>
+                </a>
+                <a class="block rounded-2xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 transition-colors" href="./structy.md" target="_blank">
+                  <span class="block font-heading text-lg font-bold">structy.md</span>
+                  <span class="block text-sm text-white/65 mt-1">Відкрити вихідний markdown-файл</span>
+                </a>
+              </div>
+            </section>
+
+            <section class="rounded-3xl border border-line bg-white p-6">
+              <p class="uppercase tracking-[0.25em] text-xs text-accent">How To Reuse</p>
+              <h3 class="font-heading text-2xl font-extrabold mt-3">Це шаблон</h3>
+              <p class="mt-3 text-sm text-ink/75">Можемо швидко розширити цю сторінку під усі задачі, додати фільтри, категорії, дати або посилання на Python-файли.</p>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const storageKey = "structy-checklist-state";
+    const checkboxes = Array.from(document.querySelectorAll("[data-task-id]"));
+    const progressBar = document.getElementById("progress-bar");
+    const progressText = document.getElementById("progress-text");
+    const resetButton = document.getElementById("reset-progress");
+
+    const readState = () => {
+      try {
+        return JSON.parse(localStorage.getItem(storageKey) || "{}");
+      } catch {
+        return {};
+      }
+    };
+
+    const writeState = (state) => {
+      localStorage.setItem(storageKey, JSON.stringify(state));
+    };
+
+    const updateProgress = () => {
+      const completed = checkboxes.filter((checkbox) => checkbox.checked).length;
+      const total = checkboxes.length;
+      const percent = total === 0 ? 0 : (completed / total) * 100;
+
+      progressBar.style.width = percent + "%";
+      progressText.textContent = completed + " / " + total;
+    };
+
+    const initialState = readState();
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = Boolean(initialState[checkbox.dataset.taskId]);
+
+      checkbox.addEventListener("change", () => {
+        const nextState = readState();
+        nextState[checkbox.dataset.taskId] = checkbox.checked;
+        writeState(nextState);
+        updateProgress();
+      });
+    });
+
+    resetButton.addEventListener("click", () => {
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = false;
+      });
+      localStorage.removeItem(storageKey);
+      updateProgress();
+    });
+
+    updateProgress();
+  </script>
+</body>
+</html>
