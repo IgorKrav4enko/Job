@@ -3,30 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Structy Checklist</title>
+  <title>Structy Topics Checklist</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            ink: "#161616",
-            paper: "#f6f3ea",
-            accent: "#e76f51",
-            accentDark: "#bf4b2f",
-            mint: "#2a9d8f",
-            sand: "#e9c46a",
-            line: "#d8d1c2"
+            paper: "#f7f1e3",
+            ink: "#1f1d1a",
+            coral: "#dd6e42",
+            pine: "#4f6d5d",
+            gold: "#d4a373",
+            line: "#ddd2bf",
+            mist: "#fffaf0"
           },
           fontFamily: {
             heading: ["Manrope", "sans-serif"],
             body: ["Space Grotesk", "sans-serif"]
           },
           boxShadow: {
-            card: "0 20px 45px rgba(22, 22, 22, 0.08)"
+            soft: "0 18px 40px rgba(31, 29, 26, 0.08)"
           }
         }
       }
@@ -34,120 +34,110 @@
   </script>
 </head>
 <body class="bg-paper text-ink font-body">
-  <main class="max-w-6xl mx-auto px-6 py-10 md:px-10">
-    <section class="rounded-[28px] bg-white shadow-card border border-line overflow-hidden">
-      <div class="bg-[radial-gradient(circle_at_top_left,_rgba(233,196,106,0.35),_transparent_35%),linear-gradient(135deg,_#161616,_#252525)] text-white p-8 md:p-10">
-        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p class="uppercase tracking-[0.35em] text-xs text-sand mb-3">Template Page</p>
-            <h1 class="font-heading text-4xl md:text-5xl font-extrabold leading-tight">Structy Task Checklist</h1>
-            <p class="mt-4 text-white/75 max-w-2xl">Шаблонна сторінка для відмітки прогресу по задачах. Чекбокси зберігаються локально у браузері.</p>
+  <main class="max-w-7xl mx-auto px-5 py-8 md:px-8 md:py-10">
+    <section class="overflow-hidden rounded-[32px] border border-line bg-white shadow-soft">
+      <div class="bg-[radial-gradient(circle_at_top_left,_rgba(212,163,115,0.42),_transparent_32%),linear-gradient(135deg,_#1f1d1a,_#2a2621)] px-6 py-8 text-white md:px-10 md:py-10">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-3xl">
+            <p class="text-xs uppercase tracking-[0.35em] text-gold">Structy Roadmap</p>
+            <h1 class="mt-3 font-heading text-4xl font-extrabold leading-tight md:text-5xl">Теми та задачі в одному місці</h1>
+            <p class="mt-4 text-sm text-white/75 md:text-base">Тут зібрані всі головні теми зі `structy.md`. Натискай на тему, відкривай список задач і відмічай прогрес чекбоксами.</p>
           </div>
-          <div class="flex gap-3">
-            <a class="inline-flex items-center justify-center rounded-full bg-white text-ink px-5 py-3 font-semibold hover:bg-sand transition-colors" href="./index.html">На головну</a>
-            <a class="inline-flex items-center justify-center rounded-full border border-white/30 px-5 py-3 font-semibold hover:bg-white/10 transition-colors" href="./structy.md" target="_blank">Відкрити source</a>
+          <div class="flex flex-wrap gap-3">
+            <a class="rounded-full bg-white px-5 py-3 font-semibold text-ink transition-colors hover:bg-gold" href="./index.html">На головну</a>
+            <a class="rounded-full border border-white/25 px-5 py-3 font-semibold transition-colors hover:bg-white/10" href="./structy.md" target="_blank">Відкрити structy.md</a>
+            <a class="rounded-full border border-white/25 px-5 py-3 font-semibold transition-colors hover:bg-white/10" href="./tasks.html" target="_blank">Відкрити tasks.html</a>
           </div>
         </div>
       </div>
 
-      <div class="p-8 md:p-10">
-        <div class="grid gap-6 md:grid-cols-[1.2fr_0.8fr] items-start">
-          <section class="rounded-3xl border border-line bg-paper/70 p-6">
-            <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-              <div>
-                <p class="text-sm uppercase tracking-[0.25em] text-accent">Progress</p>
-                <h2 class="font-heading text-2xl font-extrabold mt-2">Вибрані задачі</h2>
-              </div>
-              <button class="rounded-full border border-line px-4 py-2 text-sm font-semibold hover:border-accent hover:text-accent transition-colors" id="reset-progress" type="button">Скинути всі чекбокси</button>
+      <div class="grid gap-6 p-6 md:p-8 xl:grid-cols-[320px_minmax(0,1fr)]">
+        <aside class="space-y-6">
+          <section class="rounded-3xl border border-line bg-mist p-6">
+            <p class="text-xs uppercase tracking-[0.28em] text-coral">Progress</p>
+            <h2 class="mt-3 font-heading text-2xl font-extrabold">Загальний прогрес</h2>
+            <div class="mt-5 h-4 overflow-hidden rounded-full border border-line bg-white">
+              <div class="h-full bg-pine transition-all duration-300" id="progress-bar" style="width: 0%"></div>
             </div>
+            <p class="mt-3 text-sm text-ink/75"><span class="font-bold text-ink" id="progress-text">0 / 0</span> задач виконано</p>
+            <button class="mt-5 w-full rounded-2xl border border-line px-4 py-3 text-sm font-semibold transition-colors hover:border-coral hover:text-coral" id="reset-progress" type="button">Скинути всі чекбокси</button>
+          </section>
 
-            <div class="mt-6 h-4 rounded-full bg-white border border-line overflow-hidden">
-              <div class="h-full bg-mint transition-all duration-300" id="progress-bar" style="width: 0%"></div>
-            </div>
-            <p class="mt-3 text-sm text-ink/70"><span class="font-bold text-ink" id="progress-text">0 / 6</span> задач виконано</p>
-
-            <div class="mt-8 space-y-4" id="checklist">
-              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
-                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="is-prime" type="checkbox" />
-                <span>
-                  <span class="block font-heading text-lg font-bold">is prime</span>
-                  <span class="block text-sm text-ink/70 mt-1">Introduction • перевірка числа на простоту</span>
-                </span>
-              </label>
-
-              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
-                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="fizz-buzz" type="checkbox" />
-                <span>
-                  <span class="block font-heading text-lg font-bold">fizz buzz</span>
-                  <span class="block text-sm text-ink/70 mt-1">Big O • базова практика циклів та умов</span>
-                </span>
-              </label>
-
-              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
-                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="anagrams" type="checkbox" />
-                <span>
-                  <span class="block font-heading text-lg font-bold">anagrams</span>
-                  <span class="block text-sm text-ink/70 mt-1">Hashing • рядки та підрахунок частот</span>
-                </span>
-              </label>
-
-              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
-                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="most-frequent-char" type="checkbox" />
-                <span>
-                  <span class="block font-heading text-lg font-bold">most frequent char</span>
-                  <span class="block text-sm text-ink/70 mt-1">Hashing • пошук символу з найбільшою частотою</span>
-                </span>
-              </label>
-
-              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
-                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="pair-sum" type="checkbox" />
-                <span>
-                  <span class="block font-heading text-lg font-bold">pair sum</span>
-                  <span class="block text-sm text-ink/70 mt-1">Hashing • two sum через словник</span>
-                </span>
-              </label>
-
-              <label class="flex items-start gap-4 rounded-2xl bg-white border border-line p-4 hover:border-accent transition-colors">
-                <input class="mt-1 h-5 w-5 rounded border-line text-accent focus:ring-accent" data-task-id="pair-product" type="checkbox" />
-                <span>
-                  <span class="block font-heading text-lg font-bold">pair product</span>
-                  <span class="block text-sm text-ink/70 mt-1">Hashing • пошук пари по добутку</span>
-                </span>
-              </label>
+          <section class="rounded-3xl border border-line bg-white p-6">
+            <p class="text-xs uppercase tracking-[0.28em] text-coral">Search</p>
+            <label class="mt-4 block">
+              <span class="mb-2 block text-sm text-ink/70">Пошук по темах або задачах</span>
+              <input class="w-full rounded-2xl border-line bg-mist px-4 py-3 text-sm focus:border-coral focus:ring-coral" id="topic-search" placeholder="Наприклад: graph, recursion, anagrams" type="text" />
+            </label>
+            <div class="mt-4 flex gap-3">
+              <button class="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90" id="expand-all" type="button">Розгорнути всі</button>
+              <button class="rounded-full border border-line px-4 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral" id="collapse-all" type="button">Згорнути всі</button>
             </div>
           </section>
 
-          <aside class="space-y-6">
-            <section class="rounded-3xl bg-ink text-white p-6">
-              <p class="uppercase tracking-[0.25em] text-xs text-sand">Quick Links</p>
-              <div class="mt-5 space-y-3">
-                <a class="block rounded-2xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 transition-colors" href="./tasks.html" target="_blank">
-                  <span class="block font-heading text-lg font-bold">tasks.html</span>
-                  <span class="block text-sm text-white/65 mt-1">Переглянути список задач окремою сторінкою</span>
-                </a>
-                <a class="block rounded-2xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 transition-colors" href="./structy.md" target="_blank">
-                  <span class="block font-heading text-lg font-bold">structy.md</span>
-                  <span class="block text-sm text-white/65 mt-1">Відкрити вихідний markdown-файл</span>
-                </a>
+          <section class="rounded-3xl border border-line bg-ink p-6 text-white">
+            <p class="text-xs uppercase tracking-[0.28em] text-gold">Included</p>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-2xl bg-white/5 p-4">
+                <div class="font-heading text-2xl font-bold" id="topic-count">0</div>
+                <div class="mt-1 text-white/65">Головних тем</div>
               </div>
-            </section>
+              <div class="rounded-2xl bg-white/5 p-4">
+                <div class="font-heading text-2xl font-bold" id="task-count">0</div>
+                <div class="mt-1 text-white/65">Задач у списку</div>
+              </div>
+            </div>
+          </section>
+        </aside>
 
-            <section class="rounded-3xl border border-line bg-white p-6">
-              <p class="uppercase tracking-[0.25em] text-xs text-accent">How To Reuse</p>
-              <h3 class="font-heading text-2xl font-extrabold mt-3">Це шаблон</h3>
-              <p class="mt-3 text-sm text-ink/75">Можемо швидко розширити цю сторінку під усі задачі, додати фільтри, категорії, дати або посилання на Python-файли.</p>
-            </section>
-          </aside>
-        </div>
+        <section>
+          <div class="mb-5 flex items-center justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.28em] text-coral">Topics</p>
+              <h2 class="mt-2 font-heading text-3xl font-extrabold">Основні теми Structy</h2>
+            </div>
+            <p class="text-sm text-ink/60" id="visible-count">0 тем видно</p>
+          </div>
+          <div class="space-y-4" id="topics-root"></div>
+          <p class="hidden rounded-3xl border border-dashed border-line bg-mist px-6 py-8 text-center text-sm text-ink/65" id="empty-state">Нічого не знайдено. Спробуй інший пошуковий запит.</p>
+        </section>
       </div>
     </section>
   </main>
 
   <script>
-    const storageKey = "structy-checklist-state";
-    const checkboxes = Array.from(document.querySelectorAll("[data-task-id]"));
+    const topics = [
+      { title: "0. Introduction", slug: "introduction", tasks: ["hey programmer", "max value", "longest word", "all even", "is prime"] },
+      { title: "1. Big O Notation", slug: "big-o-notation", tasks: ["fizz buzz", "pairs"] },
+      { title: "2. Hashing", slug: "hashing", tasks: ["anagrams", "most frequent char", "pair sum", "pair product", "intersection", "all unique", "intersection with dupes"] },
+      { title: "3. Beginner Recursion", slug: "beginner-recursion", tasks: ["sum numbers recursive", "factorial", "sum of lengths", "reverse string recursive", "palindrome recursive", "fibonacci"] },
+      { title: "4. Linked List I", slug: "linked-list-i", tasks: ["linked list values", "sum list", "linked list find", "get node value", "reverse list", "zipper lists", "merge lists", "is univalue list", "longest streak", "remove node", "insert node"] },
+      { title: "5. Binary Tree I", slug: "binary-tree-i", tasks: ["depth first values", "breadth first values", "tree sum", "tree includes", "tree min value", "max root to leaf path sum", "tree path finder", "tree value count", "how high", "bottom right value", "all tree paths", "tree levels", "level averages", "leaf list"] },
+      { title: "6. Graph I", slug: "graph-i", tasks: ["has path", "undirected path", "connected components count", "largest component", "shortest path", "island count", "minimum island", "closest carrot", "best bridge", "has cycle", "prereqs possible"] },
+      { title: "7. Sliding Window", slug: "sliding-window", tasks: ["max subarray sum size k", "max subarray product size k", "subarray target sum size k", "has substring anagram"] },
+      { title: "8. Two Pointer", slug: "two-pointer", tasks: ["is palindrome", "uncompress", "compress", "five sort", "is subsequence"] },
+      { title: "9. Dynamic Programming", slug: "dynamic-programming", tasks: ["fib", "tribonacci", "sum possible", "min change", "count paths", "max path sum", "non-adjacent sum", "summing squares", "counting change", "array stepper", "max palin subsequence", "overlap subsequence", "can concat", "quickest concat", "valid compound", "count compounds", "longest path", "semesters required"] },
+      { title: "10. Stack", slug: "stack", tasks: ["reverse some chars", "paired parentheses", "befitting brackets", "decompress braces", "nesting score"] },
+      { title: "11. Array and String", slug: "array-and-string", tasks: ["running sum", "has subarray sum", "subarray sum count", "merge sort", "combine intervals", "binary search", "lexical order", "detect dictionary"] },
+      { title: "12. Linked List II", slug: "linked-list-ii", tasks: ["linked palindrome", "middle value", "linked list cycle", "undupe sorted linked list", "create linked list", "build a queue", "add lists"] },
+      { title: "13. Binary Tree II", slug: "binary-tree-ii", tasks: ["lowest common ancestor", "flip tree", "lefty nodes", "binary search tree includes", "is binary search tree", "post order", "build tree in post", "build tree in pre", "is tree balanced"] },
+      { title: "14. Heap", slug: "heap", tasks: [] },
+      { title: "15. Exhaustive Recursion", slug: "exhaustive-recursion", tasks: ["subsets", "permutations", "create combinations", "grocery budget", "lining up", "possible paths", "parenthetical possibilities", "substitute synonyms"] },
+      { title: "16. Graph II", slug: "graph-ii", tasks: ["knight attack", "can color", "tolerant teams", "rare routing", "topological order", "safe cracking", "string search", "province sizes", "extra cable", "weighted graph min path", "lowest toll"] },
+      { title: "17. Mixed Recall", slug: "mixed-recall", tasks: [] }
+    ];
+
+    const storageKey = "structy-topic-checklist-state";
+    const topicsRoot = document.getElementById("topics-root");
     const progressBar = document.getElementById("progress-bar");
     const progressText = document.getElementById("progress-text");
+    const topicCount = document.getElementById("topic-count");
+    const taskCount = document.getElementById("task-count");
+    const visibleCount = document.getElementById("visible-count");
+    const emptyState = document.getElementById("empty-state");
+    const searchInput = document.getElementById("topic-search");
+    const expandAllButton = document.getElementById("expand-all");
+    const collapseAllButton = document.getElementById("collapse-all");
     const resetButton = document.getElementById("reset-progress");
 
     const readState = () => {
@@ -162,37 +152,170 @@
       localStorage.setItem(storageKey, JSON.stringify(state));
     };
 
+    const taskId = (topicSlug, taskName) => topicSlug + "::" + taskName.toLowerCase().replaceAll(" ", "-");
+
+    const state = readState();
+
+    const renderTopics = () => {
+      topicsRoot.innerHTML = "";
+
+      topics.forEach((topic) => {
+        const topicEl = document.createElement("details");
+        topicEl.className = "topic-card group rounded-3xl border border-line bg-white open:shadow-soft";
+        topicEl.dataset.search = (topic.title + " " + topic.tasks.join(" ")).toLowerCase();
+        topicEl.open = topic.tasks.length > 0 && topic.title.startsWith("0.");
+
+        const summary = document.createElement("summary");
+        summary.className = "flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5";
+
+        const summaryText = document.createElement("div");
+        const topicLabel = document.createElement("p");
+        topicLabel.className = "text-xs uppercase tracking-[0.25em] text-coral";
+        topicLabel.textContent = "Theme";
+
+        const title = document.createElement("h3");
+        title.className = "mt-2 font-heading text-2xl font-extrabold";
+        title.textContent = topic.title;
+
+        const meta = document.createElement("p");
+        meta.className = "mt-2 text-sm text-ink/60";
+        meta.textContent = topic.tasks.length === 0 ? "Поки без задач у цьому конспекті" : topic.tasks.length + " задач";
+
+        summaryText.append(topicLabel, title, meta);
+
+        const actions = document.createElement("div");
+        actions.className = "flex items-center gap-3";
+
+        const sourceLink = document.createElement("a");
+        sourceLink.className = "rounded-full border border-line px-4 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
+        sourceLink.href = "./structy.md";
+        sourceLink.target = "_blank";
+        sourceLink.textContent = "source";
+
+        const arrow = document.createElement("span");
+        arrow.className = "text-2xl text-ink/45 transition-transform group-open:rotate-180";
+        arrow.textContent = "⌄";
+
+        actions.append(sourceLink, arrow);
+        summary.append(summaryText, actions);
+        topicEl.append(summary);
+
+        const content = document.createElement("div");
+        content.className = "border-t border-line px-6 py-5";
+
+        if (topic.tasks.length === 0) {
+          const placeholder = document.createElement("p");
+          placeholder.className = "rounded-2xl bg-mist px-4 py-4 text-sm text-ink/65";
+          placeholder.textContent = "Для цієї теми в поточному списку ще немає окремих задач.";
+          content.append(placeholder);
+        } else {
+          const list = document.createElement("div");
+          list.className = "grid gap-3";
+
+          topic.tasks.forEach((taskName) => {
+            const id = taskId(topic.slug, taskName);
+
+            const label = document.createElement("label");
+            label.className = "flex items-start gap-4 rounded-2xl bg-mist px-4 py-4 transition-colors hover:bg-paper";
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.className = "mt-1 h-5 w-5 rounded border-line text-coral focus:ring-coral";
+            checkbox.dataset.taskId = id;
+            checkbox.checked = Boolean(state[id]);
+            checkbox.addEventListener("change", () => {
+              state[id] = checkbox.checked;
+              writeState(state);
+              updateProgress();
+            });
+
+            const textWrap = document.createElement("span");
+            textWrap.className = "min-w-0 flex-1";
+
+            const taskTitle = document.createElement("span");
+            taskTitle.className = "block font-heading text-lg font-bold";
+            taskTitle.textContent = taskName;
+
+            const taskMeta = document.createElement("span");
+            taskMeta.className = "mt-1 block text-sm text-ink/60";
+            taskMeta.textContent = topic.title;
+
+            textWrap.append(taskTitle, taskMeta);
+            label.append(checkbox, textWrap);
+            list.append(label);
+          });
+
+          content.append(list);
+        }
+
+        topicEl.append(content);
+        topicsRoot.append(topicEl);
+      });
+    };
+
+    const getCheckboxes = () => Array.from(document.querySelectorAll("[data-task-id]"));
+
     const updateProgress = () => {
+      const checkboxes = getCheckboxes();
       const completed = checkboxes.filter((checkbox) => checkbox.checked).length;
       const total = checkboxes.length;
       const percent = total === 0 ? 0 : (completed / total) * 100;
 
       progressBar.style.width = percent + "%";
       progressText.textContent = completed + " / " + total;
+      topicCount.textContent = String(topics.length);
+      taskCount.textContent = String(total);
     };
 
-    const initialState = readState();
+    const filterTopics = () => {
+      const query = searchInput.value.trim().toLowerCase();
+      const topicCards = Array.from(document.querySelectorAll(".topic-card"));
+      let visible = 0;
 
-    checkboxes.forEach((checkbox) => {
-      checkbox.checked = Boolean(initialState[checkbox.dataset.taskId]);
+      topicCards.forEach((card) => {
+        const matches = query === "" || card.dataset.search.includes(query);
+        card.classList.toggle("hidden", !matches);
+        if (matches) {
+          visible += 1;
+        }
+      });
 
-      checkbox.addEventListener("change", () => {
-        const nextState = readState();
-        nextState[checkbox.dataset.taskId] = checkbox.checked;
-        writeState(nextState);
-        updateProgress();
+      visibleCount.textContent = visible + " тем видно";
+      emptyState.classList.toggle("hidden", visible !== 0);
+    };
+
+    renderTopics();
+    updateProgress();
+    filterTopics();
+
+    searchInput.addEventListener("input", filterTopics);
+
+    expandAllButton.addEventListener("click", () => {
+      document.querySelectorAll(".topic-card").forEach((card) => {
+        if (!card.classList.contains("hidden")) {
+          card.open = true;
+        }
+      });
+    });
+
+    collapseAllButton.addEventListener("click", () => {
+      document.querySelectorAll(".topic-card").forEach((card) => {
+        card.open = false;
       });
     });
 
     resetButton.addEventListener("click", () => {
-      checkboxes.forEach((checkbox) => {
+      getCheckboxes().forEach((checkbox) => {
         checkbox.checked = false;
       });
+
+      Object.keys(state).forEach((key) => {
+        delete state[key];
+      });
+
       localStorage.removeItem(storageKey);
       updateProgress();
     });
-
-    updateProgress();
   </script>
 </body>
 </html>
