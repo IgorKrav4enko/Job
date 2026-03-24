@@ -584,184 +584,1014 @@ Node structure: `Node { val: value, next: pointer_to_next_node }`
 
 ## 5. Binary Tree I
 
-* depth first values
-* breadth first values
-* tree sum
-* tree includes
-* tree min value
-* max root to leaf path sum
-* tree path finder
-* tree value count
-* how high
-* bottom right value
-* all tree paths
-* tree levels
-* level averages
-* leaf list
+**Binary Trees** are hierarchical data structures where each node has at most two children (left and right). Tree traversal techniques (DFS, BFS) are fundamental for solving tree problems.
+
+---
+
+* **depth first values** - !!!
+* **breadth first values** - !!!
+* **tree sum** - !!!
+* **tree includes** - !!!
+* **tree min value** - !!!
+* **max root to leaf path sum** - !!!
+* **tree path finder** - !!!
+* **tree value count** - !!!
+* **how high** - !!!
+* **bottom right value** - !!!
+* **all tree paths** - !!!
+* **tree levels** - !!!
+* **level averages** - !!!
+* **leaf list** - !!!
 
 ---
 
 ## 6. Graph I
 
-* has path
-* undirected path
-* connected components count
-* largest component
-* shortest path
-* island count
-* minimum island
-* closest carrot
-* best bridge
-* has cycle
-* prereqs possible
+**Graph Theory** deals with structures of nodes and edges. Problems involve path finding, connectivity, and cycle detection using DFS and BFS traversals.
+
+---
+
+* **has path** - !!!
+
+* **undirected path**
+  - Write a function, `undirected_path`, that takes in a list of edges and two nodes (node_A, node_B). Return True if there's a path between the nodes.
+  - The graph is undirected (connections go both ways).
+  - Example: edges = [('i','j'), ('k','i'), ('m','k'), ('k','l'), ('o','n')] and nodes 'j', 'm' → True
+  - **Solution (DFS)**:
+    ```python
+    def undirected_path(edges, node_A, node_B):
+      graph = {}
+      for a, b in edges:
+        if a not in graph:
+          graph[a] = []
+        if b not in graph:
+          graph[b] = []
+        graph[a].append(b)
+        graph[b].append(a)
+      return has_path(graph, node_A, node_B, set())
+    
+    def has_path(graph, src, dst, visited):
+      if src == dst:
+        return True
+      if src in visited:
+        return False
+      visited.add(src)
+      for neighbor in graph[src]:
+        if has_path(graph, neighbor, dst, visited):
+          return True
+      return False
+    ```
+    - **Time Complexity**: O(n + e) | **Space Complexity**: O(n)
+
+* **connected components count**
+  - Write a function, `connected_components_count`, that takes in an adjacency list of an undirected graph. Return the number of connected components.
+  - **Solution (BFS)**:
+    ```python
+    from collections import deque
+    
+    def connected_components_count(graph):
+      visited = set()
+      component_count = 0
+      for node in graph:
+        if node not in visited:
+          queue = deque([node])
+          component_count += 1
+          while queue:
+            current = queue.popleft()
+            if current in visited:
+              continue
+            visited.add(current)
+            for neighbor in graph[current]:
+              if neighbor not in visited:
+                queue.append(neighbor)
+      return component_count
+    ```
+    - **Time Complexity**: O(n + e) | **Space Complexity**: O(n)
+
+* **largest component**
+  - Write a function, `largest_component`, that takes in an adjacency list. Return the size of the largest connected component.
+  - **Solution (BFS)**:
+    ```python
+    def largest_component(graph):
+      visited = set()
+      max_size = 0
+      for node in graph:
+        if node not in visited:
+          size = 0
+          queue = deque([node])
+          while queue:
+            current = queue.popleft()
+            if current in visited:
+              continue
+            visited.add(current)
+            size += 1
+            for neighbor in graph[current]:
+              if neighbor not in visited:
+                queue.append(neighbor)
+          max_size = max(max_size, size)
+      return max_size
+    ```
+    - **Time Complexity**: O(n + e) | **Space Complexity**: O(n)
+
+* **shortest path** - !!!
+
+* **island count**
+  - Write a function, `island_count`, that takes in a grid with 'W' (water) and 'L' (land). Return the number of islands.
+  - An island is a vertically or horizontally connected region of land.
+  - **Solution (DFS)**:
+    ```python
+    def island_count(grid):
+      visited = set()
+      count = 0
+      for r in range(len(grid)):
+        for c in range(len(grid[0])):
+          if explore(grid, r, c, visited):
+            count += 1
+      return count
+    
+    def explore(grid, r, c, visited):
+      if not (0 <= r < len(grid) and 0 <= c < len(grid[0])):
+        return False
+      if grid[r][c] == 'W' or (r, c) in visited:
+        return False
+      visited.add((r, c))
+      explore(grid, r-1, c, visited)
+      explore(grid, r+1, c, visited)
+      explore(grid, r, c-1, visited)
+      explore(grid, r, c+1, visited)
+      return True
+    ```
+    - **Time Complexity**: O(r·c) | **Space Complexity**: O(r·c)
+
+* **minimum island**
+  - Write a function, `minimum_island`, that takes in a grid. Return the size of the smallest island.
+  - **Solution (DFS)**:
+    ```python
+    def minimum_island(grid):
+      visited = set()
+      min_size = float('inf')
+      for r in range(len(grid)):
+        for c in range(len(grid[0])):
+          size = explore_size(grid, r, c, visited)
+          if size > 0:
+            min_size = min(min_size, size)
+      return min_size
+    
+    def explore_size(grid, r, c, visited):
+      if not (0 <= r < len(grid) and 0 <= c < len(grid[0])):
+        return 0
+      if grid[r][c] == 'W' or (r, c) in visited:
+        return 0
+      visited.add((r, c))
+      size = 1
+      size += explore_size(grid, r-1, c, visited)
+      size += explore_size(grid, r+1, c, visited)
+      size += explore_size(grid, r, c-1, visited)
+      size += explore_size(grid, r, c+1, visited)
+      return size
+    ```
+    - **Time Complexity**: O(r·c) | **Space Complexity**: O(r·c)
+
+* **closest carrot**
+  - Write a function, `closest_carrot`, that takes in a grid, starting row, and column. Find the shortest path to a carrot ('C').
+  - 'X' is a wall, 'O' is open space. Move up/down/left/right. Return distance or -1 if unreachable.
+  - **Solution (BFS)**:
+    ```python
+    from collections import deque
+    
+    def closest_carrot(grid, sr, sc):
+      visited = {(sr, sc)}
+      queue = deque([(sr, sc, 0)])
+      while queue:
+        r, c, steps = queue.popleft()
+        if grid[r][c] == 'C':
+          return steps
+        for dr, dc in [(-1,0), (1,0), (0,-1), (0,1)]:
+          nr, nc = r + dr, c + dc
+          if 0 <= nr < len(grid) and 0 <= nc < len(grid[0]):
+            if grid[nr][nc] != 'X' and (nr, nc) not in visited:
+              visited.add((nr, nc))
+              queue.append((nr, nc, steps + 1))
+      return -1
+    ```
+    - **Time Complexity**: O(r·c) | **Space Complexity**: O(r·c)
+
+* **best bridge** - !!!
+
+* **has cycle**
+  - Write a function, `has_cycle`, that takes in an adjacency list of a directed graph. Return True if the graph contains a cycle.
+  - **Solution (DFS with states)**:
+    ```python
+    def has_cycle(graph):
+      visiting = set()
+      visited = set()
+      for node in graph:
+        if cycle_detect(graph, node, visiting, visited):
+          return True
+      return False
+    
+    def cycle_detect(graph, node, visiting, visited):
+      if node in visited:
+        return False
+      if node in visiting:
+        return True
+      visiting.add(node)
+      for neighbor in graph[node]:
+        if cycle_detect(graph, neighbor, visiting, visited):
+          return True
+      visiting.remove(node)
+      visited.add(node)
+      return False
+    ```
+    - **Time Complexity**: O(n + e) | **Space Complexity**: O(n)
+
+* **prereqs possible** - !!!
 
 ---
 
 ## 7. Sliding Window
 
-* max subarray sum size k
-* max subarray product size k
-* subarray target sum size k
-* has substring anagram
+**Sliding Window** technique maintains a window of elements and efficiently solves problems by sliding the window across the input while updating a calculation or state.
+
+---
+
+* **max subarray sum size k** - !!!
+* **max subarray product size k** - !!!
+* **subarray target sum size k** - !!!
+* **has substring anagram** - !!!
 
 ---
 
 ## 8. Two Pointer
 
-* is palindrome
-* uncompress
-* compress
-* five sort
-* is subsequence
+**Two Pointer** technique uses two pointers moving through an array, often converging from opposite ends or moving in the same direction at different speeds.
+
+---
+
+* **is palindrome** - !!!
+* **uncompress** - !!!
+* **compress** - !!!
+* **five sort** - !!!
+* **is subsequence** - !!!
 
 ---
 
 ## 9. Dynamic Programming
 
-* fib
-* tribonacci
-* sum possible
-* min change
-* count paths
-* max path sum
-* non-adjacent sum
-* summing squares
-* counting change
-* array stepper
-* max palin subsequence
-* overlap subsequence
-* can concat
-* quickest concat
-* valid compound
-* count compounds
-* longest path
-* semesters required
+**Dynamic Programming** solves complex problems by breaking them into overlapping subproblems and storing results to avoid redundant calculations.
+
+---
+
+* **fib** - !!!
+
+* **tribonacci** - !!!
+
+* **sum possible** - !!!
+
+* **min change** - !!!
+
+* **count paths** - !!!
+
+* **max path sum** - !!!
+
+* **non-adjacent sum** - !!!
+
+* **summing squares** - !!!
+
+* **counting change** - !!!
+
+* **array stepper** - !!!
+
+* **max palin subsequence**
+  - Write a function, `max_palin_subsequence`, that takes in a string. Return the length of the longest palindromic subsequence.
+  - A subsequence maintains relative order but doesn't need to be contiguous.
+  - Examples: `max_palin_subsequence('luwxult') # -> 5`, `max_palin_subsequence('xyzaxxzy') # -> 6`
+  - **Solution (Memoization)**:
+    ```python
+    def max_palin_subsequence(string):
+      memo = {}
+      return _max_palin_subsequence(string, 0, len(string) - 1, memo)
+    
+    def _max_palin_subsequence(string, start, end, memo):
+      if (start, end) in memo:
+        return memo[(start, end)]
+      if start > end:
+        return 0
+      if start == end:
+        return 1
+      if string[start] == string[end]:
+        result = 2 + _max_palin_subsequence(string, start + 1, end - 1, memo)
+      else:
+        left = _max_palin_subsequence(string, start + 1, end, memo)
+        right = _max_palin_subsequence(string, start, end - 1, memo)
+        result = max(left, right)
+      memo[(start, end)] = result
+      return result
+    ```
+    - **Time Complexity**: O(n²) | **Space Complexity**: O(n²)
+
+* **overlap subsequence** - !!!
+
+* **can concat** - !!!
+
+* **quickest concat**
+  - Write a function, `quickest_concat`, that takes in a string and a list of words. Return the minimum number of words to concatenate and build the string.
+  - You may use words multiple times. Return -1 if impossible.
+  - Examples: `quickest_concat('caution', ['ca', 'ion', 'caut', 'ut']) # -> 2`
+  - **Solution (Memoization)**:
+    ```python
+    def quickest_concat(s, words):
+      result = _quickest_concat(s, words, {})
+      return -1 if result == float('inf') else result
+    
+    def _quickest_concat(s, words, memo):
+      if s in memo:
+        return memo[s]
+      if len(s) == 0:
+        return 0
+      concats = float('inf')
+      for word in words:
+        if s.startswith(word):
+          concats = min(concats, 1 + _quickest_concat(s[len(word):], words, memo))
+      memo[s] = concats
+      return memo[s]
+    ```
+    - **Time Complexity**: O(n² · m) | **Space Complexity**: O(n²)
+
+* **valid compound** - !!!
+
+* **count compounds** - !!!
+
+* **longest path**
+  - Write a function, `longest_path`, that takes in a node of a directed acyclic graph. Return the length of the longest path in the graph.
+  - **Solution (DFS with Memoization)**:
+    ```python
+    def longest_path(graph):
+      memo = {}
+      def dfs(node):
+        if node in memo:
+          return memo[node]
+        max_len = 0
+        for neighbor in graph.get(node, []):
+          max_len = max(max_len, 1 + dfs(neighbor))
+        memo[node] = max_len
+        return max_len
+      return max(dfs(node) for node in graph) if graph else 0
+    ```
+    - **Time Complexity**: O(v + e) | **Space Complexity**: O(v)
+
+* **semesters required**
+  - Given a list of course prerequisites, return the minimum number of semesters to complete all courses.
+  - Prerequisite format: ['prereq', 'course'] means prereq must be taken before course.
+  - **Solution (Topological Sort with DFS)**:
+    ```python
+    def semesters_required(courses):
+      graph = {course: [] for course in courses}
+      for prereq, course in courses:
+        graph[course].append(prereq)
+      memo = {}
+      def dfs(course):
+        if course in memo:
+          return memo[course]
+        if not graph[course]:
+          return 1
+        max_semesters = 0
+        for prereq in graph[course]:
+          max_semesters = max(max_semesters, dfs(prereq))
+        memo[course] = max_semesters + 1
+        return memo[course]
+      return max(dfs(course) for course in graph) if courses else 0
+    ```
+    - **Time Complexity**: O(v + e) | **Space Complexity**: O(v)
 
 ---
 
 ## 10. Stack
 
-* reverse some chars
-* paired parentheses
-* befitting brackets
-* decompress braces
-* nesting score
+**Stack** is a LIFO data structure. Stack problems often involve balanced parentheses, nested structures, and reversing operations.
+
+---
+
+* **reverse some chars** - !!!
+
+* **paired parentheses**
+  - Write a function, `paired_parentheses`, that takes in a string as argument. The string contains opening and closing parentheses. Your function should return a boolean indicating whether or not the parentheses are well formed.
+  - Well-formed parentheses means every opening parenthesis `(` has a matching closing parenthesis `)` in the correct order.
+  - Examples: `paired_parentheses('(david)') # -> True`, `paired_parentheses('()(water)()') # -> True`, `paired_parentheses('()(water('))  # -> False`
+  - Test cases: `paired_parentheses('(')`, `paired_parentheses(')')`, `paired_parentheses('')`, `paired_parentheses('()')`, `paired_parentheses('()()c()')`
+  - **Solution 1 (Stack)**:
+    ```python
+    def paired_parentheses(string):
+      stack = []
+      for char in string:
+        if char == '(':
+          stack.append(char)
+        elif char == ')':
+          if not stack:
+            return False
+          stack.pop()
+      return len(stack) == 0
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(n)
+  - **Solution 2 (Counter)**:
+    ```python
+    def paired_parentheses(string):
+      count = 0
+      for char in string:
+        if char == '(':
+          count += 1
+        elif char == ')':
+          if count == 0:
+            return False
+          count -= 1
+      return count == 0
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(1)
+
+* **befitting brackets** - !!!
+
+* **decompress braces** - !!!
+
+* **nesting score** - !!!
 
 ---
 
 ## 11. Array and String
 
-* running sum
-* has subarray sum
-* subarray sum count
-* merge sort
-* combine intervals
-* binary search
-* lexical order
-* detect dictionary
+**Arrays and Strings** are fundamental data structures for searching, sorting, interval management, and pattern matching.
+
+---
+
+* **running sum** - !!!
+
+* **has subarray sum** - !!!
+
+* **subarray sum count** - !!!
+
+* **merge sort**
+  - Write a function, `merge_sort`, that takes in a list of numbers. Return a new list with elements sorted in ascending order.
+  - Your function must implement the merge sort algorithm.
+  - Examples: `merge_sort([10, 4, 42, 5, 8, 100]) # -> [4, 5, 8, 10, 42, 100]`
+  - **Solution (Divide and Conquer)**:
+    ```python
+    def merge_sort(nums):
+      if len(nums) <= 1:
+        return nums
+      mid = len(nums) // 2
+      left = merge_sort(nums[:mid])
+      right = merge_sort(nums[mid:])
+      return merge(left, right)
+    
+    def merge(list1, list2):
+      sorted_list = []
+      i = j = 0
+      while i < len(list1) and j < len(list2):
+        if list1[i] <= list2[j]:
+          sorted_list.append(list1[i])
+          i += 1
+        else:
+          sorted_list.append(list2[j])
+          j += 1
+      sorted_list.extend(list1[i:])
+      sorted_list.extend(list2[j:])
+      return sorted_list
+    ```
+    - **Time Complexity**: O(n log n) | **Space Complexity**: O(n)
+
+* **combine intervals**
+  - Write a function, `combine_intervals`, that takes in a list of intervals (tuples of start, end). Combine overlapping intervals and return a list of combined intervals.
+  - Example: `combine_intervals([(1,4), (12,15), (3,7), (8,13)]) # -> [(1,7), (8,15)]`
+  - Can return combined intervals in any order.
+  - **Solution (Sorting)**:
+    ```python
+    def combine_intervals(intervals):
+      sorted_intervals = sorted(intervals)
+      combined = [sorted_intervals[0]]
+      for current in sorted_intervals[1:]:
+        last = combined[-1]
+        if current[0] <= last[1]:
+          combined[-1] = (last[0], max(last[1], current[1]))
+        else:
+          combined.append(current)
+      return combined
+    ```
+    - **Time Complexity**: O(n log n) | **Space Complexity**: O(n)
+
+* **binary search**
+  - Write a function, `binary_search`, that takes in a sorted list and a target. Return the index where the target is found, or -1 if not found.
+  - Assume the array contains unique numbers sorted in increasing order.
+  - Your function must implement the binary search algorithm.
+  - **Solution (Recursive)**:
+    ```python
+    def binary_search(numbers, target, low=0, high=None):
+      if high is None:
+        high = len(numbers) - 1
+      if low > high:
+        return -1
+      mid = (low + high) // 2
+      if numbers[mid] == target:
+        return mid
+      elif numbers[mid] < target:
+        return binary_search(numbers, target, mid + 1, high)
+      else:
+        return binary_search(numbers, target, low, mid - 1)
+    ```
+    - **Time Complexity**: O(log n) | **Space Complexity**: O(log n)
+
+* **lexical order**
+  - Write a function, `lexical_order`, that takes in 2 words and an alphabet string. Return True if word_1 appears before word_2 in lexical order according to the given alphabet.
+  - The alphabet may be any arbitrary string of lowercase letters.
+  - Examples: `lexical_order('apple', 'dock', alphabet) # -> True`
+  - **Solution (Comparison)**:
+    ```python
+    def lexical_order(word_1, word_2, alphabet):
+      for i in range(min(len(word_1), len(word_2))):
+        rank1 = alphabet.find(word_1[i])
+        rank2 = alphabet.find(word_2[i])
+        if rank1 < rank2:
+          return True
+        elif rank1 > rank2:
+          return False
+      return len(word_1) <= len(word_2)
+    ```
+    - **Time Complexity**: O(min(m, n)) | **Space Complexity**: O(1)
+
+* **detect dictionary**
+  - Write a function, `detect_dictionary`, that takes in a dictionary (list) of words and an alphabet string. Return True if all words are lexically ordered according to the alphabet.
+  - **Solution (Validation)**:
+    ```python
+    def detect_dictionary(dictionary, alphabet):
+      for i in range(len(dictionary) - 1):
+        if not lexical_order(dictionary[i], dictionary[i + 1], alphabet):
+          return False
+      return True
+    ```
+    - **Time Complexity**: O(n · m) | **Space Complexity**: O(1)
 
 ---
 
 ## 12. Linked List II
 
-* linked palindrome
-* middle value
-* linked list cycle
-* undupe sorted linked list
-* create linked list
-* build a queue
-* add lists
+**Advanced Linked List** operations include cycle detection, palindromes, and list arithmetic.
+
+---
+
+* **linked palindrome**
+  - Write a function, `linked_palindrome`, that takes in the head of a linked list. Return True if the linked list is a palindrome.
+  - A palindrome is a sequence that reads the same forwards and backwards.
+  - **Solution (Array Comparison)**:
+    ```python
+    def linked_palindrome(head):
+      if head is None:
+        return True
+      values = []
+      current = head
+      while current is not None:
+        values.append(current.val)
+        current = current.next
+      return values == values[::-1]
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(n)
+
+* **middle value**
+  - Write a function, `middle_value`, that takes in the head of a linked list. Return the value of the middle node.
+  - For even-length lists, return the value of the second middle node.
+  - Assume the input list is non-empty.
+  - **Solution (Two Pointers)**:
+    ```python
+    def middle_value(head):
+      slow = head
+      fast = head
+      while fast is not None and fast.next is not None:
+        slow = slow.next
+        fast = fast.next.next
+      return slow.val
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(1)
+
+* **linked list cycle**
+  - Write a function, `linked_list_cycle`, that takes in the head of a linked list. Return True if the list contains a cycle.
+  - **Solution (Floyd's Cycle Detection)**:
+    ```python
+    def linked_list_cycle(head):
+      slow = head
+      fast = head
+      while fast is not None and fast.next is not None:
+        slow = slow.next
+        fast = fast.next.next
+        if slow is fast:
+          return True
+      return False
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(1)
+
+* **undupe sorted linked list** - !!!
+
+* **create linked list**
+  - Write a function, `create_linked_list`, that takes in a list of values. Create a linked list containing each item as node values. Return the head.
+  - **Solution (Iterative)**:
+    ```python
+    class Node:
+      def __init__(self, val):
+        self.val = val
+        self.next = None
+    
+    def create_linked_list(values):
+      dummy_head = Node(None)
+      tail = dummy_head
+      for value in values:
+        tail.next = Node(value)
+        tail = tail.next
+      return dummy_head.next
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(n)
+
+* **build a queue** - !!!
+
+* **add lists**
+  - Write a function, `add_lists`, that takes in the head of two linked lists. Each list represents a number with digits in reverse order.
+  - Return the head of a new linked list representing the sum.
+  - Example: 1->2->6 (621) + 4->5->3 (354) = 5->7->9 (975)
+  - **Solution (Iterative with Carry)**:
+    ```python
+    def add_lists(head_1, head_2):
+      dummy = Node(None)
+      tail = dummy
+      current_1 = head_1
+      current_2 = head_2
+      carry = 0
+      while current_1 or current_2 or carry:
+        val_1 = 0 if current_1 is None else current_1.val
+        val_2 = 0 if current_2 is None else current_2.val
+        total = val_1 + val_2 + carry
+        carry = 1 if total > 9 else 0
+        digit = total % 10
+        tail.next = Node(digit)
+        tail = tail.next
+        current_1 = None if current_1 is None else current_1.next
+        current_2 = None if current_2 is None else current_2.next
+      return dummy.next
+    ```
+    - **Time Complexity**: O(max(m, n)) | **Space Complexity**: O(max(m, n))
 
 ---
 
 ## 13. Binary Tree II
 
-* lowest common ancestor
-* flip tree
-* lefty nodes
-* binary search tree includes
-* is binary search tree
-* post order
-* build tree in post
-* build tree in pre
-* is tree balanced
+**Advanced Binary Tree** operations include BST validation, tree reconstruction, and ancestor queries.
+
+---
+
+* **lowest common ancestor**
+  - Write a function, `lowest_common_ancestor`, that takes in the root of a binary tree and two values. The function should return the value of the lowest common ancestor (LCA) of the two values in the tree.
+  - The LCA is the deepest node that has both values in its subtree. A node may be considered an ancestor of itself.
+  - Examples: Finding the lowest common ancestor of nodes with specific values in a tree.
+  - **Solution (Path Finding)**:
+    ```python
+    def lowest_common_ancestor(root, val1, val2):
+      path1 = find_path(root, val1)
+      path2 = find_path(root, val2)
+      first_path = set(path1)
+      for value in path2:
+        if value in first_path:
+          return value
+    
+    def find_path(root, target):
+      if root is None:
+        return None
+      if root.val == target:
+        return [root.val]
+      left = find_path(root.left, target)
+      if left is not None:
+        left.append(root.val)
+        return left
+      right = find_path(root.right, target)
+      if right is not None:
+        right.append(root.val)
+        return right
+      return None
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(h)
+
+* **flip tree**
+  - Write a function, `flip_tree`, that takes in the root of a binary tree. Flip the tree by turning left subtrees into right subtrees and vice-versa. The flipping should occur in-place. Return the root.
+  - Example: A tree with structure  a(b, c) becomes a(c, b)  
+  - **Solution (Recursive)**:
+    ```python
+    def flip_tree(root):
+      if root is None:
+        return root
+      left = root.left
+      root.left = root.right
+      root.right = left
+      flip_tree(root.left)
+      flip_tree(root.right)
+      return root
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(h)
+
+* **lefty nodes**
+  - Write a function, `lefty_nodes`, that takes in the root of a binary tree. Return a list containing the left-most value on every level of the tree in top-down order.
+  - The left-most node on a level may not necessarily be a left child.
+  - **Solution (BFS)**:
+    ```python
+    from collections import deque
+    
+    def lefty_nodes(root):
+      if root is None:
+        return []
+      queue = deque([(root, 0)])
+      max_distance = -1
+      left_nodes = []
+      while queue:
+        node, distance = queue.popleft()
+        if distance > max_distance:
+          left_nodes.append(node.val)
+          max_distance = distance
+        if node.left is not None:
+          queue.append((node.left, distance + 1))
+        if node.right is not None:
+          queue.append((node.right, distance + 1))
+      return left_nodes
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(h)
+
+* **binary search tree includes**
+  - Write a function, `binary_search_tree_includes`, that takes in the root of a BST and a target value. Return True if the target is found, False otherwise.
+  - A Binary Search Tree has all left subtree values < node.val and all right subtree values >= node.val.
+  - Your solution should leverage BST properties for O(log n) best case.
+  - **Solution (Recursive)**:
+    ```python
+    def binary_search_tree_includes(root, target):
+      if root is None:
+        return False
+      if root.val == target:
+        return True
+      if root.val > target:
+        return binary_search_tree_includes(root.left, target)
+      else:
+        return binary_search_tree_includes(root.right, target)
+    ```
+    - **Time Complexity**: O(log n) average | **Space Complexity**: O(h)
+
+* **is binary search tree**
+  - Write a function, `is_binary_search_tree`, that takes in the root of a binary tree. Return True if the tree satisfies the BST property.
+  - **Solution (Inorder Traversal)**:
+    ```python
+    def is_binary_search_tree(root):
+      values = []
+      def traverse(node):
+        if node is None:
+          return
+        traverse(node.left)
+        values.append(node.val)
+        traverse(node.right)
+      traverse(root)
+      for i in range(len(values) - 1):
+        if values[i] > values[i + 1]:
+          return False
+      return True
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(h)
+
+* **post order**
+  - Write a function, `post_order`, that takes in the root of a binary tree. Return a list of the post-ordered values.
+  - Post-order: left child, right child, then self.
+  - **Solution (Recursive)**:
+    ```python
+    def post_order(root):
+      if root is None:
+        return []
+      left = post_order(root.left)
+      right = post_order(root.right)
+      return left + right + [root.val]
+    ```
+    - **Time Complexity**: O(n) | **Space Complexity**: O(h)
+
+* **build tree in post**
+  - Write a function, `build_tree_in_post`, that takes in lists of in-order and post-order values. Build a binary tree with the given traversal structure. Return the root.
+  - You can assume all values are unique.
+  - **Solution (Recursive)**:
+    ```python
+    def build_tree_in_post(in_order, post_order):
+      if not in_order and not post_order:
+        return None
+      root = Node(post_order[-1])
+      idx = in_order.index(post_order[-1])
+      root.left = build_tree_in_post(in_order[:idx], post_order[:idx])
+      root.right = build_tree_in_post(in_order[idx + 1:], post_order[idx:-1])
+      return root
+    ```
+    - **Time Complexity**: O(n²) | **Space Complexity**: O(h)
+
+* **build tree in pre**
+  - Write a function, `build_tree_in_pre`, that takes in lists of in-order and pre-order values. Build a binary tree with the given traversal structure. Return the root.
+  - **Solution (Recursive)**:
+    ```python
+    def build_tree_in_pre(in_order, pre_order):
+      if not in_order and not pre_order:
+        return None
+      root = Node(pre_order[0])
+      idx = in_order.index(pre_order[0])
+      left_in = in_order[:idx]
+      right_in = in_order[idx + 1:]
+      root.left = build_tree_in_pre(left_in, pre_order[1:len(left_in) + 1])
+      root.right = build_tree_in_pre(right_in, pre_order[len(left_in) + 1:])
+      return root
+    ```
+    - **Time Complexity**: O(n²) | **Space Complexity**: O(h)
+
+* **is tree balanced** - !!!
 
 ---
 
 ## 14. Heap
 
-* heap insertion
-* heap deletion
-* kth-largest
-* k smallest
+**Heap** is a binary tree data structure useful for priority queues and finding top K elements efficiently.
+
+- **heap insertion** - !!!
+- **heap deletion** - !!!
+- **kth-largest** - !!!
+- **k smallest** - !!!
 
 ---
 
 ## 15. Exhaustive Recursion
 
-* subsets
-* permutations
-* create combinations
-* grocery budget
-* lining up
-* possible paths
-* parenthetical possibilities
-* substitute synonyms
+**Exhaustive Recursion** generates all possibilities through complete recursive enumeration.
+
+---
+
+* **subsets**
+  - Write a function, `subsets`, that takes in a list as argument. Return a 2D list where each sublist is one possible subset of the input.
+  - The elements and subsets may be in any order. Assume input list contains unique elements.
+  - Examples: `subsets(['a', 'b']) # -> [[], ['b'], ['a'], ['a', 'b']]`
+  - **Solution (Recursive)**:
+    ```python
+    def subsets(elements):
+      if len(elements) == 0:
+        return [[]]
+      first = elements[0]
+      subset = subsets(elements[1:])
+      total = []
+      for sub in subset:
+        total.append([first, *sub])
+      return subset + total
+    ```
+    - **Time Complexity**: O(n · 2ⁿ) | **Space Complexity**: O(2ⁿ)
+
+* **permutations**
+  - Write a function, `permutations`, that takes in a list. Return a 2D list where each sublist represents one possible permutation of the input.
+  - Sublists may be in any order. Assume input list contains unique items.
+  - Examples: `permutations(['a', 'b', 'c']) # -> [[a,b,c], [b,a,c], [b,c,a], [a,c,b], [c,a,b], [c,b,a]]`
+  - **Solution (Recursive)**:
+    ```python
+    def permutations(items):
+      if len(items) == 0:
+        return [[]]
+      first = items[0]
+      total = []
+      subset = permutations(items[1:])
+      for perm in subset:
+        for i in range(len(perm) + 1):
+          total.append(perm[:i] + [first] + perm[i:])
+      return total
+    ```
+    - **Time Complexity**: O(n! · n) | **Space Complexity**: O(n!)
+
+* **create combinations**
+  - Write a function, `create_combinations`, that takes in a list and a length k. Return a 2D list representing all combinations of length k.
+  - The items and combinations may be in any order. Assume input list contains unique elements and 1 <= k <= len(items).
+  - Examples: `create_combinations(['a', 'b', 'c'], 2) # -> [[a,b], [a,c], [b,c]]`
+  - **Solution (Recursive)**:
+    ```python
+    def create_combinations(items, k):
+      if k == 0:
+        return [[]]
+      if k > len(items):
+        return []
+      first = items[0]
+      small = create_combinations(items[1:], k - 1)
+      large = create_combinations(items[1:], k)
+      for list in small:
+        list.insert(0, first)
+      return small + large
+    ```
+    - **Time Complexity**: O(C(n,k) · k) | **Space Complexity**: O(C(n,k))
+
+* **grocery budget** - !!!
+
+* **lining up** - !!!
+
+* **possible paths** - !!!
+
+* **parenthetical possibilities**
+  - Write a function, `parenthetical_possibilities`, that takes in a string. Return an array of all strings generated by expanding all parentheses.
+  - Parentheses contain alternative characters. Example: 'x(mn)yz' expands to 'xmyz', 'xnyz'.
+  - **Solution (Recursive)**:
+    ```python
+    def parenthetical_possibilities(s):
+      if len(s) == 0:
+        return [""]
+      possibilities = []
+      choices, remainder = get_choices(s)
+      for choice in choices:
+        results = parenthetical_possibilities(remainder)
+        for result in results:
+          possibilities.append(choice + result)
+      return possibilities
+    
+    def get_choices(s):
+      if s[0] == "(":
+        end_index = s.index(")")
+        choices = s[1:end_index]
+        remainder = s[end_index + 1:]
+        return (choices, remainder)
+      else:
+        return (s[0], s[1:])
+    ```
+    - **Time Complexity**: O(m · n) where m is number of possibilities, n is string length | **Space Complexity**: O(m)
+
+* **substitute synonyms** - !!!
 
 ---
 
 ## 16. Graph II
 
-* knight attack
-* can color
-* tolerant teams
-* rare routing
-* topological order
-* safe cracking
-* string search
-* province sizes
-* extra cable
-* weighted graph min path
-* lowest toll
+**Advanced Graph** algorithms include weighted paths, topological sorting, and complex routing.
+
+---
+
+* **knight attack**
+  - A knight and pawn are on a chess board. Find the minimum number of moves for the knight to reach the pawn.
+  - The knight moves in an "L" shape: two squares in one direction, then one square perpendicular.
+  - Write a function, `knight_attack(n, kr, kc, pr, pc)`, where n is board size, (kr, kc) is knight position, (pr, pc) is pawn position.
+  - Return the minimum moves, or None if unreachable.
+  - **Solution (BFS)**:
+    ```python
+    from collections import deque
+    
+    def knight_attack(n, kr, kc, pr, pc):
+      visited = set((kr, kc))
+      queue = deque([(kr, kc, 0)])
+      while queue:
+        row, col, moves = queue.popleft()
+        if (row, col) == (pr, pc):
+          return moves
+        neighbors = [
+          (row - 2, col - 1), (row - 2, col + 1),
+          (row + 2, col - 1), (row + 2, col + 1),
+          (row - 1, col - 2), (row + 1, col - 2),
+          (row - 1, col + 2), (row + 1, col + 2)]
+        for neighbor in neighbors:
+          if 0 <= neighbor[0] < n and 0 <= neighbor[1] < n:
+            if neighbor not in visited:
+              queue.append((neighbor[0], neighbor[1], moves + 1))
+              visited.add(neighbor)
+      return None
+    ```
+    - **Time Complexity**: O(n²) | **Space Complexity**: O(n²)
+
+* **can color** - !!!
+
+* **tolerant teams** - !!!
+
+* **rare routing** - !!!
+
+* **topological order** - !!!
+
+* **safe cracking** - !!!
+
+* **string search** - !!!
+
+* **province sizes** - !!!
+
+* **extra cable** - !!!
+
+* **weighted graph min path** - !!!
+
+* **lowest toll** - !!!
 
 ---
 
 ## 17. Mixed Recall
 
-* prefix product
-* leaf layers
-* max increasing subseq
-* knightly number
-* all trips
-* has path sum
-* knapsack
-* virus spread
-* positioning plants
-* flatten tree
-* best house build
-* breaking boundaries
-* token replace
-* token transform
+**Mixed Problems** combine multiple algorithms and data structures across all topics.
+
+- **prefix product** - !!!
+- **leaf layers** - !!!
+- **max increasing subseq** - !!!
+- **knightly number** - !!!
+- **all trips** - !!!
+- **has path sum** - !!!
+- **knapsack** - !!!
+- **virus spread** - !!!
+- **positioning plants** - !!!
+- **flatten tree** - !!!
+- **best house build** - !!!
+- **breaking boundaries** - !!!
+- **token replace** - !!!
+- **token transform** - !!!
 
 ---
 
