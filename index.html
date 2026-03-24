@@ -139,7 +139,7 @@
 </div>
 <div class="flex items-center gap-6">
 <div class="relative group">
-<input class="bg-surface-container-high border-none border-b-2 border-outline focus:border-primary focus:ring-0 text-sm font-label py-2 pl-10 pr-4 transition-all w-64" placeholder="Шукати задачі..." type="text"/>
+<input class="bg-surface-container-high border-none border-b-2 border-outline focus:border-primary focus:ring-0 text-sm font-label py-2 pl-10 pr-4 transition-all w-64" id="task-search" placeholder="Шукати задачі..." type="text"/>
 <span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
 </div>
 <div class="flex items-center gap-4">
@@ -283,11 +283,88 @@
 </div>
 </div>
 </section>
+<!-- Structy Tasks -->
+<section class="col-span-12 glass-card p-8 rounded-xl" id="structy-tasks">
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+<div>
+<span class="font-label text-xs uppercase tracking-widest text-primary mb-2 block">Structy</span>
+<h3 class="text-2xl font-bold font-headline">Швидкий доступ до задач</h3>
+<p class="text-on-surface-variant text-sm mt-2 max-w-2xl">Відкривай добірку задач прямо з дашборда. Картки нижче ведуть до повного списку в <code>structy.md</code>.</p>
+</div>
+<div class="flex items-center gap-3">
+<a class="px-4 py-2 rounded-lg border border-outline-variant/30 text-on-surface hover:border-primary hover:text-primary transition-colors font-label text-sm" href="./structy.md" target="_blank">Відкрити structy.md</a>
+<a class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label text-sm hover:opacity-90 transition-opacity" href="./tasks.html" target="_blank">Відкрити tasks.html</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" id="task-grid">
+<a class="glass-card p-5 rounded-xl hover:bg-surface-container transition-all border border-outline-variant/20 block" data-task-card="" data-task-name="is prime introduction math basics" href="./structy.md#0-introduction">
+<div class="flex items-start justify-between gap-4 mb-4">
+<div>
+<span class="font-label text-[11px] uppercase tracking-[0.24em] text-primary">Introduction</span>
+<h4 class="text-lg font-bold font-headline mt-2">is prime</h4>
+</div>
+<span class="material-symbols-outlined text-primary">terminal</span>
+</div>
+<p class="text-sm text-on-surface-variant">Перевірка числа на простоту з оптимізацією до O(sqrt(n)).</p>
+</a>
+<a class="glass-card p-5 rounded-xl hover:bg-surface-container transition-all border border-outline-variant/20 block" data-task-card="" data-task-name="fizz buzz big o loops basics" href="./structy.md#1-big-o-notation">
+<div class="flex items-start justify-between gap-4 mb-4">
+<div>
+<span class="font-label text-[11px] uppercase tracking-[0.24em] text-secondary">Big O</span>
+<h4 class="text-lg font-bold font-headline mt-2">fizz buzz</h4>
+</div>
+<span class="material-symbols-outlined text-secondary">speed</span>
+</div>
+<p class="text-sm text-on-surface-variant">Класична задача на цикли, умови та базову оцінку складності.</p>
+</a>
+<a class="glass-card p-5 rounded-xl hover:bg-surface-container transition-all border border-outline-variant/20 block" data-task-card="" data-task-name="anagrams hashing strings counter frequency" href="./structy.md#2-hashing">
+<div class="flex items-start justify-between gap-4 mb-4">
+<div>
+<span class="font-label text-[11px] uppercase tracking-[0.24em] text-tertiary">Hashing</span>
+<h4 class="text-lg font-bold font-headline mt-2">anagrams</h4>
+</div>
+<span class="material-symbols-outlined text-tertiary">match_word</span>
+</div>
+<p class="text-sm text-on-surface-variant">Порівняння двох рядків через сортування або підрахунок частот.</p>
+</a>
+<a class="glass-card p-5 rounded-xl hover:bg-surface-container transition-all border border-outline-variant/20 block" data-task-card="" data-task-name="most frequent char hashing strings frequency" href="./structy.md#2-hashing">
+<div class="flex items-start justify-between gap-4 mb-4">
+<div>
+<span class="font-label text-[11px] uppercase tracking-[0.24em] text-tertiary">Hashing</span>
+<h4 class="text-lg font-bold font-headline mt-2">most frequent char</h4>
+</div>
+<span class="material-symbols-outlined text-tertiary">text_fields</span>
+</div>
+<p class="text-sm text-on-surface-variant">Пошук найчастішого символу зі збереженням пріоритету першої появи.</p>
+</a>
+<a class="glass-card p-5 rounded-xl hover:bg-surface-container transition-all border border-outline-variant/20 block" data-task-card="" data-task-name="pair sum hashing arrays two sum indices" href="./structy.md#2-hashing">
+<div class="flex items-start justify-between gap-4 mb-4">
+<div>
+<span class="font-label text-[11px] uppercase tracking-[0.24em] text-tertiary">Hashing</span>
+<h4 class="text-lg font-bold font-headline mt-2">pair sum</h4>
+</div>
+<span class="material-symbols-outlined text-tertiary">tag</span>
+</div>
+<p class="text-sm text-on-surface-variant">Пошук двох індексів, що дають потрібну суму, за O(n).</p>
+</a>
+<a class="glass-card p-5 rounded-xl hover:bg-surface-container transition-all border border-outline-variant/20 block" data-task-card="" data-task-name="pair product hashing arrays product indices" href="./structy.md#2-hashing">
+<div class="flex items-start justify-between gap-4 mb-4">
+<div>
+<span class="font-label text-[11px] uppercase tracking-[0.24em] text-tertiary">Hashing</span>
+<h4 class="text-lg font-bold font-headline mt-2">pair product</h4>
+</div>
+<span class="material-symbols-outlined text-tertiary">function</span>
+</div>
+<p class="text-sm text-on-surface-variant">Варіація two-sum, але для добутку з мапою вже побачених чисел.</p>
+</a>
+</div>
+<p class="hidden text-sm text-on-surface-variant mt-4" id="task-empty-state">Нічого не знайдено. Спробуй інший запит у пошуку.</p>
+</section>
 <!-- Curated Study Path -->
 <section class="col-span-12">
 <div class="flex justify-between items-end mb-6">
 <h3 class="text-2xl font-bold font-headline">План Навчання</h3>
-<a class="text-primary font-label text-sm hover:underline" href="#">Переглянути все</a>
+<a class="text-primary font-label text-sm hover:underline" href="#structy-tasks">Переглянути все</a>
 </div>
 <div class="grid grid-cols-2 gap-6">
 <!-- Path Card 1 -->
@@ -337,4 +414,28 @@
 </div>
 </div>
 </main>
+<script>
+const searchInput = document.getElementById("task-search");
+const taskCards = Array.from(document.querySelectorAll("[data-task-card]"));
+const emptyState = document.getElementById("task-empty-state");
+
+if (searchInput && taskCards.length) {
+  searchInput.addEventListener("input", (event) => {
+    const query = event.target.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    taskCards.forEach((card) => {
+      const taskName = (card.dataset.taskName || "").toLowerCase();
+      const matches = query === "" || taskName.includes(query);
+      card.classList.toggle("hidden", !matches);
+
+      if (matches) {
+        visibleCount += 1;
+      }
+    });
+
+    emptyState.classList.toggle("hidden", visibleCount !== 0);
+  });
+}
+</script>
 </body></html>
