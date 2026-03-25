@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Structy Checklist Fresh</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -19,7 +20,11 @@
             pine: "#4f6d5d",
             gold: "#d4a373",
             line: "#ddd2bf",
-            mist: "#fffaf0"
+            mist: "#fffaf0",
+            clay: "#b86f52",
+            sea: "#5c7c73",
+            plum: "#7a5c87",
+            sky: "#7c9dbd"
           },
           fontFamily: {
             heading: ["Manrope", "sans-serif"],
@@ -32,16 +37,17 @@
       }
     };
   </script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
 </head>
-<body class="bg-paper text-ink font-body">
+<body class="bg-[linear-gradient(180deg,_#f7f1e3_0%,_#f3ecdd_48%,_#efe7d7_100%)] text-ink font-body">
   <main class="max-w-7xl mx-auto px-5 py-8 md:px-8 md:py-10">
-    <section class="overflow-hidden rounded-[32px] border border-line bg-white shadow-soft">
+    <section class="overflow-hidden rounded-[32px] border border-white/70 bg-white/80 shadow-soft backdrop-blur">
       <div class="bg-[radial-gradient(circle_at_top_left,_rgba(212,163,115,0.42),_transparent_32%),linear-gradient(135deg,_#1f1d1a,_#2a2621)] px-6 py-8 text-white md:px-10 md:py-10">
         <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div class="max-w-3xl">
             <p class="text-xs uppercase tracking-[0.35em] text-gold">Structy Roadmap</p>
             <h1 class="mt-3 font-heading text-4xl font-extrabold leading-tight md:text-5xl">Теми та задачі в одному місці</h1>
-            <p class="mt-4 text-sm text-white/75 md:text-base">Fresh build. Якщо ти бачиш це, значить відкрито саме нову версію без старого кешу.</p>
+            <p class="mt-4 text-sm text-white/75 md:text-base">Одна сторінка для навігації по темах, задачах і рішеннях. Відкривай тему, відмічай прогрес і тримай під рукою допоміжні блоки.</p>
           </div>
           <div class="flex flex-wrap gap-3">
             <a class="rounded-full bg-white px-5 py-3 font-semibold text-ink transition-colors hover:bg-gold" href="./index.html">На головну</a>
@@ -51,25 +57,25 @@
 
       <div class="grid gap-6 p-6 md:p-8 xl:grid-cols-[320px_minmax(0,1fr)]">
         <aside class="space-y-6">
-          <section class="rounded-3xl border border-line bg-mist p-6">
+          <section class="rounded-3xl border border-line/70 bg-white/65 p-6 backdrop-blur-sm">
             <p class="text-xs uppercase tracking-[0.28em] text-coral">Progress</p>
             <h2 class="mt-3 font-heading text-2xl font-extrabold">Загальний прогрес</h2>
-            <div class="mt-5 h-2 overflow-hidden rounded-full border border-line bg-white">
+            <div class="mt-5 h-1.5 overflow-hidden rounded-full bg-ink/10">
               <div class="h-full bg-pine transition-all duration-300" id="progress-bar" style="width: 0%"></div>
             </div>
             <p class="mt-3 text-sm text-ink/75"><span class="font-bold text-ink" id="progress-text">0 / 0</span> задач виконано</p>
-            <button class="mt-5 w-full rounded-2xl border border-line px-4 py-3 text-sm font-semibold transition-colors hover:border-coral hover:text-coral" id="reset-progress" type="button">Скинути всі чекбокси</button>
+            <button class="mt-5 w-full rounded-2xl border border-line/70 px-4 py-3 text-sm font-semibold transition-colors hover:border-coral hover:text-coral" id="reset-progress" type="button">Скинути всі чекбокси</button>
           </section>
 
-          <section class="rounded-3xl border border-line bg-white p-6">
+          <section class="rounded-3xl border border-line/70 bg-white/65 p-6 backdrop-blur-sm">
             <p class="text-xs uppercase tracking-[0.28em] text-coral">Search</p>
             <label class="mt-4 block">
               <span class="mb-2 block text-sm text-ink/70">Пошук по темах або задачах</span>
-              <input class="w-full rounded-2xl border-line bg-mist px-4 py-3 text-sm focus:border-coral focus:ring-coral" id="topic-search" placeholder="Наприклад: graph, recursion, anagrams" type="text" />
+              <input class="w-full rounded-2xl border-line/70 bg-mist px-4 py-3 text-sm focus:border-coral focus:ring-coral" id="topic-search" placeholder="Наприклад: graph, recursion, anagrams" type="text" />
             </label>
             <div class="mt-4 flex gap-3">
               <button class="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90" id="expand-all" type="button">Розгорнути всі</button>
-              <button class="rounded-full border border-line px-4 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral" id="collapse-all" type="button">Згорнути всі</button>
+              <button class="rounded-full border border-line/70 px-4 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral" id="collapse-all" type="button">Згорнути всі</button>
             </div>
           </section>
 
@@ -96,15 +102,16 @@
             </div>
             <p class="text-sm text-ink/60" id="visible-count">0 тем видно</p>
           </div>
-          <p class="mb-5 text-sm text-ink/60">Клік по темі відкриває список задач. Клік по задачі відкриває умову, хінти, псевдокод і рішення, якщо вони вже додані.</p>
-          <div class="space-y-4" id="topics-root"></div>
+          <p class="mb-5 max-w-2xl text-sm leading-6 text-ink/60">Клік по темі відкриває список задач. Картки задач спеціально зроблені компактними, а допоміжні блоки тепер мають спокійніший ритм і кращу ієрархію.</p>
+          <div class="space-y-3" id="topics-root"></div>
           <p class="hidden rounded-3xl border border-dashed border-line bg-mist px-6 py-8 text-center text-sm text-ink/65" id="empty-state">Нічого не знайдено. Спробуй інший пошуковий запит.</p>
         </section>
       </div>
     </section>
   </main>
 
-  <script src="./structy-checklist-data.js"></script>
-  <script src="./structy-checklist-app.js"></script>
+  <script defer src="./structy-visualizations.js"></script>
+  <script defer src="./structy-checklist-data.js"></script>
+  <script defer src="./structy-checklist-app.js"></script>
 </body>
 </html>

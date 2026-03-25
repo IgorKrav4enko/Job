@@ -15,6 +15,26 @@
   const expandAllButton = document.getElementById("expand-all");
   const collapseAllButton = document.getElementById("collapse-all");
   const resetButton = document.getElementById("reset-progress");
+  const topicAccents = {
+    introduction: { badge: "text-coral", wash: "bg-coral/10", dot: "bg-coral" },
+    "big-o-notation": { badge: "text-sky", wash: "bg-sky/15", dot: "bg-sky" },
+    hashing: { badge: "text-gold", wash: "bg-gold/15", dot: "bg-gold" },
+    "beginner-recursion": { badge: "text-plum", wash: "bg-plum/12", dot: "bg-plum" },
+    "linked-list-i": { badge: "text-sea", wash: "bg-sea/15", dot: "bg-sea" },
+    "binary-tree-i": { badge: "text-pine", wash: "bg-pine/15", dot: "bg-pine" },
+    "graph-i": { badge: "text-coral", wash: "bg-coral/10", dot: "bg-coral" },
+    "sliding-window": { badge: "text-sky", wash: "bg-sky/15", dot: "bg-sky" },
+    "two-pointer": { badge: "text-sea", wash: "bg-sea/15", dot: "bg-sea" },
+    "dynamic-programming": { badge: "text-plum", wash: "bg-plum/12", dot: "bg-plum" },
+    stack: { badge: "text-gold", wash: "bg-gold/15", dot: "bg-gold" },
+    "array-and-string": { badge: "text-coral", wash: "bg-coral/10", dot: "bg-coral" },
+    "linked-list-ii": { badge: "text-sea", wash: "bg-sea/15", dot: "bg-sea" },
+    "binary-tree-ii": { badge: "text-pine", wash: "bg-pine/15", dot: "bg-pine" },
+    heap: { badge: "text-sky", wash: "bg-sky/15", dot: "bg-sky" },
+    "exhaustive-recursion": { badge: "text-plum", wash: "bg-plum/12", dot: "bg-plum" },
+    "graph-ii": { badge: "text-coral", wash: "bg-coral/10", dot: "bg-coral" },
+    "mixed-recall": { badge: "text-ink", wash: "bg-ink/5", dot: "bg-ink" }
+  };
 
   const readState = () => {
     try {
@@ -30,6 +50,16 @@
 
   const taskId = (topicSlug, taskName) => topicSlug + "::" + taskName.toLowerCase().replaceAll(" ", "-");
   const state = readState();
+  const enhanceCodeBlock = (preElement, codeText, language = "java") => {
+    const code = document.createElement("code");
+    code.className = "language-" + language;
+    code.textContent = codeText;
+    preElement.replaceChildren(code);
+
+    if (window.hljs) {
+      window.hljs.highlightElement(code);
+    }
+  };
 
   const getCheckboxes = () => Array.from(document.querySelectorAll("[data-task-id]"));
 
@@ -62,13 +92,13 @@
     emptyState.classList.toggle("hidden", visible !== 0);
   };
 
-  const renderTaskBody = (detail) => {
+  const renderTaskBody = (detail, detailKey) => {
     const body = document.createElement("div");
-    body.className = "border-t border-line bg-white px-4 py-4";
+    body.className = "border-t border-line/70 bg-white/90 px-4 py-4";
 
     if (!detail) {
       const fallback = document.createElement("div");
-      fallback.className = "rounded-2xl border border-dashed border-line bg-mist px-4 py-4 text-sm text-ink/65";
+      fallback.className = "rounded-2xl border border-dashed border-line/70 bg-mist px-4 py-4 text-sm leading-6 text-ink/65";
       fallback.textContent = "Для цієї задачі детальні умова, хінти та рішення ще не внесені в інтерфейс. Можу додати їх наступним проходом.";
       body.append(fallback);
       return body;
@@ -84,36 +114,125 @@
     sideColumn.className = "space-y-4";
 
     const statement = document.createElement("section");
-    statement.className = "rounded-2xl bg-mist px-4 py-4";
+    statement.className = "rounded-[22px] border border-line/60 bg-gradient-to-br from-mist to-white px-5 py-5";
     statement.innerHTML = "<h4 class=\"font-heading text-lg font-bold\">Умова</h4>";
 
     const statementText = document.createElement("p");
-    statementText.className = "mt-2 text-sm leading-6 text-ink/80";
+    statementText.className = "mt-3 text-sm leading-7 text-ink/80";
     statementText.textContent = detail.statement;
     statement.append(statementText);
 
     mainColumn.append(statement);
 
+    const visualizationSection = document.createElement("section");
+    visualizationSection.className = "mt-5 rounded-[22px] border border-line/60 bg-white px-5 py-5";
+    const visualizationTitle = document.createElement("h4");
+    visualizationTitle.className = "font-heading text-lg font-bold";
+    visualizationTitle.textContent = "Visualization";
+
+    const visualizationToggle = document.createElement("button");
+    visualizationToggle.type = "button";
+    visualizationToggle.className = "mt-4 rounded-full border border-line/70 bg-mist px-3 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
+    visualizationToggle.textContent = "Show visualization";
+
+    const visualizationBox = document.createElement("pre");
+    visualizationBox.className = "mt-4 hidden overflow-x-auto rounded-2xl bg-ink p-4 text-sm leading-7 text-white";
+
+    const visualizationLines = window.StructyVisualizations
+      ? window.StructyVisualizations.getTextVisualization(detailKey)
+      : null;
+
+    if (visualizationLines) {
+      visualizationBox.textContent = visualizationLines.join("\n");
+    } else {
+      visualizationBox.textContent = "Visualization placeholder\n\nA step-by-step visual walkthrough for this task can be added here.";
+    }
+
+    visualizationToggle.addEventListener("click", () => {
+      const isHidden = visualizationBox.classList.contains("hidden");
+      visualizationBox.classList.toggle("hidden");
+      visualizationToggle.textContent = isHidden ? "Hide visualization" : "Show visualization";
+    });
+
+    visualizationSection.append(visualizationTitle, visualizationToggle, visualizationBox);
+    mainColumn.append(visualizationSection);
+
+    const canvasSection = document.createElement("section");
+    canvasSection.className = "mt-5 rounded-[22px] border border-line/60 bg-white px-5 py-5";
+    const canvasTitle = document.createElement("h4");
+    canvasTitle.className = "font-heading text-lg font-bold";
+    canvasTitle.textContent = "Canvas Visualization";
+
+    const canvasToggle = document.createElement("button");
+    canvasToggle.type = "button";
+    canvasToggle.className = "mt-4 rounded-full border border-line/70 bg-mist px-3 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
+    canvasToggle.textContent = "Show canvas";
+
+    const canvasWrap = document.createElement("div");
+    canvasWrap.className = "mt-4 hidden";
+
+    const canvasType = window.StructyVisualizations
+      ? window.StructyVisualizations.getCanvasType(detailKey)
+      : null;
+    if (canvasType) {
+      const helper = document.createElement("p");
+      helper.className = "mb-3 text-sm leading-6 text-ink/65";
+      helper.textContent = "Візуальне дерево викликів для цієї задачі.";
+      const canvas = document.createElement("canvas");
+      canvas.className = "block w-full rounded-2xl border border-line/60 bg-mist";
+      canvas.width = 760;
+      canvas.height = 360;
+      canvas.style.height = "360px";
+      canvasWrap.append(helper, canvas);
+
+      canvasToggle.addEventListener("click", () => {
+        const isHidden = canvasWrap.classList.contains("hidden");
+        canvasWrap.classList.toggle("hidden");
+        canvasToggle.textContent = isHidden ? "Hide canvas" : "Show canvas";
+        if (isHidden) {
+          requestAnimationFrame(() => {
+            if (window.StructyVisualizations) {
+              window.StructyVisualizations.mountCanvasVisualization(canvas, canvasType);
+            }
+          });
+        }
+      });
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "rounded-2xl border border-dashed border-line/60 bg-mist px-4 py-4 text-sm leading-6 text-ink/65";
+      placeholder.textContent = "Canvas-візуалізацію для цієї задачі можна додати пізніше.";
+      canvasWrap.append(placeholder);
+
+      canvasToggle.addEventListener("click", () => {
+        const isHidden = canvasWrap.classList.contains("hidden");
+        canvasWrap.classList.toggle("hidden");
+        canvasToggle.textContent = isHidden ? "Hide canvas" : "Show canvas";
+      });
+    }
+
+    canvasSection.append(canvasTitle, canvasToggle, canvasWrap);
+    mainColumn.append(canvasSection);
+
     const hintSection = document.createElement("section");
-    hintSection.className = "mt-4";
+    hintSection.className = "mt-5 rounded-[22px] border border-line/60 bg-white px-5 py-5";
     const hintTitle = document.createElement("h4");
     hintTitle.className = "font-heading text-lg font-bold";
     hintTitle.textContent = "Hints";
     hintSection.append(hintTitle);
 
     const hintButtons = document.createElement("div");
-    hintButtons.className = "mt-3 flex flex-wrap gap-2";
+    hintButtons.className = "mt-4 flex flex-wrap gap-2";
     const hintPanels = document.createElement("div");
     hintPanels.className = "mt-3 space-y-2";
 
     detail.hints.forEach((hint, index) => {
       const button = document.createElement("button");
       button.type = "button";
-      button.className = "rounded-full border border-line px-3 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
+      button.className = "rounded-full border border-line/70 bg-mist px-3 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
       button.textContent = "Hint " + (index + 1);
 
       const panel = document.createElement("div");
-      panel.className = "hidden rounded-2xl bg-mist px-4 py-3 text-sm text-ink/80";
+      panel.className = "hidden rounded-2xl border border-line/60 bg-mist px-4 py-3 text-sm leading-6 text-ink/80";
       panel.textContent = hint;
 
       button.addEventListener("click", () => {
@@ -128,19 +247,19 @@
     mainColumn.append(hintSection);
 
     const pseudoSection = document.createElement("section");
-    pseudoSection.className = "mt-4";
+    pseudoSection.className = "mt-5 rounded-[22px] border border-line/60 bg-white px-5 py-5";
     const pseudoTitle = document.createElement("h4");
     pseudoTitle.className = "font-heading text-lg font-bold";
     pseudoTitle.textContent = "Pseudocode";
 
     const pseudoToggle = document.createElement("button");
     pseudoToggle.type = "button";
-    pseudoToggle.className = "mt-3 rounded-full border border-line px-3 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
+    pseudoToggle.className = "mt-4 rounded-full border border-line/70 bg-mist px-3 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
     pseudoToggle.textContent = "Show pseudocode";
 
     const pseudoBox = document.createElement("pre");
-    pseudoBox.className = "mt-3 hidden overflow-x-auto rounded-2xl bg-ink p-4 text-sm text-white";
-    pseudoBox.textContent = detail.pseudocode.join("\n");
+    pseudoBox.className = "mt-4 hidden overflow-x-auto rounded-2xl bg-ink p-4 text-sm text-white";
+    enhanceCodeBlock(pseudoBox, detail.pseudocode.join("\n"), "plaintext");
 
     pseudoToggle.addEventListener("click", () => {
       const isHidden = pseudoBox.classList.contains("hidden");
@@ -152,26 +271,26 @@
     mainColumn.append(pseudoSection);
 
     const solutionsSection = document.createElement("section");
-    solutionsSection.className = "mt-4";
+    solutionsSection.className = "mt-5 rounded-[22px] border border-line/60 bg-white px-5 py-5";
     solutionsSection.innerHTML = "<h4 class=\"font-heading text-lg font-bold\">Solutions</h4>";
 
     detail.solutions.forEach((solution) => {
       const solutionCard = document.createElement("details");
-      solutionCard.className = "mt-3 rounded-2xl border border-line bg-mist";
+      solutionCard.className = "mt-3 rounded-2xl border border-line/70 bg-mist";
 
       const solutionSummary = document.createElement("summary");
       solutionSummary.className = "cursor-pointer list-none px-4 py-3 font-semibold";
       solutionSummary.textContent = solution.title;
 
       const solutionBody = document.createElement("div");
-      solutionBody.className = "border-t border-line bg-white px-4 py-4";
+      solutionBody.className = "border-t border-line/70 bg-white px-4 py-4";
 
       const code = document.createElement("pre");
       code.className = "overflow-x-auto rounded-2xl bg-ink p-4 text-sm text-white";
-      code.textContent = solution.code;
+      enhanceCodeBlock(code, solution.code, "java");
 
       const complexity = document.createElement("p");
-      complexity.className = "mt-3 text-sm text-ink/70";
+      complexity.className = "mt-3 text-sm leading-6 text-ink/70";
       complexity.textContent = solution.complexity;
 
       solutionBody.append(code, complexity);
@@ -183,7 +302,7 @@
 
     if (detail.testCases && detail.testCases.length) {
       const testsCard = document.createElement("details");
-      testsCard.className = "rounded-2xl border border-line bg-mist";
+      testsCard.className = "rounded-[22px] border border-line/70 bg-mist";
 
       const testsSummary = document.createElement("summary");
       testsSummary.className = "cursor-pointer list-none px-4 py-3";
@@ -196,7 +315,7 @@
 
       const copyButton = document.createElement("button");
       copyButton.type = "button";
-      copyButton.className = "rounded-full border border-line px-3 py-2 text-xs font-semibold transition-colors hover:border-coral hover:text-coral";
+      copyButton.className = "rounded-full border border-line/70 bg-white px-3 py-2 text-xs font-semibold transition-colors hover:border-coral hover:text-coral";
       copyButton.textContent = "Copy all";
       copyButton.addEventListener("click", async (event) => {
         event.preventDefault();
@@ -220,11 +339,11 @@
       testsSummary.append(summaryRow);
 
       const testsBody = document.createElement("div");
-      testsBody.className = "border-t border-line bg-white px-4 py-4";
+      testsBody.className = "border-t border-line/70 bg-white px-4 py-4";
 
       const testsCode = document.createElement("pre");
       testsCode.className = "overflow-x-auto rounded-2xl bg-ink p-4 text-sm text-white";
-      testsCode.textContent = detail.testCases.join("\n");
+      enhanceCodeBlock(testsCode, detail.testCases.join("\n"), "plaintext");
 
       testsBody.append(testsCode);
       testsCard.append(testsSummary, testsBody);
@@ -245,17 +364,21 @@
 
     topics.forEach((topic) => {
       const topicEl = document.createElement("details");
-      topicEl.className = "topic-card group rounded-3xl border border-line bg-white open:shadow-soft";
+      topicEl.className = "topic-card group overflow-hidden rounded-[28px] border border-line/70 bg-white/88 shadow-[0_8px_24px_rgba(31,29,26,0.05)] transition-all open:shadow-soft";
       topicEl.dataset.search = (topic.title + " " + topic.tasks.join(" ")).toLowerCase();
-      topicEl.open = topic.tasks.length > 0 && topic.title.startsWith("0.");
+      topicEl.open = true;
+      const accent = topicAccents[topic.slug] || topicAccents["mixed-recall"];
 
       const summary = document.createElement("summary");
-      summary.className = "flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5";
+      summary.className = "flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 transition-colors group-hover:bg-white";
 
       const summaryText = document.createElement("div");
       const topicLabel = document.createElement("p");
-      topicLabel.className = "text-xs uppercase tracking-[0.25em] text-coral";
+      topicLabel.className = "inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] " + accent.badge;
       topicLabel.textContent = "Theme";
+      const topicDot = document.createElement("span");
+      topicDot.className = "h-2 w-2 rounded-full " + accent.dot;
+      topicLabel.prepend(topicDot);
 
       const title = document.createElement("h3");
       title.className = "mt-2 font-heading text-2xl font-extrabold";
@@ -268,18 +391,18 @@
       summaryText.append(topicLabel, title, meta);
 
       const arrow = document.createElement("span");
-      arrow.className = "text-2xl text-ink/45 transition-transform group-open:rotate-180";
+      arrow.className = "flex h-10 w-10 items-center justify-center rounded-full " + accent.wash + " text-2xl text-ink/50 transition-transform group-open:rotate-180";
       arrow.textContent = "⌄";
 
       summary.append(summaryText, arrow);
       topicEl.append(summary);
 
       const content = document.createElement("div");
-      content.className = "border-t border-line px-6 py-5";
+      content.className = "border-t border-line/70 bg-white/70 px-6 py-5";
 
       if (topic.tasks.length === 0) {
         const placeholder = document.createElement("p");
-        placeholder.className = "rounded-2xl bg-mist px-4 py-4 text-sm text-ink/65";
+        placeholder.className = "rounded-2xl border border-line/60 bg-mist px-4 py-4 text-sm text-ink/65";
         placeholder.textContent = "Для цієї теми в поточному списку ще немає окремих задач.";
         content.append(placeholder);
       } else {
@@ -291,14 +414,14 @@
           const detail = taskDetails[id];
 
           const taskCard = document.createElement("details");
-          taskCard.className = "rounded-2xl border border-line bg-mist";
+          taskCard.className = "rounded-[22px] border border-line/60 bg-gradient-to-br from-mist to-white shadow-[0_4px_16px_rgba(31,29,26,0.03)]";
 
           const taskSummary = document.createElement("summary");
-          taskSummary.className = "flex cursor-pointer list-none items-start gap-4 px-4 py-4";
+          taskSummary.className = "flex cursor-pointer list-none items-start gap-4 px-5 py-4";
 
           const checkbox = document.createElement("input");
           checkbox.type = "checkbox";
-          checkbox.className = "mt-1 h-5 w-5 rounded border-line text-coral focus:ring-coral";
+          checkbox.className = "mt-1 h-5 w-5 rounded border-line/70 text-coral focus:ring-coral";
           checkbox.dataset.taskId = id;
           checkbox.checked = Boolean(state[id]);
           checkbox.addEventListener("click", (event) => event.stopPropagation());
@@ -321,7 +444,7 @@
 
           const taskMeta = document.createElement("div");
           taskMeta.className = "mt-1 text-sm text-ink/60";
-          taskMeta.textContent = detail ? "Деталі доступні" : "Поки є лише назва задачі";
+          taskMeta.textContent = detail ? ((detail.meta && detail.meta.verbose) || "Деталі доступні") : "Поки є лише назва задачі";
 
           titleWrap.append(taskTitle, taskMeta);
 
@@ -332,7 +455,7 @@
           titleRow.append(titleWrap, taskArrow);
           textWrap.append(titleRow);
           taskSummary.append(checkbox, textWrap);
-          taskCard.append(taskSummary, renderTaskBody(detail));
+          taskCard.append(taskSummary, renderTaskBody(detail, id));
           list.append(taskCard);
         });
 
@@ -345,6 +468,9 @@
   };
 
   renderTopics();
+  document.querySelectorAll(".topic-card").forEach((el) => {
+    el.open = true;
+  });
   updateProgress();
   filterTopics();
 

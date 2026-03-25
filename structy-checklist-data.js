@@ -278,9 +278,9 @@ window.StructyChecklistData = {
         "Source.greet(\"how now brown cow\") -> \"hey how now brown cow\""
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "The output is just the word \"hey\" followed by a space and the input string.",
+        "You do not need a loop or condition here.",
+        "Return the concatenation: \"hey \" + s."
       ],
       "pseudocode": [],
       "solutions": [
@@ -324,9 +324,9 @@ window.StructyChecklistData = {
         "Source.maxValue(numbers) -> 5"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Keep track of the largest number seen so far while scanning the array.",
+        "Initialize that running maximum using the first element.",
+        "For every next element, if it is larger than the current max, update the max."
       ],
       "pseudocode": [],
       "solutions": [
@@ -366,9 +366,9 @@ window.StructyChecklistData = {
         "Source.longestWord(\"potato\") -> \"potato\""
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Split the sentence into individual words.",
+        "Track the longest word seen so far as you iterate.",
+        "Because ties should favor the later word, update your answer when the new word's length is greater than or equal to the current best."
       ],
       "pseudocode": [],
       "solutions": [
@@ -412,9 +412,9 @@ window.StructyChecklistData = {
         "Source.allEven(List.of(42, 18, 96, 4, 70, 12, 58, 30, 84, 26)) -> true"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Check each number one at a time.",
+        "A number is even when num % 2 == 0.",
+        "Return false as soon as you find an odd number; if none are odd, return true."
       ],
       "pseudocode": [],
       "solutions": [
@@ -470,9 +470,9 @@ window.StructyChecklistData = {
         "Source.isPrime(713) -> false"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "A prime number has no divisors other than 1 and itself.",
+        "If the number is less than 2, it is not prime.",
+        "Try dividing by integers from 2 up to the square root of the number; if any divide evenly, return false."
       ],
       "pseudocode": [],
       "solutions": [
@@ -506,9 +506,9 @@ window.StructyChecklistData = {
         "fizzBuzz(32); // -> [\n//   1,      2,          \"fizz\",     4, \n//   \"buzz\", \"fizz\",     7,          8, \n//   \"fizz\", \"buzz\",     11,         \"fizz\", \n//   13,     14,         \"fizzbuzz\", 16, \n//   17,     \"fizz\",     19,         \"buzz\", \n//   \"fizz\", 22,         23,         \"fizz\", \n//   \"buzz\", 26,         \"fizz\",     28, \n//   29,     \"fizzbuzz\", 31,         32 \n// ]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Loop from 1 through n and decide what to append for each number.",
+        "Check divisibility by both 3 and 5 before checking them individually.",
+        "Append \"fizzbuzz\", \"fizz\", \"buzz\", or the number itself depending on the divisibility rules."
       ],
       "pseudocode": [],
       "solutions": [
@@ -541,9 +541,9 @@ window.StructyChecklistData = {
         "pairs(List.of(\"cherry\", \"cranberry\", \"banana\", \"blueberry\", \"lime\", \"papaya\")); // ->\n// [ \n//   [ \"cherry\", \"cranberry\" ], \n//   [ \"cherry\", \"banana\" ], \n//   [ \"cherry\", \"blueberry\" ], \n//   [ \"cherry\", \"lime\" ], \n//   [ \"cherry\", \"papaya\" ], \n//   [ \"cranberry\", \"banana\" ], \n//   [ \"cranberry\", \"blueberry\" ], \n//   [ \"cranberry\", \"lime\" ], \n//   [ \"cranberry\", \"papaya\" ], \n//   [ \"banana\", \"blueberry\" ], \n//   [ \"banana\", \"lime\" ], \n//   [ \"banana\", \"papaya\" ], \n//   [ \"blueberry\", \"lime\" ], \n//   [ \"blueberry\", \"papaya\" ], \n//   [ \"lime\", \"papaya\" ] \n// ]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Each pair should be formed by choosing two different positions in the list.",
+        "A nested loop works naturally here: fix the first element, then pair it with every later element.",
+        "Start the inner loop at i + 1 so you never repeat or reverse a pair."
       ],
       "pseudocode": [],
       "solutions": [
@@ -595,9 +595,9 @@ window.StructyChecklistData = {
         "Source.anagrams(\"pp\", \"oo\") -> false"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "If the strings have different lengths, they cannot be anagrams.",
+        "Count how many times each character appears in the first string.",
+        "Decrease those counts using the second string, then verify every final count is zero."
       ],
       "pseudocode": [],
       "solutions": [
@@ -641,9 +641,9 @@ window.StructyChecklistData = {
         "Source.mostFrequentChar(\"riverbed\") -> 'r'"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "First count how many times each character appears.",
+        "Ties should be broken by original order, so do not choose the winner from the map alone.",
+        "After building the frequency map, scan the original string from left to right and return the first character with the maximum count."
       ],
       "pseudocode": [],
       "solutions": [
@@ -681,9 +681,9 @@ window.StructyChecklistData = {
         "ArrayList<Integer> numbers = new ArrayList<>();\nfor (int i = 1; i <= 25000; i += 1) {\n  numbers.add(i);\n}\npairSum(numbers, 49999); // -> [ 24998, 24999 ]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "For each number, ask: what value would I need to reach the target?",
+        "Store previously seen numbers in a hash map along with their indices.",
+        "If target - current already exists in the map, return the stored index and the current index."
       ],
       "pseudocode": [],
       "solutions": [
@@ -719,9 +719,9 @@ window.StructyChecklistData = {
         "ArrayList<Integer> numbers = new ArrayList<>();\nfor (int i = 1; i <= 25000; i += 1) {\n  numbers.add(i);\n}\npairProduct(numbers, 624975000); // -> [ 24998, 24999 ]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "For each number, ask: what value would I need to multiply with it to reach the target?",
+        "Store previously seen numbers and their indices in a hash map.",
+        "If target / current has already been seen, you found the matching pair of indices."
       ],
       "pseudocode": [],
       "solutions": [
@@ -756,9 +756,9 @@ window.StructyChecklistData = {
         "List<Integer> a = new ArrayList<>();\nList<Integer> b = new ArrayList<>();\n\nfor (int i = 0; i < 60000; i += 1) {\n  a.add(i);\n  b.add(i);\n}\nSource.intersection(a, b) // -> [0,1,2,3,..., 59999]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Checking every item of one list against every item of the other list is too slow for large inputs.",
+        "Put one list into a HashSet so membership checks become fast.",
+        "Then iterate through the other list and collect the elements that appear in the set."
       ],
       "pseudocode": [],
       "solutions": [
@@ -798,9 +798,9 @@ window.StructyChecklistData = {
         "List<Integer> a = new ArrayList<>();\nList<Integer> b = new ArrayList<>();\n\nfor (int i = 0; i < 60000; i += 1) {\n  a.add(i);\n  b.add(i);\n}\nexclusiveItems(a, b); // -> [ ]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "You want the elements that are in exactly one of the two lists.",
+        "A HashSet can help you check whether an element exists in the other list in O(1) time.",
+        "Collect items from a that are not in b, then items from b that are not in a."
       ],
       "pseudocode": [],
       "solutions": [
@@ -845,9 +845,9 @@ window.StructyChecklistData = {
         "Source.allUnique(List.of(\"a\", \"u\", \"t\", \"u\", \"m\", \"n\")) -> false"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "You only need to know whether an element has been seen before.",
+        "Use a HashSet while iterating through the list.",
+        "If you ever encounter a value that is already in the set, return false; otherwise finish and return true."
       ],
       "pseudocode": [],
       "solutions": [
@@ -884,9 +884,9 @@ window.StructyChecklistData = {
         "List<String> a = new ArrayList<>();\nList<String> b = new ArrayList<>();\nfor (int i = 0; i < 200000; i += 1) {\n  a.add(Integer.toString(i));\n  b.add(Integer.toString(i));\n}\n\nintersectionWithDupes(a, b); // -> [0, 1, 2, ..., 199999]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Since duplicates matter, a set is not enough by itself.",
+        "Count how many times each value appears in one list using a HashMap.",
+        "While scanning the other list, only add a value to the result if its remaining count is still greater than zero, then decrement that count."
       ],
       "pseudocode": [],
       "solutions": [
@@ -932,9 +932,9 @@ window.StructyChecklistData = {
         "Source.sumNumbersRecursive(List.of(123456789, 12345678, 1234567, 123456, 12345, 1234, 123, 12, 1, 0)) -> 137174205"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Think about the smallest possible input that already has a known answer.",
+        "If the list is not empty, take the first number and reduce the problem to the rest of the list.",
+        "Your recursive step can look like: first element + sum of the remaining sublist."
       ],
       "pseudocode": [],
       "solutions": [
@@ -977,9 +977,9 @@ window.StructyChecklistData = {
         "Source.factorial(0) -> 1"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Factorial multiplies n by the factorial of the previous number.",
+        "You need a base case where the recursion stops.",
+        "Use factorial(n - 1) and remember that factorial(0) = 1."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1019,9 +1019,9 @@ window.StructyChecklistData = {
         "Source.sumOfLengths(List.of(\"0\", \"313\", \"1234567890\")) -> 14"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Think about the empty list of strings as the base case.",
+        "If the list is not empty, use the length of the first string plus the answer for the rest.",
+        "A recursive step can be: strings.get(0).length() + sumOfLengths(strings.subList(1, strings.size()))."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1059,9 +1059,9 @@ window.StructyChecklistData = {
         "Source.reverseString(\"\") -> \"\""
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Use the empty string as the base case.",
+        "Keep the first character aside and recursively reverse the rest of the string.",
+        "Append the first character after the recursive call returns."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1105,9 +1105,9 @@ window.StructyChecklistData = {
         "Source.palindrome(\"\") -> true"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "A string of length 0 or 1 is automatically a palindrome.",
+        "Compare the first and last characters before recursing.",
+        "If they match, continue on the substring that excludes both ends."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1151,9 +1151,9 @@ window.StructyChecklistData = {
         "Source.fibonacci(8) -> 21"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "The 0th and 1st Fibonacci numbers are your base cases.",
+        "Every other Fibonacci number is the sum of the previous two.",
+        "Use the recurrence fibonacci(n - 1) + fibonacci(n - 2)."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1187,9 +1187,9 @@ window.StructyChecklistData = {
         "Source.linkedListValues(null); \n// -> [ ]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Start at the head and move node by node until you reach null.",
+        "Create a result list and append each node's value as you traverse.",
+        "A loop with a current pointer works well here; recursive collection also works."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1232,9 +1232,9 @@ window.StructyChecklistData = {
         "Source.sumList(null) -> 0"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Traverse the list from head to tail.",
+        "Keep a running total and add each node's value into it.",
+        "Stop when the current pointer becomes null and return the accumulated sum."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1281,9 +1281,9 @@ window.StructyChecklistData = {
         "Source.run(node1, 100) -> false"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Visit each node one by one until the list ends.",
+        "Compare the current node's value with the target at every step.",
+        "Return true as soon as you find a match; if you hit null first, return false."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1328,9 +1328,9 @@ window.StructyChecklistData = {
         "Source.run(node1, 1) -> \"mango\""
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Walk through the list while keeping track of the current index.",
+        "When your counter matches the target index, return that node's value.",
+        "If the list ends before the counter reaches the index, return null."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1368,9 +1368,9 @@ window.StructyChecklistData = {
         "Node<String> p = new Node<>(\"p\");\n\n// p\n\nreverseList(p); // p"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Reversing in-place means each node should point backward instead of forward.",
+        "You will need three pointers: previous, current, and next.",
+        "At each step save next, reverse current.next, then advance previous and current."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1410,9 +1410,9 @@ window.StructyChecklistData = {
         "Node<String> one = new Node<>(\"1\");\nNode<String> two = new Node<>(\"2\");\nNode<String> three = new Node<>(\"3\");\none.next = two;\ntwo.next = three;\n// 1 -> 2 -> 3 \n\nNode<String> w = new Node<>(\"w\");\n// w\n\nSource.zipperLists(one, w);\n// 1 -> w -> 2 -> 3"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Alternate nodes from the first and second lists.",
+        "Keep pointers into both lists so you can splice one node at a time.",
+        "When one list runs out, attach the remainder of the other list."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1450,9 +1450,9 @@ window.StructyChecklistData = {
         "Node<Integer> h = new Node<>(30);\n// 30\n\nNode<Integer> p = new Node<>(15);\nNode<Integer> q = new Node<>(67);\np.next = q;\n// 15 -> 67\n\nSource.mergeLists(h, p);\n// 15 -> 30 -> 67"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Both input lists are sorted, so always choose the smaller current node next.",
+        "Use a dummy head or tail pointer to build the merged list cleanly.",
+        "When one list becomes null, append the rest of the other list."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1498,9 +1498,9 @@ window.StructyChecklistData = {
         "Source.run(z) -> true"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "A univalue list means every node stores the same value.",
+        "Pick one value to compare against, such as the head's value.",
+        "Traverse the list and return false on the first mismatch; otherwise return true."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1546,9 +1546,9 @@ window.StructyChecklistData = {
         "Source.run(null) -> 0"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "You want the longest run of consecutive nodes that hold the same value.",
+        "Track both the current streak length and the best streak seen so far.",
+        "When the value changes, reset the current streak to 1; when it stays the same, increment it."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1583,9 +1583,9 @@ window.StructyChecklistData = {
         "Node<String> t = new Node<>(\"t\");\n\n// t\n\nSource.removeNode(t, \"t\");\n// null"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "You need to reconnect the previous node so it skips over the target node.",
+        "Special-case removing the head, because there is no previous node before it.",
+        "Traverse until current.next holds the target value, then set current.next = current.next.next."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1624,9 +1624,9 @@ window.StructyChecklistData = {
         "Node<String> a = new Node<>(\"a\");\nNode<String> b = new Node<>(\"b\");\n\na.next = b;\n\n// a -> b\n\nSource.insertNode(a, \"z\", 0);\n// z -> a -> b"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "You need to insert a new node at a specific index without losing the rest of the list.",
+        "Special-case index 0 by making the new node point to the current head.",
+        "Otherwise walk to the node just before the insertion point, then splice the new node between previous and previous.next."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1666,9 +1666,9 @@ window.StructyChecklistData = {
         "Source.depthFirstValues(null); \n//    -> []"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Depth-first traversal goes as deep as possible before backing up.",
+        "Think preorder: visit current node, then left subtree, then right subtree.",
+        "You can solve this with recursion or with an explicit stack."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1708,9 +1708,9 @@ window.StructyChecklistData = {
         "Source.breadthFirstValues(null); \n//    -> []"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Breadth-first traversal visits the tree level by level.",
+        "A queue is the natural data structure for this pattern.",
+        "Remove from the front, record the node's value, then enqueue its children."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1746,9 +1746,9 @@ window.StructyChecklistData = {
         "Source.treeSum(null) -> 0"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Every node contributes its own value plus the sums of its subtrees.",
+        "An empty tree should contribute 0.",
+        "Use the recurrence: node.val + treeSum(node.left) + treeSum(node.right)."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1800,9 +1800,9 @@ window.StructyChecklistData = {
         "Source.treeIncludes(null, \"b\") -> false"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Check the current node first before exploring children.",
+        "If the current node matches the target, you can return true immediately.",
+        "Otherwise search the left subtree or the right subtree and return whether either one succeeds."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1845,9 +1845,9 @@ window.StructyChecklistData = {
         "Source.treeMinValue(a) -> 42."
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "You need the minimum value among the current node, the left subtree, and the right subtree.",
+        "Use a very large value for the base case when the node is null, or handle null children carefully.",
+        "At each node, compute the minimum of node.val, leftMin, and rightMin."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1890,9 +1890,9 @@ window.StructyChecklistData = {
         "Source.maxPathSum(a) -> 42."
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "A valid path must start at the root and end at a leaf.",
+        "From each node, choose the better of the left path sum and right path sum.",
+        "Handle a leaf as a base case that simply returns its own value."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1929,9 +1929,9 @@ window.StructyChecklistData = {
         "Node<Integer> root = new Node<>(0);\nNode<Integer> curr = root;\nfor (int i = 1; i <= 200; i += 1) {\n  curr.right = new Node<>(i);\n  curr = curr.right;\n}\n\n//      0\n//       \\\n//        1\n//         \\\n//          2\n//           \\\n//            3\n//             .\n//              .\n//               .\n//              199\n//                \\\n//                200\n\nSource.pathFinder(root, 116); // -> [0, 1, 2, 3, ..., 115, 116]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "You are looking for one root-to-node path, not all possible paths.",
+        "If the current node matches the target, the path is just a list containing that value.",
+        "Ask the left and right subtrees for a path; when one returns a non-null answer, add the current value to the front."
       ],
       "pseudocode": [],
       "solutions": [
@@ -1976,9 +1976,9 @@ window.StructyChecklistData = {
         "Source.run(null, 42) -> 0"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Count 1 for the current node only if its value matches the target.",
+        "Then add the counts from the left and right subtrees.",
+        "An empty tree contributes 0 to the total count."
       ],
       "pseudocode": [],
       "solutions": [
@@ -2028,9 +2028,9 @@ window.StructyChecklistData = {
         "Source.run(null) -> -1"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "Height is the number of edges on the longest root-to-leaf path.",
+        "An empty tree has height -1, which makes a leaf end up with height 0.",
+        "Use 1 + max(height(left), height(right))."
       ],
       "pseudocode": [],
       "solutions": [
@@ -2075,9 +2075,9 @@ window.StructyChecklistData = {
         "Source.run(a) -> 42"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "The bottom-right value is the last node visited in a level-order traversal.",
+        "Use a queue to process the tree from top to bottom, left to right.",
+        "Keep overwriting a variable with each dequeued node's value; after traversal ends, that value is the answer."
       ],
       "pseudocode": [],
       "solutions": [
@@ -2111,9 +2111,9 @@ window.StructyChecklistData = {
         "Node<String> z = new Node<>(\"z\");\n\n//      z\n\nSource.allTreePaths(z); // -> \n// [\n//   ['z']\n// ]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "A complete path only exists when you reach a leaf.",
+        "Ask the left and right children for all of their root-to-leaf paths.",
+        "Prepend the current node's value to every child path and combine the results."
       ],
       "pseudocode": [],
       "solutions": [
@@ -2147,9 +2147,9 @@ window.StructyChecklistData = {
         "Source.treeLevels(null); // -> []"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "You want a nested list where each inner list contains one level of the tree.",
+        "A queue can help you process nodes in breadth-first order while tracking their level.",
+        "When you see a node from a new level, start a new inner list; otherwise append to the existing one."
       ],
       "pseudocode": [],
       "solutions": [
@@ -2189,9 +2189,9 @@ window.StructyChecklistData = {
         "Source.levelAverages(null); // -> [ ]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "First group values by tree level, then compute one average per group.",
+        "You can gather levels with either breadth-first traversal or depth-first traversal plus a level index.",
+        "After building the per-level lists or sums, divide each level's total by its number of nodes."
       ],
       "pseudocode": [],
       "solutions": [
@@ -2231,9 +2231,9 @@ window.StructyChecklistData = {
         "Source.leafList(null); // -> [ ]"
       ],
       "hints": [
-        "",
-        "",
-        ""
+        "A leaf is a node with no left child and no right child.",
+        "Traverse the tree from left to right and collect values only when you hit a leaf.",
+        "If you use DFS, explore the left subtree before the right subtree to preserve the required order."
       ],
       "pseudocode": [],
       "solutions": [
