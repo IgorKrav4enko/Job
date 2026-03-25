@@ -74,6 +74,15 @@
       return body;
     }
 
+    const layout = document.createElement("div");
+    layout.className = "grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px]";
+
+    const mainColumn = document.createElement("div");
+    mainColumn.className = "min-w-0";
+
+    const sideColumn = document.createElement("aside");
+    sideColumn.className = "space-y-4";
+
     const statement = document.createElement("section");
     statement.className = "rounded-2xl bg-mist px-4 py-4";
     statement.innerHTML = "<h4 class=\"font-heading text-lg font-bold\">Умова</h4>";
@@ -83,19 +92,7 @@
     statementText.textContent = detail.statement;
     statement.append(statementText);
 
-    if (detail.examples && detail.examples.length) {
-      const examples = document.createElement("div");
-      examples.className = "mt-3 space-y-2";
-      detail.examples.forEach((example) => {
-        const pill = document.createElement("div");
-        pill.className = "rounded-xl bg-white px-3 py-2 font-mono text-xs text-ink/75";
-        pill.textContent = example;
-        examples.append(pill);
-      });
-      statement.append(examples);
-    }
-
-    body.append(statement);
+    mainColumn.append(statement);
 
     const hintSection = document.createElement("section");
     hintSection.className = "mt-4";
@@ -128,16 +125,31 @@
     });
 
     hintSection.append(hintButtons, hintPanels);
-    body.append(hintSection);
+    mainColumn.append(hintSection);
 
     const pseudoSection = document.createElement("section");
     pseudoSection.className = "mt-4";
-    pseudoSection.innerHTML = "<h4 class=\"font-heading text-lg font-bold\">Pseudocode</h4>";
+    const pseudoTitle = document.createElement("h4");
+    pseudoTitle.className = "font-heading text-lg font-bold";
+    pseudoTitle.textContent = "Pseudocode";
+
+    const pseudoToggle = document.createElement("button");
+    pseudoToggle.type = "button";
+    pseudoToggle.className = "mt-3 rounded-full border border-line px-3 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
+    pseudoToggle.textContent = "Show pseudocode";
+
     const pseudoBox = document.createElement("pre");
-    pseudoBox.className = "mt-3 overflow-x-auto rounded-2xl bg-ink p-4 text-sm text-white";
+    pseudoBox.className = "mt-3 hidden overflow-x-auto rounded-2xl bg-ink p-4 text-sm text-white";
     pseudoBox.textContent = detail.pseudocode.join("\n");
-    pseudoSection.append(pseudoBox);
-    body.append(pseudoSection);
+
+    pseudoToggle.addEventListener("click", () => {
+      const isHidden = pseudoBox.classList.contains("hidden");
+      pseudoBox.classList.toggle("hidden");
+      pseudoToggle.textContent = isHidden ? "Hide pseudocode" : "Show pseudocode";
+    });
+
+    pseudoSection.append(pseudoTitle, pseudoToggle, pseudoBox);
+    mainColumn.append(pseudoSection);
 
     const solutionsSection = document.createElement("section");
     solutionsSection.className = "mt-4";
@@ -167,7 +179,64 @@
       solutionsSection.append(solutionCard);
     });
 
-    body.append(solutionsSection);
+    mainColumn.append(solutionsSection);
+
+    if (detail.testCases && detail.testCases.length) {
+      const testsCard = document.createElement("details");
+      testsCard.className = "rounded-2xl border border-line bg-mist";
+
+      const testsSummary = document.createElement("summary");
+      testsSummary.className = "cursor-pointer list-none px-4 py-3";
+
+      const summaryRow = document.createElement("div");
+      summaryRow.className = "flex items-center justify-between gap-3";
+
+      const summaryTitle = document.createElement("div");
+      summaryTitle.innerHTML = "<div class=\"font-heading text-lg font-bold\">Test Cases</div><div class=\"mt-1 text-sm text-ink/60\">Допоміжний блок для швидкого копіювання</div>";
+
+      const copyButton = document.createElement("button");
+      copyButton.type = "button";
+      copyButton.className = "rounded-full border border-line px-3 py-2 text-xs font-semibold transition-colors hover:border-coral hover:text-coral";
+      copyButton.textContent = "Copy all";
+      copyButton.addEventListener("click", async (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const text = detail.testCases.join("\n");
+        try {
+          await navigator.clipboard.writeText(text);
+          copyButton.textContent = "Copied";
+          setTimeout(() => {
+            copyButton.textContent = "Copy all";
+          }, 1200);
+        } catch {
+          copyButton.textContent = "Copy failed";
+          setTimeout(() => {
+            copyButton.textContent = "Copy all";
+          }, 1200);
+        }
+      });
+
+      summaryRow.append(summaryTitle, copyButton);
+      testsSummary.append(summaryRow);
+
+      const testsBody = document.createElement("div");
+      testsBody.className = "border-t border-line bg-white px-4 py-4";
+
+      const testsCode = document.createElement("pre");
+      testsCode.className = "overflow-x-auto rounded-2xl bg-ink p-4 text-sm text-white";
+      testsCode.textContent = detail.testCases.join("\n");
+
+      testsBody.append(testsCode);
+      testsCard.append(testsSummary, testsBody);
+      sideColumn.append(testsCard);
+    }
+
+    layout.append(mainColumn);
+    if (sideColumn.childElementCount > 0) {
+      layout.append(sideColumn);
+    }
+
+    body.append(layout);
     return body;
   };
 
@@ -198,21 +267,11 @@
 
       summaryText.append(topicLabel, title, meta);
 
-      const actions = document.createElement("div");
-      actions.className = "flex items-center gap-3";
-
-      const sourceLink = document.createElement("a");
-      sourceLink.className = "rounded-full border border-line px-4 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
-      sourceLink.href = "./structy.md";
-      sourceLink.target = "_blank";
-      sourceLink.textContent = "source";
-
       const arrow = document.createElement("span");
       arrow.className = "text-2xl text-ink/45 transition-transform group-open:rotate-180";
       arrow.textContent = "⌄";
 
-      actions.append(sourceLink, arrow);
-      summary.append(summaryText, actions);
+      summary.append(summaryText, arrow);
       topicEl.append(summary);
 
       const content = document.createElement("div");
