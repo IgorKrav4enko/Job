@@ -1894,6 +1894,7 @@ window.StructyChecklistData = {
         "From each node, choose the better of the left path sum and right path sum.",
         "Handle a leaf as a base case that simply returns its own value."
       ],
+      "shortIdea": "Йди рекурсією вниз. Для кожного вузла порахуй найкращу суму з лівого і правого піддерева, візьми більшу та додай значення поточного вузла. Для листка відповідь просто його значення.",
       "pseudocode": [],
       "solutions": [
         {
@@ -1933,17 +1934,35 @@ window.StructyChecklistData = {
         "If the current node matches the target, the path is just a list containing that value.",
         "Ask the left and right subtrees for a path; when one returns a non-null answer, add the current value to the front."
       ],
-      "pseudocode": [],
+      "shortIdea": "Шукай target рекурсивно спочатку вліво, потім вправо. Якщо знайшов вузол, поверни масив із ним; коли рекурсія піднімається назад, просто додавай поточний вузол на початок шляху.",
+      "pseudocode": [
+        "function pathFinder(root, target):",
+        "  if root is null:",
+        "    return null",
+        "",
+        "  if root.val == target:",
+        "    return [root.val]",
+        "",
+        "  leftPath = pathFinder(root.left, target)",
+        "  if leftPath is not null:",
+        "    return [root.val] + leftPath",
+        "",
+        "  rightPath = pathFinder(root.right, target)",
+        "  if rightPath is not null:",
+        "    return [root.val] + rightPath",
+        "",
+        "  return null"
+      ],
       "solutions": [
         {
-          "title": "depth first",
+          "title": "Build Path On Return",
           "code": "import java.util.List;\nimport java.util.ArrayList;\n\nclass Node<T> {\n  T val;\n  Node<T> left;\n  Node<T> right;\n  \n  public Node(T val) {\n    this.val = val;\n    this.left = null;\n    this.right = null;\n  }\n}\n\nclass Source {\n  public static <T> List<T> pathFinder(Node<T> root, T target) {\n    if (root == null) {\n      return null;\n    }\n    \n    if (root.val == target) {\n      return List.of(root.val);\n    }\n    \n    List<T> leftPath = pathFinder(root.left, target);\n    if (leftPath != null) {\n      List<T> newPath = new ArrayList<>();\n      newPath.add(root.val);\n      newPath.addAll(leftPath);\n      return newPath;\n    }\n    \n    List<T> rightPath = pathFinder(root.right, target);\n    if (rightPath != null) {\n      List<T> newPath = new ArrayList<>();\n      newPath.add(root.val);\n      newPath.addAll(rightPath);\n      return newPath;\n    }\n    \n    return null;\n  }\n\n  public static void run() {\n    // this function behaves as `main()` for the 'run' command\n    // you may sandbox in this function , but should not remove it\n  }\n}",
-          "complexity": "n = number of nodes | Time: O(n^2) | Space: O(n)"
+          "complexity": "n = number of nodes | Time: O(n^2) | Space: O(n) | Build a new path list while recursion returns, so path elements may be copied many times."
         },
         {
-          "title": "depth first linear",
+          "title": "Backward Path Then Reverse",
           "code": "import java.util.List;\nimport java.util.ArrayList;\nimport java.util.Collections;\n\nclass Node<T> {\n  T val;\n  Node<T> left;\n  Node<T> right;\n  \n  public Node(T val) {\n    this.val = val;\n    this.left = null;\n    this.right = null;\n  }\n}\n\nclass Source {\n  public static <T> List<T> pathFinder(Node<T> root, T target) {\n    List<T> path = findPath(root, target);\n    if (path == null) {\n      return null;\n    } else {\n      Collections.reverse(path);\n      return path;\n    }\n  }\n  \n  public static <T> List<T> findPath(Node<T> root, T target) {\n    if (root == null) {\n      return null;\n    }\n    \n    if (root.val == target) {\n      return new ArrayList<>(List.of(root.val));\n    }\n    \n    List<T> leftPath = findPath(root.left, target);\n    if (leftPath != null) {\n      leftPath.add(root.val);\n      return leftPath;\n    }\n    \n    List<T> rightPath = findPath(root.right, target);\n    if (rightPath != null) {\n      rightPath.add(root.val);\n      return rightPath;\n    }\n    \n    return null;\n  }\n\n  public static void run() {\n    // this function behaves as `main()` for the 'run' command\n    // you may sandbox in this function , but should not remove it\n  }\n}",
-          "complexity": "n = number of nodes | Time: O(n) | Space: O(n)"
+          "complexity": "n = number of nodes | Time: O(n) | Space: O(n) | Reuse one path list while unwinding, then reverse once at the end."
         }
       ],
       "meta": {
@@ -1953,7 +1972,7 @@ window.StructyChecklistData = {
         "premium": true,
         "verbose": "Find the path to a target within a binary tree.",
         "stub": "import java.util.List;\n\nclass Node<T> {\n  T val;\n  Node<T> left;\n  Node<T> right;\n  \n  public Node(T val) {\n    this.val = val;\n    this.left = null;\n    this.right = null;\n  }\n}\n\nclass Source {\n  public static <T> List<T> pathFinder(Node<T> root, T target) {\n    // todo\n    return;\n  }\n\n  public static void run() {\n    // this function behaves as `main()` for the 'run' command\n    // you may sandbox in this function , but should not remove it\n  }\n}",
-        "solutionCode": "import java.util.List;\n\nclass Node<T> {\n  T val;\n  Node<T> left;\n  Node<T> right;\n  \n  public Node(T val) {\n    this.val = val;\n    this.left = null;\n    this.right = null;\n  }\n}\n\nclass Source {\n  public static <T> List<T> pathFinder(Node<T> root, T target) {\n    return;\n  }\n  public static <T> List<T> pathFinder(Node<T> root, T target) {\n    if(root== null) return null;\n    var  res = new List<T>();\n    if(root.val == target)\n      \n  }\n\n  public static void run() {\n    // this function behaves as `main()` for the 'run' command\n    // you may sandbox in this function , but should not remove it\n  }\n}"
+        "solutionCode": "import java.util.List;\nimport java.util.ArrayList;\n\nclass Node<T> {\n  T val;\n  Node<T> left;\n  Node<T> right;\n  \n  public Node(T val) {\n    this.val = val;\n    this.left = null;\n    this.right = null;\n  }\n}\n\nclass Source {\n  public static <T> List<T> pathFinder(Node<T> root, T target) {\n    if (root == null) {\n      return null;\n    }\n\n    if (root.val == target) {\n      return List.of(root.val);\n    }\n\n    List<T> leftPath = pathFinder(root.left, target);\n    if (leftPath != null) {\n      List<T> result = new ArrayList<>();\n      result.add(root.val);\n      result.addAll(leftPath);\n      return result;\n    }\n\n    List<T> rightPath = pathFinder(root.right, target);\n    if (rightPath != null) {\n      List<T> result = new ArrayList<>();\n      result.add(root.val);\n      result.addAll(rightPath);\n      return result;\n    }\n\n    return null;\n  }\n\n  public static void run() {\n  }\n}"
       }
     },
     "binary-tree-i::tree-value-count": {

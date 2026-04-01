@@ -61,6 +61,25 @@
     }
   };
 
+  const getShortIdea = (detail) => {
+    if (!detail) {
+      return null;
+    }
+
+    if (detail.shortIdea) {
+      return detail.shortIdea;
+    }
+
+    const verbose = detail.meta && detail.meta.verbose ? detail.meta.verbose.trim() : "";
+    const firstHint = detail.hints && detail.hints.length ? detail.hints[0].trim() : "";
+
+    if (verbose && firstHint) {
+      return verbose + " " + firstHint;
+    }
+
+    return verbose || firstHint || null;
+  };
+
   const getCheckboxes = () => Array.from(document.querySelectorAll("[data-task-id]"));
 
   const updateProgress = () => {
@@ -124,6 +143,20 @@
 
     mainColumn.append(statement);
 
+    const shortIdea = getShortIdea(detail);
+    if (shortIdea) {
+      const shortIdeaSection = document.createElement("section");
+      shortIdeaSection.className = "mt-5 rounded-[22px] border border-line/60 bg-gradient-to-br from-white to-mist px-5 py-5";
+      shortIdeaSection.innerHTML = "<h4 class=\"font-heading text-lg font-bold\">Коротка ідея</h4>";
+
+      const shortIdeaText = document.createElement("p");
+      shortIdeaText.className = "mt-3 text-sm leading-7 text-ink/80";
+      shortIdeaText.textContent = shortIdea;
+
+      shortIdeaSection.append(shortIdeaText);
+      mainColumn.append(shortIdeaSection);
+    }
+
     const visualizationSection = document.createElement("section");
     visualizationSection.className = "mt-5 rounded-[22px] border border-line/60 bg-white px-5 py-5";
     const visualizationTitle = document.createElement("h4");
@@ -133,10 +166,10 @@
     const visualizationToggle = document.createElement("button");
     visualizationToggle.type = "button";
     visualizationToggle.className = "mt-4 rounded-full border border-line/70 bg-mist px-3 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
-    visualizationToggle.textContent = "Show visualization";
+    visualizationToggle.textContent = "Hide visualization";
 
     const visualizationBox = document.createElement("pre");
-    visualizationBox.className = "mt-4 hidden overflow-x-auto rounded-2xl bg-ink p-4 text-sm leading-7 text-white";
+    visualizationBox.className = "mt-4 overflow-x-auto rounded-2xl bg-ink p-4 text-sm leading-7 text-white";
 
     const visualizationLines = window.StructyVisualizations
       ? window.StructyVisualizations.getTextVisualization(detailKey)
@@ -166,24 +199,70 @@
     const canvasToggle = document.createElement("button");
     canvasToggle.type = "button";
     canvasToggle.className = "mt-4 rounded-full border border-line/70 bg-mist px-3 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
-    canvasToggle.textContent = "Show canvas";
+    canvasToggle.textContent = "Hide canvas";
 
     const canvasWrap = document.createElement("div");
-    canvasWrap.className = "mt-4 hidden";
+    canvasWrap.className = "mt-4";
 
-    const canvasType = window.StructyVisualizations
-      ? window.StructyVisualizations.getCanvasType(detailKey)
-      : null;
-    if (canvasType) {
-      const helper = document.createElement("p");
-      helper.className = "mb-3 text-sm leading-6 text-ink/65";
-      helper.textContent = "Візуальне дерево викликів для цієї задачі.";
-      const canvas = document.createElement("canvas");
-      canvas.className = "block w-full rounded-2xl border border-line/60 bg-mist";
-      canvas.width = 760;
-      canvas.height = 360;
-      canvas.style.height = "360px";
-      canvasWrap.append(helper, canvas);
+    const canvasVariants = window.StructyVisualizations
+      ? window.StructyVisualizations.getCanvasVisualizations(detailKey)
+      : [];
+    if (canvasVariants.length > 0) {
+      const buildCanvasCard = (variant) => {
+        const card = document.createElement("section");
+        card.className = "rounded-[22px] border border-line/60 bg-gradient-to-br from-mist to-white px-4 py-4";
+
+        const title = document.createElement("h5");
+        title.className = "font-heading text-base font-bold";
+        title.textContent = variant.title;
+
+        const helper = document.createElement("p");
+        helper.className = "mt-2 text-sm leading-6 text-ink/65";
+        helper.textContent = variant.description;
+
+        const controls = document.createElement("div");
+        controls.className = "mt-3 mb-3 flex flex-wrap gap-2";
+
+        const makeControl = (label) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "rounded-full border border-line/70 bg-white px-3 py-2 text-xs font-semibold transition-colors hover:border-coral hover:text-coral";
+          button.textContent = label;
+          return button;
+        };
+
+        const prevButton = makeControl("Prev");
+        const nextButton = makeControl("Next");
+        const resetCanvasButton = makeControl("Reset");
+        controls.append(prevButton, nextButton, resetCanvasButton);
+
+        const canvas = document.createElement("canvas");
+        canvas.className = "block w-full rounded-2xl border border-line/60 bg-mist";
+        canvas.width = 760;
+        canvas.height = 360;
+        canvas.style.height = "360px";
+
+        card.append(title, helper, controls, canvas);
+        return { card, canvas, prevButton, nextButton, resetCanvasButton };
+      };
+
+      const canvasControllers = [];
+      canvasVariants.forEach((variant) => {
+        const ui = buildCanvasCard(variant);
+        canvasWrap.append(ui.card);
+
+        const controller = window.StructyVisualizations.createCanvasController(ui.canvas, variant.type);
+        if (controller) {
+          ui.prevButton.addEventListener("click", () => controller.prev());
+          ui.nextButton.addEventListener("click", () => controller.next());
+          ui.resetCanvasButton.addEventListener("click", () => controller.reset());
+          canvasControllers.push(controller);
+        } else {
+          ui.prevButton.disabled = true;
+          ui.nextButton.disabled = true;
+          ui.resetCanvasButton.disabled = true;
+        }
+      });
 
       canvasToggle.addEventListener("click", () => {
         const isHidden = canvasWrap.classList.contains("hidden");
@@ -191,11 +270,13 @@
         canvasToggle.textContent = isHidden ? "Hide canvas" : "Show canvas";
         if (isHidden) {
           requestAnimationFrame(() => {
-            if (window.StructyVisualizations) {
-              window.StructyVisualizations.mountCanvasVisualization(canvas, canvasType);
-            }
+            canvasControllers.forEach((controller) => controller.showStep(0));
           });
         }
+      });
+
+      requestAnimationFrame(() => {
+        canvasControllers.forEach((controller) => controller.showStep(0));
       });
     } else {
       const placeholder = document.createElement("div");
@@ -366,7 +447,7 @@
       const topicEl = document.createElement("details");
       topicEl.className = "topic-card group overflow-hidden rounded-[28px] border border-line/70 bg-white/88 shadow-[0_8px_24px_rgba(31,29,26,0.05)] transition-all open:shadow-soft";
       topicEl.dataset.search = (topic.title + " " + topic.tasks.join(" ")).toLowerCase();
-      topicEl.open = true;
+      topicEl.open = topic.slug.startsWith("binary-tree");
       const accent = topicAccents[topic.slug] || topicAccents["mixed-recall"];
 
       const summary = document.createElement("summary");
@@ -468,9 +549,6 @@
   };
 
   renderTopics();
-  document.querySelectorAll(".topic-card").forEach((el) => {
-    el.open = true;
-  });
   updateProgress();
   filterTopics();
 
