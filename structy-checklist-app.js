@@ -5,8 +5,10 @@
 
   const storageKey = "structy-topic-checklist-state";
   const topicsRoot = document.getElementById("topics-root");
+  const sidebarTopicsRoot = document.getElementById("sidebar-topics-root");
   const progressBar = document.getElementById("progress-bar");
   const progressText = document.getElementById("progress-text");
+  const progressPercent = document.getElementById("progress-percent");
   const topicCount = document.getElementById("topic-count");
   const taskCount = document.getElementById("task-count");
   const visibleCount = document.getElementById("visible-count");
@@ -81,6 +83,27 @@
   };
 
   const getCheckboxes = () => Array.from(document.querySelectorAll("[data-task-id]"));
+  const getTopicStats = (topic) => {
+    const total = topic.tasks.length;
+    const completed = topic.tasks.filter((taskName) => Boolean(state[taskId(topic.slug, taskName)])).length;
+    return { total, completed };
+  };
+
+  const openTaskFromSidebar = (topicSlug, taskName) => {
+    const topicCard = document.getElementById("topic-" + topicSlug);
+    if (!topicCard) {
+      return;
+    }
+
+    topicCard.open = true;
+    const taskCard = document.getElementById("task-" + taskId(topicSlug, taskName));
+    if (taskCard) {
+      taskCard.open = true;
+      taskCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      topicCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   const updateProgress = () => {
     const checkboxes = getCheckboxes();
@@ -90,6 +113,7 @@
 
     progressBar.style.width = percent + "%";
     progressText.textContent = completed + " / " + total;
+    progressPercent.textContent = Math.round(percent) + "% complete";
     topicCount.textContent = String(topics.length);
     taskCount.textContent = String(total);
   };
@@ -107,8 +131,104 @@
       }
     });
 
+    document.querySelectorAll("[data-sidebar-topic]").forEach((sidebarTopic) => {
+      const topicSlug = sidebarTopic.dataset.sidebarTopic;
+      const topicCard = document.getElementById("topic-" + topicSlug);
+      sidebarTopic.classList.toggle("hidden", !topicCard || topicCard.classList.contains("hidden"));
+    });
+
     visibleCount.textContent = visible + " тем видно";
     emptyState.classList.toggle("hidden", visible !== 0);
+  };
+
+  const renderSidebar = () => {
+    const openTopics = new Set(
+      Array.from(document.querySelectorAll("[data-sidebar-topic]"))
+        .filter((section) => section.open)
+        .map((section) => section.dataset.sidebarTopic)
+    );
+
+    sidebarTopicsRoot.innerHTML = "";
+
+    topics.forEach((topic) => {
+      const stats = getTopicStats(topic);
+      const topicSection = document.createElement("details");
+      topicSection.className = "group overflow-hidden rounded-[24px] border border-line/80 bg-[#fbf8f1]";
+      topicSection.dataset.sidebarTopic = topic.slug;
+      topicSection.open = openTopics.size ? openTopics.has(topic.slug) : topic.slug === "introduction";
+
+      const summary = document.createElement("summary");
+      summary.className = "flex cursor-pointer list-none items-center justify-between gap-3 bg-[#f2ece1] px-4 py-4";
+
+      const leftWrap = document.createElement("div");
+      leftWrap.className = "min-w-0 flex-1";
+
+      const title = document.createElement("div");
+      title.className = "text-[15px] font-semibold text-ink";
+      title.textContent = topic.title;
+
+      const meta = document.createElement("div");
+      meta.className = "mt-1 text-xs text-ink/55";
+      meta.textContent = stats.completed + "/" + stats.total + " complete";
+
+      leftWrap.append(title, meta);
+
+      const rightWrap = document.createElement("div");
+      rightWrap.className = "flex items-center gap-3 text-sm text-ink/55";
+
+      const count = document.createElement("span");
+      count.className = "font-semibold";
+      count.textContent = stats.completed + "/" + stats.total;
+
+      const arrow = document.createElement("span");
+      arrow.className = "text-lg transition-transform duration-200 group-open:rotate-180";
+      arrow.textContent = "⌄";
+
+      rightWrap.append(count, arrow);
+      summary.append(leftWrap, rightWrap);
+
+      const list = document.createElement("div");
+      list.className = "space-y-1 px-4 py-3";
+
+      topic.tasks.forEach((taskName) => {
+        const id = taskId(topic.slug, taskName);
+        const taskButton = document.createElement("button");
+        taskButton.type = "button";
+        taskButton.className = "flex w-full items-start gap-3 rounded-2xl px-2 py-2 text-left transition-colors hover:bg-white";
+        taskButton.dataset.sidebarTask = id;
+
+        const marker = document.createElement("span");
+        marker.className = "mt-1 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full border text-[11px] font-bold";
+
+        const done = Boolean(state[id]);
+        if (done) {
+          marker.className += " border-[#12b89d] bg-[#12b89d] text-white";
+          marker.textContent = "✓";
+        } else {
+          marker.className += " border-line bg-white text-ink/35";
+          marker.textContent = "○";
+        }
+
+        const textWrap = document.createElement("div");
+        textWrap.className = "min-w-0";
+
+        const name = document.createElement("div");
+        name.className = "text-sm font-medium leading-5 text-ink/88";
+        name.textContent = taskName;
+
+        const hint = document.createElement("div");
+        hint.className = "mt-1 text-xs leading-4 text-ink/45";
+        hint.textContent = taskDetails[id] ? "Open task details" : "Title only";
+
+        textWrap.append(name, hint);
+        taskButton.append(marker, textWrap);
+        taskButton.addEventListener("click", () => openTaskFromSidebar(topic.slug, taskName));
+        list.append(taskButton);
+      });
+
+      topicSection.append(summary, list);
+      sidebarTopicsRoot.append(topicSection);
+    });
   };
 
   const renderTaskBody = (detail, detailKey) => {
@@ -446,8 +566,9 @@
     topics.forEach((topic) => {
       const topicEl = document.createElement("details");
       topicEl.className = "topic-card group overflow-hidden rounded-[28px] border border-line/70 bg-white/88 shadow-[0_8px_24px_rgba(31,29,26,0.05)] transition-all open:shadow-soft";
+      topicEl.id = "topic-" + topic.slug;
       topicEl.dataset.search = (topic.title + " " + topic.tasks.join(" ")).toLowerCase();
-      topicEl.open = topic.slug.startsWith("binary-tree");
+      topicEl.open = topic.slug === "introduction";
       const accent = topicAccents[topic.slug] || topicAccents["mixed-recall"];
 
       const summary = document.createElement("summary");
@@ -496,6 +617,7 @@
 
           const taskCard = document.createElement("details");
           taskCard.className = "rounded-[22px] border border-line/60 bg-gradient-to-br from-mist to-white shadow-[0_4px_16px_rgba(31,29,26,0.03)]";
+          taskCard.id = "task-" + id;
 
           const taskSummary = document.createElement("summary");
           taskSummary.className = "flex cursor-pointer list-none items-start gap-4 px-5 py-4";
@@ -510,6 +632,8 @@
             state[id] = checkbox.checked;
             writeState(state);
             updateProgress();
+            renderSidebar();
+            filterTopics();
           });
 
           const textWrap = document.createElement("div");
@@ -549,6 +673,7 @@
   };
 
   renderTopics();
+  renderSidebar();
   updateProgress();
   filterTopics();
 
@@ -560,11 +685,19 @@
         card.open = true;
       }
     });
+    document.querySelectorAll("[data-sidebar-topic]").forEach((section) => {
+      if (!section.classList.contains("hidden")) {
+        section.open = true;
+      }
+    });
   });
 
   collapseAllButton.addEventListener("click", () => {
     document.querySelectorAll(".topic-card").forEach((card) => {
       card.open = false;
+    });
+    document.querySelectorAll("[data-sidebar-topic]").forEach((section) => {
+      section.open = false;
     });
   });
 
@@ -579,5 +712,6 @@
 
     localStorage.removeItem(storageKey);
     updateProgress();
+    renderSidebar();
   });
 })();

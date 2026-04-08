@@ -56,43 +56,68 @@
         </div>
       </div>
 
-      <div class="grid gap-6 p-6 md:p-8 xl:grid-cols-[320px_minmax(0,1fr)]">
-        <aside class="space-y-6">
-          <section class="rounded-3xl border border-line/70 bg-white/65 p-6 backdrop-blur-sm">
-            <p class="text-xs uppercase tracking-[0.28em] text-coral">Progress</p>
-            <h2 class="mt-3 font-heading text-2xl font-extrabold">Загальний прогрес</h2>
-            <div class="mt-5 h-1.5 overflow-hidden rounded-full bg-ink/10">
-              <div class="h-full bg-pine transition-all duration-300" id="progress-bar" style="width: 0%"></div>
-            </div>
-            <p class="mt-3 text-sm text-ink/75"><span class="font-bold text-ink" id="progress-text">0 / 0</span> задач виконано</p>
-            <button class="mt-5 w-full rounded-2xl border border-line/70 px-4 py-3 text-sm font-semibold transition-colors hover:border-coral hover:text-coral" id="reset-progress" type="button">Скинути всі чекбокси</button>
-          </section>
-
-          <section class="rounded-3xl border border-line/70 bg-white/65 p-6 backdrop-blur-sm">
-            <p class="text-xs uppercase tracking-[0.28em] text-coral">Search</p>
-            <label class="mt-4 block">
-              <span class="mb-2 block text-sm text-ink/70">Пошук по темах або задачах</span>
-              <input class="w-full rounded-2xl border-line/70 bg-mist px-4 py-3 text-sm focus:border-coral focus:ring-coral" id="topic-search" placeholder="Наприклад: graph, recursion, anagrams" type="text" />
-            </label>
-            <div class="mt-4 flex gap-3">
-              <button class="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90" id="expand-all" type="button">Розгорнути всі</button>
-              <button class="rounded-full border border-line/70 px-4 py-2 text-sm font-semibold transition-colors hover:border-coral hover:text-coral" id="collapse-all" type="button">Згорнути всі</button>
-            </div>
-          </section>
-
-          <section class="rounded-3xl border border-line bg-ink p-6 text-white">
-            <p class="text-xs uppercase tracking-[0.28em] text-gold">Included</p>
-            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
-              <div class="rounded-2xl bg-white/5 p-4">
-                <div class="font-heading text-2xl font-bold" id="topic-count">0</div>
-                <div class="mt-1 text-white/65">Головних тем</div>
+      <div class="grid gap-6 p-6 md:p-8 xl:grid-cols-[360px_minmax(0,1fr)]">
+        <aside>
+          <div class="overflow-hidden rounded-[30px] border border-[#11b99b]/20 bg-[#f6f2e8] shadow-[0_22px_60px_rgba(31,29,26,0.12)]">
+            <section class="bg-[linear-gradient(180deg,_#17c4a7_0%,_#12b89d_100%)] px-6 py-6 text-white">
+              <div class="flex items-center gap-3">
+                <div class="grid h-12 w-12 grid-cols-2 gap-[3px] rounded-2xl bg-white/10 p-2">
+                  <span class="rounded-md bg-white/90"></span>
+                  <span class="rounded-md bg-white/55"></span>
+                  <span class="rounded-md bg-white/75"></span>
+                  <span class="rounded-md bg-white/35"></span>
+                </div>
+                <div>
+                  <p class="font-heading text-3xl font-extrabold tracking-tight">structy</p>
+                  <p class="text-xs uppercase tracking-[0.28em] text-white/70">Roadmap</p>
+                </div>
               </div>
-              <div class="rounded-2xl bg-white/5 p-4">
-                <div class="font-heading text-2xl font-bold" id="task-count">0</div>
-                <div class="mt-1 text-white/65">Задач у списку</div>
+
+              <div class="mt-7">
+                <div class="flex items-center justify-between text-sm font-semibold">
+                  <span>Course Progress</span>
+                  <span id="progress-percent">0% complete</span>
+                </div>
+                <div class="mt-3 h-3 overflow-hidden rounded-full bg-white/30">
+                  <div class="h-full rounded-full bg-[#ffe56a] transition-all duration-300" id="progress-bar" style="width: 0%"></div>
+                </div>
+                <p class="mt-3 text-sm text-white/85"><span class="font-bold text-white" id="progress-text">0 / 0</span> задач виконано</p>
               </div>
-            </div>
-          </section>
+
+              <div class="mt-6 flex items-center justify-between border-t border-white/20 pt-4 text-sm">
+                <div class="flex items-center gap-2">
+                  <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-base">◉</span>
+                  <span>profile</span>
+                </div>
+                <button class="rounded-full border border-white/25 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] transition-colors hover:bg-white/10" id="expand-all" type="button">expand all</button>
+              </div>
+            </section>
+
+            <section class="border-b border-line/80 bg-[#ede7db] px-5 py-4">
+              <div class="flex items-center justify-between gap-3">
+                <label class="block flex-1">
+                  <span class="sr-only">Пошук по темах або задачах</span>
+                  <input class="w-full rounded-2xl border-line/70 bg-white/80 px-4 py-3 text-sm focus:border-coral focus:ring-coral" id="topic-search" placeholder="filter topics or tasks" type="text" />
+                </label>
+                <button class="rounded-2xl border border-line/80 bg-white/60 px-3 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-ink/70 transition-colors hover:border-coral hover:text-coral" id="collapse-all" type="button">collapse</button>
+              </div>
+              <div class="mt-3 grid grid-cols-2 gap-3 text-xs">
+                <div class="rounded-2xl bg-white/75 px-4 py-3">
+                  <div class="font-heading text-xl font-bold" id="topic-count">0</div>
+                  <div class="mt-1 text-ink/55">themes</div>
+                </div>
+                <div class="rounded-2xl bg-white/75 px-4 py-3">
+                  <div class="font-heading text-xl font-bold" id="task-count">0</div>
+                  <div class="mt-1 text-ink/55">tasks</div>
+                </div>
+              </div>
+              <button class="mt-3 w-full rounded-2xl border border-line/80 bg-white/75 px-4 py-3 text-sm font-semibold transition-colors hover:border-coral hover:text-coral" id="reset-progress" type="button">Скинути всі чекбокси</button>
+            </section>
+
+            <section class="bg-[#f6f2e8]">
+              <div class="space-y-4 p-4" id="sidebar-topics-root"></div>
+            </section>
+          </div>
         </aside>
 
         <section>
@@ -103,7 +128,7 @@
             </div>
             <p class="text-sm text-ink/60" id="visible-count">0 тем видно</p>
           </div>
-          <p class="mb-5 max-w-2xl text-sm leading-6 text-ink/60">Клік по темі відкриває список задач. Картки задач спеціально зроблені компактними, а допоміжні блоки тепер мають спокійніший ритм і кращу ієрархію.</p>
+          <p class="mb-5 max-w-2xl text-sm leading-6 text-ink/60">Ліва панель тепер працює як курсова навігація: видно прогрес, теми та задачі, а клік по елементу відкриває відповідний блок праворуч.</p>
           <div class="space-y-3" id="topics-root"></div>
           <p class="hidden rounded-3xl border border-dashed border-line bg-mist px-6 py-8 text-center text-sm text-ink/65" id="empty-state">Нічого не знайдено. Спробуй інший пошуковий запит.</p>
         </section>
