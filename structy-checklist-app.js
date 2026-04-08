@@ -4,16 +4,16 @@
   const taskDetails = data.taskDetails;
 
   const storageKey = "structy-topic-checklist-state";
-  const topicsRoot = document.getElementById("topics-root");
+  const sidebarStorageKey = "structy-topic-sidebar-collapsed";
+  const sidebarShell = document.getElementById("sidebar-shell");
+  const sidebarPanel = document.getElementById("sidebar-panel");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
   const sidebarTopicsRoot = document.getElementById("sidebar-topics-root");
   const progressBar = document.getElementById("progress-bar");
   const progressText = document.getElementById("progress-text");
   const progressPercent = document.getElementById("progress-percent");
-  const topicCount = document.getElementById("topic-count");
-  const taskCount = document.getElementById("task-count");
-  const visibleCount = document.getElementById("visible-count");
   const emptyState = document.getElementById("empty-state");
-  const searchInput = document.getElementById("topic-search");
+  const selectedTaskRoot = document.getElementById("selected-task-root");
   const expandAllButton = document.getElementById("expand-all");
   const collapseAllButton = document.getElementById("collapse-all");
   const resetButton = document.getElementById("reset-progress");
@@ -37,6 +37,26 @@
     "graph-ii": { badge: "text-coral", wash: "bg-coral/10", dot: "bg-coral" },
     "mixed-recall": { badge: "text-ink", wash: "bg-ink/5", dot: "bg-ink" }
   };
+  const topicIcons = {
+    introduction: "◎",
+    "big-o-notation": "∿",
+    hashing: "#",
+    "beginner-recursion": "↺",
+    "linked-list-i": "⛓",
+    "binary-tree-i": "🌳",
+    "graph-i": "◈",
+    "sliding-window": "▭",
+    "two-pointer": "⇄",
+    "dynamic-programming": "⌘",
+    stack: "▤",
+    "array-and-string": "Aa",
+    "linked-list-ii": "⛓",
+    "binary-tree-ii": "🌲",
+    heap: "△",
+    "exhaustive-recursion": "⟲",
+    "graph-ii": "⬡",
+    "mixed-recall": "✦"
+  };
 
   const readState = () => {
     try {
@@ -50,8 +70,22 @@
     localStorage.setItem(storageKey, JSON.stringify(state));
   };
 
+  const readSidebarCollapsed = () => {
+    try {
+      return localStorage.getItem(sidebarStorageKey) === "true";
+    } catch {
+      return false;
+    }
+  };
+
+  const writeSidebarCollapsed = (collapsed) => {
+    localStorage.setItem(sidebarStorageKey, String(collapsed));
+  };
+
   const taskId = (topicSlug, taskName) => topicSlug + "::" + taskName.toLowerCase().replaceAll(" ", "-");
   const state = readState();
+  let sidebarCollapsed = readSidebarCollapsed();
+  let selectedTask = null;
   const enhanceCodeBlock = (preElement, codeText, language = "java") => {
     const code = document.createElement("code");
     code.className = "language-" + language;
@@ -82,7 +116,13 @@
     return verbose || firstHint || null;
   };
 
-  const getCheckboxes = () => Array.from(document.querySelectorAll("[data-task-id]"));
+  const getTotalTaskCount = () => topics.reduce((sum, topic) => sum + topic.tasks.length, 0);
+  const getCompletedTaskCount = () =>
+    topics.reduce(
+      (sum, topic) => sum + topic.tasks.filter((taskName) => Boolean(state[taskId(topic.slug, taskName)])).length,
+      0
+    );
+
   const getTopicStats = (topic) => {
     const total = topic.tasks.length;
     const completed = topic.tasks.filter((taskName) => Boolean(state[taskId(topic.slug, taskName)])).length;
@@ -90,55 +130,99 @@
   };
 
   const openTaskFromSidebar = (topicSlug, taskName) => {
-    const topicCard = document.getElementById("topic-" + topicSlug);
-    if (!topicCard) {
+    selectedTask = { topicSlug, taskName };
+    renderSidebar();
+    renderSelectedTask();
+    if (!sidebarCollapsed) {
+      sidebarCollapsed = true;
+      writeSidebarCollapsed(sidebarCollapsed);
+      applySidebarState();
+    }
+  };
+
+  const getFirstVisibleTask = () => {
+    const visibleTopics = Array.from(document.querySelectorAll("[data-sidebar-topic]")).filter(
+      (section) => !section.classList.contains("hidden")
+    );
+
+    for (const section of visibleTopics) {
+      const topic = topics.find((item) => item.slug === section.dataset.sidebarTopic);
+      if (topic && topic.tasks.length) {
+        return { topicSlug: topic.slug, taskName: topic.tasks[0] };
+      }
+    }
+
+    return null;
+  };
+
+  const ensureSelectedTaskVisible = () => {
+    if (!selectedTask) {
+      selectedTask = getFirstVisibleTask();
       return;
     }
 
-    topicCard.open = true;
-    const taskCard = document.getElementById("task-" + taskId(topicSlug, taskName));
-    if (taskCard) {
-      taskCard.open = true;
-      taskCard.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      topicCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    const topicSection = document.querySelector('[data-sidebar-topic="' + selectedTask.topicSlug + '"]');
+    if (!topicSection || topicSection.classList.contains("hidden")) {
+      selectedTask = getFirstVisibleTask();
     }
   };
 
   const updateProgress = () => {
-    const checkboxes = getCheckboxes();
-    const completed = checkboxes.filter((checkbox) => checkbox.checked).length;
-    const total = checkboxes.length;
+    const completed = getCompletedTaskCount();
+    const total = getTotalTaskCount();
     const percent = total === 0 ? 0 : (completed / total) * 100;
 
     progressBar.style.width = percent + "%";
     progressText.textContent = completed + " / " + total;
     progressPercent.textContent = Math.round(percent) + "% complete";
-    topicCount.textContent = String(topics.length);
-    taskCount.textContent = String(total);
+  };
+
+  const applySidebarState = () => {
+    sidebarShell.classList.toggle("w-[388px]", !sidebarCollapsed);
+    sidebarShell.classList.toggle("w-6", sidebarCollapsed);
+    sidebarPanel.classList.toggle("w-[360px]", !sidebarCollapsed);
+    sidebarPanel.classList.toggle("w-0", sidebarCollapsed);
+    sidebarPanel.classList.toggle("opacity-100", !sidebarCollapsed);
+    sidebarPanel.classList.toggle("opacity-0", sidebarCollapsed);
+    sidebarPanel.classList.toggle("border-transparent", sidebarCollapsed);
+    sidebarPanel.classList.toggle("shadow-none", sidebarCollapsed);
+    sidebarPanel.classList.toggle("pointer-events-none", sidebarCollapsed);
+    sidebarToggle.textContent = sidebarCollapsed ? "→" : "←";
+    sidebarToggle.setAttribute("aria-expanded", String(!sidebarCollapsed));
+    sidebarToggle.setAttribute("aria-label", sidebarCollapsed ? "Розгорнути ліву панель" : "Згорнути ліву панель");
+    updateSidebarTogglePosition();
+  };
+
+  const updateSidebarTogglePosition = () => {
+    if (window.innerWidth < 1280) {
+      sidebarToggle.style.top = "";
+      return;
+    }
+
+    const shellRect = sidebarShell.getBoundingClientRect();
+    const toggleHalf = 20;
+    const desiredViewportCenter = window.innerHeight / 2;
+    const minTop = toggleHalf;
+    const maxTop = Math.max(toggleHalf, shellRect.height - toggleHalf);
+    const relativeTop = Math.min(maxTop, Math.max(minTop, desiredViewportCenter - shellRect.top));
+    sidebarToggle.style.top = relativeTop + "px";
   };
 
   const filterTopics = () => {
-    const query = searchInput.value.trim().toLowerCase();
-    const topicCards = Array.from(document.querySelectorAll(".topic-card"));
     let visible = 0;
 
-    topicCards.forEach((card) => {
-      const matches = query === "" || card.dataset.search.includes(query);
-      card.classList.toggle("hidden", !matches);
-      if (matches) {
-        visible += 1;
+    topics.forEach((topic) => {
+      const sidebarTopic = document.querySelector('[data-sidebar-topic="' + topic.slug + '"]');
+      if (sidebarTopic) {
+        sidebarTopic.classList.toggle("hidden", false);
       }
+      visible += 1;
     });
 
-    document.querySelectorAll("[data-sidebar-topic]").forEach((sidebarTopic) => {
-      const topicSlug = sidebarTopic.dataset.sidebarTopic;
-      const topicCard = document.getElementById("topic-" + topicSlug);
-      sidebarTopic.classList.toggle("hidden", !topicCard || topicCard.classList.contains("hidden"));
-    });
-
-    visibleCount.textContent = visible + " тем видно";
     emptyState.classList.toggle("hidden", visible !== 0);
+    selectedTaskRoot.classList.toggle("hidden", visible === 0);
+    ensureSelectedTaskVisible();
+    renderSelectedTask();
   };
 
   const renderSidebar = () => {
@@ -155,23 +239,31 @@
       const topicSection = document.createElement("details");
       topicSection.className = "group overflow-hidden rounded-[24px] border border-line/80 bg-[#fbf8f1]";
       topicSection.dataset.sidebarTopic = topic.slug;
-      topicSection.open = openTopics.size ? openTopics.has(topic.slug) : topic.slug === "introduction";
+      topicSection.open = openTopics.size ? openTopics.has(topic.slug) : true;
 
       const summary = document.createElement("summary");
-      summary.className = "flex cursor-pointer list-none items-center justify-between gap-3 bg-[#f2ece1] px-4 py-4";
+      summary.className = "flex cursor-pointer list-none items-center justify-between gap-3 bg-[#f2ece1] px-2.5 py-3";
 
       const leftWrap = document.createElement("div");
-      leftWrap.className = "min-w-0 flex-1";
+      leftWrap.className = "min-w-0 flex flex-1 items-center gap-2.5";
+
+      const icon = document.createElement("span");
+      icon.className = "inline-flex h-10 w-10 flex-none items-center justify-center text-[1.75rem] font-extrabold leading-none text-blue-700";
+      icon.textContent = topicIcons[topic.slug] || "•";
+
+      const textColumn = document.createElement("div");
+      textColumn.className = "min-w-0";
 
       const title = document.createElement("div");
-      title.className = "text-[15px] font-semibold text-ink";
+      title.className = "flex min-h-10 items-center text-[15px] font-semibold text-ink";
       title.textContent = topic.title;
 
       const meta = document.createElement("div");
       meta.className = "mt-1 text-xs text-ink/55";
-      meta.textContent = stats.completed + "/" + stats.total + " complete";
+      meta.textContent = "";
 
-      leftWrap.append(title, meta);
+      textColumn.append(title);
+      leftWrap.append(icon, textColumn);
 
       const rightWrap = document.createElement("div");
       rightWrap.className = "flex items-center gap-3 text-sm text-ink/55";
@@ -188,19 +280,36 @@
       summary.append(leftWrap, rightWrap);
 
       const list = document.createElement("div");
-      list.className = "space-y-1 px-4 py-3";
+      list.className = "space-y-0.5 px-2 py-1";
 
-      topic.tasks.forEach((taskName) => {
+      topic.tasks.forEach((taskName, index) => {
         const id = taskId(topic.slug, taskName);
         const taskButton = document.createElement("button");
         taskButton.type = "button";
-        taskButton.className = "flex w-full items-start gap-3 rounded-2xl px-2 py-2 text-left transition-colors hover:bg-white";
+        taskButton.className = "flex w-full items-start gap-2.5 rounded-2xl px-1 py-2 text-left transition-colors hover:bg-white";
         taskButton.dataset.sidebarTask = id;
 
-        const marker = document.createElement("span");
-        marker.className = "mt-1 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full border text-[11px] font-bold";
-
         const done = Boolean(state[id]);
+        const prevDone = index > 0 && Boolean(state[taskId(topic.slug, topic.tasks[index - 1])]);
+        const nextDone = index < topic.tasks.length - 1 && Boolean(state[taskId(topic.slug, topic.tasks[index + 1])]);
+
+        const markerWrap = document.createElement("span");
+        markerWrap.className = "relative mt-1 flex h-6 w-6 flex-none items-center justify-center";
+
+        if (done && prevDone) {
+          const lineTop = document.createElement("span");
+          lineTop.className = "absolute left-1/2 top-[-10px] h-[10px] w-0.5 -translate-x-1/2 bg-[#12b89d]";
+          markerWrap.append(lineTop);
+        }
+
+        if (done && nextDone) {
+          const lineBottom = document.createElement("span");
+          lineBottom.className = "absolute left-1/2 bottom-[-10px] h-[10px] w-0.5 -translate-x-1/2 bg-[#12b89d]";
+          markerWrap.append(lineBottom);
+        }
+
+        const marker = document.createElement("span");
+        marker.className = "inline-flex h-5 w-5 items-center justify-center rounded-full border text-[11px] font-bold";
         if (done) {
           marker.className += " border-[#12b89d] bg-[#12b89d] text-white";
           marker.textContent = "✓";
@@ -208,20 +317,20 @@
           marker.className += " border-line bg-white text-ink/35";
           marker.textContent = "○";
         }
+        markerWrap.append(marker);
 
         const textWrap = document.createElement("div");
         textWrap.className = "min-w-0";
 
         const name = document.createElement("div");
-        name.className = "text-sm font-medium leading-5 text-ink/88";
+        name.className = "text-base font-semibold leading-6 text-ink/88";
         name.textContent = taskName;
 
-        const hint = document.createElement("div");
-        hint.className = "mt-1 text-xs leading-4 text-ink/45";
-        hint.textContent = taskDetails[id] ? "Open task details" : "Title only";
-
-        textWrap.append(name, hint);
-        taskButton.append(marker, textWrap);
+        textWrap.append(name);
+        if (selectedTask && selectedTask.topicSlug === topic.slug && selectedTask.taskName === taskName) {
+          taskButton.className += " bg-white shadow-[0_6px_18px_rgba(31,29,26,0.08)]";
+        }
+        taskButton.append(markerWrap, textWrap);
         taskButton.addEventListener("click", () => openTaskFromSidebar(topic.slug, taskName));
         list.append(taskButton);
       });
@@ -229,6 +338,60 @@
       topicSection.append(summary, list);
       sidebarTopicsRoot.append(topicSection);
     });
+  };
+
+  const renderSelectedTask = () => {
+    if (!selectedTask) {
+      selectedTaskRoot.innerHTML = "";
+      return;
+    }
+
+    const topic = topics.find((item) => item.slug === selectedTask.topicSlug);
+    if (!topic) {
+      selectedTaskRoot.innerHTML = "";
+      return;
+    }
+
+    const detailKey = taskId(selectedTask.topicSlug, selectedTask.taskName);
+    const detail = taskDetails[detailKey];
+
+    const header = document.createElement("div");
+    header.className = "mb-6 flex flex-wrap items-start justify-between gap-4 border-b border-line/70 pb-5";
+
+    const intro = document.createElement("div");
+    intro.className = "min-w-0";
+
+    const titleRow = document.createElement("div");
+    titleRow.className = "flex items-center gap-3";
+
+    const titleCheckbox = document.createElement("input");
+    titleCheckbox.type = "checkbox";
+    titleCheckbox.className = "h-6 w-6 rounded-full border-line/70 text-coral focus:ring-coral";
+    titleCheckbox.checked = Boolean(state[detailKey]);
+    titleCheckbox.addEventListener("change", () => {
+      state[detailKey] = titleCheckbox.checked;
+      checkbox.checked = titleCheckbox.checked;
+      writeState(state);
+      updateProgress();
+      renderSidebar();
+    });
+
+    const title = document.createElement("h3");
+    title.className = "font-heading text-3xl font-extrabold";
+    title.textContent = selectedTask.taskName;
+
+    titleRow.append(titleCheckbox, title);
+
+    const topicText = document.createElement("p");
+    topicText.className = "mt-2 text-sm text-ink/60";
+    topicText.textContent = topic.title;
+
+    intro.append(titleRow, topicText);
+
+    header.append(intro);
+
+    selectedTaskRoot.innerHTML = "";
+    selectedTaskRoot.append(header, renderTaskBody(detail, detailKey));
   };
 
   const renderTaskBody = (detail, detailKey) => {
@@ -244,13 +407,54 @@
     }
 
     const layout = document.createElement("div");
-    layout.className = "grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px]";
+    layout.className = "grid gap-4";
 
     const mainColumn = document.createElement("div");
-    mainColumn.className = "min-w-0";
+    mainColumn.className = "min-w-0 rounded-[24px] border-2 border-blue-400 p-4";
 
     const sideColumn = document.createElement("aside");
-    sideColumn.className = "space-y-4";
+    sideColumn.className = "space-y-4 rounded-[24px] border-2 border-yellow-400 p-4";
+
+    const tabsBar = document.createElement("div");
+    tabsBar.className = "mb-5 flex flex-wrap overflow-hidden rounded-[18px] border border-line/70 bg-[#f2ece1]";
+
+    const problemPanel = document.createElement("div");
+    const approachPanel = document.createElement("div");
+    const walkthroughPanel = document.createElement("div");
+    const solutionPanel = document.createElement("div");
+    const submissionsPanel = document.createElement("div");
+
+    const tabPanels = {
+      problem: problemPanel,
+      approach: approachPanel,
+      walkthrough: walkthroughPanel,
+      solution: solutionPanel,
+      submissions: submissionsPanel
+    };
+
+    const tabButtons = {};
+    const setActiveTab = (tabId) => {
+      Object.entries(tabPanels).forEach(([key, panel]) => {
+        panel.classList.toggle("hidden", key !== tabId);
+      });
+
+      Object.entries(tabButtons).forEach(([key, button]) => {
+        button.className = key === tabId
+          ? "border-b-2 border-[#17c4a7] bg-white px-4 py-3 text-sm font-semibold text-ink"
+          : "border-b-2 border-transparent px-4 py-3 text-sm font-medium text-ink/55 transition-colors hover:bg-white/60 hover:text-ink";
+      });
+    };
+
+    [["problem", "problem"], ["approach", "approach"], ["walkthrough", "walkthrough"], ["solution", "solution"], ["submissions", "submissions"]].forEach(([key, label]) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = label;
+      button.addEventListener("click", () => setActiveTab(key));
+      tabButtons[key] = button;
+      tabsBar.append(button);
+    });
+
+    mainColumn.append(tabsBar, problemPanel, approachPanel, walkthroughPanel, solutionPanel, submissionsPanel);
 
     const statement = document.createElement("section");
     statement.className = "rounded-[22px] border border-line/60 bg-gradient-to-br from-mist to-white px-5 py-5";
@@ -261,7 +465,7 @@
     statementText.textContent = detail.statement;
     statement.append(statementText);
 
-    mainColumn.append(statement);
+    problemPanel.append(statement);
 
     const shortIdea = getShortIdea(detail);
     if (shortIdea) {
@@ -274,7 +478,7 @@
       shortIdeaText.textContent = shortIdea;
 
       shortIdeaSection.append(shortIdeaText);
-      mainColumn.append(shortIdeaSection);
+      approachPanel.append(shortIdeaSection);
     }
 
     const visualizationSection = document.createElement("section");
@@ -308,7 +512,7 @@
     });
 
     visualizationSection.append(visualizationTitle, visualizationToggle, visualizationBox);
-    mainColumn.append(visualizationSection);
+    walkthroughPanel.append(visualizationSection);
 
     const canvasSection = document.createElement("section");
     canvasSection.className = "mt-5 rounded-[22px] border border-line/60 bg-white px-5 py-5";
@@ -412,7 +616,7 @@
     }
 
     canvasSection.append(canvasTitle, canvasToggle, canvasWrap);
-    mainColumn.append(canvasSection);
+    walkthroughPanel.append(canvasSection);
 
     const hintSection = document.createElement("section");
     hintSection.className = "mt-5 rounded-[22px] border border-line/60 bg-white px-5 py-5";
@@ -445,7 +649,7 @@
     });
 
     hintSection.append(hintButtons, hintPanels);
-    mainColumn.append(hintSection);
+    approachPanel.append(hintSection);
 
     const pseudoSection = document.createElement("section");
     pseudoSection.className = "mt-5 rounded-[22px] border border-line/60 bg-white px-5 py-5";
@@ -469,7 +673,7 @@
     });
 
     pseudoSection.append(pseudoTitle, pseudoToggle, pseudoBox);
-    mainColumn.append(pseudoSection);
+    approachPanel.append(pseudoSection);
 
     const solutionsSection = document.createElement("section");
     solutionsSection.className = "mt-5 rounded-[22px] border border-line/60 bg-white px-5 py-5";
@@ -499,7 +703,7 @@
       solutionsSection.append(solutionCard);
     });
 
-    mainColumn.append(solutionsSection);
+    solutionPanel.append(solutionsSection);
 
     if (detail.testCases && detail.testCases.length) {
       const testsCard = document.createElement("details");
@@ -548,170 +752,77 @@
 
       testsBody.append(testsCode);
       testsCard.append(testsSummary, testsBody);
-      sideColumn.append(testsCard);
+      submissionsPanel.append(testsCard);
+    }
+
+    if (submissionsPanel.childElementCount === 0) {
+      const placeholder = document.createElement("div");
+      placeholder.className = "rounded-[22px] border border-dashed border-line/60 bg-mist px-5 py-5 text-sm leading-6 text-ink/65";
+      placeholder.textContent = "Submissions block can be expanded later with attempts, notes, or saved runs.";
+      submissionsPanel.append(placeholder);
+    }
+
+    setActiveTab("problem");
+
+    if (sideColumn.childElementCount > 0) {
+      while (sideColumn.firstChild) {
+        mainColumn.append(sideColumn.firstChild);
+      }
     }
 
     layout.append(mainColumn);
-    if (sideColumn.childElementCount > 0) {
-      layout.append(sideColumn);
-    }
 
     body.append(layout);
     return body;
   };
 
-  const renderTopics = () => {
-    topicsRoot.innerHTML = "";
-
-    topics.forEach((topic) => {
-      const topicEl = document.createElement("details");
-      topicEl.className = "topic-card group overflow-hidden rounded-[28px] border border-line/70 bg-white/88 shadow-[0_8px_24px_rgba(31,29,26,0.05)] transition-all open:shadow-soft";
-      topicEl.id = "topic-" + topic.slug;
-      topicEl.dataset.search = (topic.title + " " + topic.tasks.join(" ")).toLowerCase();
-      topicEl.open = topic.slug === "introduction";
-      const accent = topicAccents[topic.slug] || topicAccents["mixed-recall"];
-
-      const summary = document.createElement("summary");
-      summary.className = "flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 transition-colors group-hover:bg-white";
-
-      const summaryText = document.createElement("div");
-      const topicLabel = document.createElement("p");
-      topicLabel.className = "inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] " + accent.badge;
-      topicLabel.textContent = "Theme";
-      const topicDot = document.createElement("span");
-      topicDot.className = "h-2 w-2 rounded-full " + accent.dot;
-      topicLabel.prepend(topicDot);
-
-      const title = document.createElement("h3");
-      title.className = "mt-2 font-heading text-2xl font-extrabold";
-      title.textContent = topic.title;
-
-      const meta = document.createElement("p");
-      meta.className = "mt-2 text-sm text-ink/60";
-      meta.textContent = topic.tasks.length === 0 ? "Поки без задач у цьому конспекті" : topic.tasks.length + " задач";
-
-      summaryText.append(topicLabel, title, meta);
-
-      const arrow = document.createElement("span");
-      arrow.className = "flex h-10 w-10 items-center justify-center rounded-full " + accent.wash + " text-2xl text-ink/50 transition-transform group-open:rotate-180";
-      arrow.textContent = "⌄";
-
-      summary.append(summaryText, arrow);
-      topicEl.append(summary);
-
-      const content = document.createElement("div");
-      content.className = "border-t border-line/70 bg-white/70 px-6 py-5";
-
-      if (topic.tasks.length === 0) {
-        const placeholder = document.createElement("p");
-        placeholder.className = "rounded-2xl border border-line/60 bg-mist px-4 py-4 text-sm text-ink/65";
-        placeholder.textContent = "Для цієї теми в поточному списку ще немає окремих задач.";
-        content.append(placeholder);
-      } else {
-        const list = document.createElement("div");
-        list.className = "grid gap-3";
-
-        topic.tasks.forEach((taskName) => {
-          const id = taskId(topic.slug, taskName);
-          const detail = taskDetails[id];
-
-          const taskCard = document.createElement("details");
-          taskCard.className = "rounded-[22px] border border-line/60 bg-gradient-to-br from-mist to-white shadow-[0_4px_16px_rgba(31,29,26,0.03)]";
-          taskCard.id = "task-" + id;
-
-          const taskSummary = document.createElement("summary");
-          taskSummary.className = "flex cursor-pointer list-none items-start gap-4 px-5 py-4";
-
-          const checkbox = document.createElement("input");
-          checkbox.type = "checkbox";
-          checkbox.className = "mt-1 h-5 w-5 rounded border-line/70 text-coral focus:ring-coral";
-          checkbox.dataset.taskId = id;
-          checkbox.checked = Boolean(state[id]);
-          checkbox.addEventListener("click", (event) => event.stopPropagation());
-          checkbox.addEventListener("change", () => {
-            state[id] = checkbox.checked;
-            writeState(state);
-            updateProgress();
-            renderSidebar();
-            filterTopics();
-          });
-
-          const textWrap = document.createElement("div");
-          textWrap.className = "min-w-0 flex-1";
-
-          const titleRow = document.createElement("div");
-          titleRow.className = "flex items-start justify-between gap-3";
-
-          const titleWrap = document.createElement("div");
-          const taskTitle = document.createElement("div");
-          taskTitle.className = "font-heading text-lg font-bold";
-          taskTitle.textContent = taskName;
-
-          const taskMeta = document.createElement("div");
-          taskMeta.className = "mt-1 text-sm text-ink/60";
-          taskMeta.textContent = detail ? ((detail.meta && detail.meta.verbose) || "Деталі доступні") : "Поки є лише назва задачі";
-
-          titleWrap.append(taskTitle, taskMeta);
-
-          const taskArrow = document.createElement("span");
-          taskArrow.className = "text-xl text-ink/45";
-          taskArrow.textContent = "⌄";
-
-          titleRow.append(titleWrap, taskArrow);
-          textWrap.append(titleRow);
-          taskSummary.append(checkbox, textWrap);
-          taskCard.append(taskSummary, renderTaskBody(detail, id));
-          list.append(taskCard);
-        });
-
-        content.append(list);
-      }
-
-      topicEl.append(content);
-      topicsRoot.append(topicEl);
-    });
+  selectedTask = getFirstVisibleTask() || {
+    topicSlug: topics[0] ? topics[0].slug : "",
+    taskName: topics[0] && topics[0].tasks[0] ? topics[0].tasks[0] : ""
   };
-
-  renderTopics();
   renderSidebar();
   updateProgress();
   filterTopics();
+  renderSelectedTask();
+  applySidebarState();
+  updateSidebarTogglePosition();
 
-  searchInput.addEventListener("input", filterTopics);
-
-  expandAllButton.addEventListener("click", () => {
-    document.querySelectorAll(".topic-card").forEach((card) => {
-      if (!card.classList.contains("hidden")) {
-        card.open = true;
-      }
-    });
-    document.querySelectorAll("[data-sidebar-topic]").forEach((section) => {
-      if (!section.classList.contains("hidden")) {
-        section.open = true;
-      }
-    });
+  sidebarToggle.addEventListener("click", () => {
+    sidebarCollapsed = !sidebarCollapsed;
+    writeSidebarCollapsed(sidebarCollapsed);
+    applySidebarState();
   });
+  window.addEventListener("resize", updateSidebarTogglePosition);
+  window.addEventListener("scroll", updateSidebarTogglePosition, { passive: true });
 
-  collapseAllButton.addEventListener("click", () => {
-    document.querySelectorAll(".topic-card").forEach((card) => {
-      card.open = false;
+  if (expandAllButton) {
+    expandAllButton.addEventListener("click", () => {
+      document.querySelectorAll("[data-sidebar-topic]").forEach((section) => {
+        if (!section.classList.contains("hidden")) {
+          section.open = true;
+        }
+      });
     });
-    document.querySelectorAll("[data-sidebar-topic]").forEach((section) => {
-      section.open = false;
-    });
-  });
+  }
 
-  resetButton.addEventListener("click", () => {
-    getCheckboxes().forEach((checkbox) => {
-      checkbox.checked = false;
+  if (collapseAllButton) {
+    collapseAllButton.addEventListener("click", () => {
+      document.querySelectorAll("[data-sidebar-topic]").forEach((section) => {
+        section.open = false;
+      });
     });
+  }
 
-    Object.keys(state).forEach((key) => {
-      delete state[key];
+  if (resetButton) {
+    resetButton.addEventListener("click", () => {
+      Object.keys(state).forEach((key) => {
+        delete state[key];
+      });
+
+      localStorage.removeItem(storageKey);
+      updateProgress();
+      renderSidebar();
+      renderSelectedTask();
     });
-
-    localStorage.removeItem(storageKey);
-    updateProgress();
-    renderSidebar();
-  });
+  }
 })();
