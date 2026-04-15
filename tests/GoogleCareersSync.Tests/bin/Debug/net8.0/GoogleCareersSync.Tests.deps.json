@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "GoogleCareersSync.Tests/1.0.0": {
+        "dependencies": {
+          "GoogleCareersSync": "1.0.0"
+        },
+        "runtime": {
+          "GoogleCareersSync.Tests.dll": {}
+        }
+      },
+      "GoogleCareersSync/1.0.0": {
+        "runtime": {
+          "GoogleCareersSync.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GoogleCareersSync.Tests/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GoogleCareersSync/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

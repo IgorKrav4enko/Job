@@ -1,0 +1,86 @@
+name: Google Careers Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: google-careers-pipeline
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Collect raw Google Careers snapshot
+        env:
+          GOOGLE_CAREERS_LOCATIONS: ${{ vars.GOOGLE_CAREERS_LOCATIONS }}
+          GOOGLE_CAREERS_SEARCH_TERM: ${{ vars.GOOGLE_CAREERS_SEARCH_TERM }}
+          GOOGLE_CAREERS_MAX_PAGES: ${{ vars.GOOGLE_CAREERS_MAX_PAGES }}
+        run: dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- collect
+
+      - name: Commit raw run
+        run: |
+          if git diff --quiet -- data-raw/google-careers/runs; then
+            echo "No raw run changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data-raw/google-careers/runs
+          git commit -m "chore: collect Google Careers raw run"
+          git push origin "${{ github.event.repository.default_branch }}"
+
+  analyze-latest:
+    needs: collect
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Pull latest raw commit
+        run: git pull --ff-only origin "${{ github.event.repository.default_branch }}"
+
+      - name: Analyze latest raw run
+        env:
+          GOOGLE_CAREERS_LOCATIONS: ${{ vars.GOOGLE_CAREERS_LOCATIONS }}
+          GOOGLE_CAREERS_SEARCH_TERM: ${{ vars.GOOGLE_CAREERS_SEARCH_TERM }}
+          GOOGLE_CAREERS_MAX_PAGES: ${{ vars.GOOGLE_CAREERS_MAX_PAGES }}
+        run: dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- analyze-latest
+
+      - name: Commit normalized datasets
+        run: |
+          if git diff --quiet -- data/google-careers-jobs.json data/google-careers-runs.json data/google-careers-run-details.json; then
+            echo "No normalized dataset changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/google-careers-jobs.json data/google-careers-runs.json data/google-careers-run-details.json
+          git commit -m "chore: analyze latest Google Careers raw run"
+          git push origin "${{ github.event.repository.default_branch }}"

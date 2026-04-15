@@ -1,0 +1,46 @@
+name: Rebuild Google Careers Datasets
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: google-careers-rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Rebuild normalized datasets from raw runs
+        env:
+          GOOGLE_CAREERS_LOCATIONS: ${{ vars.GOOGLE_CAREERS_LOCATIONS }}
+          GOOGLE_CAREERS_SEARCH_TERM: ${{ vars.GOOGLE_CAREERS_SEARCH_TERM }}
+          GOOGLE_CAREERS_MAX_PAGES: ${{ vars.GOOGLE_CAREERS_MAX_PAGES }}
+        run: dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- rebuild
+
+      - name: Commit rebuilt datasets
+        run: |
+          if git diff --quiet -- data/google-careers-jobs.json data/google-careers-runs.json data/google-careers-run-details.json; then
+            echo "No rebuilt dataset changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/google-careers-jobs.json data/google-careers-runs.json data/google-careers-run-details.json
+          git commit -m "chore: rebuild Google Careers datasets"
+          git push origin "${{ github.event.repository.default_branch }}"

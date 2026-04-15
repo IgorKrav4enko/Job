@@ -6,6 +6,7 @@ using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using System.Globalization;
 
+var mode = GetMode(args);
 var root = FindRepositoryRoot();
 var configPath = Path.Combine(root, "config", "google-careers-locations.json");
 var outputPath = Path.Combine(root, "data", "google-careers-jobs.json");
@@ -15,46 +16,205 @@ var rawRunsDirectoryPath = Path.Combine(root, "data-raw", "google-careers", "run
 
 var locations = LoadLocations(configPath);
 var searchTerm = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_SEARCH_TERM")?.Trim();
+var maxPages = GetMaxPages();
 if (string.IsNullOrWhiteSpace(searchTerm))
 {
     searchTerm = "\"Software Engineer\"";
 }
 
-var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
-var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
-var previousDataset = LoadJsonOrDefault<JobDataset>(outputPath);
-var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(runsPath) ?? new RunHistoryDataset(new List<RunSummary>());
-var previousRunDetails = LoadJsonOrDefault<RunDetailsDataset>(runDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
-previousRunDetails = NormalizeRunDetails(previousRunDetails) ?? new RunDetailsDataset(new List<RunDetail>());
-previousRuns = NormalizeRunHistory(previousRuns, previousRunDetails) ?? new RunHistoryDataset(new List<RunSummary>());
-var fetchResult = await FetchJobsAsync(locations, searchTerm, runCapturedAt);
-var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), fetchResult.Jobs, runCapturedAt);
-var dataset = BuildDataset(locations, mergeResult.Jobs, searchTerm);
-var runsDataset = BuildRunsDataset(previousRuns, runId, runCapturedAt, mergeResult);
-var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, runId, mergeResult);
-var rawRun = BuildRawRun(runId, runCapturedAt, searchTerm, fetchResult.RawSources);
+switch (mode)
+{
+    case PipelineMode.CollectAndAnalyze:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(outputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(runsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousRunDetails = LoadJsonOrDefault<RunDetailsDataset>(runDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRunDetails = NormalizeRunDetails(previousRunDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousRunDetails) ?? new RunHistoryDataset(new List<RunSummary>());
 
-Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
-await File.WriteAllTextAsync(
-    outputPath,
-    JsonSerializer.Serialize(dataset, JsonOptions()) + Environment.NewLine);
-await File.WriteAllTextAsync(
-    runsPath,
-    JsonSerializer.Serialize(runsDataset, JsonOptions()) + Environment.NewLine);
-await File.WriteAllTextAsync(
-    runDetailsPath,
-    JsonSerializer.Serialize(runDetailsDataset, JsonOptions()) + Environment.NewLine);
+        var fetchResult = await FetchJobsAsync(locations, searchTerm, runCapturedAt, maxPages);
+        var rawRun = BuildRawRun(runId, runCapturedAt, searchTerm, fetchResult.RawSources);
+        await WriteJsonFileAsync(Path.Combine(rawRunsDirectoryPath, $"{runId}.json"), rawRun);
 
-Directory.CreateDirectory(rawRunsDirectoryPath);
-await File.WriteAllTextAsync(
-    Path.Combine(rawRunsDirectoryPath, $"{runId}.json"),
-    JsonSerializer.Serialize(rawRun, JsonOptions()) + Environment.NewLine);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), fetchResult.Jobs, runCapturedAt);
+        var dataset = BuildDataset(locations, mergeResult.Jobs, searchTerm, runCapturedAt);
+        var runsDataset = BuildRunsDataset(previousRuns, runId, runCapturedAt, mergeResult);
+        var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, runId, mergeResult);
+        await WriteNormalizedDatasetsAsync(outputPath, runsPath, runDetailsPath, dataset, runsDataset, runDetailsDataset);
 
-Console.WriteLine(
-    $"Wrote dataset for {mergeResult.Jobs.Count} jobs to {outputPath} " +
-    $"(+{mergeResult.Added.Count} / -{mergeResult.Removed.Count})");
+        Console.WriteLine(
+            $"Wrote dataset for {mergeResult.Jobs.Count} jobs to {outputPath} " +
+            $"(+{mergeResult.Added.Count} / -{mergeResult.Removed.Count})");
+        break;
+    }
+
+    case PipelineMode.Collect:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var fetchResult = await FetchJobsAsync(locations, searchTerm, runCapturedAt, maxPages);
+        var rawRun = BuildRawRun(runId, runCapturedAt, searchTerm, fetchResult.RawSources);
+
+        Directory.CreateDirectory(rawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(rawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+
+        Console.WriteLine($"Collected raw run {runId} with {fetchResult.Jobs.Count} unique jobs.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(rawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No raw runs found. Run collect first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<RawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read raw run file '{latestRawRunPath}'.");
+
+        var previousDataset = LoadJsonOrDefault<JobDataset>(outputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(runsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousRunDetails = LoadJsonOrDefault<RunDetailsDataset>(runDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRunDetails = NormalizeRunDetails(previousRunDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousRunDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildDataset(locations, mergeResult.Jobs, latestRawRun.SearchTerm, latestRawRun.GeneratedAt);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, latestRawRun.RunId, mergeResult);
+
+        await WriteNormalizedDatasetsAsync(outputPath, runsPath, runDetailsPath, dataset, runsDataset, runDetailsDataset);
+
+        Console.WriteLine(
+            $"Analyzed latest raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"(+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
+    case PipelineMode.Rebuild:
+    {
+        var rawRunPaths = GetRawRunFilePaths(rawRunsDirectoryPath);
+        if (rawRunPaths.Count == 0)
+        {
+            throw new FileNotFoundException("No raw runs found. Run collect first.");
+        }
+
+        var rawRuns = rawRunPaths
+            .Select(path => LoadJsonOrDefault<RawRun>(path) ?? throw new InvalidOperationException($"Could not read raw run file '{path}'."))
+            .OrderBy(run => run.GeneratedAt, StringComparer.Ordinal)
+            .ThenBy(run => run.RunId, StringComparer.Ordinal)
+            .ToList();
+
+        var currentJobs = new List<JobItem>();
+        var currentRuns = new RunHistoryDataset(new List<RunSummary>());
+        var currentRunDetails = new RunDetailsDataset(new List<RunDetail>());
+
+        foreach (var rawRun in rawRuns)
+        {
+            var latestJobs = BuildJobsFromRawRun(rawRun);
+            var mergeResult = MergeJobs(currentJobs, latestJobs, rawRun.GeneratedAt);
+            currentJobs = mergeResult.Jobs;
+            currentRuns = BuildRunsDataset(currentRuns, rawRun.RunId, rawRun.GeneratedAt, mergeResult);
+            currentRunDetails = BuildRunDetailsDataset(currentRunDetails, rawRun.RunId, mergeResult);
+        }
+
+        var latestRawRun = rawRuns[^1];
+        currentRunDetails = NormalizeRunDetails(currentRunDetails) ?? currentRunDetails;
+        currentRuns = NormalizeRunHistory(currentRuns, currentRunDetails) ?? currentRuns;
+        var dataset = BuildDataset(locations, currentJobs, latestRawRun.SearchTerm, latestRawRun.GeneratedAt);
+
+        await WriteNormalizedDatasetsAsync(outputPath, runsPath, runDetailsPath, dataset, currentRuns, currentRunDetails);
+
+        Console.WriteLine($"Rebuilt normalized datasets from {rawRuns.Count} raw runs.");
+        break;
+    }
+
+    default:
+        throw new InvalidOperationException($"Unsupported mode '{mode}'.");
+}
 
 return;
+
+static PipelineMode GetMode(string[] args)
+{
+    if (args.Length == 0)
+    {
+        return PipelineMode.CollectAndAnalyze;
+    }
+
+    return args[0].Trim().ToLowerInvariant() switch
+    {
+        "collect" => PipelineMode.Collect,
+        "analyze-latest" => PipelineMode.AnalyzeLatest,
+        "rebuild" => PipelineMode.Rebuild,
+        _ => throw new ArgumentOutOfRangeException(nameof(args), $"Unknown mode '{args[0]}'.")
+    };
+}
+
+static async Task WriteNormalizedDatasetsAsync(
+    string outputPath,
+    string runsPath,
+    string runDetailsPath,
+    JobDataset dataset,
+    RunHistoryDataset runsDataset,
+    RunDetailsDataset runDetailsDataset)
+{
+    Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+    await WriteJsonFileAsync(outputPath, dataset);
+    await WriteJsonFileAsync(runsPath, runsDataset);
+    await WriteJsonFileAsync(runDetailsPath, runDetailsDataset);
+}
+
+static async Task WriteJsonFileAsync<T>(string path, T value)
+{
+    Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+    await File.WriteAllTextAsync(path, JsonSerializer.Serialize(value, JsonOptions()) + Environment.NewLine);
+}
+
+static List<string> GetRawRunFilePaths(string rawRunsDirectoryPath)
+{
+    if (!Directory.Exists(rawRunsDirectoryPath))
+    {
+        return new List<string>();
+    }
+
+    return Directory.GetFiles(rawRunsDirectoryPath, "*.json", SearchOption.TopDirectoryOnly)
+        .OrderBy(path => Path.GetFileName(path), StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildJobsFromRawRun(RawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source =>
+            source.Jobs.Select(job =>
+                new JobItem(
+                    job.JobId,
+                    HtmlDecode(job.TitleRaw ?? string.Empty),
+                    string.IsNullOrWhiteSpace(job.CompanyRaw) ? null : HtmlDecode(job.CompanyRaw),
+                    job.LocationsRaw ?? new List<string>(),
+                    job.JobUrl,
+                    job.RequestedLocation,
+                    job.SearchUrl,
+                    job.PostedAtCandidate,
+                    job.UpdatedAtCandidate)))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group => group.First())
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
 
 static string FindRepositoryRoot()
 {
@@ -88,6 +248,12 @@ static List<LocationConfig> LoadLocations(string configPath)
 
     var locations = JsonSerializer.Deserialize<List<LocationConfig>>(json, JsonOptions());
     return locations ?? new List<LocationConfig>();
+}
+
+static int GetMaxPages()
+{
+    var rawValue = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_MAX_PAGES");
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 5;
 }
 
 static T? LoadJsonOrDefault<T>(string path)
@@ -200,7 +366,8 @@ static List<PerLocationRunDetail> BackfillPerLocationDetails(RunDetail detail)
 static async Task<FetchResult> FetchJobsAsync(
     List<LocationConfig> locations,
     string searchTerm,
-    string capturedAt)
+    string capturedAt,
+    int maxPages)
 {
     using var httpClient = CreateHttpClient();
     var jobsById = new Dictionary<string, JobItem>(StringComparer.Ordinal);
@@ -208,25 +375,52 @@ static async Task<FetchResult> FetchJobsAsync(
 
     foreach (var location in locations)
     {
-        var searchUrl = BuildSearchUrl(location.Query, searchTerm, 1);
-        Console.WriteLine($"Fetching {searchUrl}");
+        var sourceSearchUrl = BuildSearchUrl(location.Query, searchTerm, 1);
+        var rawJobs = new List<RawJobItem>();
+        var seenJobIdsForLocation = new HashSet<string>(StringComparer.Ordinal);
 
-        var html = await httpClient.GetStringAsync(searchUrl);
-        var parseResult = ParseJobsFromHtml(html, location, searchUrl, capturedAt);
+        for (var page = 1; page <= maxPages; page += 1)
+        {
+            var searchUrl = BuildSearchUrl(location.Query, searchTerm, page);
+            Console.WriteLine($"Fetching {searchUrl}");
+
+            var html = await httpClient.GetStringAsync(searchUrl);
+            var parseResult = ParseJobsFromHtml(html, location, searchUrl, capturedAt);
+            if (parseResult.Jobs.Count == 0)
+            {
+                Console.WriteLine($"No jobs found on page {page} for {location.Label}. Stopping pagination.");
+                break;
+            }
+
+            rawJobs.AddRange(parseResult.RawJobs);
+
+            var newJobsOnPage = 0;
+            foreach (var job in parseResult.Jobs)
+            {
+                if (seenJobIdsForLocation.Add(job.Id))
+                {
+                    newJobsOnPage += 1;
+                }
+
+                if (!jobsById.ContainsKey(job.Id))
+                {
+                    jobsById[job.Id] = job;
+                }
+            }
+
+            if (newJobsOnPage == 0)
+            {
+                Console.WriteLine($"No new job ids on page {page} for {location.Label}. Stopping pagination.");
+                break;
+            }
+        }
+
         rawSources.Add(
             new RawSource(
                 location.Label,
                 location.Slug,
-                searchUrl,
-                parseResult.RawJobs));
-
-        foreach (var job in parseResult.Jobs)
-        {
-            if (!jobsById.ContainsKey(job.Id))
-            {
-                jobsById[job.Id] = job;
-            }
-        }
+                sourceSearchUrl,
+                rawJobs));
     }
 
     return new FetchResult(
@@ -856,10 +1050,11 @@ static List<string> GetChangedFields(JobItem previousJob, JobItem currentJob)
 static JobDataset BuildDataset(
     List<LocationConfig> locations,
     List<JobItem> jobs,
-    string searchTerm)
+    string searchTerm,
+    string generatedAt)
 {
     return new JobDataset(
-        DateTimeOffset.UtcNow.ToString("O"),
+        generatedAt,
         "Google Careers",
         "success",
         $"Fetched {jobs.Count} jobs for query {searchTerm}.",
@@ -1050,3 +1245,11 @@ internal sealed record JobDataset(
     [property: JsonPropertyName("searchTerm")] string SearchTerm,
     [property: JsonPropertyName("locations")] List<LocationConfig> Locations,
     [property: JsonPropertyName("jobs")] List<JobItem> Jobs);
+
+internal enum PipelineMode
+{
+    CollectAndAnalyze,
+    Collect,
+    AnalyzeLatest,
+    Rebuild
+}

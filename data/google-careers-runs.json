@@ -1,26 +1,50 @@
 {
   "runs": [
     {
-      "runId": "2026-04-15T21-57-42Z",
-      "generatedAt": "2026-04-15T21:57:42.6533920\u002B00:00",
-      "totalJobs": 40,
-      "addedCount": 40,
+      "runId": "2026-04-15T23-21-43Z",
+      "generatedAt": "2026-04-15T23:21:43.0514110\u002B00:00",
+      "totalJobs": 141,
+      "addedCount": 141,
       "removedCount": 0,
       "changedCount": 0,
       "unchangedCount": 0,
       "perLocation": [
         {
-          "location": "Warsaw, Poland",
-          "totalJobs": 20,
-          "addedCount": 20,
+          "location": "Germany",
+          "totalJobs": 4,
+          "addedCount": 4,
           "removedCount": 0,
           "changedCount": 0,
           "unchangedCount": 0
         },
         {
-          "location": "Zurich, Switzerland",
-          "totalJobs": 20,
-          "addedCount": 20,
+          "location": "Ireland",
+          "totalJobs": 7,
+          "addedCount": 7,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 0
+        },
+        {
+          "location": "Poland",
+          "totalJobs": 75,
+          "addedCount": 75,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 0
+        },
+        {
+          "location": "Switzerland",
+          "totalJobs": 25,
+          "addedCount": 25,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 0
+        },
+        {
+          "location": "United Kingdom",
+          "totalJobs": 30,
+          "addedCount": 30,
           "removedCount": 0,
           "changedCount": 0,
           "unchangedCount": 0

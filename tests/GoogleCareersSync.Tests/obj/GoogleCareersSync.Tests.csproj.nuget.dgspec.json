@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/igor.kravchenko/Documents/Job/tests/GoogleCareersSync.Tests/GoogleCareersSync.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/igor.kravchenko/Documents/Job/scripts/GoogleCareersSync/GoogleCareersSync.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/igor.kravchenko/Documents/Job/scripts/GoogleCareersSync/GoogleCareersSync.csproj",
+        "projectName": "GoogleCareersSync",
+        "projectPath": "/Users/igor.kravchenko/Documents/Job/scripts/GoogleCareersSync/GoogleCareersSync.csproj",
+        "packagesPath": "/Users/igor.kravchenko/.nuget/packages/",
+        "outputPath": "/Users/igor.kravchenko/Documents/Job/scripts/GoogleCareersSync/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/igor.kravchenko/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/igor.kravchenko/Documents/Job/tests/GoogleCareersSync.Tests/GoogleCareersSync.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/igor.kravchenko/Documents/Job/tests/GoogleCareersSync.Tests/GoogleCareersSync.Tests.csproj",
+        "projectName": "GoogleCareersSync.Tests",
+        "projectPath": "/Users/igor.kravchenko/Documents/Job/tests/GoogleCareersSync.Tests/GoogleCareersSync.Tests.csproj",
+        "packagesPath": "/Users/igor.kravchenko/.nuget/packages/",
+        "outputPath": "/Users/igor.kravchenko/Documents/Job/tests/GoogleCareersSync.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/igor.kravchenko/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/igor.kravchenko/Documents/Job/scripts/GoogleCareersSync/GoogleCareersSync.csproj": {
+                "projectPath": "/Users/igor.kravchenko/Documents/Job/scripts/GoogleCareersSync/GoogleCareersSync.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

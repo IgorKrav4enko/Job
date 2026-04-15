@@ -1,329 +1,265 @@
 <!DOCTYPE html>
+<html class="dark" lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Board</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            ink: "#08111d",
+            panel: "#101b2c",
+            panelSoft: "#152236",
+            line: "#26435f",
+            sky: "#46c8ff",
+            coral: "#ff8f70",
+            mint: "#81f0ae",
+            gold: "#f7c35f",
+            smoke: "#9bb2c9",
+            text: "#edf5ff"
+          },
+          fontFamily: {
+            heading: ["Inter", "sans-serif"],
+            body: ["Space Grotesk", "sans-serif"],
+            mono: ["IBM Plex Mono", "monospace"]
+          },
+          boxShadow: {
+            panel: "0 28px 70px rgba(0, 0, 0, 0.35)"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(70, 200, 255, 0.16), transparent 26%),
+        radial-gradient(circle at top right, rgba(255, 143, 112, 0.14), transparent 24%),
+        linear-gradient(180deg, #08111d 0%, #0b1727 48%, #08111d 100%);
+    }
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kinetic Pulse | treeMinValue Workspace</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "secondary-dim": "#0f6df3",
-                        "primary-container": "#13ea79",
-                        "surface-tint": "#3fff8b",
-                        "on-tertiary-fixed": "#1c0055",
-                        "secondary-fixed-dim": "#acc3ff",
-                        "secondary-fixed": "#c0d1ff",
-                        "on-primary-container": "#004f24",
-                        "on-primary-fixed": "#004820",
-                        "primary-fixed": "#3fff8b",
-                        "primary-dim": "#24f07e",
-                        "outline-variant": "#484849",
-                        "on-tertiary": "#25006b",
-                        "tertiary-container": "#7c4dff",
-                        "surface-bright": "#2c2c2d",
-                        "tertiary-fixed-dim": "#ab93ff",
-                        "surface-container-low": "#131314",
-                        "surface-container-lowest": "#000000",
-                        "on-secondary": "#001d4e",
-                        "on-tertiary-container": "#ffffff",
-                        "inverse-surface": "#fcf8f9",
-                        "surface": "#0e0e0f",
-                        "on-surface-variant": "#adaaab",
-                        "on-error-container": "#ffa8a3",
-                        "surface-container-highest": "#262627",
-                        "on-surface": "#ffffff",
-                        "on-primary-fixed-variant": "#006832",
-                        "secondary": "#6e9bff",
-                        "on-background": "#ffffff",
-                        "primary-fixed-dim": "#24f07e",
-                        "on-tertiary-fixed-variant": "#4000ad",
-                        "surface-dim": "#0e0e0f",
-                        "tertiary-dim": "#7e51ff",
-                        "tertiary-fixed": "#b8a3ff",
-                        "error": "#ff716c",
-                        "on-secondary-fixed-variant": "#004baf",
-                        "on-primary": "#005d2c",
-                        "outline": "#767576",
-                        "on-secondary-container": "#f7f7ff",
-                        "error-container": "#9f0519",
-                        "background": "#0e0e0f",
-                        "secondary-container": "#0058ca",
-                        "inverse-on-surface": "#565556",
-                        "error-dim": "#d7383b",
-                        "surface-variant": "#262627",
-                        "tertiary": "#a68cff",
-                        "surface-container-high": "#201f21",
-                        "inverse-primary": "#006e35",
-                        "surface-container": "#1a191b",
-                        "on-error": "#490006",
-                        "primary": "#3fff8b",
-                        "on-secondary-fixed": "#003076"
-                    },
-                    fontFamily: {
-                        "headline": ["Inter", "sans-serif"],
-                        "body": ["Inter", "sans-serif"],
-                        "label": ["Space Grotesk", "sans-serif"],
-                        "mono": ["JetBrains Mono", "monospace"]
-                    },
-                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-                },
-            },
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        .glass-card {
-            background: rgba(26, 25, 27, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(72, 72, 73, 0.15);
-        }
-        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #484849; border-radius: 10px; }
-        .strike-through:checked + label { text-decoration: line-through; opacity: 0.5; }
-    </style>
+    .glass-panel {
+      background: rgba(16, 27, 44, 0.82);
+      border: 1px solid rgba(155, 178, 201, 0.13);
+      backdrop-filter: blur(20px);
+    }
+
+    .board-table tbody tr {
+      border-top: 1px solid rgba(155, 178, 201, 0.08);
+    }
+
+    .board-table tbody tr:hover {
+      background: rgba(70, 200, 255, 0.06);
+    }
+
+    .board-table tbody tr.is-selected {
+      background: rgba(70, 200, 255, 0.12);
+      box-shadow: inset 3px 0 0 #46c8ff;
+    }
+
+    .scroll-slim::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+
+    .scroll-slim::-webkit-scrollbar-thumb {
+      background: rgba(155, 178, 201, 0.32);
+      border-radius: 999px;
+    }
+  </style>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container overflow-hidden">
-<!-- TopNavBar Implementation -->
-<nav class="flex justify-between items-center px-6 py-3 w-full border-b border-[#484849]/15 bg-[#0e0e0f] sticky top-0 z-50">
-<div class="flex items-center gap-8">
-<span class="text-2xl font-black text-[#3fff8b] tracking-tighter">Kinetic Pulse</span>
-<div class="hidden md:flex gap-6 items-center">
-<a class="text-[#3fff8b] font-bold border-b-2 border-[#3fff8b] pb-1 font-label text-sm uppercase tracking-wider" href="#">Practice</a>
-<a class="text-[#767576] font-medium hover:text-[#3fff8b] transition-colors duration-200 font-label text-sm uppercase tracking-wider" href="#">Mock Interviews</a>
-<a class="text-[#767576] font-medium hover:text-[#3fff8b] transition-colors duration-200 font-label text-sm uppercase tracking-wider" href="#">Leaderboard</a>
-<a class="text-[#767576] font-medium hover:text-[#3fff8b] transition-colors duration-200 font-label text-sm uppercase tracking-wider" href="#">Curriculum</a>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-4 py-1.5 rounded-lg text-sm hover:shadow-[0_0_15px_rgba(63,255,139,0.3)] transition-all">Go Pro</button>
-<div class="flex gap-2">
-<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">notifications</span>
-<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">settings</span>
-</div>
-<img alt="User Profile Avatar" class="w-8 h-8 rounded-full border border-outline-variant/30" data-alt="minimalist user avatar profile picture with dark geometric background and neon green accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtjKnm5Y9aiBMNl4zhKCzG_Am7qUuEBnuOHDadoq0ERJMqOn0ifrE2BW7NbwgdUe9te4uYy4crZC0i1zsnQyME7JsMoAVO_qzWJ8aUjarXM95mh-_mpUa_l5VN9M9uTsU8A0l4GtHYCEuPKxc__c5EmAB0LZ91w2S9tfurDbf2RtwbwiQ_Sw83RJdxV6_Vj8BQZmuAnrqqy8ldU4YF6LIgsEneq0GtBGsrV0Kwgxlr866Qk2k1IXkvfSd0TmCOyLnCkz4KMdqZ_Js"/>
-</div>
-</nav>
-<!-- Main Content Shell -->
-<div class="flex h-[calc(100vh-64px)] overflow-hidden">
-<!-- SideNavBar - Structy Tasks -->
-<aside class="w-72 flex flex-col border-r border-[#484849]/15 bg-[#131314] z-40 overflow-y-auto custom-scrollbar">
-<div class="p-6 space-y-8">
-<div>
-<h3 class="text-[10px] font-bold text-outline uppercase tracking-widest mb-4 px-2">0. Introduction</h3>
-<ul class="space-y-1">
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">hey programmer</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">max value</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">longest word</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">all even</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">is prime</li>
-</ul>
-</div>
-<div>
-<h3 class="text-[10px] font-bold text-outline uppercase tracking-widest mb-4 px-2">1. Big O Notation</h3>
-<ul class="space-y-1">
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">fizz buzz</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">pairs</li>
-</ul>
-</div>
-<div>
-<h3 class="text-[10px] font-bold text-outline uppercase tracking-widest mb-4 px-2">2. Hashing</h3>
-<ul class="space-y-1">
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">anagrams</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">most frequent char</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">pair sum</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">pair product</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">intersection</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">all unique</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">intersection with dupes</li>
-</ul>
-</div>
-<div>
-<h3 class="text-[10px] font-bold text-outline uppercase tracking-widest mb-4 px-2">3. Beginner Recursion</h3>
-<ul class="space-y-1">
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">sum numbers recursive</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">factorial</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">sum of lengths</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">reverse-string-recursive</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">palindrome-recursive</li>
-<li class="px-2 py-1.5 text-sm text-outline-variant hover:text-on-surface transition-colors cursor-pointer">fibonacci</li>
-</ul>
-</div>
-<div class="pt-4 border-t border-outline-variant/10">
-<div class="px-2 py-2 flex items-center gap-3 bg-primary/10 text-primary border-l-4 border-primary rounded-r-md cursor-pointer">
-<span class="material-symbols-outlined text-sm">account_tree</span>
-<span class="text-sm font-bold">treeMinValue</span>
-</div>
-</div>
-</div>
-<div class="mt-auto p-6 flex gap-4">
-<span class="material-symbols-outlined text-outline hover:text-primary cursor-pointer" data-icon="description">description</span>
-<span class="material-symbols-outlined text-outline hover:text-primary cursor-pointer" data-icon="help">help</span>
-</div>
-</aside>
-<!-- Workspace Canvas -->
-<main class="flex-1 flex flex-col bg-surface overflow-hidden">
-<!-- Problem Header -->
-<header class="p-6 bg-surface-container-low/30 flex flex-col gap-4">
-<div class="flex justify-between items-center">
-<nav class="flex items-center gap-2 text-xs font-label text-outline uppercase tracking-widest">
-<span>Algorithms</span>
-<span class="material-symbols-outlined text-[10px]">chevron_right</span>
-<span>Trees</span>
-<span class="material-symbols-outlined text-[10px]">chevron_right</span>
-<span class="text-on-surface">treeMinValue</span>
-</nav>
-<div class="flex items-center gap-4">
-<div class="flex bg-surface-container rounded-lg p-1 border border-outline-variant/10">
-<button class="px-3 py-1 text-xs font-label bg-surface-variant text-primary rounded-md">In Progress</button>
-<button class="px-3 py-1 text-xs font-label text-outline hover:text-on-surface transition-colors">Solved</button>
-<button class="px-3 py-1 text-xs font-label text-outline hover:text-on-surface transition-colors">Review</button>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<div class="flex-1 bg-surface-container rounded-full h-1.5 overflow-hidden">
-<div class="bg-primary h-full w-1/4 shadow-[0_0_8px_rgba(63,255,139,0.5)]"></div>
-</div>
-<span class="font-label text-xs text-primary font-bold">25% COMPLETE</span>
-</div>
-</header>
-<!-- Three-Panel Layout -->
-<div class="flex flex-1 overflow-hidden p-6 gap-6">
-<!-- Left Panel: Task & Test Cases -->
-<section class="w-1/4 flex flex-col gap-6 overflow-y-auto custom-scrollbar">
-<div class="surface-container rounded-xl p-5 border border-outline-variant/15">
-<h2 class="font-headline text-xl font-bold mb-4 flex items-center gap-2">
-<span class="w-2 h-6 bg-primary rounded-full"></span>
-                            Problem Statement
-                        </h2>
-<div class="text-on-surface-variant text-sm leading-relaxed space-y-4">
-<p>Напишіть функцію <code class="bg-surface-variant px-1 rounded text-primary">treeMinValue</code>, яка приймає корінь бінарного дерева. Функція має повернути мінімальне значення, що міститься в дереві. Можна припустити, що дерево не порожнє.</p>
-</div>
-</div>
-<div class="surface-container-low rounded-xl p-5 border border-outline-variant/10">
-<h3 class="font-label text-xs font-bold text-outline uppercase tracking-widest mb-4">Verification Checkpoints</h3>
-<div class="space-y-3">
-<div class="flex items-start gap-3 p-3 bg-surface-container rounded-lg border border-outline-variant/5">
-<input class="strike-through w-5 h-5 mt-0.5 rounded border-outline bg-surface-container checked:bg-primary checked:border-primary focus:ring-primary/20" id="tc1" type="checkbox"/>
-<label class="text-xs font-medium cursor-pointer flex-1 leading-normal" for="tc1">
-<span class="block text-outline-variant mb-1">Example Tree:</span>
-<code class="block bg-black/30 p-2 rounded font-mono text-[10px]">
-                                        3 -&gt; 11, 4<br/>
-                                        11 -&gt; 4, -2<br/>
-                                        4 -&gt; 1
-                                    </code>
-<span class="block mt-1 text-primary">Expected: -2</span>
-</label>
-</div>
-<div class="flex items-center gap-3 p-3 bg-surface-container rounded-lg border border-outline-variant/5">
-<input class="strike-through w-5 h-5 rounded border-outline bg-surface-container checked:bg-primary checked:border-primary focus:ring-primary/20" id="tc2" type="checkbox"/>
-<label class="text-xs font-medium cursor-pointer flex-1" for="tc2">Single node tree</label>
-</div>
-<div class="flex items-center gap-3 p-3 bg-surface-container rounded-lg border border-outline-variant/5">
-<input class="strike-through w-5 h-5 rounded border-outline bg-surface-container checked:bg-primary checked:border-primary focus:ring-primary/20" id="tc3" type="checkbox"/>
-<label class="text-xs font-medium cursor-pointer flex-1" for="tc3">Negative values everywhere</label>
-</div>
-</div>
-</div>
-</section>
-<!-- Central Panel: Hints -->
-<section class="flex-1 flex flex-col gap-6">
-<div class="flex-1 glass-card rounded-2xl flex flex-col items-center justify-center p-12 text-center relative overflow-hidden">
-<div class="absolute inset-0 pointer-events-none opacity-10">
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary rounded-full blur-[120px]"></div>
-</div>
-<div class="relative z-10 max-w-md w-full">
-<span class="material-symbols-outlined text-6xl text-primary/40 mb-6" style="font-variation-settings: 'wght' 200;">psychology</span>
-<h2 class="font-headline text-2xl font-black mb-4 tracking-tight">Logical Breakthrough</h2>
-<p class="text-on-surface-variant mb-8 text-sm">Progressive hints to guide your implementation.</p>
-<div class="space-y-4 text-left">
-<div class="bg-surface-container/80 rounded-xl border border-primary/20 overflow-hidden">
-<button class="w-full flex items-center justify-between p-4 group">
-<span class="flex items-center gap-3 font-label text-sm text-primary font-bold">
-<span class="material-symbols-outlined text-sm">lightbulb</span>
-                                            Hint #1
-                                        </span>
-<span class="material-symbols-outlined text-primary">check_circle</span>
-</button>
-<div class="px-4 pb-4 text-sm text-on-surface-variant border-t border-outline-variant/10 pt-3 italic">
-                                        "Think about how to traverse all nodes."
-                                    </div>
-</div>
-<div class="bg-surface-container-high/50 rounded-xl border border-outline-variant/20 overflow-hidden">
-<button class="w-full flex items-center justify-between p-4 group">
-<span class="flex items-center gap-3 font-label text-sm text-on-surface font-bold">
-<span class="material-symbols-outlined text-sm">lock_open</span>
-                                            Hint #2
-                                        </span>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">visibility</span>
-</button>
-<div class="px-4 pb-4 text-sm text-on-surface-variant border-t border-outline-variant/10 pt-3">
-                                        "Compare the current value with the minimums of subtrees."
-                                    </div>
-</div>
-<div class="flex justify-center mt-6">
-<span class="material-symbols-outlined text-outline-variant animate-pulse">keyboard_double_arrow_down</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Right Panel: Solutions Explorer -->
-<section class="w-1/3 flex flex-col gap-6 overflow-hidden">
-<div class="surface-container rounded-xl flex-1 flex flex-col border border-outline-variant/15 overflow-hidden">
-<!-- Tabs -->
-<div class="flex border-b border-outline-variant/15 bg-surface-container-high/50">
-<button class="px-5 py-3 text-xs font-label uppercase tracking-widest text-primary border-b-2 border-primary font-bold">Recursive DFS</button>
-<button class="px-5 py-3 text-xs font-label uppercase tracking-widest text-outline hover:text-on-surface transition-colors">Iterative DFS</button>
-</div>
-<!-- Content -->
-<div class="p-5 flex flex-col flex-1 overflow-hidden">
-<div class="flex gap-2 mb-4">
-<div class="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-[10px] font-label font-bold uppercase">Time: O(n)</div>
-<div class="bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1 rounded text-[10px] font-label font-bold uppercase">Space: O(n)</div>
-<div class="ml-auto flex items-center text-[10px] text-primary/80 font-bold tracking-tight uppercase">Best for Interviews</div>
-</div>
-<!-- Code Window -->
-<div class="bg-surface-container-lowest rounded-lg p-4 font-mono text-xs leading-relaxed border border-outline-variant/10 flex-1 overflow-y-auto custom-scrollbar">
-<div class="flex flex-col gap-1">
-<p><span class="text-tertiary">const</span> <span class="text-secondary">treeMinValue</span> = (root) =&gt; {</p>
-<p class="ml-4"><span class="text-tertiary">if</span> (root === <span class="text-primary-container">null</span>) <span class="text-tertiary">return</span> <span class="text-primary-container">Infinity</span>;</p>
-<p class="ml-4"><span class="text-tertiary">const</span> leftMin = <span class="text-secondary">treeMinValue</span>(root.left);</p>
-<p class="ml-4"><span class="text-tertiary">const</span> rightMin = <span class="text-secondary">treeMinValue</span>(root.right);</p>
-<p class="ml-4"><span class="text-tertiary">return</span> <span class="text-primary-container">Math.min</span>(root.val, leftMin, rightMin);</p>
-<p>};</p>
-</div>
-</div>
-<!-- Note Section -->
-<div class="mt-4 pt-4 border-t border-outline-variant/15">
-<h4 class="font-label text-[10px] font-bold text-outline uppercase tracking-[0.2em] mb-2">Important Note about BFS</h4>
-<div class="p-3 bg-surface-container-high rounded-lg text-xs text-on-surface-variant leading-relaxed">
-                                    "Хоча ітеративний BFS працює, у JS <code class="text-primary">shift()</code> займає O(n), тому для істинної продуктивності O(n) варто використовувати власну чергу або стек для DFS."
-                                </div>
-</div>
-</div>
-</div>
-<!-- Execution CTA -->
-<div class="flex gap-4">
-<button class="flex-1 py-4 bg-surface-container-highest border border-outline-variant/30 rounded-xl font-label text-sm uppercase font-bold tracking-widest hover:bg-surface-variant transition-all active:scale-[0.98]">
-                            Run Tests
-                        </button>
-<button class="flex-[1.5] py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-black text-sm uppercase tracking-[0.2em] rounded-xl hover:shadow-[0_0_20px_rgba(63,255,139,0.25)] transition-all active:scale-[0.98]">
-                            Submit Solution
-                        </button>
-</div>
-</section>
-</div>
-</main>
-</div>
-</body></html>
+<body class="min-h-screen font-body text-text">
+  <main class="mx-auto flex min-h-screen max-w-[1600px] flex-col gap-6 px-4 py-6 md:px-6 xl:px-8">
+    <header class="glass-panel rounded-[30px] p-6 shadow-panel md:p-8">
+      <div class="flex flex-col gap-6 xl:flex-row xl:items-end xl:justify-between">
+        <div class="max-w-3xl">
+          <p class="text-xs uppercase tracking-[0.34em] text-sky">Execution Hub</p>
+          <h1 class="mt-3 font-heading text-4xl font-extrabold tracking-tight md:text-5xl">Project Board</h1>
+          <p class="mt-4 max-w-2xl text-sm leading-7 text-smoke md:text-base">
+            Легка сторінка в стилі Jira для задач, описів, acceptance criteria, test cases і швидкого ручного планування
+            без бекенду. Усе зберігається локально в браузері.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a class="rounded-full border border-white/10 px-5 py-3 font-semibold text-text transition-colors hover:border-sky hover:text-sky" href="./index.html">На головну</a>
+          <button class="rounded-full bg-sky px-5 py-3 font-semibold text-ink transition-colors hover:bg-[#7edbff]" id="new-task-button" type="button">+ Нова задача</button>
+          <button class="rounded-full border border-coral/40 px-5 py-3 font-semibold text-coral transition-colors hover:bg-coral/10" id="reset-board-button" type="button">Reset Local Board</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid gap-4 lg:grid-cols-[minmax(0,1.45fr)_minmax(340px,0.95fr)]">
+      <div class="glass-panel rounded-[28px] p-5 shadow-panel">
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-smoke">Board Filters</p>
+              <h2 class="mt-2 font-heading text-2xl font-bold">Task registry</h2>
+            </div>
+            <div class="grid gap-3 md:grid-cols-[minmax(0,1fr)_220px_180px]">
+              <input class="rounded-2xl border border-white/10 bg-panelSoft px-4 py-3 text-sm text-text placeholder:text-smoke focus:border-sky focus:ring-sky/20" id="task-search" placeholder="Пошук за назвою, тегою чи ID" type="search" />
+              <select class="rounded-2xl border border-white/10 bg-panelSoft px-4 py-3 text-sm text-text focus:border-sky focus:ring-sky/20" id="priority-filter">
+                <option value="all">Усі пріоритети</option>
+                <option value="critical">Critical</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="rounded-2xl border border-white/10 bg-panelSoft px-4 py-3 text-sm text-text focus:border-sky focus:ring-sky/20" id="assignee-filter">
+                <option value="all">Усі власники</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid gap-3 md:grid-cols-4" id="board-summary"></div>
+
+          <div class="overflow-x-auto rounded-[24px] border border-white/8 bg-panelSoft/40 scroll-slim">
+            <table class="board-table min-w-[1120px] w-full text-left">
+              <thead class="bg-[#0d1726]/90">
+                <tr class="text-xs uppercase tracking-[0.22em] text-smoke">
+                  <th class="px-4 py-3 font-semibold">ID</th>
+                  <th class="px-4 py-3 font-semibold">Task</th>
+                  <th class="px-4 py-3 font-semibold">Status</th>
+                  <th class="px-4 py-3 font-semibold">Priority</th>
+                  <th class="px-4 py-3 font-semibold">Owner</th>
+                  <th class="px-4 py-3 font-semibold">Tags</th>
+                  <th class="px-4 py-3 font-semibold">Criteria</th>
+                  <th class="px-4 py-3 font-semibold">Tests</th>
+                </tr>
+              </thead>
+              <tbody id="board-rows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <aside class="glass-panel rounded-[28px] p-5 shadow-panel">
+        <div class="flex h-full flex-col gap-5">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-smoke">Task Detail</p>
+            <h2 class="mt-2 font-heading text-2xl font-bold" id="detail-title">Оберіть задачу</h2>
+            <p class="mt-3 text-sm leading-6 text-smoke" id="detail-subtitle">
+              Праворуч показуються опис, acceptance criteria, тест-кейси та implementation notes.
+            </p>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2" id="detail-meta"></div>
+
+          <section class="rounded-[24px] border border-white/5 bg-panelSoft/70 p-4">
+            <div class="flex items-center justify-between gap-3">
+              <h3 class="font-heading text-lg font-semibold">Опис</h3>
+              <button class="rounded-full border border-white/10 px-3 py-1 text-xs font-semibold text-smoke transition-colors hover:border-sky hover:text-sky" id="edit-selected-button" type="button">Редагувати</button>
+            </div>
+            <div class="mt-4 text-sm leading-7 text-smoke" id="detail-description"></div>
+          </section>
+
+          <section class="rounded-[24px] border border-white/5 bg-panelSoft/70 p-4">
+            <h3 class="font-heading text-lg font-semibold">Acceptance Criteria</h3>
+            <div class="mt-4 space-y-3" id="detail-criteria"></div>
+          </section>
+
+          <section class="rounded-[24px] border border-white/5 bg-panelSoft/70 p-4">
+            <h3 class="font-heading text-lg font-semibold">Test Cases</h3>
+            <div class="mt-4 space-y-3" id="detail-tests"></div>
+          </section>
+
+          <section class="rounded-[24px] border border-white/5 bg-panelSoft/70 p-4">
+            <h3 class="font-heading text-lg font-semibold">Implementation Notes</h3>
+            <div class="mt-4 space-y-3 text-sm leading-7 text-smoke" id="detail-notes"></div>
+          </section>
+        </div>
+      </aside>
+    </section>
+
+    <section class="glass-panel rounded-[28px] p-5 shadow-panel">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-smoke">Task Composer</p>
+          <h2 class="mt-2 font-heading text-2xl font-bold" id="composer-title">Нова задача</h2>
+        </div>
+        <div class="text-sm text-smoke" id="composer-hint">
+          Заповнюйте поля нижче. Acceptance criteria і test cases вводяться по одному пункту на рядок.
+        </div>
+      </div>
+
+      <form class="mt-5 grid gap-4" id="task-form">
+        <input id="task-id" type="hidden" />
+        <div class="grid gap-4 xl:grid-cols-[minmax(0,1.2fr)_220px_220px_220px]">
+          <label class="flex flex-col gap-2 text-sm">
+            <span class="font-semibold text-smoke">Назва</span>
+            <input class="rounded-2xl border border-white/10 bg-panelSoft px-4 py-3 text-text focus:border-sky focus:ring-sky/20" id="task-title-input" required type="text" />
+          </label>
+          <label class="flex flex-col gap-2 text-sm">
+            <span class="font-semibold text-smoke">Статус</span>
+            <select class="rounded-2xl border border-white/10 bg-panelSoft px-4 py-3 text-text focus:border-sky focus:ring-sky/20" id="task-status-input">
+              <option value="backlog">Backlog</option>
+              <option value="in-progress">In Progress</option>
+              <option value="review">Review</option>
+              <option value="done">Done</option>
+            </select>
+          </label>
+          <label class="flex flex-col gap-2 text-sm">
+            <span class="font-semibold text-smoke">Пріоритет</span>
+            <select class="rounded-2xl border border-white/10 bg-panelSoft px-4 py-3 text-text focus:border-sky focus:ring-sky/20" id="task-priority-input">
+              <option value="critical">Critical</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </label>
+          <label class="flex flex-col gap-2 text-sm">
+            <span class="font-semibold text-smoke">Власник</span>
+            <input class="rounded-2xl border border-white/10 bg-panelSoft px-4 py-3 text-text focus:border-sky focus:ring-sky/20" id="task-assignee-input" placeholder="Igor" type="text" />
+          </label>
+        </div>
+
+        <div class="grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+          <label class="flex flex-col gap-2 text-sm">
+            <span class="font-semibold text-smoke">Короткий summary</span>
+            <input class="rounded-2xl border border-white/10 bg-panelSoft px-4 py-3 text-text focus:border-sky focus:ring-sky/20" id="task-summary-input" type="text" />
+          </label>
+          <label class="flex flex-col gap-2 text-sm">
+            <span class="font-semibold text-smoke">Теги</span>
+            <input class="rounded-2xl border border-white/10 bg-panelSoft px-4 py-3 text-text focus:border-sky focus:ring-sky/20" id="task-tags-input" placeholder="ui, parser, analytics" type="text" />
+          </label>
+        </div>
+
+        <label class="flex flex-col gap-2 text-sm">
+          <span class="font-semibold text-smoke">Опис</span>
+          <textarea class="min-h-[120px] rounded-[24px] border border-white/10 bg-panelSoft px-4 py-3 text-text focus:border-sky focus:ring-sky/20" id="task-description-input"></textarea>
+        </label>
+
+        <div class="grid gap-4 xl:grid-cols-3">
+          <label class="flex flex-col gap-2 text-sm">
+            <span class="font-semibold text-smoke">Acceptance Criteria</span>
+            <textarea class="min-h-[160px] rounded-[24px] border border-white/10 bg-panelSoft px-4 py-3 font-mono text-sm text-text focus:border-sky focus:ring-sky/20" id="task-criteria-input" placeholder="- Criterion 1"></textarea>
+          </label>
+          <label class="flex flex-col gap-2 text-sm">
+            <span class="font-semibold text-smoke">Test Cases</span>
+            <textarea class="min-h-[160px] rounded-[24px] border border-white/10 bg-panelSoft px-4 py-3 font-mono text-sm text-text focus:border-sky focus:ring-sky/20" id="task-tests-input" placeholder="Input -> Expected result"></textarea>
+          </label>
+          <label class="flex flex-col gap-2 text-sm">
+            <span class="font-semibold text-smoke">Implementation Notes</span>
+            <textarea class="min-h-[160px] rounded-[24px] border border-white/10 bg-panelSoft px-4 py-3 font-mono text-sm text-text focus:border-sky focus:ring-sky/20" id="task-notes-input" placeholder="Known edge cases, links, follow-ups"></textarea>
+          </label>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <button class="rounded-full bg-mint px-5 py-3 font-semibold text-ink transition-colors hover:bg-[#b0f6ca]" type="submit" id="save-task-button">Зберегти задачу</button>
+          <button class="rounded-full border border-white/10 px-5 py-3 font-semibold text-text transition-colors hover:border-sky hover:text-sky" type="button" id="clear-form-button">Очистити форму</button>
+          <button class="hidden rounded-full border border-coral/40 px-5 py-3 font-semibold text-coral transition-colors hover:bg-coral/10" id="delete-task-button" type="button">Видалити задачу</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script defer src="./js/task-board-app.js"></script>
+</body>
+</html>

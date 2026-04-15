@@ -1,14 +1,22 @@
 const RUNS_URL = "./data/google-careers-runs.json";
 const DETAILS_URL = "./data/google-careers-run-details.json";
+const JOBS_URL = "./data/google-careers-jobs.json";
 
 const state = {
+  activeTab: "history",
   activeLocation: "all",
   activeRunId: null,
   runs: [],
-  runDetailsById: new Map()
+  runDetailsById: new Map(),
+  jobs: [],
+  activeCountry: "all",
+  activeCity: "all"
 };
 
 const refs = {
+  tabsRoot: document.getElementById("dashboard-tabs"),
+  historyPanel: document.getElementById("history-panel"),
+  livePanel: document.getElementById("live-panel"),
   filterRoot: document.getElementById("location-filter"),
   chart: document.getElementById("runs-chart"),
   chartCaption: document.getElementById("chart-caption"),
@@ -17,6 +25,12 @@ const refs = {
   metricAdded: document.getElementById("metric-added"),
   metricRemoved: document.getElementById("metric-removed"),
   metricChanged: document.getElementById("metric-changed"),
+  jobsCaption: document.getElementById("jobs-caption"),
+  jobsActiveCount: document.getElementById("jobs-active-count"),
+  jobsList: document.getElementById("jobs-list"),
+  countryFilterChips: document.getElementById("country-filter-chips"),
+  cityFilterSection: document.getElementById("city-filter-section"),
+  cityFilterChips: document.getElementById("city-filter-chips"),
   detailTitle: document.getElementById("detail-title"),
   detailSubtitle: document.getElementById("detail-subtitle"),
   detailAddedCount: document.getElementById("detail-added-count"),
@@ -36,16 +50,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
 async function initializeDashboard() {
   try {
-    const [runsPayload, detailsPayload] = await Promise.all([
+    const [runsPayload, detailsPayload, jobsPayload] = await Promise.all([
       fetchJson(RUNS_URL),
-      fetchJson(DETAILS_URL)
+      fetchJson(DETAILS_URL),
+      fetchJson(JOBS_URL)
     ]);
 
     state.runs = Array.isArray(runsPayload.runs) ? runsPayload.runs : [];
     state.runDetailsById = new Map(
       (Array.isArray(detailsPayload.runs) ? detailsPayload.runs : []).map((item) => [item.runId, item])
     );
+    state.jobs = Array.isArray(jobsPayload.jobs) ? jobsPayload.jobs : [];
 
+    bindTabs();
     buildLocationFilters();
     if (state.runs.length > 0) {
       state.activeRunId = state.runs[state.runs.length - 1].runId;
@@ -75,53 +92,137 @@ function buildLocationFilters() {
     }
   }
 
-  refs.filterRoot.replaceChildren(
-    ...Array.from(locationNames).map((location) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.dataset.location = location;
-      button.className =
-        "rounded-full border px-4 py-2 text-sm font-semibold transition-colors " +
-        "border-white/10 bg-panelSoft text-text hover:border-sky hover:text-sky";
-      button.textContent = location === "all" ? "All Locations" : location;
-      button.addEventListener("click", () => {
-        state.activeLocation = location;
-        const filteredRuns = getFilteredRuns();
-        state.activeRunId = filteredRuns.at(-1)?.runId ?? null;
-        render();
+  const allButtonRow = document.createElement("div");
+  allButtonRow.className = "flex flex-wrap gap-2";
+  allButtonRow.appendChild(createLocationButton("all"));
+
+  const countrySection = document.createElement("div");
+  countrySection.className = "rounded-[20px] border border-white/10 bg-panelSoft/60 p-3";
+
+  const sectionLabel = document.createElement("p");
+  sectionLabel.className = "mb-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-muted";
+  sectionLabel.textContent = "Countries";
+
+  const countryButtons = document.createElement("div");
+  countryButtons.className = "flex flex-wrap gap-2";
+  Array.from(locationNames)
+    .filter((location) => location !== "all")
+    .sort((left, right) => left.localeCompare(right, "uk"))
+    .forEach((location) => {
+      countryButtons.appendChild(createLocationButton(location));
+    });
+
+  const sections = [allButtonRow];
+  countrySection.append(sectionLabel, countryButtons);
+  sections.push(countrySection);
+
+  if (state.activeLocation !== "all") {
+    const cities = getRelevantCitiesForCountry(state.activeLocation);
+    if (cities.length > 1) {
+      const citySection = document.createElement("div");
+      citySection.className = "rounded-[20px] border border-white/10 bg-panelSoft/60 p-3";
+
+      const cityLabel = document.createElement("p");
+      cityLabel.className = "mb-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-muted";
+      cityLabel.textContent = "Cities";
+
+      const cityButtons = document.createElement("div");
+      cityButtons.className = "flex flex-wrap gap-2";
+      cities.forEach((city) => {
+        const button = createFilterChip(city, state.activeCity === city, () => {
+          state.activeCity = city;
+          const filteredRuns = getFilteredRuns();
+          state.activeRunId = filteredRuns.at(-1)?.runId ?? null;
+          render();
+        });
+        cityButtons.appendChild(button);
       });
-      return button;
-    })
-  );
+
+      citySection.append(cityLabel, cityButtons);
+      sections.push(citySection);
+    }
+  }
+
+  refs.filterRoot.replaceChildren(...sections);
+}
+
+function createLocationButton(location) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.dataset.location = location;
+  button.className =
+    "rounded-full border px-4 py-2 text-sm font-semibold transition-colors " +
+    "border-white/10 bg-panelSoft text-text hover:border-sky hover:text-sky";
+  button.textContent = location === "all" ? "All Locations" : getCountryLabel(location);
+  button.addEventListener("click", () => {
+    state.activeLocation = location;
+    state.activeCountry = location === "all" ? "all" : location;
+    state.activeCity = "all";
+    const filteredRuns = getFilteredRuns();
+    state.activeRunId = filteredRuns.at(-1)?.runId ?? null;
+    render();
+  });
+  return button;
+}
+
+function getCountryLabel(location) {
+  const parts = location.split(",").map((item) => item.trim()).filter(Boolean);
+  return parts.at(-1) || location;
+}
+
+function bindTabs() {
+  for (const button of refs.tabsRoot.querySelectorAll("[data-tab]")) {
+    button.addEventListener("click", () => {
+      state.activeTab = button.dataset.tab || "history";
+      render();
+    });
+  }
+}
+
+function selectCountry(value) {
+  state.activeCountry = value;
+  state.activeCity = "all";
+  render();
+}
+
+function selectCity(value) {
+  state.activeCity = value;
+  render();
 }
 
 function render() {
-  updateFilterStyles();
+  renderTabs();
+  buildLocationFilters();
   const filteredRuns = getFilteredRuns();
   renderMetrics(filteredRuns);
   renderChart(filteredRuns);
   renderRunDetails();
+  renderLiveFilterChips();
+  renderJobs();
 }
 
-function updateFilterStyles() {
-  for (const button of refs.filterRoot.querySelectorAll("button")) {
-    const isActive = button.dataset.location === state.activeLocation;
+function renderTabs() {
+  for (const button of refs.tabsRoot.querySelectorAll("[data-tab]")) {
+    const isActive = button.dataset.tab === state.activeTab;
     button.className =
-      "rounded-full border px-4 py-2 text-sm font-semibold transition-colors " +
+      "rounded-full border px-5 py-3 text-sm font-semibold transition-colors " +
       (isActive
         ? "border-accent bg-accent text-base"
         : "border-white/10 bg-panelSoft text-text hover:border-sky hover:text-sky");
   }
+
+  refs.historyPanel.hidden = state.activeTab !== "history";
+  refs.livePanel.hidden = state.activeTab !== "live";
 }
 
 function getFilteredRuns() {
   return state.runs
-    .map((run) => mapRunForLocation(run, state.activeLocation))
+    .map((run) => mapRunForSelection(run, state.activeLocation, state.activeCity))
     .filter(Boolean);
 }
 
-function mapRunForLocation(run, location) {
-  if (location === "all") {
+function mapRunForSelection(run, location, city) {
+  if (location === "all" && city === "all") {
     return {
       runId: run.runId,
       generatedAt: run.generatedAt,
@@ -133,19 +234,20 @@ function mapRunForLocation(run, location) {
     };
   }
 
-  const local = (run.perLocation || []).find((item) => item.location === location);
-  if (!local) {
+  const detail = state.runDetailsById.get(run.runId);
+  if (!detail) {
     return null;
   }
 
+  const scoped = getDetailForSelection(detail, location, city);
   return {
     runId: run.runId,
     generatedAt: run.generatedAt,
-    totalJobs: local.totalJobs,
-    addedCount: local.addedCount,
-    removedCount: local.removedCount,
-    changedCount: local.changedCount,
-    unchangedCount: local.unchangedCount
+    totalJobs: scoped.added.length + scoped.changed.length + scoped.unchanged.length,
+    addedCount: scoped.added.length,
+    removedCount: scoped.removed.length,
+    changedCount: scoped.changed.length,
+    unchangedCount: scoped.unchanged.length
   };
 }
 
@@ -157,9 +259,230 @@ function renderMetrics(filteredRuns) {
   refs.metricChanged.textContent = latest ? `~${latest.changedCount}` : "0";
 
   refs.chartCaption.textContent = latest
-    ? `Останній запуск: ${formatDate(latest.generatedAt)}`
+    ? `Останній запуск: ${formatDate(latest.generatedAt)}${getHistorySelectionSuffix()}`
     : "Немає запусків для вибраної локації.";
   refs.chartRange.textContent = `${filteredRuns.length} run${filteredRuns.length === 1 ? "" : "s"}`;
+}
+
+function getJobsForActiveLocation() {
+  return state.jobs
+    .filter((job) => job.isActive)
+    .filter((job) => state.activeLocation === "all" || job.requestedLocation === state.activeLocation);
+}
+
+function renderLiveFilterChips() {
+  const locationScopedJobs = getJobsForActiveLocation();
+  const grouped = groupJobsByCountry(locationScopedJobs);
+  const countries = Array.from(grouped.keys()).sort((a, b) => a.localeCompare(b, "uk"));
+
+  if (state.activeCountry !== "all" && !countries.includes(state.activeCountry)) {
+    state.activeCountry = "all";
+  }
+
+  refs.countryFilterChips.replaceChildren(
+    createFilterChip("Усі країни", state.activeCountry === "all", () => selectCountry("all")),
+    ...countries.map((country) => {
+      const cities = getRelevantCitiesForCountry(country);
+      const label = cities.length === 1 ? `${country}, ${cities[0]}` : country;
+      return createFilterChip(label, state.activeCountry === country, () => selectCountry(country));
+    })
+  );
+
+  const countryScopedJobs = locationScopedJobs.filter(
+    (job) => state.activeCountry === "all" || getRequestedCountry(job) === state.activeCountry
+  );
+  const cities = Array.from(new Set(countryScopedJobs.map((job) => getPrimaryCityForRequestedCountry(job)).filter(Boolean))).sort((a, b) => a.localeCompare(b, "uk"));
+
+  if (state.activeCity !== "all" && !cities.includes(state.activeCity)) {
+    state.activeCity = "all";
+  }
+
+  refs.cityFilterSection.hidden = !(state.activeCountry !== "all" && cities.length > 1);
+  refs.cityFilterChips.replaceChildren(
+    createFilterChip("Усі міста", state.activeCity === "all", () => selectCity("all")),
+    ...cities.map((city) => createFilterChip(city, state.activeCity === city, () => selectCity(city)))
+  );
+}
+
+function groupJobsByCountry(jobs) {
+  const groups = new Map();
+  for (const job of jobs) {
+    const country = getRequestedCountry(job);
+    const city = getPrimaryCityForRequestedCountry(job);
+    if (!country) {
+      continue;
+    }
+
+    if (!groups.has(country)) {
+      groups.set(country, new Set());
+    }
+
+    if (city) {
+      groups.get(country).add(city);
+    }
+  }
+
+  return groups;
+}
+
+function createFilterChip(label, isActive, onClick) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className =
+    "rounded-full border px-4 py-2 text-sm font-semibold transition-colors " +
+    (isActive
+      ? "border-accent bg-accent text-base"
+      : "border-white/10 bg-panelSoft text-text hover:border-sky hover:text-sky");
+  button.textContent = label;
+  button.addEventListener("click", onClick);
+  return button;
+}
+
+function getFilteredJobs() {
+  return getJobsForActiveLocation()
+    .filter((job) => state.activeCountry === "all" || getRequestedCountry(job) === state.activeCountry)
+    .filter((job) => state.activeCity === "all" || getPrimaryCityForRequestedCountry(job) === state.activeCity)
+    .sort((left, right) => left.title.localeCompare(right.title, "uk"));
+}
+
+function getRelevantCitiesForCountry(country) {
+  return Array.from(
+    new Set(
+      getJobsForActiveLocation()
+        .filter((job) => getRequestedCountry(job) === country)
+        .map((job) => getPrimaryCityForRequestedCountry(job))
+        .filter(Boolean)
+    )
+  ).sort((left, right) => left.localeCompare(right, "uk"));
+}
+
+function getRequestedCountry(job) {
+  const fallback = getCountryFromJob(job);
+  return normalizeCountryName(job.requestedLocation || fallback);
+}
+
+function normalizeCountryName(value) {
+  const normalized = String(value || "").trim();
+  const aliases = new Map([
+    ["UK", "United Kingdom"],
+    ["U.K.", "United Kingdom"],
+    ["United Kingdom", "United Kingdom"],
+    ["Ireland", "Ireland"],
+    ["Poland", "Poland"],
+    ["Switzerland", "Switzerland"],
+    ["Germany", "Germany"],
+    ["USA", "United States"],
+    ["US", "United States"],
+    ["United States", "United States"],
+    ["CH", "Switzerland"],
+    ["PL", "Poland"],
+    ["DE", "Germany"],
+    ["IE", "Ireland"]
+  ]);
+  return aliases.get(normalized) || normalized;
+}
+
+function getCountryFromJob(job) {
+  const sources = Array.isArray(job.locations) && job.locations.length ? job.locations : [job.requestedLocation || ""];
+  for (const source of sources) {
+    const parts = String(source).split(",").map((item) => item.trim()).filter(Boolean);
+    if (parts.length >= 2) {
+      return normalizeCountryName(parts.at(-1) || "");
+    }
+  }
+
+  const fallbackParts = String(job.requestedLocation || "").split(",").map((item) => item.trim()).filter(Boolean);
+  return normalizeCountryName(fallbackParts.at(-1) || "");
+}
+
+function getPrimaryCityForRequestedCountry(job) {
+  const requestedCountry = getRequestedCountry(job);
+  const sources = Array.isArray(job.locations) && job.locations.length ? job.locations : [job.requestedLocation || ""];
+  for (const source of sources) {
+    const parts = String(source).split(",").map((item) => item.trim()).filter(Boolean);
+    if (parts.length >= 2 && normalizeCountryName(parts.at(-1) || "") === requestedCountry) {
+      return parts[0] || "";
+    }
+  }
+
+  return getCityFromJob(job);
+}
+
+function getCityFromJob(job) {
+  const sources = Array.isArray(job.locations) && job.locations.length ? job.locations : [job.requestedLocation || ""];
+  for (const source of sources) {
+    const parts = String(source).split(",").map((item) => item.trim()).filter(Boolean);
+    if (parts.length >= 2) {
+      return parts[0] || "";
+    }
+  }
+
+  const fallbackParts = String(job.requestedLocation || "").split(",").map((item) => item.trim()).filter(Boolean);
+  return fallbackParts[0] || "";
+}
+
+function renderJobs() {
+  const filteredJobs = getFilteredJobs();
+  refs.jobsActiveCount.textContent = String(filteredJobs.length);
+  const captionParts = [];
+  if (state.activeLocation === "all") {
+    captionParts.push("усіх локацій");
+  } else {
+    captionParts.push(state.activeLocation);
+  }
+  if (state.activeCountry !== "all") {
+    captionParts.push(state.activeCountry);
+  }
+  if (state.activeCity !== "all") {
+    captionParts.push(state.activeCity);
+  }
+  refs.jobsCaption.textContent = `Поточний список активних вакансій для ${captionParts.join(" / ")}. Показано ${filteredJobs.length} позицій.`;
+
+  refs.jobsList.replaceChildren();
+  if (!filteredJobs.length) {
+    const empty = document.createElement("div");
+    empty.className = "rounded-[22px] border border-dashed border-white/10 px-4 py-6 text-sm text-muted";
+    empty.textContent = "Для цієї локації зараз немає активних вакансій у поточному snapshot.";
+    refs.jobsList.appendChild(empty);
+    return;
+  }
+
+  refs.jobsList.replaceChildren(
+    ...filteredJobs.map((job) => {
+      const row = document.createElement("article");
+      row.className = "grid gap-3 rounded-[22px] border border-white/10 bg-panelSoft/72 p-4 md:grid-cols-[minmax(0,1.4fr)_170px_170px_190px]";
+
+      const titleWrap = document.createElement("div");
+      const title = document.createElement("a");
+      title.className = "block font-heading text-base font-bold text-text transition-colors hover:text-sky";
+      title.href = job.url;
+      title.target = "_blank";
+      title.rel = "noreferrer";
+      title.textContent = job.title;
+
+      const company = document.createElement("p");
+      company.className = "mt-2 text-sm text-muted";
+      company.textContent = job.company || "Unknown brand";
+      titleWrap.append(title, company);
+
+      const requestedLocation = document.createElement("div");
+      requestedLocation.className = "text-sm leading-6 text-muted";
+      requestedLocation.textContent = job.requestedLocation || "n/a";
+
+      const timing = document.createElement("div");
+      timing.className = "text-sm leading-6 text-muted";
+      timing.innerHTML =
+        `<div>Posted: ${job.postedAtCandidate ? shortDate(job.postedAtCandidate) : "n/a"}</div>` +
+        `<div>Updated: ${job.updatedAtCandidate ? shortDate(job.updatedAtCandidate) : "n/a"}</div>`;
+
+      const locations = document.createElement("div");
+      locations.className = "text-sm leading-6 text-muted";
+      locations.textContent = Array.isArray(job.locations) && job.locations.length ? job.locations.join(", ") : "n/a";
+
+      row.append(titleWrap, requestedLocation, timing, locations);
+      return row;
+    })
+  );
 }
 
 function renderChart(filteredRuns) {
@@ -223,6 +546,7 @@ function renderChart(filteredRuns) {
     pointGroup.setAttribute("class", `chart-point${run.runId === state.activeRunId ? " is-active" : ""}`);
 
     const halo = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    halo.setAttribute("class", "chart-point-halo");
     halo.setAttribute("cx", String(x));
     halo.setAttribute("cy", String(y));
     halo.setAttribute("r", "10");
@@ -230,6 +554,7 @@ function renderChart(filteredRuns) {
     pointGroup.appendChild(halo);
 
     const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    point.setAttribute("class", "chart-point-core");
     point.setAttribute("cx", String(x));
     point.setAttribute("cy", String(y));
     point.setAttribute("r", "5.5");
@@ -280,17 +605,19 @@ function renderRunDetails() {
     return;
   }
 
-  const scoped = getDetailForLocation(detail, state.activeLocation);
+  const scopedWithCity = getDetailForSelection(detail, state.activeLocation, state.activeCity);
   refs.detailTitle.textContent = formatDate(run.generatedAt);
   refs.detailSubtitle.textContent =
     state.activeLocation === "all"
       ? "Глобальна дельта по всіх локаціях."
-      : `Дельта тільки для ${state.activeLocation}.`;
+      : state.activeCity === "all"
+        ? `Дельта тільки для ${state.activeLocation}.`
+        : `Дельта для ${state.activeLocation} / ${state.activeCity}.`;
 
-  updateDetailBadges(scoped.added.length, scoped.removed.length, scoped.changed.length);
-  renderDetailList(refs.addedList, scoped.added, "accent");
-  renderDetailList(refs.removedList, scoped.removed, "rose");
-  renderChangedList(scoped.changed);
+  updateDetailBadges(scopedWithCity.added.length, scopedWithCity.removed.length, scopedWithCity.changed.length);
+  renderDetailList(refs.addedList, scopedWithCity.added, "accent");
+  renderDetailList(refs.removedList, scopedWithCity.removed, "rose");
+  renderChangedList(scopedWithCity.changed);
 }
 
 function getDetailForLocation(detail, location) {
@@ -298,7 +625,8 @@ function getDetailForLocation(detail, location) {
     return {
       added: detail.added || [],
       removed: detail.removed || [],
-      changed: detail.changed || []
+      changed: detail.changed || [],
+      unchanged: detail.unchanged || []
     };
   }
 
@@ -306,8 +634,35 @@ function getDetailForLocation(detail, location) {
   return {
     added: local?.added || [],
     removed: local?.removed || [],
-    changed: local?.changed || []
+    changed: local?.changed || [],
+    unchanged: local?.unchanged || []
   };
+}
+
+function getDetailForSelection(detail, location, city) {
+  const scoped = getDetailForLocation(detail, location);
+  if (city === "all") {
+    return scoped;
+  }
+
+  return {
+    added: scoped.added.filter((item) => getPrimaryCityForRequestedCountry(item) === city),
+    removed: scoped.removed.filter((item) => getPrimaryCityForRequestedCountry(item) === city),
+    changed: scoped.changed.filter((item) => getPrimaryCityForRequestedCountry(item) === city),
+    unchanged: scoped.unchanged.filter((item) => getPrimaryCityForRequestedCountry(item) === city)
+  };
+}
+
+function getHistorySelectionSuffix() {
+  if (state.activeLocation === "all") {
+    return "";
+  }
+
+  if (state.activeCity === "all") {
+    return ` • ${state.activeLocation}`;
+  }
+
+  return ` • ${state.activeLocation} / ${state.activeCity}`;
 }
 
 function updateDetailBadges(addedCount, removedCount, changedCount) {

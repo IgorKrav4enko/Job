@@ -1,12 +1,27 @@
 [
   {
     "slug": "warsaw",
-    "label": "Warsaw, Poland",
-    "query": "Warsaw, Poland"
+    "label": "Poland",
+    "query": "Poland"
   },
   {
     "slug": "zurich",
-    "label": "Zurich, Switzerland",
-    "query": "Zurich, Switzerland"
+    "label": "Switzerland",
+    "query": "Switzerland"
+  },
+  {
+    "slug": "germany",
+    "label": "Germany",
+    "query": "Germany"
+  },
+  {
+    "slug": "united-kingdom",
+    "label": "United Kingdom",
+    "query": "United Kingdom"
+  },
+  {
+    "slug": "ireland",
+    "label": "Ireland",
+    "query": "Ireland"
   }
 ]
