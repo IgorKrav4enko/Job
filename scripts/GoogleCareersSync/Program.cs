@@ -25,6 +25,8 @@ var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
 var previousDataset = LoadJsonOrDefault<JobDataset>(outputPath);
 var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(runsPath) ?? new RunHistoryDataset(new List<RunSummary>());
 var previousRunDetails = LoadJsonOrDefault<RunDetailsDataset>(runDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+previousRunDetails = NormalizeRunDetails(previousRunDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+previousRuns = NormalizeRunHistory(previousRuns, previousRunDetails) ?? new RunHistoryDataset(new List<RunSummary>());
 var fetchResult = await FetchJobsAsync(locations, searchTerm, runCapturedAt);
 var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), fetchResult.Jobs, runCapturedAt);
 var dataset = BuildDataset(locations, mergeResult.Jobs, searchTerm);
@@ -96,6 +98,103 @@ static T? LoadJsonOrDefault<T>(string path)
     }
 
     return JsonSerializer.Deserialize<T>(File.ReadAllText(path), JsonOptions());
+}
+
+static RunHistoryDataset? NormalizeRunHistory(RunHistoryDataset? dataset, RunDetailsDataset? runDetailsDataset)
+{
+    if (dataset is null)
+    {
+        return null;
+    }
+
+    var detailsByRunId = (runDetailsDataset?.Runs ?? new List<RunDetail>())
+        .ToDictionary(static detail => detail.RunId, StringComparer.Ordinal);
+
+    var normalizedRuns = dataset.Runs
+        .Select(run =>
+        {
+            if (run.PerLocation is { Count: > 0 })
+            {
+                return run;
+            }
+
+            if (!detailsByRunId.TryGetValue(run.RunId, out var detail))
+            {
+                return run with { PerLocation = new List<PerLocationRunSummary>() };
+            }
+
+            return run with
+            {
+                PerLocation = BackfillPerLocationSummaries(detail)
+            };
+        })
+        .ToList();
+
+    return dataset with { Runs = normalizedRuns };
+}
+
+static RunDetailsDataset? NormalizeRunDetails(RunDetailsDataset? dataset)
+{
+    if (dataset is null)
+    {
+        return null;
+    }
+
+    var normalizedRuns = dataset.Runs
+        .Select(run =>
+        {
+            var normalizedRun = run with
+            {
+                Added = run.Added ?? new List<JobDeltaItem>(),
+                Removed = run.Removed ?? new List<JobDeltaItem>(),
+                Changed = run.Changed ?? new List<JobChangedDeltaItem>(),
+                Unchanged = run.Unchanged ?? new List<JobDeltaItem>()
+            };
+
+            return normalizedRun with
+            {
+                PerLocation = run.PerLocation is { Count: > 0 }
+                    ? run.PerLocation
+                    : BackfillPerLocationDetails(normalizedRun)
+            };
+        })
+        .ToList();
+
+    return dataset with { Runs = normalizedRuns };
+}
+
+static List<PerLocationRunSummary> BackfillPerLocationSummaries(RunDetail detail)
+{
+    return BackfillPerLocationDetails(detail)
+        .Select(static item =>
+            new PerLocationRunSummary(
+                item.Location,
+                item.Added.Count + item.Changed.Count + item.Unchanged.Count,
+                item.Added.Count,
+                item.Removed.Count,
+                item.Changed.Count,
+                item.Unchanged.Count))
+        .ToList();
+}
+
+static List<PerLocationRunDetail> BackfillPerLocationDetails(RunDetail detail)
+{
+    var locationKeys = detail.Added.Select(static item => item.RequestedLocation)
+        .Concat(detail.Removed.Select(static item => item.RequestedLocation))
+        .Concat(detail.Changed.Select(static item => item.RequestedLocation))
+        .Concat(detail.Unchanged.Select(static item => item.RequestedLocation))
+        .Distinct(StringComparer.Ordinal)
+        .OrderBy(static key => key, StringComparer.OrdinalIgnoreCase);
+
+    return locationKeys
+        .Select(locationKey =>
+            new PerLocationRunDetail(
+                locationKey,
+                detail.Added.Where(item => item.RequestedLocation == locationKey).ToList(),
+                detail.Removed.Where(item => item.RequestedLocation == locationKey).ToList(),
+                detail.Changed.Where(item => item.RequestedLocation == locationKey).ToList(),
+                detail.Unchanged.Where(item => item.RequestedLocation == locationKey).ToList()))
+        .ToList();
 }
 
 static async Task<FetchResult> FetchJobsAsync(
