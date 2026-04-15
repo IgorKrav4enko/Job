@@ -8,9 +8,9 @@ using System.Globalization;
 
 var root = FindRepositoryRoot();
 var configPath = Path.Combine(root, "config", "google-careers-locations.json");
-var outputPath = Path.Combine(root, "site", "data", "google-careers-jobs.json");
-var runsPath = Path.Combine(root, "site", "data", "google-careers-runs.json");
-var runDetailsPath = Path.Combine(root, "site", "data", "google-careers-run-details.json");
+var outputPath = Path.Combine(root, "data", "google-careers-jobs.json");
+var runsPath = Path.Combine(root, "data", "google-careers-runs.json");
+var runDetailsPath = Path.Combine(root, "data", "google-careers-run-details.json");
 var rawRunsDirectoryPath = Path.Combine(root, "data-raw", "google-careers", "runs");
 
 var locations = LoadLocations(configPath);
@@ -63,9 +63,9 @@ static string FindRepositoryRoot()
     while (current is not null)
     {
         var configDir = Path.Combine(current.FullName, "config");
-        var siteDir = Path.Combine(current.FullName, "site");
+        var scriptsDir = Path.Combine(current.FullName, "scripts");
 
-        if (Directory.Exists(configDir) && Directory.Exists(siteDir))
+        if (Directory.Exists(configDir) && Directory.Exists(scriptsDir))
         {
             return current.FullName;
         }
@@ -74,7 +74,7 @@ static string FindRepositoryRoot()
     }
 
     throw new DirectoryNotFoundException(
-        "Could not locate the repository root containing both 'config' and 'site' directories.");
+        "Could not locate the repository root containing both 'config' and 'scripts' directories.");
 }
 
 static List<LocationConfig> LoadLocations(string configPath)

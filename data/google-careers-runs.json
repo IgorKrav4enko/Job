@@ -107,6 +107,33 @@
           "unchangedCount": 20
         }
       ]
+    },
+    {
+      "runId": "2026-04-15T21-52-57Z",
+      "generatedAt": "2026-04-15T21:52:57.3925450\u002B00:00",
+      "totalJobs": 40,
+      "addedCount": 0,
+      "removedCount": 0,
+      "changedCount": 0,
+      "unchangedCount": 40,
+      "perLocation": [
+        {
+          "location": "Warsaw, Poland",
+          "totalJobs": 20,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 20
+        },
+        {
+          "location": "Zurich, Switzerland",
+          "totalJobs": 20,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 20
+        }
+      ]
     }
   ]
 }
