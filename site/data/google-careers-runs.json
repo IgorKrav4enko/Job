@@ -1,0 +1,49 @@
+{
+  "runs": [
+    {
+      "runId": "2026-04-15T20-30-55Z",
+      "generatedAt": "2026-04-15T20:30:55.4658280\u002B00:00",
+      "totalJobs": 40,
+      "addedCount": 0,
+      "removedCount": 0,
+      "changedCount": 0,
+      "unchangedCount": 40
+    },
+    {
+      "runId": "2026-04-15T20-35-49Z",
+      "generatedAt": "2026-04-15T20:35:49.8719280\u002B00:00",
+      "totalJobs": 40,
+      "addedCount": 0,
+      "removedCount": 0,
+      "changedCount": 0,
+      "unchangedCount": 40
+    },
+    {
+      "runId": "2026-04-15T20-45-26Z",
+      "generatedAt": "2026-04-15T20:45:26.3527250\u002B00:00",
+      "totalJobs": 40,
+      "addedCount": 0,
+      "removedCount": 0,
+      "changedCount": 0,
+      "unchangedCount": 40,
+      "perLocation": [
+        {
+          "location": "Warsaw, Poland",
+          "totalJobs": 20,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 20
+        },
+        {
+          "location": "Zurich, Switzerland",
+          "totalJobs": 20,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 20
+        }
+      ]
+    }
+  ]
+}

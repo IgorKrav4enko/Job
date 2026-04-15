@@ -422,14 +422,16 @@
     const approachPanel = document.createElement("div");
     const walkthroughPanel = document.createElement("div");
     const solutionPanel = document.createElement("div");
-    const submissionsPanel = document.createElement("div");
+    const editorPanel = document.createElement("div");
+    const testcasesPanel = document.createElement("div");
 
     const tabPanels = {
       problem: problemPanel,
       approach: approachPanel,
       walkthrough: walkthroughPanel,
       solution: solutionPanel,
-      submissions: submissionsPanel
+      editor: editorPanel,
+      testcases: testcasesPanel
     };
 
     const tabButtons = {};
@@ -445,7 +447,7 @@
       });
     };
 
-    [["problem", "problem"], ["approach", "approach"], ["walkthrough", "walkthrough"], ["solution", "solution"], ["submissions", "submissions"]].forEach(([key, label]) => {
+    [["problem", "problem"], ["approach", "approach"], ["walkthrough", "walkthrough"], ["solution", "solution"], ["editor", "editor"], ["testcases", "testcases"]].forEach(([key, label]) => {
       const button = document.createElement("button");
       button.type = "button";
       button.textContent = label;
@@ -454,7 +456,7 @@
       tabsBar.append(button);
     });
 
-    mainColumn.append(tabsBar, problemPanel, approachPanel, walkthroughPanel, solutionPanel, submissionsPanel);
+    mainColumn.append(tabsBar, problemPanel, approachPanel, walkthroughPanel, solutionPanel, editorPanel, testcasesPanel);
 
     const statement = document.createElement("section");
     statement.className = "rounded-[22px] border border-line/60 bg-gradient-to-br from-mist to-white px-5 py-5";
@@ -705,6 +707,95 @@
 
     solutionPanel.append(solutionsSection);
 
+    const editorSection = document.createElement("section");
+    editorSection.className = "rounded-[22px] border border-line/60 bg-white px-5 py-5";
+    editorSection.innerHTML = "<h4 class=\"font-heading text-lg font-bold\">Editor</h4>";
+
+    const editorHelp = document.createElement("p");
+    editorHelp.className = "mt-3 text-sm leading-6 text-ink/65";
+    editorHelp.textContent = "Редагуй код тут, а кнопка Run tests покаже тест-кейси для цієї задачі. У поточній browser-версії фактичне виконання Java-коду ще не підключене.";
+
+    const editorArea = document.createElement("textarea");
+    editorArea.className = "mt-4 min-h-[320px] w-full rounded-[20px] border border-line/70 bg-[#1f1f1f] p-4 font-mono text-sm leading-7 text-white focus:border-coral focus:ring-coral";
+    editorArea.spellcheck = false;
+    editorArea.value = detail.solutions && detail.solutions.length ? detail.solutions[0].code : "";
+
+    const editorActions = document.createElement("div");
+    editorActions.className = "mt-4 flex flex-wrap gap-3";
+
+    const runTestsButton = document.createElement("button");
+    runTestsButton.type = "button";
+    runTestsButton.className = "rounded-full bg-ink px-4 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90";
+    runTestsButton.textContent = "Run tests";
+
+    const resetCodeButton = document.createElement("button");
+    resetCodeButton.type = "button";
+    resetCodeButton.className = "rounded-full border border-line/70 bg-mist px-4 py-3 text-sm font-semibold transition-colors hover:border-coral hover:text-coral";
+    resetCodeButton.textContent = "Reset code";
+
+    const editorStatus = document.createElement("div");
+    editorStatus.className = "mt-4 rounded-[18px] border border-line/60 bg-mist px-4 py-3 text-sm leading-6 text-ink/70";
+    editorStatus.textContent = "Ready. Open the editor tab and run tests to inspect the current task cases.";
+
+    const editorResults = document.createElement("div");
+    editorResults.className = "mt-4 hidden rounded-[22px] border border-line/60 bg-[#fbf8f1] px-4 py-4";
+
+    runTestsButton.addEventListener("click", () => {
+      const code = editorArea.value.trim();
+      editorResults.innerHTML = "";
+      editorResults.classList.remove("hidden");
+
+      const statusTitle = document.createElement("div");
+      statusTitle.className = "text-sm font-semibold text-ink";
+      statusTitle.textContent = code ? "Tests queued in browser preview mode" : "Editor is empty";
+
+      const statusText = document.createElement("p");
+      statusText.className = "mt-2 text-sm leading-6 text-ink/65";
+      statusText.textContent = code
+        ? "Actual Java execution is not wired into this static preview yet, but the task test cases below are ready to use."
+        : "Paste or edit code first, then run tests to inspect the task cases.";
+
+      editorResults.append(statusTitle, statusText);
+
+      if (detail.testCases && detail.testCases.length) {
+        const testsList = document.createElement("div");
+        testsList.className = "mt-4 space-y-3";
+
+        detail.testCases.forEach((testCase, index) => {
+          const testCard = document.createElement("div");
+          testCard.className = "rounded-[18px] border border-line/60 bg-white px-4 py-3";
+
+          const testLabel = document.createElement("div");
+          testLabel.className = "text-xs font-semibold uppercase tracking-[0.18em] text-coral";
+          testLabel.textContent = "test " + String(index + 1).padStart(2, "0");
+
+          const testCode = document.createElement("pre");
+          testCode.className = "mt-2 overflow-x-auto rounded-2xl bg-ink p-3 text-sm text-white";
+          enhanceCodeBlock(testCode, testCase, "plaintext");
+
+          testCard.append(testLabel, testCode);
+          testsList.append(testCard);
+        });
+
+        editorResults.append(testsList);
+      }
+
+      editorStatus.textContent = code
+        ? "Run complete: test cases displayed below."
+        : "Run skipped: the editor is still empty.";
+    });
+
+    resetCodeButton.addEventListener("click", () => {
+      editorArea.value = detail.solutions && detail.solutions.length ? detail.solutions[0].code : "";
+      editorStatus.textContent = "Code reset to the default solution snippet.";
+      editorResults.classList.add("hidden");
+      editorResults.innerHTML = "";
+    });
+
+    editorActions.append(runTestsButton, resetCodeButton);
+    editorSection.append(editorHelp, editorArea, editorActions, editorStatus, editorResults);
+    editorPanel.append(editorSection);
+
     if (detail.testCases && detail.testCases.length) {
       const testsCard = document.createElement("details");
       testsCard.className = "rounded-[22px] border border-line/70 bg-mist";
@@ -752,14 +843,14 @@
 
       testsBody.append(testsCode);
       testsCard.append(testsSummary, testsBody);
-      submissionsPanel.append(testsCard);
+      testcasesPanel.append(testsCard);
     }
 
-    if (submissionsPanel.childElementCount === 0) {
+    if (testcasesPanel.childElementCount === 0) {
       const placeholder = document.createElement("div");
       placeholder.className = "rounded-[22px] border border-dashed border-line/60 bg-mist px-5 py-5 text-sm leading-6 text-ink/65";
-      placeholder.textContent = "Submissions block can be expanded later with attempts, notes, or saved runs.";
-      submissionsPanel.append(placeholder);
+      placeholder.textContent = "Test cases will appear here when they are available for the selected task.";
+      testcasesPanel.append(placeholder);
     }
 
     setActiveTab("problem");

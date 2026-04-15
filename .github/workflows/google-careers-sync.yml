@@ -1,0 +1,45 @@
+name: Sync Google Careers Jobs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: google-careers-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Generate jobs dataset
+        env:
+          GOOGLE_CAREERS_LOCATIONS: ${{ vars.GOOGLE_CAREERS_LOCATIONS }}
+        run: dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj
+
+      - name: Commit updated data
+        run: |
+          if git diff --quiet -- site/data/google-careers-jobs.json; then
+            echo "No dataset changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/google-careers-jobs.json
+          git commit -m "chore: refresh Google Careers dataset"
+          git push
