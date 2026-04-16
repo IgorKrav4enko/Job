@@ -10,24 +10,40 @@ const state = {
   runDetailsById: new Map(),
   jobs: [],
   activeCountry: "all",
-  activeCity: "all"
+  activeCity: "all",
+  removedCountry: "all",
+  removedCity: "all"
 };
 
 const refs = {
   tabsRoot: document.getElementById("dashboard-tabs"),
   historyPanel: document.getElementById("history-panel"),
   livePanel: document.getElementById("live-panel"),
+  removedPanel: document.getElementById("removed-panel"),
   filterRoot: document.getElementById("location-filter"),
   chart: document.getElementById("runs-chart"),
   chartCaption: document.getElementById("chart-caption"),
   chartRange: document.getElementById("chart-range"),
   metricTotal: document.getElementById("metric-total"),
+  metricActiveNow: document.getElementById("metric-active-now"),
   metricAdded: document.getElementById("metric-added"),
   metricRemoved: document.getElementById("metric-removed"),
   metricChanged: document.getElementById("metric-changed"),
+  metricAddedLine: document.getElementById("metric-added-line"),
+  metricAddedHint: document.getElementById("metric-added-hint"),
+  metricRemovedLine: document.getElementById("metric-removed-line"),
+  metricRemovedHint: document.getElementById("metric-removed-hint"),
+  metricChangedLine: document.getElementById("metric-changed-line"),
+  metricChangedHint: document.getElementById("metric-changed-hint"),
   jobsCaption: document.getElementById("jobs-caption"),
   jobsActiveCount: document.getElementById("jobs-active-count"),
   jobsList: document.getElementById("jobs-list"),
+  removedJobsCaption: document.getElementById("removed-jobs-caption"),
+  removedJobsCount: document.getElementById("removed-jobs-count"),
+  removedJobsList: document.getElementById("removed-jobs-list"),
+  removedCountryFilterChips: document.getElementById("removed-country-filter-chips"),
+  removedCityFilterSection: document.getElementById("removed-city-filter-section"),
+  removedCityFilterChips: document.getElementById("removed-city-filter-chips"),
   countryFilterChips: document.getElementById("country-filter-chips"),
   cityFilterSection: document.getElementById("city-filter-section"),
   cityFilterChips: document.getElementById("city-filter-chips"),
@@ -109,7 +125,9 @@ function buildLocationFilters() {
     .filter((location) => location !== "all")
     .sort((left, right) => left.localeCompare(right, "uk"))
     .forEach((location) => {
-      countryButtons.appendChild(createLocationButton(location));
+      const cities = getRelevantCitiesForCountry(location);
+      const cityCaption = cities.length === 1 ? cities[0] : null;
+      countryButtons.appendChild(createLocationButton(location, cityCaption));
     });
 
   const sections = [allButtonRow];
@@ -146,14 +164,17 @@ function buildLocationFilters() {
   refs.filterRoot.replaceChildren(...sections);
 }
 
-function createLocationButton(location) {
+function createLocationButton(location, subLabel = null) {
   const button = document.createElement("button");
   button.type = "button";
   button.dataset.location = location;
+  const isActive = state.activeLocation === location;
   button.className =
-    "rounded-full border px-4 py-2 text-sm font-semibold transition-colors " +
-    "border-white/10 bg-panelSoft text-text hover:border-sky hover:text-sky";
-  button.textContent = location === "all" ? "All Locations" : getCountryLabel(location);
+    "rounded-full border px-4 py-2 text-sm font-semibold leading-tight transition-colors " +
+    (isActive
+      ? "border-accent bg-accent text-base"
+      : "border-white/10 bg-panelSoft text-text hover:border-sky hover:text-sky");
+  setChipContent(button, location === "all" ? "All Locations" : getCountryLabel(location), subLabel);
   button.addEventListener("click", () => {
     state.activeLocation = location;
     state.activeCountry = location === "all" ? "all" : location;
@@ -199,6 +220,7 @@ function render() {
   renderRunDetails();
   renderLiveFilterChips();
   renderJobs();
+  renderRemovedJobs();
 }
 
 function renderTabs() {
@@ -213,6 +235,7 @@ function renderTabs() {
 
   refs.historyPanel.hidden = state.activeTab !== "history";
   refs.livePanel.hidden = state.activeTab !== "live";
+  refs.removedPanel.hidden = state.activeTab !== "removed";
 }
 
 function getFilteredRuns() {
@@ -253,6 +276,7 @@ function mapRunForSelection(run, location, city) {
 
 function renderMetrics(filteredRuns) {
   const latest = filteredRuns.at(-1);
+  refs.metricActiveNow.textContent = String(getFilteredJobsForHistory().length);
   refs.metricTotal.textContent = latest ? String(latest.totalJobs) : "0";
   refs.metricAdded.textContent = latest ? `+${latest.addedCount}` : "0";
   refs.metricRemoved.textContent = latest ? `-${latest.removedCount}` : "0";
@@ -280,11 +304,12 @@ function renderLiveFilterChips() {
   }
 
   refs.countryFilterChips.replaceChildren(
-    createFilterChip("Усі країни", state.activeCountry === "all", () => selectCountry("all")),
+    createFilterChip(`Усі країни (${locationScopedJobs.length})`, state.activeCountry === "all", () => selectCountry("all")),
     ...countries.map((country) => {
       const cities = getRelevantCitiesForCountry(country);
-      const label = cities.length === 1 ? `${country}, ${cities[0]}` : country;
-      return createFilterChip(label, state.activeCountry === country, () => selectCountry(country));
+      const countryCount = countJobsForCountry(locationScopedJobs, country);
+      const cityCaption = cities.length === 1 ? `${cities[0]} (${countJobsForCity(locationScopedJobs, country, cities[0])})` : null;
+      return createFilterChip(`${country} (${countryCount})`, state.activeCountry === country, () => selectCountry(country), cityCaption);
     })
   );
 
@@ -299,9 +324,20 @@ function renderLiveFilterChips() {
 
   refs.cityFilterSection.hidden = !(state.activeCountry !== "all" && cities.length > 1);
   refs.cityFilterChips.replaceChildren(
-    createFilterChip("Усі міста", state.activeCity === "all", () => selectCity("all")),
-    ...cities.map((city) => createFilterChip(city, state.activeCity === city, () => selectCity(city)))
+    createFilterChip(`Усі міста (${countryScopedJobs.length})`, state.activeCity === "all", () => selectCity("all")),
+    ...cities.map((city) =>
+      createFilterChip(`${city} (${countJobsForCity(locationScopedJobs, state.activeCountry, city)})`, state.activeCity === city, () => selectCity(city)))
   );
+}
+
+function countJobsForCountry(jobs, country) {
+  return jobs.filter((job) => getRequestedCountry(job) === country).length;
+}
+
+function countJobsForCity(jobs, country, city) {
+  return jobs.filter((job) =>
+    getRequestedCountry(job) === country &&
+    getPrimaryCityForRequestedCountry(job) === city).length;
 }
 
 function groupJobsByCountry(jobs) {
@@ -325,24 +361,50 @@ function groupJobsByCountry(jobs) {
   return groups;
 }
 
-function createFilterChip(label, isActive, onClick) {
+function createFilterChip(label, isActive, onClick, subLabel = null) {
   const button = document.createElement("button");
   button.type = "button";
   button.className =
-    "rounded-full border px-4 py-2 text-sm font-semibold transition-colors " +
+    "rounded-full border px-4 py-2 text-sm font-semibold leading-tight transition-colors " +
     (isActive
       ? "border-accent bg-accent text-base"
       : "border-white/10 bg-panelSoft text-text hover:border-sky hover:text-sky");
-  button.textContent = label;
+  setChipContent(button, label, subLabel);
   button.addEventListener("click", onClick);
   return button;
+}
+
+function setChipContent(button, label, subLabel) {
+  const labelSpan = document.createElement("span");
+  labelSpan.textContent = label;
+
+  if (!subLabel) {
+    button.replaceChildren(labelSpan);
+    return;
+  }
+
+  const subLabelSpan = document.createElement("span");
+  subLabelSpan.className = "block text-[11px] font-medium text-muted";
+  subLabelSpan.textContent = subLabel;
+  button.replaceChildren(labelSpan, subLabelSpan);
 }
 
 function getFilteredJobs() {
   return getJobsForActiveLocation()
     .filter((job) => state.activeCountry === "all" || getRequestedCountry(job) === state.activeCountry)
     .filter((job) => state.activeCity === "all" || getPrimaryCityForRequestedCountry(job) === state.activeCity)
-    .sort((left, right) => left.title.localeCompare(right.title, "uk"));
+    .sort((left, right) =>
+      getDateTime(right.firstSeenAt) - getDateTime(left.firstSeenAt) ||
+      left.title.localeCompare(right.title, "uk"));
+}
+
+function getDateTime(value) {
+  return value ? new Date(value).getTime() || 0 : 0;
+}
+
+function getFilteredJobsForHistory() {
+  return getJobsForActiveLocation()
+    .filter((job) => state.activeCity === "all" || getPrimaryCityForRequestedCountry(job) === state.activeCity);
 }
 
 function getRelevantCitiesForCountry(country) {
@@ -449,15 +511,120 @@ function renderJobs() {
 
   refs.jobsList.replaceChildren(
     ...filteredJobs.map((job) => {
+      const freshness = getFreshnessBadge(job.firstSeenAt);
+      const row = document.createElement("article");
+      row.className =
+        "grid gap-3 rounded-[22px] border border-l-4 bg-panelSoft/72 p-4 md:grid-cols-[minmax(0,1.4fr)_170px_170px_190px] " +
+        (freshness?.cardClass || "border-white/10 border-l-white/10");
+
+      const titleWrap = document.createElement("div");
+      const title = document.createElement("a");
+      title.className = "block font-heading text-base font-bold text-slate-100 transition-colors hover:text-sky";
+      title.href = job.url;
+      title.target = "_blank";
+      title.rel = "noreferrer";
+      title.textContent = job.title;
+
+      if (freshness) {
+        const badge = document.createElement("span");
+        badge.className = `mb-2 inline-flex rounded-full border px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${freshness.badgeClass}`;
+        badge.textContent = freshness.label;
+        titleWrap.appendChild(badge);
+      }
+
+      const company = document.createElement("p");
+      company.className = "mt-2 text-sm text-muted";
+      company.textContent = job.company || "Unknown brand";
+      titleWrap.append(title, company);
+
+      const requestedLocation = document.createElement("div");
+      requestedLocation.className = "text-sm leading-6 text-muted";
+      requestedLocation.textContent = job.requestedLocation || "n/a";
+
+      const timing = document.createElement("div");
+      timing.className = "text-sm leading-6 text-muted";
+      timing.innerHTML =
+        `<div>First seen: ${job.firstSeenAt ? shortDate(job.firstSeenAt) : "n/a"}</div>` +
+        `<div>Verified: ${job.lastSeenAt ? shortDate(job.lastSeenAt) : "n/a"}</div>`;
+
+      const locations = document.createElement("div");
+      locations.className = "text-sm leading-6 text-muted";
+      locations.textContent = Array.isArray(job.locations) && job.locations.length ? job.locations.join(", ") : "n/a";
+
+      row.append(titleWrap, requestedLocation, timing, locations);
+      return row;
+    })
+  );
+}
+
+function getFreshnessBadge(firstSeenAt) {
+  const ageInDays = getAgeInDays(firstSeenAt);
+  if (ageInDays === null) {
+    return null;
+  }
+
+  if (ageInDays < 1) {
+    return {
+      label: "New today",
+      cardClass: "border-white/10 border-l-accent shadow-[inset_10px_0_22px_rgba(74,222,128,0.06)]",
+      badgeClass: "border-accent/30 bg-accent/10 text-accent"
+    };
+  }
+
+  if (ageInDays <= 3) {
+    return {
+      label: "Last 3 days",
+      cardClass: "border-white/10 border-l-amber shadow-[inset_10px_0_22px_rgba(245,158,11,0.06)]",
+      badgeClass: "border-amber/30 bg-amber/10 text-amber"
+    };
+  }
+
+  if (ageInDays <= 7) {
+    return {
+      label: "This week",
+      cardClass: "border-white/10 border-l-sky shadow-[inset_10px_0_22px_rgba(56,189,248,0.06)]",
+      badgeClass: "border-sky/30 bg-sky/10 text-sky"
+    };
+  }
+
+  return null;
+}
+
+function getAgeInDays(value) {
+  const timestamp = getDateTime(value);
+  if (!timestamp) {
+    return null;
+  }
+
+  return (Date.now() - timestamp) / (1000 * 60 * 60 * 24);
+}
+
+function renderRemovedJobs() {
+  const allRemovedJobs = getRemovedJobsHistory();
+  renderRemovedFilterChips(allRemovedJobs);
+  const removedJobs = getFilteredRemovedJobs(allRemovedJobs);
+  refs.removedJobsCount.textContent = String(removedJobs.length);
+  refs.removedJobsCaption.textContent =
+    `Вакансії, які зникли з результатів, від найсвіжіше видалених до найстаріших. Показано ${removedJobs.length} позицій.`;
+
+  refs.removedJobsList.replaceChildren();
+  if (!removedJobs.length) {
+    const empty = document.createElement("div");
+    empty.className = "rounded-[22px] border border-dashed border-white/10 px-4 py-6 text-sm text-muted";
+    empty.textContent = "Поки що немає видалених вакансій в історії запусків.";
+    refs.removedJobsList.appendChild(empty);
+    return;
+  }
+
+  refs.removedJobsList.replaceChildren(
+    ...removedJobs.map((job) => {
       const row = document.createElement("article");
       row.className = "grid gap-3 rounded-[22px] border border-white/10 bg-panelSoft/72 p-4 md:grid-cols-[minmax(0,1.4fr)_170px_170px_190px]";
 
       const titleWrap = document.createElement("div");
       const title = document.createElement("a");
-      title.className = "block font-heading text-base font-bold text-text transition-colors hover:text-sky";
-      title.href = job.url;
-      title.target = "_blank";
-      title.rel = "noreferrer";
+      title.className = "block font-heading text-base font-bold text-slate-100 transition-colors hover:text-sky";
+      title.href = `./job.html?id=${encodeURIComponent(job.id)}`;
       title.textContent = job.title;
 
       const company = document.createElement("p");
@@ -472,8 +639,8 @@ function renderJobs() {
       const timing = document.createElement("div");
       timing.className = "text-sm leading-6 text-muted";
       timing.innerHTML =
-        `<div>Posted: ${job.postedAtCandidate ? shortDate(job.postedAtCandidate) : "n/a"}</div>` +
-        `<div>Updated: ${job.updatedAtCandidate ? shortDate(job.updatedAtCandidate) : "n/a"}</div>`;
+        `<div>Removed: ${job.removedAt ? shortDate(job.removedAt) : "n/a"}</div>` +
+        `<div>Last seen: ${job.lastSeenAt ? shortDate(job.lastSeenAt) : "n/a"}</div>`;
 
       const locations = document.createElement("div");
       locations.className = "text-sm leading-6 text-muted";
@@ -483,6 +650,100 @@ function renderJobs() {
       return row;
     })
   );
+}
+
+function renderRemovedFilterChips(removedJobs) {
+  const grouped = groupJobsByCountry(removedJobs);
+  const countries = Array.from(grouped.keys()).sort((a, b) => a.localeCompare(b, "uk"));
+
+  if (state.removedCountry !== "all" && !countries.includes(state.removedCountry)) {
+    state.removedCountry = "all";
+    state.removedCity = "all";
+  }
+
+  refs.removedCountryFilterChips.replaceChildren(
+    createFilterChip("Усі країни", state.removedCountry === "all", () => {
+      state.removedCountry = "all";
+      state.removedCity = "all";
+      render();
+    }),
+    ...countries.map((country) => {
+      const cities = getRelevantCitiesForJobs(removedJobs, country);
+      const cityCaption = cities.length === 1 ? cities[0] : null;
+      return createFilterChip(country, state.removedCountry === country, () => {
+        state.removedCountry = country;
+        state.removedCity = "all";
+        render();
+      }, cityCaption);
+    })
+  );
+
+  const cities = state.removedCountry === "all"
+    ? []
+    : getRelevantCitiesForJobs(removedJobs, state.removedCountry);
+
+  if (state.removedCity !== "all" && !cities.includes(state.removedCity)) {
+    state.removedCity = "all";
+  }
+
+  refs.removedCityFilterSection.hidden = !(state.removedCountry !== "all" && cities.length > 1);
+  refs.removedCityFilterChips.replaceChildren(
+    createFilterChip("Усі міста", state.removedCity === "all", () => {
+      state.removedCity = "all";
+      render();
+    }),
+    ...cities.map((city) => createFilterChip(city, state.removedCity === city, () => {
+      state.removedCity = city;
+      render();
+    }))
+  );
+}
+
+function getFilteredRemovedJobs(removedJobs) {
+  return removedJobs
+    .filter((job) => state.removedCountry === "all" || getRequestedCountry(job) === state.removedCountry)
+    .filter((job) => state.removedCity === "all" || getPrimaryCityForRequestedCountry(job) === state.removedCity);
+}
+
+function getRelevantCitiesForJobs(jobs, country) {
+  return Array.from(
+    new Set(
+      jobs
+        .filter((job) => getRequestedCountry(job) === country)
+        .map((job) => getPrimaryCityForRequestedCountry(job))
+        .filter(Boolean)
+    )
+  ).sort((left, right) => left.localeCompare(right, "uk"));
+}
+
+function getRemovedJobsHistory() {
+  const runsById = new Map(state.runs.map((run) => [run.runId, run]));
+  const removedEvents = Array.from(state.runDetailsById.values())
+    .flatMap((detail) => {
+      const run = runsById.get(detail.runId);
+      return (detail.removed || []).map((job) => {
+        const snapshotJob = state.jobs.find((item) => item.id === job.id);
+        return {
+          ...job,
+          lastSeenAt: snapshotJob?.lastSeenAt || null,
+          removedAt: run?.generatedAt || detail.runId,
+          removedRunId: detail.runId
+        };
+      });
+    });
+
+  const firstByJobId = new Map();
+  for (const job of removedEvents) {
+    const existing = firstByJobId.get(job.id);
+    if (!existing || new Date(job.removedAt).getTime() < new Date(existing.removedAt).getTime()) {
+      firstByJobId.set(job.id, job);
+    }
+  }
+
+  return Array.from(firstByJobId.values())
+    .sort((left, right) =>
+      new Date(right.removedAt).getTime() - new Date(left.removedAt).getTime() ||
+      left.title.localeCompare(right.title, "uk"));
 }
 
 function renderChart(filteredRuns) {
@@ -602,6 +863,7 @@ function renderRunDetails() {
     renderDetailList(refs.removedList, []);
     renderChangedList([]);
     updateDetailBadges(0, 0, 0);
+    updateDetailSummaries({ added: [], removed: [], changed: [] });
     return;
   }
 
@@ -615,6 +877,7 @@ function renderRunDetails() {
         : `Дельта для ${state.activeLocation} / ${state.activeCity}.`;
 
   updateDetailBadges(scopedWithCity.added.length, scopedWithCity.removed.length, scopedWithCity.changed.length);
+  updateDetailSummaries(scopedWithCity);
   renderDetailList(refs.addedList, scopedWithCity.added, "accent");
   renderDetailList(refs.removedList, scopedWithCity.removed, "rose");
   renderChangedList(scopedWithCity.changed);
@@ -672,6 +935,71 @@ function updateDetailBadges(addedCount, removedCount, changedCount) {
   refs.addedBadge.textContent = `${addedCount} item${addedCount === 1 ? "" : "s"}`;
   refs.removedBadge.textContent = `${removedCount} item${removedCount === 1 ? "" : "s"}`;
   refs.changedBadge.textContent = `${changedCount} item${changedCount === 1 ? "" : "s"}`;
+}
+
+function updateDetailSummaries(detail) {
+  refs.metricAddedLine.textContent = summarizeByLocation(detail.added, "No new jobs");
+  refs.metricAddedHint.textContent = summarizeFirstJob(detail.added, "Nothing added in this run.");
+  refs.metricRemovedLine.textContent = summarizeByLocation(detail.removed, "No removed jobs");
+  refs.metricRemovedHint.textContent = summarizeFirstJob(detail.removed, "Nothing removed in this run.");
+  refs.metricChangedLine.textContent = summarizeByLocation(detail.changed, "No changed jobs");
+  refs.metricChangedHint.textContent = summarizeFirstJob(detail.changed, "Nothing changed in this run.");
+}
+
+function summarizeByLocation(items, emptyText) {
+  if (!items.length) {
+    return emptyText;
+  }
+
+  const counts = new Map();
+  for (const item of items) {
+    const city = getPrimaryCityForRequestedCountry(item);
+    const label = [item.requestedLocation, city].filter(Boolean).join(" / ") || "Unknown";
+    counts.set(label, (counts.get(label) || 0) + 1);
+  }
+
+  return Array.from(counts.entries())
+    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0], "uk"))
+    .slice(0, 2)
+    .map(([label, count]) => `${label} ${formatSigned(count)}`)
+    .join(" · ");
+}
+
+function summarizeChangedFields(items) {
+  if (!items.length) {
+    return "No changed fields";
+  }
+
+  const counts = new Map();
+  for (const item of items) {
+    for (const field of item.changedFields || []) {
+      counts.set(field, (counts.get(field) || 0) + 1);
+    }
+  }
+
+  return Array.from(counts.entries())
+    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0], "uk"))
+    .map(([field, count]) => `${count} ${formatChangedFieldLabel(field, count)}`)
+    .join(" · ");
+}
+
+function formatChangedFieldLabel(field, count) {
+  const labels = {
+    title: ["title changed", "titles changed"],
+    company: ["company changed", "companies changed"],
+    locations: ["location changed", "locations changed"]
+  };
+  const [singular, plural] = labels[field] || [`${field} changed`, `${field} changed`];
+  return count === 1 ? singular : plural;
+}
+
+function summarizeFirstJob(items, emptyText) {
+  const first = items[0];
+  if (!first) {
+    return emptyText;
+  }
+
+  return first.title || "Untitled job";
 }
 
 function renderDetailList(root, items, tone = "text") {
@@ -736,18 +1064,60 @@ function renderChangedList(items) {
       meta.className = "mt-2 text-xs uppercase tracking-[0.22em] text-muted";
       meta.textContent = [item.company, item.requestedLocation].filter(Boolean).join(" • ");
 
-      const changes = document.createElement("p");
-      changes.className = "mt-3 text-sm text-muted";
-      changes.textContent = `Changed fields: ${(item.changedFields || []).join(", ") || "n/a"}`;
+      const badges = document.createElement("div");
+      badges.className = "mt-3 flex flex-wrap gap-2";
+      const changedFields = item.changedFields || [];
+      badges.replaceChildren(
+        ...(changedFields.length ? changedFields : ["unknown"]).map((field) => {
+          const badge = document.createElement("span");
+          badge.className = "rounded-full border border-amber/25 bg-amber/10 px-3 py-1 text-xs font-semibold text-amber";
+          badge.textContent = field;
+          return badge;
+        })
+      );
 
-      const hash = document.createElement("p");
-      hash.className = "mt-2 text-xs text-muted";
-      hash.textContent = `${item.previousHash.slice(0, 10)} -> ${item.currentHash.slice(0, 10)}`;
+      const diffList = document.createElement("div");
+      diffList.className = "mt-4 space-y-3";
+      diffList.replaceChildren(...(item.fieldChanges || []).map(renderFieldChange));
 
-      article.append(title, meta, changes, hash);
+      article.append(title, meta, badges, diffList);
       return article;
     })
   );
+}
+
+function renderFieldChange(change) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "rounded-2xl border border-white/10 bg-panelSoft/55 p-3";
+
+  const field = document.createElement("p");
+  field.className = "text-xs uppercase tracking-[0.22em] text-muted";
+  field.textContent = change.field || "field";
+
+  if (change.field === "locations") {
+    const added = formatListChange("Added", change.added || [], "text-accent");
+    const removed = formatListChange("Removed", change.removed || [], "text-rose");
+    wrapper.append(field, added, removed);
+    return wrapper;
+  }
+
+  const previous = document.createElement("p");
+  previous.className = "mt-3 text-sm text-muted";
+  previous.textContent = `Before: ${change.previous || "n/a"}`;
+
+  const current = document.createElement("p");
+  current.className = "mt-2 text-sm text-text";
+  current.textContent = `After: ${change.current || "n/a"}`;
+
+  wrapper.append(field, previous, current);
+  return wrapper;
+}
+
+function formatListChange(label, values, toneClass) {
+  const node = document.createElement("p");
+  node.className = `mt-3 text-sm ${values.length ? toneClass : "text-muted"}`;
+  node.textContent = `${label}: ${values.length ? values.join(", ") : "none"}`;
+  return node;
 }
 
 function createSvgText(x, y, text, anchor = "start", fill = "rgba(226,232,240,0.9)") {

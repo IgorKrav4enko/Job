@@ -12,6 +12,7 @@ var configPath = Path.Combine(root, "config", "google-careers-locations.json");
 var outputPath = Path.Combine(root, "data", "google-careers-jobs.json");
 var runsPath = Path.Combine(root, "data", "google-careers-runs.json");
 var runDetailsPath = Path.Combine(root, "data", "google-careers-run-details.json");
+var removedDetailsPath = Path.Combine(root, "data", "google-careers-removed-details.json");
 var rawRunsDirectoryPath = Path.Combine(root, "data-raw", "google-careers", "runs");
 
 var locations = LoadLocations(configPath);
@@ -24,6 +25,37 @@ if (string.IsNullOrWhiteSpace(searchTerm))
 
 switch (mode)
 {
+    case PipelineMode.ParseHtml:
+    {
+        var htmlPath = args.Length > 1
+            ? args[1]
+            : throw new ArgumentException("Usage: dotnet run -- parse-html <htmlPath> [label] [slug] [query] [outPath]");
+        var label = args.Length > 2 ? args[2] : "Local HTML";
+        var slug = args.Length > 3 ? args[3] : "local-html";
+        var query = args.Length > 4 ? args[4] : label;
+        var outPath = args.Length > 5 ? args[5] : null;
+        var capturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var html = await File.ReadAllTextAsync(htmlPath);
+        var location = new LocationConfig(slug, label, query);
+        var result = ParseJobsFromHtml(html, location, $"file://{Path.GetFullPath(htmlPath)}", capturedAt);
+        var preview = BuildParseHtmlPreview(htmlPath, location, capturedAt, result);
+
+        Console.WriteLine($"Parsed {result.Jobs.Count} visible jobs from {htmlPath}.");
+        Console.WriteLine($"Raw jobs with about: {preview.Summary.WithAbout}");
+        Console.WriteLine($"Raw jobs with responsibilities: {preview.Summary.WithResponsibilities}");
+        Console.WriteLine($"Raw jobs with minimum qualifications: {preview.Summary.WithMinimumQualifications}");
+        Console.WriteLine($"Raw jobs with preferred qualifications: {preview.Summary.WithPreferredQualifications}");
+        Console.WriteLine($"Raw jobs with apply link: {preview.Summary.WithApplyLink}");
+
+        if (!string.IsNullOrWhiteSpace(outPath))
+        {
+            await WriteJsonFileAsync(outPath, preview);
+            Console.WriteLine($"Wrote parse preview to {outPath}.");
+        }
+
+        break;
+    }
+
     case PipelineMode.CollectAndAnalyze:
     {
         var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
@@ -42,7 +74,9 @@ switch (mode)
         var dataset = BuildDataset(locations, mergeResult.Jobs, searchTerm, runCapturedAt);
         var runsDataset = BuildRunsDataset(previousRuns, runId, runCapturedAt, mergeResult);
         var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, runId, mergeResult);
-        await WriteNormalizedDatasetsAsync(outputPath, runsPath, runDetailsPath, dataset, runsDataset, runDetailsDataset);
+        var rawRuns = LoadRawRuns(rawRunsDirectoryPath);
+        var removedDetailsDataset = BuildRemovedDetailsDataset(dataset, runDetailsDataset, rawRuns);
+        await WriteNormalizedDatasetsAsync(outputPath, runsPath, runDetailsPath, removedDetailsPath, dataset, runsDataset, runDetailsDataset, removedDetailsDataset);
 
         Console.WriteLine(
             $"Wrote dataset for {mergeResult.Jobs.Count} jobs to {outputPath} " +
@@ -93,8 +127,10 @@ switch (mode)
         var dataset = BuildDataset(locations, mergeResult.Jobs, latestRawRun.SearchTerm, latestRawRun.GeneratedAt);
         var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
         var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, latestRawRun.RunId, mergeResult);
+        var rawRuns = LoadRawRuns(rawRunsDirectoryPath);
+        var removedDetailsDataset = BuildRemovedDetailsDataset(dataset, runDetailsDataset, rawRuns);
 
-        await WriteNormalizedDatasetsAsync(outputPath, runsPath, runDetailsPath, dataset, runsDataset, runDetailsDataset);
+        await WriteNormalizedDatasetsAsync(outputPath, runsPath, runDetailsPath, removedDetailsPath, dataset, runsDataset, runDetailsDataset, removedDetailsDataset);
 
         Console.WriteLine(
             $"Analyzed latest raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
@@ -133,8 +169,9 @@ switch (mode)
         currentRunDetails = NormalizeRunDetails(currentRunDetails) ?? currentRunDetails;
         currentRuns = NormalizeRunHistory(currentRuns, currentRunDetails) ?? currentRuns;
         var dataset = BuildDataset(locations, currentJobs, latestRawRun.SearchTerm, latestRawRun.GeneratedAt);
+        var removedDetailsDataset = BuildRemovedDetailsDataset(dataset, currentRunDetails, rawRuns);
 
-        await WriteNormalizedDatasetsAsync(outputPath, runsPath, runDetailsPath, dataset, currentRuns, currentRunDetails);
+        await WriteNormalizedDatasetsAsync(outputPath, runsPath, runDetailsPath, removedDetailsPath, dataset, currentRuns, currentRunDetails, removedDetailsDataset);
 
         Console.WriteLine($"Rebuilt normalized datasets from {rawRuns.Count} raw runs.");
         break;
@@ -158,6 +195,7 @@ static PipelineMode GetMode(string[] args)
         "collect" => PipelineMode.Collect,
         "analyze-latest" => PipelineMode.AnalyzeLatest,
         "rebuild" => PipelineMode.Rebuild,
+        "parse-html" => PipelineMode.ParseHtml,
         _ => throw new ArgumentOutOfRangeException(nameof(args), $"Unknown mode '{args[0]}'.")
     };
 }
@@ -166,20 +204,47 @@ static async Task WriteNormalizedDatasetsAsync(
     string outputPath,
     string runsPath,
     string runDetailsPath,
+    string removedDetailsPath,
     JobDataset dataset,
     RunHistoryDataset runsDataset,
-    RunDetailsDataset runDetailsDataset)
+    RunDetailsDataset runDetailsDataset,
+    RemovedDetailsDataset removedDetailsDataset)
 {
     Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
     await WriteJsonFileAsync(outputPath, dataset);
     await WriteJsonFileAsync(runsPath, runsDataset);
     await WriteJsonFileAsync(runDetailsPath, runDetailsDataset);
+    await WriteJsonFileAsync(removedDetailsPath, removedDetailsDataset);
 }
 
 static async Task WriteJsonFileAsync<T>(string path, T value)
 {
     Directory.CreateDirectory(Path.GetDirectoryName(path)!);
     await File.WriteAllTextAsync(path, JsonSerializer.Serialize(value, JsonOptions()) + Environment.NewLine);
+}
+
+static ParseHtmlPreview BuildParseHtmlPreview(
+    string htmlPath,
+    LocationConfig location,
+    string capturedAt,
+    ParseResult result)
+{
+    var summary = new ParseHtmlSummary(
+        result.Jobs.Count,
+        result.RawJobs.Count(static job => !string.IsNullOrWhiteSpace(job.AboutTheJobRaw)),
+        result.RawJobs.Count(static job => !string.IsNullOrWhiteSpace(job.ResponsibilitiesRaw)),
+        result.RawJobs.Count(static job => !string.IsNullOrWhiteSpace(job.MinimumQualificationsRaw)),
+        result.RawJobs.Count(static job => !string.IsNullOrWhiteSpace(job.PreferredQualificationsRaw)),
+        result.RawJobs.Count(static job => !string.IsNullOrWhiteSpace(job.ApplyUrlRaw)));
+
+    return new ParseHtmlPreview(
+        "google-careers",
+        Path.GetFullPath(htmlPath),
+        capturedAt,
+        location,
+        summary,
+        result.Jobs,
+        result.RawJobs);
 }
 
 static List<string> GetRawRunFilePaths(string rawRunsDirectoryPath)
@@ -191,6 +256,15 @@ static List<string> GetRawRunFilePaths(string rawRunsDirectoryPath)
 
     return Directory.GetFiles(rawRunsDirectoryPath, "*.json", SearchOption.TopDirectoryOnly)
         .OrderBy(path => Path.GetFileName(path), StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<RawRun> LoadRawRuns(string rawRunsDirectoryPath)
+{
+    return GetRawRunFilePaths(rawRunsDirectoryPath)
+        .Select(path => LoadJsonOrDefault<RawRun>(path) ?? throw new InvalidOperationException($"Could not read raw run file '{path}'."))
+        .OrderBy(static run => run.GeneratedAt, StringComparer.Ordinal)
+        .ThenBy(static run => run.RunId, StringComparer.Ordinal)
         .ToList();
 }
 
@@ -214,6 +288,69 @@ static List<JobItem> BuildJobsFromRawRun(RawRun rawRun)
         .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
         .ThenBy(static job => job.Id, StringComparer.Ordinal)
         .ToList();
+}
+
+static RemovedDetailsDataset BuildRemovedDetailsDataset(
+    JobDataset dataset,
+    RunDetailsDataset runDetailsDataset,
+    List<RawRun> rawRuns)
+{
+    var inactiveJobs = dataset.Jobs
+        .Where(static job => !job.IsActive)
+        .ToDictionary(static job => job.Id, StringComparer.Ordinal);
+
+    var removedAtById = runDetailsDataset.Runs
+        .SelectMany(run => run.Removed.Select(job => new { job.Id, run.RunId }))
+        .GroupBy(static item => item.Id, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.First().RunId,
+            StringComparer.Ordinal);
+
+    var rawByJobId = rawRuns
+        .SelectMany(run => run.Sources.SelectMany(source => source.Jobs.Select(job => new { run, job })))
+        .GroupBy(static item => item.job.JobId, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.Last(),
+            StringComparer.Ordinal);
+    var generatedAtByRunId = rawRuns.ToDictionary(static run => run.RunId, static run => run.GeneratedAt, StringComparer.Ordinal);
+
+    var jobs = inactiveJobs.Values
+        .Select(job =>
+        {
+            rawByJobId.TryGetValue(job.Id, out var rawMatch);
+            removedAtById.TryGetValue(job.Id, out var removedInRunId);
+            var removedAt = removedInRunId is not null && generatedAtByRunId.TryGetValue(removedInRunId, out var generatedAt)
+                ? generatedAt
+                : removedInRunId;
+
+            return new RemovedJobDetail(
+                job.Id,
+                job.Title,
+                job.Company,
+                job.Url,
+                job.Locations,
+                job.RequestedLocation,
+                job.FirstSeenAt,
+                job.LastSeenAt,
+                removedAt,
+                removedInRunId,
+                rawMatch?.job.ApplyUrlRaw,
+                rawMatch?.job.AboutTheJobRaw,
+                rawMatch?.job.ResponsibilitiesRaw,
+                rawMatch?.job.MinimumQualificationsRaw,
+                rawMatch?.job.PreferredQualificationsRaw,
+                rawMatch?.job.ExperienceLevelRaw,
+                rawMatch?.job.ExperienceLevelDescriptionRaw,
+                rawMatch?.job.LocationsRawDetailed,
+                rawMatch?.job.RawTimestampPairs ?? new List<string>());
+        })
+        .OrderByDescending(static job => job.RemovedAt, StringComparer.Ordinal)
+        .ThenBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ToList();
+
+    return new RemovedDetailsDataset(jobs);
 }
 
 static string FindRepositoryRoot()
@@ -546,15 +683,27 @@ static ParseResult ParseJobsFromHtml(
 static Dictionary<string, PayloadEntry> ParsePayloadEntries(string html)
 {
     var entries = new Dictionary<string, PayloadEntry>(StringComparer.Ordinal);
-    var matches = Regex.Matches(
-        html,
-        "\\[\"(?<id>\\d+)\",\"(?<title>(?:\\\\.|[^\"\\\\])*)\",\"(?<applyUrl>(?:\\\\.|[^\"\\\\])*)\"(?<tail>.*?)\\],\\[\"(?<nextId>\\d+)\"",
-        RegexOptions.CultureInvariant | RegexOptions.Singleline);
 
-    foreach (Match match in matches)
+    foreach (var fragment in ExtractPayloadEntryFragments(html))
     {
+        if (TryParsePayloadEntryFragment(fragment, out var parsedId, out var parsedEntry))
+        {
+            entries[parsedId] = parsedEntry;
+            continue;
+        }
+
+        var match = Regex.Match(
+            fragment,
+            "^\\[\"(?<id>\\d+)\",\"(?<title>(?:\\\\.|[^\"\\\\])*)\",\"(?<applyUrl>(?:\\\\.|[^\"\\\\])*)\"(?<tail>.*)\\]$",
+            RegexOptions.CultureInvariant | RegexOptions.Singleline);
+        if (!match.Success)
+        {
+            continue;
+        }
+
         var id = match.Groups["id"].Value;
         var tail = match.Groups["tail"].Value;
+        var decodedTail = UnescapePayloadString(tail);
         var timestamps = Regex.Matches(
                 tail,
                 "\\[(?<seconds>\\d{10}),(?<nanos>\\d{6,9})\\]",
@@ -569,15 +718,15 @@ static Dictionary<string, PayloadEntry> ParsePayloadEntries(string html)
             timestamps = new List<string>();
         }
 
-        var groups = Regex.Matches(tail, "\\[(?<content>[^\\[\\]]+)\\]", RegexOptions.CultureInvariant | RegexOptions.Singleline)
+        var groups = Regex.Matches(decodedTail, "\\[(?<content>[^\\[\\]]+)\\]", RegexOptions.CultureInvariant | RegexOptions.Singleline)
             .Select(static match => match.Groups["content"].Value)
             .ToList();
 
-        var minimumQualificationsRaw = ExtractHtmlListAfterLabel(tail, "Minimum qualifications:");
-        var preferredQualificationsRaw = ExtractHtmlListAfterLabel(tail, "Preferred qualifications:");
-        var responsibilitiesRaw = ExtractNthHtmlList(tail, 0);
-        var aboutTheJobRaw = ExtractNthParagraphBlock(tail, 0);
-        var detailedLocations = ExtractDetailedLocations(tail);
+        var minimumQualificationsRaw = ExtractHtmlListAfterLabel(decodedTail, "Minimum qualifications:");
+        var preferredQualificationsRaw = ExtractHtmlListAfterLabel(decodedTail, "Preferred qualifications:");
+        var responsibilitiesRaw = ExtractNthHtmlList(decodedTail, 0);
+        var aboutTheJobRaw = ExtractNthParagraphBlock(decodedTail, 0);
+        var detailedLocations = ExtractDetailedLocations(decodedTail);
         var firstLocation = detailedLocations.FirstOrDefault();
         var experienceLevelRaw = ExtractExperienceLevel(groups);
         var experienceLevelDescriptionRaw = ExtractExperienceDescription(groups);
@@ -602,10 +751,293 @@ static Dictionary<string, PayloadEntry> ParsePayloadEntries(string html)
             firstLocation?.RegionCode,
             firstLocation?.CountryCode,
             firstLocation?.PostalCode,
-            tail[..Math.Min(tail.Length, 4000)]);
+            fragment[..Math.Min(fragment.Length, 4000)]);
     }
 
     return entries;
+}
+
+static bool TryParsePayloadEntryFragment(string fragment, out string id, out PayloadEntry entry)
+{
+    id = string.Empty;
+    entry = default!;
+
+    try
+    {
+        using var document = JsonDocument.Parse(fragment);
+        var root = document.RootElement;
+        if (root.ValueKind != JsonValueKind.Array || root.GetArrayLength() < 10)
+        {
+            return false;
+        }
+
+        id = GetStringAt(root, 0) ?? string.Empty;
+        if (string.IsNullOrWhiteSpace(id))
+        {
+            return false;
+        }
+
+        var titleRaw = GetStringAt(root, 1);
+        var applyUrlRaw = GetStringAt(root, 2);
+        var responsibilitiesRaw = GetNestedString(root, 3, 1);
+        var qualificationsRaw = GetNestedString(root, 4, 1);
+        var aboutTheJobRaw = GetNestedString(root, 10, 1);
+        var timestamps = ExtractTimestamps(fragment);
+        var detailedLocations = ExtractDetailedLocationsFromJson(root, 9);
+        var firstLocation = detailedLocations.FirstOrDefault();
+
+        entry = new PayloadEntry(
+            titleRaw,
+            applyUrlRaw,
+            timestamps.FirstOrDefault(),
+            timestamps.LastOrDefault(),
+            timestamps,
+            CleanRawHtml(responsibilitiesRaw),
+            CleanRawHtml(ExtractHtmlListAfterLabel(qualificationsRaw ?? string.Empty, "Minimum qualifications:")),
+            CleanRawHtml(ExtractHtmlListAfterLabel(qualificationsRaw ?? string.Empty, "Preferred qualifications:")),
+            CleanRawHtml(aboutTheJobRaw),
+            detailedLocations,
+            ExtractExperienceLevelFromJson(root, 11),
+            null,
+            ExtractProjectPathFromJson(root, 5),
+            GetStringAt(root, 8),
+            GetStringAt(root, 7),
+            firstLocation?.City,
+            firstLocation?.RegionCode,
+            firstLocation?.CountryCode,
+            firstLocation?.PostalCode,
+            fragment[..Math.Min(fragment.Length, 4000)]);
+        return true;
+    }
+    catch (JsonException)
+    {
+        return false;
+    }
+}
+
+static string? GetStringAt(JsonElement element, int index)
+{
+    if (element.ValueKind != JsonValueKind.Array || element.GetArrayLength() <= index)
+    {
+        return null;
+    }
+
+    var value = element[index];
+    return value.ValueKind == JsonValueKind.String ? value.GetString() : null;
+}
+
+static string? GetNestedString(JsonElement element, int outerIndex, int innerIndex)
+{
+    if (element.ValueKind != JsonValueKind.Array || element.GetArrayLength() <= outerIndex)
+    {
+        return null;
+    }
+
+    return GetStringAt(element[outerIndex], innerIndex);
+}
+
+static List<string> ExtractTimestamps(string input)
+{
+    return Regex.Matches(
+            input,
+            "\\[(?<seconds>\\d{10}),(?<nanos>\\d{6,9})\\]",
+            RegexOptions.CultureInvariant)
+        .Select(static item => ToIsoTimestamp(item.Groups["seconds"].Value, item.Groups["nanos"].Value))
+        .Distinct(StringComparer.Ordinal)
+        .OrderBy(static value => value, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<RawLocationDetail> ExtractDetailedLocationsFromJson(JsonElement element, int index)
+{
+    if (element.ValueKind != JsonValueKind.Array || element.GetArrayLength() <= index)
+    {
+        return new List<RawLocationDetail>();
+    }
+
+    var locationsElement = element[index];
+    if (locationsElement.ValueKind != JsonValueKind.Array)
+    {
+        return new List<RawLocationDetail>();
+    }
+
+    var locations = new List<RawLocationDetail>();
+    foreach (var locationElement in locationsElement.EnumerateArray())
+    {
+        if (locationElement.ValueKind != JsonValueKind.Array || locationElement.GetArrayLength() < 6)
+        {
+            continue;
+        }
+
+        locations.Add(
+            new RawLocationDetail(
+                GetStringAt(locationElement, 0) ?? string.Empty,
+                ExtractAddressListFromJson(locationElement[1]),
+                GetStringAt(locationElement, 2),
+                GetStringAt(locationElement, 3),
+                GetStringAt(locationElement, 4),
+                GetStringAt(locationElement, 5)));
+    }
+
+    return locations;
+}
+
+static List<string> ExtractAddressListFromJson(JsonElement element)
+{
+    if (element.ValueKind != JsonValueKind.Array)
+    {
+        return new List<string>();
+    }
+
+    return element.EnumerateArray()
+        .Where(static item => item.ValueKind == JsonValueKind.String)
+        .Select(static item => item.GetString() ?? string.Empty)
+        .Where(static value => !string.IsNullOrWhiteSpace(value))
+        .ToList();
+}
+
+static string? ExtractExperienceLevelFromJson(JsonElement element, int index)
+{
+    var stringLevels = GetStringListAt(element, index);
+    if (stringLevels.Contains("Early", StringComparer.Ordinal))
+    {
+        return "Early";
+    }
+
+    if (stringLevels.Contains("Mid", StringComparer.Ordinal))
+    {
+        return "Mid";
+    }
+
+    if (stringLevels.Contains("Advanced", StringComparer.Ordinal))
+    {
+        return "Advanced";
+    }
+
+    var levels = GetNumberListAt(element, index);
+    if (levels.Contains(1))
+    {
+        return "Early";
+    }
+
+    if (levels.Contains(2))
+    {
+        return "Mid";
+    }
+
+    if (levels.Contains(3))
+    {
+        return "Advanced";
+    }
+
+    return null;
+}
+
+static List<string> GetStringListAt(JsonElement element, int index)
+{
+    if (element.ValueKind != JsonValueKind.Array || element.GetArrayLength() <= index || element[index].ValueKind != JsonValueKind.Array)
+    {
+        return new List<string>();
+    }
+
+    return element[index].EnumerateArray()
+        .Where(static item => item.ValueKind == JsonValueKind.String)
+        .Select(static item => item.GetString() ?? string.Empty)
+        .Where(static value => !string.IsNullOrWhiteSpace(value))
+        .ToList();
+}
+
+static List<int> GetNumberListAt(JsonElement element, int index)
+{
+    if (element.ValueKind != JsonValueKind.Array || element.GetArrayLength() <= index || element[index].ValueKind != JsonValueKind.Array)
+    {
+        return new List<int>();
+    }
+
+    return element[index].EnumerateArray()
+        .Where(static item => item.ValueKind == JsonValueKind.Number)
+        .Select(static item => item.GetInt32())
+        .ToList();
+}
+
+static string? ExtractProjectPathFromJson(JsonElement element, int index)
+{
+    var value = GetStringAt(element, index);
+    return value?.StartsWith("projects/", StringComparison.Ordinal) == true ? value : null;
+}
+
+static List<string> ExtractPayloadEntryFragments(string html)
+{
+    var fragments = new List<string>();
+    var matches = Regex.Matches(
+        html,
+        "\\[\"(?<id>\\d{6,})\",\"(?:\\\\.|[^\"\\\\])*\",\"(?:\\\\.|[^\"\\\\])*\"",
+        RegexOptions.CultureInvariant);
+
+    foreach (Match match in matches)
+    {
+        var fragment = ExtractBalancedArray(html, match.Index);
+        if (!string.IsNullOrWhiteSpace(fragment))
+        {
+            fragments.Add(fragment);
+        }
+    }
+
+    return fragments;
+}
+
+static string? ExtractBalancedArray(string input, int startIndex)
+{
+    var depth = 0;
+    var inString = false;
+    var escaped = false;
+
+    for (var index = startIndex; index < input.Length; index += 1)
+    {
+        var current = input[index];
+        if (inString)
+        {
+            if (escaped)
+            {
+                escaped = false;
+            }
+            else if (current == '\\')
+            {
+                escaped = true;
+            }
+            else if (current == '"')
+            {
+                inString = false;
+            }
+
+            continue;
+        }
+
+        if (current == '"')
+        {
+            inString = true;
+            continue;
+        }
+
+        if (current == '[')
+        {
+            depth += 1;
+            continue;
+        }
+
+        if (current != ']')
+        {
+            continue;
+        }
+
+        depth -= 1;
+        if (depth == 0)
+        {
+            return input[startIndex..(index + 1)];
+        }
+    }
+
+    return null;
 }
 
 static string ToIsoTimestamp(string secondsValue, string nanosValue)
@@ -846,7 +1278,8 @@ static MergeResult MergeJobs(
                         mergedJob.RequestedLocation,
                         previousHash,
                         latestHash,
-                        GetChangedFields(previousJob, mergedJob)));
+                        GetChangedFields(previousJob, mergedJob),
+                        BuildFieldChanges(previousJob, mergedJob)));
             }
         }
         else
@@ -995,10 +1428,7 @@ static string ComputeContentHash(JobItem job)
         {
             $"title={NormalizeForHash(job.Title)}",
             $"company={NormalizeForHash(job.Company)}",
-            $"locations={string.Join("|", normalizedLocations)}",
-            $"url={NormalizeForHash(job.Url)}",
-            $"postedAtCandidate={NormalizeForHash(job.PostedAtCandidate)}",
-            $"updatedAtCandidate={NormalizeForHash(job.UpdatedAtCandidate)}"
+            $"locations={string.Join("|", normalizedLocations)}"
         });
 
     var bytes = SHA256.HashData(Encoding.UTF8.GetBytes(payload));
@@ -1029,22 +1459,37 @@ static List<string> GetChangedFields(JobItem previousJob, JobItem currentJob)
         changedFields.Add("locations");
     }
 
-    if (!string.Equals(previousJob.Url, currentJob.Url, StringComparison.Ordinal))
-    {
-        changedFields.Add("url");
-    }
-
-    if (!string.Equals(previousJob.PostedAtCandidate, currentJob.PostedAtCandidate, StringComparison.Ordinal))
-    {
-        changedFields.Add("postedAtCandidate");
-    }
-
-    if (!string.Equals(previousJob.UpdatedAtCandidate, currentJob.UpdatedAtCandidate, StringComparison.Ordinal))
-    {
-        changedFields.Add("updatedAtCandidate");
-    }
-
     return changedFields;
+}
+
+static List<FieldChange> BuildFieldChanges(JobItem previousJob, JobItem currentJob)
+{
+    var changes = new List<FieldChange>();
+
+    if (!string.Equals(previousJob.Title, currentJob.Title, StringComparison.Ordinal))
+    {
+        changes.Add(FieldChange.ForValue("title", previousJob.Title, currentJob.Title));
+    }
+
+    if (!string.Equals(previousJob.Company, currentJob.Company, StringComparison.Ordinal))
+    {
+        changes.Add(FieldChange.ForValue("company", previousJob.Company, currentJob.Company));
+    }
+
+    if (!previousJob.Locations.SequenceEqual(currentJob.Locations, StringComparer.Ordinal))
+    {
+        var added = currentJob.Locations
+            .Except(previousJob.Locations, StringComparer.Ordinal)
+            .OrderBy(static value => value, StringComparer.Ordinal)
+            .ToList();
+        var removed = previousJob.Locations
+            .Except(currentJob.Locations, StringComparer.Ordinal)
+            .OrderBy(static value => value, StringComparer.Ordinal)
+            .ToList();
+        changes.Add(FieldChange.ForList("locations", added, removed));
+    }
+
+    return changes;
 }
 
 static JobDataset BuildDataset(
@@ -1077,6 +1522,23 @@ internal sealed record LocationConfig(
     [property: JsonPropertyName("slug")] string Slug,
     [property: JsonPropertyName("label")] string Label,
     [property: JsonPropertyName("query")] string Query);
+
+internal sealed record ParseHtmlPreview(
+    [property: JsonPropertyName("source")] string Source,
+    [property: JsonPropertyName("htmlPath")] string HtmlPath,
+    [property: JsonPropertyName("capturedAt")] string CapturedAt,
+    [property: JsonPropertyName("location")] LocationConfig Location,
+    [property: JsonPropertyName("summary")] ParseHtmlSummary Summary,
+    [property: JsonPropertyName("jobs")] List<JobItem> Jobs,
+    [property: JsonPropertyName("rawJobs")] List<RawJobItem> RawJobs);
+
+internal sealed record ParseHtmlSummary(
+    [property: JsonPropertyName("visibleJobs")] int VisibleJobs,
+    [property: JsonPropertyName("withAbout")] int WithAbout,
+    [property: JsonPropertyName("withResponsibilities")] int WithResponsibilities,
+    [property: JsonPropertyName("withMinimumQualifications")] int WithMinimumQualifications,
+    [property: JsonPropertyName("withPreferredQualifications")] int WithPreferredQualifications,
+    [property: JsonPropertyName("withApplyLink")] int WithApplyLink);
 
 internal sealed record JobItem(
     [property: JsonPropertyName("id")] string Id,
@@ -1195,6 +1657,30 @@ internal sealed record RunSummary(
 internal sealed record RunDetailsDataset(
     [property: JsonPropertyName("runs")] List<RunDetail> Runs);
 
+internal sealed record RemovedDetailsDataset(
+    [property: JsonPropertyName("jobs")] List<RemovedJobDetail> Jobs);
+
+internal sealed record RemovedJobDetail(
+    [property: JsonPropertyName("id")] string Id,
+    [property: JsonPropertyName("title")] string Title,
+    [property: JsonPropertyName("company")] string? Company,
+    [property: JsonPropertyName("url")] string Url,
+    [property: JsonPropertyName("locations")] List<string> Locations,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("firstSeenAt")] string? FirstSeenAt,
+    [property: JsonPropertyName("lastSeenAt")] string? LastSeenAt,
+    [property: JsonPropertyName("removedAt")] string? RemovedAt,
+    [property: JsonPropertyName("removedInRunId")] string? RemovedInRunId,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("experienceLevelRaw")] string? ExperienceLevelRaw,
+    [property: JsonPropertyName("experienceLevelDescriptionRaw")] string? ExperienceLevelDescriptionRaw,
+    [property: JsonPropertyName("locationsRawDetailed")] List<RawLocationDetail>? LocationsRawDetailed,
+    [property: JsonPropertyName("rawTimestampPairs")] List<string> RawTimestampPairs);
+
 internal sealed record RunDetail(
     [property: JsonPropertyName("runId")] string RunId,
     [property: JsonPropertyName("added")] List<JobDeltaItem> Added,
@@ -1235,7 +1721,26 @@ internal sealed record JobChangedDeltaItem(
     [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
     [property: JsonPropertyName("previousHash")] string PreviousHash,
     [property: JsonPropertyName("currentHash")] string CurrentHash,
-    [property: JsonPropertyName("changedFields")] List<string> ChangedFields);
+    [property: JsonPropertyName("changedFields")] List<string> ChangedFields,
+    [property: JsonPropertyName("fieldChanges")] List<FieldChange> FieldChanges);
+
+internal sealed record FieldChange(
+    [property: JsonPropertyName("field")] string Field,
+    [property: JsonPropertyName("previous")] string? Previous,
+    [property: JsonPropertyName("current")] string? Current,
+    [property: JsonPropertyName("added")] List<string>? Added,
+    [property: JsonPropertyName("removed")] List<string>? Removed)
+{
+    public static FieldChange ForValue(string field, string? previous, string? current)
+    {
+        return new FieldChange(field, previous, current, null, null);
+    }
+
+    public static FieldChange ForList(string field, List<string> added, List<string> removed)
+    {
+        return new FieldChange(field, null, null, added, removed);
+    }
+}
 
 internal sealed record JobDataset(
     [property: JsonPropertyName("generatedAt")] string GeneratedAt,
@@ -1248,6 +1753,7 @@ internal sealed record JobDataset(
 
 internal enum PipelineMode
 {
+    ParseHtml,
     CollectAndAnalyze,
     Collect,
     AnalyzeLatest,

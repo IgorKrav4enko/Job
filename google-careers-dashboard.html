@@ -120,21 +120,8 @@
 </head>
 <body class="min-h-screen text-text font-body">
   <main class="mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-5 py-8 md:px-8 md:py-10">
-    <header class="glass-panel rounded-[32px] p-6 shadow-panel md:p-8">
-      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-        <div class="max-w-3xl">
-          <p class="font-body text-xs uppercase tracking-[0.35em] text-sky">Hiring Radar</p>
-          <h1 class="mt-3 font-heading text-4xl font-extrabold tracking-tight md:text-5xl">Google Careers Tracker</h1>
-          <p class="mt-4 max-w-2xl text-sm leading-6 text-muted md:text-base">
-            Лінія показує кількість вакансій на кожному проході парсера. Натисніть на будь-яку точку, щоб побачити
-            `added`, `removed` і `changed` для цього запуску окремо по локаціях.
-          </p>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <a class="rounded-full border border-white/10 px-5 py-3 font-semibold text-text transition-colors hover:border-sky hover:text-sky" href="./index.html">Назад на дашборд</a>
-          <a class="rounded-full bg-accent px-5 py-3 font-semibold text-base transition-colors hover:bg-[#68f08f]" href="./data/google-careers-jobs.json" target="_blank" rel="noreferrer">Відкрити JSON</a>
-        </div>
-      </div>
+    <header class="glass-panel rounded-[24px] px-5 py-4 shadow-panel md:px-6 md:py-5">
+      <h1 class="font-heading text-2xl font-extrabold tracking-tight md:text-3xl">Careers Tracker</h1>
     </header>
 
     <section class="glass-panel rounded-[28px] p-3 shadow-panel">
@@ -145,10 +132,13 @@
         <button class="rounded-full border px-5 py-3 text-sm font-semibold transition-colors" data-tab="live" type="button">
           Доступні зараз
         </button>
+        <button class="rounded-full border px-5 py-3 text-sm font-semibold transition-colors" data-tab="removed" type="button">
+          Removed
+        </button>
       </div>
     </section>
 
-    <section class="dashboard-panel grid gap-6 xl:grid-cols-[minmax(0,1.6fr)_minmax(320px,0.9fr)]" id="history-panel">
+    <section class="dashboard-panel grid gap-6" id="history-panel">
       <div class="glass-panel rounded-[30px] p-5 shadow-panel md:p-6">
         <div class="flex flex-col gap-5">
           <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
@@ -159,7 +149,11 @@
             <div class="flex flex-col gap-3" id="location-filter"></div>
           </div>
 
-          <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4" id="metric-cards">
+          <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-5" id="metric-cards">
+            <article class="metric-chip rounded-[24px] p-4">
+              <p class="text-xs uppercase tracking-[0.25em] text-muted">Доступні зараз</p>
+              <p class="mt-3 text-3xl font-bold text-sky" id="metric-active-now">0</p>
+            </article>
             <article class="metric-chip rounded-[24px] p-4">
               <p class="text-xs uppercase tracking-[0.25em] text-muted">Останній Run</p>
               <p class="mt-3 text-3xl font-bold" id="metric-total">0</p>
@@ -167,14 +161,20 @@
             <article class="metric-chip rounded-[24px] p-4">
               <p class="text-xs uppercase tracking-[0.25em] text-muted">Added</p>
               <p class="mt-3 text-3xl font-bold text-accent" id="metric-added">0</p>
+              <p class="mt-3 text-sm font-semibold text-text" id="metric-added-line">No new jobs</p>
+              <p class="mt-2 text-xs leading-5 text-muted" id="metric-added-hint">Nothing added in this run.</p>
             </article>
             <article class="metric-chip rounded-[24px] p-4">
               <p class="text-xs uppercase tracking-[0.25em] text-muted">Removed</p>
               <p class="mt-3 text-3xl font-bold text-rose" id="metric-removed">0</p>
+              <p class="mt-3 text-sm font-semibold text-text" id="metric-removed-line">No removed jobs</p>
+              <p class="mt-2 text-xs leading-5 text-muted" id="metric-removed-hint">Nothing removed in this run.</p>
             </article>
             <article class="metric-chip rounded-[24px] p-4">
               <p class="text-xs uppercase tracking-[0.25em] text-muted">Changed</p>
               <p class="mt-3 text-3xl font-bold text-amber" id="metric-changed">0</p>
+              <p class="mt-3 text-sm font-semibold text-text" id="metric-changed-line">No changed fields</p>
+              <p class="mt-2 text-xs leading-5 text-muted" id="metric-changed-hint">Nothing changed in this run.</p>
             </article>
           </div>
 
@@ -205,7 +205,7 @@
             </p>
           </div>
 
-          <div class="grid gap-3 sm:grid-cols-3 xl:grid-cols-1" id="detail-summary">
+          <div class="grid gap-3 sm:grid-cols-3" id="detail-summary">
             <div class="metric-chip rounded-[22px] p-4">
               <p class="text-xs uppercase tracking-[0.25em] text-muted">Added</p>
               <p class="mt-3 text-2xl font-bold text-accent" id="detail-added-count">0</p>
@@ -279,11 +279,55 @@
         <div class="grid gap-3 md:grid-cols-[minmax(0,1.4fr)_170px_170px_190px]">
           <div class="rounded-[18px] border border-white/10 bg-panelSoft/65 px-4 py-3 text-xs uppercase tracking-[0.22em] text-muted">Title / Company</div>
           <div class="rounded-[18px] border border-white/10 bg-panelSoft/65 px-4 py-3 text-xs uppercase tracking-[0.22em] text-muted">Requested Location</div>
-          <div class="rounded-[18px] border border-white/10 bg-panelSoft/65 px-4 py-3 text-xs uppercase tracking-[0.22em] text-muted">Posted / Updated</div>
+          <div class="rounded-[18px] border border-white/10 bg-panelSoft/65 px-4 py-3 text-xs uppercase tracking-[0.22em] text-muted">First seen / Verified</div>
           <div class="rounded-[18px] border border-white/10 bg-panelSoft/65 px-4 py-3 text-xs uppercase tracking-[0.22em] text-muted">Visible Locations</div>
         </div>
 
+        <div class="flex flex-wrap gap-2 text-xs font-semibold">
+          <span class="rounded-full border border-accent/25 bg-accent/10 px-3 py-1 text-accent">New today</span>
+          <span class="rounded-full border border-amber/25 bg-amber/10 px-3 py-1 text-amber">Last 3 days</span>
+          <span class="rounded-full border border-sky/25 bg-sky/10 px-3 py-1 text-sky">This week</span>
+        </div>
+
         <div class="jobs-scroll max-h-[520px] space-y-3 overflow-y-auto pr-1" id="jobs-list"></div>
+      </div>
+    </section>
+
+    <section class="dashboard-panel glass-panel rounded-[30px] p-5 shadow-panel md:p-6" id="removed-panel" hidden>
+      <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-muted">Removed History</p>
+            <h2 class="mt-2 font-heading text-2xl font-bold">Видалені вакансії</h2>
+            <p class="mt-3 text-sm leading-6 text-muted" id="removed-jobs-caption">
+              Вакансії, які зникли з результатів, від найсвіжіше видалених до найстаріших.
+            </p>
+          </div>
+          <div class="metric-chip rounded-[22px] px-5 py-4">
+            <p class="text-xs uppercase tracking-[0.25em] text-muted">Removed Jobs</p>
+            <p class="mt-2 text-3xl font-bold text-rose" id="removed-jobs-count">0</p>
+          </div>
+        </div>
+
+        <div class="grid gap-3">
+          <div class="rounded-[20px] border border-white/10 bg-panelSoft/60 p-4">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted">Країни</p>
+            <div class="chip-row mt-3" id="removed-country-filter-chips"></div>
+          </div>
+          <div class="rounded-[20px] border border-white/10 bg-panelSoft/60 p-4" id="removed-city-filter-section" hidden>
+            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted">Міста</p>
+            <div class="chip-row mt-3" id="removed-city-filter-chips"></div>
+          </div>
+        </div>
+
+        <div class="grid gap-3 md:grid-cols-[minmax(0,1.4fr)_170px_170px_190px]">
+          <div class="rounded-[18px] border border-white/10 bg-panelSoft/65 px-4 py-3 text-xs uppercase tracking-[0.22em] text-muted">Title / Company</div>
+          <div class="rounded-[18px] border border-white/10 bg-panelSoft/65 px-4 py-3 text-xs uppercase tracking-[0.22em] text-muted">Requested Location</div>
+          <div class="rounded-[18px] border border-white/10 bg-panelSoft/65 px-4 py-3 text-xs uppercase tracking-[0.22em] text-muted">Removed / Last seen</div>
+          <div class="rounded-[18px] border border-white/10 bg-panelSoft/65 px-4 py-3 text-xs uppercase tracking-[0.22em] text-muted">Visible Locations</div>
+        </div>
+
+        <div class="jobs-scroll max-h-[620px] space-y-3 overflow-y-auto pr-1" id="removed-jobs-list"></div>
       </div>
     </section>
   </main>

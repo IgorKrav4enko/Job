@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoogleCareersSync")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5f4977b1867a7d9cac01ba23a002c3028093ba4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+190c4bfb64b91a309f43ff2af17a3d23c2d959a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoogleCareersSync")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoogleCareersSync")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

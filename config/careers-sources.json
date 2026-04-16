@@ -1,0 +1,11 @@
+[
+  {
+    "source": "google-careers",
+    "company": "Google",
+    "enabled": true,
+    "adapter": "google-careers",
+    "query": "\"Software Engineer\"",
+    "locationsConfig": "config/google-careers-locations.json",
+    "notes": "Production source. Keep existing Google pipeline stable while new sources are developed in data-debug first."
+  }
+]

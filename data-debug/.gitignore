@@ -1,0 +1,5 @@
+html/**/*.html
+html/**/*.htm
+parsed/**/*.json
+!.gitignore
+!README.md

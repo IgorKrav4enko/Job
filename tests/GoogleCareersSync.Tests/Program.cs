@@ -92,7 +92,7 @@ internal sealed class ReflectionTestRunner
     {
         // Тут перевіряємо fingerprint вакансії:
         // однаковий зміст із різним порядком locations має дати той самий hash,
-        // а зміна важливого поля (наприклад title) повинна дати інший hash.
+        // а зміна важливого поля повинна дати інший hash.
         var first = CreateJobItem(
             id: "1",
             title: "Software Engineer",
@@ -109,11 +109,11 @@ internal sealed class ReflectionTestRunner
             title: "Software Engineer",
             company: "Google",
             locations: new[] { "Zurich, Switzerland", "Warsaw, Poland" },
-            url: "https://example.test/jobs/1",
+            url: "https://example.test/jobs/1?page=2&location=Poland",
             requestedLocation: "Warsaw, Poland",
             searchUrl: "https://example.test/search",
-            postedAtCandidate: "2026-04-10T10:00:00.0000000+00:00",
-            updatedAtCandidate: "2026-04-11T10:00:00.0000000+00:00");
+            postedAtCandidate: null,
+            updatedAtCandidate: null);
 
         var changed = CreateJobItem(
             id: "1",
@@ -230,7 +230,7 @@ internal sealed class ReflectionTestRunner
         // Окремо перевіряємо, що changedFields пояснює,
         // які саме нормалізовані поля реально змінилися.
         AssertTrue(changedFields.Contains("title"), "Changed fields should include title.");
-        AssertTrue(changedFields.Contains("updatedAtCandidate"), "Changed fields should include updatedAtCandidate.");
+        AssertTrue(!changedFields.Contains("updatedAtCandidate"), "Candidate timestamps should not count as meaningful content changes.");
 
         var mergedJobs = GetList(mergeResult, "Jobs");
         var removedJob = mergedJobs.Cast<object>().Single(item => GetStringProperty(item, "Id") == "remove");
