@@ -1,5 +1,13 @@
 html/**/*.html
 html/**/*.htm
+html/**/*.json
+html/**/*.js
 parsed/**/*.json
+apple-jobs/**/*.html
+apple-jobs/**/*.json
+apple-jobs/**/*.js
+microsoft-careers/**/*.html
+microsoft-careers/**/*.json
+microsoft-careers/**/*.js
 !.gitignore
 !README.md

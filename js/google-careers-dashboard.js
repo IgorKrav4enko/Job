@@ -1,8 +1,39 @@
-const RUNS_URL = "./data/google-careers-runs.json";
-const DETAILS_URL = "./data/google-careers-run-details.json";
-const JOBS_URL = "./data/google-careers-jobs.json";
+const SOURCES = {
+  google: {
+    key: "google",
+    label: "Google Careers",
+    runsUrl: "./data/google-careers-runs.json",
+    detailsUrl: "./data/google-careers-run-details.json",
+    jobsUrl: "./data/google-careers-jobs.json"
+  },
+  meta: {
+    key: "meta",
+    label: "Meta Careers",
+    runsUrl: "./data/meta-careers-runs.json",
+    detailsUrl: "./data/meta-careers-run-details.json",
+    jobsUrl: "./data/meta-careers-jobs.json"
+  },
+  apple: {
+    key: "apple",
+    label: "Apple Jobs",
+    runsUrl: "./data/apple-careers-runs.json",
+    detailsUrl: "./data/apple-careers-run-details.json",
+    jobsUrl: "./data/apple-careers-jobs.json"
+  },
+  microsoft: {
+    key: "microsoft",
+    label: "Microsoft Careers",
+    runsUrl: "./data/microsoft-careers-runs.json",
+    detailsUrl: "./data/microsoft-careers-run-details.json",
+    jobsUrl: "./data/microsoft-careers-jobs.json",
+    allowMissingHistory: true
+  }
+};
+
+const SOURCE_STORAGE_KEY = "careers-dashboard-source";
 
 const state = {
+  activeSource: getInitialSourceKey(),
   activeTab: "history",
   activeLocation: "all",
   activeRunId: null,
@@ -16,6 +47,8 @@ const state = {
 };
 
 const refs = {
+  sourceRoot: document.getElementById("source-switcher"),
+  activeSourceLabel: document.getElementById("active-source-label"),
   tabsRoot: document.getElementById("dashboard-tabs"),
   historyPanel: document.getElementById("history-panel"),
   livePanel: document.getElementById("live-panel"),
@@ -65,29 +98,69 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 async function initializeDashboard() {
+  bindSourceSwitcher();
+  bindTabs();
+  await loadSourceData(state.activeSource);
+}
+
+async function loadSourceData(sourceKey) {
+  const source = SOURCES[sourceKey] || SOURCES.google;
   try {
     const [runsPayload, detailsPayload, jobsPayload] = await Promise.all([
-      fetchJson(RUNS_URL),
-      fetchJson(DETAILS_URL),
-      fetchJson(JOBS_URL)
+      source.allowMissingHistory ? fetchJsonOrDefault(source.runsUrl, { runs: [] }) : fetchJson(source.runsUrl),
+      source.allowMissingHistory ? fetchJsonOrDefault(source.detailsUrl, { runs: [] }) : fetchJson(source.detailsUrl),
+      fetchJson(source.jobsUrl)
     ]);
 
+    state.activeSource = source.key;
     state.runs = Array.isArray(runsPayload.runs) ? runsPayload.runs : [];
     state.runDetailsById = new Map(
       (Array.isArray(detailsPayload.runs) ? detailsPayload.runs : []).map((item) => [item.runId, item])
     );
     state.jobs = Array.isArray(jobsPayload.jobs) ? jobsPayload.jobs : [];
-
-    bindTabs();
-    buildLocationFilters();
+    resetSelectionState();
     if (state.runs.length > 0) {
       state.activeRunId = state.runs[state.runs.length - 1].runId;
     }
 
+    localStorage.setItem(SOURCE_STORAGE_KEY, state.activeSource);
     render();
   } catch (error) {
-    refs.chartCaption.textContent = "Не вдалося завантажити історію запусків.";
+    state.activeSource = source.key;
+    state.runs = [];
+    state.runDetailsById = new Map();
+    state.jobs = [];
+    resetSelectionState();
+    render();
+    refs.chartCaption.textContent = `Не вдалося завантажити дані для ${source.label}.`;
     refs.detailSubtitle.textContent = String(error);
+  }
+}
+
+function getInitialSourceKey() {
+  const stored = localStorage.getItem(SOURCE_STORAGE_KEY);
+  return stored && SOURCES[stored] ? stored : "google";
+}
+
+function resetSelectionState() {
+  state.activeLocation = "all";
+  state.activeRunId = null;
+  state.activeCountry = "all";
+  state.activeCity = "all";
+  state.removedCountry = "all";
+  state.removedCity = "all";
+}
+
+function bindSourceSwitcher() {
+  for (const button of refs.sourceRoot.querySelectorAll("[data-source]")) {
+    button.addEventListener("click", () => {
+      const sourceKey = button.dataset.source || "google";
+      if (sourceKey === state.activeSource) {
+        return;
+      }
+
+      void loadSourceData(sourceKey);
+    });
   }
 }
 
@@ -95,6 +168,15 @@ async function fetchJson(url) {
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Failed to load ${url}: ${response.status}`);
+  }
+
+  return response.json();
+}
+
+async function fetchJsonOrDefault(url, fallback) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    return fallback;
   }
 
   return response.json();
@@ -212,6 +294,7 @@ function selectCity(value) {
 }
 
 function render() {
+  renderSourceSwitcher();
   renderTabs();
   buildLocationFilters();
   const filteredRuns = getFilteredRuns();
@@ -221,6 +304,20 @@ function render() {
   renderLiveFilterChips();
   renderJobs();
   renderRemovedJobs();
+}
+
+function renderSourceSwitcher() {
+  const source = SOURCES[state.activeSource] || SOURCES.google;
+  refs.activeSourceLabel.textContent = source.label;
+
+  for (const button of refs.sourceRoot.querySelectorAll("[data-source]")) {
+    const isActive = button.dataset.source === state.activeSource;
+    button.className =
+      "rounded-full border px-4 py-2 text-sm font-semibold transition-colors " +
+      (isActive
+        ? "border-sky bg-sky text-base"
+        : "border-white/10 bg-panelSoft text-text hover:border-sky hover:text-sky");
+  }
 }
 
 function renderTabs() {
@@ -624,7 +721,11 @@ function renderRemovedJobs() {
       const titleWrap = document.createElement("div");
       const title = document.createElement("a");
       title.className = "block font-heading text-base font-bold text-slate-100 transition-colors hover:text-sky";
-      title.href = `./job.html?id=${encodeURIComponent(job.id)}`;
+      title.href = state.activeSource === "google" ? `./job.html?id=${encodeURIComponent(job.id)}` : job.url;
+      if (state.activeSource !== "google") {
+        title.target = "_blank";
+        title.rel = "noreferrer";
+      }
       title.textContent = job.title;
 
       const company = document.createElement("p");

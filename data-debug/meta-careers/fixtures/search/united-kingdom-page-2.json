@@ -1,0 +1,33 @@
+{
+  "requestedLocation": "United Kingdom",
+  "locationSlug": "united-kingdom",
+  "offices": [
+    "London, UK"
+  ],
+  "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK&page=2",
+  "page": 2,
+  "payload": {
+    "data": {
+      "job_search_with_featured_jobs": {
+        "all_jobs": [
+          {
+            "id": "926318253483210",
+            "title": "Research Scientist, Generative AI for Ads (Video)",
+            "locations": [
+              "London, UK"
+            ],
+            "teams": [
+              "Artificial Intelligence"
+            ],
+            "sub_teams": [
+              "Computer Vision"
+            ]
+          }
+        ],
+        "featured_jobs": [],
+        "featured_jobs_title": null,
+        "all_jobs_title": "Open roles"
+      }
+    }
+  }
+}

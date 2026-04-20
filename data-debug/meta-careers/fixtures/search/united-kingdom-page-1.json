@@ -1,0 +1,47 @@
+{
+  "requestedLocation": "United Kingdom",
+  "locationSlug": "united-kingdom",
+  "offices": [
+    "London, UK"
+  ],
+  "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK&page=1",
+  "page": 1,
+  "payload": {
+    "data": {
+      "job_search_with_featured_jobs": {
+        "all_jobs": [
+          {
+            "id": "1368839171784149",
+            "title": "Network Engineer - Optical Deployment",
+            "locations": [
+              "London, UK"
+            ],
+            "teams": [
+              "Data Center"
+            ],
+            "sub_teams": [
+              "Network Engineering"
+            ]
+          },
+          {
+            "id": "906391792398202",
+            "title": "Enterprise Technical Sales Specialist, EMEA",
+            "locations": [
+              "Dubai, United Arab Emirates",
+              "London, UK"
+            ],
+            "teams": [
+              "Sales & Marketing"
+            ],
+            "sub_teams": [
+              "Sales"
+            ]
+          }
+        ],
+        "featured_jobs": [],
+        "featured_jobs_title": null,
+        "all_jobs_title": "Open roles"
+      }
+    }
+  }
+}

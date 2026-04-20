@@ -1,0 +1,55 @@
+{
+  "runId": "2026-04-17T16-57-34Z",
+  "generatedAt": "2026-04-17T16:57:34.3526190\u002B00:00",
+  "source": "meta-careers",
+  "sources": [
+    {
+      "requestedLocation": "Poland",
+      "locationSlug": "poland",
+      "offices": [
+        "Warsaw, Poland"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Warsaw%2C%20Poland",
+      "jobs": []
+    },
+    {
+      "requestedLocation": "Switzerland",
+      "locationSlug": "switzerland",
+      "offices": [
+        "Zurich, Switzerland",
+        "Geneva, Switzerland"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Zurich%2C%20Switzerland\u0026offices[1]=Geneva%2C%20Switzerland",
+      "jobs": []
+    },
+    {
+      "requestedLocation": "Germany",
+      "locationSlug": "germany",
+      "offices": [
+        "Berlin, Germany",
+        "Hamburg, Germany",
+        "Munich, Germany"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Berlin%2C%20Germany\u0026offices[1]=Hamburg%2C%20Germany\u0026offices[2]=Munich%2C%20Germany",
+      "jobs": []
+    },
+    {
+      "requestedLocation": "United Kingdom",
+      "locationSlug": "united-kingdom",
+      "offices": [
+        "London, UK"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK",
+      "jobs": []
+    },
+    {
+      "requestedLocation": "Ireland",
+      "locationSlug": "ireland",
+      "offices": [
+        "Dublin, Ireland"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Dublin%2C%20Ireland",
+      "jobs": []
+    }
+  ]
+}

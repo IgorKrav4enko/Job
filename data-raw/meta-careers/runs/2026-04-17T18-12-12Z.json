@@ -1,0 +1,440 @@
+{
+  "runId": "2026-04-17T18-12-12Z",
+  "generatedAt": "2026-04-17T18:12:12.0547410\u002B00:00",
+  "source": "meta-careers",
+  "sources": [
+    {
+      "requestedLocation": "Poland",
+      "locationSlug": "poland",
+      "offices": [
+        "Remote, Poland",
+        "Warsaw, Poland"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Remote%2C%20Poland\u0026offices[1]=Warsaw%2C%20Poland\u0026q=Software%20Engineering",
+      "jobs": [
+        {
+          "jobId": "677160418622314",
+          "titleRaw": "Software Engineer, Infrastructure",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Sunnyvale, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Remote, US",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/677160418622314",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Remote%2C%20Poland\u0026offices[1]=Warsaw%2C%20Poland\u0026q=Software%20Engineering",
+          "requestedLocation": "Poland",
+          "aboutTheJobRaw": "Meta is seeking talented engineers to join our teams in building cutting-edge products that connect billions of people around the world. As a member of our team, you will have the opportunity to work on complex technical problems, build new features, and improve existing products across various platforms, including mobile devices and web applications. Our teams are constantly pushing the boundaries of user experience, and we\u0027re looking for passionate individuals who can help us advance the way people connect globally. If you\u0027re interested in joining a world-class team of industry veterans and working on exciting projects that have a significant impact, we encourage you to apply.",
+          "responsibilitiesRaw": "Collaborate with cross-functional teams (product, design, operations, infrastructure) to build innovative application experiences\u00A0Implement custom user interfaces using latest programming techniques and technologies\u00A0Develop reusable software components for interfacing with back-end platforms\u00A0Analyze and optimize code for quality, efficiency, and performance\u00A0Lead complex technical or product efforts and provide technical guidance to peers\u00A0Architect efficient and scalable systems that drive complex applications\u00A0Identify and resolve performance and scalability issues\u00A0Work on a variety of coding languages and technologies\u00A0Establish ownership of components, features, or systems with expert end-to-end understanding",
+          "minimumQualificationsRaw": "Bachelor\u0027s degree in Computer Science, Computer Engineering, relevant technical field, or equivalent practical experience\u00A0Experience building maintainable and testable code bases, including API design and unit testing techniques\u00A0Track record of setting technical direction for a team, driving consensus and successful cross-functional partnerships\u00A06\u002B years of programming experience in a relevant language or 3\u002B years of experience \u002B PhD Experience building and shipping high quality work and achieving high reliability\u00A0Experience improving quality through thoughtful code reviews, appropriate testing, proper rollout, monitoring, and proactive changes\u00A0Experience owning a component, feature or system\u00A0Experience in programming languages such as C, C\u002B\u002B, Java\u00A0Experience designing, analyzing and improving efficiency, scalability, and stability of various system resources\u00A0Exposure to architectural patterns of large scale software applications\u00A06\u002B years relevant experience building large-scale infrastructure applications or similar experience\u00A0Experience with scripting languages such as Python, Javascript or Hack\u00A0Demonstrated ability to integrate AI tools to optimize/redesign workflows and drive measurable impact (e.g., efficiency gains, quality improvements)\u00A0Experience adhering to and implementing responsible, ethical AI practices (e.g., risk assessment, bias mitigation, quality and accuracy reviews)\u00A0Demonstrated ongoing AI skill development (e.g., prompt/context engineering, agent orchestration) and staying current with emerging AI technologies",
+          "postedAtCandidate": "2025-06-10T13:07:44-07:00",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "1436181490732782",
+          "titleRaw": "Software Engineer, Machine Learning",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Sunnyvale, CA",
+            "Remote, US",
+            "San Mateo, CA",
+            "Los Angeles, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Austin, TX",
+            "Foster City, CA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Santa Clara, CA",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA",
+            "Fremont, CA",
+            "Mountain View, CA"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1436181490732782",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Remote%2C%20Poland\u0026offices[1]=Warsaw%2C%20Poland\u0026q=Software%20Engineering",
+          "requestedLocation": "Poland",
+          "aboutTheJobRaw": "Meta is seeking talented engineers to join our teams in building cutting-edge products that connect billions of people around the world. As a member of our team, you will have the opportunity to work on complex technical problems, build new features, and improve existing products across various platforms, including mobile devices and web applications. Our teams are constantly pushing the boundaries of user experience, and we\u0027re looking for passionate individuals who can help us advance the way people connect globally. If you\u0027re interested in joining a world-class team of industry veterans and working on exciting projects that have a significant impact, we encourage you to apply.",
+          "responsibilitiesRaw": "Collaborate with cross-functional teams (product, design, operations, infrastructure) to build innovative application experiences\u00A0Implement custom user interfaces using latest programming techniques and technologies\u00A0Develop reusable software components for interfacing with back-end platforms\u00A0Analyze and optimize code for quality, efficiency, and performance\u00A0Lead complex technical or product efforts and provide technical guidance to peers\u00A0Architect efficient and scalable systems that drive complex applications\u00A0Identify and resolve performance and scalability issues\u00A0Work on a variety of coding languages and technologies\u00A0Establish ownership of components, features, or systems with expert end-to-end understanding",
+          "minimumQualificationsRaw": "Bachelor\u0027s degree in Computer Science, Computer Engineering, relevant technical field, or equivalent practical experience\u00A0Track record of setting technical direction for a team, driving consensus and successful cross-functional partnerships\u00A06\u002B years of programming experience in a relevant language or 3\u002B years of experience \u002B PhD\u00A0Experience building maintainable and testable code bases, including API design and unit testing techniques Experience building and shipping high quality work and achieving high reliability\u00A0Experience improving quality through thoughtful code reviews, appropriate testing, proper rollout, monitoring, and proactive changes\u00A0Experience with developing machine learning models at scale from inception to business impact\u00A0Exposure to architectural patterns of large scale software applications\u00A0Experience with scripting languages such as PyTorch, TensorFlow, Python, JavaScript or Hack\u00A02\u002B years of experience in one or more of the following areas: machine learning, recommendation systems, pattern recognition, data mining, artificial intelligence, or a related technical field\u00A0Knowledge developing and debugging in C/C\u002B\u002B and Java\u00A0Demonstrated ability to integrate AI tools to optimize/redesign workflows and drive measurable impact (e.g., efficiency gains, quality improvements)\u00A0Experience adhering to and implementing responsible, ethical AI practices (e.g., risk assessment, bias mitigation, quality and accuracy reviews)\u00A0Demonstrated ongoing AI skill development (e.g., prompt/context engineering, agent orchestration) and staying current with emerging AI technologies",
+          "postedAtCandidate": "2025-06-10T13:59:00-07:00",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Switzerland",
+      "locationSlug": "switzerland",
+      "offices": [
+        "Geneva, Switzerland",
+        "Zurich, Switzerland"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Geneva%2C%20Switzerland\u0026offices[1]=Zurich%2C%20Switzerland\u0026q=Software%20Engineering",
+      "jobs": [
+        {
+          "jobId": "1058363622156402",
+          "titleRaw": "Software Engineer (Leadership) - Machine Learning",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Zurich, Switzerland",
+            "Remote, UK",
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1058363622156402",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Geneva%2C%20Switzerland\u0026offices[1]=Zurich%2C%20Switzerland\u0026q=Software%20Engineering",
+          "requestedLocation": "Switzerland",
+          "aboutTheJobRaw": "Meta is seeking talented principal engineers to join our teams in building cutting-edge products that connect billions of people around the world. As a member of our team, you will manage complex technical problems, build new features, and improve existing products across various platforms, including mobile devices and web applications. Our teams are constantly pushing the boundaries of user experience, and we\u0027re looking for passionate individuals who can help us advance the way people connect globally. If you\u0027re interested in leading a world-class team of engineers and researchers to work on exciting projects that have significant impact, we encourage you to apply.",
+          "responsibilitiesRaw": "Drive the team\u0027s goals and technical direction to pursue opportunities that make your larger organization more efficient\u00A0Effectively communicate complex features and systems in detail\u00A0Understand industry \u0026 company-wide trends to help assess \u0026 develop new technologies\u00A0Partner \u0026 collaborate with organization leaders to help improve the level of performance of the team \u0026 organization\u00A0Identify new opportunities for the larger organization \u0026 influence the appropriate people for staffing/prioritizing these new ideas\u00A0Lead long term technical strategy and roadmap for large cross-company efforts\u00A0Suggest, collect and synthesize requirements and create an effective feature roadmap\u00A0Identify and resolve performance and scalability issues, and drive large efforts to reduce technical debt",
+          "minimumQualificationsRaw": "Proven track record of planning multi-year roadmap in which short-term projects ladder to the long-term mission\u00A0Experience utilizing data and analysis to explain technical problems and provide detailed feedback and solutions\u00A0Experience driving large cross-functional/industry-wide engineering efforts\u00A0Experience mentoring/influencing experienced engineers across organizations\u00A0Experience communicating and working across functions to drive solutions\u00A0Bachelor\u0027s degree in Computer Science, Computer Engineering, relevant technical field, or equivalent practical experience\u00A0Programming experience in a relevant language B.S. Computer Science or related technical field\u00A0Experience with Hadoop/HBase/Pig or MapReduce/Sawzall/Bigtable/Hive/Spark\u00A0Experience in shipping products to millions of customers or have started a new line of product\u00A0Demonstrated ability to integrate AI tools to optimize/redesign workflows and drive measurable impact (e.g., efficiency gains, quality improvements)\u00A0Experience adhering to and implementing responsible, ethical AI practices (e.g., risk assessment, bias mitigation, quality and accuracy reviews)\u00A0Demonstrated ongoing AI skill development (e.g., prompt/context engineering, agent orchestration) and staying current with emerging AI technologies",
+          "postedAtCandidate": "2024-01-24T06:38:43-08:00",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "677160418622314",
+          "titleRaw": "Software Engineer, Infrastructure",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Sunnyvale, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Remote, US",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/677160418622314",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Geneva%2C%20Switzerland\u0026offices[1]=Zurich%2C%20Switzerland\u0026q=Software%20Engineering",
+          "requestedLocation": "Switzerland",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "1436181490732782",
+          "titleRaw": "Software Engineer, Machine Learning",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Sunnyvale, CA",
+            "Remote, US",
+            "San Mateo, CA",
+            "Los Angeles, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Austin, TX",
+            "Foster City, CA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Santa Clara, CA",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA",
+            "Fremont, CA",
+            "Mountain View, CA"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1436181490732782",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Geneva%2C%20Switzerland\u0026offices[1]=Zurich%2C%20Switzerland\u0026q=Software%20Engineering",
+          "requestedLocation": "Switzerland",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Germany",
+      "locationSlug": "germany",
+      "offices": [
+        "Berlin, Germany",
+        "Munich, Germany",
+        "Remote, Germany",
+        "Hamburg, Germany",
+        "Regensburg, Germany"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Berlin%2C%20Germany\u0026offices[1]=Munich%2C%20Germany\u0026offices[2]=Remote%2C%20Germany\u0026offices[3]=Hamburg%2C%20Germany\u0026offices[4]=Regensburg%2C%20Germany\u0026q=Software%20Engineering",
+      "jobs": [
+        {
+          "jobId": "677160418622314",
+          "titleRaw": "Software Engineer, Infrastructure",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Sunnyvale, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Remote, US",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/677160418622314",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Berlin%2C%20Germany\u0026offices[1]=Munich%2C%20Germany\u0026offices[2]=Remote%2C%20Germany\u0026offices[3]=Hamburg%2C%20Germany\u0026offices[4]=Regensburg%2C%20Germany\u0026q=Software%20Engineering",
+          "requestedLocation": "Germany",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "1436181490732782",
+          "titleRaw": "Software Engineer, Machine Learning",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Sunnyvale, CA",
+            "Remote, US",
+            "San Mateo, CA",
+            "Los Angeles, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Austin, TX",
+            "Foster City, CA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Santa Clara, CA",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA",
+            "Fremont, CA",
+            "Mountain View, CA"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1436181490732782",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Berlin%2C%20Germany\u0026offices[1]=Munich%2C%20Germany\u0026offices[2]=Remote%2C%20Germany\u0026offices[3]=Hamburg%2C%20Germany\u0026offices[4]=Regensburg%2C%20Germany\u0026q=Software%20Engineering",
+          "requestedLocation": "Germany",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "United Kingdom",
+      "locationSlug": "united-kingdom",
+      "offices": [
+        "London, UK",
+        "Cambridge, UK",
+        "Leamington Spa, UK",
+        "Remote, UK"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+      "jobs": [
+        {
+          "jobId": "1368839171784149",
+          "titleRaw": "Network Engineer - Optical Deployment",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1368839171784149",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+          "requestedLocation": "United Kingdom",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "731925816170138",
+          "titleRaw": "Network Engineer, Optical Deployment",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/731925816170138",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+          "requestedLocation": "United Kingdom",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "887142397619763",
+          "titleRaw": "Software Developer, Global Operations",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Dublin, Ireland",
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/887142397619763",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+          "requestedLocation": "United Kingdom",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "1058363622156402",
+          "titleRaw": "Software Engineer (Leadership) - Machine Learning",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Zurich, Switzerland",
+            "Remote, UK",
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1058363622156402",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+          "requestedLocation": "United Kingdom",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "677160418622314",
+          "titleRaw": "Software Engineer, Infrastructure",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Sunnyvale, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Remote, US",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/677160418622314",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+          "requestedLocation": "United Kingdom",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "1436181490732782",
+          "titleRaw": "Software Engineer, Machine Learning",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Sunnyvale, CA",
+            "Remote, US",
+            "San Mateo, CA",
+            "Los Angeles, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Austin, TX",
+            "Foster City, CA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Santa Clara, CA",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA",
+            "Fremont, CA",
+            "Mountain View, CA"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1436181490732782",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+          "requestedLocation": "United Kingdom",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "1511721227182750",
+          "titleRaw": "Solutions Architect",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1511721227182750",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+          "requestedLocation": "United Kingdom",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "885487337878828",
+          "titleRaw": "Solutions Architect",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/885487337878828",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+          "requestedLocation": "United Kingdom",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Ireland",
+      "locationSlug": "ireland",
+      "offices": [
+        "Cork, Ireland",
+        "Clonee, Ireland",
+        "Dublin, Ireland",
+        "Remote, Ireland"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Cork%2C%20Ireland\u0026offices[1]=Clonee%2C%20Ireland\u0026offices[2]=Dublin%2C%20Ireland\u0026offices[3]=Remote%2C%20Ireland\u0026q=Software%20Engineering",
+      "jobs": [
+        {
+          "jobId": "1889314011669750",
+          "titleRaw": "Network Engineer, Operations \u0026 Support",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Dublin, Ireland"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1889314011669750",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Cork%2C%20Ireland\u0026offices[1]=Clonee%2C%20Ireland\u0026offices[2]=Dublin%2C%20Ireland\u0026offices[3]=Remote%2C%20Ireland\u0026q=Software%20Engineering",
+          "requestedLocation": "Ireland",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "887142397619763",
+          "titleRaw": "Software Developer, Global Operations",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Dublin, Ireland",
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/887142397619763",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Cork%2C%20Ireland\u0026offices[1]=Clonee%2C%20Ireland\u0026offices[2]=Dublin%2C%20Ireland\u0026offices[3]=Remote%2C%20Ireland\u0026q=Software%20Engineering",
+          "requestedLocation": "Ireland",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "677160418622314",
+          "titleRaw": "Software Engineer, Infrastructure",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Sunnyvale, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Remote, US",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/677160418622314",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Cork%2C%20Ireland\u0026offices[1]=Clonee%2C%20Ireland\u0026offices[2]=Dublin%2C%20Ireland\u0026offices[3]=Remote%2C%20Ireland\u0026q=Software%20Engineering",
+          "requestedLocation": "Ireland",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        },
+        {
+          "jobId": "1436181490732782",
+          "titleRaw": "Software Engineer, Machine Learning",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Sunnyvale, CA",
+            "Remote, US",
+            "San Mateo, CA",
+            "Los Angeles, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Austin, TX",
+            "Foster City, CA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Santa Clara, CA",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA",
+            "Fremont, CA",
+            "Mountain View, CA"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1436181490732782",
+          "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Cork%2C%20Ireland\u0026offices[1]=Clonee%2C%20Ireland\u0026offices[2]=Dublin%2C%20Ireland\u0026offices[3]=Remote%2C%20Ireland\u0026q=Software%20Engineering",
+          "requestedLocation": "Ireland",
+          "capturedAt": "2026-04-17T18:12:12.0547410\u002B00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -7,5 +7,31 @@
     "query": "\"Software Engineer\"",
     "locationsConfig": "config/google-careers-locations.json",
     "notes": "Production source. Keep existing Google pipeline stable while new sources are developed in data-debug first."
+  },
+  {
+    "source": "meta-careers",
+    "company": "Meta",
+    "enabled": false,
+    "adapter": "meta-careers-raw",
+    "locationsConfig": "config/meta-careers-locations.json",
+    "notes": "Meta has separate raw, normalized, history/diff outputs and is viewable through the dashboard source switcher."
+  },
+  {
+    "source": "apple-careers",
+    "company": "Apple",
+    "enabled": false,
+    "adapter": "apple-careers-raw",
+    "query": "software engineer",
+    "locationsConfig": null,
+    "notes": "Apple normalized/history outputs are viewable through the dashboard source switcher. Collection config remains source-specific."
+  },
+  {
+    "source": "microsoft-careers",
+    "company": "Microsoft",
+    "enabled": false,
+    "adapter": "microsoft-careers-raw",
+    "query": "Software Engineer",
+    "locationsConfig": "config/microsoft-careers-locations.json",
+    "notes": "Microsoft normalized output is viewable through the dashboard source switcher. History/diff outputs can be added later without changing source selection."
   }
 ]

@@ -1,0 +1,426 @@
+{
+  "generatedAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+  "source": "Microsoft Careers",
+  "status": "success",
+  "notes": "Normalized 24 active Microsoft jobs from latest raw snapshot.",
+  "searchTerm": "Software Engineer",
+  "locations": [
+    {
+      "slug": "germany",
+      "label": "Germany",
+      "query": "Germany, Multiple Locations, Multiple Locations"
+    },
+    {
+      "slug": "ireland",
+      "label": "Ireland",
+      "query": "Ireland, Multiple Locations, Multiple Locations"
+    },
+    {
+      "slug": "poland",
+      "label": "Poland",
+      "query": "Poland, Multiple Locations, Multiple Locations"
+    },
+    {
+      "slug": "switzerland",
+      "label": "Switzerland",
+      "query": "Switzerland, Multiple Locations, Multiple Locations"
+    },
+    {
+      "slug": "united-kingdom",
+      "label": "United Kingdom",
+      "query": "United Kingdom, Multiple Locations, Multiple Locations"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "1970393556746389",
+      "title": "Chief Information Officer",
+      "company": "Microsoft",
+      "locations": [
+        "Ireland, Dublin, Dublin"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556746389",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-03-23T21:22:41.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "a38fb2bdb11f0a802e393b65ad295dcdb325e0515b2c2429facde8a23a43e3c8"
+    },
+    {
+      "id": "1970393556859625",
+      "title": "Cloud Solution Architecture - AI Application (Github, Copilot \u0026 LLM))",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556859625",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-20T16:09:42.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "35c7ca7f9b5e36a9ad122eb38ed396e64dde79d73083bbf57ddbfa8bbf1fd0ea"
+    },
+    {
+      "id": "1970393556650632",
+      "title": "Critical Environment Industrial Controls Systems Engineer",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, Newport, Newport"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556650632",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-01-13T12:10:23.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "0c7bed0e04d8f5a8700db85bd418e3e15ab83a02b5a7d4a2fdca7f4d15c5037c"
+    },
+    {
+      "id": "1970393556656899",
+      "title": "EMEA Lease Senior Mechanical Engineer",
+      "company": "Microsoft",
+      "locations": [
+        "Ireland, Dublin, Dublin",
+        "Ireland, Multiple Locations, Multiple Locations",
+        "Spain, Zaragoza, Zaragoza",
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556656899",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-03-10T08:04:37.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "45edba101f75db73b6e0a8c8c0a79b59e925caba70ad2f027fff76c4ff682816"
+    },
+    {
+      "id": "1970393556850029",
+      "title": "EPMS Technician",
+      "company": "Microsoft",
+      "locations": [
+        "Ireland, Dublin, Dublin"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556850029",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-16T09:05:11.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "621a81bd87669ade4ccd83b9516d37475adfb4620f1330ac8bd9b84df6e059e1"
+    },
+    {
+      "id": "1970393556849910",
+      "title": "Growth Software Engineer/Senior Software Engineer",
+      "company": "Microsoft",
+      "locations": [
+        "Ireland, Dublin, Dublin"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556849910",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-20T09:30:49.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "04ba80b2b973d405594a0473a251c1733cf0130f30b5fdd0290c28cf2cf42d43"
+    },
+    {
+      "id": "1970393556858286",
+      "title": "Member of Technical Staff - Mobile Engineer, Health AI",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556858286",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-14T11:56:01.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "b4f2ddaeb0121f7bce96a118775c05eb073a16d4469ce8531b937d9aaa6df37e"
+    },
+    {
+      "id": "1970393556857287",
+      "title": "Member of Technical Staff - Software Engineer, Health AI",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556857287",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-14T11:56:38.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "28429fa54514ce4698365ce72de347c02c3dd6c53584de199f05ce68072136cf"
+    },
+    {
+      "id": "1970393556648448",
+      "title": "Member of Technical Staff, AI Multimodal - MAI Superintelligence Team",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556648448",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-01-05T12:03:38.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "bd36776da2ac8965616185879a8aef6a022238fe9ef103bd01e0ba21d7ee5ba5"
+    },
+    {
+      "id": "1970393556627004",
+      "title": "Member of Technical Staff, AI Networking - MAI Superintelligence Team",
+      "company": "Microsoft",
+      "locations": [
+        "Switzerland, Z\u00FCrich, Z\u00FCrich",
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556627004",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Switzerland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-01-06T19:34:16.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "8313689f5529a7aa3a51384a4784409cd584d912105db0ee96e6d7967c131b81"
+    },
+    {
+      "id": "1970393556844479",
+      "title": "Member of Technical Staff, AI Systems Engineer - Microsoft Superintelligence",
+      "company": "Microsoft",
+      "locations": [
+        "Switzerland, Z\u00FCrich, Z\u00FCrich"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556844479",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Switzerland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-03-23T15:30:29.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "167ec563342abdd20b30fd63c0d5cb4d7506bfda6d70a100cd49509b7ef9e04c"
+    },
+    {
+      "id": "1970393556626992",
+      "title": "Member of Technical Staff, Data Research Engineer - MAI Superintelligence Team",
+      "company": "Microsoft",
+      "locations": [
+        "Switzerland, Z\u00FCrich, Z\u00FCrich",
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556626992",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Switzerland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-01-05T12:09:52.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "ddc3034231bda8fcb0f44a4e6b127acc9b5458470d2136b44029439faf9685d0"
+    },
+    {
+      "id": "1970393556803835",
+      "title": "Member of Technical Staff, High Performance Computing Engineer - MAI SuperIntelligence Team",
+      "company": "Microsoft",
+      "locations": [
+        "Switzerland, Z\u00FCrich, Z\u00FCrich",
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556803835",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Switzerland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-02-26T13:59:08.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "6583edd9f490fd27760d43da8ab84ca6cb07427aeaf1de51e2fe9501cb05241f"
+    },
+    {
+      "id": "1970393556648793",
+      "title": "Member of Technical Staff, Machine Learning - MAI Superintelligence Team",
+      "company": "Microsoft",
+      "locations": [
+        "Switzerland, Z\u00FCrich, Z\u00FCrich"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556648793",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Switzerland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-01-05T12:01:03.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "e33f604eb3a3a40cef423ef35e81f5ac43aa839c32c21f7bfd9985acbe5be135"
+    },
+    {
+      "id": "1970393556744537",
+      "title": "Member of Technical Staff, Software Engineer - MAI SuperIntelligence team",
+      "company": "Microsoft",
+      "locations": [
+        "Switzerland, Z\u00FCrich, Z\u00FCrich"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556744537",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Switzerland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-01-22T14:24:42.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "595bad32205b3b3f826bf8f861f4e8f23ac070f85fd1ced605099428b137d874"
+    },
+    {
+      "id": "1970393556858428",
+      "title": "Principal Design Engineer",
+      "company": "Microsoft",
+      "locations": [
+        "Poland, Mazowieckie, Warsaw"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556858428",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Poland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-16T15:46:03.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "2ec94e44545a1446d0e7f2f7987be69c05779c1c9201ee8ff816782dbd39b40e"
+    },
+    {
+      "id": "1970393556858371",
+      "title": "Principal Product Designer, AI Experiences",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556858371",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-14T16:13:21.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "dcf4d89667601a85e52efee7f4bae6e669f4e0e444030ea8d59ce4d7e1df192d"
+    },
+    {
+      "id": "1970393556856139",
+      "title": "Principal Software Engineer - ISE",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556856139",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-20T08:58:58.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "24952766c4301514c4b612c100d260873efbbde766891b18d14ab79e8f16429e"
+    },
+    {
+      "id": "1970393556735240",
+      "title": "Principal Software Engineering Manager - Growth",
+      "company": "Microsoft",
+      "locations": [
+        "Ireland, Dublin, Dublin"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556735240",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-01-22T11:59:53.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "251bf1b2b1bc496b190967b1737dea81f40c1a239474120a71479f5c797e707b"
+    },
+    {
+      "id": "1970393556639483",
+      "title": "Senior Security Engineer",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556639483",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-09T05:11:13.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "7a604b1a700d049f0c19c52ee4d7a8be716a1f55aac4256de4acad42252ea328"
+    },
+    {
+      "id": "1970393556853392",
+      "title": "Senior Software Engineer",
+      "company": "Microsoft",
+      "locations": [
+        "Ireland, Dublin, Dublin"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556853392",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-20T10:37:29.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "9312a3df3c3539910e6c88f09a6bbf97add9e2dfc7c246b3e85105be5217b8da"
+    },
+    {
+      "id": "1970393556668280",
+      "title": "Senior Software Engineer - Identity",
+      "company": "Microsoft",
+      "locations": [
+        "Ireland, Dublin, Dublin"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556668280",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-15T12:52:51.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "8f34ed1427491f33b6d6b7b3993182df72ca05d0f28ebc6331720f9c70ddc8af"
+    },
+    {
+      "id": "1970393556858890",
+      "title": "Senior System Software Engineer - WSD",
+      "company": "Microsoft",
+      "locations": [
+        "Ireland, Dublin, Dublin"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556858890",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-20T06:39:54.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "7f24a0a940a157d1ceac5dffea81c79e4a919971038125b4e86812b5e9dca711"
+    },
+    {
+      "id": "1970393556857301",
+      "title": "Software Engineer",
+      "company": "Microsoft",
+      "locations": [
+        "Ireland, Dublin, Dublin"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556857301",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-10T12:30:04.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "isActive": true,
+      "contentHash": "636045b586de360425538bcc73c69b10cb231a11702bd0a91e1cf29a51fb4475"
+    }
+  ]
+}

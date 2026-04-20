@@ -25,7 +25,13 @@ internal sealed class ReflectionTestRunner
             ("ExtractJobId returns the numeric id from a Google Careers URL", TestExtractJobIdAsync),
             ("ComputeContentHash ignores location order but reacts to meaningful field changes", TestContentHashAsync),
             ("MergeJobs classifies added, removed, changed and unchanged correctly", TestMergeJobsAsync),
-            ("ParseJobsFromHtml extracts visible card fields and payload-derived raw data", TestParseJobsFromHtmlAsync)
+            ("MergeJobs does not emit duplicate removed events for already inactive jobs", TestMergeJobsDoesNotRepeatRemovedAsync),
+            ("ParseJobsFromHtml extracts visible card fields and payload-derived raw data", TestParseJobsFromHtmlAsync),
+            ("Meta normalization preserves firstSeenAt, updates lastSeenAt and deactivates missing jobs", TestMetaNormalizationStateTrackingAsync),
+            ("Apple normalization preserves firstSeenAt, updates lastSeenAt and deactivates missing jobs", TestAppleNormalizationStateTrackingAsync),
+            ("Microsoft normalization preserves firstSeenAt, updates lastSeenAt and deactivates missing jobs", TestMicrosoftNormalizationStateTrackingAsync),
+            ("Apple history outputs include changed fields, per-location summaries and removed raw details", TestAppleHistoryOutputsAsync),
+            ("Meta history outputs include changed fields, per-location summaries and removed raw details", TestMetaHistoryOutputsAsync)
         };
 
         var failures = new List<string>();
@@ -240,6 +246,36 @@ internal sealed class ReflectionTestRunner
         return Task.CompletedTask;
     }
 
+    private Task TestMergeJobsDoesNotRepeatRemovedAsync()
+    {
+        // Якщо вакансія вже inactive з попереднього запуску, наступний snapshot без неї
+        // не повинен створювати ще один removed event.
+        var previous = CreateList(
+            "JobItem",
+            CreateJobItem(
+                id: "already-removed",
+                title: "Software Engineer III, Google Tasks Web",
+                company: "Google",
+                locations: new[] { "Zürich, Switzerland" },
+                url: "https://example.test/jobs/already-removed",
+                requestedLocation: "Switzerland",
+                searchUrl: "https://example.test/search",
+                postedAtCandidate: null,
+                updatedAtCandidate: null,
+                firstSeenAt: "2026-04-15T23:21:43.0000000+00:00",
+                lastSeenAt: "2026-04-15T23:21:43.0000000+00:00",
+                isActive: false,
+                contentHash: null));
+        var latest = CreateList("JobItem");
+        var mergeResult = InvokeStatic("MergeJobs", previous, latest, "2026-04-18T14:27:24.0000000+00:00")!;
+
+        AssertEqual(0, GetListCount(mergeResult, "Removed"), "Already inactive jobs should not emit duplicate removed events.");
+        var mergedJob = GetListItem(mergeResult, "Jobs", 0);
+        AssertTrue(!GetBooleanProperty(mergedJob, "IsActive"), "Already inactive job should remain inactive in the dataset.");
+        AssertEqual("2026-04-15T23:21:43.0000000+00:00", GetStringProperty(mergedJob, "LastSeenAt"), "Already inactive job should keep its real last seen timestamp.");
+        return Task.CompletedTask;
+    }
+
     private Task TestParseJobsFromHtmlAsync()
     {
         // Це інтеграційний тест на невеликому HTML/payload sample:
@@ -289,6 +325,453 @@ internal sealed class ReflectionTestRunner
         return Task.CompletedTask;
     }
 
+    private Task TestMetaNormalizationStateTrackingAsync()
+    {
+        // Meta normalization має довести саме поведінку state tracking на двох raw snapshots:
+        // job, який лишився, зберігає firstSeenAt і оновлює lastSeenAt;
+        // job, який зник, лишається в normalized output як inactive.
+        var firstRunAt = "2026-04-17T10:00:00.0000000+00:00";
+        var secondRunAt = "2026-04-17T12:00:00.0000000+00:00";
+        var firstRawRun = CreateMetaRawRun(
+            "meta-run-1",
+            firstRunAt,
+            CreateMetaRawJob(
+                jobId: "shared",
+                titleRaw: "Software Engineer",
+                locationsRaw: new[] { "Zurich, Switzerland" },
+                requestedLocation: "Switzerland",
+                capturedAt: firstRunAt),
+            CreateMetaRawJob(
+                jobId: "removed",
+                titleRaw: "Product Engineer",
+                locationsRaw: new[] { "London, UK" },
+                requestedLocation: "United Kingdom",
+                capturedAt: firstRunAt));
+        var secondRawRun = CreateMetaRawRun(
+            "meta-run-2",
+            secondRunAt,
+            CreateMetaRawJob(
+                jobId: "shared",
+                titleRaw: "Software Engineer",
+                locationsRaw: new[] { "Zurich, Switzerland" },
+                requestedLocation: "Switzerland",
+                capturedAt: secondRunAt),
+            CreateMetaRawJob(
+                jobId: "new",
+                titleRaw: "Machine Learning Engineer",
+                locationsRaw: new[] { "London, UK" },
+                requestedLocation: "United Kingdom",
+                capturedAt: secondRunAt));
+
+        var firstJobs = InvokeStatic("BuildMetaJobsFromRawRun", firstRawRun)!;
+        var firstMerge = InvokeStatic("MergeJobs", CreateList("JobItem"), firstJobs, firstRunAt)!;
+        var secondJobs = InvokeStatic("BuildMetaJobsFromRawRun", secondRawRun)!;
+        var secondMerge = InvokeStatic("MergeJobs", GetList(firstMerge, "Jobs"), secondJobs, secondRunAt)!;
+        var mergedJobs = GetList(secondMerge, "Jobs").Cast<object>().ToList();
+
+        AssertEqual(3, mergedJobs.Count, "Expected one shared, one removed and one new normalized Meta job.");
+        AssertEqual(3, mergedJobs.Select(job => GetStringProperty(job, "Id")).Distinct().Count(), "Meta normalization should keep one record per job id.");
+
+        var shared = mergedJobs.Single(job => GetStringProperty(job, "Id") == "shared");
+        AssertEqual(firstRunAt, GetStringProperty(shared, "FirstSeenAt"), "Existing Meta job should preserve firstSeenAt.");
+        AssertEqual(secondRunAt, GetStringProperty(shared, "LastSeenAt"), "Existing Meta job should update lastSeenAt on newer raw snapshot.");
+        AssertTrue(GetBooleanProperty(shared, "IsActive"), "Existing Meta job should stay active.");
+        AssertTrue(!string.IsNullOrWhiteSpace(GetStringProperty(shared, "ContentHash")), "Existing Meta job should have contentHash.");
+
+        var removed = mergedJobs.Single(job => GetStringProperty(job, "Id") == "removed");
+        AssertEqual(firstRunAt, GetStringProperty(removed, "FirstSeenAt"), "Removed Meta job should keep original firstSeenAt.");
+        AssertEqual(firstRunAt, GetStringProperty(removed, "LastSeenAt"), "Removed Meta job should keep last seen timestamp from its last active run.");
+        AssertTrue(!GetBooleanProperty(removed, "IsActive"), "Missing Meta job should become inactive.");
+
+        var added = mergedJobs.Single(job => GetStringProperty(job, "Id") == "new");
+        AssertEqual(secondRunAt, GetStringProperty(added, "FirstSeenAt"), "New Meta job should initialize firstSeenAt from the newer raw snapshot.");
+        AssertEqual(secondRunAt, GetStringProperty(added, "LastSeenAt"), "New Meta job should initialize lastSeenAt from the newer raw snapshot.");
+        AssertTrue(GetBooleanProperty(added, "IsActive"), "New Meta job should be active.");
+        return Task.CompletedTask;
+    }
+
+    private Task TestMetaHistoryOutputsAsync()
+    {
+        // Це Task 3 proof: Meta history/diff має ті самі meaningful-change правила,
+        // perLocation aggregation і removed-details з raw detail останнього активного snapshot.
+        var firstRunAt = "2026-04-17T10:00:00.0000000+00:00";
+        var secondRunAt = "2026-04-17T12:00:00.0000000+00:00";
+        var firstRawRun = CreateMetaRawRun(
+            "meta-history-run-1",
+            firstRunAt,
+            CreateMetaRawJob(
+                jobId: "change",
+                titleRaw: "Software Engineer",
+                locationsRaw: new[] { "Zurich, Switzerland" },
+                requestedLocation: "Switzerland",
+                capturedAt: firstRunAt),
+            CreateMetaRawJob(
+                jobId: "remove",
+                titleRaw: "Removed Engineer",
+                locationsRaw: new[] { "London, UK" },
+                requestedLocation: "United Kingdom",
+                capturedAt: firstRunAt,
+                aboutTheJobRaw: "Removed role details",
+                postedAtCandidate: "2026-04-01T00:00:00.0000000+00:00"));
+        var secondRawRun = CreateMetaRawRun(
+            "meta-history-run-2",
+            secondRunAt,
+            CreateMetaRawJob(
+                jobId: "change",
+                titleRaw: "Software Engineer II",
+                locationsRaw: new[] { "Zurich, Switzerland" },
+                requestedLocation: "Switzerland",
+                capturedAt: secondRunAt),
+            CreateMetaRawJob(
+                jobId: "add",
+                titleRaw: "New Engineer",
+                locationsRaw: new[] { "Dublin, Ireland" },
+                requestedLocation: "Ireland",
+                capturedAt: secondRunAt));
+
+        var firstMerge = InvokeStatic(
+            "MergeJobs",
+            CreateList("JobItem"),
+            InvokeStatic("BuildMetaJobsFromRawRun", firstRawRun),
+            firstRunAt)!;
+        var secondMerge = InvokeStatic(
+            "MergeJobs",
+            GetList(firstMerge, "Jobs"),
+            InvokeStatic("BuildMetaJobsFromRawRun", secondRawRun),
+            secondRunAt)!;
+        var previousRunDetails = CreateRecord("RunDetailsDataset", CreateList("RunDetail"));
+        var runDetails = InvokeStatic("BuildRunDetailsDataset", previousRunDetails, "meta-history-run-2", secondMerge)!;
+        var previousRuns = CreateRecord("RunHistoryDataset", CreateList("RunSummary"));
+        var runs = InvokeStatic("BuildRunsDataset", previousRuns, "meta-history-run-2", secondRunAt, secondMerge)!;
+        var dataset = CreateRecord(
+            "JobDataset",
+            secondRunAt,
+            "Meta Careers",
+            "success",
+            "test",
+            "Software Engineering",
+            CreateList("LocationConfig", CreateRecord("LocationConfig", "switzerland", "Switzerland", "Zurich, Switzerland")),
+            GetList(secondMerge, "Jobs"));
+        var removedDetails = InvokeStatic(
+            "BuildMetaRemovedDetailsDataset",
+            dataset,
+            runDetails,
+            CreateList("MetaRawRun", firstRawRun, secondRawRun))!;
+
+        AssertEqual(1, GetListCount(secondMerge, "Added"), "Meta diff should classify one added job.");
+        AssertEqual(1, GetListCount(secondMerge, "Removed"), "Meta diff should classify one removed job.");
+        AssertEqual(1, GetListCount(secondMerge, "Changed"), "Meta diff should classify one changed job.");
+
+        var changed = GetListItem(secondMerge, "Changed", 0);
+        var changedFields = GetStringListProperty(changed, "ChangedFields");
+        AssertTrue(changedFields.Contains("title"), "Meta changed fields should include title.");
+        AssertTrue(!changedFields.Contains("searchUrl"), "Meta changed fields should not include searchUrl.");
+
+        var runSummary = GetListItem(runs, "Runs", 0);
+        AssertTrue(GetListCount(runSummary, "PerLocation") > 0, "Meta run summary should include perLocation entries.");
+        var runDetail = GetListItem(runDetails, "Runs", 0);
+        AssertTrue(GetListCount(runDetail, "PerLocation") > 0, "Meta run details should include perLocation entries.");
+
+        var removed = GetListItem(removedDetails, "Jobs", 0);
+        AssertEqual("remove", GetStringProperty(removed, "Id"), "Meta removed-details should include removed job id.");
+        AssertEqual("meta-history-run-2", GetStringProperty(removed, "RemovedInRunId"), "Meta removed-details should include removal run id.");
+        AssertEqual(secondRunAt, GetStringProperty(removed, "RemovedAt"), "Meta removed-details should include removal timestamp.");
+        AssertEqual("Removed role details", GetStringProperty(removed, "AboutTheJobRaw"), "Meta removed-details should preserve raw detail fields.");
+        AssertEqual("2026-04-01T00:00:00.0000000+00:00", GetStringProperty(removed, "PostedAtCandidate"), "Meta removed-details should preserve raw posted candidate.");
+        return Task.CompletedTask;
+    }
+
+    private Task TestAppleNormalizationStateTrackingAsync()
+    {
+        // Apple має окрему identity-особливість: кілька source postings можуть мати
+        // один logical positionId. Нормалізація повинна звести їх до одного JobItem.
+        var firstRunAt = "2026-04-20T10:00:00.0000000+00:00";
+        var secondRunAt = "2026-04-20T12:00:00.0000000+00:00";
+        var firstRawRun = CreateAppleRawRun(
+            "apple-run-1",
+            firstRunAt,
+            CreateAppleRawJob(
+                jobId: "200650800",
+                sourceJobId: "200650800-2114",
+                titleRaw: "Early Career CAD Tools Optimisation Engineer",
+                locationsRaw: new[] { "London, United Kingdom" },
+                requestedLocation: "United Kingdom",
+                capturedAt: firstRunAt,
+                postedAtCandidate: "2026-03-10T15:48:18.618Z"),
+            CreateAppleRawJob(
+                jobId: "200650800",
+                sourceJobId: "200650800-1251",
+                titleRaw: "Early Career CAD Tools Optimisation Engineer",
+                locationsRaw: new[] { "Cambridge, United Kingdom" },
+                requestedLocation: "United Kingdom",
+                capturedAt: firstRunAt,
+                postedAtCandidate: "2026-03-10T15:48:18.618Z"),
+            CreateAppleRawJob(
+                jobId: "removed",
+                sourceJobId: "removed-4170",
+                titleRaw: "Removed Apple Engineer",
+                locationsRaw: new[] { "Zurich, Switzerland" },
+                requestedLocation: "Switzerland",
+                capturedAt: firstRunAt));
+        var secondRawRun = CreateAppleRawRun(
+            "apple-run-2",
+            secondRunAt,
+            CreateAppleRawJob(
+                jobId: "200650800",
+                sourceJobId: "200650800-2114",
+                titleRaw: "Early Career CAD Tools Optimisation Engineer",
+                locationsRaw: new[] { "London, United Kingdom", "Cambridge, United Kingdom" },
+                requestedLocation: "United Kingdom",
+                capturedAt: secondRunAt,
+                postedAtCandidate: "2026-03-10T15:48:18.618Z"),
+            CreateAppleRawJob(
+                jobId: "new",
+                sourceJobId: "new-4170",
+                titleRaw: "New Apple Engineer",
+                locationsRaw: new[] { "Dublin, Ireland" },
+                requestedLocation: "Ireland",
+                capturedAt: secondRunAt));
+
+        var firstJobs = InvokeStatic("BuildAppleJobsFromRawRun", firstRawRun)!;
+        AssertEqual(2, ((System.Collections.IList)firstJobs).Count, "Apple normalization should collapse duplicate source postings into one logical job.");
+
+        var firstMerge = InvokeStatic("MergeJobs", CreateList("JobItem"), firstJobs, firstRunAt)!;
+        var secondJobs = InvokeStatic("BuildAppleJobsFromRawRun", secondRawRun)!;
+        var secondMerge = InvokeStatic("MergeJobs", GetList(firstMerge, "Jobs"), secondJobs, secondRunAt)!;
+        var mergedJobs = GetList(secondMerge, "Jobs").Cast<object>().ToList();
+
+        AssertEqual(3, mergedJobs.Count, "Expected one shared, one removed and one new normalized Apple job.");
+        AssertEqual(3, mergedJobs.Select(job => GetStringProperty(job, "Id")).Distinct().Count(), "Apple normalization should keep one record per job id.");
+
+        var shared = mergedJobs.Single(job => GetStringProperty(job, "Id") == "200650800");
+        AssertEqual(firstRunAt, GetStringProperty(shared, "FirstSeenAt"), "Existing Apple job should preserve firstSeenAt.");
+        AssertEqual(secondRunAt, GetStringProperty(shared, "LastSeenAt"), "Existing Apple job should update lastSeenAt on newer raw snapshot.");
+        AssertTrue(GetBooleanProperty(shared, "IsActive"), "Existing Apple job should stay active.");
+        AssertTrue(!string.IsNullOrWhiteSpace(GetStringProperty(shared, "ContentHash")), "Existing Apple job should have contentHash.");
+        AssertEqual(2, GetStringListProperty(shared, "Locations").Count, "Shared Apple job should retain merged locations.");
+
+        var removed = mergedJobs.Single(job => GetStringProperty(job, "Id") == "removed");
+        AssertEqual(firstRunAt, GetStringProperty(removed, "FirstSeenAt"), "Removed Apple job should keep original firstSeenAt.");
+        AssertEqual(firstRunAt, GetStringProperty(removed, "LastSeenAt"), "Removed Apple job should keep last seen timestamp from its last active run.");
+        AssertTrue(!GetBooleanProperty(removed, "IsActive"), "Missing Apple job should become inactive.");
+
+        var added = mergedJobs.Single(job => GetStringProperty(job, "Id") == "new");
+        AssertEqual(secondRunAt, GetStringProperty(added, "FirstSeenAt"), "New Apple job should initialize firstSeenAt from the newer raw snapshot.");
+        AssertEqual(secondRunAt, GetStringProperty(added, "LastSeenAt"), "New Apple job should initialize lastSeenAt from the newer raw snapshot.");
+        AssertTrue(GetBooleanProperty(added, "IsActive"), "New Apple job should be active.");
+        return Task.CompletedTask;
+    }
+
+    private Task TestAppleHistoryOutputsAsync()
+    {
+        // Apple history має спиратися на ті самі meaningful-change правила:
+        // title/company/locations рахуються як changed, а url/timestamps/search metadata - ні.
+        var firstRunAt = "2026-04-20T10:00:00.0000000+00:00";
+        var secondRunAt = "2026-04-20T12:00:00.0000000+00:00";
+        var firstRawRun = CreateAppleRawRun(
+            "apple-history-run-1",
+            firstRunAt,
+            CreateAppleRawJob(
+                jobId: "change",
+                sourceJobId: "change-2114",
+                titleRaw: "Apple Engineer",
+                locationsRaw: new[] { "London, United Kingdom" },
+                requestedLocation: "United Kingdom",
+                capturedAt: firstRunAt),
+            CreateAppleRawJob(
+                jobId: "metadata-only",
+                sourceJobId: "metadata-only-2114",
+                titleRaw: "Metadata Stable Engineer",
+                locationsRaw: new[] { "Dublin, Ireland" },
+                requestedLocation: "Ireland",
+                capturedAt: firstRunAt,
+                postedAtCandidate: "2026-04-01T00:00:00.0000000+00:00"),
+            CreateAppleRawJob(
+                jobId: "remove",
+                sourceJobId: "remove-4170",
+                titleRaw: "Removed Apple Engineer",
+                locationsRaw: new[] { "Zurich, Switzerland" },
+                requestedLocation: "Switzerland",
+                capturedAt: firstRunAt,
+                postedAtCandidate: "2026-03-01T00:00:00.0000000+00:00"));
+        var secondRawRun = CreateAppleRawRun(
+            "apple-history-run-2",
+            secondRunAt,
+            CreateAppleRawJob(
+                jobId: "change",
+                sourceJobId: "change-2114",
+                titleRaw: "Apple Engineer",
+                locationsRaw: new[] { "London, United Kingdom", "Cambridge, United Kingdom" },
+                requestedLocation: "United Kingdom",
+                capturedAt: secondRunAt),
+            CreateAppleRawJob(
+                jobId: "metadata-only",
+                sourceJobId: "metadata-only-2114",
+                titleRaw: "Metadata Stable Engineer",
+                locationsRaw: new[] { "Dublin, Ireland" },
+                requestedLocation: "Ireland",
+                capturedAt: secondRunAt,
+                postedAtCandidate: "2026-04-02T00:00:00.0000000+00:00"),
+            CreateAppleRawJob(
+                jobId: "add",
+                sourceJobId: "add-2114",
+                titleRaw: "New Apple Engineer",
+                locationsRaw: new[] { "London, United Kingdom" },
+                requestedLocation: "United Kingdom",
+                capturedAt: secondRunAt));
+
+        var firstMerge = InvokeStatic(
+            "MergeJobs",
+            CreateList("JobItem"),
+            InvokeStatic("BuildAppleJobsFromRawRun", firstRawRun),
+            firstRunAt)!;
+        var secondMerge = InvokeStatic(
+            "MergeJobs",
+            GetList(firstMerge, "Jobs"),
+            InvokeStatic("BuildAppleJobsFromRawRun", secondRawRun),
+            secondRunAt)!;
+        var runsDataset = InvokeStatic(
+            "BuildRunsDataset",
+            InvokeStatic("BuildRunsDataset", CreateRecord("RunHistoryDataset", CreateList("RunSummary")), "apple-history-run-1", firstRunAt, firstMerge),
+            "apple-history-run-2",
+            secondRunAt,
+            secondMerge)!;
+        var runDetailsDataset = InvokeStatic(
+            "BuildRunDetailsDataset",
+            InvokeStatic("BuildRunDetailsDataset", CreateRecord("RunDetailsDataset", CreateList("RunDetail")), "apple-history-run-1", firstMerge),
+            "apple-history-run-2",
+            secondMerge)!;
+        var dataset = InvokeStatic(
+            "BuildAppleDataset",
+            secondRawRun,
+            GetList(secondMerge, "Jobs"))!;
+        var removedDetailsDataset = InvokeStatic(
+            "BuildAppleRemovedDetailsDataset",
+            dataset,
+            runDetailsDataset,
+            CreateList("AppleRawRun", firstRawRun, secondRawRun))!;
+
+        var latestRun = GetListItem(runsDataset, "Runs", 1);
+        AssertEqual(3, GetIntProperty(latestRun, "TotalJobs"), "Apple run summary should count active jobs.");
+        AssertEqual(1, GetIntProperty(latestRun, "AddedCount"), "Apple run summary should count added jobs.");
+        AssertEqual(1, GetIntProperty(latestRun, "RemovedCount"), "Apple run summary should count removed jobs.");
+        AssertEqual(1, GetIntProperty(latestRun, "ChangedCount"), "Apple run summary should count meaningful location changes.");
+        AssertEqual(1, GetIntProperty(latestRun, "UnchangedCount"), "Apple run summary should ignore metadata-only changes.");
+        AssertTrue(GetList(latestRun, "PerLocation").Count > 0, "Apple run summary should include per-location entries.");
+
+        var latestDetails = GetListItem(runDetailsDataset, "Runs", 1);
+        AssertEqual(1, GetListCount(latestDetails, "Added"), "Apple run-details should include added jobs.");
+        AssertEqual(1, GetListCount(latestDetails, "Removed"), "Apple run-details should include removed jobs.");
+        AssertEqual(1, GetListCount(latestDetails, "Changed"), "Apple run-details should include meaningful changed jobs.");
+        AssertEqual(1, GetListCount(latestDetails, "Unchanged"), "Apple run-details should include metadata-only unchanged jobs.");
+        AssertTrue(GetList(latestDetails, "PerLocation").Count > 0, "Apple run-details should include per-location entries.");
+
+        var changed = GetListItem(latestDetails, "Changed", 0);
+        AssertEqual("change", GetStringProperty(changed, "Id"), "Apple changed item should be the location-changed job.");
+        AssertTrue(!string.IsNullOrWhiteSpace(GetStringProperty(changed, "PreviousHash")), "Apple changed item should include previousHash.");
+        AssertTrue(!string.IsNullOrWhiteSpace(GetStringProperty(changed, "CurrentHash")), "Apple changed item should include currentHash.");
+        var changedFields = GetStringListProperty(changed, "ChangedFields");
+        AssertEqual(1, changedFields.Count, "Only locations should be reported as changed.");
+        AssertEqual("locations", changedFields[0], "Apple changed fields should use Google meaningful-change semantics.");
+        AssertEqual(1, GetListCount(changed, "FieldChanges"), "Apple changed item should include fieldChanges.");
+
+        var removedDetails = GetList(removedDetailsDataset, "Jobs").Cast<object>().ToList();
+        AssertEqual(1, removedDetails.Count, "Apple removed-details should include removed jobs.");
+        var removed = removedDetails.Single();
+        AssertEqual("remove", GetStringProperty(removed, "Id"), "Apple removed-details should preserve normalized id.");
+        AssertEqual("Removed Apple Engineer", GetStringProperty(removed, "Title"), "Apple removed-details should preserve normalized title.");
+        AssertEqual("Apple job summary", GetStringProperty(removed, "AboutTheJobRaw"), "Apple removed-details should include raw detail fields when available.");
+        AssertEqual("2026-03-01T00:00:00.0000000+00:00", GetStringProperty(removed, "PostedAtCandidate"), "Apple removed-details should include raw timestamps when available.");
+        AssertEqual(secondRunAt, GetStringProperty(removed, "RemovedAt"), "Apple removed-details should record removedAt from the removal run.");
+        AssertEqual("apple-history-run-2", GetStringProperty(removed, "RemovedInRunId"), "Apple removed-details should record removedInRunId.");
+        return Task.CompletedTask;
+    }
+
+    private Task TestMicrosoftNormalizationStateTrackingAsync()
+    {
+        var firstRunAt = "2026-04-20T10:00:00.0000000+00:00";
+        var secondRunAt = "2026-04-20T12:00:00.0000000+00:00";
+
+        var firstRawRun = CreateMicrosoftRawRun(
+            "microsoft-state-run-1",
+            firstRunAt,
+            CreateMicrosoftRawJob(
+                "shared",
+                "Software Engineer",
+                new[] { "Switzerland, Zürich, Zürich" },
+                "Switzerland",
+                firstRunAt,
+                postedAtCandidate: "2026-04-01T00:00:00.0000000+00:00"),
+            CreateMicrosoftRawJob(
+                "shared",
+                "Software Engineer",
+                new[] { "United Kingdom, London, London" },
+                "United Kingdom",
+                firstRunAt,
+                postedAtCandidate: "2026-04-01T00:00:00.0000000+00:00"),
+            CreateMicrosoftRawJob(
+                "remove",
+                "Removed Microsoft Engineer",
+                new[] { "Ireland, Dublin, Dublin" },
+                "Ireland",
+                firstRunAt));
+
+        var secondRawRun = CreateMicrosoftRawRun(
+            "microsoft-state-run-2",
+            secondRunAt,
+            CreateMicrosoftRawJob(
+                "shared",
+                "Software Engineer",
+                new[] { "Switzerland, Zürich, Zürich" },
+                "Switzerland",
+                secondRunAt,
+                postedAtCandidate: "2026-04-01T00:00:00.0000000+00:00"),
+            CreateMicrosoftRawJob(
+                "shared",
+                "Software Engineer",
+                new[] { "United Kingdom, London, London" },
+                "United Kingdom",
+                secondRunAt,
+                postedAtCandidate: "2026-04-01T00:00:00.0000000+00:00"),
+            CreateMicrosoftRawJob(
+                "add",
+                "New Microsoft Engineer",
+                new[] { "Poland, Mazowieckie, Warsaw" },
+                "Poland",
+                secondRunAt));
+
+        var firstJobs = InvokeStatic("BuildMicrosoftJobsFromRawRun", firstRawRun)!;
+        AssertEqual(2, ((System.Collections.IList)firstJobs).Count, "Microsoft normalization should collapse duplicate source postings into one logical job.");
+
+        var firstMerge = InvokeStatic("MergeJobs", CreateList("JobItem"), firstJobs, firstRunAt)!;
+        var secondJobs = InvokeStatic("BuildMicrosoftJobsFromRawRun", secondRawRun)!;
+        var secondMerge = InvokeStatic("MergeJobs", GetList(firstMerge, "Jobs"), secondJobs, secondRunAt)!;
+        var mergedJobs = GetList(secondMerge, "Jobs").Cast<object>().ToList();
+
+        AssertEqual(3, mergedJobs.Count, "Expected one shared, one removed and one new normalized Microsoft job.");
+        AssertEqual(3, mergedJobs.Select(job => GetStringProperty(job, "Id")).Distinct().Count(), "Microsoft normalization should keep one record per job id.");
+
+        var shared = mergedJobs.Single(job => GetStringProperty(job, "Id") == "shared");
+        AssertEqual(firstRunAt, GetStringProperty(shared, "FirstSeenAt"), "Existing Microsoft job should preserve firstSeenAt.");
+        AssertEqual(secondRunAt, GetStringProperty(shared, "LastSeenAt"), "Existing Microsoft job should update lastSeenAt on newer raw snapshot.");
+        AssertTrue(GetBooleanProperty(shared, "IsActive"), "Existing Microsoft job should stay active.");
+        AssertTrue(!string.IsNullOrWhiteSpace(GetStringProperty(shared, "ContentHash")), "Existing Microsoft job should have contentHash.");
+        AssertEqual(2, GetStringListProperty(shared, "Locations").Count, "Shared Microsoft job should retain merged locations.");
+        AssertEqual("2026-04-01T00:00:00.0000000+00:00", GetStringProperty(shared, "PostedAtCandidate"), "Posted candidate should propagate when available.");
+
+        var removed = mergedJobs.Single(job => GetStringProperty(job, "Id") == "remove");
+        AssertEqual(firstRunAt, GetStringProperty(removed, "FirstSeenAt"), "Removed Microsoft job should keep original firstSeenAt.");
+        AssertEqual(firstRunAt, GetStringProperty(removed, "LastSeenAt"), "Removed Microsoft job should keep last seen timestamp from its last active run.");
+        AssertTrue(!GetBooleanProperty(removed, "IsActive"), "Missing Microsoft job should become inactive.");
+
+        var added = mergedJobs.Single(job => GetStringProperty(job, "Id") == "add");
+        AssertEqual(secondRunAt, GetStringProperty(added, "FirstSeenAt"), "New Microsoft job should initialize firstSeenAt from the newer raw snapshot.");
+        AssertEqual(secondRunAt, GetStringProperty(added, "LastSeenAt"), "New Microsoft job should initialize lastSeenAt from the newer raw snapshot.");
+        AssertTrue(GetBooleanProperty(added, "IsActive"), "New Microsoft job should be active.");
+
+        return Task.CompletedTask;
+    }
+
     private object CreateJobItem(
         string id,
         string title,
@@ -321,11 +804,158 @@ internal sealed class ReflectionTestRunner
             contentHash);
     }
 
+    private object CreateMetaRawRun(string runId, string generatedAt, params object[] jobs)
+    {
+        var source = CreateRecord(
+            "MetaRawSource",
+            "Switzerland",
+            "switzerland",
+            new List<string> { "Zurich, Switzerland" },
+            "https://www.metacareers.com/jobsearch?offices[0]=Zurich%2C%20Switzerland",
+            CreateList("MetaRawJobItem", jobs));
+
+        return CreateRecord(
+            "MetaRawRun",
+            runId,
+            generatedAt,
+            "meta-careers",
+            CreateList("MetaRawSource", source));
+    }
+
+    private object CreateMetaRawJob(
+        string jobId,
+        string titleRaw,
+        IEnumerable<string> locationsRaw,
+        string requestedLocation,
+        string capturedAt,
+        string? aboutTheJobRaw = null,
+        string? postedAtCandidate = null)
+    {
+        return CreateRecord(
+            "MetaRawJobItem",
+            jobId,
+            titleRaw,
+            "Meta",
+            locationsRaw.ToList(),
+            $"https://www.metacareers.com/profile/job_details/{jobId}",
+            $"https://www.metacareers.com/jobsearch?offices[0]={Uri.EscapeDataString(requestedLocation)}",
+            requestedLocation,
+            null,
+            aboutTheJobRaw,
+            null,
+            null,
+            null,
+            postedAtCandidate,
+            null,
+            capturedAt);
+    }
+
+    private object CreateAppleRawRun(string runId, string generatedAt, params object[] jobs)
+    {
+        var source = CreateRecord(
+            "AppleRawSource",
+            "United Kingdom",
+            "united-kingdom",
+            "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR&key=software%2520engineer",
+            CreateList("AppleRawJobItem", jobs));
+
+        return CreateRecord(
+            "AppleRawRun",
+            runId,
+            generatedAt,
+            "apple-jobs",
+            "software engineer",
+            CreateList("AppleRawSource", source));
+    }
+
+    private object CreateAppleRawJob(
+        string jobId,
+        string sourceJobId,
+        string titleRaw,
+        IEnumerable<string> locationsRaw,
+        string requestedLocation,
+        string capturedAt,
+        string? postedAtCandidate = null)
+    {
+        return CreateRecord(
+            "AppleRawJobItem",
+            jobId,
+            sourceJobId,
+            titleRaw,
+            "Apple",
+            locationsRaw.ToList(),
+            $"https://jobs.apple.com/en-us/details/{sourceJobId}/test-role",
+            $"https://jobs.apple.com/en-us/search?location={Uri.EscapeDataString(requestedLocation)}&key=software%2520engineer",
+            requestedLocation,
+            null,
+            "Apple job summary",
+            "Apple job description",
+            null,
+            null,
+            postedAtCandidate,
+            null,
+            capturedAt);
+    }
+
+    private object CreateMicrosoftRawRun(string runId, string generatedAt, params object[] jobs)
+    {
+        var source = CreateRecord(
+            "MicrosoftRawSource",
+            "Switzerland",
+            "switzerland",
+            "Switzerland, Multiple Locations, Multiple Locations",
+            "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=Software%20Engineer&location=Switzerland%2C%20Multiple%20Locations%2C%20Multiple%20Locations&start=0&sort_by=relevance&filter_include_remote=1",
+            CreateList("MicrosoftRawJobItem", jobs));
+
+        return CreateRecord(
+            "MicrosoftRawRun",
+            runId,
+            generatedAt,
+            "microsoft-careers",
+            "Software Engineer",
+            CreateList("MicrosoftRawSource", source));
+    }
+
+    private object CreateMicrosoftRawJob(
+        string jobId,
+        string titleRaw,
+        IEnumerable<string> locationsRaw,
+        string requestedLocation,
+        string capturedAt,
+        string? postedAtCandidate = null)
+    {
+        return CreateRecord(
+            "MicrosoftRawJobItem",
+            jobId,
+            titleRaw,
+            "Microsoft",
+            locationsRaw.ToList(),
+            $"https://apply.careers.microsoft.com/careers/job/{jobId}",
+            $"https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=Software%20Engineer&location={Uri.EscapeDataString(requestedLocation)}&start=0",
+            requestedLocation,
+            $"https://apply.careers.microsoft.com/careers/job/{jobId}",
+            "Microsoft overview",
+            "Microsoft responsibilities",
+            "Microsoft required skills",
+            null,
+            postedAtCandidate,
+            null,
+            capturedAt);
+    }
+
     private object CreateRecord(string typeName, params object?[] args)
     {
         var type = _targetAssembly.GetTypes().First(type => type.Name == typeName);
-        var constructor = type.GetConstructors(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
-            .Single(candidate => candidate.GetParameters().Length == args.Length);
+        var constructors = type.GetConstructors(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+            .Where(candidate => candidate.GetParameters().Length == args.Length)
+            .Where(candidate => !(args.Length == 1 && candidate.GetParameters()[0].ParameterType == type))
+            .ToList();
+        if (constructors.Count != 1)
+        {
+            throw new InvalidOperationException($"Expected one constructor for {typeName} with {args.Length} args, found {constructors.Count}.");
+        }
+
+        var constructor = constructors[0];
         return constructor.Invoke(args);
     }
 
@@ -398,6 +1028,12 @@ internal sealed class ReflectionTestRunner
     private static bool GetBooleanProperty(object instance, string propertyName)
     {
         return (bool)(instance.GetType().GetProperty(propertyName)!.GetValue(instance)
+            ?? throw new InvalidOperationException($"Property '{propertyName}' is null."));
+    }
+
+    private static int GetIntProperty(object instance, string propertyName)
+    {
+        return (int)(instance.GetType().GetProperty(propertyName)!.GetValue(instance)
             ?? throw new InvalidOperationException($"Property '{propertyName}' is null."));
     }
 

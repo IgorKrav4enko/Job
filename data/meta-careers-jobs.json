@@ -1,0 +1,215 @@
+{
+  "generatedAt": "2026-04-20T09:37:46.9470900\u002B00:00",
+  "source": "Meta Careers",
+  "status": "success",
+  "notes": "Normalized 9 active Meta jobs from latest raw snapshot.",
+  "searchTerm": "Software Engineering",
+  "locations": [
+    {
+      "slug": "poland",
+      "label": "Poland",
+      "query": "Remote, Poland | Warsaw, Poland"
+    },
+    {
+      "slug": "switzerland",
+      "label": "Switzerland",
+      "query": "Geneva, Switzerland | Zurich, Switzerland"
+    },
+    {
+      "slug": "germany",
+      "label": "Germany",
+      "query": "Berlin, Germany | Munich, Germany | Remote, Germany | Hamburg, Germany | Regensburg, Germany"
+    },
+    {
+      "slug": "united-kingdom",
+      "label": "United Kingdom",
+      "query": "London, UK | Cambridge, UK | Leamington Spa, UK | Remote, UK"
+    },
+    {
+      "slug": "ireland",
+      "label": "Ireland",
+      "query": "Cork, Ireland | Clonee, Ireland | Dublin, Ireland | Remote, Ireland"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "1368839171784149",
+      "title": "Network Engineer - Optical Deployment",
+      "company": "Meta",
+      "locations": [
+        "London, UK"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/1368839171784149",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+      "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:37:46.9470900\u002B00:00",
+      "isActive": true,
+      "contentHash": "e58636b9a2da348e465d351e22fe03ac2de64f009e7a8465a665d321b621b768"
+    },
+    {
+      "id": "1889314011669750",
+      "title": "Network Engineer, Operations \u0026 Support",
+      "company": "Meta",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/1889314011669750",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Cork%2C%20Ireland\u0026offices[1]=Clonee%2C%20Ireland\u0026offices[2]=Dublin%2C%20Ireland\u0026offices[3]=Remote%2C%20Ireland\u0026q=Software%20Engineering",
+      "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:37:46.9470900\u002B00:00",
+      "isActive": true,
+      "contentHash": "db6f8e684372a4eb2aee3fcbcaa0fa91ce3f18a182dcd9b07196c5dbd86465ca"
+    },
+    {
+      "id": "887142397619763",
+      "title": "Software Developer, Global Operations",
+      "company": "Meta",
+      "locations": [
+        "Dublin, Ireland",
+        "London, UK"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/887142397619763",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+      "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:37:46.9470900\u002B00:00",
+      "isActive": true,
+      "contentHash": "4b5b51a9ea011cc3ba979524b57b4a491f556c552d124c71d48e3b5a26721d0b"
+    },
+    {
+      "id": "1058363622156402",
+      "title": "Software Engineer (Leadership) - Machine Learning",
+      "company": "Meta",
+      "locations": [
+        "Zurich, Switzerland",
+        "Remote, UK",
+        "London, UK"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/1058363622156402",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Geneva%2C%20Switzerland\u0026offices[1]=Zurich%2C%20Switzerland\u0026q=Software%20Engineering",
+      "postedAtCandidate": "2024-01-24T06:38:43-08:00",
+      "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:37:46.9470900\u002B00:00",
+      "isActive": true,
+      "contentHash": "d92b61afd5a28dcae24a7e86ab660c770ac43ecff7b7ee0658bf0ab885eb406c"
+    },
+    {
+      "id": "677160418622314",
+      "title": "Software Engineer, Infrastructure",
+      "company": "Meta",
+      "locations": [
+        "Sunnyvale, CA",
+        "Bellevue, WA",
+        "Redmond, WA",
+        "Menlo Park, CA",
+        "Seattle, WA",
+        "Burlingame, CA",
+        "Remote, US",
+        "Boston, MA",
+        "New York, NY",
+        "San Francisco, CA"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/677160418622314",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Remote%2C%20Poland\u0026offices[1]=Warsaw%2C%20Poland\u0026q=Software%20Engineering",
+      "postedAtCandidate": "2025-06-10T13:07:44-07:00",
+      "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:37:46.9470900\u002B00:00",
+      "isActive": true,
+      "contentHash": "5a0c261e29143e6dad2b00b15aa80ffbbf42c391cd3f07beadaf65eef2e9b200"
+    },
+    {
+      "id": "1048049836887307",
+      "title": "Software Engineer, Machine Learning",
+      "company": "Meta",
+      "locations": [
+        "London, UK"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/1048049836887307",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+      "firstSeenAt": "2026-04-18T14:28:27.1763420\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:37:46.9470900\u002B00:00",
+      "isActive": true,
+      "contentHash": "18b44622967b714183fb0b84118eefe555497197b6b5bb7bcf8bf47f61def931"
+    },
+    {
+      "id": "1436181490732782",
+      "title": "Software Engineer, Machine Learning",
+      "company": "Meta",
+      "locations": [
+        "Sunnyvale, CA",
+        "Remote, US",
+        "San Mateo, CA",
+        "Los Angeles, CA",
+        "Bellevue, WA",
+        "Austin, TX",
+        "Foster City, CA",
+        "Menlo Park, CA",
+        "Seattle, WA",
+        "Burlingame, CA",
+        "Santa Clara, CA",
+        "New York, NY",
+        "San Francisco, CA",
+        "Fremont, CA",
+        "Mountain View, CA"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/1436181490732782",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Remote%2C%20Poland\u0026offices[1]=Warsaw%2C%20Poland\u0026q=Software%20Engineering",
+      "postedAtCandidate": "2025-06-10T13:59:00-07:00",
+      "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:37:46.9470900\u002B00:00",
+      "isActive": true,
+      "contentHash": "1ebd6b2f73c5426d55ef4af18c82c7e574f630e9e1de6860380860d8ae5121a4"
+    },
+    {
+      "id": "1511721227182750",
+      "title": "Solutions Architect",
+      "company": "Meta",
+      "locations": [
+        "London, UK"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/1511721227182750",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+      "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:37:46.9470900\u002B00:00",
+      "isActive": true,
+      "contentHash": "e12aa531aa30418bcdd265c1713034f742d5d18e73c09538f538016995250579"
+    },
+    {
+      "id": "885487337878828",
+      "title": "Solutions Architect",
+      "company": "Meta",
+      "locations": [
+        "London, UK"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/885487337878828",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+      "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:37:46.9470900\u002B00:00",
+      "isActive": true,
+      "contentHash": "e12aa531aa30418bcdd265c1713034f742d5d18e73c09538f538016995250579"
+    },
+    {
+      "id": "731925816170138",
+      "title": "Network Engineer, Optical Deployment",
+      "company": "Meta",
+      "locations": [
+        "London, UK"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/731925816170138",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
+      "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
+      "lastSeenAt": "2026-04-18T14:28:27.1763420\u002B00:00",
+      "isActive": false,
+      "contentHash": "49af5c66769f7f9fd7e9cacb7c0a0112beed85641dae83ba0acae962f436b4cb"
+    }
+  ]
+}

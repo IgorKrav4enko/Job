@@ -1,0 +1,47 @@
+{
+  "runs": [
+    {
+      "runId": "2026-04-20T16-33-23Z",
+      "generatedAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "totalJobs": 24,
+      "addedCount": 24,
+      "removedCount": 0,
+      "changedCount": 0,
+      "unchangedCount": 0,
+      "perLocation": [
+        {
+          "location": "Ireland",
+          "totalJobs": 8,
+          "addedCount": 8,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 0
+        },
+        {
+          "location": "Poland",
+          "totalJobs": 1,
+          "addedCount": 1,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 0
+        },
+        {
+          "location": "Switzerland",
+          "totalJobs": 6,
+          "addedCount": 6,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 0
+        },
+        {
+          "location": "United Kingdom",
+          "totalJobs": 9,
+          "addedCount": 9,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 0
+        }
+      ]
+    }
+  ]
+}

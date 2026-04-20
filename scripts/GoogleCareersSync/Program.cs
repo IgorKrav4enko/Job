@@ -5,6 +5,9 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using System.Diagnostics;
+
+const int MicrosoftSearchPageSize = 10;
 
 var mode = GetMode(args);
 var root = FindRepositoryRoot();
@@ -14,6 +17,25 @@ var runsPath = Path.Combine(root, "data", "google-careers-runs.json");
 var runDetailsPath = Path.Combine(root, "data", "google-careers-run-details.json");
 var removedDetailsPath = Path.Combine(root, "data", "google-careers-removed-details.json");
 var rawRunsDirectoryPath = Path.Combine(root, "data-raw", "google-careers", "runs");
+var metaConfigPath = Path.Combine(root, "config", "meta-careers-locations.json");
+var metaOutputPath = Path.Combine(root, "data", "meta-careers-jobs.json");
+var metaRunsPath = Path.Combine(root, "data", "meta-careers-runs.json");
+var metaRunDetailsPath = Path.Combine(root, "data", "meta-careers-run-details.json");
+var metaRemovedDetailsPath = Path.Combine(root, "data", "meta-careers-removed-details.json");
+var metaRawRunsDirectoryPath = Path.Combine(root, "data-raw", "meta-careers", "runs");
+var metaFixturesDirectoryPath = Path.Combine(root, "data-debug", "meta-careers", "fixtures");
+var appleOutputPath = Path.Combine(root, "data", "apple-careers-jobs.json");
+var appleRunsPath = Path.Combine(root, "data", "apple-careers-runs.json");
+var appleRunDetailsPath = Path.Combine(root, "data", "apple-careers-run-details.json");
+var appleRemovedDetailsPath = Path.Combine(root, "data", "apple-careers-removed-details.json");
+var appleRawRunsDirectoryPath = Path.Combine(root, "data-raw", "apple-jobs", "runs");
+var microsoftConfigPath = Path.Combine(root, "config", "microsoft-careers-locations.json");
+var microsoftOutputPath = Path.Combine(root, "data", "microsoft-careers-jobs.json");
+var microsoftRunsPath = Path.Combine(root, "data", "microsoft-careers-runs.json");
+var microsoftRunDetailsPath = Path.Combine(root, "data", "microsoft-careers-run-details.json");
+var microsoftRemovedDetailsPath = Path.Combine(root, "data", "microsoft-careers-removed-details.json");
+var microsoftRawRunsDirectoryPath = Path.Combine(root, "data-raw", "microsoft-careers", "runs");
+var microsoftFixturesDirectoryPath = Path.Combine(root, "data-debug", "microsoft-careers", "payloads");
 
 var locations = LoadLocations(configPath);
 var searchTerm = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_SEARCH_TERM")?.Trim();
@@ -53,6 +75,248 @@ switch (mode)
             Console.WriteLine($"Wrote parse preview to {outPath}.");
         }
 
+        break;
+    }
+
+    case PipelineMode.CollectMeta:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var metaLocations = LoadMetaLocations(metaConfigPath);
+        var metaSearchTerm = GetMetaSearchTerm();
+        var maxMetaPages = GetMetaMaxPages();
+        var maxMetaDetails = GetMetaMaxDetails();
+        var fetchResult = ShouldFetchMetaLive()
+            ? await FetchMetaJobsAsync(metaLocations, metaSearchTerm, runCapturedAt, maxMetaPages, maxMetaDetails)
+            : await FetchMetaJobsFromCacheAsync(metaFixturesDirectoryPath, runCapturedAt, maxMetaDetails);
+        var rawRun = new MetaRawRun(runId, runCapturedAt, "meta-careers", fetchResult.Sources);
+
+        Directory.CreateDirectory(metaRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(metaRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+
+        Console.WriteLine($"Collected Meta raw run {runId} with {fetchResult.JobCount} unique jobs.");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
+    case PipelineMode.NormalizeMetaLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(metaRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No Meta raw runs found. Run collect-meta first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<MetaRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Meta raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(metaOutputPath);
+        var latestJobs = BuildMetaJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildMetaDataset(LoadMetaLocations(metaConfigPath), mergeResult.Jobs, latestRawRun.GeneratedAt);
+
+        await WriteJsonFileAsync(metaOutputPath, dataset);
+
+        Console.WriteLine(
+            $"Normalized latest Meta raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"({mergeResult.Jobs.Count(static job => job.IsActive)} active / " +
+            $"{mergeResult.Jobs.Count(static job => !job.IsActive)} inactive).");
+        Console.WriteLine($"Wrote {metaOutputPath}.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeMetaLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(metaRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No Meta raw runs found. Run collect-meta first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<MetaRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Meta raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(metaOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(metaRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousRunDetails = LoadJsonOrDefault<RunDetailsDataset>(metaRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRunDetails = NormalizeRunDetails(previousRunDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousRunDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Meta raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildMetaJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0
+            ? new List<JobItem>()
+            : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildMetaDataset(LoadMetaLocations(metaConfigPath), mergeResult.Jobs, latestRawRun.GeneratedAt);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, latestRawRun.RunId, mergeResult);
+        var rawRuns = LoadMetaRawRuns(metaRawRunsDirectoryPath);
+        var removedDetailsDataset = BuildMetaRemovedDetailsDataset(dataset, runDetailsDataset, rawRuns);
+
+        await WriteMetaDatasetsAsync(metaOutputPath, metaRunsPath, metaRunDetailsPath, metaRemovedDetailsPath, dataset, runsDataset, runDetailsDataset, removedDetailsDataset);
+
+        Console.WriteLine(
+            $"Analyzed latest Meta raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"(+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
+    case PipelineMode.NormalizeAppleLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(appleRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No Apple raw runs found. Run Apple raw collection first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<AppleRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Apple raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(appleOutputPath);
+        var latestJobs = BuildAppleJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildAppleDataset(latestRawRun, mergeResult.Jobs);
+
+        await WriteJsonFileAsync(appleOutputPath, dataset);
+
+        Console.WriteLine(
+            $"Normalized latest Apple raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"({mergeResult.Jobs.Count(static job => job.IsActive)} active / " +
+            $"{mergeResult.Jobs.Count(static job => !job.IsActive)} inactive).");
+        Console.WriteLine($"Wrote {appleOutputPath}.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeAppleLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(appleRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No Apple raw runs found. Run Apple raw collection first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<AppleRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Apple raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(appleOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(appleRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousRunDetails = LoadJsonOrDefault<RunDetailsDataset>(appleRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRunDetails = NormalizeRunDetails(previousRunDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousRunDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Apple raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildAppleJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0
+            ? new List<JobItem>()
+            : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildAppleDataset(latestRawRun, mergeResult.Jobs);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, latestRawRun.RunId, mergeResult);
+        var rawRuns = LoadAppleRawRuns(appleRawRunsDirectoryPath);
+        var removedDetailsDataset = BuildAppleRemovedDetailsDataset(dataset, runDetailsDataset, rawRuns);
+
+        await WriteAppleDatasetsAsync(appleOutputPath, appleRunsPath, appleRunDetailsPath, appleRemovedDetailsPath, dataset, runsDataset, runDetailsDataset, removedDetailsDataset);
+
+        Console.WriteLine(
+            $"Analyzed latest Apple raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"(+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
+    case PipelineMode.CollectMicrosoft:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var microsoftLocations = LoadMicrosoftLocations(microsoftConfigPath);
+        var microsoftSearchTerm = GetMicrosoftSearchTerm();
+        var maxMicrosoftPages = GetMicrosoftMaxPages();
+        var maxMicrosoftDetails = GetMicrosoftMaxDetails();
+        var fetchResult = ShouldFetchMicrosoftLive()
+            ? await FetchMicrosoftJobsAsync(microsoftLocations, microsoftSearchTerm, runCapturedAt, maxMicrosoftPages, maxMicrosoftDetails)
+            : await FetchMicrosoftJobsFromCacheAsync(microsoftLocations, microsoftFixturesDirectoryPath, microsoftSearchTerm, runCapturedAt, maxMicrosoftPages, maxMicrosoftDetails);
+        var rawRun = new MicrosoftRawRun(runId, runCapturedAt, "microsoft-careers", microsoftSearchTerm, fetchResult.Sources);
+
+        Directory.CreateDirectory(microsoftRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(microsoftRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+
+        Console.WriteLine($"Collected Microsoft raw run {runId} with {fetchResult.JobCount} unique jobs.");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
+    case PipelineMode.NormalizeMicrosoftLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(microsoftRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No Microsoft raw runs found. Run collect-microsoft first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<MicrosoftRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Microsoft raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(microsoftOutputPath);
+        var latestJobs = BuildMicrosoftJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildMicrosoftDataset(latestRawRun, mergeResult.Jobs);
+
+        await WriteJsonFileAsync(microsoftOutputPath, dataset);
+
+        Console.WriteLine(
+            $"Normalized latest Microsoft raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"({mergeResult.Jobs.Count(static job => job.IsActive)} active / " +
+            $"{mergeResult.Jobs.Count(static job => !job.IsActive)} inactive).");
+        Console.WriteLine($"Wrote {microsoftOutputPath}.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeMicrosoftLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(microsoftRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No Microsoft raw runs found. Run collect-microsoft first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<MicrosoftRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Microsoft raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(microsoftOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(microsoftRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousRunDetails = LoadJsonOrDefault<RunDetailsDataset>(microsoftRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRunDetails = NormalizeRunDetails(previousRunDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousRunDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Microsoft raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildMicrosoftJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0
+            ? new List<JobItem>()
+            : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildMicrosoftDataset(latestRawRun, mergeResult.Jobs);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, latestRawRun.RunId, mergeResult);
+        var rawRuns = LoadMicrosoftRawRuns(microsoftRawRunsDirectoryPath);
+        var removedDetailsDataset = BuildMicrosoftRemovedDetailsDataset(dataset, runDetailsDataset, rawRuns);
+
+        await WriteMicrosoftDatasetsAsync(microsoftOutputPath, microsoftRunsPath, microsoftRunDetailsPath, microsoftRemovedDetailsPath, dataset, runsDataset, runDetailsDataset, removedDetailsDataset);
+
+        Console.WriteLine(
+            $"Analyzed latest Microsoft raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"(+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
         break;
     }
 
@@ -196,6 +460,14 @@ static PipelineMode GetMode(string[] args)
         "analyze-latest" => PipelineMode.AnalyzeLatest,
         "rebuild" => PipelineMode.Rebuild,
         "parse-html" => PipelineMode.ParseHtml,
+        "collect-meta" => PipelineMode.CollectMeta,
+        "normalize-meta-latest" => PipelineMode.NormalizeMetaLatest,
+        "analyze-meta-latest" => PipelineMode.AnalyzeMetaLatest,
+        "normalize-apple-latest" => PipelineMode.NormalizeAppleLatest,
+        "analyze-apple-latest" => PipelineMode.AnalyzeAppleLatest,
+        "collect-microsoft" => PipelineMode.CollectMicrosoft,
+        "normalize-microsoft-latest" => PipelineMode.NormalizeMicrosoftLatest,
+        "analyze-microsoft-latest" => PipelineMode.AnalyzeMicrosoftLatest,
         _ => throw new ArgumentOutOfRangeException(nameof(args), $"Unknown mode '{args[0]}'.")
     };
 }
@@ -209,6 +481,57 @@ static async Task WriteNormalizedDatasetsAsync(
     RunHistoryDataset runsDataset,
     RunDetailsDataset runDetailsDataset,
     RemovedDetailsDataset removedDetailsDataset)
+{
+    Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+    await WriteJsonFileAsync(outputPath, dataset);
+    await WriteJsonFileAsync(runsPath, runsDataset);
+    await WriteJsonFileAsync(runDetailsPath, runDetailsDataset);
+    await WriteJsonFileAsync(removedDetailsPath, removedDetailsDataset);
+}
+
+static async Task WriteMetaDatasetsAsync(
+    string outputPath,
+    string runsPath,
+    string runDetailsPath,
+    string removedDetailsPath,
+    JobDataset dataset,
+    RunHistoryDataset runsDataset,
+    RunDetailsDataset runDetailsDataset,
+    MetaRemovedDetailsDataset removedDetailsDataset)
+{
+    Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+    await WriteJsonFileAsync(outputPath, dataset);
+    await WriteJsonFileAsync(runsPath, runsDataset);
+    await WriteJsonFileAsync(runDetailsPath, runDetailsDataset);
+    await WriteJsonFileAsync(removedDetailsPath, removedDetailsDataset);
+}
+
+static async Task WriteAppleDatasetsAsync(
+    string outputPath,
+    string runsPath,
+    string runDetailsPath,
+    string removedDetailsPath,
+    JobDataset dataset,
+    RunHistoryDataset runsDataset,
+    RunDetailsDataset runDetailsDataset,
+    AppleRemovedDetailsDataset removedDetailsDataset)
+{
+    Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+    await WriteJsonFileAsync(outputPath, dataset);
+    await WriteJsonFileAsync(runsPath, runsDataset);
+    await WriteJsonFileAsync(runDetailsPath, runDetailsDataset);
+    await WriteJsonFileAsync(removedDetailsPath, removedDetailsDataset);
+}
+
+static async Task WriteMicrosoftDatasetsAsync(
+    string outputPath,
+    string runsPath,
+    string runDetailsPath,
+    string removedDetailsPath,
+    JobDataset dataset,
+    RunHistoryDataset runsDataset,
+    RunDetailsDataset runDetailsDataset,
+    MicrosoftRemovedDetailsDataset removedDetailsDataset)
 {
     Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
     await WriteJsonFileAsync(outputPath, dataset);
@@ -268,6 +591,33 @@ static List<RawRun> LoadRawRuns(string rawRunsDirectoryPath)
         .ToList();
 }
 
+static List<MetaRawRun> LoadMetaRawRuns(string rawRunsDirectoryPath)
+{
+    return GetRawRunFilePaths(rawRunsDirectoryPath)
+        .Select(path => LoadJsonOrDefault<MetaRawRun>(path) ?? throw new InvalidOperationException($"Could not read Meta raw run file '{path}'."))
+        .OrderBy(static run => run.GeneratedAt, StringComparer.Ordinal)
+        .ThenBy(static run => run.RunId, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<AppleRawRun> LoadAppleRawRuns(string rawRunsDirectoryPath)
+{
+    return GetRawRunFilePaths(rawRunsDirectoryPath)
+        .Select(path => LoadJsonOrDefault<AppleRawRun>(path) ?? throw new InvalidOperationException($"Could not read Apple raw run file '{path}'."))
+        .OrderBy(static run => run.GeneratedAt, StringComparer.Ordinal)
+        .ThenBy(static run => run.RunId, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<MicrosoftRawRun> LoadMicrosoftRawRuns(string rawRunsDirectoryPath)
+{
+    return GetRawRunFilePaths(rawRunsDirectoryPath)
+        .Select(path => LoadJsonOrDefault<MicrosoftRawRun>(path) ?? throw new InvalidOperationException($"Could not read Microsoft raw run file '{path}'."))
+        .OrderBy(static run => run.GeneratedAt, StringComparer.Ordinal)
+        .ThenBy(static run => run.RunId, StringComparer.Ordinal)
+        .ToList();
+}
+
 static List<JobItem> BuildJobsFromRawRun(RawRun rawRun)
 {
     return rawRun.Sources
@@ -285,6 +635,97 @@ static List<JobItem> BuildJobsFromRawRun(RawRun rawRun)
                     job.UpdatedAtCandidate)))
         .GroupBy(static job => job.Id, StringComparer.Ordinal)
         .Select(static group => group.First())
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildMetaJobsFromRawRun(MetaRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source =>
+            source.Jobs.Select(job =>
+                new JobItem(
+                    job.JobId,
+                    HtmlDecode(job.TitleRaw ?? string.Empty),
+                    string.IsNullOrWhiteSpace(job.CompanyRaw) ? "Meta" : HtmlDecode(job.CompanyRaw),
+                    job.LocationsRaw ?? new List<string>(),
+                    job.JobUrl,
+                    job.RequestedLocation,
+                    job.SearchUrl,
+                    job.PostedAtCandidate,
+                    job.UpdatedAtCandidate)))
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group => group.First())
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildAppleJobsFromRawRun(AppleRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source =>
+            source.Jobs.Select(job =>
+                new JobItem(
+                    job.JobId,
+                    HtmlDecode(job.TitleRaw ?? string.Empty),
+                    string.IsNullOrWhiteSpace(job.CompanyRaw) ? "Apple" : HtmlDecode(job.CompanyRaw),
+                    job.LocationsRaw ?? new List<string>(),
+                    job.JobUrl,
+                    job.RequestedLocation,
+                    job.SearchUrl,
+                    job.PostedAtCandidate,
+                    job.UpdatedAtCandidate)))
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var first = group.First();
+            var locations = group
+                .SelectMany(static job => job.Locations)
+                .Where(static location => !string.IsNullOrWhiteSpace(location))
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static location => location, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            return first with { Locations = locations.Count == 0 ? first.Locations : locations };
+        })
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildMicrosoftJobsFromRawRun(MicrosoftRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source =>
+            source.Jobs.Select(job =>
+                new JobItem(
+                    job.JobId,
+                    HtmlDecode(job.TitleRaw ?? string.Empty),
+                    string.IsNullOrWhiteSpace(job.CompanyRaw) ? "Microsoft" : HtmlDecode(job.CompanyRaw),
+                    job.LocationsRaw ?? new List<string>(),
+                    job.JobUrl,
+                    job.RequestedLocation,
+                    job.SearchUrl,
+                    job.PostedAtCandidate,
+                    job.UpdatedAtCandidate)))
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var first = group.First();
+            var locations = group
+                .SelectMany(static job => job.Locations)
+                .Where(static location => !string.IsNullOrWhiteSpace(location))
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static location => location, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            return first with { Locations = locations.Count == 0 ? first.Locations : locations };
+        })
         .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
         .ThenBy(static job => job.Id, StringComparer.Ordinal)
         .ToList();
@@ -353,6 +794,189 @@ static RemovedDetailsDataset BuildRemovedDetailsDataset(
     return new RemovedDetailsDataset(jobs);
 }
 
+static MetaRemovedDetailsDataset BuildMetaRemovedDetailsDataset(
+    JobDataset dataset,
+    RunDetailsDataset runDetailsDataset,
+    List<MetaRawRun> rawRuns)
+{
+    var inactiveJobs = dataset.Jobs
+        .Where(static job => !job.IsActive)
+        .ToDictionary(static job => job.Id, StringComparer.Ordinal);
+
+    var removedAtById = runDetailsDataset.Runs
+        .SelectMany(run => run.Removed.Select(job => new { job.Id, run.RunId }))
+        .GroupBy(static item => item.Id, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.First().RunId,
+            StringComparer.Ordinal);
+
+    var rawByJobId = rawRuns
+        .SelectMany(run => run.Sources.SelectMany(source => source.Jobs.Select(job => new { run, job })))
+        .GroupBy(static item => item.job.JobId, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.Last(),
+            StringComparer.Ordinal);
+    var generatedAtByRunId = rawRuns.ToDictionary(static run => run.RunId, static run => run.GeneratedAt, StringComparer.Ordinal);
+
+    var jobs = inactiveJobs.Values
+        .Select(job =>
+        {
+            rawByJobId.TryGetValue(job.Id, out var rawMatch);
+            removedAtById.TryGetValue(job.Id, out var removedInRunId);
+            var removedAt = removedInRunId is not null && generatedAtByRunId.TryGetValue(removedInRunId, out var generatedAt)
+                ? generatedAt
+                : removedInRunId;
+
+            return new MetaRemovedJobDetail(
+                job.Id,
+                job.Title,
+                job.Company,
+                job.Url,
+                job.Locations,
+                job.RequestedLocation,
+                job.FirstSeenAt,
+                job.LastSeenAt,
+                removedAt,
+                removedInRunId,
+                rawMatch?.job.ApplyUrlRaw,
+                rawMatch?.job.AboutTheJobRaw,
+                rawMatch?.job.ResponsibilitiesRaw,
+                rawMatch?.job.MinimumQualificationsRaw,
+                rawMatch?.job.PreferredQualificationsRaw,
+                rawMatch?.job.PostedAtCandidate,
+                rawMatch?.job.UpdatedAtCandidate);
+        })
+        .OrderByDescending(static job => job.RemovedAt, StringComparer.Ordinal)
+        .ThenBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ToList();
+
+    return new MetaRemovedDetailsDataset(jobs);
+}
+
+static AppleRemovedDetailsDataset BuildAppleRemovedDetailsDataset(
+    JobDataset dataset,
+    RunDetailsDataset runDetailsDataset,
+    List<AppleRawRun> rawRuns)
+{
+    var inactiveJobs = dataset.Jobs
+        .Where(static job => !job.IsActive)
+        .ToDictionary(static job => job.Id, StringComparer.Ordinal);
+
+    var removedAtById = runDetailsDataset.Runs
+        .SelectMany(run => run.Removed.Select(job => new { job.Id, run.RunId }))
+        .GroupBy(static item => item.Id, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.First().RunId,
+            StringComparer.Ordinal);
+
+    var rawByJobId = rawRuns
+        .SelectMany(run => run.Sources.SelectMany(source => source.Jobs.Select(job => new { run, job })))
+        .GroupBy(static item => item.job.JobId, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.Last(),
+            StringComparer.Ordinal);
+    var generatedAtByRunId = rawRuns.ToDictionary(static run => run.RunId, static run => run.GeneratedAt, StringComparer.Ordinal);
+
+    var jobs = inactiveJobs.Values
+        .Select(job =>
+        {
+            rawByJobId.TryGetValue(job.Id, out var rawMatch);
+            removedAtById.TryGetValue(job.Id, out var removedInRunId);
+            var removedAt = removedInRunId is not null && generatedAtByRunId.TryGetValue(removedInRunId, out var generatedAt)
+                ? generatedAt
+                : removedInRunId;
+
+            return new AppleRemovedJobDetail(
+                job.Id,
+                job.Title,
+                job.Company,
+                job.Url,
+                job.Locations,
+                job.RequestedLocation,
+                job.FirstSeenAt,
+                job.LastSeenAt,
+                removedAt,
+                removedInRunId,
+                rawMatch?.job.ApplyUrlRaw,
+                rawMatch?.job.AboutTheJobRaw,
+                rawMatch?.job.ResponsibilitiesRaw,
+                rawMatch?.job.MinimumQualificationsRaw,
+                rawMatch?.job.PreferredQualificationsRaw,
+                rawMatch?.job.PostedAtCandidate,
+                rawMatch?.job.UpdatedAtCandidate);
+        })
+        .OrderByDescending(static job => job.RemovedAt, StringComparer.Ordinal)
+        .ThenBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ToList();
+
+    return new AppleRemovedDetailsDataset(jobs);
+}
+
+static MicrosoftRemovedDetailsDataset BuildMicrosoftRemovedDetailsDataset(
+    JobDataset dataset,
+    RunDetailsDataset runDetailsDataset,
+    List<MicrosoftRawRun> rawRuns)
+{
+    var inactiveJobs = dataset.Jobs
+        .Where(static job => !job.IsActive)
+        .ToDictionary(static job => job.Id, StringComparer.Ordinal);
+
+    var removedAtById = runDetailsDataset.Runs
+        .SelectMany(run => run.Removed.Select(job => new { job.Id, run.RunId }))
+        .GroupBy(static item => item.Id, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.First().RunId,
+            StringComparer.Ordinal);
+
+    var rawByJobId = rawRuns
+        .SelectMany(run => run.Sources.SelectMany(source => source.Jobs.Select(job => new { run, job })))
+        .GroupBy(static item => item.job.JobId, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.Last(),
+            StringComparer.Ordinal);
+    var generatedAtByRunId = rawRuns.ToDictionary(static run => run.RunId, static run => run.GeneratedAt, StringComparer.Ordinal);
+
+    var jobs = inactiveJobs.Values
+        .Select(job =>
+        {
+            rawByJobId.TryGetValue(job.Id, out var rawMatch);
+            removedAtById.TryGetValue(job.Id, out var removedInRunId);
+            var removedAt = removedInRunId is not null && generatedAtByRunId.TryGetValue(removedInRunId, out var generatedAt)
+                ? generatedAt
+                : removedInRunId;
+
+            return new MicrosoftRemovedJobDetail(
+                job.Id,
+                job.Title,
+                job.Company,
+                job.Url,
+                job.Locations,
+                job.RequestedLocation,
+                job.FirstSeenAt,
+                job.LastSeenAt,
+                removedAt,
+                removedInRunId,
+                rawMatch?.job.ApplyUrlRaw,
+                rawMatch?.job.AboutTheJobRaw,
+                rawMatch?.job.ResponsibilitiesRaw,
+                rawMatch?.job.MinimumQualificationsRaw,
+                rawMatch?.job.PreferredQualificationsRaw,
+                rawMatch?.job.PostedAtCandidate,
+                rawMatch?.job.UpdatedAtCandidate);
+        })
+        .OrderByDescending(static job => job.RemovedAt, StringComparer.Ordinal)
+        .ThenBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ToList();
+
+    return new MicrosoftRemovedDetailsDataset(jobs);
+}
+
 static string FindRepositoryRoot()
 {
     var current = new DirectoryInfo(AppContext.BaseDirectory);
@@ -387,10 +1011,80 @@ static List<LocationConfig> LoadLocations(string configPath)
     return locations ?? new List<LocationConfig>();
 }
 
+static List<MetaLocationConfig> LoadMetaLocations(string configPath)
+{
+    var envValue = Environment.GetEnvironmentVariable("META_CAREERS_LOCATIONS");
+    var json = string.IsNullOrWhiteSpace(envValue)
+        ? File.ReadAllText(configPath)
+        : envValue;
+
+    var locations = JsonSerializer.Deserialize<List<MetaLocationConfig>>(json, JsonOptions());
+    return locations ?? new List<MetaLocationConfig>();
+}
+
+static List<MicrosoftLocationConfig> LoadMicrosoftLocations(string configPath)
+{
+    var envValue = Environment.GetEnvironmentVariable("MICROSOFT_CAREERS_LOCATIONS");
+    var json = string.IsNullOrWhiteSpace(envValue)
+        ? File.ReadAllText(configPath)
+        : envValue;
+
+    var locations = JsonSerializer.Deserialize<List<MicrosoftLocationConfig>>(json, JsonOptions());
+    return locations ?? new List<MicrosoftLocationConfig>();
+}
+
 static int GetMaxPages()
 {
     var rawValue = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_MAX_PAGES");
     return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 5;
+}
+
+static int GetMetaMaxPages()
+{
+    var rawValue = Environment.GetEnvironmentVariable("META_CAREERS_MAX_PAGES");
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 2;
+}
+
+static string GetMetaSearchTerm()
+{
+    return Environment.GetEnvironmentVariable("META_CAREERS_SEARCH_TERM")?.Trim() ?? "Software Engineering";
+}
+
+static int GetMetaMaxDetails()
+{
+    var rawValue = Environment.GetEnvironmentVariable("META_CAREERS_MAX_DETAILS");
+    return int.TryParse(rawValue, out var parsed) && parsed >= 0 ? parsed : 5;
+}
+
+static bool ShouldFetchMetaLive()
+{
+    var rawValue = Environment.GetEnvironmentVariable("META_CAREERS_LIVE");
+    return string.Equals(rawValue, "true", StringComparison.OrdinalIgnoreCase) ||
+        string.Equals(rawValue, "1", StringComparison.Ordinal);
+}
+
+static int GetMicrosoftMaxPages()
+{
+    var rawValue = Environment.GetEnvironmentVariable("MICROSOFT_CAREERS_MAX_PAGES");
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 2;
+}
+
+static int GetMicrosoftMaxDetails()
+{
+    var rawValue = Environment.GetEnvironmentVariable("MICROSOFT_CAREERS_MAX_DETAILS");
+    return int.TryParse(rawValue, out var parsed) && parsed >= 0 ? parsed : 5;
+}
+
+static string GetMicrosoftSearchTerm()
+{
+    return Environment.GetEnvironmentVariable("MICROSOFT_CAREERS_SEARCH_TERM")?.Trim() ?? "Software Engineer";
+}
+
+static bool ShouldFetchMicrosoftLive()
+{
+    var rawValue = Environment.GetEnvironmentVariable("MICROSOFT_CAREERS_LIVE");
+    return string.Equals(rawValue, "true", StringComparison.OrdinalIgnoreCase) ||
+        string.Equals(rawValue, "1", StringComparison.Ordinal);
 }
 
 static T? LoadJsonOrDefault<T>(string path)
@@ -566,6 +1260,1057 @@ static async Task<FetchResult> FetchJobsAsync(
             .ThenBy(job => job.Id, StringComparer.Ordinal)
             .ToList(),
         rawSources);
+}
+
+static async Task<MetaFetchResult> FetchMetaJobsAsync(
+    List<MetaLocationConfig> locations,
+    string searchTerm,
+    string capturedAt,
+    int maxPages,
+    int maxDetails)
+{
+    using var httpClient = CreateHttpClient();
+    var sources = new List<MetaRawSource>();
+    var uniqueJobIds = new HashSet<string>(StringComparer.Ordinal);
+    var enrichedDetails = 0;
+
+    foreach (var location in locations)
+    {
+        var rawJobs = new List<MetaRawJobItem>();
+        var seenForLocation = new HashSet<string>(StringComparer.Ordinal);
+
+        for (var page = 1; page <= maxPages; page += 1)
+        {
+            var searchUrl = BuildMetaSearchUrl(location.Offices, searchTerm, page);
+            Console.WriteLine($"Fetching Meta search {searchUrl}");
+
+            List<MetaSearchResult> searchResults;
+            try
+            {
+                searchResults = await FetchMetaSearchResultsAsync(httpClient, searchUrl, location.Label, searchTerm, page, location.Offices);
+            }
+            catch (HttpRequestException error)
+            {
+                Console.WriteLine($"Meta search fetch failed for {location.Label} page {page}: {error.Message}");
+                break;
+            }
+
+            var newJobsOnPage = 0;
+
+            foreach (var searchResult in searchResults)
+            {
+                if (!seenForLocation.Add(searchResult.JobId))
+                {
+                    continue;
+                }
+
+                newJobsOnPage += 1;
+                uniqueJobIds.Add(searchResult.JobId);
+                // Meta MVP policy:
+                // required raw fields come from search payload for every discovered job;
+                // detail fields are best-effort and intentionally limited to avoid large live crawls.
+                if (enrichedDetails < maxDetails)
+                {
+                    rawJobs.Add(await EnrichMetaRawJobAsync(httpClient, searchResult, capturedAt));
+                    enrichedDetails += 1;
+                }
+                else
+                {
+                    rawJobs.Add(BuildMetaRawJob(searchResult, null, capturedAt));
+                }
+            }
+
+            if (searchResults.Count == 0)
+            {
+                Console.WriteLine($"No Meta job links found on page {page} for {location.Label}. Stopping pagination.");
+                break;
+            }
+
+            if (newJobsOnPage == 0)
+            {
+                Console.WriteLine($"No new Meta job ids on page {page} for {location.Label}. Stopping pagination.");
+                break;
+            }
+        }
+
+        sources.Add(
+            new MetaRawSource(
+                location.Label,
+                location.Slug,
+                location.Offices,
+                BuildMetaSearchUrl(location.Offices, searchTerm, 1),
+                rawJobs));
+    }
+
+    return new MetaFetchResult(sources, uniqueJobIds.Count);
+}
+
+static async Task<MetaFetchResult> FetchMetaJobsFromCacheAsync(
+    string fixturesDirectoryPath,
+    string capturedAt,
+    int maxDetails)
+{
+    var searchDirectoryPath = Path.Combine(fixturesDirectoryPath, "search");
+    var detailDirectoryPath = Path.Combine(fixturesDirectoryPath, "details");
+    if (!Directory.Exists(searchDirectoryPath))
+    {
+        throw new DirectoryNotFoundException(
+            $"Meta fixtures not found at '{searchDirectoryPath}'. Set META_CAREERS_LIVE=true for live validation.");
+    }
+
+    var sourcesBySlug = new Dictionary<string, MetaRawSourceDraft>(StringComparer.Ordinal);
+    var uniqueJobIds = new HashSet<string>(StringComparer.Ordinal);
+    var enrichedDetails = 0;
+
+    foreach (var path in Directory.GetFiles(searchDirectoryPath, "*.json", SearchOption.TopDirectoryOnly).OrderBy(static item => item, StringComparer.Ordinal))
+    {
+        using var document = JsonDocument.Parse(await File.ReadAllTextAsync(path));
+        var root = document.RootElement;
+        var requestedLocation = ReadJsonString(root, "requestedLocation") ?? "Unknown";
+        var locationSlug = ReadJsonString(root, "locationSlug") ?? requestedLocation.ToLowerInvariant().Replace(' ', '-');
+        var searchUrl = ReadJsonString(root, "searchUrl") ?? string.Empty;
+        var offices = ReadJsonStringList(root, "offices");
+        var payload = root.TryGetProperty("payload", out var payloadElement) ? payloadElement.GetRawText() : root.GetRawText();
+        var searchResults = ParseMetaGraphqlSearchResults(payload, searchUrl, requestedLocation);
+
+        if (!sourcesBySlug.TryGetValue(locationSlug, out var source))
+        {
+            source = new MetaRawSourceDraft(requestedLocation, locationSlug, offices, searchUrl, new List<MetaRawJobItem>());
+            sourcesBySlug[locationSlug] = source;
+        }
+
+        foreach (var searchResult in searchResults)
+        {
+            uniqueJobIds.Add(searchResult.JobId);
+            MetaJobDetail? detail = null;
+            var detailPath = Path.Combine(detailDirectoryPath, $"{searchResult.JobId}.html");
+            if (enrichedDetails < maxDetails && File.Exists(detailPath))
+            {
+                detail = ParseMetaJobDetailHtml(await File.ReadAllTextAsync(detailPath), searchResult.JobId);
+                enrichedDetails += 1;
+            }
+
+            source.Jobs.Add(BuildMetaRawJob(searchResult, detail, capturedAt));
+        }
+    }
+
+    var sources = sourcesBySlug.Values
+        .Select(static source => new MetaRawSource(source.RequestedLocation, source.LocationSlug, source.Offices, source.SearchUrl, source.Jobs))
+        .OrderBy(static source => source.RequestedLocation, StringComparer.Ordinal)
+        .ToList();
+
+    return new MetaFetchResult(sources, uniqueJobIds.Count);
+}
+
+static async Task<MicrosoftFetchResult> FetchMicrosoftJobsAsync(
+    List<MicrosoftLocationConfig> locations,
+    string searchTerm,
+    string capturedAt,
+    int maxPages,
+    int maxDetails)
+{
+    using var httpClient = CreateHttpClient();
+    var sources = new List<MicrosoftRawSource>();
+    var uniqueJobIds = new HashSet<string>(StringComparer.Ordinal);
+    var enrichedDetails = 0;
+
+    foreach (var location in locations)
+    {
+        var rawJobs = new List<MicrosoftRawJobItem>();
+        var seenForLocation = new HashSet<string>(StringComparer.Ordinal);
+
+        for (var page = 0; page < maxPages; page += 1)
+        {
+            var start = page * MicrosoftSearchPageSize;
+            var searchUrl = BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, start);
+            Console.WriteLine($"Fetching Microsoft search {searchUrl}");
+            var payload = await httpClient.GetStringAsync(searchUrl);
+            var searchPage = ParseMicrosoftSearchPayload(payload, searchUrl, location.Label);
+
+            var newJobsOnPage = 0;
+            foreach (var searchResult in searchPage.Results)
+            {
+                if (!seenForLocation.Add(searchResult.JobId))
+                {
+                    continue;
+                }
+
+                newJobsOnPage += 1;
+                uniqueJobIds.Add(searchResult.JobId);
+                // Microsoft MVP policy:
+                // every discovered job must have required raw fields from search API;
+                // detail enrichment is best-effort and intentionally capped to avoid large live crawls.
+                if (enrichedDetails < maxDetails)
+                {
+                    rawJobs.Add(await EnrichMicrosoftRawJobAsync(httpClient, searchResult, location.SearchLocation, capturedAt));
+                    enrichedDetails += 1;
+                }
+                else
+                {
+                    rawJobs.Add(BuildMicrosoftRawJob(searchResult, null, capturedAt));
+                }
+            }
+
+            if (searchPage.Results.Count == 0 || newJobsOnPage == 0 || start + MicrosoftSearchPageSize >= searchPage.TotalCount)
+            {
+                break;
+            }
+        }
+
+        sources.Add(
+            new MicrosoftRawSource(
+                location.Label,
+                location.Slug,
+                location.SearchLocation,
+                BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, 0),
+                rawJobs));
+    }
+
+    return new MicrosoftFetchResult(sources, uniqueJobIds.Count);
+}
+
+static async Task<MicrosoftFetchResult> FetchMicrosoftJobsFromCacheAsync(
+    List<MicrosoftLocationConfig> locations,
+    string fixturesDirectoryPath,
+    string searchTerm,
+    string capturedAt,
+    int maxPages,
+    int maxDetails)
+{
+    if (!Directory.Exists(fixturesDirectoryPath))
+    {
+        throw new DirectoryNotFoundException(
+            $"Microsoft fixtures not found at '{fixturesDirectoryPath}'. Set MICROSOFT_CAREERS_LIVE=true for live validation.");
+    }
+
+    var sources = new List<MicrosoftRawSource>();
+    var uniqueJobIds = new HashSet<string>(StringComparer.Ordinal);
+    var enrichedDetails = 0;
+
+    foreach (var location in locations)
+    {
+        var rawJobs = new List<MicrosoftRawJobItem>();
+        var seenForLocation = new HashSet<string>(StringComparer.Ordinal);
+
+        for (var page = 0; page < maxPages; page += 1)
+        {
+            var start = page * MicrosoftSearchPageSize;
+            var searchUrl = BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, start);
+            var cachePath = FindMicrosoftSearchCachePath(fixturesDirectoryPath, location.CacheSlug ?? location.Slug, start);
+            if (cachePath is null)
+            {
+                if (page == 0)
+                {
+                    Console.WriteLine($"No Microsoft cached search payload found for {location.Label}.");
+                }
+
+                break;
+            }
+
+            var searchPage = ParseMicrosoftSearchPayload(await File.ReadAllTextAsync(cachePath), searchUrl, location.Label);
+            var newJobsOnPage = 0;
+
+            foreach (var searchResult in searchPage.Results)
+            {
+                if (!seenForLocation.Add(searchResult.JobId))
+                {
+                    continue;
+                }
+
+                newJobsOnPage += 1;
+                uniqueJobIds.Add(searchResult.JobId);
+                MicrosoftJobDetail? detail = null;
+                var detailPath = Path.Combine(fixturesDirectoryPath, $"detail-{searchResult.JobId}-api.json");
+                if (enrichedDetails < maxDetails && File.Exists(detailPath))
+                {
+                    detail = ParseMicrosoftDetailPayload(await File.ReadAllTextAsync(detailPath), searchResult);
+                    enrichedDetails += 1;
+                }
+
+                rawJobs.Add(BuildMicrosoftRawJob(searchResult, detail, capturedAt));
+            }
+
+            if (searchPage.Results.Count == 0 || newJobsOnPage == 0 || start + MicrosoftSearchPageSize >= searchPage.TotalCount)
+            {
+                break;
+            }
+        }
+
+        sources.Add(
+            new MicrosoftRawSource(
+                location.Label,
+                location.Slug,
+                location.SearchLocation,
+                BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, 0),
+                rawJobs));
+    }
+
+    return new MicrosoftFetchResult(sources, uniqueJobIds.Count);
+}
+
+static string? FindMicrosoftSearchCachePath(string fixturesDirectoryPath, string cacheSlug, int start)
+{
+    var exactPath = Path.Combine(fixturesDirectoryPath, $"search-{cacheSlug}-start{start}-api.json");
+    if (File.Exists(exactPath))
+    {
+        return exactPath;
+    }
+
+    var legacyStartZeroPath = Path.Combine(fixturesDirectoryPath, $"search-{cacheSlug}-api.json");
+    return start == 0 && File.Exists(legacyStartZeroPath) ? legacyStartZeroPath : null;
+}
+
+static async Task<MicrosoftRawJobItem> EnrichMicrosoftRawJobAsync(
+    HttpClient httpClient,
+    MicrosoftSearchResult searchResult,
+    string queriedLocation,
+    string capturedAt)
+{
+    try
+    {
+        var detailUrl = BuildMicrosoftDetailApiUrl(searchResult.JobId, queriedLocation);
+        Console.WriteLine($"Fetching Microsoft detail {detailUrl}");
+        var payload = await httpClient.GetStringAsync(detailUrl);
+        var detail = ParseMicrosoftDetailPayload(payload, searchResult);
+        return BuildMicrosoftRawJob(searchResult, detail, capturedAt);
+    }
+    catch (HttpRequestException error)
+    {
+        Console.WriteLine($"Microsoft detail fetch failed for {searchResult.JobId}: {error.Message}");
+        return BuildMicrosoftRawJob(searchResult, null, capturedAt);
+    }
+    catch (JsonException error)
+    {
+        Console.WriteLine($"Microsoft detail parse failed for {searchResult.JobId}: {error.Message}");
+        return BuildMicrosoftRawJob(searchResult, null, capturedAt);
+    }
+}
+
+static MicrosoftRawJobItem BuildMicrosoftRawJob(
+    MicrosoftSearchResult searchResult,
+    MicrosoftJobDetail? detail,
+    string capturedAt)
+{
+    return new MicrosoftRawJobItem(
+        searchResult.JobId,
+        detail?.TitleRaw ?? searchResult.TitleRaw,
+        detail?.CompanyRaw ?? searchResult.CompanyRaw ?? "Microsoft",
+        detail?.LocationsRaw is { Count: > 0 } ? detail.LocationsRaw : searchResult.LocationsRaw,
+        detail?.JobUrl ?? searchResult.JobUrl,
+        searchResult.SearchUrl,
+        searchResult.RequestedLocation,
+        detail?.ApplyUrlRaw ?? searchResult.JobUrl,
+        detail?.AboutTheJobRaw,
+        detail?.ResponsibilitiesRaw,
+        detail?.MinimumQualificationsRaw,
+        detail?.PreferredQualificationsRaw,
+        detail?.PostedAtCandidate ?? searchResult.PostedAtCandidate,
+        detail?.UpdatedAtCandidate,
+        capturedAt);
+}
+
+static MicrosoftSearchPage ParseMicrosoftSearchPayload(string payload, string searchUrl, string requestedLocation)
+{
+    using var document = JsonDocument.Parse(payload);
+    var data = GetJsonPropertyOrDefault(document.RootElement, "data");
+    var positions = data.ValueKind == JsonValueKind.Object && data.TryGetProperty("positions", out var positionsElement)
+        ? positionsElement
+        : default;
+    var totalCount = ReadJsonInt(data, "count") ?? 0;
+    var results = new List<MicrosoftSearchResult>();
+
+    if (positions.ValueKind != JsonValueKind.Array)
+    {
+        return new MicrosoftSearchPage(totalCount, results);
+    }
+
+    foreach (var position in positions.EnumerateArray())
+    {
+        var id = ReadJsonStringOrNumber(position, "id");
+        if (string.IsNullOrWhiteSpace(id))
+        {
+            continue;
+        }
+
+        var jobUrl = NormalizeMicrosoftJobUrl(ReadJsonString(position, "publicUrl") ?? ReadJsonString(position, "positionUrl"), id);
+        results.Add(
+            new MicrosoftSearchResult(
+                id,
+                ReadJsonString(position, "name"),
+                "Microsoft",
+                ReadJsonStringList(position, "locations"),
+                jobUrl,
+                searchUrl,
+                requestedLocation,
+                ReadMicrosoftUnixTimestamp(position, "postedTs")));
+    }
+
+    return new MicrosoftSearchPage(totalCount, results);
+}
+
+static MicrosoftJobDetail? ParseMicrosoftDetailPayload(string payload, MicrosoftSearchResult fallback)
+{
+    using var document = JsonDocument.Parse(payload);
+    var data = GetJsonPropertyOrDefault(document.RootElement, "data");
+    if (data.ValueKind != JsonValueKind.Object)
+    {
+        return null;
+    }
+
+    var jobDescription = ReadJsonString(data, "jobDescription");
+    var sections = SplitMicrosoftJobDescription(jobDescription);
+    var id = ReadJsonStringOrNumber(data, "id") ?? fallback.JobId;
+    var jobUrl = NormalizeMicrosoftJobUrl(ReadJsonString(data, "publicUrl") ?? ReadJsonString(data, "positionUrl"), id);
+
+    return new MicrosoftJobDetail(
+        id,
+        ReadJsonString(data, "name") ?? fallback.TitleRaw,
+        "Microsoft",
+        ReadJsonStringList(data, "locations"),
+        jobUrl,
+        jobUrl,
+        sections.AboutTheJobRaw,
+        sections.ResponsibilitiesRaw,
+        sections.MinimumQualificationsRaw,
+        sections.PreferredQualificationsRaw,
+        ReadMicrosoftUnixTimestamp(data, "postedTs") ?? fallback.PostedAtCandidate,
+        null);
+}
+
+static MicrosoftJobDescriptionSections SplitMicrosoftJobDescription(string? jobDescription)
+{
+    if (string.IsNullOrWhiteSpace(jobDescription))
+    {
+        return new MicrosoftJobDescriptionSections(null, null, null, null);
+    }
+
+    var about = ExtractMicrosoftSection(jobDescription, "Overview", new[] { "Responsibilities", "Qualifications" });
+    var responsibilities = ExtractMicrosoftSection(jobDescription, "Responsibilities", new[] { "Qualifications" });
+    var qualifications = ExtractMicrosoftSection(jobDescription, "Qualifications", Array.Empty<string>());
+    var minimum = ExtractMicrosoftSection(qualifications, "Required skills", new[] { "Desired skills" }) ?? qualifications;
+    var preferred = ExtractMicrosoftSection(qualifications, "Desired skills", Array.Empty<string>());
+
+    return new MicrosoftJobDescriptionSections(
+        CleanRawHtml(about),
+        CleanRawHtml(responsibilities),
+        CleanRawHtml(minimum),
+        CleanRawHtml(preferred));
+}
+
+static string? ExtractMicrosoftSection(string? html, string startHeading, IReadOnlyCollection<string> endHeadings)
+{
+    if (string.IsNullOrWhiteSpace(html))
+    {
+        return null;
+    }
+
+    var startMatch = Regex.Match(
+        html,
+        $@"<(?:b|strong)>\s*{Regex.Escape(startHeading)}\s*</(?:b|strong)>",
+        RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.Singleline);
+    if (!startMatch.Success)
+    {
+        return null;
+    }
+
+    var startIndex = startMatch.Index + startMatch.Length;
+    var endIndex = html.Length;
+    foreach (var endHeading in endHeadings)
+    {
+        var endMatch = Regex.Match(
+            html[startIndex..],
+            $@"<(?:b|strong)>\s*{Regex.Escape(endHeading)}\s*</(?:b|strong)>",
+            RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.Singleline);
+        if (endMatch.Success)
+        {
+            endIndex = Math.Min(endIndex, startIndex + endMatch.Index);
+        }
+    }
+
+    return html[startIndex..endIndex];
+}
+
+static string BuildMicrosoftSearchApiUrl(string sourceLocation, string searchTerm, int start)
+{
+    var query = new Dictionary<string, string?>
+    {
+        ["domain"] = "microsoft.com",
+        ["query"] = searchTerm,
+        ["location"] = sourceLocation,
+        ["start"] = start.ToString(CultureInfo.InvariantCulture),
+        ["sort_by"] = "relevance",
+        ["filter_include_remote"] = "1"
+    };
+
+    return "https://apply.careers.microsoft.com/api/pcsx/search?" + BuildQueryString(query);
+}
+
+static string BuildMicrosoftDetailApiUrl(string jobId, string queriedLocation)
+{
+    var query = new Dictionary<string, string?>
+    {
+        ["position_id"] = jobId,
+        ["domain"] = "microsoft.com",
+        ["hl"] = "en",
+        ["queried_location"] = queriedLocation
+    };
+
+    return "https://apply.careers.microsoft.com/api/pcsx/position_details?" + BuildQueryString(query);
+}
+
+static string BuildQueryString(Dictionary<string, string?> query)
+{
+    return string.Join(
+        "&",
+        query.Select(static item =>
+            $"{Uri.EscapeDataString(item.Key)}={Uri.EscapeDataString(item.Value ?? string.Empty)}"));
+}
+
+static string NormalizeMicrosoftJobUrl(string? rawUrl, string jobId)
+{
+    if (string.IsNullOrWhiteSpace(rawUrl))
+    {
+        return $"https://apply.careers.microsoft.com/careers/job/{jobId}";
+    }
+
+    if (rawUrl.StartsWith("http", StringComparison.OrdinalIgnoreCase))
+    {
+        return rawUrl;
+    }
+
+    return $"https://apply.careers.microsoft.com/{rawUrl.TrimStart('/')}";
+}
+
+static string? ReadMicrosoftUnixTimestamp(JsonElement element, string propertyName)
+{
+    var value = ReadJsonLong(element, propertyName);
+    return value is null ? null : DateTimeOffset.FromUnixTimeSeconds(value.Value).ToString("O");
+}
+
+static int? ReadJsonInt(JsonElement element, string propertyName)
+{
+    var value = ReadJsonLong(element, propertyName);
+    return value is > int.MaxValue or < int.MinValue ? null : (int?)value;
+}
+
+static long? ReadJsonLong(JsonElement element, string propertyName)
+{
+    if (element.ValueKind != JsonValueKind.Object || !element.TryGetProperty(propertyName, out var value))
+    {
+        return null;
+    }
+
+    if (value.ValueKind == JsonValueKind.Number && value.TryGetInt64(out var number))
+    {
+        return number;
+    }
+
+    if (value.ValueKind == JsonValueKind.String && long.TryParse(value.GetString(), NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
+    {
+        return parsed;
+    }
+
+    return null;
+}
+
+static string? ReadJsonStringOrNumber(JsonElement element, string propertyName)
+{
+    if (element.ValueKind != JsonValueKind.Object || !element.TryGetProperty(propertyName, out var value))
+    {
+        return null;
+    }
+
+    return value.ValueKind switch
+    {
+        JsonValueKind.String => value.GetString(),
+        JsonValueKind.Number => value.TryGetInt64(out var number) ? number.ToString(CultureInfo.InvariantCulture) : value.GetRawText(),
+        _ => null
+    };
+}
+
+static async Task<string> GetMetaSearchHtmlAsync(HttpClient httpClient, string searchUrl)
+{
+    try
+    {
+        return await httpClient.GetStringAsync(searchUrl);
+    }
+    catch (HttpRequestException)
+    {
+        // Meta currently rejects HttpClient's canonicalized offices[0] query format.
+        // curl -g preserves the bracketed query keys that the public site accepts.
+        return await FetchWithCurlAsync(searchUrl);
+    }
+}
+
+static async Task<string> FetchWithCurlAsync(string url)
+{
+    var startInfo = new ProcessStartInfo
+    {
+        FileName = "curl",
+        RedirectStandardOutput = true,
+        RedirectStandardError = true
+    };
+    startInfo.ArgumentList.Add("-g");
+    startInfo.ArgumentList.Add("-L");
+    startInfo.ArgumentList.Add("--fail");
+    startInfo.ArgumentList.Add("--silent");
+    startInfo.ArgumentList.Add("--show-error");
+    startInfo.ArgumentList.Add(url);
+
+    using var process = Process.Start(startInfo) ?? throw new InvalidOperationException("Could not start curl.");
+    var outputTask = process.StandardOutput.ReadToEndAsync();
+    var errorTask = process.StandardError.ReadToEndAsync();
+    await process.WaitForExitAsync();
+
+    if (process.ExitCode != 0)
+    {
+        var error = await errorTask;
+        throw new HttpRequestException($"curl failed with exit code {process.ExitCode}: {error}");
+    }
+
+    return await outputTask;
+}
+
+static async Task<string> PostMetaGraphqlWithCurlAsync(
+    Dictionary<string, string> formFields,
+    string lsdToken,
+    string referer)
+{
+    var startInfo = new ProcessStartInfo
+    {
+        FileName = "curl",
+        RedirectStandardOutput = true,
+        RedirectStandardError = true
+    };
+    startInfo.ArgumentList.Add("-L");
+    startInfo.ArgumentList.Add("--fail");
+    startInfo.ArgumentList.Add("--silent");
+    startInfo.ArgumentList.Add("--show-error");
+    startInfo.ArgumentList.Add("--compressed");
+    startInfo.ArgumentList.Add("https://www.metacareers.com/api/graphql/");
+    startInfo.ArgumentList.Add("-H");
+    startInfo.ArgumentList.Add("content-type: application/x-www-form-urlencoded");
+    startInfo.ArgumentList.Add("-H");
+    startInfo.ArgumentList.Add($"x-fb-lsd: {lsdToken}");
+    startInfo.ArgumentList.Add("-H");
+    startInfo.ArgumentList.Add($"referer: {referer}");
+
+    foreach (var (key, value) in formFields)
+    {
+        startInfo.ArgumentList.Add("--data-urlencode");
+        startInfo.ArgumentList.Add($"{key}={value}");
+    }
+
+    using var process = Process.Start(startInfo) ?? throw new InvalidOperationException("Could not start curl.");
+    var outputTask = process.StandardOutput.ReadToEndAsync();
+    var errorTask = process.StandardError.ReadToEndAsync();
+    await process.WaitForExitAsync();
+
+    if (process.ExitCode != 0)
+    {
+        var error = await errorTask;
+        throw new HttpRequestException($"Meta GraphQL curl failed with exit code {process.ExitCode}: {error}");
+    }
+
+    return await outputTask;
+}
+
+static async Task<List<MetaSearchResult>> FetchMetaSearchResultsAsync(
+    HttpClient httpClient,
+    string searchUrl,
+    string requestedLocation,
+    string searchTerm,
+    int page,
+    List<string> offices)
+{
+    var searchHtml = await GetMetaSearchHtmlAsync(httpClient, searchUrl);
+    var lsdToken = ExtractMetaLsdToken(searchHtml);
+    if (string.IsNullOrWhiteSpace(lsdToken))
+    {
+        return ExtractMetaSearchResults(searchHtml, searchUrl, requestedLocation);
+    }
+
+    var variables = new
+    {
+        search_input = new
+        {
+            q = searchTerm,
+            divisions = Array.Empty<string>(),
+            offices,
+            roles = Array.Empty<string>(),
+            leadership_levels = Array.Empty<string>(),
+            saved_jobs = Array.Empty<string>(),
+            saved_searches = Array.Empty<string>(),
+            sub_teams = Array.Empty<string>(),
+            teams = Array.Empty<string>(),
+            is_remote_only = false,
+            sort_by_new = false,
+            page,
+            results_per_page = (int?)null
+        }
+    };
+
+    var formFields = new Dictionary<string, string>
+    {
+        ["__a"] = "1",
+        ["__user"] = "0",
+        ["fb_api_caller_class"] = "RelayModern",
+        ["fb_api_req_friendly_name"] = "CareersJobSearchResultsDataQuery",
+        ["variables"] = JsonSerializer.Serialize(variables),
+        ["server_timestamps"] = "true",
+        ["doc_id"] = "29615178951461218",
+        ["lsd"] = lsdToken
+    };
+
+    var json = await PostMetaGraphqlWithCurlAsync(formFields, lsdToken, searchUrl);
+    return ParseMetaGraphqlSearchResults(json, searchUrl, requestedLocation);
+}
+
+static async Task<MetaRawJobItem> EnrichMetaRawJobAsync(
+    HttpClient httpClient,
+    MetaSearchResult searchResult,
+    string capturedAt)
+{
+    try
+    {
+        Console.WriteLine($"Fetching Meta detail {searchResult.JobUrl}");
+        var detailHtml = await GetMetaDetailHtmlAsync(httpClient, searchResult.JobUrl);
+        var detail = ParseMetaJobDetailHtml(detailHtml, searchResult.JobId);
+        return BuildMetaRawJob(searchResult, detail, capturedAt);
+    }
+    catch (HttpRequestException error)
+    {
+        Console.WriteLine($"Meta detail fetch failed for {searchResult.JobId}: {error.Message}");
+        return BuildMetaRawJob(searchResult, null, capturedAt);
+    }
+}
+
+static async Task<string> GetMetaDetailHtmlAsync(HttpClient httpClient, string jobUrl)
+{
+    try
+    {
+        return await httpClient.GetStringAsync(jobUrl);
+    }
+    catch (HttpRequestException)
+    {
+        return await FetchWithCurlAsync(jobUrl);
+    }
+}
+
+static MetaRawJobItem BuildMetaRawJob(
+    MetaSearchResult searchResult,
+    MetaJobDetail? detail,
+    string capturedAt)
+{
+    return new MetaRawJobItem(
+        searchResult.JobId,
+        detail?.TitleRaw ?? searchResult.TitleRaw,
+        detail?.CompanyRaw ?? searchResult.CompanyRaw ?? "Meta",
+        detail?.LocationsRaw ?? searchResult.LocationsRaw,
+        detail?.JobUrl ?? searchResult.JobUrl,
+        searchResult.SearchUrl,
+        searchResult.RequestedLocation,
+        detail?.ApplyUrlRaw,
+        detail?.AboutTheJobRaw,
+        detail?.ResponsibilitiesRaw,
+        detail?.MinimumQualificationsRaw,
+        detail?.PreferredQualificationsRaw,
+        detail?.PostedAtCandidate,
+        detail?.UpdatedAtCandidate,
+        capturedAt);
+}
+
+static string BuildMetaSearchUrl(List<string> offices, string searchTerm, int page)
+{
+    var parts = offices
+        .Select((office, index) => $"offices[{index}]={Uri.EscapeDataString(office)}")
+        .ToList();
+
+    if (!string.IsNullOrWhiteSpace(searchTerm))
+    {
+        parts.Add($"q={Uri.EscapeDataString(searchTerm)}");
+    }
+
+    if (page > 1)
+    {
+        parts.Add($"page={page.ToString(CultureInfo.InvariantCulture)}");
+    }
+
+    return $"https://www.metacareers.com/jobsearch?{string.Join("&", parts)}";
+}
+
+static List<MetaSearchResult> ExtractMetaSearchResults(
+    string html,
+    string searchUrl,
+    string requestedLocation)
+{
+    var decoded = WebUtility.HtmlDecode(html);
+    var matches = Regex.Matches(
+            decoded,
+            @"profile/job_details/(?<id>\d+)",
+            RegexOptions.CultureInvariant | RegexOptions.IgnoreCase)
+        .Select(static match => match.Groups["id"].Value)
+        .Distinct(StringComparer.Ordinal)
+        .OrderBy(static value => value, StringComparer.Ordinal)
+        .ToList();
+
+    return matches
+        .Select(id =>
+            new MetaSearchResult(
+                id,
+                null,
+                "Meta",
+                new List<string>(),
+                NormalizeMetaJobUrl(id),
+                searchUrl,
+                requestedLocation))
+        .ToList();
+}
+
+static string? ExtractMetaLsdToken(string html)
+{
+    return ExtractFirst(html, @"""LSD"",\[\],\{""token"":""(?<value>[^""]+)""");
+}
+
+static List<MetaSearchResult> ParseMetaGraphqlSearchResults(
+    string json,
+    string searchUrl,
+    string requestedLocation)
+{
+    using var document = JsonDocument.Parse(json);
+    if (!document.RootElement.TryGetProperty("data", out var data) ||
+        !data.TryGetProperty("job_search_with_featured_jobs", out var container))
+    {
+        return new List<MetaSearchResult>();
+    }
+
+    var results = new List<MetaSearchResult>();
+    AddMetaGraphqlJobs(results, container, "featured_jobs", searchUrl, requestedLocation);
+    AddMetaGraphqlJobs(results, container, "all_jobs", searchUrl, requestedLocation);
+
+    return results
+        .GroupBy(static job => job.JobId, StringComparer.Ordinal)
+        .Select(static group => group.First())
+        .OrderBy(static job => job.TitleRaw, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.JobId, StringComparer.Ordinal)
+        .ToList();
+}
+
+static void AddMetaGraphqlJobs(
+    List<MetaSearchResult> results,
+    JsonElement container,
+    string propertyName,
+    string searchUrl,
+    string requestedLocation)
+{
+    if (!container.TryGetProperty(propertyName, out var jobs) || jobs.ValueKind != JsonValueKind.Array)
+    {
+        return;
+    }
+
+    foreach (var job in jobs.EnumerateArray())
+    {
+        var id = ReadJsonString(job, "id");
+        if (string.IsNullOrWhiteSpace(id))
+        {
+            continue;
+        }
+
+        results.Add(
+            new MetaSearchResult(
+                id,
+                ReadJsonString(job, "title"),
+                "Meta",
+                ReadJsonStringList(job, "locations"),
+                NormalizeMetaJobUrl(id),
+                searchUrl,
+                requestedLocation));
+    }
+}
+
+static List<string> ReadJsonStringList(JsonElement element, string propertyName)
+{
+    if (element.ValueKind != JsonValueKind.Object ||
+        !element.TryGetProperty(propertyName, out var value) ||
+        value.ValueKind != JsonValueKind.Array)
+    {
+        return new List<string>();
+    }
+
+    return value.EnumerateArray()
+        .Where(static item => item.ValueKind == JsonValueKind.String)
+        .Select(static item => item.GetString() ?? string.Empty)
+        .Where(static item => !string.IsNullOrWhiteSpace(item))
+        .ToList();
+}
+
+static MetaJobDetail? ParseMetaJobDetailHtml(string html, string fallbackJobId)
+{
+    foreach (var json in ExtractMetaJsonLdBlocks(html))
+    {
+        try
+        {
+            using var document = JsonDocument.Parse(json);
+            var root = document.RootElement;
+            var jobPosting = FindMetaJobPosting(root);
+            if (jobPosting is null)
+            {
+                continue;
+            }
+
+            var jobUrl = ExtractMetaCanonicalUrl(html) ?? NormalizeMetaJobUrl(fallbackJobId);
+            var locations = ExtractMetaJsonLdLocations(jobPosting.Value);
+            var qualifications = SplitMetaQualifications(ReadJsonString(jobPosting.Value, "qualifications"));
+            return new MetaJobDetail(
+                fallbackJobId,
+                ReadJsonString(jobPosting.Value, "title"),
+                ReadJsonString(GetJsonPropertyOrDefault(jobPosting.Value, "hiringOrganization"), "name") ?? "Meta",
+                locations,
+                jobUrl,
+                null,
+                ReadJsonString(jobPosting.Value, "description"),
+                ReadJsonString(jobPosting.Value, "responsibilities"),
+                qualifications.MinimumQualificationsRaw,
+                qualifications.PreferredQualificationsRaw,
+                ReadJsonString(jobPosting.Value, "datePosted"),
+                null);
+        }
+        catch (JsonException)
+        {
+            continue;
+        }
+    }
+
+    return null;
+}
+
+static MetaQualifications SplitMetaQualifications(string? qualificationsRaw)
+{
+    if (string.IsNullOrWhiteSpace(qualificationsRaw))
+    {
+        return new MetaQualifications(null, null);
+    }
+
+    var match = Regex.Match(
+        qualificationsRaw,
+        @"(?<minimum>.*?)(?:\s| )*Preferred Qualifications(?:\s| )*(?<preferred>.*)",
+        RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
+    if (!match.Success)
+    {
+        match = Regex.Match(
+            qualificationsRaw,
+            @"(?<minimum>.*?)(?<preferred>B\.S\. Computer Science or related technical field.*)",
+            RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.Singleline);
+    }
+
+    return match.Success
+        ? new MetaQualifications(
+            EmptyToNull(match.Groups["minimum"].Value.Trim()),
+            EmptyToNull(match.Groups["preferred"].Value.Trim()))
+        : new MetaQualifications(qualificationsRaw.Trim(), null);
+}
+
+static List<string> ExtractMetaJsonLdBlocks(string html)
+{
+    return Regex.Matches(
+            html,
+            @"<script[^>]+type=[""']application/ld\+json[""'][^>]*>(?<value>.*?)</script>",
+            RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.Singleline)
+        .Select(static match => WebUtility.HtmlDecode(match.Groups["value"].Value).Trim())
+        .Where(static value => !string.IsNullOrWhiteSpace(value))
+        .ToList();
+}
+
+static JsonElement? FindMetaJobPosting(JsonElement element)
+{
+    if (IsMetaJobPosting(element))
+    {
+        return element;
+    }
+
+    if (element.ValueKind == JsonValueKind.Array)
+    {
+        foreach (var child in element.EnumerateArray())
+        {
+            var match = FindMetaJobPosting(child);
+            if (match is not null)
+            {
+                return match;
+            }
+        }
+    }
+
+    if (element.ValueKind == JsonValueKind.Object && element.TryGetProperty("@graph", out var graph))
+    {
+        return FindMetaJobPosting(graph);
+    }
+
+    return null;
+}
+
+static bool IsMetaJobPosting(JsonElement element)
+{
+    if (element.ValueKind != JsonValueKind.Object || !element.TryGetProperty("@type", out var typeElement))
+    {
+        return false;
+    }
+
+    if (typeElement.ValueKind == JsonValueKind.String)
+    {
+        return string.Equals(typeElement.GetString(), "JobPosting", StringComparison.OrdinalIgnoreCase);
+    }
+
+    return typeElement.ValueKind == JsonValueKind.Array &&
+        typeElement.EnumerateArray().Any(static item =>
+            item.ValueKind == JsonValueKind.String &&
+            string.Equals(item.GetString(), "JobPosting", StringComparison.OrdinalIgnoreCase));
+}
+
+static List<string> ExtractMetaJsonLdLocations(JsonElement jobPosting)
+{
+    if (!jobPosting.TryGetProperty("jobLocation", out var locationElement))
+    {
+        return new List<string>();
+    }
+
+    var locationElements = locationElement.ValueKind == JsonValueKind.Array
+        ? locationElement.EnumerateArray().ToList()
+        : new List<JsonElement> { locationElement };
+
+    return locationElements
+        .Select(static item => ReadJsonString(item, "name"))
+        .Where(static value => !string.IsNullOrWhiteSpace(value))
+        .Select(static value => value!)
+        .Distinct(StringComparer.Ordinal)
+        .ToList();
+}
+
+static string? ExtractMetaCanonicalUrl(string html)
+{
+    return ExtractFirst(html, @"<link[^>]+rel=[""']canonical[""'][^>]+href=[""'](?<value>[^""']+)[""']");
+}
+
+static string NormalizeMetaJobUrl(string jobId)
+{
+    return $"https://www.metacareers.com/profile/job_details/{jobId}";
+}
+
+static string? ReadJsonString(JsonElement element, string propertyName)
+{
+    if (element.ValueKind != JsonValueKind.Object || !element.TryGetProperty(propertyName, out var value))
+    {
+        return null;
+    }
+
+    return value.ValueKind == JsonValueKind.String ? value.GetString() : null;
+}
+
+static JsonElement GetJsonPropertyOrDefault(JsonElement element, string propertyName)
+{
+    return element.ValueKind == JsonValueKind.Object && element.TryGetProperty(propertyName, out var value)
+        ? value
+        : default;
 }
 
 static HttpClient CreateHttpClient()
@@ -1311,7 +3056,10 @@ static MergeResult MergeJobs(
         };
 
         mergedJobs.Add(inactiveJob);
-        removed.Add(ToDeltaItem(inactiveJob));
+        if (previousJob.IsActive)
+        {
+            removed.Add(ToDeltaItem(inactiveJob));
+        }
     }
 
     return new MergeResult(
@@ -1508,6 +3256,69 @@ static JobDataset BuildDataset(
         jobs);
 }
 
+static JobDataset BuildMetaDataset(
+    List<MetaLocationConfig> locations,
+    List<JobItem> jobs,
+    string generatedAt)
+{
+    var googleCompatibleLocations = locations
+        .Select(static location => new LocationConfig(location.Slug, location.Label, string.Join(" | ", location.Offices)))
+        .ToList();
+
+    return new JobDataset(
+        generatedAt,
+        "Meta Careers",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active Meta jobs from latest raw snapshot.",
+        "Software Engineering",
+        googleCompatibleLocations,
+        jobs);
+}
+
+static JobDataset BuildAppleDataset(AppleRawRun rawRun, List<JobItem> jobs)
+{
+    var googleCompatibleLocations = rawRun.Sources
+        .GroupBy(static source => source.LocationSlug, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var source = group.First();
+            return new LocationConfig(source.LocationSlug, source.RequestedLocation, source.SearchUrl);
+        })
+        .OrderBy(static location => location.Label, StringComparer.Ordinal)
+        .ToList();
+
+    return new JobDataset(
+        rawRun.GeneratedAt,
+        "Apple Jobs",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active Apple jobs from latest raw snapshot.",
+        rawRun.SearchTerm,
+        googleCompatibleLocations,
+        jobs);
+}
+
+static JobDataset BuildMicrosoftDataset(MicrosoftRawRun rawRun, List<JobItem> jobs)
+{
+    var googleCompatibleLocations = rawRun.Sources
+        .GroupBy(static source => source.LocationSlug, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var source = group.First();
+            return new LocationConfig(source.LocationSlug, source.RequestedLocation, source.SearchLocation);
+        })
+        .OrderBy(static location => location.Label, StringComparer.Ordinal)
+        .ToList();
+
+    return new JobDataset(
+        rawRun.GeneratedAt,
+        "Microsoft Careers",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active Microsoft jobs from latest raw snapshot.",
+        rawRun.SearchTerm,
+        googleCompatibleLocations,
+        jobs);
+}
+
 static JsonSerializerOptions JsonOptions()
 {
     return new JsonSerializerOptions
@@ -1522,6 +3333,17 @@ internal sealed record LocationConfig(
     [property: JsonPropertyName("slug")] string Slug,
     [property: JsonPropertyName("label")] string Label,
     [property: JsonPropertyName("query")] string Query);
+
+internal sealed record MetaLocationConfig(
+    [property: JsonPropertyName("slug")] string Slug,
+    [property: JsonPropertyName("label")] string Label,
+    [property: JsonPropertyName("offices")] List<string> Offices);
+
+internal sealed record MicrosoftLocationConfig(
+    [property: JsonPropertyName("slug")] string Slug,
+    [property: JsonPropertyName("label")] string Label,
+    [property: JsonPropertyName("searchLocation")] string SearchLocation,
+    [property: JsonPropertyName("cacheSlug")] string? CacheSlug = null);
 
 internal sealed record ParseHtmlPreview(
     [property: JsonPropertyName("source")] string Source,
@@ -1626,6 +3448,174 @@ internal sealed record RawLocationDetail(
     [property: JsonPropertyName("regionCode")] string? RegionCode,
     [property: JsonPropertyName("countryCode")] string? CountryCode);
 
+internal sealed record MetaRawRun(
+    [property: JsonPropertyName("runId")] string RunId,
+    [property: JsonPropertyName("generatedAt")] string GeneratedAt,
+    [property: JsonPropertyName("source")] string Source,
+    [property: JsonPropertyName("sources")] List<MetaRawSource> Sources);
+
+internal sealed record MetaRawSource(
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("locationSlug")] string LocationSlug,
+    [property: JsonPropertyName("offices")] List<string> Offices,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("jobs")] List<MetaRawJobItem> Jobs);
+
+internal sealed record MetaRawJobItem(
+    [property: JsonPropertyName("jobId")] string JobId,
+    [property: JsonPropertyName("titleRaw")] string? TitleRaw,
+    [property: JsonPropertyName("companyRaw")] string? CompanyRaw,
+    [property: JsonPropertyName("locationsRaw")] List<string> LocationsRaw,
+    [property: JsonPropertyName("jobUrl")] string JobUrl,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate,
+    [property: JsonPropertyName("capturedAt")] string CapturedAt);
+
+internal sealed record AppleRawRun(
+    [property: JsonPropertyName("runId")] string RunId,
+    [property: JsonPropertyName("generatedAt")] string GeneratedAt,
+    [property: JsonPropertyName("source")] string Source,
+    [property: JsonPropertyName("searchTerm")] string SearchTerm,
+    [property: JsonPropertyName("sources")] List<AppleRawSource> Sources);
+
+internal sealed record AppleRawSource(
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("locationSlug")] string LocationSlug,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("jobs")] List<AppleRawJobItem> Jobs);
+
+internal sealed record AppleRawJobItem(
+    [property: JsonPropertyName("jobId")] string JobId,
+    [property: JsonPropertyName("sourceJobId")] string? SourceJobId,
+    [property: JsonPropertyName("titleRaw")] string? TitleRaw,
+    [property: JsonPropertyName("companyRaw")] string? CompanyRaw,
+    [property: JsonPropertyName("locationsRaw")] List<string> LocationsRaw,
+    [property: JsonPropertyName("jobUrl")] string JobUrl,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate,
+    [property: JsonPropertyName("capturedAt")] string CapturedAt);
+
+internal sealed record MicrosoftRawRun(
+    [property: JsonPropertyName("runId")] string RunId,
+    [property: JsonPropertyName("generatedAt")] string GeneratedAt,
+    [property: JsonPropertyName("source")] string Source,
+    [property: JsonPropertyName("searchTerm")] string SearchTerm,
+    [property: JsonPropertyName("sources")] List<MicrosoftRawSource> Sources);
+
+internal sealed record MicrosoftRawSource(
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("locationSlug")] string LocationSlug,
+    [property: JsonPropertyName("searchLocation")] string SearchLocation,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("jobs")] List<MicrosoftRawJobItem> Jobs);
+
+internal sealed record MicrosoftRawJobItem(
+    [property: JsonPropertyName("jobId")] string JobId,
+    [property: JsonPropertyName("titleRaw")] string? TitleRaw,
+    [property: JsonPropertyName("companyRaw")] string? CompanyRaw,
+    [property: JsonPropertyName("locationsRaw")] List<string> LocationsRaw,
+    [property: JsonPropertyName("jobUrl")] string JobUrl,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate,
+    [property: JsonPropertyName("capturedAt")] string CapturedAt);
+
+internal sealed record MetaSearchResult(
+    string JobId,
+    string? TitleRaw,
+    string? CompanyRaw,
+    List<string> LocationsRaw,
+    string JobUrl,
+    string SearchUrl,
+    string RequestedLocation);
+
+internal sealed record MetaJobDetail(
+    string JobId,
+    string? TitleRaw,
+    string? CompanyRaw,
+    List<string> LocationsRaw,
+    string JobUrl,
+    string? ApplyUrlRaw,
+    string? AboutTheJobRaw,
+    string? ResponsibilitiesRaw,
+    string? MinimumQualificationsRaw,
+    string? PreferredQualificationsRaw,
+    string? PostedAtCandidate,
+    string? UpdatedAtCandidate);
+
+internal sealed record MicrosoftSearchResult(
+    string JobId,
+    string? TitleRaw,
+    string? CompanyRaw,
+    List<string> LocationsRaw,
+    string JobUrl,
+    string SearchUrl,
+    string RequestedLocation,
+    string? PostedAtCandidate);
+
+internal sealed record MicrosoftSearchPage(
+    int TotalCount,
+    List<MicrosoftSearchResult> Results);
+
+internal sealed record MicrosoftJobDetail(
+    string JobId,
+    string? TitleRaw,
+    string? CompanyRaw,
+    List<string> LocationsRaw,
+    string JobUrl,
+    string? ApplyUrlRaw,
+    string? AboutTheJobRaw,
+    string? ResponsibilitiesRaw,
+    string? MinimumQualificationsRaw,
+    string? PreferredQualificationsRaw,
+    string? PostedAtCandidate,
+    string? UpdatedAtCandidate);
+
+internal sealed record MicrosoftJobDescriptionSections(
+    string? AboutTheJobRaw,
+    string? ResponsibilitiesRaw,
+    string? MinimumQualificationsRaw,
+    string? PreferredQualificationsRaw);
+
+internal sealed record MetaQualifications(
+    string? MinimumQualificationsRaw,
+    string? PreferredQualificationsRaw);
+
+internal sealed record MetaFetchResult(
+    List<MetaRawSource> Sources,
+    int JobCount);
+
+internal sealed record MicrosoftFetchResult(
+    List<MicrosoftRawSource> Sources,
+    int JobCount);
+
+internal sealed record MetaRawSourceDraft(
+    string RequestedLocation,
+    string LocationSlug,
+    List<string> Offices,
+    string SearchUrl,
+    List<MetaRawJobItem> Jobs);
+
 internal sealed record FetchResult(
     List<JobItem> Jobs,
     List<RawSource> RawSources);
@@ -1659,6 +3649,72 @@ internal sealed record RunDetailsDataset(
 
 internal sealed record RemovedDetailsDataset(
     [property: JsonPropertyName("jobs")] List<RemovedJobDetail> Jobs);
+
+internal sealed record MetaRemovedDetailsDataset(
+    [property: JsonPropertyName("jobs")] List<MetaRemovedJobDetail> Jobs);
+
+internal sealed record AppleRemovedDetailsDataset(
+    [property: JsonPropertyName("jobs")] List<AppleRemovedJobDetail> Jobs);
+
+internal sealed record MicrosoftRemovedDetailsDataset(
+    [property: JsonPropertyName("jobs")] List<MicrosoftRemovedJobDetail> Jobs);
+
+internal sealed record MetaRemovedJobDetail(
+    [property: JsonPropertyName("id")] string Id,
+    [property: JsonPropertyName("title")] string Title,
+    [property: JsonPropertyName("company")] string? Company,
+    [property: JsonPropertyName("url")] string Url,
+    [property: JsonPropertyName("locations")] List<string> Locations,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("firstSeenAt")] string? FirstSeenAt,
+    [property: JsonPropertyName("lastSeenAt")] string? LastSeenAt,
+    [property: JsonPropertyName("removedAt")] string? RemovedAt,
+    [property: JsonPropertyName("removedInRunId")] string? RemovedInRunId,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate);
+
+internal sealed record AppleRemovedJobDetail(
+    [property: JsonPropertyName("id")] string Id,
+    [property: JsonPropertyName("title")] string Title,
+    [property: JsonPropertyName("company")] string? Company,
+    [property: JsonPropertyName("url")] string Url,
+    [property: JsonPropertyName("locations")] List<string> Locations,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("firstSeenAt")] string? FirstSeenAt,
+    [property: JsonPropertyName("lastSeenAt")] string? LastSeenAt,
+    [property: JsonPropertyName("removedAt")] string? RemovedAt,
+    [property: JsonPropertyName("removedInRunId")] string? RemovedInRunId,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate);
+
+internal sealed record MicrosoftRemovedJobDetail(
+    [property: JsonPropertyName("id")] string Id,
+    [property: JsonPropertyName("title")] string Title,
+    [property: JsonPropertyName("company")] string? Company,
+    [property: JsonPropertyName("url")] string Url,
+    [property: JsonPropertyName("locations")] List<string> Locations,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("firstSeenAt")] string? FirstSeenAt,
+    [property: JsonPropertyName("lastSeenAt")] string? LastSeenAt,
+    [property: JsonPropertyName("removedAt")] string? RemovedAt,
+    [property: JsonPropertyName("removedInRunId")] string? RemovedInRunId,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate);
 
 internal sealed record RemovedJobDetail(
     [property: JsonPropertyName("id")] string Id,
@@ -1754,6 +3810,14 @@ internal sealed record JobDataset(
 internal enum PipelineMode
 {
     ParseHtml,
+    CollectMeta,
+    NormalizeMetaLatest,
+    AnalyzeMetaLatest,
+    NormalizeAppleLatest,
+    AnalyzeAppleLatest,
+    CollectMicrosoft,
+    NormalizeMicrosoftLatest,
+    AnalyzeMicrosoftLatest,
     CollectAndAnalyze,
     Collect,
     AnalyzeLatest,

@@ -1,0 +1,33 @@
+{
+  "requestedLocation": "Poland",
+  "locationSlug": "poland",
+  "offices": [
+    "Warsaw, Poland"
+  ],
+  "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Warsaw%2C%20Poland&page=1",
+  "page": 1,
+  "payload": {
+    "data": {
+      "job_search_with_featured_jobs": {
+        "all_jobs": [
+          {
+            "id": "2418816405226170",
+            "title": "Client Partner, CEE Tech Apps",
+            "locations": [
+              "Warsaw, Poland"
+            ],
+            "teams": [
+              "Sales & Marketing"
+            ],
+            "sub_teams": [
+              "Client Solutions"
+            ]
+          }
+        ],
+        "featured_jobs": [],
+        "featured_jobs_title": null,
+        "all_jobs_title": "Open roles"
+      }
+    }
+  }
+}
