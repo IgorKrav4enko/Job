@@ -30,8 +30,10 @@ internal sealed class ReflectionTestRunner
             ("Meta normalization preserves firstSeenAt, updates lastSeenAt and deactivates missing jobs", TestMetaNormalizationStateTrackingAsync),
             ("Apple normalization preserves firstSeenAt, updates lastSeenAt and deactivates missing jobs", TestAppleNormalizationStateTrackingAsync),
             ("Microsoft normalization preserves firstSeenAt, updates lastSeenAt and deactivates missing jobs", TestMicrosoftNormalizationStateTrackingAsync),
+            ("NVIDIA normalization preserves firstSeenAt, updates lastSeenAt and deactivates missing jobs", TestNvidiaNormalizationStateTrackingAsync),
             ("Apple history outputs include changed fields, per-location summaries and removed raw details", TestAppleHistoryOutputsAsync),
-            ("Meta history outputs include changed fields, per-location summaries and removed raw details", TestMetaHistoryOutputsAsync)
+            ("Meta history outputs include changed fields, per-location summaries and removed raw details", TestMetaHistoryOutputsAsync),
+            ("NVIDIA history outputs include changed fields, per-location summaries and removed raw details", TestNvidiaHistoryOutputsAsync)
         };
 
         var failures = new List<string>();
@@ -772,6 +774,170 @@ internal sealed class ReflectionTestRunner
         return Task.CompletedTask;
     }
 
+    private Task TestNvidiaNormalizationStateTrackingAsync()
+    {
+        // NVIDIA використовує той самий PCSX-підхід, але має власний raw type.
+        // Тут явно доводимо, що state tracking не залежить від Microsoft fixtures.
+        var firstRunAt = "2026-04-01T10:00:00.0000000+00:00";
+        var secondRunAt = "2026-04-02T10:00:00.0000000+00:00";
+
+        var firstRawRun = CreateNvidiaRawRun(
+            "nvidia-state-run-1",
+            firstRunAt,
+            CreateNvidiaRawJob(
+                "shared",
+                "Senior Software Engineer",
+                new[] { "Switzerland, Zurich", "Remote - Poland" },
+                "Switzerland",
+                firstRunAt,
+                postedAtCandidate: "2026-04-01T00:00:00.0000000+00:00"),
+            CreateNvidiaRawJob(
+                "shared",
+                "Senior Software Engineer",
+                new[] { "Remote - Germany" },
+                "Germany",
+                firstRunAt,
+                postedAtCandidate: "2026-04-01T00:00:00.0000000+00:00"),
+            CreateNvidiaRawJob(
+                "remove",
+                "Removed NVIDIA Engineer",
+                new[] { "Remote - UK" },
+                "United Kingdom",
+                firstRunAt));
+
+        var secondRawRun = CreateNvidiaRawRun(
+            "nvidia-state-run-2",
+            secondRunAt,
+            CreateNvidiaRawJob(
+                "shared",
+                "Senior Software Engineer",
+                new[] { "Switzerland, Zurich" },
+                "Switzerland",
+                secondRunAt,
+                postedAtCandidate: "2026-04-01T00:00:00.0000000+00:00"),
+            CreateNvidiaRawJob(
+                "shared",
+                "Senior Software Engineer",
+                new[] { "Remote - Poland" },
+                "Poland",
+                secondRunAt,
+                postedAtCandidate: "2026-04-01T00:00:00.0000000+00:00"),
+            CreateNvidiaRawJob(
+                "add",
+                "New NVIDIA Engineer",
+                new[] { "Remote - Ireland" },
+                "Ireland",
+                secondRunAt));
+
+        var firstJobs = InvokeStatic("BuildNvidiaJobsFromRawRun", firstRawRun)!;
+        AssertEqual(2, ((System.Collections.IList)firstJobs).Count, "NVIDIA normalization should collapse duplicate source postings into one logical job.");
+
+        var firstMerge = InvokeStatic("MergeJobs", CreateList("JobItem"), firstJobs, firstRunAt)!;
+        var secondJobs = InvokeStatic("BuildNvidiaJobsFromRawRun", secondRawRun)!;
+        var secondMerge = InvokeStatic("MergeJobs", GetList(firstMerge, "Jobs"), secondJobs, secondRunAt)!;
+        var mergedJobs = GetList(secondMerge, "Jobs").Cast<object>().ToList();
+
+        AssertEqual(3, mergedJobs.Count, "Expected one shared, one removed and one new normalized NVIDIA job.");
+        AssertEqual(3, mergedJobs.Select(job => GetStringProperty(job, "Id")).Distinct().Count(), "NVIDIA normalization should keep one record per job id.");
+
+        var shared = mergedJobs.Single(job => GetStringProperty(job, "Id") == "shared");
+        AssertEqual(firstRunAt, GetStringProperty(shared, "FirstSeenAt"), "Existing NVIDIA job should preserve firstSeenAt.");
+        AssertEqual(secondRunAt, GetStringProperty(shared, "LastSeenAt"), "Existing NVIDIA job should update lastSeenAt on newer raw snapshot.");
+        AssertTrue(GetBooleanProperty(shared, "IsActive"), "Existing NVIDIA job should stay active.");
+        AssertTrue(!string.IsNullOrWhiteSpace(GetStringProperty(shared, "ContentHash")), "Existing NVIDIA job should have contentHash.");
+        AssertEqual(2, GetStringListProperty(shared, "Locations").Count, "Shared NVIDIA job should retain merged locations.");
+        AssertEqual("2026-04-01T00:00:00.0000000+00:00", GetStringProperty(shared, "PostedAtCandidate"), "Posted candidate should propagate when available.");
+
+        var removed = mergedJobs.Single(job => GetStringProperty(job, "Id") == "remove");
+        AssertEqual(firstRunAt, GetStringProperty(removed, "FirstSeenAt"), "Removed NVIDIA job should keep original firstSeenAt.");
+        AssertEqual(firstRunAt, GetStringProperty(removed, "LastSeenAt"), "Removed NVIDIA job should keep last seen timestamp from its last active run.");
+        AssertTrue(!GetBooleanProperty(removed, "IsActive"), "Missing NVIDIA job should become inactive.");
+
+        var added = mergedJobs.Single(job => GetStringProperty(job, "Id") == "add");
+        AssertEqual(secondRunAt, GetStringProperty(added, "FirstSeenAt"), "New NVIDIA job should initialize firstSeenAt from the newer raw snapshot.");
+        AssertEqual(secondRunAt, GetStringProperty(added, "LastSeenAt"), "New NVIDIA job should initialize lastSeenAt from the newer raw snapshot.");
+        AssertTrue(GetBooleanProperty(added, "IsActive"), "New NVIDIA job should be active.");
+
+        return Task.CompletedTask;
+    }
+
+    private Task TestNvidiaHistoryOutputsAsync()
+    {
+        // NVIDIA Task 3 proof: history/diff використовує ті самі meaningful поля:
+        // title/company/locations. URL і timestamps не повинні створювати changed.
+        var firstRunAt = "2026-04-03T10:00:00.0000000+00:00";
+        var secondRunAt = "2026-04-04T10:00:00.0000000+00:00";
+        var firstRawRun = CreateNvidiaRawRun(
+            "nvidia-history-run-1",
+            firstRunAt,
+            CreateNvidiaRawJob("change", "NVIDIA Engineer", new[] { "Remote - Switzerland" }, "Switzerland", firstRunAt),
+            CreateNvidiaRawJob("metadata-only", "Stable NVIDIA Engineer", new[] { "Remote - UK" }, "United Kingdom", firstRunAt),
+            CreateNvidiaRawJob("remove", "Removed NVIDIA Engineer", new[] { "Remote - Germany" }, "Germany", firstRunAt));
+        var secondRawRun = CreateNvidiaRawRun(
+            "nvidia-history-run-2",
+            secondRunAt,
+            CreateNvidiaRawJob("change", "NVIDIA Engineer", new[] { "Remote - Switzerland", "Remote - Poland" }, "Switzerland", secondRunAt),
+            CreateNvidiaRawJob("metadata-only", "Stable NVIDIA Engineer", new[] { "Remote - UK" }, "United Kingdom", secondRunAt),
+            CreateNvidiaRawJob("add", "New NVIDIA Engineer", new[] { "Remote - Ireland" }, "Ireland", secondRunAt));
+
+        var firstMerge = InvokeStatic(
+            "MergeJobs",
+            CreateList("JobItem"),
+            InvokeStatic("BuildNvidiaJobsFromRawRun", firstRawRun),
+            firstRunAt)!;
+        var secondMerge = InvokeStatic(
+            "MergeJobs",
+            GetList(firstMerge, "Jobs"),
+            InvokeStatic("BuildNvidiaJobsFromRawRun", secondRawRun),
+            secondRunAt)!;
+        var runsDataset = InvokeStatic(
+            "BuildRunsDataset",
+            InvokeStatic("BuildRunsDataset", CreateRecord("RunHistoryDataset", CreateList("RunSummary")), "nvidia-history-run-1", firstRunAt, firstMerge),
+            "nvidia-history-run-2",
+            secondRunAt,
+            secondMerge)!;
+        var runDetailsDataset = InvokeStatic(
+            "BuildRunDetailsDataset",
+            InvokeStatic("BuildRunDetailsDataset", CreateRecord("RunDetailsDataset", CreateList("RunDetail")), "nvidia-history-run-1", firstMerge),
+            "nvidia-history-run-2",
+            secondMerge)!;
+        var dataset = InvokeStatic(
+            "BuildNvidiaDataset",
+            secondRawRun,
+            GetList(secondMerge, "Jobs"))!;
+        var removedDetails = InvokeStatic(
+            "BuildNvidiaRemovedDetailsDataset",
+            dataset,
+            runDetailsDataset,
+            CreateList("NvidiaRawRun", firstRawRun, secondRawRun))!;
+
+        var latestRun = GetListItem(runsDataset, "Runs", 1);
+        AssertEqual(3, GetIntProperty(latestRun, "TotalJobs"), "NVIDIA run summary should count active jobs.");
+        AssertEqual(1, GetIntProperty(latestRun, "AddedCount"), "NVIDIA run summary should count added jobs.");
+        AssertEqual(1, GetIntProperty(latestRun, "RemovedCount"), "NVIDIA run summary should count removed jobs.");
+        AssertEqual(1, GetIntProperty(latestRun, "ChangedCount"), "NVIDIA run summary should count meaningful location changes.");
+        AssertEqual(1, GetIntProperty(latestRun, "UnchangedCount"), "NVIDIA run summary should ignore metadata-only changes.");
+
+        var latestDetails = GetListItem(runDetailsDataset, "Runs", 1);
+        AssertEqual(1, GetListCount(latestDetails, "Added"), "NVIDIA run-details should include added jobs.");
+        AssertEqual(1, GetListCount(latestDetails, "Removed"), "NVIDIA run-details should include removed jobs.");
+        AssertEqual(1, GetListCount(latestDetails, "Changed"), "NVIDIA run-details should include changed jobs.");
+        AssertEqual(1, GetListCount(latestDetails, "Unchanged"), "NVIDIA run-details should include unchanged jobs.");
+
+        var changed = GetListItem(latestDetails, "Changed", 0);
+        AssertTrue(GetStringListProperty(changed, "ChangedFields").SequenceEqual(new[] { "locations" }), "NVIDIA changed fields should use Google meaningful-change semantics.");
+        AssertEqual(1, GetListCount(changed, "FieldChanges"), "NVIDIA changed item should include fieldChanges.");
+
+        var removedJobs = GetList(removedDetails, "Jobs");
+        AssertEqual(1, removedJobs.Count, "NVIDIA removed-details should include removed jobs.");
+        var removed = removedJobs[0]!;
+        AssertEqual("remove", GetStringProperty(removed, "Id"), "NVIDIA removed-details should preserve normalized id.");
+        AssertEqual("NVIDIA overview", GetStringProperty(removed, "AboutTheJobRaw"), "NVIDIA removed-details should include raw detail fields when available.");
+        AssertEqual(secondRunAt, GetStringProperty(removed, "RemovedAt"), "NVIDIA removed-details should include removal timestamp.");
+
+        return Task.CompletedTask;
+    }
+
     private object CreateJobItem(
         string id,
         string title,
@@ -938,6 +1104,52 @@ internal sealed class ReflectionTestRunner
             "Microsoft responsibilities",
             "Microsoft required skills",
             null,
+            postedAtCandidate,
+            null,
+            capturedAt);
+    }
+
+    private object CreateNvidiaRawRun(string runId, string generatedAt, params object[] jobs)
+    {
+        var source = CreateRecord(
+            "NvidiaRawSource",
+            "Switzerland",
+            "switzerland",
+            "Zurich",
+            "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com&query=software%20engineer&location=Zurich&start=0&sort_by=relevance&filter_distance=160&filter_include_remote=1",
+            CreateList("NvidiaRawJobItem", jobs));
+
+        return CreateRecord(
+            "NvidiaRawRun",
+            runId,
+            generatedAt,
+            "nvidia-careers",
+            "software engineer",
+            CreateList("NvidiaRawSource", source));
+    }
+
+    private object CreateNvidiaRawJob(
+        string jobId,
+        string titleRaw,
+        IEnumerable<string> locationsRaw,
+        string requestedLocation,
+        string capturedAt,
+        string? postedAtCandidate = null)
+    {
+        return CreateRecord(
+            "NvidiaRawJobItem",
+            jobId,
+            titleRaw,
+            "NVIDIA",
+            locationsRaw.ToList(),
+            $"https://jobs.nvidia.com/careers/job/{jobId}",
+            $"https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com&query=software%20engineer&location={Uri.EscapeDataString(requestedLocation)}&start=0",
+            requestedLocation,
+            $"https://jobs.nvidia.com/careers/job/{jobId}",
+            "NVIDIA overview",
+            "NVIDIA responsibilities",
+            "NVIDIA required skills",
+            "NVIDIA preferred skills",
             postedAtCandidate,
             null,
             capturedAt);

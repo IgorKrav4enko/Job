@@ -8,6 +8,8 @@ using System.Globalization;
 using System.Diagnostics;
 
 const int MicrosoftSearchPageSize = 10;
+const int NvidiaSearchPageSize = 10;
+const int AmazonSearchPageSize = 10;
 
 var mode = GetMode(args);
 var root = FindRepositoryRoot();
@@ -36,6 +38,20 @@ var microsoftRunDetailsPath = Path.Combine(root, "data", "microsoft-careers-run-
 var microsoftRemovedDetailsPath = Path.Combine(root, "data", "microsoft-careers-removed-details.json");
 var microsoftRawRunsDirectoryPath = Path.Combine(root, "data-raw", "microsoft-careers", "runs");
 var microsoftFixturesDirectoryPath = Path.Combine(root, "data-debug", "microsoft-careers", "payloads");
+var nvidiaConfigPath = Path.Combine(root, "config", "nvidia-careers-locations.json");
+var nvidiaOutputPath = Path.Combine(root, "data", "nvidia-careers-jobs.json");
+var nvidiaRunsPath = Path.Combine(root, "data", "nvidia-careers-runs.json");
+var nvidiaRunDetailsPath = Path.Combine(root, "data", "nvidia-careers-run-details.json");
+var nvidiaRemovedDetailsPath = Path.Combine(root, "data", "nvidia-careers-removed-details.json");
+var nvidiaRawRunsDirectoryPath = Path.Combine(root, "data-raw", "nvidia-careers", "runs");
+var nvidiaFixturesDirectoryPath = Path.Combine(root, "data-debug", "nvidia-careers", "payloads");
+var amazonConfigPath = Path.Combine(root, "config", "amazon-jobs-locations.json");
+var amazonOutputPath = Path.Combine(root, "data", "amazon-jobs-jobs.json");
+var amazonRunsPath = Path.Combine(root, "data", "amazon-jobs-runs.json");
+var amazonRunDetailsPath = Path.Combine(root, "data", "amazon-jobs-run-details.json");
+var amazonRemovedDetailsPath = Path.Combine(root, "data", "amazon-jobs-removed-details.json");
+var amazonRawRunsDirectoryPath = Path.Combine(root, "data-raw", "amazon-jobs", "runs");
+var amazonFixturesDirectoryPath = Path.Combine(root, "data-debug", "amazon-jobs", "payloads");
 
 var locations = LoadLocations(configPath);
 var searchTerm = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_SEARCH_TERM")?.Trim();
@@ -320,6 +336,180 @@ switch (mode)
         break;
     }
 
+    case PipelineMode.CollectNvidia:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var nvidiaLocations = LoadNvidiaLocations(nvidiaConfigPath);
+        var nvidiaSearchTerm = GetNvidiaSearchTerm();
+        var maxNvidiaPages = GetNvidiaMaxPages();
+        var maxNvidiaDetails = GetNvidiaMaxDetails();
+        var fetchResult = ShouldFetchNvidiaLive()
+            ? await FetchNvidiaJobsAsync(nvidiaLocations, nvidiaSearchTerm, runCapturedAt, maxNvidiaPages, maxNvidiaDetails)
+            : await FetchNvidiaJobsFromCacheAsync(nvidiaLocations, nvidiaFixturesDirectoryPath, nvidiaSearchTerm, runCapturedAt, maxNvidiaPages, maxNvidiaDetails);
+        var rawRun = new NvidiaRawRun(runId, runCapturedAt, "nvidia-careers", nvidiaSearchTerm, fetchResult.Sources);
+
+        Directory.CreateDirectory(nvidiaRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(nvidiaRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+
+        Console.WriteLine($"Collected NVIDIA raw run {runId} with {fetchResult.JobCount} unique jobs.");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
+    case PipelineMode.NormalizeNvidiaLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(nvidiaRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No NVIDIA raw runs found. Run collect-nvidia first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<NvidiaRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read NVIDIA raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(nvidiaOutputPath);
+        var latestJobs = BuildNvidiaJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildNvidiaDataset(latestRawRun, mergeResult.Jobs);
+
+        await WriteJsonFileAsync(nvidiaOutputPath, dataset);
+
+        Console.WriteLine(
+            $"Normalized latest NVIDIA raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"({mergeResult.Jobs.Count(static job => job.IsActive)} active / " +
+            $"{mergeResult.Jobs.Count(static job => !job.IsActive)} inactive).");
+        Console.WriteLine($"Wrote {nvidiaOutputPath}.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeNvidiaLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(nvidiaRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No NVIDIA raw runs found. Run collect-nvidia first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<NvidiaRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read NVIDIA raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(nvidiaOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(nvidiaRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousRunDetails = LoadJsonOrDefault<RunDetailsDataset>(nvidiaRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRunDetails = NormalizeRunDetails(previousRunDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousRunDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"NVIDIA raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildNvidiaJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0
+            ? new List<JobItem>()
+            : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildNvidiaDataset(latestRawRun, mergeResult.Jobs);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, latestRawRun.RunId, mergeResult);
+        var rawRuns = LoadNvidiaRawRuns(nvidiaRawRunsDirectoryPath);
+        var removedDetailsDataset = BuildNvidiaRemovedDetailsDataset(dataset, runDetailsDataset, rawRuns);
+
+        await WriteNvidiaDatasetsAsync(nvidiaOutputPath, nvidiaRunsPath, nvidiaRunDetailsPath, nvidiaRemovedDetailsPath, dataset, runsDataset, runDetailsDataset, removedDetailsDataset);
+
+        Console.WriteLine(
+            $"Analyzed latest NVIDIA raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"(+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
+    case PipelineMode.CollectAmazon:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var amazonLocations = LoadAmazonLocations(amazonConfigPath);
+        var maxAmazonPages = GetAmazonMaxPages();
+        var fetchResult = ShouldFetchAmazonLive()
+            ? await FetchAmazonJobsAsync(amazonLocations, runCapturedAt, maxAmazonPages)
+            : await FetchAmazonJobsFromCacheAsync(amazonLocations, amazonFixturesDirectoryPath, runCapturedAt, maxAmazonPages);
+        var rawRun = new AmazonRawRun(runId, runCapturedAt, "amazon-jobs", fetchResult.Sources);
+
+        Directory.CreateDirectory(amazonRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(amazonRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+
+        Console.WriteLine($"Collected Amazon raw run {runId} with {fetchResult.JobCount} unique jobs.");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
+    case PipelineMode.NormalizeAmazonLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(amazonRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No Amazon raw runs found. Run collect-amazon first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<AmazonRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Amazon raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(amazonOutputPath);
+        var latestJobs = BuildAmazonJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildAmazonDataset(latestRawRun, mergeResult.Jobs);
+
+        await WriteJsonFileAsync(amazonOutputPath, dataset);
+
+        Console.WriteLine(
+            $"Normalized latest Amazon raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"({mergeResult.Jobs.Count(static job => job.IsActive)} active / " +
+            $"{mergeResult.Jobs.Count(static job => !job.IsActive)} inactive).");
+        Console.WriteLine($"Wrote {amazonOutputPath}.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeAmazonLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(amazonRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No Amazon raw runs found. Run collect-amazon first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<AmazonRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Amazon raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(amazonOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(amazonRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousRunDetails = LoadJsonOrDefault<RunDetailsDataset>(amazonRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRunDetails = NormalizeRunDetails(previousRunDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousRunDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Amazon raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildAmazonJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0
+            ? new List<JobItem>()
+            : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildAmazonDataset(latestRawRun, mergeResult.Jobs);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, latestRawRun.RunId, mergeResult);
+        var rawRuns = LoadAmazonRawRuns(amazonRawRunsDirectoryPath);
+        var removedDetailsDataset = BuildAmazonRemovedDetailsDataset(dataset, runDetailsDataset, rawRuns);
+
+        await WriteAmazonDatasetsAsync(amazonOutputPath, amazonRunsPath, amazonRunDetailsPath, amazonRemovedDetailsPath, dataset, runsDataset, runDetailsDataset, removedDetailsDataset);
+
+        Console.WriteLine(
+            $"Analyzed latest Amazon raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"(+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
     case PipelineMode.CollectAndAnalyze:
     {
         var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
@@ -468,6 +658,12 @@ static PipelineMode GetMode(string[] args)
         "collect-microsoft" => PipelineMode.CollectMicrosoft,
         "normalize-microsoft-latest" => PipelineMode.NormalizeMicrosoftLatest,
         "analyze-microsoft-latest" => PipelineMode.AnalyzeMicrosoftLatest,
+        "collect-nvidia" => PipelineMode.CollectNvidia,
+        "normalize-nvidia-latest" => PipelineMode.NormalizeNvidiaLatest,
+        "analyze-nvidia-latest" => PipelineMode.AnalyzeNvidiaLatest,
+        "collect-amazon" => PipelineMode.CollectAmazon,
+        "normalize-amazon-latest" => PipelineMode.NormalizeAmazonLatest,
+        "analyze-amazon-latest" => PipelineMode.AnalyzeAmazonLatest,
         _ => throw new ArgumentOutOfRangeException(nameof(args), $"Unknown mode '{args[0]}'.")
     };
 }
@@ -532,6 +728,40 @@ static async Task WriteMicrosoftDatasetsAsync(
     RunHistoryDataset runsDataset,
     RunDetailsDataset runDetailsDataset,
     MicrosoftRemovedDetailsDataset removedDetailsDataset)
+{
+    Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+    await WriteJsonFileAsync(outputPath, dataset);
+    await WriteJsonFileAsync(runsPath, runsDataset);
+    await WriteJsonFileAsync(runDetailsPath, runDetailsDataset);
+    await WriteJsonFileAsync(removedDetailsPath, removedDetailsDataset);
+}
+
+static async Task WriteNvidiaDatasetsAsync(
+    string outputPath,
+    string runsPath,
+    string runDetailsPath,
+    string removedDetailsPath,
+    JobDataset dataset,
+    RunHistoryDataset runsDataset,
+    RunDetailsDataset runDetailsDataset,
+    NvidiaRemovedDetailsDataset removedDetailsDataset)
+{
+    Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+    await WriteJsonFileAsync(outputPath, dataset);
+    await WriteJsonFileAsync(runsPath, runsDataset);
+    await WriteJsonFileAsync(runDetailsPath, runDetailsDataset);
+    await WriteJsonFileAsync(removedDetailsPath, removedDetailsDataset);
+}
+
+static async Task WriteAmazonDatasetsAsync(
+    string outputPath,
+    string runsPath,
+    string runDetailsPath,
+    string removedDetailsPath,
+    JobDataset dataset,
+    RunHistoryDataset runsDataset,
+    RunDetailsDataset runDetailsDataset,
+    AmazonRemovedDetailsDataset removedDetailsDataset)
 {
     Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
     await WriteJsonFileAsync(outputPath, dataset);
@@ -613,6 +843,24 @@ static List<MicrosoftRawRun> LoadMicrosoftRawRuns(string rawRunsDirectoryPath)
 {
     return GetRawRunFilePaths(rawRunsDirectoryPath)
         .Select(path => LoadJsonOrDefault<MicrosoftRawRun>(path) ?? throw new InvalidOperationException($"Could not read Microsoft raw run file '{path}'."))
+        .OrderBy(static run => run.GeneratedAt, StringComparer.Ordinal)
+        .ThenBy(static run => run.RunId, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<NvidiaRawRun> LoadNvidiaRawRuns(string rawRunsDirectoryPath)
+{
+    return GetRawRunFilePaths(rawRunsDirectoryPath)
+        .Select(path => LoadJsonOrDefault<NvidiaRawRun>(path) ?? throw new InvalidOperationException($"Could not read NVIDIA raw run file '{path}'."))
+        .OrderBy(static run => run.GeneratedAt, StringComparer.Ordinal)
+        .ThenBy(static run => run.RunId, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<AmazonRawRun> LoadAmazonRawRuns(string rawRunsDirectoryPath)
+{
+    return GetRawRunFilePaths(rawRunsDirectoryPath)
+        .Select(path => LoadJsonOrDefault<AmazonRawRun>(path) ?? throw new InvalidOperationException($"Could not read Amazon raw run file '{path}'."))
         .OrderBy(static run => run.GeneratedAt, StringComparer.Ordinal)
         .ThenBy(static run => run.RunId, StringComparer.Ordinal)
         .ToList();
@@ -706,6 +954,74 @@ static List<JobItem> BuildMicrosoftJobsFromRawRun(MicrosoftRawRun rawRun)
                     job.JobId,
                     HtmlDecode(job.TitleRaw ?? string.Empty),
                     string.IsNullOrWhiteSpace(job.CompanyRaw) ? "Microsoft" : HtmlDecode(job.CompanyRaw),
+                    job.LocationsRaw ?? new List<string>(),
+                    job.JobUrl,
+                    job.RequestedLocation,
+                    job.SearchUrl,
+                    job.PostedAtCandidate,
+                    job.UpdatedAtCandidate)))
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var first = group.First();
+            var locations = group
+                .SelectMany(static job => job.Locations)
+                .Where(static location => !string.IsNullOrWhiteSpace(location))
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static location => location, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            return first with { Locations = locations.Count == 0 ? first.Locations : locations };
+        })
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildNvidiaJobsFromRawRun(NvidiaRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source =>
+            source.Jobs.Select(job =>
+                new JobItem(
+                    job.JobId,
+                    HtmlDecode(job.TitleRaw ?? string.Empty),
+                    string.IsNullOrWhiteSpace(job.CompanyRaw) ? "NVIDIA" : HtmlDecode(job.CompanyRaw),
+                    job.LocationsRaw ?? new List<string>(),
+                    job.JobUrl,
+                    job.RequestedLocation,
+                    job.SearchUrl,
+                    job.PostedAtCandidate,
+                    job.UpdatedAtCandidate)))
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var first = group.First();
+            var locations = group
+                .SelectMany(static job => job.Locations)
+                .Where(static location => !string.IsNullOrWhiteSpace(location))
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static location => location, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            return first with { Locations = locations.Count == 0 ? first.Locations : locations };
+        })
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildAmazonJobsFromRawRun(AmazonRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source =>
+            source.Jobs.Select(job =>
+                new JobItem(
+                    job.JobId,
+                    HtmlDecode(job.TitleRaw ?? string.Empty),
+                    string.IsNullOrWhiteSpace(job.CompanyRaw) ? "Amazon" : HtmlDecode(job.CompanyRaw),
                     job.LocationsRaw ?? new List<string>(),
                     job.JobUrl,
                     job.RequestedLocation,
@@ -977,6 +1293,128 @@ static MicrosoftRemovedDetailsDataset BuildMicrosoftRemovedDetailsDataset(
     return new MicrosoftRemovedDetailsDataset(jobs);
 }
 
+static NvidiaRemovedDetailsDataset BuildNvidiaRemovedDetailsDataset(
+    JobDataset dataset,
+    RunDetailsDataset runDetailsDataset,
+    List<NvidiaRawRun> rawRuns)
+{
+    var inactiveJobs = dataset.Jobs
+        .Where(static job => !job.IsActive)
+        .ToDictionary(static job => job.Id, StringComparer.Ordinal);
+
+    var removedAtById = runDetailsDataset.Runs
+        .SelectMany(run => run.Removed.Select(job => new { job.Id, run.RunId }))
+        .GroupBy(static item => item.Id, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.First().RunId,
+            StringComparer.Ordinal);
+
+    var rawByJobId = rawRuns
+        .SelectMany(run => run.Sources.SelectMany(source => source.Jobs.Select(job => new { run, job })))
+        .GroupBy(static item => item.job.JobId, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.Last(),
+            StringComparer.Ordinal);
+    var generatedAtByRunId = rawRuns.ToDictionary(static run => run.RunId, static run => run.GeneratedAt, StringComparer.Ordinal);
+
+    var jobs = inactiveJobs.Values
+        .Select(job =>
+        {
+            rawByJobId.TryGetValue(job.Id, out var rawMatch);
+            removedAtById.TryGetValue(job.Id, out var removedInRunId);
+            var removedAt = removedInRunId is not null && generatedAtByRunId.TryGetValue(removedInRunId, out var generatedAt)
+                ? generatedAt
+                : removedInRunId;
+
+            return new NvidiaRemovedJobDetail(
+                job.Id,
+                job.Title,
+                job.Company,
+                job.Url,
+                job.Locations,
+                job.RequestedLocation,
+                job.FirstSeenAt,
+                job.LastSeenAt,
+                removedAt,
+                removedInRunId,
+                rawMatch?.job.ApplyUrlRaw,
+                rawMatch?.job.AboutTheJobRaw,
+                rawMatch?.job.ResponsibilitiesRaw,
+                rawMatch?.job.MinimumQualificationsRaw,
+                rawMatch?.job.PreferredQualificationsRaw,
+                rawMatch?.job.PostedAtCandidate,
+                rawMatch?.job.UpdatedAtCandidate);
+        })
+        .OrderByDescending(static job => job.RemovedAt, StringComparer.Ordinal)
+        .ThenBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ToList();
+
+    return new NvidiaRemovedDetailsDataset(jobs);
+}
+
+static AmazonRemovedDetailsDataset BuildAmazonRemovedDetailsDataset(
+    JobDataset dataset,
+    RunDetailsDataset runDetailsDataset,
+    List<AmazonRawRun> rawRuns)
+{
+    var inactiveJobs = dataset.Jobs
+        .Where(static job => !job.IsActive)
+        .ToDictionary(static job => job.Id, StringComparer.Ordinal);
+
+    var removedAtById = runDetailsDataset.Runs
+        .SelectMany(run => run.Removed.Select(job => new { job.Id, run.RunId }))
+        .GroupBy(static item => item.Id, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.First().RunId,
+            StringComparer.Ordinal);
+
+    var rawByJobId = rawRuns
+        .SelectMany(run => run.Sources.SelectMany(source => source.Jobs.Select(job => new { run, job })))
+        .GroupBy(static item => item.job.JobId, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.Last(),
+            StringComparer.Ordinal);
+    var generatedAtByRunId = rawRuns.ToDictionary(static run => run.RunId, static run => run.GeneratedAt, StringComparer.Ordinal);
+
+    var jobs = inactiveJobs.Values
+        .Select(job =>
+        {
+            rawByJobId.TryGetValue(job.Id, out var rawMatch);
+            removedAtById.TryGetValue(job.Id, out var removedInRunId);
+            var removedAt = removedInRunId is not null && generatedAtByRunId.TryGetValue(removedInRunId, out var generatedAt)
+                ? generatedAt
+                : removedInRunId;
+
+            return new AmazonRemovedJobDetail(
+                job.Id,
+                job.Title,
+                job.Company,
+                job.Url,
+                job.Locations,
+                job.RequestedLocation,
+                job.FirstSeenAt,
+                job.LastSeenAt,
+                removedAt,
+                removedInRunId,
+                rawMatch?.job.ApplyUrlRaw,
+                rawMatch?.job.AboutTheJobRaw,
+                rawMatch?.job.ResponsibilitiesRaw,
+                rawMatch?.job.MinimumQualificationsRaw,
+                rawMatch?.job.PreferredQualificationsRaw,
+                rawMatch?.job.PostedAtCandidate,
+                rawMatch?.job.UpdatedAtCandidate);
+        })
+        .OrderByDescending(static job => job.RemovedAt, StringComparer.Ordinal)
+        .ThenBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ToList();
+
+    return new AmazonRemovedDetailsDataset(jobs);
+}
+
 static string FindRepositoryRoot()
 {
     var current = new DirectoryInfo(AppContext.BaseDirectory);
@@ -1033,6 +1471,28 @@ static List<MicrosoftLocationConfig> LoadMicrosoftLocations(string configPath)
     return locations ?? new List<MicrosoftLocationConfig>();
 }
 
+static List<NvidiaLocationConfig> LoadNvidiaLocations(string configPath)
+{
+    var envValue = Environment.GetEnvironmentVariable("NVIDIA_CAREERS_LOCATIONS");
+    var json = string.IsNullOrWhiteSpace(envValue)
+        ? File.ReadAllText(configPath)
+        : envValue;
+
+    var locations = JsonSerializer.Deserialize<List<NvidiaLocationConfig>>(json, JsonOptions());
+    return locations ?? new List<NvidiaLocationConfig>();
+}
+
+static List<AmazonLocationConfig> LoadAmazonLocations(string configPath)
+{
+    var envValue = Environment.GetEnvironmentVariable("AMAZON_JOBS_LOCATIONS");
+    var json = string.IsNullOrWhiteSpace(envValue)
+        ? File.ReadAllText(configPath)
+        : envValue;
+
+    var locations = JsonSerializer.Deserialize<List<AmazonLocationConfig>>(json, JsonOptions());
+    return locations ?? new List<AmazonLocationConfig>();
+}
+
 static int GetMaxPages()
 {
     var rawValue = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_MAX_PAGES");
@@ -1083,6 +1543,43 @@ static string GetMicrosoftSearchTerm()
 static bool ShouldFetchMicrosoftLive()
 {
     var rawValue = Environment.GetEnvironmentVariable("MICROSOFT_CAREERS_LIVE");
+    return string.Equals(rawValue, "true", StringComparison.OrdinalIgnoreCase) ||
+        string.Equals(rawValue, "1", StringComparison.Ordinal);
+}
+
+static int GetNvidiaMaxPages()
+{
+    var rawValue = Environment.GetEnvironmentVariable("NVIDIA_CAREERS_MAX_PAGES");
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 2;
+}
+
+static int GetNvidiaMaxDetails()
+{
+    var rawValue = Environment.GetEnvironmentVariable("NVIDIA_CAREERS_MAX_DETAILS");
+    return int.TryParse(rawValue, out var parsed) && parsed >= 0 ? parsed : 5;
+}
+
+static string GetNvidiaSearchTerm()
+{
+    return Environment.GetEnvironmentVariable("NVIDIA_CAREERS_SEARCH_TERM")?.Trim() ?? "software engineer";
+}
+
+static bool ShouldFetchNvidiaLive()
+{
+    var rawValue = Environment.GetEnvironmentVariable("NVIDIA_CAREERS_LIVE");
+    return string.Equals(rawValue, "true", StringComparison.OrdinalIgnoreCase) ||
+        string.Equals(rawValue, "1", StringComparison.Ordinal);
+}
+
+static int GetAmazonMaxPages()
+{
+    var rawValue = Environment.GetEnvironmentVariable("AMAZON_JOBS_MAX_PAGES");
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 2;
+}
+
+static bool ShouldFetchAmazonLive()
+{
+    var rawValue = Environment.GetEnvironmentVariable("AMAZON_JOBS_LIVE");
     return string.Equals(rawValue, "true", StringComparison.OrdinalIgnoreCase) ||
         string.Equals(rawValue, "1", StringComparison.Ordinal);
 }
@@ -1548,6 +2045,277 @@ static async Task<MicrosoftFetchResult> FetchMicrosoftJobsFromCacheAsync(
     return new MicrosoftFetchResult(sources, uniqueJobIds.Count);
 }
 
+static async Task<NvidiaFetchResult> FetchNvidiaJobsAsync(
+    List<NvidiaLocationConfig> locations,
+    string searchTerm,
+    string capturedAt,
+    int maxPages,
+    int maxDetails)
+{
+    using var httpClient = CreateHttpClient();
+    var sources = new List<NvidiaRawSource>();
+    var uniqueJobIds = new HashSet<string>(StringComparer.Ordinal);
+    var enrichedDetails = 0;
+
+    foreach (var location in locations)
+    {
+        var rawJobs = new List<NvidiaRawJobItem>();
+        var seenForLocation = new HashSet<string>(StringComparer.Ordinal);
+
+        for (var page = 0; page < maxPages; page += 1)
+        {
+            var start = page * NvidiaSearchPageSize;
+            var searchUrl = BuildNvidiaSearchApiUrl(location.SearchLocation, searchTerm, start);
+            Console.WriteLine($"Fetching NVIDIA search {searchUrl}");
+            var payload = await httpClient.GetStringAsync(searchUrl);
+            var searchPage = ParseNvidiaSearchPayload(payload, searchUrl, location.Label);
+
+            var newJobsOnPage = 0;
+            foreach (var searchResult in searchPage.Results)
+            {
+                if (!seenForLocation.Add(searchResult.JobId))
+                {
+                    continue;
+                }
+
+                newJobsOnPage += 1;
+                uniqueJobIds.Add(searchResult.JobId);
+                // NVIDIA MVP policy:
+                // search API gives all required raw fields; detail enrichment is best-effort
+                // and intentionally capped so one run does not become a huge live crawl.
+                if (enrichedDetails < maxDetails)
+                {
+                    rawJobs.Add(await EnrichNvidiaRawJobAsync(httpClient, searchResult, location.SearchLocation, capturedAt));
+                    enrichedDetails += 1;
+                }
+                else
+                {
+                    rawJobs.Add(BuildNvidiaRawJob(searchResult, null, capturedAt));
+                }
+            }
+
+            if (searchPage.Results.Count == 0 || newJobsOnPage == 0 || start + NvidiaSearchPageSize >= searchPage.TotalCount)
+            {
+                break;
+            }
+        }
+
+        sources.Add(
+            new NvidiaRawSource(
+                location.Label,
+                location.Slug,
+                location.SearchLocation,
+                BuildNvidiaSearchApiUrl(location.SearchLocation, searchTerm, 0),
+                rawJobs));
+    }
+
+    return new NvidiaFetchResult(sources, uniqueJobIds.Count);
+}
+
+static async Task<NvidiaFetchResult> FetchNvidiaJobsFromCacheAsync(
+    List<NvidiaLocationConfig> locations,
+    string fixturesDirectoryPath,
+    string searchTerm,
+    string capturedAt,
+    int maxPages,
+    int maxDetails)
+{
+    if (!Directory.Exists(fixturesDirectoryPath))
+    {
+        throw new DirectoryNotFoundException(
+            $"NVIDIA fixtures not found at '{fixturesDirectoryPath}'. Set NVIDIA_CAREERS_LIVE=true for live validation.");
+    }
+
+    var sources = new List<NvidiaRawSource>();
+    var uniqueJobIds = new HashSet<string>(StringComparer.Ordinal);
+    var enrichedDetails = 0;
+
+    foreach (var location in locations)
+    {
+        var rawJobs = new List<NvidiaRawJobItem>();
+        var seenForLocation = new HashSet<string>(StringComparer.Ordinal);
+
+        for (var page = 0; page < maxPages; page += 1)
+        {
+            var start = page * NvidiaSearchPageSize;
+            var searchUrl = BuildNvidiaSearchApiUrl(location.SearchLocation, searchTerm, start);
+            var cachePath = FindNvidiaSearchCachePath(fixturesDirectoryPath, location.CacheSlug ?? location.Slug, start);
+            if (cachePath is null)
+            {
+                if (page == 0)
+                {
+                    Console.WriteLine($"No NVIDIA cached search payload found for {location.Label}.");
+                }
+
+                break;
+            }
+
+            var searchPage = ParseNvidiaSearchPayload(await File.ReadAllTextAsync(cachePath), searchUrl, location.Label);
+            var newJobsOnPage = 0;
+
+            foreach (var searchResult in searchPage.Results)
+            {
+                if (!seenForLocation.Add(searchResult.JobId))
+                {
+                    continue;
+                }
+
+                newJobsOnPage += 1;
+                uniqueJobIds.Add(searchResult.JobId);
+                NvidiaJobDetail? detail = null;
+                var detailPath = Path.Combine(fixturesDirectoryPath, $"detail-{searchResult.JobId}-api.json");
+                if (enrichedDetails < maxDetails && File.Exists(detailPath))
+                {
+                    detail = ParseNvidiaDetailPayload(await File.ReadAllTextAsync(detailPath), searchResult);
+                    enrichedDetails += 1;
+                }
+
+                rawJobs.Add(BuildNvidiaRawJob(searchResult, detail, capturedAt));
+            }
+
+            if (searchPage.Results.Count == 0 || newJobsOnPage == 0 || start + NvidiaSearchPageSize >= searchPage.TotalCount)
+            {
+                break;
+            }
+        }
+
+        sources.Add(
+            new NvidiaRawSource(
+                location.Label,
+                location.Slug,
+                location.SearchLocation,
+                BuildNvidiaSearchApiUrl(location.SearchLocation, searchTerm, 0),
+                rawJobs));
+    }
+
+    return new NvidiaFetchResult(sources, uniqueJobIds.Count);
+}
+
+static async Task<AmazonFetchResult> FetchAmazonJobsAsync(
+    List<AmazonLocationConfig> locations,
+    string capturedAt,
+    int maxPages)
+{
+    using var httpClient = CreateHttpClient();
+    var sources = new List<AmazonRawSource>();
+    var uniqueJobIds = new HashSet<string>(StringComparer.Ordinal);
+
+    foreach (var location in locations)
+    {
+        foreach (var searchTerm in location.Queries)
+        {
+            var rawJobs = new List<AmazonRawJobItem>();
+            var seenForSource = new HashSet<string>(StringComparer.Ordinal);
+
+            for (var page = 0; page < maxPages; page += 1)
+            {
+                var offset = page * AmazonSearchPageSize;
+                var searchUrl = BuildAmazonSearchApiUrl(searchTerm, location.CountryCode, location.LocQuery, offset);
+                Console.WriteLine($"Fetching Amazon search {searchUrl}");
+                var payload = await httpClient.GetStringAsync(searchUrl);
+                var searchPage = ParseAmazonSearchPayload(payload, searchUrl, location.Label, capturedAt);
+
+                var newJobsOnPage = 0;
+                foreach (var rawJob in searchPage.Jobs)
+                {
+                    if (!seenForSource.Add(rawJob.JobId))
+                    {
+                        continue;
+                    }
+
+                    newJobsOnPage += 1;
+                    uniqueJobIds.Add(rawJob.JobId);
+                    rawJobs.Add(rawJob);
+                }
+
+                if (searchPage.Jobs.Count == 0 || newJobsOnPage == 0 || offset + AmazonSearchPageSize >= searchPage.Hits)
+                {
+                    break;
+                }
+            }
+
+            sources.Add(
+                new AmazonRawSource(
+                    location.Label,
+                    location.Slug,
+                    location.CountryCode,
+                    location.LocQuery,
+                    searchTerm,
+                    BuildAmazonSearchApiUrl(searchTerm, location.CountryCode, location.LocQuery, 0),
+                    rawJobs));
+        }
+    }
+
+    return new AmazonFetchResult(sources, uniqueJobIds.Count);
+}
+
+static async Task<AmazonFetchResult> FetchAmazonJobsFromCacheAsync(
+    List<AmazonLocationConfig> locations,
+    string fixturesDirectoryPath,
+    string capturedAt,
+    int maxPages)
+{
+    if (!Directory.Exists(fixturesDirectoryPath))
+    {
+        throw new DirectoryNotFoundException(
+            $"Amazon fixtures not found at '{fixturesDirectoryPath}'. Set AMAZON_JOBS_LIVE=true for live validation.");
+    }
+
+    var sources = new List<AmazonRawSource>();
+    var uniqueJobIds = new HashSet<string>(StringComparer.Ordinal);
+
+    foreach (var location in locations)
+    {
+        foreach (var searchTerm in location.Queries)
+        {
+            var rawJobs = new List<AmazonRawJobItem>();
+            var seenForSource = new HashSet<string>(StringComparer.Ordinal);
+
+            for (var page = 0; page < maxPages; page += 1)
+            {
+                var offset = page * AmazonSearchPageSize;
+                var cachePath = FindAmazonSearchCachePath(fixturesDirectoryPath, location.CacheSlug ?? location.Slug, searchTerm, offset);
+                var searchUrl = BuildAmazonSearchApiUrl(searchTerm, location.CountryCode, location.LocQuery, offset);
+                if (cachePath is null)
+                {
+                    break;
+                }
+
+                var searchPage = ParseAmazonSearchPayload(await File.ReadAllTextAsync(cachePath), searchUrl, location.Label, capturedAt);
+                var newJobsOnPage = 0;
+                foreach (var rawJob in searchPage.Jobs)
+                {
+                    if (!seenForSource.Add(rawJob.JobId))
+                    {
+                        continue;
+                    }
+
+                    newJobsOnPage += 1;
+                    uniqueJobIds.Add(rawJob.JobId);
+                    rawJobs.Add(rawJob);
+                }
+
+                if (searchPage.Jobs.Count == 0 || newJobsOnPage == 0 || offset + AmazonSearchPageSize >= searchPage.Hits)
+                {
+                    break;
+                }
+            }
+
+            sources.Add(
+                new AmazonRawSource(
+                    location.Label,
+                    location.Slug,
+                    location.CountryCode,
+                    location.LocQuery,
+                    searchTerm,
+                    BuildAmazonSearchApiUrl(searchTerm, location.CountryCode, location.LocQuery, 0),
+                    rawJobs));
+        }
+    }
+
+    return new AmazonFetchResult(sources, uniqueJobIds.Count);
+}
+
 static string? FindMicrosoftSearchCachePath(string fixturesDirectoryPath, string cacheSlug, int start)
 {
     var exactPath = Path.Combine(fixturesDirectoryPath, $"search-{cacheSlug}-start{start}-api.json");
@@ -1558,6 +2326,37 @@ static string? FindMicrosoftSearchCachePath(string fixturesDirectoryPath, string
 
     var legacyStartZeroPath = Path.Combine(fixturesDirectoryPath, $"search-{cacheSlug}-api.json");
     return start == 0 && File.Exists(legacyStartZeroPath) ? legacyStartZeroPath : null;
+}
+
+static string? FindNvidiaSearchCachePath(string fixturesDirectoryPath, string cacheSlug, int start)
+{
+    var exactPath = Path.Combine(fixturesDirectoryPath, $"search-{cacheSlug}-start{start}-api.json");
+    if (File.Exists(exactPath))
+    {
+        return exactPath;
+    }
+
+    var legacyStartZeroPath = Path.Combine(fixturesDirectoryPath, $"search-{cacheSlug}-api.json");
+    return start == 0 && File.Exists(legacyStartZeroPath) ? legacyStartZeroPath : null;
+}
+
+static string? FindAmazonSearchCachePath(string fixturesDirectoryPath, string cacheSlug, string searchTerm, int offset)
+{
+    var querySlug = ToSimpleSlug(searchTerm);
+    var exactPath = Path.Combine(fixturesDirectoryPath, $"search-{cacheSlug}-{querySlug}-offset{offset}-api.json");
+    if (File.Exists(exactPath))
+    {
+        return exactPath;
+    }
+
+    var legacyStartZeroPath = Path.Combine(fixturesDirectoryPath, $"search-{cacheSlug}-{querySlug}-api.json");
+    return offset == 0 && File.Exists(legacyStartZeroPath) ? legacyStartZeroPath : null;
+}
+
+static string ToSimpleSlug(string value)
+{
+    var slug = Regex.Replace(value.Trim().ToLowerInvariant(), @"[^a-z0-9]+", "-", RegexOptions.CultureInvariant);
+    return slug.Trim('-');
 }
 
 static async Task<MicrosoftRawJobItem> EnrichMicrosoftRawJobAsync(
@@ -1586,6 +2385,32 @@ static async Task<MicrosoftRawJobItem> EnrichMicrosoftRawJobAsync(
     }
 }
 
+static async Task<NvidiaRawJobItem> EnrichNvidiaRawJobAsync(
+    HttpClient httpClient,
+    NvidiaSearchResult searchResult,
+    string queriedLocation,
+    string capturedAt)
+{
+    try
+    {
+        var detailUrl = BuildNvidiaDetailApiUrl(searchResult.JobId, queriedLocation);
+        Console.WriteLine($"Fetching NVIDIA detail {detailUrl}");
+        var payload = await httpClient.GetStringAsync(detailUrl);
+        var detail = ParseNvidiaDetailPayload(payload, searchResult);
+        return BuildNvidiaRawJob(searchResult, detail, capturedAt);
+    }
+    catch (HttpRequestException error)
+    {
+        Console.WriteLine($"NVIDIA detail fetch failed for {searchResult.JobId}: {error.Message}");
+        return BuildNvidiaRawJob(searchResult, null, capturedAt);
+    }
+    catch (JsonException error)
+    {
+        Console.WriteLine($"NVIDIA detail parse failed for {searchResult.JobId}: {error.Message}");
+        return BuildNvidiaRawJob(searchResult, null, capturedAt);
+    }
+}
+
 static MicrosoftRawJobItem BuildMicrosoftRawJob(
     MicrosoftSearchResult searchResult,
     MicrosoftJobDetail? detail,
@@ -1595,6 +2420,29 @@ static MicrosoftRawJobItem BuildMicrosoftRawJob(
         searchResult.JobId,
         detail?.TitleRaw ?? searchResult.TitleRaw,
         detail?.CompanyRaw ?? searchResult.CompanyRaw ?? "Microsoft",
+        detail?.LocationsRaw is { Count: > 0 } ? detail.LocationsRaw : searchResult.LocationsRaw,
+        detail?.JobUrl ?? searchResult.JobUrl,
+        searchResult.SearchUrl,
+        searchResult.RequestedLocation,
+        detail?.ApplyUrlRaw ?? searchResult.JobUrl,
+        detail?.AboutTheJobRaw,
+        detail?.ResponsibilitiesRaw,
+        detail?.MinimumQualificationsRaw,
+        detail?.PreferredQualificationsRaw,
+        detail?.PostedAtCandidate ?? searchResult.PostedAtCandidate,
+        detail?.UpdatedAtCandidate,
+        capturedAt);
+}
+
+static NvidiaRawJobItem BuildNvidiaRawJob(
+    NvidiaSearchResult searchResult,
+    NvidiaJobDetail? detail,
+    string capturedAt)
+{
+    return new NvidiaRawJobItem(
+        searchResult.JobId,
+        detail?.TitleRaw ?? searchResult.TitleRaw,
+        detail?.CompanyRaw ?? searchResult.CompanyRaw ?? "NVIDIA",
         detail?.LocationsRaw is { Count: > 0 } ? detail.LocationsRaw : searchResult.LocationsRaw,
         detail?.JobUrl ?? searchResult.JobUrl,
         searchResult.SearchUrl,
@@ -1648,6 +2496,45 @@ static MicrosoftSearchPage ParseMicrosoftSearchPayload(string payload, string se
     return new MicrosoftSearchPage(totalCount, results);
 }
 
+static NvidiaSearchPage ParseNvidiaSearchPayload(string payload, string searchUrl, string requestedLocation)
+{
+    using var document = JsonDocument.Parse(payload);
+    var data = GetJsonPropertyOrDefault(document.RootElement, "data");
+    var positions = data.ValueKind == JsonValueKind.Object && data.TryGetProperty("positions", out var positionsElement)
+        ? positionsElement
+        : default;
+    var totalCount = ReadJsonInt(data, "count") ?? 0;
+    var results = new List<NvidiaSearchResult>();
+
+    if (positions.ValueKind != JsonValueKind.Array)
+    {
+        return new NvidiaSearchPage(totalCount, results);
+    }
+
+    foreach (var position in positions.EnumerateArray())
+    {
+        var id = ReadJsonStringOrNumber(position, "id");
+        if (string.IsNullOrWhiteSpace(id))
+        {
+            continue;
+        }
+
+        var jobUrl = NormalizeNvidiaJobUrl(ReadJsonString(position, "publicUrl") ?? ReadJsonString(position, "positionUrl"), id);
+        results.Add(
+            new NvidiaSearchResult(
+                id,
+                ReadJsonString(position, "name"),
+                "NVIDIA",
+                ReadJsonStringList(position, "locations"),
+                jobUrl,
+                searchUrl,
+                requestedLocation,
+                ReadMicrosoftUnixTimestamp(position, "postedTs")));
+    }
+
+    return new NvidiaSearchPage(totalCount, results);
+}
+
 static MicrosoftJobDetail? ParseMicrosoftDetailPayload(string payload, MicrosoftSearchResult fallback)
 {
     using var document = JsonDocument.Parse(payload);
@@ -1677,6 +2564,174 @@ static MicrosoftJobDetail? ParseMicrosoftDetailPayload(string payload, Microsoft
         null);
 }
 
+static NvidiaJobDetail? ParseNvidiaDetailPayload(string payload, NvidiaSearchResult fallback)
+{
+    using var document = JsonDocument.Parse(payload);
+    var data = GetJsonPropertyOrDefault(document.RootElement, "data");
+    if (data.ValueKind != JsonValueKind.Object)
+    {
+        return null;
+    }
+
+    var jobDescription = ReadJsonString(data, "jobDescription");
+    var sections = SplitNvidiaJobDescription(jobDescription);
+    var id = ReadJsonStringOrNumber(data, "id") ?? fallback.JobId;
+    var jobUrl = NormalizeNvidiaJobUrl(ReadJsonString(data, "publicUrl") ?? ReadJsonString(data, "positionUrl"), id);
+    var applyUrl = ReadJsonString(GetJsonPropertyOrDefault(GetJsonPropertyOrDefault(data, "positionUserActions"), "applyAction"), "applyUrl");
+
+    return new NvidiaJobDetail(
+        id,
+        ReadJsonString(data, "name") ?? fallback.TitleRaw,
+        "NVIDIA",
+        ReadJsonStringList(data, "locations"),
+        jobUrl,
+        applyUrl ?? jobUrl,
+        sections.AboutTheJobRaw,
+        sections.ResponsibilitiesRaw,
+        sections.MinimumQualificationsRaw,
+        sections.PreferredQualificationsRaw,
+        ReadMicrosoftUnixTimestamp(data, "postedTs") ?? fallback.PostedAtCandidate,
+        null);
+}
+
+static AmazonSearchPage ParseAmazonSearchPayload(string payload, string searchUrl, string requestedLocation, string capturedAt)
+{
+    using var document = JsonDocument.Parse(payload);
+    var root = document.RootElement;
+    var hits = ReadJsonInt(root, "hits") ?? 0;
+    var jobs = GetJsonPropertyOrDefault(root, "jobs");
+    var rawJobs = new List<AmazonRawJobItem>();
+
+    if (jobs.ValueKind != JsonValueKind.Array)
+    {
+        return new AmazonSearchPage(hits, rawJobs);
+    }
+
+    foreach (var job in jobs.EnumerateArray())
+    {
+        var id = ReadJsonStringOrNumber(job, "id_icims") ?? ReadJsonStringOrNumber(job, "id");
+        if (string.IsNullOrWhiteSpace(id))
+        {
+            continue;
+        }
+
+        var locations = ExtractAmazonLocations(job);
+        var jobPath = ReadJsonString(job, "job_path");
+        var jobUrl = NormalizeAmazonJobUrl(jobPath, id);
+        rawJobs.Add(
+            new AmazonRawJobItem(
+                id,
+                ReadJsonString(job, "title"),
+                ReadJsonString(job, "company_name") ?? "Amazon",
+                locations,
+                jobUrl,
+                searchUrl,
+                requestedLocation,
+                ReadJsonString(job, "url_next_step") ?? jobUrl,
+                ReadJsonString(job, "description"),
+                ExtractAmazonResponsibilities(ReadJsonString(job, "description")),
+                ReadJsonString(job, "basic_qualifications"),
+                ReadJsonString(job, "preferred_qualifications"),
+                ParseAmazonPostedDate(ReadJsonString(job, "posted_date")),
+                null,
+                capturedAt));
+    }
+
+    return new AmazonSearchPage(hits, rawJobs);
+}
+
+static List<string> ExtractAmazonLocations(JsonElement job)
+{
+    var locations = new List<string>();
+    var rawLocations = ReadJsonStringList(job, "locations");
+    foreach (var rawLocation in rawLocations)
+    {
+        try
+        {
+            using var locationDocument = JsonDocument.Parse(rawLocation);
+            var locationRoot = locationDocument.RootElement;
+            var normalized = ReadJsonString(locationRoot, "normalizedLocation");
+            var nonStemming = ReadJsonString(locationRoot, "locationNonStemming");
+            var display = !string.IsNullOrWhiteSpace(normalized) ? normalized : nonStemming;
+            if (!string.IsNullOrWhiteSpace(display))
+            {
+                locations.Add(display);
+            }
+        }
+        catch (JsonException)
+        {
+            if (!string.IsNullOrWhiteSpace(rawLocation))
+            {
+                locations.Add(rawLocation);
+            }
+        }
+    }
+
+    var primary = ReadJsonString(job, "normalized_location") ?? ReadJsonString(job, "location");
+    if (!string.IsNullOrWhiteSpace(primary))
+    {
+        locations.Add(primary);
+    }
+
+    return locations
+        .Where(static location => !string.IsNullOrWhiteSpace(location))
+        .Distinct(StringComparer.Ordinal)
+        .ToList();
+}
+
+static string? ExtractAmazonResponsibilities(string? description)
+{
+    return ExtractAmazonSection(description, "Key job responsibilities", new[] { "A day in the life", "About the team", "About AWS" });
+}
+
+static string? ExtractAmazonSection(string? html, string startHeading, IReadOnlyCollection<string> endHeadings)
+{
+    if (string.IsNullOrWhiteSpace(html))
+    {
+        return null;
+    }
+
+    var startMatch = Regex.Match(
+        html,
+        Regex.Escape(startHeading),
+        RegexOptions.CultureInvariant | RegexOptions.IgnoreCase);
+    if (!startMatch.Success)
+    {
+        return null;
+    }
+
+    var startIndex = startMatch.Index + startMatch.Length;
+    var endIndex = html.Length;
+    foreach (var endHeading in endHeadings)
+    {
+        var endMatch = Regex.Match(
+            html[startIndex..],
+            Regex.Escape(endHeading),
+            RegexOptions.CultureInvariant | RegexOptions.IgnoreCase);
+        if (endMatch.Success)
+        {
+            endIndex = Math.Min(endIndex, startIndex + endMatch.Index);
+        }
+    }
+
+    return CleanRawHtml(html[startIndex..endIndex]);
+}
+
+static string? ParseAmazonPostedDate(string? postedDate)
+{
+    if (string.IsNullOrWhiteSpace(postedDate))
+    {
+        return null;
+    }
+
+    if (DateTimeOffset.TryParse(postedDate, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out var parsed))
+    {
+        return parsed.ToString("O");
+    }
+
+    return postedDate.Trim();
+}
+
 static MicrosoftJobDescriptionSections SplitMicrosoftJobDescription(string? jobDescription)
 {
     if (string.IsNullOrWhiteSpace(jobDescription))
@@ -1695,6 +2750,62 @@ static MicrosoftJobDescriptionSections SplitMicrosoftJobDescription(string? jobD
         CleanRawHtml(responsibilities),
         CleanRawHtml(minimum),
         CleanRawHtml(preferred));
+}
+
+static NvidiaJobDescriptionSections SplitNvidiaJobDescription(string? jobDescription)
+{
+    if (string.IsNullOrWhiteSpace(jobDescription))
+    {
+        return new NvidiaJobDescriptionSections(null, null, null, null);
+    }
+
+    var responsibilities = ExtractNvidiaSection(jobDescription, "What you will be doing", new[] { "What we need to see", "Ways to stand out from the crowd" });
+    var minimum = ExtractNvidiaSection(jobDescription, "What we need to see", new[] { "Ways to stand out from the crowd" });
+    var preferred = ExtractNvidiaSection(jobDescription, "Ways to stand out from the crowd", Array.Empty<string>());
+    var firstHeading = Regex.Match(
+        jobDescription,
+        @"<(?:b|strong)>\s*What you will be doing:?\s*</(?:b|strong)>",
+        RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.Singleline);
+    var about = firstHeading.Success ? jobDescription[..firstHeading.Index] : jobDescription;
+
+    return new NvidiaJobDescriptionSections(
+        CleanRawHtml(about),
+        CleanRawHtml(responsibilities),
+        CleanRawHtml(minimum),
+        CleanRawHtml(preferred));
+}
+
+static string? ExtractNvidiaSection(string? html, string startHeading, IReadOnlyCollection<string> endHeadings)
+{
+    if (string.IsNullOrWhiteSpace(html))
+    {
+        return null;
+    }
+
+    var startMatch = Regex.Match(
+        html,
+        $@"<(?:b|strong)>\s*{Regex.Escape(startHeading)}:?\s*</(?:b|strong)>",
+        RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.Singleline);
+    if (!startMatch.Success)
+    {
+        return null;
+    }
+
+    var startIndex = startMatch.Index + startMatch.Length;
+    var endIndex = html.Length;
+    foreach (var endHeading in endHeadings)
+    {
+        var endMatch = Regex.Match(
+            html[startIndex..],
+            $@"<(?:b|strong)>\s*{Regex.Escape(endHeading)}:?\s*</(?:b|strong)>",
+            RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.Singleline);
+        if (endMatch.Success)
+        {
+            endIndex = Math.Min(endIndex, startIndex + endMatch.Index);
+        }
+    }
+
+    return html[startIndex..endIndex];
 }
 
 static string? ExtractMicrosoftSection(string? html, string startHeading, IReadOnlyCollection<string> endHeadings)
@@ -1745,6 +2856,44 @@ static string BuildMicrosoftSearchApiUrl(string sourceLocation, string searchTer
     return "https://apply.careers.microsoft.com/api/pcsx/search?" + BuildQueryString(query);
 }
 
+static string BuildNvidiaSearchApiUrl(string sourceLocation, string searchTerm, int start)
+{
+    var query = new Dictionary<string, string?>
+    {
+        ["domain"] = "nvidia.com",
+        ["query"] = searchTerm,
+        ["location"] = sourceLocation,
+        ["start"] = start.ToString(CultureInfo.InvariantCulture),
+        ["sort_by"] = "relevance",
+        ["filter_distance"] = "160",
+        ["filter_include_remote"] = "1"
+    };
+
+    return "https://jobs.nvidia.com/api/pcsx/search?" + BuildQueryString(query);
+}
+
+static string BuildAmazonSearchApiUrl(string searchTerm, string countryCode, string locQuery, int offset)
+{
+    var query = new Dictionary<string, string?>
+    {
+        ["offset"] = offset.ToString(CultureInfo.InvariantCulture),
+        ["result_limit"] = AmazonSearchPageSize.ToString(CultureInfo.InvariantCulture),
+        ["sort"] = "relevant",
+        ["base_query"] = searchTerm,
+        ["loc_query"] = locQuery,
+        ["country"] = countryCode,
+        ["latitude"] = string.Empty,
+        ["longitude"] = string.Empty,
+        ["loc_group_id"] = string.Empty,
+        ["invalid_location"] = "false",
+        ["city"] = string.Empty,
+        ["region"] = string.Empty,
+        ["county"] = string.Empty
+    };
+
+    return "https://www.amazon.jobs/en/search.json?" + BuildQueryString(query);
+}
+
 static string BuildMicrosoftDetailApiUrl(string jobId, string queriedLocation)
 {
     var query = new Dictionary<string, string?>
@@ -1756,6 +2905,19 @@ static string BuildMicrosoftDetailApiUrl(string jobId, string queriedLocation)
     };
 
     return "https://apply.careers.microsoft.com/api/pcsx/position_details?" + BuildQueryString(query);
+}
+
+static string BuildNvidiaDetailApiUrl(string jobId, string queriedLocation)
+{
+    var query = new Dictionary<string, string?>
+    {
+        ["position_id"] = jobId,
+        ["domain"] = "nvidia.com",
+        ["hl"] = "en",
+        ["queried_location"] = queriedLocation
+    };
+
+    return "https://jobs.nvidia.com/api/pcsx/position_details?" + BuildQueryString(query);
 }
 
 static string BuildQueryString(Dictionary<string, string?> query)
@@ -1779,6 +2941,36 @@ static string NormalizeMicrosoftJobUrl(string? rawUrl, string jobId)
     }
 
     return $"https://apply.careers.microsoft.com/{rawUrl.TrimStart('/')}";
+}
+
+static string NormalizeNvidiaJobUrl(string? rawUrl, string jobId)
+{
+    if (string.IsNullOrWhiteSpace(rawUrl))
+    {
+        return $"https://jobs.nvidia.com/careers/job/{jobId}";
+    }
+
+    if (rawUrl.StartsWith("http", StringComparison.OrdinalIgnoreCase))
+    {
+        return rawUrl;
+    }
+
+    return $"https://jobs.nvidia.com/{rawUrl.TrimStart('/')}";
+}
+
+static string NormalizeAmazonJobUrl(string? rawUrl, string jobId)
+{
+    if (string.IsNullOrWhiteSpace(rawUrl))
+    {
+        return $"https://www.amazon.jobs/en/jobs/{jobId}";
+    }
+
+    if (rawUrl.StartsWith("http", StringComparison.OrdinalIgnoreCase))
+    {
+        return rawUrl;
+    }
+
+    return $"https://www.amazon.jobs/{rawUrl.TrimStart('/')}";
 }
 
 static string? ReadMicrosoftUnixTimestamp(JsonElement element, string propertyName)
@@ -3319,6 +4511,54 @@ static JobDataset BuildMicrosoftDataset(MicrosoftRawRun rawRun, List<JobItem> jo
         jobs);
 }
 
+static JobDataset BuildNvidiaDataset(NvidiaRawRun rawRun, List<JobItem> jobs)
+{
+    var googleCompatibleLocations = rawRun.Sources
+        .GroupBy(static source => source.LocationSlug, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var source = group.First();
+            return new LocationConfig(source.LocationSlug, source.RequestedLocation, source.SearchLocation);
+        })
+        .OrderBy(static location => location.Label, StringComparer.Ordinal)
+        .ToList();
+
+    return new JobDataset(
+        rawRun.GeneratedAt,
+        "NVIDIA Careers",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active NVIDIA jobs from latest raw snapshot.",
+        rawRun.SearchTerm,
+        googleCompatibleLocations,
+        jobs);
+}
+
+static JobDataset BuildAmazonDataset(AmazonRawRun rawRun, List<JobItem> jobs)
+{
+    var googleCompatibleLocations = rawRun.Sources
+        .GroupBy(static source => source.LocationSlug, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var source = group.First();
+            return new LocationConfig(source.LocationSlug, source.RequestedLocation, source.LocQuery);
+        })
+        .OrderBy(static location => location.Label, StringComparer.Ordinal)
+        .ToList();
+    var searchTerms = rawRun.Sources
+        .Select(static source => source.SearchTerm)
+        .Distinct(StringComparer.Ordinal)
+        .ToList();
+
+    return new JobDataset(
+        rawRun.GeneratedAt,
+        "Amazon Jobs",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active Amazon jobs from latest raw snapshot.",
+        string.Join(" | ", searchTerms),
+        googleCompatibleLocations,
+        jobs);
+}
+
 static JsonSerializerOptions JsonOptions()
 {
     return new JsonSerializerOptions
@@ -3343,6 +4583,20 @@ internal sealed record MicrosoftLocationConfig(
     [property: JsonPropertyName("slug")] string Slug,
     [property: JsonPropertyName("label")] string Label,
     [property: JsonPropertyName("searchLocation")] string SearchLocation,
+    [property: JsonPropertyName("cacheSlug")] string? CacheSlug = null);
+
+internal sealed record NvidiaLocationConfig(
+    [property: JsonPropertyName("slug")] string Slug,
+    [property: JsonPropertyName("label")] string Label,
+    [property: JsonPropertyName("searchLocation")] string SearchLocation,
+    [property: JsonPropertyName("cacheSlug")] string? CacheSlug = null);
+
+internal sealed record AmazonLocationConfig(
+    [property: JsonPropertyName("slug")] string Slug,
+    [property: JsonPropertyName("label")] string Label,
+    [property: JsonPropertyName("countryCode")] string CountryCode,
+    [property: JsonPropertyName("locQuery")] string LocQuery,
+    [property: JsonPropertyName("queries")] List<string> Queries,
     [property: JsonPropertyName("cacheSlug")] string? CacheSlug = null);
 
 internal sealed record ParseHtmlPreview(
@@ -3540,6 +4794,69 @@ internal sealed record MicrosoftRawJobItem(
     [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate,
     [property: JsonPropertyName("capturedAt")] string CapturedAt);
 
+internal sealed record NvidiaRawRun(
+    [property: JsonPropertyName("runId")] string RunId,
+    [property: JsonPropertyName("generatedAt")] string GeneratedAt,
+    [property: JsonPropertyName("source")] string Source,
+    [property: JsonPropertyName("searchTerm")] string SearchTerm,
+    [property: JsonPropertyName("sources")] List<NvidiaRawSource> Sources);
+
+internal sealed record NvidiaRawSource(
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("locationSlug")] string LocationSlug,
+    [property: JsonPropertyName("searchLocation")] string SearchLocation,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("jobs")] List<NvidiaRawJobItem> Jobs);
+
+internal sealed record NvidiaRawJobItem(
+    [property: JsonPropertyName("jobId")] string JobId,
+    [property: JsonPropertyName("titleRaw")] string? TitleRaw,
+    [property: JsonPropertyName("companyRaw")] string? CompanyRaw,
+    [property: JsonPropertyName("locationsRaw")] List<string> LocationsRaw,
+    [property: JsonPropertyName("jobUrl")] string JobUrl,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate,
+    [property: JsonPropertyName("capturedAt")] string CapturedAt);
+
+internal sealed record AmazonRawRun(
+    [property: JsonPropertyName("runId")] string RunId,
+    [property: JsonPropertyName("generatedAt")] string GeneratedAt,
+    [property: JsonPropertyName("source")] string Source,
+    [property: JsonPropertyName("sources")] List<AmazonRawSource> Sources);
+
+internal sealed record AmazonRawSource(
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("locationSlug")] string LocationSlug,
+    [property: JsonPropertyName("countryCode")] string CountryCode,
+    [property: JsonPropertyName("locQuery")] string LocQuery,
+    [property: JsonPropertyName("searchTerm")] string SearchTerm,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("jobs")] List<AmazonRawJobItem> Jobs);
+
+internal sealed record AmazonRawJobItem(
+    [property: JsonPropertyName("jobId")] string JobId,
+    [property: JsonPropertyName("titleRaw")] string? TitleRaw,
+    [property: JsonPropertyName("companyRaw")] string? CompanyRaw,
+    [property: JsonPropertyName("locationsRaw")] List<string> LocationsRaw,
+    [property: JsonPropertyName("jobUrl")] string JobUrl,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate,
+    [property: JsonPropertyName("capturedAt")] string CapturedAt);
+
 internal sealed record MetaSearchResult(
     string JobId,
     string? TitleRaw,
@@ -3597,6 +4914,44 @@ internal sealed record MicrosoftJobDescriptionSections(
     string? MinimumQualificationsRaw,
     string? PreferredQualificationsRaw);
 
+internal sealed record NvidiaSearchResult(
+    string JobId,
+    string? TitleRaw,
+    string? CompanyRaw,
+    List<string> LocationsRaw,
+    string JobUrl,
+    string SearchUrl,
+    string RequestedLocation,
+    string? PostedAtCandidate);
+
+internal sealed record NvidiaSearchPage(
+    int TotalCount,
+    List<NvidiaSearchResult> Results);
+
+internal sealed record NvidiaJobDetail(
+    string JobId,
+    string? TitleRaw,
+    string? CompanyRaw,
+    List<string> LocationsRaw,
+    string JobUrl,
+    string? ApplyUrlRaw,
+    string? AboutTheJobRaw,
+    string? ResponsibilitiesRaw,
+    string? MinimumQualificationsRaw,
+    string? PreferredQualificationsRaw,
+    string? PostedAtCandidate,
+    string? UpdatedAtCandidate);
+
+internal sealed record NvidiaJobDescriptionSections(
+    string? AboutTheJobRaw,
+    string? ResponsibilitiesRaw,
+    string? MinimumQualificationsRaw,
+    string? PreferredQualificationsRaw);
+
+internal sealed record AmazonSearchPage(
+    int Hits,
+    List<AmazonRawJobItem> Jobs);
+
 internal sealed record MetaQualifications(
     string? MinimumQualificationsRaw,
     string? PreferredQualificationsRaw);
@@ -3607,6 +4962,14 @@ internal sealed record MetaFetchResult(
 
 internal sealed record MicrosoftFetchResult(
     List<MicrosoftRawSource> Sources,
+    int JobCount);
+
+internal sealed record NvidiaFetchResult(
+    List<NvidiaRawSource> Sources,
+    int JobCount);
+
+internal sealed record AmazonFetchResult(
+    List<AmazonRawSource> Sources,
     int JobCount);
 
 internal sealed record MetaRawSourceDraft(
@@ -3659,6 +5022,12 @@ internal sealed record AppleRemovedDetailsDataset(
 internal sealed record MicrosoftRemovedDetailsDataset(
     [property: JsonPropertyName("jobs")] List<MicrosoftRemovedJobDetail> Jobs);
 
+internal sealed record NvidiaRemovedDetailsDataset(
+    [property: JsonPropertyName("jobs")] List<NvidiaRemovedJobDetail> Jobs);
+
+internal sealed record AmazonRemovedDetailsDataset(
+    [property: JsonPropertyName("jobs")] List<AmazonRemovedJobDetail> Jobs);
+
 internal sealed record MetaRemovedJobDetail(
     [property: JsonPropertyName("id")] string Id,
     [property: JsonPropertyName("title")] string Title,
@@ -3698,6 +5067,44 @@ internal sealed record AppleRemovedJobDetail(
     [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate);
 
 internal sealed record MicrosoftRemovedJobDetail(
+    [property: JsonPropertyName("id")] string Id,
+    [property: JsonPropertyName("title")] string Title,
+    [property: JsonPropertyName("company")] string? Company,
+    [property: JsonPropertyName("url")] string Url,
+    [property: JsonPropertyName("locations")] List<string> Locations,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("firstSeenAt")] string? FirstSeenAt,
+    [property: JsonPropertyName("lastSeenAt")] string? LastSeenAt,
+    [property: JsonPropertyName("removedAt")] string? RemovedAt,
+    [property: JsonPropertyName("removedInRunId")] string? RemovedInRunId,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate);
+
+internal sealed record NvidiaRemovedJobDetail(
+    [property: JsonPropertyName("id")] string Id,
+    [property: JsonPropertyName("title")] string Title,
+    [property: JsonPropertyName("company")] string? Company,
+    [property: JsonPropertyName("url")] string Url,
+    [property: JsonPropertyName("locations")] List<string> Locations,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("firstSeenAt")] string? FirstSeenAt,
+    [property: JsonPropertyName("lastSeenAt")] string? LastSeenAt,
+    [property: JsonPropertyName("removedAt")] string? RemovedAt,
+    [property: JsonPropertyName("removedInRunId")] string? RemovedInRunId,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate);
+
+internal sealed record AmazonRemovedJobDetail(
     [property: JsonPropertyName("id")] string Id,
     [property: JsonPropertyName("title")] string Title,
     [property: JsonPropertyName("company")] string? Company,
@@ -3818,6 +5225,12 @@ internal enum PipelineMode
     CollectMicrosoft,
     NormalizeMicrosoftLatest,
     AnalyzeMicrosoftLatest,
+    CollectNvidia,
+    NormalizeNvidiaLatest,
+    AnalyzeNvidiaLatest,
+    CollectAmazon,
+    NormalizeAmazonLatest,
+    AnalyzeAmazonLatest,
     CollectAndAnalyze,
     Collect,
     AnalyzeLatest,

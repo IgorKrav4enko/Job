@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "poland",
+    "label": "Poland",
+    "countryCode": "POL",
+    "locQuery": "Poland",
+    "queries": [
+      "Software Development",
+      "Software Engineer"
+    ]
+  },
+  {
+    "slug": "switzerland",
+    "label": "Switzerland",
+    "countryCode": "CHE",
+    "locQuery": "Switzerland",
+    "queries": [
+      "Software Development",
+      "Software Engineer"
+    ]
+  },
+  {
+    "slug": "germany",
+    "label": "Germany",
+    "countryCode": "DEU",
+    "locQuery": "Germany",
+    "queries": [
+      "Software Development",
+      "Software Engineer"
+    ]
+  },
+  {
+    "slug": "united-kingdom",
+    "label": "United Kingdom",
+    "countryCode": "GBR",
+    "locQuery": "United Kingdom",
+    "queries": [
+      "Software Development",
+      "Software Engineer"
+    ]
+  },
+  {
+    "slug": "ireland",
+    "label": "Ireland",
+    "countryCode": "IRL",
+    "locQuery": "Ireland",
+    "queries": [
+      "Software Development",
+      "Software Engineer"
+    ]
+  }
+]

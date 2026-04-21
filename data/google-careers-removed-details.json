@@ -1,6 +1,123 @@
 {
   "jobs": [
     {
+      "id": "135686878425686726",
+      "title": "Senior Research Software Engineer, Labs, AI/ML",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/135686878425686726-senior-research-software-engineer-labs-aiml?location=Switzerland\u0026q=%22Software\u002BEngineer%22\u0026page=1",
+      "locations": [
+        "Mountain View, CA, USA",
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-15T23:21:43.0514110\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:36:54.9471430\u002B00:00",
+      "removedAt": "2026-04-21T11:59:50.6066030\u002B00:00",
+      "removedInRunId": "2026-04-21T11-59-50Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckUEny5QY0u60T15eB30dZ-qzFKwAE9eekmRH2laaLku5EjsACxwdTO8TI6hBi1k_MI6h5FRb-np4Nzc2e1HRKDNmaDnt9WU5XMtVTXDx0Tej_JhMKpwUdLtcF7qZdw%3D%3D_V2\u0026loc=US\u0026title=Senior\u002BResearch\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EGoogle Research is building the next generation of intelligent systems for all Google products. To achieve this, we\u2019re working on projects that utilize the latest computer science techniques developed by skilled software developers and research scientists. Google Research teams collaborate closely with other teams across Google, maintaining the flexibility and versatility required to adapt new projects and foci that meet the demands of the world\u0027s fast-paced business needs.\u003C/p\u003E\u003Cp\u003EFor United States:\u003C/p\u003E\u003Cp\u003EThe US base salary range for this full-time position is $174,000-$252,000 \u002B bonus \u002B equity \u002B benefits. Our salary ranges are determined by role, level, and location. Within the range, individual pay is determined by work location and additional factors, including job-related skills, experience, and relevant education or training. Your recruiter can share more about the specific salary range for your preferred location during the hiring process.\n\nPlease note that the compensation details listed in US role postings reflect the base salary only, and do not include bonus, equity, or benefits. Learn more about \u003Ca href=\u0022https://careers.google.com/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003ECurrent on academic literature on LLM models\u0027 capabilities, and research on autorating (through LLMs, and otherwise), user simulation, and evaluation.\u003C/li\u003E\n\u003Cli\u003EUnderstand the current system, and the needs for rating and agentic tasks in the Google context.\u003C/li\u003E\n\u003Cli\u003EBuild and deliver functioning systems to Google products, with the goal to improve the next generation of products, for the user, while keeping in mind Google\u0027s serving constraints and systems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in C\u002B\u002B or Python.\u003C/li\u003E\n\u003Cli\u003EExperience developing, deploying, managing, and maintaining Machine Learning (ML) infrastructure.\u003C/li\u003E\n\u003Cli\u003EExperience in Applied Machine Learning or Machine Learning infrastructure.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical fields.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Mountain View, CA, USA",
+          "addresses": [
+            "Google Building 41, 1600 Amphitheatre Pkwy #43, Mountain View, CA 94043, USA"
+          ],
+          "city": "Mountain View",
+          "postalCode": "94043",
+          "regionCode": "CA",
+          "countryCode": "US"
+        },
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-08T15:30:17.3650000\u002B00:00",
+        "2026-04-08T15:30:17.4500000\u002B00:00"
+      ]
+    },
+    {
+      "id": "86320472785855174",
+      "title": "Software Engineer III, Google Kubernetes Engine Experience",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/86320472785855174-software-engineer-iii-google-kubernetes-engine-experience?location=Poland\u0026q=%22Software\u002BEngineer%22\u0026page=3",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-15T23:21:43.0514110\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:36:54.9471430\u002B00:00",
+      "removedAt": "2026-04-21T11:59:50.6066030\u002B00:00",
+      "removedInRunId": "2026-04-21T11-59-50Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckXf-oTbGZnYkj5NebRUkyu5RYQWrMj5G3qT5JcmU1O8gEjsACxwdTOgsuxNvShtQujMWcBeC6NcrW9FRQAPiZIwONkmOQJheROsrPUZQazMmWvBC58lQguPRVzXOew%3D%3D_V2\u0026loc=PL\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003E\u003Cdiv\u003EWrite a product or system development code.\u003C/div\u003E\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EReview code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with full stack development, across back-end such as Java, Python, Golang, or C\u002B\u002B codebases, and front-end experience including JavaScript or TypeScript, HTML, CSS or equivalent.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or a related technical field.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-03T11:30:44.5800000\u002B00:00",
+        "2026-04-03T11:30:44.7360000\u002B00:00"
+      ]
+    },
+    {
+      "id": "142924611284017862",
+      "title": "Staff Software Engineer, Site Reliability Engineering",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/142924611284017862-staff-software-engineer-site-reliability-engineering?location=United\u002BKingdom\u0026q=%22Software\u002BEngineer%22\u0026page=2",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-15T23:21:43.0514110\u002B00:00",
+      "lastSeenAt": "2026-04-20T09:36:54.9471430\u002B00:00",
+      "removedAt": "2026-04-21T11:59:50.6066030\u002B00:00",
+      "removedInRunId": "2026-04-21T11-59-50Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckQ8W8B9VwkCQDzj6Q7Fa9YYQvHp44iSx2483zzm06ceYEjsACxwdTPsj7wroL9gMlJ6MG9rUYaah_YuCfSjcBUmQyKoE8khm9ns-o_dSWH0NvceaXhPM3ChSYXR51A%3D%3D_V2\u0026loc=GB\u0026title=Staff\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "Site Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google Cloud\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to customer\u0027s needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance.\u003Cdiv\u003E  \u003Cbr\u003E\u003Cdiv\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google Cloud, while using your expertise in coding, algorithms, complexity analysis and large-scale system design. SRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\u003C/div\u003E\n\u003C/div\u003EBehind everything our users see online is the architecture built by the Technical Infrastructure team to keep it running. From developing and maintaining our data centers to building the next generation of Google platforms, we make Google\u0027s product portfolio possible. We\u0027re proud to be our engineers\u0027 engineers and love voiding warranties by taking things apart so we can rebuild them. We keep our networks up and running, ensuring our users have the best and fastest experience possible.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EEngage in and improve the whole lifecycle of services from inception and design, through to deployment, operation, and refinement.\u003C/li\u003E\n\u003Cli\u003ESupport services before they go live through activities such as system design consulting, developing software platforms and frameworks, capacity planning, and launch reviews.\u003C/li\u003E\n\u003Cli\u003EMaintain services once they are live by measuring and monitoring availability, latency, and overall system health.\u003C/li\u003E\n\u003Cli\u003EScale systems sustainably through mechanisms like automation, and evolve systems by pushing for changes that improve reliability and velocity.\u003C/li\u003E\n\u003Cli\u003EPractice sustainable incident response and blameless postmortems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience with software development in one or more programming languages (e.g., Python, C, C\u002B\u002B, Java).\u003C/li\u003E\n\u003Cli\u003E3 years of experience managing projects and designing, investigating, and troubleshooting distributed systems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or Engineering.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E8 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "123 Buckingham Palace Rd, London SW1W 9SH, UK"
+          ],
+          "city": "London",
+          "postalCode": "SW1W 9SH",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-02T11:31:48.9850000\u002B00:00",
+        "2026-04-02T11:31:49.1150000\u002B00:00"
+      ]
+    },
+    {
       "id": "81907305842385606",
       "title": "Senior Software Engineer, Front End, Calendar Web",
       "company": "Google",

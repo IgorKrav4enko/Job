@@ -27,6 +27,22 @@ const SOURCES = {
     detailsUrl: "./data/microsoft-careers-run-details.json",
     jobsUrl: "./data/microsoft-careers-jobs.json",
     allowMissingHistory: true
+  },
+  nvidia: {
+    key: "nvidia",
+    label: "NVIDIA Careers",
+    runsUrl: "./data/nvidia-careers-runs.json",
+    detailsUrl: "./data/nvidia-careers-run-details.json",
+    jobsUrl: "./data/nvidia-careers-jobs.json",
+    allowMissingHistory: true
+  },
+  amazon: {
+    key: "amazon",
+    label: "Amazon Jobs",
+    runsUrl: "./data/amazon-jobs-runs.json",
+    detailsUrl: "./data/amazon-jobs-run-details.json",
+    jobsUrl: "./data/amazon-jobs-jobs.json",
+    allowMissingHistory: true
   }
 };
 

@@ -33,5 +33,23 @@
     "query": "Software Engineer",
     "locationsConfig": "config/microsoft-careers-locations.json",
     "notes": "Microsoft normalized output is viewable through the dashboard source switcher. History/diff outputs can be added later without changing source selection."
+  },
+  {
+    "source": "nvidia-careers",
+    "company": "NVIDIA",
+    "enabled": false,
+    "adapter": "nvidia-careers-raw",
+    "query": "software engineer",
+    "locationsConfig": "config/nvidia-careers-locations.json",
+    "notes": "NVIDIA uses the PCSX JSON API with separate raw, normalized, history/diff outputs and dashboard source selection."
+  },
+  {
+    "source": "amazon-jobs",
+    "company": "Amazon",
+    "enabled": false,
+    "adapter": "amazon-jobs-raw",
+    "query": "Software Development | Software Engineer",
+    "locationsConfig": "config/amazon-jobs-locations.json",
+    "notes": "Amazon uses /en/search.json. Software Development is the primary query; Software Engineer is collected as a secondary query and deduped by job id."
   }
 ]
