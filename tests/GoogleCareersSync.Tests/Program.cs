@@ -951,7 +951,9 @@ internal sealed class ReflectionTestRunner
         string? firstSeenAt = null,
         string? lastSeenAt = null,
         bool isActive = true,
-        string? contentHash = null)
+        string? contentHash = null,
+        IEnumerable<string>? matchedLocations = null,
+        int? searchMatchCount = null)
     {
         return CreateRecord(
             "JobItem",
@@ -967,7 +969,9 @@ internal sealed class ReflectionTestRunner
             firstSeenAt,
             lastSeenAt,
             isActive,
-            contentHash);
+            contentHash,
+            matchedLocations?.ToList(),
+            searchMatchCount);
     }
 
     private object CreateMetaRawRun(string runId, string generatedAt, params object[] jobs)

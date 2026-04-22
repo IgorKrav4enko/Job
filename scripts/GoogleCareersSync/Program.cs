@@ -26,6 +26,7 @@ var metaRunDetailsPath = Path.Combine(root, "data", "meta-careers-run-details.js
 var metaRemovedDetailsPath = Path.Combine(root, "data", "meta-careers-removed-details.json");
 var metaRawRunsDirectoryPath = Path.Combine(root, "data-raw", "meta-careers", "runs");
 var metaFixturesDirectoryPath = Path.Combine(root, "data-debug", "meta-careers", "fixtures");
+var appleConfigPath = Path.Combine(root, "config", "apple-jobs-locations.json");
 var appleOutputPath = Path.Combine(root, "data", "apple-careers-jobs.json");
 var appleRunsPath = Path.Combine(root, "data", "apple-careers-runs.json");
 var appleRunDetailsPath = Path.Combine(root, "data", "apple-careers-run-details.json");
@@ -58,7 +59,7 @@ var searchTerm = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_SEARCH_TERM"
 var maxPages = GetMaxPages();
 if (string.IsNullOrWhiteSpace(searchTerm))
 {
-    searchTerm = "\"Software Engineer\"";
+    searchTerm = "Software Engineer";
 }
 
 switch (mode)
@@ -182,6 +183,24 @@ switch (mode)
         break;
     }
 
+    case PipelineMode.CollectApple:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var appleLocations = LoadAppleLocations(appleConfigPath);
+        var appleSearchTerm = GetAppleSearchTerm();
+        var fetchResult = await FetchAppleJobsAsync(appleLocations, appleSearchTerm, runCapturedAt, GetAppleMaxPages());
+        var rawRun = new AppleRawRun(runId, runCapturedAt, "apple-jobs", appleSearchTerm, fetchResult.Sources);
+
+        Directory.CreateDirectory(appleRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(appleRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+
+        Console.WriteLine($"Collected Apple raw run {runId} with {fetchResult.JobCount} unique jobs.");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
     case PipelineMode.NormalizeAppleLatest:
     {
         var latestRawRunPath = GetRawRunFilePaths(appleRawRunsDirectoryPath).LastOrDefault();
@@ -253,13 +272,13 @@ switch (mode)
         var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
         var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
         var microsoftLocations = LoadMicrosoftLocations(microsoftConfigPath);
-        var microsoftSearchTerm = GetMicrosoftSearchTerm();
+        var microsoftSearchTerms = GetMicrosoftSearchTerms();
         var maxMicrosoftPages = GetMicrosoftMaxPages();
         var maxMicrosoftDetails = GetMicrosoftMaxDetails();
         var fetchResult = ShouldFetchMicrosoftLive()
-            ? await FetchMicrosoftJobsAsync(microsoftLocations, microsoftSearchTerm, runCapturedAt, maxMicrosoftPages, maxMicrosoftDetails)
-            : await FetchMicrosoftJobsFromCacheAsync(microsoftLocations, microsoftFixturesDirectoryPath, microsoftSearchTerm, runCapturedAt, maxMicrosoftPages, maxMicrosoftDetails);
-        var rawRun = new MicrosoftRawRun(runId, runCapturedAt, "microsoft-careers", microsoftSearchTerm, fetchResult.Sources);
+            ? await FetchMicrosoftJobsAsync(microsoftLocations, microsoftSearchTerms, runCapturedAt, maxMicrosoftPages, maxMicrosoftDetails)
+            : await FetchMicrosoftJobsFromCacheAsync(microsoftLocations, microsoftFixturesDirectoryPath, microsoftSearchTerms, runCapturedAt, maxMicrosoftPages, maxMicrosoftDetails);
+        var rawRun = new MicrosoftRawRun(runId, runCapturedAt, "microsoft-careers", string.Join(" | ", microsoftSearchTerms), fetchResult.Sources);
 
         Directory.CreateDirectory(microsoftRawRunsDirectoryPath);
         var rawRunPath = Path.Combine(microsoftRawRunsDirectoryPath, $"{runId}.json");
@@ -653,6 +672,7 @@ static PipelineMode GetMode(string[] args)
         "collect-meta" => PipelineMode.CollectMeta,
         "normalize-meta-latest" => PipelineMode.NormalizeMetaLatest,
         "analyze-meta-latest" => PipelineMode.AnalyzeMetaLatest,
+        "collect-apple" => PipelineMode.CollectApple,
         "normalize-apple-latest" => PipelineMode.NormalizeAppleLatest,
         "analyze-apple-latest" => PipelineMode.AnalyzeAppleLatest,
         "collect-microsoft" => PipelineMode.CollectMicrosoft,
@@ -937,7 +957,6 @@ static List<JobItem> BuildAppleJobsFromRawRun(AppleRawRun rawRun)
                 .Distinct(StringComparer.Ordinal)
                 .OrderBy(static location => location, StringComparer.OrdinalIgnoreCase)
                 .ToList();
-
             return first with { Locations = locations.Count == 0 ? first.Locations : locations };
         })
         .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
@@ -971,8 +990,19 @@ static List<JobItem> BuildMicrosoftJobsFromRawRun(MicrosoftRawRun rawRun)
                 .Distinct(StringComparer.Ordinal)
                 .OrderBy(static location => location, StringComparer.OrdinalIgnoreCase)
                 .ToList();
+            var matchedLocations = group
+                .Select(static job => job.RequestedLocation)
+                .Where(static location => !string.IsNullOrWhiteSpace(location))
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static location => location, StringComparer.OrdinalIgnoreCase)
+                .ToList();
 
-            return first with { Locations = locations.Count == 0 ? first.Locations : locations };
+            return first with
+            {
+                Locations = locations.Count == 0 ? first.Locations : locations,
+                MatchedLocations = matchedLocations,
+                SearchMatchCount = matchedLocations.Count
+            };
         })
         .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
         .ThenBy(static job => job.Id, StringComparer.Ordinal)
@@ -1471,6 +1501,17 @@ static List<MicrosoftLocationConfig> LoadMicrosoftLocations(string configPath)
     return locations ?? new List<MicrosoftLocationConfig>();
 }
 
+static List<AppleLocationConfig> LoadAppleLocations(string configPath)
+{
+    var envValue = Environment.GetEnvironmentVariable("APPLE_JOBS_LOCATIONS");
+    var json = string.IsNullOrWhiteSpace(envValue)
+        ? File.ReadAllText(configPath)
+        : envValue;
+
+    var locations = JsonSerializer.Deserialize<List<AppleLocationConfig>>(json, JsonOptions());
+    return locations ?? new List<AppleLocationConfig>();
+}
+
 static List<NvidiaLocationConfig> LoadNvidiaLocations(string configPath)
 {
     var envValue = Environment.GetEnvironmentVariable("NVIDIA_CAREERS_LOCATIONS");
@@ -1510,6 +1551,17 @@ static string GetMetaSearchTerm()
     return Environment.GetEnvironmentVariable("META_CAREERS_SEARCH_TERM")?.Trim() ?? "Software Engineering";
 }
 
+static string GetAppleSearchTerm()
+{
+    return Environment.GetEnvironmentVariable("APPLE_JOBS_SEARCH_TERM")?.Trim() ?? "software engineer";
+}
+
+static int GetAppleMaxPages()
+{
+    var rawValue = Environment.GetEnvironmentVariable("APPLE_JOBS_MAX_PAGES");
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 10;
+}
+
 static int GetMetaMaxDetails()
 {
     var rawValue = Environment.GetEnvironmentVariable("META_CAREERS_MAX_DETAILS");
@@ -1535,9 +1587,19 @@ static int GetMicrosoftMaxDetails()
     return int.TryParse(rawValue, out var parsed) && parsed >= 0 ? parsed : 5;
 }
 
-static string GetMicrosoftSearchTerm()
+static List<string> GetMicrosoftSearchTerms()
 {
-    return Environment.GetEnvironmentVariable("MICROSOFT_CAREERS_SEARCH_TERM")?.Trim() ?? "Software Engineer";
+    var rawValue = Environment.GetEnvironmentVariable("MICROSOFT_CAREERS_SEARCH_TERMS")
+        ?? Environment.GetEnvironmentVariable("MICROSOFT_CAREERS_SEARCH_TERM");
+    if (string.IsNullOrWhiteSpace(rawValue))
+    {
+        return new List<string> { "Software Engineer", "Software Development Engineer" };
+    }
+
+    return rawValue
+        .Split(new[] { '|', ';' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+        .Distinct(StringComparer.OrdinalIgnoreCase)
+        .ToList();
 }
 
 static bool ShouldFetchMicrosoftLive()
@@ -1901,7 +1963,7 @@ static async Task<MetaFetchResult> FetchMetaJobsFromCacheAsync(
 
 static async Task<MicrosoftFetchResult> FetchMicrosoftJobsAsync(
     List<MicrosoftLocationConfig> locations,
-    string searchTerm,
+    List<string> searchTerms,
     string capturedAt,
     int maxPages,
     int maxDetails)
@@ -1913,63 +1975,117 @@ static async Task<MicrosoftFetchResult> FetchMicrosoftJobsAsync(
 
     foreach (var location in locations)
     {
-        var rawJobs = new List<MicrosoftRawJobItem>();
+        var seenForLocation = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var searchTerm in searchTerms)
+        {
+            var rawJobs = new List<MicrosoftRawJobItem>();
+
+            for (var page = 0; page < maxPages; page += 1)
+            {
+                var start = page * MicrosoftSearchPageSize;
+                var searchUrl = BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, start);
+                Console.WriteLine($"Fetching Microsoft search {searchUrl}");
+                var payload = await httpClient.GetStringAsync(searchUrl);
+                var searchPage = ParseMicrosoftSearchPayload(payload, searchUrl, location.Label);
+
+                var newJobsOnPage = 0;
+                foreach (var searchResult in searchPage.Results)
+                {
+                    if (!seenForLocation.Add(searchResult.JobId))
+                    {
+                        continue;
+                    }
+
+                    newJobsOnPage += 1;
+                    uniqueJobIds.Add(searchResult.JobId);
+                    // Microsoft MVP policy:
+                    // every discovered job must have required raw fields from search API;
+                    // detail enrichment is best-effort and intentionally capped to avoid large live crawls.
+                    if (enrichedDetails < maxDetails)
+                    {
+                        rawJobs.Add(await EnrichMicrosoftRawJobAsync(httpClient, searchResult, location.SearchLocation, capturedAt));
+                        enrichedDetails += 1;
+                    }
+                    else
+                    {
+                        rawJobs.Add(BuildMicrosoftRawJob(searchResult, null, capturedAt));
+                    }
+                }
+
+                if (searchPage.Results.Count == 0 || newJobsOnPage == 0 || start + MicrosoftSearchPageSize >= searchPage.TotalCount)
+                {
+                    break;
+                }
+            }
+
+            sources.Add(
+                new MicrosoftRawSource(
+                    location.Label,
+                    $"{location.Slug}-{ToSimpleSlug(searchTerm)}",
+                    location.SearchLocation,
+                    BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, 0),
+                    rawJobs));
+        }
+    }
+
+    return new MicrosoftFetchResult(sources, uniqueJobIds.Count);
+}
+
+static async Task<AppleFetchResult> FetchAppleJobsAsync(
+    List<AppleLocationConfig> locations,
+    string searchTerm,
+    string capturedAt,
+    int maxPages)
+{
+    using var httpClient = CreateHttpClient();
+    var sources = new List<AppleRawSource>();
+    var uniqueJobIds = new HashSet<string>(StringComparer.Ordinal);
+
+    foreach (var location in locations)
+    {
+        var jobs = new List<AppleRawJobItem>();
         var seenForLocation = new HashSet<string>(StringComparer.Ordinal);
 
-        for (var page = 0; page < maxPages; page += 1)
+        for (var page = 1; page <= maxPages; page += 1)
         {
-            var start = page * MicrosoftSearchPageSize;
-            var searchUrl = BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, start);
-            Console.WriteLine($"Fetching Microsoft search {searchUrl}");
-            var payload = await httpClient.GetStringAsync(searchUrl);
-            var searchPage = ParseMicrosoftSearchPayload(payload, searchUrl, location.Label);
-
+            var searchUrl = BuildAppleSearchUrl(location.SearchLocation, searchTerm, page);
+            Console.WriteLine($"Fetching Apple search {searchUrl}");
+            var html = await httpClient.GetStringAsync(searchUrl);
+            var pageJobs = ParseAppleSearchHtml(html, searchUrl, location.Label, capturedAt);
             var newJobsOnPage = 0;
-            foreach (var searchResult in searchPage.Results)
+            foreach (var job in pageJobs)
             {
-                if (!seenForLocation.Add(searchResult.JobId))
+                if (!seenForLocation.Add(job.JobId))
                 {
                     continue;
                 }
 
                 newJobsOnPage += 1;
-                uniqueJobIds.Add(searchResult.JobId);
-                // Microsoft MVP policy:
-                // every discovered job must have required raw fields from search API;
-                // detail enrichment is best-effort and intentionally capped to avoid large live crawls.
-                if (enrichedDetails < maxDetails)
-                {
-                    rawJobs.Add(await EnrichMicrosoftRawJobAsync(httpClient, searchResult, location.SearchLocation, capturedAt));
-                    enrichedDetails += 1;
-                }
-                else
-                {
-                    rawJobs.Add(BuildMicrosoftRawJob(searchResult, null, capturedAt));
-                }
+                uniqueJobIds.Add(job.JobId);
+                jobs.Add(job);
             }
 
-            if (searchPage.Results.Count == 0 || newJobsOnPage == 0 || start + MicrosoftSearchPageSize >= searchPage.TotalCount)
+            if (pageJobs.Count == 0 || newJobsOnPage == 0)
             {
                 break;
             }
         }
 
         sources.Add(
-            new MicrosoftRawSource(
+            new AppleRawSource(
                 location.Label,
                 location.Slug,
-                location.SearchLocation,
-                BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, 0),
-                rawJobs));
+                BuildAppleSearchUrl(location.SearchLocation, searchTerm, 1),
+                jobs));
     }
 
-    return new MicrosoftFetchResult(sources, uniqueJobIds.Count);
+    return new AppleFetchResult(sources, uniqueJobIds.Count);
 }
 
 static async Task<MicrosoftFetchResult> FetchMicrosoftJobsFromCacheAsync(
     List<MicrosoftLocationConfig> locations,
     string fixturesDirectoryPath,
-    string searchTerm,
+    List<string> searchTerms,
     string capturedAt,
     int maxPages,
     int maxDetails)
@@ -1986,60 +2102,65 @@ static async Task<MicrosoftFetchResult> FetchMicrosoftJobsFromCacheAsync(
 
     foreach (var location in locations)
     {
-        var rawJobs = new List<MicrosoftRawJobItem>();
         var seenForLocation = new HashSet<string>(StringComparer.Ordinal);
-
-        for (var page = 0; page < maxPages; page += 1)
+        foreach (var searchTerm in searchTerms)
         {
-            var start = page * MicrosoftSearchPageSize;
-            var searchUrl = BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, start);
-            var cachePath = FindMicrosoftSearchCachePath(fixturesDirectoryPath, location.CacheSlug ?? location.Slug, start);
-            if (cachePath is null)
+            var rawJobs = new List<MicrosoftRawJobItem>();
+            var cacheSlug = $"{location.CacheSlug ?? location.Slug}-{ToSimpleSlug(searchTerm)}";
+
+            for (var page = 0; page < maxPages; page += 1)
             {
-                if (page == 0)
+                var start = page * MicrosoftSearchPageSize;
+                var searchUrl = BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, start);
+                var cachePath = FindMicrosoftSearchCachePath(fixturesDirectoryPath, cacheSlug, start)
+                    ?? FindMicrosoftSearchCachePath(fixturesDirectoryPath, location.CacheSlug ?? location.Slug, start);
+                if (cachePath is null)
                 {
-                    Console.WriteLine($"No Microsoft cached search payload found for {location.Label}.");
+                    if (page == 0)
+                    {
+                        Console.WriteLine($"No Microsoft cached search payload found for {location.Label} / {searchTerm}.");
+                    }
+
+                    break;
                 }
 
-                break;
-            }
+                var searchPage = ParseMicrosoftSearchPayload(await File.ReadAllTextAsync(cachePath), searchUrl, location.Label);
+                var newJobsOnPage = 0;
 
-            var searchPage = ParseMicrosoftSearchPayload(await File.ReadAllTextAsync(cachePath), searchUrl, location.Label);
-            var newJobsOnPage = 0;
-
-            foreach (var searchResult in searchPage.Results)
-            {
-                if (!seenForLocation.Add(searchResult.JobId))
+                foreach (var searchResult in searchPage.Results)
                 {
-                    continue;
+                    if (!seenForLocation.Add(searchResult.JobId))
+                    {
+                        continue;
+                    }
+
+                    newJobsOnPage += 1;
+                    uniqueJobIds.Add(searchResult.JobId);
+                    MicrosoftJobDetail? detail = null;
+                    var detailPath = Path.Combine(fixturesDirectoryPath, $"detail-{searchResult.JobId}-api.json");
+                    if (enrichedDetails < maxDetails && File.Exists(detailPath))
+                    {
+                        detail = ParseMicrosoftDetailPayload(await File.ReadAllTextAsync(detailPath), searchResult);
+                        enrichedDetails += 1;
+                    }
+
+                    rawJobs.Add(BuildMicrosoftRawJob(searchResult, detail, capturedAt));
                 }
 
-                newJobsOnPage += 1;
-                uniqueJobIds.Add(searchResult.JobId);
-                MicrosoftJobDetail? detail = null;
-                var detailPath = Path.Combine(fixturesDirectoryPath, $"detail-{searchResult.JobId}-api.json");
-                if (enrichedDetails < maxDetails && File.Exists(detailPath))
+                if (searchPage.Results.Count == 0 || newJobsOnPage == 0 || start + MicrosoftSearchPageSize >= searchPage.TotalCount)
                 {
-                    detail = ParseMicrosoftDetailPayload(await File.ReadAllTextAsync(detailPath), searchResult);
-                    enrichedDetails += 1;
+                    break;
                 }
-
-                rawJobs.Add(BuildMicrosoftRawJob(searchResult, detail, capturedAt));
             }
 
-            if (searchPage.Results.Count == 0 || newJobsOnPage == 0 || start + MicrosoftSearchPageSize >= searchPage.TotalCount)
-            {
-                break;
-            }
+            sources.Add(
+                new MicrosoftRawSource(
+                    location.Label,
+                    cacheSlug,
+                    location.SearchLocation,
+                    BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, 0),
+                    rawJobs));
         }
-
-        sources.Add(
-            new MicrosoftRawSource(
-                location.Label,
-                location.Slug,
-                location.SearchLocation,
-                BuildMicrosoftSearchApiUrl(location.SearchLocation, searchTerm, 0),
-                rawJobs));
     }
 
     return new MicrosoftFetchResult(sources, uniqueJobIds.Count);
@@ -2496,6 +2617,104 @@ static MicrosoftSearchPage ParseMicrosoftSearchPayload(string payload, string se
     return new MicrosoftSearchPage(totalCount, results);
 }
 
+static List<AppleRawJobItem> ParseAppleSearchHtml(
+    string html,
+    string searchUrl,
+    string requestedLocation,
+    string capturedAt)
+{
+    var start = html.IndexOf("id=\"search-job-list\"", StringComparison.OrdinalIgnoreCase);
+    if (start < 0)
+    {
+        return new List<AppleRawJobItem>();
+    }
+
+    var end = html.IndexOf("</ul></section>", start, StringComparison.OrdinalIgnoreCase);
+    var listHtml = end > start ? html[start..end] : html[start..];
+    var blocks = Regex.Split(
+            listHtml,
+            "<li data-core-accordion-item=\"\" role=\"listitem\" class=\"rc-accordion-item\">",
+            RegexOptions.CultureInvariant | RegexOptions.IgnoreCase)
+        .Skip(1);
+    var jobs = new List<AppleRawJobItem>();
+    var seen = new HashSet<string>(StringComparer.Ordinal);
+
+    foreach (var block in blocks)
+    {
+        var titleMatch = Regex.Match(
+            block,
+            "<a[^>]+href=\"(?<href>/en-us/details/(?<sourceId>\\d+-\\d+)/[^\"]+)\"[^>]*>(?<title>.*?)</a>",
+            RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.Singleline);
+        if (!titleMatch.Success)
+        {
+            continue;
+        }
+
+        var sourceJobId = HtmlDecode(titleMatch.Groups["sourceId"].Value);
+        var jobId = sourceJobId.Split('-', StringSplitOptions.RemoveEmptyEntries).FirstOrDefault() ?? sourceJobId;
+        if (string.IsNullOrWhiteSpace(jobId) || !seen.Add(jobId))
+        {
+            continue;
+        }
+
+        var locationRaw = ExtractFirst(
+            block,
+            "id=\"search-store-name-container-[^\"]*\">(?<value>.*?)</span>");
+        var locations = BuildAppleLocations(locationRaw, requestedLocation);
+        var postedRaw = ExtractFirst(
+            block,
+            "class=\"job-posted-date\"[^>]*>(?<value>.*?)</span>");
+        var summaryRaw = ExtractFirst(
+            block,
+            "job-summary-[^\"]*\"[^>]*>.*?<span>(?<value>.*?)</span>");
+
+        jobs.Add(
+            new AppleRawJobItem(
+                jobId,
+                sourceJobId,
+                StripHtmlText(titleMatch.Groups["title"].Value),
+                "Apple",
+                locations,
+                NormalizeAppleJobUrl(HtmlDecode(titleMatch.Groups["href"].Value)),
+                searchUrl,
+                requestedLocation,
+                null,
+                StripHtmlText(summaryRaw),
+                null,
+                null,
+                null,
+                ParseApplePostedDate(postedRaw),
+                null,
+                capturedAt));
+    }
+
+    return jobs;
+}
+
+static List<string> BuildAppleLocations(string? locationRaw, string requestedLocation)
+{
+    var location = StripHtmlText(locationRaw);
+    if (string.IsNullOrWhiteSpace(location))
+    {
+        return new List<string> { requestedLocation };
+    }
+
+    if (location.Contains(',', StringComparison.Ordinal))
+    {
+        return new List<string> { location };
+    }
+
+    return new List<string> { $"{location}, {requestedLocation}" };
+}
+
+static string? ParseApplePostedDate(string? rawValue)
+{
+    var value = StripHtmlText(rawValue);
+    return DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out var parsed)
+        ? parsed.ToString("O")
+        : null;
+}
+
 static NvidiaSearchPage ParseNvidiaSearchPayload(string payload, string searchUrl, string requestedLocation)
 {
     using var document = JsonDocument.Parse(payload);
@@ -2856,6 +3075,19 @@ static string BuildMicrosoftSearchApiUrl(string sourceLocation, string searchTer
     return "https://apply.careers.microsoft.com/api/pcsx/search?" + BuildQueryString(query);
 }
 
+static string BuildAppleSearchUrl(string sourceLocation, string searchTerm, int page)
+{
+    var query = new Dictionary<string, string?>
+    {
+        ["location"] = sourceLocation,
+        // Apple search URLs expect the keyword to be encoded before normal query-string encoding.
+        ["key"] = Uri.EscapeDataString(searchTerm),
+        ["page"] = page.ToString(CultureInfo.InvariantCulture)
+    };
+
+    return "https://jobs.apple.com/en-us/search?" + BuildQueryString(query);
+}
+
 static string BuildNvidiaSearchApiUrl(string sourceLocation, string searchTerm, int start)
 {
     var query = new Dictionary<string, string?>
@@ -2956,6 +3188,13 @@ static string NormalizeNvidiaJobUrl(string? rawUrl, string jobId)
     }
 
     return $"https://jobs.nvidia.com/{rawUrl.TrimStart('/')}";
+}
+
+static string NormalizeAppleJobUrl(string rawUrl)
+{
+    return rawUrl.StartsWith("http", StringComparison.OrdinalIgnoreCase)
+        ? rawUrl
+        : $"https://jobs.apple.com/{rawUrl.TrimStart('/')}";
 }
 
 static string NormalizeAmazonJobUrl(string? rawUrl, string jobId)
@@ -4037,6 +4276,18 @@ static string? CleanRawHtml(string? value)
     return WebUtility.HtmlDecode(value).Trim();
 }
 
+static string? StripHtmlText(string? value)
+{
+    if (string.IsNullOrWhiteSpace(value))
+    {
+        return null;
+    }
+
+    var withoutTags = Regex.Replace(value, "<.*?>", " ", RegexOptions.CultureInvariant | RegexOptions.Singleline);
+    var decoded = WebUtility.HtmlDecode(withoutTags);
+    return Regex.Replace(decoded, "\\s+", " ", RegexOptions.CultureInvariant).Trim();
+}
+
 static string? ExtractNthHtmlList(string input, int index)
 {
     var matches = Regex.Matches(
@@ -4579,6 +4830,11 @@ internal sealed record MetaLocationConfig(
     [property: JsonPropertyName("label")] string Label,
     [property: JsonPropertyName("offices")] List<string> Offices);
 
+internal sealed record AppleLocationConfig(
+    [property: JsonPropertyName("slug")] string Slug,
+    [property: JsonPropertyName("label")] string Label,
+    [property: JsonPropertyName("searchLocation")] string SearchLocation);
+
 internal sealed record MicrosoftLocationConfig(
     [property: JsonPropertyName("slug")] string Slug,
     [property: JsonPropertyName("label")] string Label,
@@ -4629,7 +4885,9 @@ internal sealed record JobItem(
     [property: JsonPropertyName("firstSeenAt")] string? FirstSeenAt = null,
     [property: JsonPropertyName("lastSeenAt")] string? LastSeenAt = null,
     [property: JsonPropertyName("isActive")] bool IsActive = true,
-    [property: JsonPropertyName("contentHash")] string? ContentHash = null);
+    [property: JsonPropertyName("contentHash")] string? ContentHash = null,
+    [property: JsonPropertyName("matchedLocations")] List<string>? MatchedLocations = null,
+    [property: JsonPropertyName("searchMatchCount")] int? SearchMatchCount = null);
 
 internal sealed record PayloadEntry(
     string? TitleRaw,
@@ -4964,6 +5222,10 @@ internal sealed record MicrosoftFetchResult(
     List<MicrosoftRawSource> Sources,
     int JobCount);
 
+internal sealed record AppleFetchResult(
+    List<AppleRawSource> Sources,
+    int JobCount);
+
 internal sealed record NvidiaFetchResult(
     List<NvidiaRawSource> Sources,
     int JobCount);
@@ -5220,6 +5482,7 @@ internal enum PipelineMode
     CollectMeta,
     NormalizeMetaLatest,
     AnalyzeMetaLatest,
+    CollectApple,
     NormalizeAppleLatest,
     AnalyzeAppleLatest,
     CollectMicrosoft,

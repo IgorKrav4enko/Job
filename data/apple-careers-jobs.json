@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-20T10:48:24Z",
+  "generatedAt": "2026-04-21T19:49:06.3795140\u002B00:00",
   "source": "Apple Jobs",
   "status": "success",
   "notes": "Normalized 123 active Apple jobs from latest raw snapshot.",
@@ -8,27 +8,27 @@
     {
       "slug": "germany",
       "label": "Germany",
-      "query": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer"
+      "query": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1"
     },
     {
       "slug": "ireland",
       "label": "Ireland",
-      "query": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer"
+      "query": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1"
     },
     {
       "slug": "poland",
       "label": "Poland",
-      "query": "https://jobs.apple.com/en-us/search?location=poland-POL\u0026key=software%2520engineer"
+      "query": "https://jobs.apple.com/en-us/search?location=poland-POL\u0026key=software%2520engineer\u0026page=1"
     },
     {
       "slug": "switzerland",
       "label": "Switzerland",
-      "query": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer"
+      "query": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer\u0026page=1"
     },
     {
       "slug": "united-kingdom",
       "label": "United Kingdom",
-      "query": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer"
+      "query": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1"
     }
   ],
   "jobs": [
@@ -39,12 +39,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200651623-1731/4g-5g-software-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200651623-1731/4g-5g-software-engineer?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-03-15T04:49:31.635Z",
+      "postedAtCandidate": "2026-03-15T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "f95b6445603fb4d633b3f12c92cc77455cbaa436d7cf04139a6b3cacfc8825f0"
     },
@@ -55,30 +55,30 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200623839-1731/aeon-modeling-intern-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200623839-1731/aeon-modeling-intern-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-13T15:46:56.579Z",
+      "postedAtCandidate": "2026-02-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "1d1530f17b681ba25348a6dcfc41beee44f8950d6daac47b1d4c6fdc4b6a7042"
     },
     {
       "id": "200656891",
-      "title": "Analog Mixed-Signal Modeling Software Engineer  (m/f/d)",
+      "title": "Analog Mixed-Signal Modeling Software Engineer (m/f/d)",
       "company": "Apple",
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200656891-1731/analog-mixed-signal-modeling-software-engineer-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200656891-1731/analog-mixed-signal-modeling-software-engineer-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-14T11:29:51.609\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
-      "contentHash": "54c0574ddf7b78beca613acb1126ec7062b35f415558458fc3ba047fd025f353"
+      "contentHash": "844815beede18404c7e19f16ae0a8503ce66e8c8a8365f8096320aacd772314a"
     },
     {
       "id": "200642515",
@@ -87,12 +87,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200642515-2114/app-development-consulting-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200642515-2114/app-development-consulting-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2026-01-22T22:17:54.314Z",
+      "postedAtCandidate": "2026-01-22T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "08c6384e5e5b9323c6204c174aee4b5fb5e149512f2f7b1963ebdbd1e9f44738"
     },
@@ -103,12 +103,12 @@
       "locations": [
         "Zurich, Switzerland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200634000-4170/applied-machine-learning-engineer-security",
+      "url": "https://jobs.apple.com/en-us/details/200634000-4170/applied-machine-learning-engineer-security?team=SFTWR",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
-      "postedAtCandidate": "2025-11-26T15:22:44.904\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2025-11-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "d6a1ab9df7e9531888e64ec0e02be6226ee4cec7d1606695efa5cf1c28fbbf7f"
     },
@@ -117,17 +117,16 @@
       "title": "Applied Research Engineer, Machine Translation",
       "company": "Apple",
       "locations": [
-        "Aachen, Germany",
-        "Munich, Germany"
+        "Aachen, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200655430-5487/applied-research-engineer-machine-translation",
+      "url": "https://jobs.apple.com/en-us/details/200655430-5487/applied-research-engineer-machine-translation?team=MLAI",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-13T13:43:47.785\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
-      "contentHash": "449b327800be75f72d92102a62c947ed951c6f3f0cd01e02cdeb465eb61bbfef"
+      "contentHash": "5728b9a5ced1cbc3fd7a7ace51738f75b093f9953bc0c38613332c4bdcd9506c"
     },
     {
       "id": "200637118",
@@ -136,12 +135,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200637118-2114/ar-vr-software-development-engineer-vision-pro",
+      "url": "https://jobs.apple.com/en-us/details/200637118-2114/ar-vr-software-development-engineer-vision-pro?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-12-17T17:02:57.674Z",
+      "postedAtCandidate": "2025-12-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ab45cf70652f6769a338d20c43246a29f456221d76d2b0359dedbe2cf7d6eed0"
     },
@@ -152,12 +151,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200648453-1731/build-and-developer-productivity-engineer-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200648453-1731/build-and-developer-productivity-engineer-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-24T17:55:11.376Z",
+      "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "8f929b1be4980884d068cb39ab0808e5d0514e977c4c03efc0aee49d84e252e5"
     },
@@ -168,12 +167,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200656584-2114/c-debugger-compiler-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200656584-2114/c-debugger-compiler-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-08T15:03:55.684Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "1782cfa1c5f60d9344575eaee0febceb2187c2b3788f524a3f19677bd7f3beb8"
     },
@@ -184,12 +183,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200652400-2114/c-standard-library-performance-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200652400-2114/c-standard-library-performance-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-08T12:27:13.590Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ff4cf4f55dae5cb3a9c6cc49ce1010be7e5ab4c637284c2dc982ff6b1b7dcc98"
     },
@@ -200,12 +199,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200627383-1731/cad-engineering-intern-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200627383-1731/cad-engineering-intern-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-10-21T17:04:17.566Z",
+      "postedAtCandidate": "2025-10-21T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "d39177ccc9b556f1f93b00eeefebdfede534bf995cdac883b2f476dc46cdd31d"
     },
@@ -214,18 +213,16 @@
       "title": "CAD Tools Optimisation Engineer (Design Verification)",
       "company": "Apple",
       "locations": [
-        "Cambridge, United Kingdom",
-        "London, United Kingdom",
-        "Saint Albans, United Kingdom"
+        "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200646200-2114/cad-tools-optimisation-engineer-design-verification",
+      "url": "https://jobs.apple.com/en-us/details/200646200-2114/cad-tools-optimisation-engineer-design-verification?team=HRDWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-10T14:01:02.437Z",
+      "postedAtCandidate": "2026-02-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
-      "contentHash": "d2344d30da2583c72b2c2259cbfa989a77debe00c1dd011a5c42c10d34e603b7"
+      "contentHash": "543a61ccb2de13b87c292d019ffce811c3d9b92d4b9d045e0012f77b32e3b548"
     },
     {
       "id": "200647028",
@@ -234,12 +231,12 @@
       "locations": [
         "Cambridge, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200647028-1251/camera-algorithms-intern",
+      "url": "https://jobs.apple.com/en-us/details/200647028-1251/camera-algorithms-intern?team=HRDWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-16T09:10:07.135Z",
+      "postedAtCandidate": "2026-02-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "2b4a84adf910c67c919157cdb7b2dc3678c4dd5261d8e51f6d0193139c71dca0"
     },
@@ -250,12 +247,12 @@
       "locations": [
         "Cambridge, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200652846-1251/camera-software-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200652846-1251/camera-software-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-26T18:13:41.038Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "bc428e8c7c0125f9d65f86e31f6e4f45874bf439049574e04a11f6c84cdfd77b"
     },
@@ -266,12 +263,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200648894-2114/cdn-software-architect-edge-services",
+      "url": "https://jobs.apple.com/en-us/details/200648894-2114/cdn-software-architect-edge-services?team=CORSV",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-03-09T09:44:01.171Z",
+      "postedAtCandidate": "2026-03-09T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "e32182b0564c06ff1c71ab0653f30de5651dd79413f7d138c6a5431962e0e533"
     },
@@ -282,12 +279,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200654657-1731/cellular-5g-4g-firmware-verification-engineer-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200654657-1731/cellular-5g-4g-firmware-verification-engineer-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-31T19:15:39.774\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ff465fafcd129235024d0d23e74a147f3fd1dcf8f1871c12671a930b6e523a5e"
     },
@@ -298,12 +295,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200647248-1731/cellular-applications-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200647248-1731/cellular-applications-engineer?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-19T14:50:41.081Z",
+      "postedAtCandidate": "2026-02-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "65da4ed70154bdf529a7ce734a9154687887c3affb5eb2f50431043c1a6e7f64"
     },
@@ -314,12 +311,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200639775-2114/cellular-das-project-manager",
+      "url": "https://jobs.apple.com/en-us/details/200639775-2114/cellular-das-project-manager?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2026-01-12T17:08:13.415Z",
+      "postedAtCandidate": "2026-01-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "23b6ff47b8e7a12288a3828490f228830abb6b2ef9785daaba295cda71b04f47"
     },
@@ -330,12 +327,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200641895-1731/cellular-ip-design-engineer-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200641895-1731/cellular-ip-design-engineer-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-01-15T11:00:45.986Z",
+      "postedAtCandidate": "2026-01-15T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "27ae93b3230531ee4c015c6190d57c6fe0ff7bc29faa12ba02221eb2aa93ee03"
     },
@@ -346,12 +343,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200598008-1731/cellular-protocol-development-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200598008-1731/cellular-protocol-development-engineer?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-12-18T11:34:30.246Z",
+      "postedAtCandidate": "2025-12-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "f3645db05a60bf8b91ff9e680fd13b776efd2872e218927df2ad9a3618aa866a"
     },
@@ -362,12 +359,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200647092-1731/cellular-rf-configuration-engineer-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200647092-1731/cellular-rf-configuration-engineer-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-16T17:01:08.362Z",
+      "postedAtCandidate": "2026-02-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "e03defc141de11da31cec4d75a4f984389ca82e613d0c05e64dc945ff315b41d"
     },
@@ -378,14 +375,30 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200624032-1731/cellular-rf-receiver-systems-engineer-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200624032-1731/cellular-rf-receiver-systems-engineer-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-10-02T13:46:00.830Z",
+      "postedAtCandidate": "2025-10-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "5af876cbeb2cc843676cc3e29b4590b5ef0bbdfdf301961f7a362ecfa9554e41"
+    },
+    {
+      "id": "200608005",
+      "title": "Cellular Software Development Engineer",
+      "company": "Apple",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "url": "https://jobs.apple.com/en-us/details/200608005-1731/cellular-software-development-engineer?team=SFTWR",
+      "requestedLocation": "Germany",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-21T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T19:37:21.4175040\u002B00:00",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
+      "isActive": true,
+      "contentHash": "ccb52af92c52daa8e722724a5b3395052976e100d8ba382200a2ab3f96dcca58"
     },
     {
       "id": "200635331",
@@ -394,12 +407,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200635331-1731/cellular-software-development-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200635331-1731/cellular-software-development-engineer?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-04T10:39:41.351Z",
+      "postedAtCandidate": "2026-02-04T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ccb52af92c52daa8e722724a5b3395052976e100d8ba382200a2ab3f96dcca58"
     },
@@ -410,12 +423,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200643520-1731/cellular-software-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200643520-1731/cellular-software-engineer?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-01-26T13:21:10.450Z",
+      "postedAtCandidate": "2026-01-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "d4e74836af2bbf29d034d1c34fe3c63bee9047c91a8939368baba66193a1f919"
     },
@@ -426,12 +439,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200646634-1731/cellular-software-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200646634-1731/cellular-software-engineer?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-12T13:59:16.225Z",
+      "postedAtCandidate": "2026-02-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "d4e74836af2bbf29d034d1c34fe3c63bee9047c91a8939368baba66193a1f919"
     },
@@ -442,12 +455,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200636644-1731/compiler-engineer-neural-engine-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200636644-1731/compiler-engineer-neural-engine-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-01-14T11:42:15.856Z",
+      "postedAtCandidate": "2026-01-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "f7296dad7d7c27d88865086792b5b376e628c63d52ce2b6f37aaac05ed416387"
     },
@@ -458,12 +471,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200641347-1731/compiler-tooling-engineer-neural-engine-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200641347-1731/compiler-tooling-engineer-neural-engine-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-01-13T12:04:35.535Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
+      "postedAtCandidate": "2026-01-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "7567fb2872e03a270d924e6ffd9b6760ae533ffe89cf2323f8f096a9b6ffe480"
     },
@@ -474,12 +487,12 @@
       "locations": [
         "Zurich, Switzerland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200619950-4170/data-software-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200619950-4170/data-software-engineer?team=SFTWR",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-02-23T17:38:45.031\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-02-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "bd5813f05a92d389b412e04f375ebd69ce14e6fa8702f7ee79f0c0ddb52927b8"
     },
@@ -490,30 +503,14 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200653872-2114/data-infrastructure-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200653872-2114/data-infrastructure-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-08T09:53:36.210Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "c95f5dbc0af79cd68af84d059976c7882734f4f25f446db57206da108719d46d"
-    },
-    {
-      "id": "200652378",
-      "title": "Data Scientist, Supply Chain (EMEIA)",
-      "company": "Apple",
-      "locations": [
-        "Cork, Ireland"
-      ],
-      "url": "https://jobs.apple.com/en-us/details/200652378-1418/data-scientist-supply-chain-emeia",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-31T12:16:12.260Z",
-      "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
-      "isActive": true,
-      "contentHash": "32a9051b949ea4dd34ddbbc67600df4aeb20cce35377e29623adc483a3e4efa4"
     },
     {
       "id": "200645296",
@@ -522,12 +519,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200645296-2114/data-signals-engineer-apple-pay",
+      "url": "https://jobs.apple.com/en-us/details/200645296-2114/data-signals-engineer-apple-pay?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-05T06:44:35.971Z",
+      "postedAtCandidate": "2026-02-05T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "c432ec63b7463681deaa8bf9786ec5bdda2f6d7a063423edbd99affb6d7f6053"
     },
@@ -538,12 +535,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200643284-2114/debugger-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200643284-2114/debugger-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-01-23T16:28:31.949Z",
+      "postedAtCandidate": "2026-01-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ab0ecc963f978226d764bff8703e2b42bb4a284082c17545459213c2177235a4"
     },
@@ -554,48 +551,46 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200605389-2114/design-verification-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200605389-2114/design-verification-engineer?team=HRDWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-05-19T15:30:19.159Z",
+      "postedAtCandidate": "2025-05-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "e4cc22462ee8af0770b7ecd7e92d62cd68869bbdf632a0b5401706650b4c3438"
     },
     {
-      "id": "200626349",
-      "title": "Developer Relations, Technology Evangelist",
+      "id": "200659097",
+      "title": "DevOps Software Engineer- Threat Intelligence",
       "company": "Apple",
       "locations": [
-        "London, United Kingdom"
+        "Cheltenham, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200626349-2114/developer-relations-technology-evangelist",
+      "url": "https://jobs.apple.com/en-us/details/200659097-1035/devops-software-engineer-threat-intelligence?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-10-21T09:49:09.274Z",
-      "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-21T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T19:37:21.4175040\u002B00:00",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
-      "contentHash": "3f050bdab7539acc78d6822c8828463c70d60fd3db895fff5231a0253077603a"
+      "contentHash": "dcfd031aeec13dcec258de447b17ec14cd3f59a0af4d2a0825520adc8b023c3b"
     },
     {
       "id": "200650800",
       "title": "Early Career CAD Tools Optimisation Engineer (Design Verification)",
       "company": "Apple",
       "locations": [
-        "Cambridge, United Kingdom",
-        "London, United Kingdom",
         "Saint Albans, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200650800-3521/early-career-cad-tools-optimisation-engineer-design-verification",
+      "url": "https://jobs.apple.com/en-us/details/200650800-3521/early-career-cad-tools-optimisation-engineer-design-verification?team=HRDWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-10T15:48:18.618Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
-      "contentHash": "47eceeed2c9d3a60a27dfd3f41d1623d0e0ab033cef02876ee14da16115b1b13"
+      "contentHash": "192acbcbcd9ae9b88663e26d8cec99ecd53a7da84874578cf1defd7b88cc4ee6"
     },
     {
       "id": "200645526",
@@ -604,12 +599,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200645526-1418/early-career-cross-functional-test-engineer-retail-engineering-online",
+      "url": "https://jobs.apple.com/en-us/details/200645526-1418/early-career-cross-functional-test-engineer-retail-engineering-online?team=SFTWR",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-23T14:11:10.597Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "73d4602359f069f996fe8ddc2f3e323e62edf72add897d9affbb2856046bc152"
     },
@@ -620,12 +615,12 @@
       "locations": [
         "Dublin, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200637082-0562/early-careers-swift-software-engineer-device-management",
+      "url": "https://jobs.apple.com/en-us/details/200637082-0562/early-careers-swift-software-engineer-device-management?team=SFTWR",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-19T13:03:43.061Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "9bf9da30347633e57d4b332cc5ac3a321e09677795de09cf628ab36daa8eec73"
     },
@@ -636,12 +631,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200633523-1731/embedded-software-engineer-ai-ml-systems",
+      "url": "https://jobs.apple.com/en-us/details/200633523-1731/embedded-software-engineer-ai-ml-systems?team=SFTWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-18T16:55:41.535\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "e439a7c273c946b5fb49fec2f696d1c633d55c30eca78fc1d3bc0d1e284ea172"
     },
@@ -652,12 +647,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200650956-2114/emeia-sales-finance-analytics-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200650956-2114/emeia-sales-finance-analytics-engineer?team=CORSV",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-18T08:00:15.490Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "308bc9e38161d464a1cfe3f868b8c9a05eab61c34c52aef3c50bd588d24f4484"
     },
@@ -668,12 +663,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200652403-1731/engineering-program-manager-annotation-evaluation",
+      "url": "https://jobs.apple.com/en-us/details/200652403-1731/engineering-program-manager-annotation-evaluation?team=SFTWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-23T13:03:16.904\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "75c7efe9d2dddff98fff5202e318d59f78e5eb32a2092343971dda542c6aa685"
     },
@@ -684,12 +679,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200656715-1731/engineering-project-manager-swe-programs",
+      "url": "https://jobs.apple.com/en-us/details/200656715-1731/engineering-project-manager-swe-programs?team=SFTWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-09T15:26:16.142\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-09T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "98c422ddfc1b9fb6a30bb04c860f799c21a84e831b8a41d5d625edf5085455ba"
     },
@@ -700,12 +695,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200629329-1731/experienced-cellular-rf-soc-architect-f-m-d",
+      "url": "https://jobs.apple.com/en-us/details/200629329-1731/experienced-cellular-rf-soc-architect-f-m-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-11-04T10:32:22.649Z",
+      "postedAtCandidate": "2025-11-04T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "5c98cfd863f2bfb41b2e8d675a763e6c3dc9c82e5289dc53e3f8e9003bfad801"
     },
@@ -716,12 +711,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200647973-1418/finance-digital-transformation-machine-learning-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200647973-1418/finance-digital-transformation-machine-learning-engineer?team=CORSV",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-12T11:14:29.387Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "97830713ec68164e603a6059e4b3e07560e7338c56ecdc63979199d88a30b5b9"
     },
@@ -732,12 +727,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200592741-2114/gpu-architect-platform-architecture",
+      "url": "https://jobs.apple.com/en-us/details/200592741-2114/gpu-architect-platform-architecture?team=HRDWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-02-25T14:54:47.915Z",
+      "postedAtCandidate": "2025-02-25T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "61b67c0d20c930a81d3a45681ec0ff1d0a18eb3ac0771e84b546ff1f86ecdc88"
     },
@@ -748,12 +743,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200641901-2114/gpu-driver-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200641901-2114/gpu-driver-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2026-01-15T15:04:31.190Z",
+      "postedAtCandidate": "2026-01-15T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "24d22968fd1da1eb318c478dfc6811a58cd06ff17d4419197601bea8a198aad1"
     },
@@ -764,12 +759,12 @@
       "locations": [
         "Cambridge, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200626037-1251/gpu-performance-modelling-engineer-platform-architecture",
+      "url": "https://jobs.apple.com/en-us/details/200626037-1251/gpu-performance-modelling-engineer-platform-architecture?team=HRDWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-10-14T09:52:42.807Z",
+      "postedAtCandidate": "2025-10-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "503b3b430499f945fffb1cf5c5a8b7e0fff1ccecc7d74e3f9e4e1429bb4d4952"
     },
@@ -780,12 +775,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200611467-2114/graphics-architect",
+      "url": "https://jobs.apple.com/en-us/details/200611467-2114/graphics-architect?team=HRDWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-07-01T10:23:48.962Z",
+      "postedAtCandidate": "2025-07-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "302e8ba69a874357758da38ea5aa099bd633c250111f9bcec25a410224558719"
     },
@@ -796,12 +791,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200648391-1731/junior-rf-applications-engineer-instrument-engineering",
+      "url": "https://jobs.apple.com/en-us/details/200648391-1731/junior-rf-applications-engineer-instrument-engineering?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-24T10:07:55.996Z",
+      "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "cc6e5f015c70b823d864be4bf51e32da1fe6d2a57aee1ff5110dc77f4be72bcf"
     },
@@ -812,12 +807,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200637131-2114/kernel-engineer-coreos",
+      "url": "https://jobs.apple.com/en-us/details/200637131-2114/kernel-engineer-coreos?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-12-18T11:46:22.015Z",
+      "postedAtCandidate": "2025-12-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "31be84dcf45fc4bfd3e7de0c323e3b64c7225d20e62c758dd51e615a8e6f6782"
     },
@@ -828,12 +823,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200648412-1731/lead-compiler-engineer-neural-engine-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200648412-1731/lead-compiler-engineer-neural-engine-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-24T17:56:08.638Z",
+      "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "caf0a81cd53a4eac6bbadf753a5bf3183624536d45a8cc724747a71b42b9976d"
     },
@@ -844,12 +839,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200648922-1418/localisation-quality-manager",
+      "url": "https://jobs.apple.com/en-us/details/200648922-1418/localisation-quality-manager?team=SFTWR",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-02T15:45:46.696Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ca7966fc5c5573a3bb519bc7cf87fb18bcf4d9cf056c06ac99af1cb436cb7e8c"
     },
@@ -860,12 +855,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200643121-2114/mac-display-driver-and-ui-frameworks-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200643121-2114/mac-display-driver-and-ui-frameworks-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-01-23T09:29:22.784Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
+      "postedAtCandidate": "2026-01-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "450d9f857ba24f76dd32bd830a91559944f12ed68b402c68590019d4ea060ad0"
     },
@@ -876,12 +871,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200649084-2114/machine-learning-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200649084-2114/machine-learning-engineer?team=MLAI",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-13T10:24:06.968Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "734f059585ed5be3de019acc2ca4f2a7aa76aa91b5d54e3dcae22ae25aa64103"
     },
@@ -892,12 +887,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200653612-1418/machine-learning-engineer-graduate-program-23-months",
+      "url": "https://jobs.apple.com/en-us/details/200653612-1418/machine-learning-engineer-graduate-program-23-months?team=SFTWR",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-01T11:59:41.222Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "c7f02474483732136e2fdb6feb3c15b856f4ddf1177bf9ca7fb09edf7fd56754"
     },
@@ -908,12 +903,12 @@
       "locations": [
         "Cambridge, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200657149-1251/machine-learning-engineer-siri-speech",
+      "url": "https://jobs.apple.com/en-us/details/200657149-1251/machine-learning-engineer-siri-speech?team=MLAI",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-10T17:02:27.940Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "4776d30271822a8b3b694e3a55e52e0e11407abc42230dece3bbabcda569d5aa"
     },
@@ -924,12 +919,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200628818-1731/machine-learning-intern",
+      "url": "https://jobs.apple.com/en-us/details/200628818-1731/machine-learning-intern?team=MLAI",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-12-17T09:50:50.875Z",
+      "postedAtCandidate": "2025-12-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "4a71a8bb4d165ec8e8d7d4b616f244f410be125395f9a0c0bdc150f242414f45"
     },
@@ -940,12 +935,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200658307-1731/machine-learning-research-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200658307-1731/machine-learning-research-engineer?team=HRDWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-17T04:47:24.178\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "5e5f9cbac9c2d0d6dc6cfb65cdc708135ea62938814bbc29083a3ed4e9cab5d3"
     },
@@ -956,12 +951,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200653431-2114/marcom-creative-technologist",
+      "url": "https://jobs.apple.com/en-us/details/200653431-2114/marcom-creative-technologist?team=MKTG",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-10T17:48:11.223Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "c5314176882b3b0b295c4d4b2417e7c1ae3c6b963204e33e92e8fc80c669b64b"
     },
@@ -972,12 +967,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200643099-2114/metal-gpu-driver-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200643099-2114/metal-gpu-driver-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-03T14:30:38.494Z",
+      "postedAtCandidate": "2026-02-03T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ad46d13ba2a48b21523f943c94a953c7c78f95d6770401ff0a3f3fb0d15ef5b9"
     },
@@ -988,12 +983,12 @@
       "locations": [
         "Rellingen, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200627352-3241/ml-software-engineer-music-creation-apps",
+      "url": "https://jobs.apple.com/en-us/details/200627352-3241/ml-software-engineer-music-creation-apps?team=MLAI",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-10-21T15:50:26.711Z",
+      "postedAtCandidate": "2025-10-21T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "8721458050f29b7c42393bcff4ccb95255664e7522e02ae8c9a655b0139789e1"
     },
@@ -1004,12 +999,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200626867-2114/ml-software-engineer-london",
+      "url": "https://jobs.apple.com/en-us/details/200626867-2114/ml-software-engineer-london?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-10-17T09:02:19.920Z",
+      "postedAtCandidate": "2025-10-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "5db08ae95dd940564940c56c49aad37ef6a6308a29d0741ffbf8e36cc2f5d753"
     },
@@ -1020,12 +1015,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200609542-2114/performance-analysis-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200609542-2114/performance-analysis-engineer?team=HRDWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-06-19T09:32:02.772Z",
+      "postedAtCandidate": "2025-06-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ee2edd1a821905089adba5564b63a4a4676050adfb7bf86083f70a98cd12440a"
     },
@@ -1036,12 +1031,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200636244-2114/platform-engineer-for-operational-data",
+      "url": "https://jobs.apple.com/en-us/details/200636244-2114/platform-engineer-for-operational-data?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-18T09:51:20.275Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "0aff63b0b986adbb5bf4feecee4ab837590185d5a0199125bb6bb5d47f7c8588"
     },
@@ -1052,12 +1047,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200651188-2114/principal-machine-learning-engineer-ai-data-platforms-aidp",
+      "url": "https://jobs.apple.com/en-us/details/200651188-2114/principal-machine-learning-engineer-ai-data-platforms-aidp?team=CORSV",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-16T16:32:59.897Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "073641260b7b4b362a2dcb1c4ca211f2f2e1943285f0f423e6c9667529d39eef"
     },
@@ -1068,12 +1063,12 @@
       "locations": [
         "Cambridge, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200619956-1251/product-engineer-siri-developer-productivity",
+      "url": "https://jobs.apple.com/en-us/details/200619956-1251/product-engineer-siri-developer-productivity?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-10-31T15:46:20.902Z",
+      "postedAtCandidate": "2025-10-31T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "b97f19e230f8bff080f47e5c31de7059108d30c18cd94ef31549bfbd7636776e"
     },
@@ -1084,12 +1079,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200648638-2114/production-support-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200648638-2114/production-support-engineer?team=CORSV",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-03-03T10:05:26.072Z",
+      "postedAtCandidate": "2026-03-03T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "782b1fcb4bb0b38ddb749f8e9309b2cf367f8ba066ef7138c750274866a3fb6a"
     },
@@ -1100,12 +1095,12 @@
       "locations": [
         "Cambridge, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200619641-1251/quality-automation-engineer-silicon-engineering",
+      "url": "https://jobs.apple.com/en-us/details/200619641-1251/quality-automation-engineer-silicon-engineering?team=HRDWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-09-08T16:30:30.674Z",
+      "postedAtCandidate": "2025-09-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "b0a8a8d27a4c61f63e486f4f4750f97a7860f24f52256af42a499e6d3d57bbfc"
     },
@@ -1116,12 +1111,12 @@
       "locations": [
         "Rellingen, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200652395-3241/quality-engineer-machine-learning",
+      "url": "https://jobs.apple.com/en-us/details/200652395-3241/quality-engineer-machine-learning?team=SFTWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-18T15:55:07.453\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
+      "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "375c9114b6dc3308fb2ad96bd5d855730e487fa134c3d57c1753d78477c78f3b"
     },
@@ -1132,12 +1127,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200614442-1418/reliability-engineering-technician",
+      "url": "https://jobs.apple.com/en-us/details/200614442-1418/reliability-engineering-technician?team=OPMFG",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2025-12-23T16:28:55.802Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2025-12-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "1ef81dd8cc92f7ea816c0c558336572d60f5027e629ef8cacf7b1687818f3924"
     },
@@ -1148,12 +1143,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200643821-1731/rf-system-validation-engineer-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200643821-1731/rf-system-validation-engineer-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-01-28T16:41:21.246Z",
+      "postedAtCandidate": "2026-01-28T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "a19603ad2d04ce27f90f0a1ad42903aa8ecf25e0e866b07f6a308b969a2483b2"
     },
@@ -1164,14 +1159,30 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200657148-1731/rf-tx-silicon-validation-engineer-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200657148-1731/rf-tx-silicon-validation-engineer-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-10T20:20:23.475\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "9ab4c2e1607d6a973c4b0158c0d2e241628933fd4f563bd6256a7aa616b024a1"
+    },
+    {
+      "id": "200658801",
+      "title": "Security SRE ( Site Relibilty Engineer), Dublin",
+      "company": "Apple",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "url": "https://jobs.apple.com/en-us/details/200658801-0562/security-sre-site-relibilty-engineer-dublin?team=SFTWR",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-20T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T19:37:21.4175040\u002B00:00",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
+      "isActive": true,
+      "contentHash": "650e8a7817f4fd90096c654d7473290261587cb14192774aab078bdd0e922975"
     },
     {
       "id": "200650927",
@@ -1180,12 +1191,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200650927-1731/senior-cellular-systems-engineer-product-analytics",
+      "url": "https://jobs.apple.com/en-us/details/200650927-1731/senior-cellular-systems-engineer-product-analytics?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-03-10T20:04:37.799Z",
+      "postedAtCandidate": "2026-03-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "16ac3fa3234c80bf24fb6919352299a19abe4bf95cb836b5e6bb835a9d0260e2"
     },
@@ -1196,12 +1207,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200647123-1731/senior-engineering-manager-instrument-engineering",
+      "url": "https://jobs.apple.com/en-us/details/200647123-1731/senior-engineering-manager-instrument-engineering?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-17T14:53:43.983Z",
+      "postedAtCandidate": "2026-02-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "fff54933b7745aaa8f0e55415b3cf640c51e1e81a1c3440a2230a0f6d94dd35b"
     },
@@ -1212,12 +1223,12 @@
       "locations": [
         "Dublin, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200649748-0562/senior-full-stack-engineer-services-technology",
+      "url": "https://jobs.apple.com/en-us/details/200649748-0562/senior-full-stack-engineer-services-technology?team=CORSV",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-11T16:19:45.888Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-11T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "56fed86fd51a70242ab05e6da0c6bee1185f84206474aeaeaf115e5feffb25cc"
     },
@@ -1228,12 +1239,12 @@
       "locations": [
         "Zurich, Switzerland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200634821-4170/senior-ml-rl-training-infrastructure-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200634821-4170/senior-ml-rl-training-infrastructure-engineer?team=MLAI",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
-      "postedAtCandidate": "2025-12-03T10:22:24.048\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2025-12-03T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "cb98963141d3f25e03e3c3439a61c57c913785ace678fd7c6b3b7dd50c9a1831"
     },
@@ -1244,12 +1255,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200648392-1731/senior-rf-applications-engineer-instrument-engineering",
+      "url": "https://jobs.apple.com/en-us/details/200648392-1731/senior-rf-applications-engineer-instrument-engineering?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-24T10:08:07.834Z",
+      "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "a78a1b3e977db2377b38704ef367300651962bd3db406ab07ecf93954ce9cfb6"
     },
@@ -1260,12 +1271,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200654357-2114/senior-software-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200654357-2114/senior-software-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-30T15:52:01.685Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ff12f6b58d19fa35eecccfebf774ed6cfde79c08573a55b19e663f4af35b5222"
     },
@@ -1276,30 +1287,14 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200656289-2114/senior-software-engineer-sre-virtualisation",
+      "url": "https://jobs.apple.com/en-us/details/200656289-2114/senior-software-engineer-sre-virtualisation?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-08T08:01:27.905Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "0e6eaaccbf26bb8d1ed5c0dcdebdf13a11c4720077bec5a177265cd6b457cad0"
-    },
-    {
-      "id": "200645968",
-      "title": "Senior Software Engineer - Apple JDK",
-      "company": "Apple",
-      "locations": [
-        "London, United Kingdom"
-      ],
-      "url": "https://jobs.apple.com/en-us/details/200645968-2114/senior-software-engineer-apple-jdk",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-10T16:52:12.876Z",
-      "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
-      "isActive": true,
-      "contentHash": "291b26d0d33ee9494dfd80e7c4d4a732a6c0f7dc774e5526f698f63d973987f4"
     },
     {
       "id": "200633025",
@@ -1308,12 +1303,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200633025-2114/senior-software-engineer-backend",
+      "url": "https://jobs.apple.com/en-us/details/200633025-2114/senior-software-engineer-backend?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-11T10:40:24.094Z",
+      "postedAtCandidate": "2026-02-11T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "76a0cdd8f1cc4551ecf88b68dac8326e3ce7925aacf21fcac8bf931851756409"
     },
@@ -1324,12 +1319,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200636036-2114/senior-software-engineer-icloud-platform-engineering",
+      "url": "https://jobs.apple.com/en-us/details/200636036-2114/senior-software-engineer-icloud-platform-engineering?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-26T14:57:54.224Z",
+      "postedAtCandidate": "2026-02-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "6464f82bfbcf9a0c047357bca0c2fbc98bcfb96e8db2e4c3737f639c093b1a47"
     },
@@ -1340,30 +1335,30 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200643044-2114/senior-software-engineer-icloud-platform-client-telemetry",
+      "url": "https://jobs.apple.com/en-us/details/200643044-2114/senior-software-engineer-icloud-platform-client-telemetry?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-01-27T13:38:48.508Z",
+      "postedAtCandidate": "2026-01-27T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "9e1df8563cb9a8131437c69e2295ac93781934a580631a67108cebb34f3c38ac"
     },
     {
       "id": "200616800",
-      "title": "Senior Software Engineer,  Kubernetes , London",
+      "title": "Senior Software Engineer, Kubernetes , London",
       "company": "Apple",
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200616800-2114/senior-software-engineer-kubernetes-london",
+      "url": "https://jobs.apple.com/en-us/details/200616800-2114/senior-software-engineer-kubernetes-london?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-04T15:00:57.643Z",
+      "postedAtCandidate": "2026-02-04T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
-      "contentHash": "7916d26e72f9dda4d604c501487a7d64595225eb3171720f26c8a033f457dffb"
+      "contentHash": "6af71bef44721fb49ee87309474b7f8765c0357e8a5125f95c953fe9a5a12508"
     },
     {
       "id": "200610446",
@@ -1372,12 +1367,12 @@
       "locations": [
         "Cambridge, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200610446-1251/senior-software-engineer-photos-ui",
+      "url": "https://jobs.apple.com/en-us/details/200610446-1251/senior-software-engineer-photos-ui?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-06-25T11:53:39.513Z",
+      "postedAtCandidate": "2025-06-25T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "5899d689c0766ef93a9c4450b04813d1fd68ea9ddcca3f9c8f0c1018b4c461d0"
     },
@@ -1388,12 +1383,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200599607-1731/senior-software-engineer-visionos-ui-frameworks-apple-vision-pro",
+      "url": "https://jobs.apple.com/en-us/details/200599607-1731/senior-software-engineer-visionos-ui-frameworks-apple-vision-pro?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-08-29T15:23:12.344Z",
+      "postedAtCandidate": "2025-08-29T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "148f26a0a9f8061fe3a002b43bb115548411a9fab12b5acfb305f50bee8da13e"
     },
@@ -1404,14 +1399,30 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200645512-2114/senior-software-engineer-visionos-ui-frameworks-apple-vision-pro",
+      "url": "https://jobs.apple.com/en-us/details/200645512-2114/senior-software-engineer-visionos-ui-frameworks-apple-vision-pro?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-06T16:30:51.731Z",
+      "postedAtCandidate": "2026-02-06T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "787563fc38e0b9aea7d90701b925cbae7f6a86f97108c953b1471a4f99d8daec"
+    },
+    {
+      "id": "200657769",
+      "title": "Site Reliability Engineer (SRE), London, UK",
+      "company": "Apple",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "url": "https://jobs.apple.com/en-us/details/200657769-2114/site-reliability-engineer-sre-london-uk?team=SFTWR",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-20T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T19:37:21.4175040\u002B00:00",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
+      "isActive": true,
+      "contentHash": "ac9ebea7a7c61144265ef132ba857c657bb4f18f81384690a6bbccf4ac131dde"
     },
     {
       "id": "200643846",
@@ -1420,12 +1431,12 @@
       "locations": [
         "Neubiberg, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200643846-6887/site-reliability-engineer-software-delivery",
+      "url": "https://jobs.apple.com/en-us/details/200643846-6887/site-reliability-engineer-software-delivery?team=SFTWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-25T11:50:13.659\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-25T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "1b43df08dcd64cb4b1922154be2ac27a083649cfde7898b4a30e85edb526ebab"
     },
@@ -1436,12 +1447,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200642499-1418/software-automation-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200642499-1418/software-automation-engineer?team=SFTWR",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-15T16:36:33.511Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-15T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "8dc10a0097eba3e48184cb698c98f9357b9d12b5254d3546d14e99405278634b"
     },
@@ -1452,12 +1463,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200655094-1418/software-automation-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200655094-1418/software-automation-engineer?team=SFTWR",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-07T15:40:54.562Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-07T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "8dc10a0097eba3e48184cb698c98f9357b9d12b5254d3546d14e99405278634b"
     },
@@ -1468,12 +1479,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200625036-1731/software-build-engineer-software-delivery",
+      "url": "https://jobs.apple.com/en-us/details/200625036-1731/software-build-engineer-software-delivery?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-10-10T11:39:03.987Z",
+      "postedAtCandidate": "2025-10-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ff1c51655aeaadb77254062293823d5cda6efbefae5f1e283191c281a460a811"
     },
@@ -1484,12 +1495,12 @@
       "locations": [
         "Cambridge, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200617911-1251/software-development-engineer-photos-ui",
+      "url": "https://jobs.apple.com/en-us/details/200617911-1251/software-development-engineer-photos-ui?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-08-27T19:27:07.452Z",
+      "postedAtCandidate": "2025-08-27T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "aa20e49f685922fc1c4823a16913c9f317c4d07cad71173fe11fed3ec1c66c01"
     },
@@ -1500,12 +1511,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200643518-1418/software-engineer-data-apps-frontend-ai-data-platforms",
+      "url": "https://jobs.apple.com/en-us/details/200643518-1418/software-engineer-data-apps-frontend-ai-data-platforms?team=CORSV",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-02-10T10:36:23.216Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-02-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "260bea7603e63f04fe9d52874fc6a2eb2375f4abb8381bd9b79a325b831a9985"
     },
@@ -1516,12 +1527,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200514057-1418/software-engineer-data-ai-data-platforms",
+      "url": "https://jobs.apple.com/en-us/details/200514057-1418/software-engineer-data-ai-data-platforms?team=CORSV",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-05T15:22:30.015Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-05T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "bbfef92750a0d78c8e77ce854b71a968d1a53d613305b24939e33a0e7d6e5ab0"
     },
@@ -1532,12 +1543,12 @@
       "locations": [
         "Zurich, Switzerland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200618944-4170/software-engineer-search-mlpt-ase",
+      "url": "https://jobs.apple.com/en-us/details/200618944-4170/software-engineer-search-mlpt-ase?team=MLAI",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-13T18:20:00.680\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "1ba6ff72339b540a6b6fb86215b85026c74e8953d2c4f2455f702e75d9d68263"
     },
@@ -1548,30 +1559,14 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200646621-1731/software-engineer-tools-automation-cellular-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200646621-1731/software-engineer-tools-automation-cellular-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-12T17:44:30.430Z",
+      "postedAtCandidate": "2026-02-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "3a4b6acd3d74d04ff2337b85abaee93ea18bd54e013cb4c92ca0ffdb16ab63a3"
-    },
-    {
-      "id": "200651399",
-      "title": "Software Engineer - Analytics \u0026 Data Engineering",
-      "company": "Apple",
-      "locations": [
-        "London, United Kingdom"
-      ],
-      "url": "https://jobs.apple.com/en-us/details/200651399-2114/software-engineer-analytics-data-engineering",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-20T09:31:41.792Z",
-      "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
-      "isActive": true,
-      "contentHash": "ac40c11aee1125af12fd0a6114488fd726fc5ac40476d697899a383b0dd6e641"
     },
     {
       "id": "200641911",
@@ -1580,12 +1575,28 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200641911-2114/software-engineer-apple-jdk",
+      "url": "https://jobs.apple.com/en-us/details/200641911-2114/software-engineer-apple-jdk?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-01-23T11:14:05.508Z",
+      "postedAtCandidate": "2026-01-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
+      "isActive": true,
+      "contentHash": "0d4fd7630ee1b4196517113842c86ebc40a93fa64304d3c65ecd8244a272659c"
+    },
+    {
+      "id": "200645968",
+      "title": "Software Engineer - Apple JDK",
+      "company": "Apple",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "url": "https://jobs.apple.com/en-us/details/200645968-2114/software-engineer-apple-jdk?team=SFTWR",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
+      "postedAtCandidate": "2026-02-10T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "0d4fd7630ee1b4196517113842c86ebc40a93fa64304d3c65ecd8244a272659c"
     },
@@ -1596,12 +1607,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200653841-2114/software-engineer-infrastructure-tooling",
+      "url": "https://jobs.apple.com/en-us/details/200653841-2114/software-engineer-infrastructure-tooling?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-30T09:56:46.456Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "247c98a1477150ef1f97b902c5afea8cf5f469191c571a4f6b4859e030afdff8"
     },
@@ -1612,12 +1623,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200655211-1418/software-engineer-product-operations",
+      "url": "https://jobs.apple.com/en-us/details/200655211-1418/software-engineer-product-operations?team=OPMFG",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-10T17:04:42.328Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "080949ca311cbfd81f7ecd7d2cb28ca52994f71ee02524da51a8b2a8afb1cd85"
     },
@@ -1628,12 +1639,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200653387-1731/software-engineer-workflow-automation",
+      "url": "https://jobs.apple.com/en-us/details/200653387-1731/software-engineer-workflow-automation?team=SFTWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-24T16:45:40.847\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "eb7ee468f3fe3bccf4c20f476f0fc9d5b61c7dc6a3be2779cde6de9c702b1436"
     },
@@ -1644,12 +1655,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200653610-1418/software-engineer-graduate-program-23-months",
+      "url": "https://jobs.apple.com/en-us/details/200653610-1418/software-engineer-graduate-program-23-months?team=SFTWR",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-01T12:02:11.445Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "64cb13059f1cf2df9f0c685f27f601dbb76d2ea97bd1e2c86d94935ab07767f5"
     },
@@ -1660,12 +1671,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200655100-1731/software-engineer-cellular-data-plane-systems-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200655100-1731/software-engineer-cellular-data-plane-systems-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-02T20:08:25.269\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "da711f0e30a3249fc22ee545a58f641dbed31115cd709e24d9f4ea56b70b7c3c"
     },
@@ -1676,12 +1687,12 @@
       "locations": [
         "Rellingen, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200652382-3241/software-engineer-test-automation-creative-music-apps",
+      "url": "https://jobs.apple.com/en-us/details/200652382-3241/software-engineer-test-automation-creative-music-apps?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-03-18T13:49:53.260Z",
+      "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "4f3cc7522ca5dae2b25d77244a765fb3458bba50cb6cabd604c2a8ef80fac8ee"
     },
@@ -1692,12 +1703,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200630080-1731/software-engineer-backend-systems",
+      "url": "https://jobs.apple.com/en-us/details/200630080-1731/software-engineer-backend-systems?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-11-04T14:25:13.665Z",
+      "postedAtCandidate": "2025-11-04T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "7eb8163171267c87b5ea11c6e26cd79f24f640392c5eeef01b9d32a679b43916"
     },
@@ -1708,12 +1719,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200643782-1731/software-engineer-backend-systems",
+      "url": "https://jobs.apple.com/en-us/details/200643782-1731/software-engineer-backend-systems?team=SFTWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-01-27T21:18:06.429Z",
+      "postedAtCandidate": "2026-01-27T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "7eb8163171267c87b5ea11c6e26cd79f24f640392c5eeef01b9d32a679b43916"
     },
@@ -1722,18 +1733,16 @@
       "title": "Software Engineering - Audio \u0026 Music Apps",
       "company": "Apple",
       "locations": [
-        "Berlin, Germany",
-        "Hamburg, Germany",
-        "Rellingen, Germany"
+        "Hamburg, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200652640-1654/software-engineering-audio-music-apps",
+      "url": "https://jobs.apple.com/en-us/details/200652640-1654/software-engineering-audio-music-apps?team=SFTWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-30T15:23:11.679\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
-      "contentHash": "9f7a1bb84420321fabc99ab7935076beef2760f87412164fba9d27f325a373a1"
+      "contentHash": "c1e108cd20730034ccb5fd4057b2e5e0fc7243b0b5509357f0ca50822b3db003"
     },
     {
       "id": "200655115",
@@ -1742,12 +1751,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200655115-1731/software-engineering-intern-machine-learning-ai-workflows",
+      "url": "https://jobs.apple.com/en-us/details/200655115-1731/software-engineering-intern-machine-learning-ai-workflows?team=HRDWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-01T12:28:22.867\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "6f84596f8ab9c9e8d8203c4920a00c3047eef0892e750251232d3ad4fa3922c0"
     },
@@ -1758,12 +1767,12 @@
       "locations": [
         "Dublin, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200636639-0562/software-engineering-manager-device-management",
+      "url": "https://jobs.apple.com/en-us/details/200636639-0562/software-engineering-manager-device-management?team=CORSV",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-01-05T08:27:02.200Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-01-05T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "ec700a05c2b88627dd61d0f9e54aeafc35748e5d217ff78d01bddf6c0558e574"
     },
@@ -1774,12 +1783,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200647252-2114/software-engineering-manager-kubernetes-london",
+      "url": "https://jobs.apple.com/en-us/details/200647252-2114/software-engineering-manager-kubernetes-london?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-24T10:52:21.815Z",
+      "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "4efe781ae2b39053e7d8d74752ccdc33d4a9f661250d2768611492fca8e3ccb7"
     },
@@ -1790,12 +1799,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200655573-1731/software-optimization-engineer-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200655573-1731/software-optimization-engineer-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-07T07:24:56.102\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-07T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "219c657327c9d4bbe7456982fa96b2daee7e8ed02849fafa6f9267f3ff2853d2"
     },
@@ -1806,12 +1815,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200657050-1731/sofware-development-manager",
+      "url": "https://jobs.apple.com/en-us/details/200657050-1731/sofware-development-manager?team=SFTWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-10T23:24:20.164\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "e101ba4d7fc81e86b4207deca9da53c43de76e2e2aceba7e91529b9c153be3d2"
     },
@@ -1822,12 +1831,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200646416-2114/sre-manager-data-infrastructure",
+      "url": "https://jobs.apple.com/en-us/details/200646416-2114/sre-manager-data-infrastructure?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=2",
-      "postedAtCandidate": "2026-02-12T14:43:32.050Z",
+      "postedAtCandidate": "2026-02-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "6d6265b90e6a0aa8a32f98e4985f5efb3596d349fe5ea60c822711c8d5452785"
     },
@@ -1838,12 +1847,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200653641-2114/staff-sr-software-developer-java-messaging-orchestration-for-apple-icloud-apple-music",
+      "url": "https://jobs.apple.com/en-us/details/200653641-2114/staff-sr-software-developer-java-messaging-orchestration-for-apple-icloud-apple-music?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-26T14:12:33.625Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "aa68759ff65562a080815858e741c64e84b99b0f8e592aac37d824512648494b"
     },
@@ -1854,12 +1863,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200625319-1731/sw-optimization-engineer-ai-ml",
+      "url": "https://jobs.apple.com/en-us/details/200625319-1731/sw-optimization-engineer-ai-ml?team=MLAI",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-10-09T12:46:02.200Z",
+      "postedAtCandidate": "2025-10-09T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "921ad8ed07b072fb5dc3f420d8fb7f11ae66bc4bf536d3bf5ce80ceb3a5ca2cb"
     },
@@ -1870,12 +1879,12 @@
       "locations": [
         "Cheltenham, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200622968-1035/swe-user-land-security-researcher-sear-early-career",
+      "url": "https://jobs.apple.com/en-us/details/200622968-1035/swe-user-land-security-researcher-sear-early-career?team=SFTWR",
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-09-25T14:47:37.259Z",
+      "postedAtCandidate": "2025-09-25T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "7ee8f2774eb0e119fac4a80576066882713eda3d7e6e2d8daf138a2235c70ddf"
     },
@@ -1886,12 +1895,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200657776-2114/system-software-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200657776-2114/system-software-engineer?team=HRDWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-14T09:53:22.911Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "1998a6f6b17985c6f33c9573e098803a7f52bcd38bb8c9dc98a48e9e36f60676"
     },
@@ -1902,12 +1911,12 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200622270-1731/system-software-engineer-neural-engine-m-f-d",
+      "url": "https://jobs.apple.com/en-us/details/200622270-1731/system-software-engineer-neural-engine-m-f-d?team=HRDWR",
       "requestedLocation": "Germany",
       "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=3",
-      "postedAtCandidate": "2025-09-22T09:59:27.029Z",
+      "postedAtCandidate": "2025-09-22T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "a86409acf2967409459f18bb94ae0f2c384c4374b8d428dac2e8607176776eaf"
     },
@@ -1918,30 +1927,14 @@
       "locations": [
         "Munich, Germany"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200652359-1731/systems-engineer-enterprise-and-education-sales",
+      "url": "https://jobs.apple.com/en-us/details/200652359-1731/systems-engineer-enterprise-and-education-sales?team=SFTWR",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-24T14:10:05.878\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "64a6548d81c01fb1126bbeccf322224ddd27118588f4c41bde4d7c1a37b5bec9"
-    },
-    {
-      "id": "200642140",
-      "title": "Technical Intern - Apple Wallet, Payments and Commerce",
-      "company": "Apple",
-      "locations": [
-        "London, United Kingdom"
-      ],
-      "url": "https://jobs.apple.com/en-us/details/200642140-2114/technical-intern-apple-wallet-payments-and-commerce",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-25T12:14:10.849Z",
-      "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
-      "isActive": true,
-      "contentHash": "5bc1e91c1419e896e2eb965dd92fc0041ff2507e16ecc71a54b727eece6648ea"
     },
     {
       "id": "200616208",
@@ -1950,12 +1943,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200616208-1418/technical-operations-site-reliability-engineer-sre",
+      "url": "https://jobs.apple.com/en-us/details/200616208-1418/technical-operations-site-reliability-engineer-sre?team=CORSV",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-19T11:59:51.286Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "20d3bc3993229d7b3274b6c4d4f7f1f1456b418cc1cfe93c4e7320c303997e16"
     },
@@ -1966,12 +1959,12 @@
       "locations": [
         "Zurich, Switzerland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200654613-4170/threat-intelligence-manager-ecosystem-threats",
+      "url": "https://jobs.apple.com/en-us/details/200654613-4170/threat-intelligence-manager-ecosystem-threats?team=SFTWR",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-04-08T15:20:46.138\u002B00:00",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "c96ec203e62c98f3bb704991b37f155c750646b7af7c822b33ec48792a3c1995"
     },
@@ -1982,12 +1975,12 @@
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200653671-2114/virtualisation-engineer",
+      "url": "https://jobs.apple.com/en-us/details/200653671-2114/virtualisation-engineer?team=SFTWR",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-03-26T11:23:55.244Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "6139f008ca6bac8b58e36481eecad282ceb019a0ce9f82130e99f21eca01aa5d"
     },
@@ -1998,12 +1991,12 @@
       "locations": [
         "Cork, Ireland"
       ],
-      "url": "https://jobs.apple.com/en-us/details/200643781-1418/web-services-engineer-localisation",
+      "url": "https://jobs.apple.com/en-us/details/200643781-1418/web-services-engineer-localisation?team=SFTWR",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
-      "postedAtCandidate": "2026-01-30T16:17:58.002Z",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer\u0026page=1",
+      "postedAtCandidate": "2026-01-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T10:48:24Z",
-      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-21T19:49:06.3795140\u002B00:00",
       "isActive": true,
       "contentHash": "250796b0addbafc50c7d545f94ef411bfb6869dd185140bd9b056f7a107f9953"
     },
@@ -2022,6 +2015,70 @@
       "lastSeenAt": "2026-04-20T12:00:00.0000000\u002B00:00",
       "isActive": false,
       "contentHash": "bf29d0a84b207c1d8f6438bd4561bd7cd707904c9faa4133427dc65e03f8f621"
+    },
+    {
+      "id": "200652378",
+      "title": "Data Scientist, Supply Chain (EMEIA)",
+      "company": "Apple",
+      "locations": [
+        "Cork, Ireland"
+      ],
+      "url": "https://jobs.apple.com/en-us/details/200652378-1418/data-scientist-supply-chain-emeia",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+      "postedAtCandidate": "2026-03-31T12:16:12.260Z",
+      "firstSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "isActive": false,
+      "contentHash": "32a9051b949ea4dd34ddbbc67600df4aeb20cce35377e29623adc483a3e4efa4"
+    },
+    {
+      "id": "200626349",
+      "title": "Developer Relations, Technology Evangelist",
+      "company": "Apple",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "url": "https://jobs.apple.com/en-us/details/200626349-2114/developer-relations-technology-evangelist",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer\u0026page=3",
+      "postedAtCandidate": "2025-10-21T09:49:09.274Z",
+      "firstSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "isActive": false,
+      "contentHash": "3f050bdab7539acc78d6822c8828463c70d60fd3db895fff5231a0253077603a"
+    },
+    {
+      "id": "200651399",
+      "title": "Software Engineer - Analytics \u0026 Data Engineering",
+      "company": "Apple",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "url": "https://jobs.apple.com/en-us/details/200651399-2114/software-engineer-analytics-data-engineering",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+      "postedAtCandidate": "2026-04-20T09:31:41.792Z",
+      "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
+      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "isActive": false,
+      "contentHash": "ac40c11aee1125af12fd0a6114488fd726fc5ac40476d697899a383b0dd6e641"
+    },
+    {
+      "id": "200642140",
+      "title": "Technical Intern - Apple Wallet, Payments and Commerce",
+      "company": "Apple",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "url": "https://jobs.apple.com/en-us/details/200642140-2114/technical-intern-apple-wallet-payments-and-commerce",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+      "postedAtCandidate": "2026-03-25T12:14:10.849Z",
+      "firstSeenAt": "2026-04-20T10:00:00.0000000\u002B00:00",
+      "lastSeenAt": "2026-04-20T10:48:24Z",
+      "isActive": false,
+      "contentHash": "5bc1e91c1419e896e2eb965dd92fc0041ff2507e16ecc71a54b727eece6648ea"
     }
   ]
 }

@@ -1,6 +1,41 @@
 {
   "jobs": [
     {
+      "id": "76490059296973510",
+      "title": "Staff Software Engineer, BigLake Federation",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/76490059296973510-staff-software-engineer-biglake-federation?location=Poland\u0026q=%22Software\u002BEngineer%22\u0026page=4",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-21T11:59:50.6066030\u002B00:00",
+      "lastSeenAt": "2026-04-21T11:59:50.6066030\u002B00:00",
+      "removedAt": "2026-04-21T19:17:23.9310130\u002B00:00",
+      "removedInRunId": "2026-04-21T19-17-23Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckV1Ahozun2a1Ab1rBBIvzsXk7vSiI3B6QwJTGL8CYWCeEjsACxwdTPnJ9sdt29_aIs6E-YxijvO-uNpttzI1EurI853FcCiOoPDAMS2-E9Vq_U0d2kvdGn0cOOSjQQ%3D%3D_V2\u0026loc=PL\u0026title=Staff\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EIn this role, you will collaborate closely with partner teams like Dataplex and Dataproc. As a member of our small, early-stage team, you will have excellent learning and growth opportunities. You\u0027ll be a part of the BigQuery team, where you\u0027ll be empowered to design, implement, launch, and land large-scale, impactful projects with the necessary support and guidance, and a large pipeline of enterprise customers waiting to use your features. You\u0027ll be instrumental in shaping the architecture and future of BigQuery\u0027s metadata management capabilities. You will be focused on improving Federation support for BigLake. This includes support for major strategic partners such as Salesforce and open-source standards such as the Iceberg REST Catalog.\u003C/p\u003E\u003Cp\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWork with storage, networking, and analytic engines leads to creating a technical roadmap for cross cloud analytics. Lead execution, including delivering some aspects personally.\u003C/li\u003E\n\u003Cli\u003EWork with product managers to create a comprehensive product that aligns to the roadmap.\u003C/li\u003E\n\u003Cli\u003EModel technical leadership for the broader BigLake organization.\u003C/li\u003E\n\u003Cli\u003EHelp develop a culture of operational excellence within the team.\u003C/li\u003E\n\u003Cli\u003EDesign, develop, test, deploy, maintain, and enhance large scale software solutions.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E8 years of experience with one or more general purpose programming languages including: Java, C/C\u002B\u002B or Python.\u003C/li\u003E\n\u003Cli\u003E5 years of experience building and developing large-scale infrastructure, distributed systems or networks, or experience with compute technologies, storage, or hardware architecture.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience testing, and launching software products.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience with software design and architecture.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in Engineering, Computer Science, or a related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E8 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a technical leadership role leading project teams and setting technical direction.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience working in a complex, matrixed organization involving cross-functional, or cross-business projects.\u003C/li\u003E\n\u003Cli\u003EExperience with open source systems like Apache Iceberg, Spark, etc.\u003C/li\u003E\n\u003Cli\u003EExperience working with partners such as SAP, Salesforce.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-20T15:00:48.6760000\u002B00:00",
+        "2026-04-20T15:00:48.8030000\u002B00:00"
+      ]
+    },
+    {
       "id": "135686878425686726",
       "title": "Senior Research Software Engineer, Labs, AI/ML",
       "company": "Google",

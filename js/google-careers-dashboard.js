@@ -47,6 +47,8 @@ const SOURCES = {
 };
 
 const SOURCE_STORAGE_KEY = "careers-dashboard-source";
+const UNKNOWN_CITY = "__unknown_city__";
+const UNKNOWN_CITY_LABEL = "Нерозпізнані";
 
 const state = {
   activeSource: getInitialSourceKey(),
@@ -223,7 +225,7 @@ function buildLocationFilters() {
     .filter((location) => location !== "all")
     .sort((left, right) => left.localeCompare(right, "uk"))
     .forEach((location) => {
-      const cities = getRelevantCitiesForCountry(location);
+      const cities = getRelevantCitiesForCountry(location, state.jobs.filter((job) => job.isActive));
       const cityCaption = cities.length === 1 ? cities[0] : null;
       countryButtons.appendChild(createLocationButton(location, cityCaption));
     });
@@ -233,8 +235,11 @@ function buildLocationFilters() {
   sections.push(countrySection);
 
   if (state.activeLocation !== "all") {
-    const cities = getRelevantCitiesForCountry(state.activeLocation);
-    if (cities.length > 1) {
+    const jobsForLocation = getJobsForActiveLocation();
+    const cities = getRelevantCitiesForCountry(state.activeLocation, jobsForLocation);
+    const unknownCityCount = countJobsForUnknownCity(jobsForLocation, state.activeLocation);
+    const cityOptions = unknownCityCount > 0 ? [...cities, UNKNOWN_CITY] : cities;
+    if (cities.length > 1 || unknownCityCount > 0) {
       const citySection = document.createElement("div");
       citySection.className = "rounded-[20px] border border-white/10 bg-panelSoft/60 p-3";
 
@@ -253,6 +258,15 @@ function buildLocationFilters() {
         });
         cityButtons.appendChild(button);
       });
+      if (unknownCityCount > 0) {
+        const button = createFilterChip(`${UNKNOWN_CITY_LABEL} (${unknownCityCount})`, state.activeCity === UNKNOWN_CITY, () => {
+          state.activeCity = UNKNOWN_CITY;
+          const filteredRuns = getFilteredRuns();
+          state.activeRunId = filteredRuns.at(-1)?.runId ?? null;
+          render();
+        });
+        cityButtons.appendChild(button);
+      }
 
       citySection.append(cityLabel, cityButtons);
       sections.push(citySection);
@@ -419,10 +433,13 @@ function renderLiveFilterChips() {
   refs.countryFilterChips.replaceChildren(
     createFilterChip(`Усі країни (${locationScopedJobs.length})`, state.activeCountry === "all", () => selectCountry("all")),
     ...countries.map((country) => {
-      const cities = getRelevantCitiesForCountry(country);
+      const cities = getRelevantCitiesForCountry(country, locationScopedJobs);
       const countryCount = countJobsForCountry(locationScopedJobs, country);
       const cityCaption = cities.length === 1 ? `${cities[0]} (${countJobsForCity(locationScopedJobs, country, cities[0])})` : null;
-      return createFilterChip(`${country} (${countryCount})`, state.activeCountry === country, () => selectCountry(country), cityCaption);
+      const searchMatchCount = countSearchMatchesForCountry(locationScopedJobs, country);
+      const searchMatchCaption = searchMatchCount > countryCount ? `${searchMatchCount} search matches` : null;
+      const countryCaption = [cityCaption, searchMatchCaption].filter(Boolean).join(" · ") || null;
+      return createFilterChip(`${country} (${countryCount})`, state.activeCountry === country, () => selectCountry(country), countryCaption);
     })
   );
 
@@ -430,16 +447,21 @@ function renderLiveFilterChips() {
     (job) => state.activeCountry === "all" || getRequestedCountry(job) === state.activeCountry
   );
   const cities = Array.from(new Set(countryScopedJobs.map((job) => getPrimaryCityForRequestedCountry(job)).filter(Boolean))).sort((a, b) => a.localeCompare(b, "uk"));
+  const unknownCityCount = countJobsForUnknownCity(countryScopedJobs, state.activeCountry);
+  const cityOptions = unknownCityCount > 0 ? [...cities, UNKNOWN_CITY] : cities;
 
-  if (state.activeCity !== "all" && !cities.includes(state.activeCity)) {
+  if (state.activeCity !== "all" && !cityOptions.includes(state.activeCity)) {
     state.activeCity = "all";
   }
 
-  refs.cityFilterSection.hidden = !(state.activeCountry !== "all" && cities.length > 1);
+  refs.cityFilterSection.hidden = !(state.activeCountry !== "all" && (cities.length > 1 || unknownCityCount > 0));
   refs.cityFilterChips.replaceChildren(
     createFilterChip(`Усі міста (${countryScopedJobs.length})`, state.activeCity === "all", () => selectCity("all")),
     ...cities.map((city) =>
-      createFilterChip(`${city} (${countJobsForCity(locationScopedJobs, state.activeCountry, city)})`, state.activeCity === city, () => selectCity(city)))
+      createFilterChip(`${city} (${countJobsForCity(locationScopedJobs, state.activeCountry, city)})`, state.activeCity === city, () => selectCity(city))),
+    ...(unknownCityCount > 0
+      ? [createFilterChip(`${UNKNOWN_CITY_LABEL} (${unknownCityCount})`, state.activeCity === UNKNOWN_CITY, () => selectCity(UNKNOWN_CITY))]
+      : [])
   );
 }
 
@@ -451,6 +473,20 @@ function countJobsForCity(jobs, country, city) {
   return jobs.filter((job) =>
     getRequestedCountry(job) === country &&
     getPrimaryCityForRequestedCountry(job) === city).length;
+}
+
+function countJobsForUnknownCity(jobs, country) {
+  if (country === "all") {
+    return 0;
+  }
+
+  return jobs.filter((job) =>
+    getRequestedCountry(job) === country &&
+    !getPrimaryCityForRequestedCountry(job)).length;
+}
+
+function countSearchMatchesForCountry(jobs, country) {
+  return jobs.filter((job) => getMatchedLocations(job).includes(country)).length;
 }
 
 function groupJobsByCountry(jobs) {
@@ -505,7 +541,7 @@ function setChipContent(button, label, subLabel) {
 function getFilteredJobs() {
   return getJobsForActiveLocation()
     .filter((job) => state.activeCountry === "all" || getRequestedCountry(job) === state.activeCountry)
-    .filter((job) => state.activeCity === "all" || getPrimaryCityForRequestedCountry(job) === state.activeCity)
+    .filter((job) => doesJobMatchCityFilter(job, state.activeCity))
     .sort((left, right) =>
       getDateTime(right.firstSeenAt) - getDateTime(left.firstSeenAt) ||
       left.title.localeCompare(right.title, "uk"));
@@ -517,13 +553,26 @@ function getDateTime(value) {
 
 function getFilteredJobsForHistory() {
   return getJobsForActiveLocation()
-    .filter((job) => state.activeCity === "all" || getPrimaryCityForRequestedCountry(job) === state.activeCity);
+    .filter((job) => doesJobMatchCityFilter(job, state.activeCity));
 }
 
-function getRelevantCitiesForCountry(country) {
+function doesJobMatchCityFilter(job, city) {
+  if (city === "all") {
+    return true;
+  }
+
+  const jobCity = getPrimaryCityForRequestedCountry(job);
+  return city === UNKNOWN_CITY ? !jobCity : jobCity === city;
+}
+
+function formatCityFilterLabel(city) {
+  return city === UNKNOWN_CITY ? UNKNOWN_CITY_LABEL : city;
+}
+
+function getRelevantCitiesForCountry(country, jobs = getJobsForActiveLocation()) {
   return Array.from(
     new Set(
-      getJobsForActiveLocation()
+      jobs
         .filter((job) => getRequestedCountry(job) === country)
         .map((job) => getPrimaryCityForRequestedCountry(job))
         .filter(Boolean)
@@ -534,6 +583,52 @@ function getRelevantCitiesForCountry(country) {
 function getRequestedCountry(job) {
   const fallback = getCountryFromJob(job);
   return normalizeCountryName(job.requestedLocation || fallback);
+}
+
+function getMatchedLocations(job) {
+  const locations = Array.isArray(job.matchedLocations) && job.matchedLocations.length
+    ? job.matchedLocations
+    : [job.requestedLocation || getCountryFromJob(job)];
+  return Array.from(
+    new Set(
+      locations
+        .map((location) => normalizeCountryName(location))
+        .filter(Boolean)
+    )
+  ).sort((left, right) => left.localeCompare(right, "uk"));
+}
+
+function isNonCityLocationValue(value, requestedCountry = "") {
+  const normalized = String(value || "").trim();
+  if (!normalized) {
+    return true;
+  }
+
+  const lower = normalized.toLowerCase();
+  const country = normalizeCountryName(normalized);
+  const helperValues = new Set([
+    "multiple locations",
+    "multiple locations, multiple locations",
+    "remote",
+    "hybrid",
+    "flexible",
+    "various",
+    "various locations",
+    "other",
+    "not specified"
+  ]);
+
+  return helperValues.has(lower) ||
+    lower.includes("multiple locations") ||
+    lower.includes("remote") ||
+    lower.includes("hybrid") ||
+    lower.includes("flexible") ||
+    country === requestedCountry;
+}
+
+function getRealCityCandidate(value, requestedCountry) {
+  const candidate = String(value || "").trim();
+  return isNonCityLocationValue(candidate, requestedCountry) ? "" : candidate;
 }
 
 function normalizeCountryName(value) {
@@ -576,7 +671,10 @@ function getPrimaryCityForRequestedCountry(job) {
   for (const source of sources) {
     const parts = String(source).split(",").map((item) => item.trim()).filter(Boolean);
     if (parts.length >= 2 && normalizeCountryName(parts.at(-1) || "") === requestedCountry) {
-      return parts[0] || "";
+      const city = getRealCityCandidate(parts[0], requestedCountry);
+      if (city) {
+        return city;
+      }
     }
   }
 
@@ -584,16 +682,25 @@ function getPrimaryCityForRequestedCountry(job) {
 }
 
 function getCityFromJob(job) {
+  const requestedCountry = getRequestedCountry(job);
   const sources = Array.isArray(job.locations) && job.locations.length ? job.locations : [job.requestedLocation || ""];
   for (const source of sources) {
     const parts = String(source).split(",").map((item) => item.trim()).filter(Boolean);
     if (parts.length >= 2) {
-      return parts[0] || "";
+      const country = normalizeCountryName(parts.at(-1) || "");
+      if (country && requestedCountry && country !== requestedCountry) {
+        continue;
+      }
+
+      const city = getRealCityCandidate(parts[0], requestedCountry || country);
+      if (city) {
+        return city;
+      }
     }
   }
 
   const fallbackParts = String(job.requestedLocation || "").split(",").map((item) => item.trim()).filter(Boolean);
-  return fallbackParts[0] || "";
+  return getRealCityCandidate(fallbackParts[0], requestedCountry);
 }
 
 function renderJobs() {
@@ -609,7 +716,7 @@ function renderJobs() {
     captionParts.push(state.activeCountry);
   }
   if (state.activeCity !== "all") {
-    captionParts.push(state.activeCity);
+    captionParts.push(formatCityFilterLabel(state.activeCity));
   }
   refs.jobsCaption.textContent = `Поточний список активних вакансій для ${captionParts.join(" / ")}. Показано ${filteredJobs.length} позицій.`;
 
@@ -649,6 +756,14 @@ function renderJobs() {
       company.className = "mt-2 text-sm text-muted";
       company.textContent = job.company || "Unknown brand";
       titleWrap.append(title, company);
+
+      const matchedLocations = getMatchedLocations(job);
+      if (matchedLocations.length > 1) {
+        const foundIn = document.createElement("p");
+        foundIn.className = "mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-sky";
+        foundIn.textContent = `Found in: ${matchedLocations.join(", ")}`;
+        titleWrap.appendChild(foundIn);
+      }
 
       const requestedLocation = document.createElement("div");
       requestedLocation.className = "text-sm leading-6 text-muted";
@@ -798,12 +913,17 @@ function renderRemovedFilterChips(removedJobs) {
   const cities = state.removedCountry === "all"
     ? []
     : getRelevantCitiesForJobs(removedJobs, state.removedCountry);
+  const removedCountryScopedJobs = state.removedCountry === "all"
+    ? []
+    : removedJobs.filter((job) => getRequestedCountry(job) === state.removedCountry);
+  const unknownRemovedCityCount = countJobsForUnknownCity(removedCountryScopedJobs, state.removedCountry);
+  const removedCityOptions = unknownRemovedCityCount > 0 ? [...cities, UNKNOWN_CITY] : cities;
 
-  if (state.removedCity !== "all" && !cities.includes(state.removedCity)) {
+  if (state.removedCity !== "all" && !removedCityOptions.includes(state.removedCity)) {
     state.removedCity = "all";
   }
 
-  refs.removedCityFilterSection.hidden = !(state.removedCountry !== "all" && cities.length > 1);
+  refs.removedCityFilterSection.hidden = !(state.removedCountry !== "all" && (cities.length > 1 || unknownRemovedCityCount > 0));
   refs.removedCityFilterChips.replaceChildren(
     createFilterChip("Усі міста", state.removedCity === "all", () => {
       state.removedCity = "all";
@@ -812,14 +932,20 @@ function renderRemovedFilterChips(removedJobs) {
     ...cities.map((city) => createFilterChip(city, state.removedCity === city, () => {
       state.removedCity = city;
       render();
-    }))
+    })),
+    ...(unknownRemovedCityCount > 0
+      ? [createFilterChip(`${UNKNOWN_CITY_LABEL} (${unknownRemovedCityCount})`, state.removedCity === UNKNOWN_CITY, () => {
+        state.removedCity = UNKNOWN_CITY;
+        render();
+      })]
+      : [])
   );
 }
 
 function getFilteredRemovedJobs(removedJobs) {
   return removedJobs
     .filter((job) => state.removedCountry === "all" || getRequestedCountry(job) === state.removedCountry)
-    .filter((job) => state.removedCity === "all" || getPrimaryCityForRequestedCountry(job) === state.removedCity);
+    .filter((job) => doesJobMatchCityFilter(job, state.removedCity));
 }
 
 function getRelevantCitiesForJobs(jobs, country) {
@@ -991,7 +1117,7 @@ function renderRunDetails() {
       ? "Глобальна дельта по всіх локаціях."
       : state.activeCity === "all"
         ? `Дельта тільки для ${state.activeLocation}.`
-        : `Дельта для ${state.activeLocation} / ${state.activeCity}.`;
+        : `Дельта для ${state.activeLocation} / ${formatCityFilterLabel(state.activeCity)}.`;
 
   updateDetailBadges(scopedWithCity.added.length, scopedWithCity.removed.length, scopedWithCity.changed.length);
   updateDetailSummaries(scopedWithCity);
@@ -1026,10 +1152,10 @@ function getDetailForSelection(detail, location, city) {
   }
 
   return {
-    added: scoped.added.filter((item) => getPrimaryCityForRequestedCountry(item) === city),
-    removed: scoped.removed.filter((item) => getPrimaryCityForRequestedCountry(item) === city),
-    changed: scoped.changed.filter((item) => getPrimaryCityForRequestedCountry(item) === city),
-    unchanged: scoped.unchanged.filter((item) => getPrimaryCityForRequestedCountry(item) === city)
+    added: scoped.added.filter((item) => doesJobMatchCityFilter(item, city)),
+    removed: scoped.removed.filter((item) => doesJobMatchCityFilter(item, city)),
+    changed: scoped.changed.filter((item) => doesJobMatchCityFilter(item, city)),
+    unchanged: scoped.unchanged.filter((item) => doesJobMatchCityFilter(item, city))
   };
 }
 
@@ -1042,7 +1168,7 @@ function getHistorySelectionSuffix() {
     return ` • ${state.activeLocation}`;
   }
 
-  return ` • ${state.activeLocation} / ${state.activeCity}`;
+  return ` • ${state.activeLocation} / ${formatCityFilterLabel(state.activeCity)}`;
 }
 
 function updateDetailBadges(addedCount, removedCount, changedCount) {

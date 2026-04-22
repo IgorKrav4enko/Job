@@ -1,0 +1,912 @@
+{
+  "runId": "2026-04-21T19-37-21Z",
+  "generatedAt": "2026-04-21T19:37:21.4175040\u002B00:00",
+  "source": "apple-jobs",
+  "searchTerm": "software engineer",
+  "sources": [
+    {
+      "requestedLocation": "Poland",
+      "locationSlug": "poland",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=poland-POL\u0026key=software%2520engineer",
+      "jobs": []
+    },
+    {
+      "requestedLocation": "Switzerland",
+      "locationSlug": "switzerland",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
+      "jobs": [
+        {
+          "jobId": "200618944",
+          "sourceJobId": "200618944-4170",
+          "titleRaw": "Software Engineer (Search), MLPT - ASE",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Zurich, Switzerland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200618944-4170/software-engineer-search-mlpt-ase?team=MLAI",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
+          "requestedLocation": "Switzerland",
+          "aboutTheJobRaw": "Do you want to make Siri and Apple products smarter for our users? Here in the Machine Learning Platform Technology group we build groundbreaking technology for algorithmic search, machine learning, natural language processing, and artificial intelligence. The features we build are redefining how hundreds of millions of people use their computers and mobile devices to search and find what they are looking for. The universal search engine we build powers search features across a variety of Apple products, including Siri, Spotlight, Safari, Apple Music, the App Store, and many more. As part o...",
+          "postedAtCandidate": "2026-04-13T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200654613",
+          "sourceJobId": "200654613-4170",
+          "titleRaw": "Threat Intelligence Manager, Ecosystem Threats",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Zurich, Switzerland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200654613-4170/threat-intelligence-manager-ecosystem-threats?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
+          "requestedLocation": "Switzerland",
+          "aboutTheJobRaw": "Apple\u2019s Security Engineering \u0026 Architecture (SEAR) provides operating system security foundations across all of Apple\u2019s innovative products, including Mac, iPhone, iPad, Apple Watch, and Apple TV. As part of our efforts to protect our users, Apple is looking for a world-class threat intelligence manager to lead a team of security researchers and threat intelligence analysts. This team works together and cross-functionally to drive efforts to solve security engineering challenges, with an emphasis on supporting decisions that provide the greatest long-term security. The success we are stri...",
+          "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200619950",
+          "sourceJobId": "200619950-4170",
+          "titleRaw": "Data \u0026 Software Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Zurich, Switzerland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200619950-4170/data-software-engineer?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
+          "requestedLocation": "Switzerland",
+          "aboutTheJobRaw": "Do you believe Machine Learning and AI can change the world? We truly believe it can! We are the ML Data Team of the Intelligent System Experience (ISE) group at Apple. We are responsible for building high quality datasets at scale. Every year, our team produces datasets used in the training of ML and AI-centric features for many Apple products, including iPhone, iPad, Mac, Apple Watch and even AirPods. Our work is used in very visible and critical features, from the wallpaper on your iPhone Lock Screen, to your personalized stickers on iMessage, to Apple Intelligence features such as on-de...",
+          "postedAtCandidate": "2026-02-23T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200634821",
+          "sourceJobId": "200634821-4170",
+          "titleRaw": "Senior ML/RL Training Infrastructure Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Zurich, Switzerland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200634821-4170/senior-ml-rl-training-infrastructure-engineer?team=MLAI",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
+          "requestedLocation": "Switzerland",
+          "aboutTheJobRaw": "Ready to transform how billions of people interact with technology? Apple\u2019s Core Foundation Models team is driving the intelligence that powers experiences across billions of devices worldwide\u2014and we\u2019re looking for exceptional talent to join us! Join our Europe-based applied ML team building the next generation of large-scale ML and RL training infrastructure for Apple\u2019s foundation models. We develop high-performance, distributed systems that power cutting-edge foundation model research on a massive scale. We are seeking an engineer who is passionate about designing, optimizing, and scaling...",
+          "postedAtCandidate": "2025-12-03T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200634000",
+          "sourceJobId": "200634000-4170",
+          "titleRaw": "Applied Machine Learning Engineer - Security",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Zurich, Switzerland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200634000-4170/applied-machine-learning-engineer-security?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=switzerland-CHEC\u0026key=software%2520engineer",
+          "requestedLocation": "Switzerland",
+          "aboutTheJobRaw": "Apple\u0027s Security Engineering \u0026 Architecture organization is responsible for the security of all Apple products. Passionate about safeguarding users, we believe that the best defense requires a great offense. When it comes to securing more than a billion devices running the world\u0027s most sophisticated operating systems, that means finding vulnerabilities first. Our mission is to discover, understand, and exploit vulnerabilities across all layers of Apple\u2019s platforms, and we believe that ML techniques significantly enhance our ability to do so. We are seeking an Applied Machine Learning Engin...",
+          "postedAtCandidate": "2025-11-26T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Germany",
+      "locationSlug": "germany",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+      "jobs": [
+        {
+          "jobId": "200608005",
+          "sourceJobId": "200608005-1731",
+          "titleRaw": "Cellular Software Development Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200608005-1731/cellular-software-development-engineer?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "At Apple, new ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish. Dynamic, amazing people, inspiring and innovative technologies are the norm here. Wireless Technologies \u0026 Ecosystems (WTE) team is looking for a highly qualified \u0026 self-motivated engineer with a passion for embedded SW. You will work very close to the HW, designing and developing new low level communication features that allow low latency messaging across various CPU\u0027s and bring value to...",
+          "postedAtCandidate": "2026-04-21T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200658307",
+          "sourceJobId": "200658307-1731",
+          "titleRaw": "Machine Learning Research Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200658307-1731/machine-learning-research-engineer?team=HRDWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "We\u0027re seeking research scientists/engineers to create breakthrough innovations in machine learning, computer vision, computer graphics, and related areas. We are particularly interested in image and video synthesis, 3D reconstruction, and neural rendering. You will work directly with an organization of world-class machine learning researchers and engineers. Our work powers cutting-edge technologies across the Apple ecosystem and is published in the most selective scientific journals and conferences.",
+          "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200656891",
+          "sourceJobId": "200656891-1731",
+          "titleRaw": "Analog Mixed-Signal Modeling Software Engineer (m/f/d)",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200656891-1731/analog-mixed-signal-modeling-software-engineer-m-f-d?team=HRDWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "Apple Silicon Engineering is seeking Hardware-minded Software engineers to create innovative tools to design the next generation of Apple\u2019s world-leading systems-on-chip (SOCs). Apple\u2019s multi-billion-transistor Ax SOCs are the brain of every iPhone and iPad. The Analog Mixed-Signal (AMS) circuits connect them to the physical world via complex IPs such as SERDES for data communication, PLLs for clock generation, and sensors for measuring physical quantities. Modeling Software Engineers bring a unique and versatile combination of software and hardware expertise. On their way from the designe...",
+          "postedAtCandidate": "2026-04-14T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200655430",
+          "sourceJobId": "200655430-5487",
+          "titleRaw": "Applied Research Engineer, Machine Translation",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Aachen, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200655430-5487/applied-research-engineer-machine-translation?team=MLAI",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "Would you like to play a critical part in the next revolution of human-computer interaction? The Apple Machine Translation team is building groundbreaking technology that enables connecting people across language barriers. We are looking for an Applied Research Engineer who is passionate about leveraging the latest advances in large language models and reinforcement learning to create, maintain, and ship scalable, high-quality model assets across a multitude of languages \u2014 powering Apple\u0027s Machine Translation products such as the Translate App, Safari web translation, system-wide translatio...",
+          "postedAtCandidate": "2026-04-13T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200657050",
+          "sourceJobId": "200657050-1731",
+          "titleRaw": "Sofware Development Manager",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200657050-1731/sofware-development-manager?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "Do you want to help define the future of delivering Apple software to customers? Join Software Delivery\u2019s Insight \u0026 Release Technologies team to lead the team that engineers the systems used to deliver Apple platforms to millions of customers. Our team has a passion for innovation and engineering and is looking for individuals with a genuine excitement to collaborate with others to solve sophisticated problems with a focus on the user experience.",
+          "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200657148",
+          "sourceJobId": "200657148-1731",
+          "titleRaw": "RF TX Silicon Validation Engineer (m/f/d)",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200657148-1731/rf-tx-silicon-validation-engineer-m-f-d?team=HRDWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion, dedication, and a no-excuse mindset to your job and there\u0027s no telling what you could accomplish. Smart people and inspiring, innovative technologies are the norm here. Our team is responsible for validating the RF performance of top-notch, monolithic cellular transceivers. We are looking for a motivated RF engineer with strong programming skills to join our transmitter validation efforts. This is a hands-on role where you will ve...",
+          "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200656715",
+          "sourceJobId": "200656715-1731",
+          "titleRaw": "Engineering Project Manager, SWE Programs",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200656715-1731/engineering-project-manager-swe-programs?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "Why Apple? We live in a mobile and device driven world where knowledge of the physical world around us is needed. We rely on this knowledge to get around, to learn about our environment and to enable spectacular new features for custom applications. Apple is meeting those needs as robustly and as creatively as possible and is interested in people who want to help meet that commitment. The success we are targeting will be the result of very skilled people working in an environment which cultivates creativity, partnership, and thinking of old problems in new ways. If that sounds like the kind...",
+          "postedAtCandidate": "2026-04-09T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200655573",
+          "sourceJobId": "200655573-1731",
+          "titleRaw": "Software Optimization Engineer (m/f/d)",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200655573-1731/software-optimization-engineer-m-f-d?team=HRDWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "At Apple, our Platform Architecture group is responsible for connecting our hardware and software into one unified system. You\u2019ll collaborate with engineers across Apple to design how all of our technologies work in unison, drive development of our renowned system-on-a-chip architecture and develop forward-looking prototype systems and software. Our team is driving performance enhancements in application and system software and developing novel algorithms to deliver integrated, highly optimized solutions based on Apple Silicon. In this role, you will analyze existing and new workloads to id...",
+          "postedAtCandidate": "2026-04-07T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200655100",
+          "sourceJobId": "200655100-1731",
+          "titleRaw": "Software Engineer \u2013 Cellular Data Plane Systems (m/f/d)",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200655100-1731/software-engineer-cellular-data-plane-systems-m-f-d?team=HRDWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "Apple\u0027s Cellular Data Plane Systems team is seeking a motivated and talented junior software engineer to join our architecture, features, and validation efforts. In this role, you will contribute to a sophisticated system simulation environment that models and validates both hardware and software components. You will work alongside world-class engineers to shape next-generation cellular data plane technologies, helping define reference models and drive validation of complex, cutting-edge systems.",
+          "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200655115",
+          "sourceJobId": "200655115-1731",
+          "titleRaw": "Software Engineering Intern (Machine Learning \u0026 AI Workflows)",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200655115-1731/software-engineering-intern-machine-learning-ai-workflows?team=HRDWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "At Apple, new ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion for problem-solving and dedication to your job, and there\u0027s no telling what you could accomplish. We advance the state of the art to improve the lives of our customers worldwide. The Video Computer Vision (VCV) team is dedicated to fundamental and applied research in computer vision and machine learning. Our team delivered the gaze tracking system fundamental to the Apple Vision Pro and is continuously developing solutions for Apple\u2019s next-generation products. ...",
+          "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200654657",
+          "sourceJobId": "200654657-1731",
+          "titleRaw": "Cellular 5G/4G Firmware Verification Engineer (m/f/d)",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200654657-1731/cellular-5g-4g-firmware-verification-engineer-m-f-d?team=HRDWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "Do you have a passion for invention and self-challenge? Do you thrive on pushing the limits of what\u0027s considered feasible? As part of an extraordinary modem team, you\u0027ll craft sophisticated leading-edge embedded firmware that delivers more performance in our products than ever before. You\u0027ll work across subject areas to transform improved hardware elements into a single, integrated design. Join us, and you\u0027ll help innovate new wireless systems technologies that continually outperform the previous iterations! By collaborating with other product development groups across Apple, you\u0027ll push th...",
+          "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200652640",
+          "sourceJobId": "200652640-1654",
+          "titleRaw": "Software Engineering - Audio \u0026 Music Apps",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Hamburg, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200652640-1654/software-engineering-audio-music-apps?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming great products very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish. The Audio \u0026 Music Apps group is looking for a talented software engineer. We are an international team with a presence in Rellingen/Germany, Edinburgh and Cupertino. The Rellingen engineering team works on GarageBand and Logic Pro (both for iOS and macOS), and MainStage. Your position will either be at our German office in Rellingen near Hamburg or Berlin.",
+          "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200643846",
+          "sourceJobId": "200643846-6887",
+          "titleRaw": "Site Reliability Engineer, Software Delivery",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Neubiberg, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200643846-6887/site-reliability-engineer-software-delivery?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "The Software Build Reliability Engineering team is at the core of Apple\u0027s software development process. We are responsible for delivering the state-of-the-art operating systems, applications, and firmware to Apple customers. Our team is the primary support group for production builds of macOS, iOS, watchOS, tvOS, Xcode, and more! We are on a mission to deliver reliable services that help engineers at Apple do their best work, with a globally distributed team for 24x7 coverage. You\u0027ll play a critical role in the day-to-day operations of services relied upon thousands across Apple. You\u0027ll wor...",
+          "postedAtCandidate": "2026-03-25T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200653387",
+          "sourceJobId": "200653387-1731",
+          "titleRaw": "Software Engineer - Workflow Automation",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200653387-1731/software-engineer-workflow-automation?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "As part of the Wireless Technologies \u0026 Ecosystems team, you will shape the invisible infrastructure that thousands of engineers rely on every day - designing the automation frameworks, CI/CD pipelines, and developer tools that turn brilliant ideas into shipping products at massive scale. This is not maintenance work; this is the craft of building systems that accelerate other builders, where your code multiplies the impact of an entire engineering organisation. You will work across the full spectrum of automation - from proven engineering toolchains to the most modern AI, LLM, and generativ...",
+          "postedAtCandidate": "2026-03-24T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200652359",
+          "sourceJobId": "200652359-1731",
+          "titleRaw": "Systems Engineer - Enterprise and Education Sales",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200652359-1731/systems-engineer-enterprise-and-education-sales?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "The people here at Apple don\u2019t just build products \u2014 they build the kind of wonder that\u2019s revolutionized entire industries. It\u2019s the diversity of those people and their ideas that inspires the innovation that runs through everything we do, from amazing technology to industry-leading environmental efforts. Join Apple, and help us leave the world better than we found it. Imagine what you could do here! The Systems Engineering team is responsible for long term customer success, enabling transformation through execution of Apple standard methodology and development of a modern IT infrastructu...",
+          "postedAtCandidate": "2026-03-24T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200652403",
+          "sourceJobId": "200652403-1731",
+          "titleRaw": "Engineering Program Manager, Annotation \u0026 Evaluation",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200652403-1731/engineering-program-manager-annotation-evaluation?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Do you love taking on challenges that create a positive impact? Are you passionate about empowering many ground-breaking intelligent experiences to be made? The annotation team enables internal product teams, data scientists and ML engineers through technologies that combine the latest in ML innovation and deep integration with Apple infrastructure. We\u2019re looking for a strong Engineering Program Manager with a proven track record of building an...",
+          "postedAtCandidate": "2026-03-23T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200633523",
+          "sourceJobId": "200633523-1731",
+          "titleRaw": "Embedded Software Engineer - AI/ML Systems",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Munich, Germany"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200633523-1731/embedded-software-engineer-ai-ml-systems?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=germany-DEU\u0026key=software%2520engineer",
+          "requestedLocation": "Germany",
+          "aboutTheJobRaw": "Join Apple\u2019s Wireless Technologies and Ecosystems team and help shape the future of cellular experiences powering millions of devices worldwide. In this role, you will design, develop, and enhance embedded software that drives our cutting\u2011edge wireless features at the intersection of embedded systems and artificial intelligence, collaborating closely with hardware and software teams to ensure high performance and reliability. You will contribute to projects that improve system efficiency, enable new capabilities, and support the next generation of Apple products. This is a unique opportunit...",
+          "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "United Kingdom",
+      "locationSlug": "united-kingdom",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+      "jobs": [
+        {
+          "jobId": "200659097",
+          "sourceJobId": "200659097-1035",
+          "titleRaw": "DevOps Software Engineer- Threat Intelligence",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cheltenham, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200659097-1035/devops-software-engineer-threat-intelligence?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "As part of Apple\u0027s Security Engineering \u0026 Architecture (SEAR) organization, you\u0027ll join our mission to create the world\u0027s most secure products. We are committed to building groundbreaking tools that empower our threat intelligence analysts to detect, investigate, and respond to emerging threats faster and with greater confidence. We are seeking a DevOps Software Engineer to take ownership of security research prototypes and scaling them into reliable, production-grade services. By combining infrastructure and software development, you will directly contribute to our mission to create the wo...",
+          "postedAtCandidate": "2026-04-21T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200657769",
+          "sourceJobId": "200657769-2114",
+          "titleRaw": "Site Reliability Engineer (SRE), London, UK",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200657769-2114/site-reliability-engineer-sre-london-uk?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "The Apple Services Engineering (ASE) team is one of the most exciting examples of Apple\u2019s long-held passion for combining art and technology. These are the people who power the App Store, Apple TV, Apple Music, Apple Podcasts, and Apple Books. And they do it on a massive scale, meeting Apple\u2019s high expectations with high performance to deliver a huge variety of entertainment in over 35 languages to more than 150 countries. These engineers build secure, end-to-end solutions. They develop the custom software used to process all the creative work, the tools that providers use to deliver that m...",
+          "postedAtCandidate": "2026-04-20T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200657776",
+          "sourceJobId": "200657776-2114",
+          "titleRaw": "System Software Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200657776-2114/system-software-engineer?team=HRDWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Imagine what you can do here. At Apple, new ideas have a way of becoming extraordinary products very quickly. Bring passion and dedication to your job, and there\u2019s no telling what we can accomplish together.. Do you love crafting elegant solutions to highly complex challenges? Can you intrinsically see the importance in every detail? At Apple, our Platform Architecture group is responsible for connecting our hardware and software into one unified system. Join this team, and you\u2019ll collaborate with engineers across Apple to build and deploy forward-looking prototype systems that contribute t...",
+          "postedAtCandidate": "2026-04-14T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200649084",
+          "sourceJobId": "200649084-2114",
+          "titleRaw": "Machine Learning Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200649084-2114/machine-learning-engineer?team=MLAI",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Imagine what you could do here. At Apple, great new ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish! Are you passionate about music, movies, and the world of Artificial Intelligence and Machine Learning? So are we! Join our Human-Centered AI team for Apple Media Services. In this role, you\u0027ll represent the user perspective on new features, review and analyze data, and evaluate AI models powering everything from search and recommendations to other in...",
+          "postedAtCandidate": "2026-04-13T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200653431",
+          "sourceJobId": "200653431-2114",
+          "titleRaw": "Marcom Creative Technologist",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200653431-2114/marcom-creative-technologist?team=MKTG",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Marcom is the creatively-led global team that oversees Apple\u2019s consumer facing marketing. We ensure the flawless development and execution of world-class communications across all medias and platforms. Every day, hundreds of millions of Apple customers around the world interact with our products. We drive the strategy and creative work that provide both new and existing customers with simple, engaging and inspiring marketing experiences. Marcom\u0027s Special Projects Group is a research and development studio, prototyping forward-thinking experiences that leverage emerging technologies to adva...",
+          "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200657149",
+          "sourceJobId": "200657149-1251",
+          "titleRaw": "Machine Learning Engineer, Siri Speech",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cambridge, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200657149-1251/machine-learning-engineer-siri-speech?team=MLAI",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "We are a group of engineers/researchers responsible for advancing Siri Conversational AI at Apple. Our mission is to build cutting-edge infrastructure, datasets, and models that empower Siri with capabilities across natural language understanding, dialog generation, speech synthesis and recognition, and multi-modal interaction. We apply these technologies to create engaging, intelligent, and personalized conversational experiences for millions of Apple users! We believe that the most impactful breakthroughs in deep learning emerge when we address real-world problems at scale while we pre...",
+          "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200656584",
+          "sourceJobId": "200656584-2114",
+          "titleRaw": "C\u002B\u002B Debugger/Compiler engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200656584-2114/c-debugger-compiler-engineer?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Debugging matters. Developers spend more time in the debugger than they spend on writing new code. Apple\u2019s debugger\u002Bcompiler integration team is looking for an engineer to improve the debugging experience for Clang-based languages. This involves work on LLDB, Clang, libc\u002B\u002B, and related tools. You will closely collaborate with the Swift and LLVM open source projects.",
+          "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200652400",
+          "sourceJobId": "200652400-2114",
+          "titleRaw": "C\u002B\u002B Standard Library Performance Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200652400-2114/c-standard-library-performance-engineer?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "The C\u002B\u002B Language team at Apple is looking for a software engineer to develop and enhance Apple\u2019s C\u002B\u002B standard library (\u201CLibc\u002B\u002B\u201D) that ships on Apple\u2019s platforms, with a main focus on performance. Libc\u002B\u002B is a core part of Apple\u0027s developer tools and Xcode IDE, used internally to build Apple\u0027s software stack and externally by millions of developers. The position provides the opportunity to learn and make changes to the Apple C\u002B\u002B compiler (\u201CClang\u0022). A lot of the team\u2019s work happens in the LLVM open source community and gets presented at LLVM Developer Meetings and other conferences.",
+          "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200653872",
+          "sourceJobId": "200653872-2114",
+          "titleRaw": "Data Infrastructure Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200653872-2114/data-infrastructure-engineer?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Hundreds of millions of users. Billions of Shazams. Countless moments of discovery . Shazam brings a unique brand of magic to millions every day . It\u2019s our people - their imagination, skills and ideas - that shape our future, and help us make the impossible come to life. At Shazam, we are fortunate to have some of the most exciting data in the music world and beyond. As a Data Infrastructure Engineer, you will help build Shazam\u0027s data platform which encompasses batch and real-time stream processing of mobile app event data, ETL jobs, machine learning modelling, and more.",
+          "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200656289",
+          "sourceJobId": "200656289-2114",
+          "titleRaw": "Senior Software Engineer (SRE) - Virtualisation",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200656289-2114/senior-software-engineer-sre-virtualisation?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "People at Apple don\u2019t just build products \u2014 they craft the kind of experience that has revolutionised entire industries. The diverse collection of our people and their ideas inspire innovation in everything we do. Imagine what you could do here! Join Apple, and help us leave the world better than we found it. The Apple Services Engineering(ASE) team builds and provides systems and infrastructure that power Apple\u2019s services (such as iCloud, Apple Music, Apple Intelligence, Maps and more). We are the foundation on which Apple\u2019s software developers build the products that our customers love....",
+          "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200654357",
+          "sourceJobId": "200654357-2114",
+          "titleRaw": "Senior Software Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200654357-2114/senior-software-engineer?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Imagine what you could do here. At Apple, great ideas have a way of becoming great products, services, and customer experiences very quickly. Bring passion and dedication to your job, and there\u2019s no telling what you could accomplish. Our Swift Server Networking team is responsible for building libraries and frameworks which form the foundations of mission-critical systems at Apple. We write software in the Swift programming language and specialise in frameworks for distributed systems. Much of the software we produce is published as open source (such as SwiftNIO and gRPC Swift), as we firm...",
+          "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200653841",
+          "sourceJobId": "200653841-2114",
+          "titleRaw": "Software Engineer - Infrastructure \u0026 Tooling",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200653841-2114/software-engineer-infrastructure-tooling?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "We are looking for an experienced and motivated Software Engineer to join the Apple Services Engineering team! We build and seamlessly integrate technologies that enrich people\u2019s lives. You will join a diverse team of people who are passionate about developing new technologies and services for our customers.",
+          "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200652846",
+          "sourceJobId": "200652846-1251",
+          "titleRaw": "Camera Software Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cambridge, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200652846-1251/camera-software-engineer?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "iPhone is the most popular camera in the world, with billions of photos taken every year. The seamless integration of software and hardware has led to camera features like the Photonic Engine, Portrait mode, and Super-high-resolution photos, which deliver magical experiences that surprise and delight our customers! The Camera Technologies \u0026 Systems team in the Camera \u0026 Photos org delivers amazing quality photos and videos by combining state of the art computer vision, image processing, and machine learning.",
+          "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200653641",
+          "sourceJobId": "200653641-2114",
+          "titleRaw": "Staff/Sr. Software Developer - Java - Messaging Orchestration for Apple iCloud, Apple Music",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200653641-2114/staff-sr-software-developer-java-messaging-orchestration-for-apple-icloud-apple-music?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "The role is in Apple Services Engineering (ASE) in London. ASE is the team behind high-profile services such as Apple iCloud, Apple Music, Apple TV, Apple Arcade and more. We are seeking an accomplished senior software engineer to architect and build the software for our customer engagement platform, powering message orchestration across Apple Services at global scale. The people here at Apple don\u2019t just build products \u2014 they build the kind of wonder that\u2019s revolutionised entire industries. It\u2019s the diversity of those people and their ideas that encourages the innovation that runs through ...",
+          "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200653671",
+          "sourceJobId": "200653671-2114",
+          "titleRaw": "Virtualisation Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200653671-2114/virtualisation-engineer?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Are you a big-picture thinker who loves setting ambitious goals? Do you have a passion for understanding how each line of code affects all the others? In the Core Operating Systems group, you\u2019ll ensure the OS is inseparable from each device\u2019s identity as a whole. That\u2019s because this group is committed to building fully integrated operating systems that combine hardware, software, and apps into a single Apple experience. Your dedication to cross-disciplinary collaboration will help develop groundbreaking technologies, such as iOS, macOS, watchOS, and tvOS.",
+          "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200636244",
+          "sourceJobId": "200636244-2114",
+          "titleRaw": "Platform Engineer for Operational Data",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200636244-2114/platform-engineer-for-operational-data?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "At Apple, great ideas quickly become phenomenal products, services, and customer experiences. Apple Pay has brought the Apple Wallet to millions of customers worldwide, enabling them to carry digital credentials such as credit and debit cards, transit passes, hotel and car keys, theme park tickets \u2014 and now, mobile driver\u2019s licences \u2014 all in their Apple Wallet. Building and scaling these features requires not just world-class engineering, but a deep understanding of how institutions around the world operate, implement standards, and protect user data and privacy. You\u0027ll have the opportunit...",
+          "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200650956",
+          "sourceJobId": "200650956-2114",
+          "titleRaw": "EMEIA Sales Finance - Analytics Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200650956-2114/emeia-sales-finance-analytics-engineer?team=CORSV",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Apple is a place where extraordinary people gather to do their best work. Together we create products and experiences people once couldn\u2019t have imagined - and now can\u2019t imagine living without. If you\u2019re motivated by the idea of making a real impact, and joining a team where we pride ourselves in being one of the most diverse and inclusive companies in the world, a career with Apple might be your dream job! You will become a member of the Sales Finance team at Apple. With approximately 150 employees based across 4 regional hubs within EMEIA (Europe, Middle East, India and Africa), we create ...",
+          "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200651188",
+          "sourceJobId": "200651188-2114",
+          "titleRaw": "Principal Machine Learning Engineer, AI \u0026 Data Platforms (AiDP)",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "London, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200651188-2114/principal-machine-learning-engineer-ai-data-platforms-aidp?team=CORSV",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "At Apple, we build AI systems that define experiences for billions of people and we do it with an unwavering commitment to privacy, performance, and craft. The AI \u0026 Data Platforms (AiDP) team is seeking a Principlal Machine Learning Engineer to lead the design, fine-tuning, evaluation, and productionisation of large language models and generative internal AI systems at global scale. This is a deeply hands-on, high-impact role: you will work across the full model lifecycle, from reinforcement learning and upstream training through to deployment of standalone, customer-facing products. The i...",
+          "postedAtCandidate": "2026-03-16T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200650800",
+          "sourceJobId": "200650800-3521",
+          "titleRaw": "Early Career CAD Tools Optimisation Engineer (Design Verification)",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Saint Albans, United Kingdom"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200650800-3521/early-career-cad-tools-optimisation-engineer-design-verification?team=HRDWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR\u0026key=software%2520engineer",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish. Multifaceted, amazing people and inspiring, innovative technologies are the norm here. The people who work here have reinvented entire industries with all Apple Hardware products. The same passion for innovation that goes into our products also applies to our practices strengthening our commitment to leave the world better than we found it. Join us to help...",
+          "postedAtCandidate": "2026-03-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Ireland",
+      "locationSlug": "ireland",
+      "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+      "jobs": [
+        {
+          "jobId": "200658801",
+          "sourceJobId": "200658801-0562",
+          "titleRaw": "Security SRE ( Site Relibilty Engineer), Dublin",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Dublin, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200658801-0562/security-sre-site-relibilty-engineer-dublin?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "People at Apple don\u0027t just build products \u2014 they craft the kind of experience that has revolutionized entire industries. The diverse collection of our people and their ideas inspire innovation in everything we do. Imagine what you could do here! Join Apple, and help us leave the world better than we found it. The Apple Services Engineering (ASE) team builds and provides systems and infrastructure that power Apple\u0027s services (such as iCloud, Apple Music, Apple Intelligence, and Maps). We are the foundation on which Apple\u0027s software developers build the products that our customers love. Our ...",
+          "postedAtCandidate": "2026-04-20T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200642499",
+          "sourceJobId": "200642499-1418",
+          "titleRaw": "Software Automation Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200642499-1418/software-automation-engineer?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "Our Software Localization \u0026 Release Engineering team is a passionate group dedicated to improving Apple\u0027s software for our international users. We are seeking an experienced Software Automation Engineer to join our team and drive excellence in automation testing for all Apple platforms. As an automation engineer, you will own the development and execution of automated test suites, leverage GenAI technologies to enhance automation testing capabilities, and contribute significantly to the overall quality of our software products.",
+          "postedAtCandidate": "2026-04-15T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200655211",
+          "sourceJobId": "200655211-1418",
+          "titleRaw": "Software Engineer - Product Operations",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200655211-1418/software-engineer-product-operations?team=OPMFG",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "Imagine what you could do here. At Apple, great ideas move fast \u2014 becoming extraordinary products, services, and customer experiences in the blink of an eye. Bring passion and dedication, and there\u0027s no telling what you could accomplish.",
+          "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200655094",
+          "sourceJobId": "200655094-1418",
+          "titleRaw": "Software Automation Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200655094-1418/software-automation-engineer?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "Our Software Localization \u0026 Release Engineering team is a passionate group dedicated to improving Apple\u0027s software for our international users. We are seeking an experienced Software Automation Engineer to join our team and drive excellence in automation testing for all Apple platforms. As an automation engineer, you will own the development and execution of automated test suites, leverage GenAI technologies to enhance automation testing capabilities, and contribute significantly to the overall quality of our software products.",
+          "postedAtCandidate": "2026-04-07T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200653610",
+          "sourceJobId": "200653610-1418",
+          "titleRaw": "Software Engineer Graduate Program - 23 months",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200653610-1418/software-engineer-graduate-program-23-months?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "Are you a recent graduate with a passion for data and a drive to solve real-world problems? Do you want to take the skills you\u0027ve built through your studies and apply them in one of the world\u0027s most innovative tech companies? If so, this could be the perfect opportunity for you. Apple\u0027s Strategic Data Solutions team works at the forefront of protecting and optimising the business, mitigating fraud, waste, and abuse across the company, while continuously enhancing the experience of our customers and internal partners. We are excited to offer a 23-month graduate program focused on decision...",
+          "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200653612",
+          "sourceJobId": "200653612-1418",
+          "titleRaw": "Machine Learning Engineer - Graduate Program - 23 months",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200653612-1418/machine-learning-engineer-graduate-program-23-months?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "Are you a recent graduate ready to make your mark in a dynamic, forward-thinking environment? If you\u0027re eager to transform your academic knowledge into real-world impact and have a passion for data-driven problem solving, we want to hear from you. Apple\u0027s Strategic Data Solutions team plays a critical role in protecting the company from fraud, waste, and abuse, while continuously improving experiences for both our customers and internal partners. We are looking for talented graduates to join our 23-month rotational program, where you\u0027ll tackle meaningful challenges in either fraud mitiga...",
+          "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200645526",
+          "sourceJobId": "200645526-1418",
+          "titleRaw": "Early Career Cross Functional Test Engineer, Retail Engineering (Online)",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200645526-1418/early-career-cross-functional-test-engineer-retail-engineering-online?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "The IS\u0026T Retail Engineering Programs team is at the heart of innovating and delivering the critical technology that powers our global retail stores. We are a dynamic group responsible for the strategic oversight and delivery of complex engineering initiatives that enhance both the customer experience and operational efficiency within our retail environment.",
+          "postedAtCandidate": "2026-03-23T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200637082",
+          "sourceJobId": "200637082-0562",
+          "titleRaw": "Early Careers, Swift Software Engineer,Device Management",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Dublin, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200637082-0562/early-careers-swift-software-engineer-device-management?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "We are looking for a Swift Software Engineer to join the team and contribute to a variety of products and projects that include application development, scripting, and integrations with our Device Management, Asset Management, and Software Distribution services. If you\u2019d like to be part of a small team that makes a huge impact at Apple, we\u2019d love to hear from you. Device Management(MDM), Asset Management(ITAM), and Software Distribution are the key components that play a critical role in keeping devices secure, accurately managed, and equipped with the right tools for Apple employees to do...",
+          "postedAtCandidate": "2026-03-19T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200616208",
+          "sourceJobId": "200616208-1418",
+          "titleRaw": "Technical Operations \u0026 Site Reliability Engineer (SRE)",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200616208-1418/technical-operations-site-reliability-engineer-sre?team=CORSV",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "At Apple, customer experience is at the forefront of everything we do. Apple Customer Systems Operations team is looking for a highly skilled and motivated TechOps Engineer (Technical Operations \u0026 Site Reliability) to join our Operations team. The team is responsible for maintaining the reliability, availability, and performance of business-critical, globally distributed systems. If you have the desire and motivation to design and develop automation solutions to streamline system sustenance, monitoring, and operational workflows, while collaborating closely with support, engineering and b...",
+          "postedAtCandidate": "2026-03-19T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200647973",
+          "sourceJobId": "200647973-1418",
+          "titleRaw": "Finance Digital Transformation - Machine Learning Engineer",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200647973-1418/finance-digital-transformation-machine-learning-engineer?team=CORSV",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming great products, services, and customer experiences very quickly. Bring passion and curiosity to your job and there\u0027s no telling what you could accomplish. Do you love thinking analytically? Just as our customers find value in Apple products, the Finance group finds value for both Apple and its shareholders. As a machine learning engineer in Finance, you\u2019ll play an integral and global role in building the data foundations, services, and platforms used for delivering insights and automating decisions for Apple\u2019s Fina...",
+          "postedAtCandidate": "2026-03-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200649748",
+          "sourceJobId": "200649748-0562",
+          "titleRaw": "Senior Full Stack Engineer - Services Technology",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Dublin, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200649748-0562/senior-full-stack-engineer-services-technology?team=CORSV",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "Join IS\u0026T\u0027s Services Technology team and build cutting-edge IT systems for Apple TV Studio \u0026 Production and Music operations. As a Senior Software Engineer, you\u0027ll architect and develop large-scale web applications, collaborating with cross-functional teams to deliver high-quality solutions in a fast-paced environment. You\u0027ll own applications end-to-end, working full stack and contributing to a robust technology ecosystem.",
+          "postedAtCandidate": "2026-03-11T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200514057",
+          "sourceJobId": "200514057-1418",
+          "titleRaw": "Software Engineer (Data), Ai \u0026 Data Platforms",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200514057-1418/software-engineer-data-ai-data-platforms?team=CORSV",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "Apple is where individual imaginations gather together, committing to the values that lead to great work. Every new product we build, service we create, or Apple Store experience we deliver is the result of us making each other\u2019s ideas stronger. That happens because every one of us shares a belief that we can make something wonderful and share it with the world, changing lives for the better. It\u2019s the diversity of our people and their thinking that inspires the innovation that runs through everything we do. When we bring everybody in, we can do the best work of our lives. Here, you\u2019ll do mo...",
+          "postedAtCandidate": "2026-03-05T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200648922",
+          "sourceJobId": "200648922-1418",
+          "titleRaw": "Localisation Quality Manager",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200648922-1418/localisation-quality-manager?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "Apple\u2019s Quality team in Cork is looking for a strong leader to drive localisation quality across Apple software and Siri. You will play a critical role in delivering exceptional, localized experiences to customers around the world. This role requires deep technical judgment, operational excellence, and a passion for raising the quality bar.",
+          "postedAtCandidate": "2026-03-02T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200643518",
+          "sourceJobId": "200643518-1418",
+          "titleRaw": "Software Engineer (Data Apps \u002B FrontEnd), Ai \u0026 Data Platforms",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200643518-1418/software-engineer-data-apps-frontend-ai-data-platforms?team=CORSV",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "Apple is where individual imaginations gather together, committing to the values that lead to great work. Every new product we build, service we create, or Apple Store experience we deliver is the result of us making each other\u2019s ideas stronger. That happens because every one of us shares a belief that we can make something wonderful and share it with the world, changing lives for the better. It\u2019s the diversity of our people and their thinking that inspires the innovation that runs through everything we do. When we bring everybody in, we can do the best work of our lives. Here, you\u2019ll do mo...",
+          "postedAtCandidate": "2026-02-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200643781",
+          "sourceJobId": "200643781-1418",
+          "titleRaw": "Web Services Engineer - Localisation",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200643781-1418/web-services-engineer-localisation?team=SFTWR",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "The Localization Automation team builds the tools and technologies that enable Apple to localize and deliver products such as iPhone, iPad, Apple Watch, Mac, Vision Pro, and more to customers around the world. We\u2019re looking for a passionate and driven Software Engineer to help evolve Apple\u2019s localization systems and processes at scale. In this role, you\u2019ll work on critical services and workflows that touch nearly every Apple product. You\u2019ll design and build new tools, improve existing platforms, and help ensure Apple\u2019s experiences feel native, natural, and world-class in every market.",
+          "postedAtCandidate": "2026-01-30T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200636639",
+          "sourceJobId": "200636639-0562",
+          "titleRaw": "Software Engineering Manager - Device Management",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Dublin, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200636639-0562/software-engineering-manager-device-management?team=CORSV",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "We are looking for a Software Engineering Manager to lead the team that contributes to a variety of products and projects that include application designing, application development and integrations with our Asset Management, Mobile Device Management (MDM) and software distribution services. If you\u0027d like to lead a team that makes a big impact at Apple, we\u0027d love to hear from you. Asset Management, MDM, and Software Distribution play a critical role in keeping devices secure, properly managed, and equipped with the right tools for Apple employees. These services are essential in helping us...",
+          "postedAtCandidate": "2026-01-05T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        },
+        {
+          "jobId": "200614442",
+          "sourceJobId": "200614442-1418",
+          "titleRaw": "Reliability Engineering Technician",
+          "companyRaw": "Apple",
+          "locationsRaw": [
+            "Cork, Ireland"
+          ],
+          "jobUrl": "https://jobs.apple.com/en-us/details/200614442-1418/reliability-engineering-technician?team=OPMFG",
+          "searchUrl": "https://jobs.apple.com/en-us/search?location=ireland-IRL\u0026key=software%2520engineer",
+          "requestedLocation": "Ireland",
+          "aboutTheJobRaw": "The people here at Apple don\u2019t just build products \u2014 we craft the kind of wonder that has revolutionised entire industries. It\u2019s the diversity of those people and their ideas that supports the innovation that runs through everything we do, from amazing technology to industry-leading environmental efforts. Join Apple and help us leave the world better than we found it. Are you passionate about the pursuit of excellence? The Cork Reliability Engineering team is seeking a reliability engineering technician with expertise in one or more of the following disciplines: mechanical, electronics, o...",
+          "postedAtCandidate": "2025-12-23T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-04-21T19:37:21.4175040\u002B00:00"
+        }
+      ]
+    }
+  ]
+}
