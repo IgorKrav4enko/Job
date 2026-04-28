@@ -1195,6 +1195,611 @@
           ]
         }
       ]
+    },
+    {
+      "runId": "2026-04-23T19-53-46Z",
+      "added": [
+        {
+          "id": "2418816405226170",
+          "title": "Client Partner, CEE Tech Apps",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/2418816405226170",
+          "locations": [
+            "Warsaw, Poland"
+          ],
+          "requestedLocation": "Poland"
+        },
+        {
+          "id": "906391792398202",
+          "title": "Enterprise Technical Sales Specialist, EMEA",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/906391792398202",
+          "locations": [
+            "Dubai, United Arab Emirates",
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "926318253483210",
+          "title": "Research Scientist, Generative AI for Ads (Video)",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/926318253483210",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "removed": [
+        {
+          "id": "1889314011669750",
+          "title": "Network Engineer, Operations \u0026 Support",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1889314011669750",
+          "locations": [
+            "Dublin, Ireland"
+          ],
+          "requestedLocation": "Ireland"
+        },
+        {
+          "id": "731925816170138",
+          "title": "Network Engineer, Optical Deployment",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/731925816170138",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "887142397619763",
+          "title": "Software Developer, Global Operations",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/887142397619763",
+          "locations": [
+            "Dublin, Ireland",
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1058363622156402",
+          "title": "Software Engineer (Leadership) - Machine Learning",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1058363622156402",
+          "locations": [
+            "Zurich, Switzerland",
+            "Remote, UK",
+            "London, UK"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "677160418622314",
+          "title": "Software Engineer, Infrastructure",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/677160418622314",
+          "locations": [
+            "Sunnyvale, CA",
+            "Bellevue, WA",
+            "Redmond, WA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Remote, US",
+            "Boston, MA",
+            "New York, NY",
+            "San Francisco, CA"
+          ],
+          "requestedLocation": "Poland"
+        },
+        {
+          "id": "1048049836887307",
+          "title": "Software Engineer, Machine Learning",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1048049836887307",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1436181490732782",
+          "title": "Software Engineer, Machine Learning",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1436181490732782",
+          "locations": [
+            "Sunnyvale, CA",
+            "Remote, US",
+            "San Mateo, CA",
+            "Los Angeles, CA",
+            "Bellevue, WA",
+            "Austin, TX",
+            "Foster City, CA",
+            "Menlo Park, CA",
+            "Seattle, WA",
+            "Burlingame, CA",
+            "Santa Clara, CA",
+            "New York, NY",
+            "San Francisco, CA",
+            "Fremont, CA",
+            "Mountain View, CA"
+          ],
+          "requestedLocation": "Poland"
+        },
+        {
+          "id": "1511721227182750",
+          "title": "Solutions Architect",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1511721227182750",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "885487337878828",
+          "title": "Solutions Architect",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/885487337878828",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "changed": [],
+      "unchanged": [
+        {
+          "id": "1368839171784149",
+          "title": "Network Engineer - Optical Deployment",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1368839171784149",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Ireland",
+          "added": [],
+          "removed": [
+            {
+              "id": "1889314011669750",
+              "title": "Network Engineer, Operations \u0026 Support",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1889314011669750",
+              "locations": [
+                "Dublin, Ireland"
+              ],
+              "requestedLocation": "Ireland"
+            }
+          ],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "Poland",
+          "added": [
+            {
+              "id": "2418816405226170",
+              "title": "Client Partner, CEE Tech Apps",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/2418816405226170",
+              "locations": [
+                "Warsaw, Poland"
+              ],
+              "requestedLocation": "Poland"
+            }
+          ],
+          "removed": [
+            {
+              "id": "677160418622314",
+              "title": "Software Engineer, Infrastructure",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/677160418622314",
+              "locations": [
+                "Sunnyvale, CA",
+                "Bellevue, WA",
+                "Redmond, WA",
+                "Menlo Park, CA",
+                "Seattle, WA",
+                "Burlingame, CA",
+                "Remote, US",
+                "Boston, MA",
+                "New York, NY",
+                "San Francisco, CA"
+              ],
+              "requestedLocation": "Poland"
+            },
+            {
+              "id": "1436181490732782",
+              "title": "Software Engineer, Machine Learning",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1436181490732782",
+              "locations": [
+                "Sunnyvale, CA",
+                "Remote, US",
+                "San Mateo, CA",
+                "Los Angeles, CA",
+                "Bellevue, WA",
+                "Austin, TX",
+                "Foster City, CA",
+                "Menlo Park, CA",
+                "Seattle, WA",
+                "Burlingame, CA",
+                "Santa Clara, CA",
+                "New York, NY",
+                "San Francisco, CA",
+                "Fremont, CA",
+                "Mountain View, CA"
+              ],
+              "requestedLocation": "Poland"
+            }
+          ],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "Switzerland",
+          "added": [],
+          "removed": [
+            {
+              "id": "1058363622156402",
+              "title": "Software Engineer (Leadership) - Machine Learning",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1058363622156402",
+              "locations": [
+                "Zurich, Switzerland",
+                "Remote, UK",
+                "London, UK"
+              ],
+              "requestedLocation": "Switzerland"
+            }
+          ],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "United Kingdom",
+          "added": [
+            {
+              "id": "906391792398202",
+              "title": "Enterprise Technical Sales Specialist, EMEA",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/906391792398202",
+              "locations": [
+                "Dubai, United Arab Emirates",
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "926318253483210",
+              "title": "Research Scientist, Generative AI for Ads (Video)",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/926318253483210",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ],
+          "removed": [
+            {
+              "id": "731925816170138",
+              "title": "Network Engineer, Optical Deployment",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/731925816170138",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "887142397619763",
+              "title": "Software Developer, Global Operations",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/887142397619763",
+              "locations": [
+                "Dublin, Ireland",
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1048049836887307",
+              "title": "Software Engineer, Machine Learning",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1048049836887307",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1511721227182750",
+              "title": "Solutions Architect",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1511721227182750",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "885487337878828",
+              "title": "Solutions Architect",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/885487337878828",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1368839171784149",
+              "title": "Network Engineer - Optical Deployment",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1368839171784149",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "runId": "2026-04-26T14-21-51Z",
+      "added": [],
+      "removed": [],
+      "changed": [],
+      "unchanged": [
+        {
+          "id": "2418816405226170",
+          "title": "Client Partner, CEE Tech Apps",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/2418816405226170",
+          "locations": [
+            "Warsaw, Poland"
+          ],
+          "requestedLocation": "Poland"
+        },
+        {
+          "id": "906391792398202",
+          "title": "Enterprise Technical Sales Specialist, EMEA",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/906391792398202",
+          "locations": [
+            "Dubai, United Arab Emirates",
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1368839171784149",
+          "title": "Network Engineer - Optical Deployment",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1368839171784149",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "926318253483210",
+          "title": "Research Scientist, Generative AI for Ads (Video)",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/926318253483210",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Ireland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "Poland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "2418816405226170",
+              "title": "Client Partner, CEE Tech Apps",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/2418816405226170",
+              "locations": [
+                "Warsaw, Poland"
+              ],
+              "requestedLocation": "Poland"
+            }
+          ]
+        },
+        {
+          "location": "Switzerland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "906391792398202",
+              "title": "Enterprise Technical Sales Specialist, EMEA",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/906391792398202",
+              "locations": [
+                "Dubai, United Arab Emirates",
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1368839171784149",
+              "title": "Network Engineer - Optical Deployment",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1368839171784149",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "926318253483210",
+              "title": "Research Scientist, Generative AI for Ads (Video)",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/926318253483210",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "runId": "2026-04-28T13-57-05Z",
+      "added": [],
+      "removed": [],
+      "changed": [],
+      "unchanged": [
+        {
+          "id": "2418816405226170",
+          "title": "Client Partner, CEE Tech Apps",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/2418816405226170",
+          "locations": [
+            "Warsaw, Poland"
+          ],
+          "requestedLocation": "Poland"
+        },
+        {
+          "id": "906391792398202",
+          "title": "Enterprise Technical Sales Specialist, EMEA",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/906391792398202",
+          "locations": [
+            "Dubai, United Arab Emirates",
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1368839171784149",
+          "title": "Network Engineer - Optical Deployment",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1368839171784149",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "926318253483210",
+          "title": "Research Scientist, Generative AI for Ads (Video)",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/926318253483210",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Ireland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "Poland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "2418816405226170",
+              "title": "Client Partner, CEE Tech Apps",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/2418816405226170",
+              "locations": [
+                "Warsaw, Poland"
+              ],
+              "requestedLocation": "Poland"
+            }
+          ]
+        },
+        {
+          "location": "Switzerland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "906391792398202",
+              "title": "Enterprise Technical Sales Specialist, EMEA",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/906391792398202",
+              "locations": [
+                "Dubai, United Arab Emirates",
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1368839171784149",
+              "title": "Network Engineer - Optical Deployment",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1368839171784149",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "926318253483210",
+              "title": "Research Scientist, Generative AI for Ads (Video)",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/926318253483210",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

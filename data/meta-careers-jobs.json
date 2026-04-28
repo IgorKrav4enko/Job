@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-04-21T13:23:13.5101150\u002B00:00",
+  "generatedAt": "2026-04-28T13:57:05.3019160\u002B00:00",
   "source": "Meta Careers",
   "status": "success",
-  "notes": "Normalized 10 active Meta jobs from latest raw snapshot.",
+  "notes": "Normalized 4 active Meta jobs from latest raw snapshot.",
   "searchTerm": "Software Engineering",
   "locations": [
     {
@@ -33,6 +33,39 @@
   ],
   "jobs": [
     {
+      "id": "2418816405226170",
+      "title": "Client Partner, CEE Tech Apps",
+      "company": "Meta",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/2418816405226170",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=Warsaw%2C%20Poland\u0026page=1",
+      "postedAtCandidate": "2026-03-10T06:40:07-07:00",
+      "firstSeenAt": "2026-04-23T19:53:46.9351860\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3019160\u002B00:00",
+      "isActive": true,
+      "contentHash": "8f30abed1f50e0d2b40b6029c2b3174be22e557903ae11f9a712c9f8647b2140"
+    },
+    {
+      "id": "906391792398202",
+      "title": "Enterprise Technical Sales Specialist, EMEA",
+      "company": "Meta",
+      "locations": [
+        "Dubai, United Arab Emirates",
+        "London, UK"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/906391792398202",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026page=1",
+      "postedAtCandidate": "2026-02-01T09:00:00-08:00",
+      "firstSeenAt": "2026-04-23T19:53:46.9351860\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3019160\u002B00:00",
+      "isActive": true,
+      "contentHash": "210a71fd483bdc38ee7ae449a3e96c23fa3771109269fe81165551903d2f1592"
+    },
+    {
       "id": "1368839171784149",
       "title": "Network Engineer - Optical Deployment",
       "company": "Meta",
@@ -41,12 +74,26 @@
       ],
       "url": "https://www.metacareers.com/profile/job_details/1368839171784149",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK\u0026q=Software%20Engineering",
-      "postedAtCandidate": "2026-04-17T06:57:47-07:00",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026page=1",
       "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
-      "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3019160\u002B00:00",
       "isActive": true,
       "contentHash": "e58636b9a2da348e465d351e22fe03ac2de64f009e7a8465a665d321b621b768"
+    },
+    {
+      "id": "926318253483210",
+      "title": "Research Scientist, Generative AI for Ads (Video)",
+      "company": "Meta",
+      "locations": [
+        "London, UK"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/926318253483210",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.metacareers.com/jobsearch?offices[0]=London%2C%20UK\u0026page=2",
+      "firstSeenAt": "2026-04-23T19:53:46.9351860\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3019160\u002B00:00",
+      "isActive": true,
+      "contentHash": "0ebc1e9beba898a647c8a36946b82a04962c81af377dbbb0f6d83e9e8cc8d756"
     },
     {
       "id": "1889314011669750",
@@ -61,7 +108,7 @@
       "postedAtCandidate": "2025-12-22T12:52:02-08:00",
       "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
       "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "db6f8e684372a4eb2aee3fcbcaa0fa91ce3f18a182dcd9b07196c5dbd86465ca"
     },
     {
@@ -77,7 +124,7 @@
       "postedAtCandidate": "2025-12-22T08:27:38-08:00",
       "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
       "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "49af5c66769f7f9fd7e9cacb7c0a0112beed85641dae83ba0acae962f436b4cb"
     },
     {
@@ -94,7 +141,7 @@
       "postedAtCandidate": "2026-02-03T13:12:08-08:00",
       "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
       "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "4b5b51a9ea011cc3ba979524b57b4a491f556c552d124c71d48e3b5a26721d0b"
     },
     {
@@ -112,7 +159,7 @@
       "postedAtCandidate": "2024-01-24T06:38:43-08:00",
       "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
       "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "d92b61afd5a28dcae24a7e86ab660c770ac43ecff7b7ee0658bf0ab885eb406c"
     },
     {
@@ -137,7 +184,7 @@
       "postedAtCandidate": "2025-06-10T13:07:44-07:00",
       "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
       "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "5a0c261e29143e6dad2b00b15aa80ffbbf42c391cd3f07beadaf65eef2e9b200"
     },
     {
@@ -153,7 +200,7 @@
       "postedAtCandidate": "2025-06-10T16:19:38-07:00",
       "firstSeenAt": "2026-04-18T14:28:27.1763420\u002B00:00",
       "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "18b44622967b714183fb0b84118eefe555497197b6b5bb7bcf8bf47f61def931"
     },
     {
@@ -183,7 +230,7 @@
       "postedAtCandidate": "2025-06-10T13:59:00-07:00",
       "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
       "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "1ebd6b2f73c5426d55ef4af18c82c7e574f630e9e1de6860380860d8ae5121a4"
     },
     {
@@ -199,7 +246,7 @@
       "postedAtCandidate": "2026-02-18T02:26:40-08:00",
       "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
       "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "e12aa531aa30418bcdd265c1713034f742d5d18e73c09538f538016995250579"
     },
     {
@@ -215,7 +262,7 @@
       "postedAtCandidate": "2026-04-12T14:24:57-07:00",
       "firstSeenAt": "2026-04-17T18:13:23.5254010\u002B00:00",
       "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "e12aa531aa30418bcdd265c1713034f742d5d18e73c09538f538016995250579"
     }
   ]

@@ -49,6 +49,8 @@ const SOURCES = {
 const SOURCE_STORAGE_KEY = "careers-dashboard-source";
 const UNKNOWN_CITY = "__unknown_city__";
 const UNKNOWN_CITY_LABEL = "Нерозпізнані";
+const COMPARE_SOURCE_KEYS = ["google", "meta", "apple", "microsoft", "nvidia"];
+const COMPARE_COLORS = ["#38bdf8", "#4ade80", "#f59e0b", "#fb7185", "#a78bfa"];
 
 const state = {
   activeSource: getInitialSourceKey(),
@@ -61,16 +63,27 @@ const state = {
   activeCountry: "all",
   activeCity: "all",
   removedCountry: "all",
-  removedCity: "all"
+  removedCity: "all",
+  compareLoaded: false,
+  compareLoading: false,
+  compareData: new Map(),
+  compareSelectedSources: new Set(["google", "apple", "microsoft"]),
+  compareCountry: "all",
+  compareRange: "30",
+  compareMode: "absolute"
 };
 
 const refs = {
+  workspaceTabsRoot: document.getElementById("workspace-tabs"),
+  sourceHeader: document.getElementById("source-header"),
+  trackerTabsShell: document.getElementById("tracker-tabs-shell"),
   sourceRoot: document.getElementById("source-switcher"),
   activeSourceLabel: document.getElementById("active-source-label"),
   tabsRoot: document.getElementById("dashboard-tabs"),
   historyPanel: document.getElementById("history-panel"),
   livePanel: document.getElementById("live-panel"),
   removedPanel: document.getElementById("removed-panel"),
+  comparePanel: document.getElementById("compare-panel"),
   filterRoot: document.getElementById("location-filter"),
   chart: document.getElementById("runs-chart"),
   chartCaption: document.getElementById("chart-caption"),
@@ -108,7 +121,20 @@ const refs = {
   changedList: document.getElementById("changed-list"),
   addedBadge: document.getElementById("added-badge"),
   removedBadge: document.getElementById("removed-badge"),
-  changedBadge: document.getElementById("changed-badge")
+  changedBadge: document.getElementById("changed-badge"),
+  compareCompanyChips: document.getElementById("compare-company-chips"),
+  compareCountryFilter: document.getElementById("compare-country-filter"),
+  compareRangeFilter: document.getElementById("compare-range-filter"),
+  compareModeFilter: document.getElementById("compare-mode-filter"),
+  compareLimitationsNote: document.getElementById("compare-limitations-note"),
+  compareOpenChart: document.getElementById("compare-open-chart"),
+  compareNetChart: document.getElementById("compare-net-chart"),
+  compareChurnChart: document.getElementById("compare-churn-chart"),
+  compareOpenCaption: document.getElementById("compare-open-caption"),
+  compareNetCaption: document.getElementById("compare-net-caption"),
+  compareChurnCaption: document.getElementById("compare-churn-caption"),
+  compareSummaryCaption: document.getElementById("compare-summary-caption"),
+  compareSummaryBody: document.getElementById("compare-summary-body")
 };
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -116,8 +142,10 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 async function initializeDashboard() {
+  bindWorkspaceTabs();
   bindSourceSwitcher();
   bindTabs();
+  bindCompareControls();
   await loadSourceData(state.activeSource);
 }
 
@@ -182,6 +210,21 @@ function bindSourceSwitcher() {
   }
 }
 
+function bindWorkspaceTabs() {
+  for (const button of refs.workspaceTabsRoot.querySelectorAll("[data-workspace]")) {
+    button.addEventListener("click", () => {
+      const workspace = button.dataset.workspace || "tracker";
+      if (workspace === "analytics") {
+        state.activeTab = "compare";
+        void ensureCompareDataLoaded();
+      } else if (state.activeTab === "compare") {
+        state.activeTab = "history";
+      }
+      render();
+    });
+  }
+}
+
 async function fetchJson(url) {
   const response = await fetch(url);
   if (!response.ok) {
@@ -198,6 +241,513 @@ async function fetchJsonOrDefault(url, fallback) {
   }
 
   return response.json();
+}
+
+async function ensureCompareDataLoaded() {
+  if (state.compareLoaded || state.compareLoading) {
+    return;
+  }
+
+  state.compareLoading = true;
+  renderCompareLoading();
+
+  const entries = await Promise.all(
+    COMPARE_SOURCE_KEYS.map(async (sourceKey) => {
+      const source = SOURCES[sourceKey];
+      try {
+        const [runsPayload, jobsPayload] = await Promise.all([
+          source.allowMissingHistory ? fetchJsonOrDefault(source.runsUrl, { runs: [] }) : fetchJson(source.runsUrl),
+          fetchJson(source.jobsUrl)
+        ]);
+        return [
+          sourceKey,
+          {
+            source,
+            runs: Array.isArray(runsPayload.runs) ? runsPayload.runs : [],
+            jobs: Array.isArray(jobsPayload.jobs) ? jobsPayload.jobs : [],
+            error: null
+          }
+        ];
+      } catch (error) {
+        return [
+          sourceKey,
+          {
+            source,
+            runs: [],
+            jobs: [],
+            error: String(error)
+          }
+        ];
+      }
+    })
+  );
+
+  state.compareData = new Map(entries);
+  state.compareLoaded = true;
+  state.compareLoading = false;
+  renderCompare();
+}
+
+function renderCompareLoading() {
+  if (!refs.compareLimitationsNote) {
+    return;
+  }
+
+  refs.compareLimitationsNote.textContent = "Loading comparison history...";
+  refs.compareSummaryBody.replaceChildren();
+  refs.compareOpenChart.replaceChildren();
+  refs.compareNetChart.replaceChildren();
+  refs.compareChurnChart.replaceChildren();
+}
+
+function renderCompare() {
+  if (!refs.comparePanel || state.activeTab !== "compare") {
+    return;
+  }
+
+  renderCompareCompanyChips();
+
+  if (!state.compareLoaded) {
+    renderCompareLoading();
+    return;
+  }
+
+  renderCompareCountryOptions();
+  refs.compareRangeFilter.value = state.compareRange;
+  refs.compareModeFilter.value = state.compareMode;
+
+  const selected = getSelectedCompareDatasets();
+  const series = selected.map((entry, index) => buildCompareSeries(entry, index)).filter((item) => item.points.length > 0);
+  renderCompareLimitations(selected, series);
+  renderCompareLineChart(refs.compareOpenChart, series, "open", state.compareMode === "indexed");
+  renderCompareLineChart(refs.compareNetChart, series, "net", false);
+  renderCompareAddedRemovedChart(refs.compareChurnChart, series);
+  refs.compareOpenCaption.textContent = `${series.length} compan${series.length === 1 ? "y" : "ies"} · ${formatCompareRangeLabel()}`;
+  refs.compareNetCaption.textContent = `${series.length} compan${series.length === 1 ? "y" : "ies"} · net added-removed`;
+  refs.compareChurnCaption.textContent = `${series.length} compan${series.length === 1 ? "y" : "ies"} · added/removed`;
+  renderCompareSummary(selected);
+}
+
+function renderCompareCompanyChips() {
+  refs.compareCompanyChips.replaceChildren(
+    ...COMPARE_SOURCE_KEYS.map((sourceKey) => {
+      const source = SOURCES[sourceKey];
+      const isSelected = state.compareSelectedSources.has(sourceKey);
+      const button = createFilterChip(source.label.replace(" Careers", "").replace(" Jobs", ""), isSelected, () => {
+        if (state.compareSelectedSources.has(sourceKey) && state.compareSelectedSources.size > 1) {
+          state.compareSelectedSources.delete(sourceKey);
+        } else {
+          state.compareSelectedSources.add(sourceKey);
+        }
+        renderCompare();
+      });
+      button.setAttribute("aria-pressed", String(isSelected));
+      return button;
+    })
+  );
+}
+
+function renderCompareCountryOptions() {
+  const countries = getCompareCountries();
+  if (state.compareCountry !== "all" && !countries.includes(state.compareCountry)) {
+    state.compareCountry = "all";
+  }
+
+  refs.compareCountryFilter.replaceChildren(
+    createFilterChip("All countries", state.compareCountry === "all", () => {
+      state.compareCountry = "all";
+      renderCompare();
+    }),
+    ...countries.map((country) =>
+      createFilterChip(country, state.compareCountry === country, () => {
+        state.compareCountry = country;
+        renderCompare();
+      }))
+  );
+}
+
+function getCompareCountries() {
+  const countries = new Set();
+  for (const entry of state.compareData.values()) {
+    for (const run of entry.runs) {
+      for (const item of run.perLocation || []) {
+        if (item.location) {
+          countries.add(item.location);
+        }
+      }
+    }
+  }
+
+  return Array.from(countries).sort((left, right) => left.localeCompare(right, "uk"));
+}
+
+function getSelectedCompareDatasets() {
+  return COMPARE_SOURCE_KEYS
+    .filter((sourceKey) => state.compareSelectedSources.has(sourceKey))
+    .map((sourceKey) => state.compareData.get(sourceKey))
+    .filter(Boolean);
+}
+
+function buildCompareSeries(entry, index) {
+  const filteredRuns = filterCompareRuns(entry.runs);
+  const rawPoints = filteredRuns.map((run) => {
+    const scoped = getCompareRunScope(run, state.compareCountry);
+    return {
+      date: new Date(run.generatedAt),
+      label: shortDate(run.generatedAt),
+      open: scoped.totalJobs,
+      net: scoped.addedCount - scoped.removedCount,
+      added: scoped.addedCount,
+      removed: scoped.removedCount,
+      run
+    };
+  }).filter((point) => Number.isFinite(point.date.getTime()));
+
+  const base = rawPoints.find((point) => point.open > 0)?.open || 1;
+  const points = rawPoints.map((point) => ({
+    ...point,
+    openIndexed: Math.round((point.open / base) * 1000) / 10
+  }));
+
+  return {
+    key: entry.source.key,
+    label: entry.source.label.replace(" Careers", "").replace(" Jobs", ""),
+    color: COMPARE_COLORS[index % COMPARE_COLORS.length],
+    points,
+    allRunCount: entry.runs.length,
+    error: entry.error
+  };
+}
+
+function filterCompareRuns(runs) {
+  const sorted = [...runs]
+    .filter((run) => run.generatedAt)
+    .sort((left, right) => new Date(left.generatedAt).getTime() - new Date(right.generatedAt).getTime());
+
+  if (state.compareRange === "all" || sorted.length === 0) {
+    return sorted;
+  }
+
+  const globalLatest = getCompareLatestDate();
+  if (!globalLatest) {
+    return sorted;
+  }
+
+  const days = Number(state.compareRange);
+  const cutoff = globalLatest.getTime() - days * 24 * 60 * 60 * 1000;
+  return sorted.filter((run) => new Date(run.generatedAt).getTime() >= cutoff);
+}
+
+function getCompareLatestDate() {
+  const timestamps = Array.from(state.compareData.values())
+    .flatMap((entry) => entry.runs)
+    .map((run) => new Date(run.generatedAt).getTime())
+    .filter(Number.isFinite);
+
+  return timestamps.length ? new Date(Math.max(...timestamps)) : null;
+}
+
+function getCompareRunScope(run, country) {
+  if (country === "all") {
+    return {
+      totalJobs: run.totalJobs || 0,
+      addedCount: run.addedCount || 0,
+      removedCount: run.removedCount || 0
+    };
+  }
+
+  const scoped = (run.perLocation || []).find((item) => item.location === country);
+  return {
+    totalJobs: scoped?.totalJobs || 0,
+    addedCount: scoped?.addedCount || 0,
+    removedCount: scoped?.removedCount || 0
+  };
+}
+
+function renderCompareLimitations(selected, series) {
+  const parts = [];
+  const errors = selected.filter((entry) => entry.error).map((entry) => `${entry.source.label}: ${entry.error}`);
+  if (errors.length) {
+    parts.push(`Some sources could not load: ${errors.join(" | ")}`);
+  }
+
+  const runCounts = series.map((item) => item.allRunCount).filter((count) => count > 0);
+  if (runCounts.length) {
+    const minRuns = Math.min(...runCounts);
+    const maxRuns = Math.max(...runCounts);
+    if (minRuns !== maxRuns) {
+      parts.push(`History depth differs across selected companies (${minRuns}-${maxRuns} runs available). Charts show only each company's available runs.`);
+    }
+  }
+
+  const empty = selected.filter((entry) => !entry.error && entry.runs.length === 0).map((entry) => entry.source.label);
+  if (empty.length) {
+    parts.push(`No run history available for: ${empty.join(", ")}.`);
+  }
+
+  if (state.compareCountry !== "all") {
+    parts.push(`Country filter uses requestedLocation/perLocation aggregates: ${state.compareCountry}.`);
+  }
+
+  refs.compareLimitationsNote.textContent = parts.length
+    ? parts.join(" ")
+    : "Each company is charted from its own run history. Different sources may have different start dates and run counts.";
+}
+
+function renderCompareLineChart(svg, series, metric, indexed) {
+  const width = 920;
+  const height = 320;
+  const margin = { top: 30, right: 124, bottom: 54, left: 58 };
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.replaceChildren();
+
+  const visibleSeries = series.filter((item) => item.points.length > 0);
+  if (visibleSeries.length === 0) {
+    svg.appendChild(createSvgText(width / 2, height / 2, "No comparison data for this selection.", "middle"));
+    return;
+  }
+
+  const chartWidth = width - margin.left - margin.right;
+  const chartHeight = height - margin.top - margin.bottom;
+  const allDates = visibleSeries.flatMap((item) => item.points.map((point) => point.date.getTime()));
+  const minDate = Math.min(...allDates);
+  const maxDate = Math.max(...allDates);
+  const values = visibleSeries.flatMap((item) => item.points.map((point) => getComparePointValue(point, metric, indexed)));
+  const minValue = Math.min(...values, metric === "net" ? 0 : Infinity);
+  const maxValue = Math.max(...values, metric === "net" ? 0 : -Infinity);
+  const padding = Math.max(2, Math.round((maxValue - minValue) * 0.12));
+  const yMin = metric === "net" ? minValue - padding : Math.max(0, minValue - padding);
+  const yMax = Math.max(yMin + 1, maxValue + padding);
+  const xForDate = (date) => margin.left + (maxDate === minDate ? chartWidth / 2 : ((date.getTime() - minDate) / (maxDate - minDate)) * chartWidth);
+  const yForValue = (value) => margin.top + chartHeight - ((value - yMin) / (yMax - yMin)) * chartHeight;
+
+  const grid = document.createElementNS("http://www.w3.org/2000/svg", "g");
+  grid.setAttribute("class", "chart-grid");
+  for (let tick = 0; tick <= 4; tick += 1) {
+    const y = margin.top + (tick / 4) * chartHeight;
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", String(margin.left));
+    line.setAttribute("x2", String(width - margin.right));
+    line.setAttribute("y1", String(y));
+    line.setAttribute("y2", String(y));
+    grid.appendChild(line);
+    const value = Math.round(yMax - (tick / 4) * (yMax - yMin));
+    grid.appendChild(createSvgText(margin.left - 12, y + 4, String(value), "end", "rgba(148,163,184,0.78)"));
+  }
+  svg.appendChild(grid);
+
+  if (metric === "net" && yMin < 0 && yMax > 0) {
+    const zeroLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    zeroLine.setAttribute("x1", String(margin.left));
+    zeroLine.setAttribute("x2", String(width - margin.right));
+    zeroLine.setAttribute("y1", String(yForValue(0)));
+    zeroLine.setAttribute("y2", String(yForValue(0)));
+    zeroLine.setAttribute("stroke", "rgba(226,232,240,0.42)");
+    zeroLine.setAttribute("stroke-width", "1.5");
+    svg.appendChild(zeroLine);
+  }
+
+  visibleSeries.forEach((item, index) => {
+    const path = item.points
+      .map((point, pointIndex) => `${pointIndex === 0 ? "M" : "L"} ${xForDate(point.date)} ${yForValue(getComparePointValue(point, metric, indexed))}`)
+      .join(" ");
+    const linePath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    linePath.setAttribute("d", path);
+    linePath.setAttribute("fill", "none");
+    linePath.setAttribute("stroke", item.color);
+    linePath.setAttribute("stroke-width", "2.75");
+    linePath.setAttribute("stroke-linecap", "round");
+    linePath.setAttribute("stroke-linejoin", "round");
+    svg.appendChild(linePath);
+
+    item.points.forEach((point) => {
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", String(xForDate(point.date)));
+      circle.setAttribute("cy", String(yForValue(getComparePointValue(point, metric, indexed))));
+      circle.setAttribute("r", "4");
+      circle.setAttribute("fill", item.color);
+      circle.appendChild(document.createElementNS("http://www.w3.org/2000/svg", "title")).textContent =
+        `${item.label} · ${point.label}: ${getComparePointValue(point, metric, indexed)}`;
+      svg.appendChild(circle);
+    });
+
+    const legendY = margin.top + index * 22;
+    const swatch = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    swatch.setAttribute("cx", String(width - margin.right + 18));
+    swatch.setAttribute("cy", String(legendY));
+    swatch.setAttribute("r", "5");
+    swatch.setAttribute("fill", item.color);
+    svg.appendChild(swatch);
+    svg.appendChild(createSvgText(width - margin.right + 30, legendY + 4, item.label, "start", "rgba(226,232,240,0.9)"));
+  });
+
+  const firstLabel = shortDate(new Date(minDate).toISOString());
+  const lastLabel = shortDate(new Date(maxDate).toISOString());
+  svg.appendChild(createSvgText(margin.left, height - 20, firstLabel, "start", "rgba(148,163,184,0.82)"));
+  svg.appendChild(createSvgText(width - margin.right, height - 20, lastLabel, "end", "rgba(148,163,184,0.82)"));
+}
+
+function getComparePointValue(point, metric, indexed) {
+  if (metric === "net") {
+    return point.net;
+  }
+
+  return indexed ? point.openIndexed : point.open;
+}
+
+function renderCompareAddedRemovedChart(svg, series) {
+  const width = 1040;
+  const height = 360;
+  const margin = { top: 32, right: 132, bottom: 64, left: 58 };
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.replaceChildren();
+
+  const visibleSeries = series.filter((item) => item.points.length > 0);
+  if (visibleSeries.length === 0) {
+    svg.appendChild(createSvgText(width / 2, height / 2, "No added/removed data for this selection.", "middle"));
+    return;
+  }
+
+  const summaries = visibleSeries.map((item) => ({
+    ...item,
+    addedTotal: item.points.reduce((sum, point) => sum + point.added, 0),
+    removedTotal: item.points.reduce((sum, point) => sum + point.removed, 0)
+  }));
+
+  const maxValue = Math.max(1, ...summaries.flatMap((item) => [item.addedTotal, item.removedTotal]));
+  const chartWidth = width - margin.left - margin.right;
+  const chartHeight = height - margin.top - margin.bottom;
+  const groupGap = 28;
+  const groupWidth = Math.max(72, (chartWidth - groupGap * Math.max(0, summaries.length - 1)) / summaries.length);
+  const barGap = 8;
+  const barWidth = Math.min(44, Math.max(16, (groupWidth - barGap) / 2));
+  const barsWidth = barWidth * 2 + barGap;
+  const yForValue = (value) => margin.top + chartHeight - (value / maxValue) * chartHeight;
+
+  const grid = document.createElementNS("http://www.w3.org/2000/svg", "g");
+  grid.setAttribute("class", "chart-grid");
+  for (let tick = 0; tick <= 4; tick += 1) {
+    const y = margin.top + (tick / 4) * chartHeight;
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", String(margin.left));
+    line.setAttribute("x2", String(width - margin.right));
+    line.setAttribute("y1", String(y));
+    line.setAttribute("y2", String(y));
+    grid.appendChild(line);
+    const value = Math.round(maxValue - (tick / 4) * maxValue);
+    grid.appendChild(createSvgText(margin.left - 12, y + 4, String(value), "end", "rgba(148,163,184,0.78)"));
+  }
+  svg.appendChild(grid);
+
+  summaries.forEach((item, index) => {
+    const groupX = margin.left + index * (groupWidth + groupGap);
+    const barsX = groupX + (groupWidth - barsWidth) / 2;
+    const addedHeight = margin.top + chartHeight - yForValue(item.addedTotal);
+    const removedHeight = margin.top + chartHeight - yForValue(item.removedTotal);
+
+    const addedBar = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    addedBar.setAttribute("x", String(barsX));
+    addedBar.setAttribute("y", String(yForValue(item.addedTotal)));
+    addedBar.setAttribute("width", String(barWidth));
+    addedBar.setAttribute("height", String(addedHeight));
+    addedBar.setAttribute("rx", "4");
+    addedBar.setAttribute("fill", "#4ade80");
+    addedBar.appendChild(document.createElementNS("http://www.w3.org/2000/svg", "title")).textContent =
+      `${item.label}: ${item.addedTotal} added in ${formatCompareRangeLabel()}`;
+    svg.appendChild(addedBar);
+
+    const removedBar = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    removedBar.setAttribute("x", String(barsX + barWidth + barGap));
+    removedBar.setAttribute("y", String(yForValue(item.removedTotal)));
+    removedBar.setAttribute("width", String(barWidth));
+    removedBar.setAttribute("height", String(removedHeight));
+    removedBar.setAttribute("rx", "4");
+    removedBar.setAttribute("fill", "#fb7185");
+    removedBar.appendChild(document.createElementNS("http://www.w3.org/2000/svg", "title")).textContent =
+      `${item.label}: ${item.removedTotal} removed in ${formatCompareRangeLabel()}`;
+    svg.appendChild(removedBar);
+
+    if (item.addedTotal > 0) {
+      const label = createSvgText(barsX + barWidth / 2, yForValue(item.addedTotal) - 8, String(item.addedTotal), "middle", "rgba(226,232,240,0.9)");
+      label.setAttribute("font-size", "11");
+      svg.appendChild(label);
+    }
+
+    if (item.removedTotal > 0) {
+      const label = createSvgText(barsX + barWidth + barGap + barWidth / 2, yForValue(item.removedTotal) - 8, String(item.removedTotal), "middle", "rgba(226,232,240,0.9)");
+      label.setAttribute("font-size", "11");
+      svg.appendChild(label);
+    }
+
+    const companyLabel = createSvgText(groupX + groupWidth / 2, height - 24, item.label, "middle", item.color);
+    companyLabel.setAttribute("font-size", "12");
+    companyLabel.setAttribute("font-weight", "700");
+    svg.appendChild(companyLabel);
+  });
+
+  const legendItems = [
+    { label: "Added", color: "#4ade80" },
+    { label: "Removed", color: "#fb7185" }
+  ];
+  legendItems.forEach((entry, index) => {
+    const y = margin.top + index * 24;
+    const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    rect.setAttribute("x", String(width - margin.right + 18));
+    rect.setAttribute("y", String(y - 8));
+    rect.setAttribute("width", "12");
+    rect.setAttribute("height", "12");
+    rect.setAttribute("rx", "2");
+    rect.setAttribute("fill", entry.color);
+    svg.appendChild(rect);
+    svg.appendChild(createSvgText(width - margin.right + 38, y + 2, entry.label, "start", "rgba(226,232,240,0.9)"));
+  });
+
+  svg.appendChild(createSvgText(margin.left, height - 8, `${formatCompareRangeLabel()} · ${state.compareCountry === "all" ? "all countries" : state.compareCountry}`, "start", "rgba(148,163,184,0.82)"));
+}
+
+function renderCompareSummary(selected) {
+  const rows = selected.map((entry, index) => {
+    const filteredRuns = filterCompareRuns(entry.runs);
+    const latestRun = filteredRuns.at(-1) || entry.runs.at(-1);
+    const latestScope = latestRun ? getCompareRunScope(latestRun, state.compareCountry) : { totalJobs: 0, addedCount: 0, removedCount: 0 };
+    const added = filteredRuns.reduce((sum, run) => sum + getCompareRunScope(run, state.compareCountry).addedCount, 0);
+    const removed = filteredRuns.reduce((sum, run) => sum + getCompareRunScope(run, state.compareCountry).removedCount, 0);
+    return {
+      label: entry.source.label,
+      color: COMPARE_COLORS[index % COMPARE_COLORS.length],
+      currentOpen: latestScope.totalJobs,
+      added,
+      removed,
+      net: added - removed,
+      lastUpdated: latestRun?.generatedAt || null,
+      error: entry.error
+    };
+  });
+
+  refs.compareSummaryCaption.textContent = `${formatCompareRangeLabel()} · ${state.compareCountry === "all" ? "all countries" : state.compareCountry}`;
+  refs.compareSummaryBody.replaceChildren(
+    ...rows.map((row) => {
+      const tr = document.createElement("tr");
+      tr.className = "border-b border-white/5";
+      tr.innerHTML = `
+        <td class="px-3 py-3">
+          <span class="mr-2 inline-block h-2.5 w-2.5 rounded-full" style="background:${row.color}"></span>
+          <span class="font-semibold">${row.label}</span>
+          ${row.error ? `<span class="ml-2 text-xs text-rose">load issue</span>` : ""}
+        </td>
+        <td class="px-3 py-3 text-right font-semibold">${row.currentOpen}</td>
+        <td class="px-3 py-3 text-right text-accent">${row.added}</td>
+        <td class="px-3 py-3 text-right text-rose">${row.removed}</td>
+        <td class="px-3 py-3 text-right font-semibold ${row.net >= 0 ? "text-accent" : "text-rose"}">${formatSigned(row.net)}</td>
+        <td class="px-3 py-3 text-muted">${row.lastUpdated ? formatDate(row.lastUpdated) : "No runs"}</td>
+      `;
+      return tr;
+    })
+  );
+}
+
+function formatCompareRangeLabel() {
+  return state.compareRange === "all" ? "All history" : `Last ${state.compareRange}d`;
 }
 
 function buildLocationFilters() {
@@ -307,9 +857,24 @@ function bindTabs() {
   for (const button of refs.tabsRoot.querySelectorAll("[data-tab]")) {
     button.addEventListener("click", () => {
       state.activeTab = button.dataset.tab || "history";
+      if (state.activeTab === "compare") {
+        void ensureCompareDataLoaded();
+      }
       render();
     });
   }
+}
+
+function bindCompareControls() {
+  refs.compareRangeFilter.addEventListener("change", () => {
+    state.compareRange = refs.compareRangeFilter.value || "30";
+    renderCompare();
+  });
+
+  refs.compareModeFilter.addEventListener("change", () => {
+    state.compareMode = refs.compareModeFilter.value || "absolute";
+    renderCompare();
+  });
 }
 
 function selectCountry(value) {
@@ -324,6 +889,7 @@ function selectCity(value) {
 }
 
 function render() {
+  renderWorkspaceTabs();
   renderSourceSwitcher();
   renderTabs();
   buildLocationFilters();
@@ -334,6 +900,24 @@ function render() {
   renderLiveFilterChips();
   renderJobs();
   renderRemovedJobs();
+  if (state.activeTab === "compare") {
+    renderCompare();
+  }
+}
+
+function renderWorkspaceTabs() {
+  const activeWorkspace = state.activeTab === "compare" ? "analytics" : "tracker";
+  for (const button of refs.workspaceTabsRoot.querySelectorAll("[data-workspace]")) {
+    const isActive = button.dataset.workspace === activeWorkspace;
+    button.className =
+      "rounded-t-[18px] border px-5 py-3 text-sm font-semibold transition-colors " +
+      (isActive
+        ? "border-sky/35 bg-panel text-sky shadow-panel"
+        : "border-white/10 bg-panelSoft/45 text-muted hover:border-sky hover:text-sky");
+  }
+
+  refs.sourceHeader.hidden = activeWorkspace !== "tracker";
+  refs.trackerTabsShell.hidden = activeWorkspace !== "tracker";
 }
 
 function renderSourceSwitcher() {
@@ -363,6 +947,7 @@ function renderTabs() {
   refs.historyPanel.hidden = state.activeTab !== "history";
   refs.livePanel.hidden = state.activeTab !== "live";
   refs.removedPanel.hidden = state.activeTab !== "removed";
+  refs.comparePanel.hidden = state.activeTab !== "compare";
 }
 
 function getFilteredRuns() {

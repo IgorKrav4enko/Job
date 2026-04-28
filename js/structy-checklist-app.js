@@ -370,7 +370,6 @@
     titleCheckbox.checked = Boolean(state[detailKey]);
     titleCheckbox.addEventListener("change", () => {
       state[detailKey] = titleCheckbox.checked;
-      checkbox.checked = titleCheckbox.checked;
       writeState(state);
       updateProgress();
       renderSidebar();

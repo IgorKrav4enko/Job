@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+  "generatedAt": "2026-04-28T13:57:05.3026380\u002B00:00",
   "source": "NVIDIA Careers",
   "status": "success",
-  "notes": "Normalized 64 active NVIDIA jobs from latest raw snapshot.",
+  "notes": "Normalized 10 active NVIDIA jobs from latest raw snapshot.",
   "searchTerm": "software engineer",
   "locations": [
     {
@@ -33,6 +33,199 @@
   ],
   "jobs": [
     {
+      "id": "893392964974",
+      "title": "Principal AI Developer Technology Engineer",
+      "company": "NVIDIA",
+      "locations": [
+        "France, Courbevoie",
+        "Germany, Munich",
+        "Switzerland, Zurich",
+        "UK, Bristol",
+        "UK, Reading"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893392964974",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3026380\u002B00:00",
+      "isActive": true,
+      "contentHash": "6c2eeffae1df564a8e25e2175f2f9bbb429ca3837065b648f6293ed269c7efbe"
+    },
+    {
+      "id": "893377948130",
+      "title": "Principal Software Architect, GPU Networking Research",
+      "company": "NVIDIA",
+      "locations": [
+        "Remote - UK",
+        "Switzerland, Zurich"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893377948130",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "postedAtCandidate": "2024-09-03T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3026380\u002B00:00",
+      "isActive": true,
+      "contentHash": "a23852c7f2417af58fe1777b2fb1d27232a2c3a920150c4df3054c9226aea7fb"
+    },
+    {
+      "id": "893394426716",
+      "title": "Senior HPC and AI Network Software Architect",
+      "company": "NVIDIA",
+      "locations": [
+        "Remote - Germany",
+        "Remote - Italy",
+        "Remote - Poland",
+        "Remote - UK",
+        "Switzerland, Zurich"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893394426716",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-06T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3026380\u002B00:00",
+      "isActive": true,
+      "contentHash": "055e11fcea4ccef633318f425a5c4143bdd023cdc3b2dfd304fceb6e3b26ad7a"
+    },
+    {
+      "id": "893394712294",
+      "title": "Senior HPC Performance Engineer",
+      "company": "NVIDIA",
+      "locations": [
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - Switzerland",
+        "Remote - UK"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893394712294",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3026380\u002B00:00",
+      "isActive": true,
+      "contentHash": "f9292d5e8a0316597535d99584a69e657ac1cf0df308e5af3be286f089e75961"
+    },
+    {
+      "id": "893382452913",
+      "title": "Senior Software and System Architect",
+      "company": "NVIDIA",
+      "locations": [
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - Spain",
+        "Remote - Switzerland",
+        "Remote - UK"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893382452913",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3026380\u002B00:00",
+      "isActive": true,
+      "contentHash": "1bc29de16e93c7374b3c2b19b6a6f5e9065c79cd8f6bf2be4b35257ebc9c32e2"
+    },
+    {
+      "id": "893383895694",
+      "title": "Senior Software Architect - Deep Learning and HPC Communications",
+      "company": "NVIDIA",
+      "locations": [
+        "Remote - Germany",
+        "Remote - Poland",
+        "Remote - Switzerland",
+        "Remote - UK",
+        "Switzerland, Zurich"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893383895694",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-01-09T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3026380\u002B00:00",
+      "isActive": true,
+      "contentHash": "caf0f89d27d5edafae77c9098a11dcb36322f68649ad52fe6f2022f280f95985"
+    },
+    {
+      "id": "893392098780",
+      "title": "Senior Software Architect - Deep Learning and HPC Communications",
+      "company": "NVIDIA",
+      "locations": [
+        "Remote - Germany",
+        "Remote - Poland",
+        "Remote - Switzerland",
+        "Remote - UK"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893392098780",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3026380\u002B00:00",
+      "isActive": true,
+      "contentHash": "ad04697093694d1d28fc8090706a2ecf6e2efcf3e2d3ca8e63fdc860de165e33"
+    },
+    {
+      "id": "893392256499",
+      "title": "Senior Software Developer",
+      "company": "NVIDIA",
+      "locations": [
+        "Remote - Switzerland",
+        "Switzerland, Zurich"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893392256499",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-03-17T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3026380\u002B00:00",
+      "isActive": true,
+      "contentHash": "55968fa0dc193e617ed0eb4929236856b87b8d7fd989243c514256dde7d3ac51"
+    },
+    {
+      "id": "893394712289",
+      "title": "Senior Software Engineer, JAX",
+      "company": "NVIDIA",
+      "locations": [
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - Poland",
+        "Remote - Switzerland",
+        "Remote - UK"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893394712289",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3026380\u002B00:00",
+      "isActive": true,
+      "contentHash": "b9492727fb002e692d19e917d2c4f965fe490cbf0e0590cc466be3cc0e2b5369"
+    },
+    {
+      "id": "893382545772",
+      "title": "Senior System Software Engineer, NCCL - Partner Enablement",
+      "company": "NVIDIA",
+      "locations": [
+        "Poland, Warsaw",
+        "Remote - Germany",
+        "Remote - Poland",
+        "Remote - Switzerland",
+        "Remote - UK",
+        "Switzerland, Zurich"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893382545772",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-28T13:57:05.3026380\u002B00:00",
+      "isActive": true,
+      "contentHash": "1feab4c2fa66ec9346620e7150a7c647b60307388078facd92a4430cb68fdb18"
+    },
+    {
       "id": "893375059339",
       "title": "AI Developer Technology Engineer",
       "company": "NVIDIA",
@@ -50,7 +243,7 @@
       "postedAtCandidate": "2026-04-07T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "62c92559220e043571e17665b8a375a9c0681c600f341bf638556adfd93bd430"
     },
     {
@@ -66,7 +259,7 @@
       "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "18d40fe659ecdd9ac5a1a448d5a15e2cec812f1e0f7aa76cd38680ef2384abbe"
     },
     {
@@ -84,7 +277,7 @@
       "postedAtCandidate": "2026-03-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "c8b038c52238d7357cb07385316981d5c56a890a411d5c723fcaa0974cc6ff07"
     },
     {
@@ -103,7 +296,7 @@
       "postedAtCandidate": "2026-03-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "97c638a02f2a8d37cdfc6cbe68691a48aecd1f0f2002ba0524064d9032fc9440"
     },
     {
@@ -122,7 +315,7 @@
       "postedAtCandidate": "2026-03-03T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "fbfdad3310234d705f4ec7ed9fb506fbc1137731101b38665b3d9e9bcdbb9d5e"
     },
     {
@@ -138,7 +331,7 @@
       "postedAtCandidate": "2026-02-25T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "9528f3c58054ed2ca898558b4307ad1a48a98f38e202c2db6dd4528044531644"
     },
     {
@@ -158,28 +351,8 @@
       "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "471c5e6caf7f70784cae8e5f6c5678d5096fca063314745b52d9407fbb8c8e06"
-    },
-    {
-      "id": "893392964974",
-      "title": "Principal AI Developer Technology Engineer",
-      "company": "NVIDIA",
-      "locations": [
-        "France, Courbevoie",
-        "Germany, Munich",
-        "Switzerland, Zurich",
-        "UK, Bristol",
-        "UK, Reading"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893392964974",
-      "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
-      "contentHash": "6c2eeffae1df564a8e25e2175f2f9bbb429ca3837065b648f6293ed269c7efbe"
     },
     {
       "id": "893393559795",
@@ -198,25 +371,8 @@
       "postedAtCandidate": "2026-02-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "a2a6618fdc2eab5bbc60f63e572efa527d8a5b6cc98fd288036d8ce06550e755"
-    },
-    {
-      "id": "893377948130",
-      "title": "Principal Software Architect, GPU Networking Research",
-      "company": "NVIDIA",
-      "locations": [
-        "Remote - UK",
-        "Switzerland, Zurich"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893377948130",
-      "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
-      "postedAtCandidate": "2024-09-03T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
-      "contentHash": "a23852c7f2417af58fe1777b2fb1d27232a2c3a920150c4df3054c9226aea7fb"
     },
     {
       "id": "893392587678",
@@ -232,7 +388,7 @@
       "postedAtCandidate": "2025-12-22T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "8ae2a7b47eb7af751966e7067b6b67a41da8ce93757c425859ab0da0348eb9ea"
     },
     {
@@ -249,7 +405,7 @@
       "postedAtCandidate": "2026-04-15T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "54172bb9b60838bd53129f2afa32ff540687da15ae52fdd2d3511ee45223a3b4"
     },
     {
@@ -265,7 +421,7 @@
       "postedAtCandidate": "2026-03-11T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "167362dc87cbe9b24488edce7e50fcc6f58125a3517c92f9b174a8bc8a5a86df"
     },
     {
@@ -282,7 +438,7 @@
       "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "e84f8990123532ce350e11a8accd9ef1b3bd063f78b36137dcddc90777024285"
     },
     {
@@ -299,7 +455,7 @@
       "postedAtCandidate": "2026-01-28T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "b6218fdf32ddad4d6268e1f4e758f3b24858d96cde52c27ea7ec6a08fccdc78d"
     },
     {
@@ -317,7 +473,7 @@
       "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "01f1fea39bbf6786e685754b0e35ed07ff86730e92c7086fe90978b1b8f39460"
     },
     {
@@ -338,7 +494,7 @@
       "postedAtCandidate": "2026-03-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "fbaa4f4faea1b8136b520b10e6b18fa1000abe87d253a611190123d9f6f27df5"
     },
     {
@@ -356,7 +512,7 @@
       "postedAtCandidate": "2026-02-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "ed929c5792a1870cb5cf23b195abd1151f646281946c66dd30da3c8cfd69ffa6"
     },
     {
@@ -373,7 +529,7 @@
       "postedAtCandidate": "2026-04-09T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "511f36106a16cb1ac5b282243e92c2e607a75c24781d294df60d22de2109ff7a"
     },
     {
@@ -393,7 +549,7 @@
       "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "fe1d670d2e0823593d557afe44e2d462e0604dd6d66fbb6a0f11a97e292cb59e"
     },
     {
@@ -413,7 +569,7 @@
       "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "795a2c56c490579083ce1493df4c5f3585d9325b6980d206ae86708518a79f30"
     },
     {
@@ -431,7 +587,7 @@
       "postedAtCandidate": "2026-01-09T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "bec853760ff19affc1653c57afda8ea30838cb68e962716a6bc9d068d6a81763"
     },
     {
@@ -448,7 +604,7 @@
       "postedAtCandidate": "2026-04-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "181782818a25a50b329afb028713b275c4a5d0a494609c244c16f2f0d147b816"
     },
     {
@@ -464,7 +620,7 @@
       "postedAtCandidate": "2025-11-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "a7acb38d7139a57aa9a59ca5a7012b5562b21726576b1296506a523a78e3aa6d"
     },
     {
@@ -483,28 +639,8 @@
       "postedAtCandidate": "2026-03-20T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "f548863f5c78c7579e76b9bb124dcb835d32443aa4977c610f431f0f5d5578e4"
-    },
-    {
-      "id": "893394426716",
-      "title": "Senior HPC and AI Network Software Architect",
-      "company": "NVIDIA",
-      "locations": [
-        "Remote - Germany",
-        "Remote - Italy",
-        "Remote - Poland",
-        "Remote - UK",
-        "Switzerland, Zurich"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893394426716",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-04-06T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
-      "contentHash": "055e11fcea4ccef633318f425a5c4143bdd023cdc3b2dfd304fceb6e3b26ad7a"
     },
     {
       "id": "893392964976",
@@ -522,7 +658,7 @@
       "postedAtCandidate": "2026-02-20T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "5f12c10ddb9f0fc0f8052cc99fe1c83f920c67adf595e19c32a3f28fdec378e1"
     },
     {
@@ -539,27 +675,8 @@
       "postedAtCandidate": "2026-04-07T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "8efdd1e918b1dfda11d9f8269678ee67ac7327a6e3cd278b82c6ee0c5a8f5c4c"
-    },
-    {
-      "id": "893394712294",
-      "title": "Senior HPC Performance Engineer",
-      "company": "NVIDIA",
-      "locations": [
-        "Remote - France",
-        "Remote - Germany",
-        "Remote - Switzerland",
-        "Remote - UK"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893394712294",
-      "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
-      "contentHash": "f9292d5e8a0316597535d99584a69e657ac1cf0df308e5af3be286f089e75961"
     },
     {
       "id": "893391933795",
@@ -579,7 +696,7 @@
       "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "355ab1f97fe6290354df8aea6457935f46072518830881c774bb2fec281c7fc9"
     },
     {
@@ -596,7 +713,7 @@
       "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "ff07667416d759d846b2e30dd28da87fd24b627e6abcd7527d08e8d93db105af"
     },
     {
@@ -614,7 +731,7 @@
       "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "a3957817f90c4343e8d17ebef7575210ca5f5ecf67e993ea3696f070db595c40"
     },
     {
@@ -635,7 +752,7 @@
       "postedAtCandidate": "2026-03-03T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "a29d69e55ff2491c13e9bad96afc490946fb13c225542860247dfeab0f2751f4"
     },
     {
@@ -654,84 +771,8 @@
       "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "1dd16520c208dded6b01e5ba2ae813f941f2e3bbe0227039277602706ef2aa6d"
-    },
-    {
-      "id": "893382452913",
-      "title": "Senior Software and System Architect",
-      "company": "NVIDIA",
-      "locations": [
-        "Remote - France",
-        "Remote - Germany",
-        "Remote - Spain",
-        "Remote - Switzerland",
-        "Remote - UK"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893382452913",
-      "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
-      "contentHash": "1bc29de16e93c7374b3c2b19b6a6f5e9065c79cd8f6bf2be4b35257ebc9c32e2"
-    },
-    {
-      "id": "893383895694",
-      "title": "Senior Software Architect - Deep Learning and HPC Communications",
-      "company": "NVIDIA",
-      "locations": [
-        "Remote - Germany",
-        "Remote - Poland",
-        "Remote - Switzerland",
-        "Remote - UK",
-        "Switzerland, Zurich"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893383895694",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-01-09T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
-      "contentHash": "caf0f89d27d5edafae77c9098a11dcb36322f68649ad52fe6f2022f280f95985"
-    },
-    {
-      "id": "893392098780",
-      "title": "Senior Software Architect - Deep Learning and HPC Communications",
-      "company": "NVIDIA",
-      "locations": [
-        "Remote - Germany",
-        "Remote - Poland",
-        "Remote - Switzerland",
-        "Remote - UK"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893392098780",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
-      "contentHash": "ad04697093694d1d28fc8090706a2ecf6e2efcf3e2d3ca8e63fdc860de165e33"
-    },
-    {
-      "id": "893392256499",
-      "title": "Senior Software Developer",
-      "company": "NVIDIA",
-      "locations": [
-        "Remote - Switzerland",
-        "Switzerland, Zurich"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893392256499",
-      "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-03-17T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
-      "contentHash": "55968fa0dc193e617ed0eb4929236856b87b8d7fd989243c514256dde7d3ac51"
     },
     {
       "id": "893393786899",
@@ -749,7 +790,7 @@
       "postedAtCandidate": "2026-03-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "45aa090dc72452bad1b50c46b52837b1ece5ba0a3abb951988ea128d698d11a1"
     },
     {
@@ -765,7 +806,7 @@
       "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "1245dbe12447b016c8d167ad82324a65b9437d91208f714bffae512c3c5f7a7f"
     },
     {
@@ -782,7 +823,7 @@
       "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "25ac39d59eb9f1bceed280f694b175f39038367ab98a4f3e1daea16a60347f46"
     },
     {
@@ -798,7 +839,7 @@
       "postedAtCandidate": "2026-03-04T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "8dc1e55ba33971901e767e276a25f217575ccec04524da2c3c4565d7f17b891f"
     },
     {
@@ -814,7 +855,7 @@
       "postedAtCandidate": "2026-02-05T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "36eab8ee98248ffc3a07174d4c6154c82cf1dce0a9dee29f100bf1cee1867779"
     },
     {
@@ -831,7 +872,7 @@
       "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "6016a3e1dcc202045b19f15ab5a5e5c90c6779e99e21bec49b2845e56f6e9867"
     },
     {
@@ -848,28 +889,8 @@
       "postedAtCandidate": "2026-03-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "d2b6382eba64f69d63a0cd3bcfabb54b3760ef25a0153b4d4c71b2d83b751118"
-    },
-    {
-      "id": "893394712289",
-      "title": "Senior Software Engineer, JAX",
-      "company": "NVIDIA",
-      "locations": [
-        "Remote - France",
-        "Remote - Germany",
-        "Remote - Poland",
-        "Remote - Switzerland",
-        "Remote - UK"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893394712289",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
-      "contentHash": "b9492727fb002e692d19e917d2c4f965fe490cbf0e0590cc466be3cc0e2b5369"
     },
     {
       "id": "893392034416",
@@ -884,7 +905,7 @@
       "postedAtCandidate": "2025-11-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "eabd5cf3b414bf50da7b00d42e1bb09348cd816ec43fd8b314cf681dc5789a2b"
     },
     {
@@ -900,7 +921,7 @@
       "postedAtCandidate": "2026-02-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "9b61b9a9f716caa81f34dbee26547263018ea7e9ad3ba0167881b993b2f8eb1a"
     },
     {
@@ -921,7 +942,7 @@
       "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "89ce7bd319b347f3fc8e2d68b74732aa5e948227bbebefa1d4f29a119ff63ec8"
     },
     {
@@ -937,29 +958,8 @@
       "postedAtCandidate": "2026-03-20T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "7388f72b1b813db61c90f505ce65cd41c880375828dc1c1cafd40aa5f0fa3138"
-    },
-    {
-      "id": "893382545772",
-      "title": "Senior System Software Engineer, NCCL - Partner Enablement",
-      "company": "NVIDIA",
-      "locations": [
-        "Poland, Warsaw",
-        "Remote - Germany",
-        "Remote - Poland",
-        "Remote - Switzerland",
-        "Remote - UK",
-        "Switzerland, Zurich"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893382545772",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
-      "contentHash": "1feab4c2fa66ec9346620e7150a7c647b60307388078facd92a4430cb68fdb18"
     },
     {
       "id": "893392565316",
@@ -975,7 +975,7 @@
       "postedAtCandidate": "2026-01-28T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "dae5f2b5249b108adb1eb8eb5ace5a6bfffbe9ea32554c348f2f4367aa256e21"
     },
     {
@@ -992,7 +992,7 @@
       "postedAtCandidate": "2026-04-15T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "d2b97e6f338617aa71dfb693411921400341ae0464c199ae6e1f6a68007b29e9"
     },
     {
@@ -1009,7 +1009,7 @@
       "postedAtCandidate": "2026-02-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "8e7a6b8b850832b6b8c1386bb008e116631640db63de73d959f8492406b6d6cc"
     },
     {
@@ -1027,7 +1027,7 @@
       "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "ede2f5b1a9225bb2b17dfddd3cf81f865d632cf2fc275ce25fa66970331323b0"
     },
     {
@@ -1046,7 +1046,7 @@
       "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "29dc65f11e529bf2e2fe92a6a6738b720750962cb943876346080c7d05df5e56"
     },
     {
@@ -1065,7 +1065,7 @@
       "postedAtCandidate": "2026-03-25T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "9a60b8fddf4ffc1fda3b051454b689fea6eb74f6f7bdbb63f64da537271711ae"
     },
     {
@@ -1086,7 +1086,7 @@
       "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "69a8d6b2770d15581241bf953aacfc159e51753c0f75f6ae84486fc19931e47f"
     },
     {
@@ -1107,7 +1107,7 @@
       "postedAtCandidate": "2026-03-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "82949fd586de8a9e646b743d3ca365965c70b7b55aca2573439d0a2f9a7dd7e3"
     },
     {
@@ -1127,7 +1127,7 @@
       "postedAtCandidate": "2026-03-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "6e6980f9d0c5de0de06b40bfadebd13f98cb9cdff1d4d01cce25ca4e83d6fbb0"
     },
     {
@@ -1143,7 +1143,7 @@
       "postedAtCandidate": "2025-12-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "bb60109bf3c730cdfa087bda2a23a3baecedeb0629c14fad7990ead5100ebdf6"
     },
     {
@@ -1160,7 +1160,7 @@
       "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "23ad10821f5db914db32b3e920e264503da0dc28566707522fed749211832100"
     },
     {
@@ -1177,7 +1177,7 @@
       "postedAtCandidate": "2026-02-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "8cc794967d92b925c065fc7492a63cf23200ef756b09bdbc434f428b70400830"
     },
     {
@@ -1193,7 +1193,7 @@
       "postedAtCandidate": "2026-04-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
       "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "isActive": true,
+      "isActive": false,
       "contentHash": "528727776a14b8ab1772004a2f3575d556ff626aba7bb0b11881666e6ce4ba24"
     }
   ]

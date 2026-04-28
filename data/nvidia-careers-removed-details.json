@@ -1,3 +1,1006 @@
 {
-  "jobs": []
+  "jobs": [
+    {
+      "id": "893375059339",
+      "title": "AI Developer Technology Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893375059339",
+      "locations": [
+        "Germany, Munich",
+        "Remote - Germany",
+        "Remote - Switzerland",
+        "Remote - UK",
+        "Switzerland, Zurich",
+        "UK, Reading"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893375059339",
+      "postedAtCandidate": "2026-04-07T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394697214",
+      "title": "AI Developer Technology Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394697214",
+      "locations": [
+        "Remote - Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394697214",
+      "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394016814",
+      "title": "Dataflow Development Engineer - LPU Hardware DataFlow",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394016814",
+      "locations": [
+        "Remote - Hungary",
+        "Remote - Netherlands",
+        "Remote - UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394016814",
+      "postedAtCandidate": "2026-03-16T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394093790",
+      "title": "Deep Learning Engineer - LLM and VLM Model Compression",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394093790",
+      "locations": [
+        "Poland, Warsaw",
+        "Remote - Poland",
+        "Remote - Switzerland",
+        "Switzerland, Zurich"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Warsaw/Deep-Learning-Engineer---LLM-and-VLM-Model-Compression_JR2014941/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003E\u003Cspan\u003EWe are looking for DL engineers passionate about building deep learning frameworks for large language (LLM) and vision language (VLM) model compression that push the boundaries of AI efficiency. In this role, you\u2019ll collaborate with world-class teams across NVIDIA to advance both the software and hardware stack that powers modern AI.\u003C/span\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003EJoin the team building software used by the entire world. Work with world class engineers and researchers to build next-generation deep learning frameworks for compressing LLM and VLM models through pruning, distillation, and neural architecture search (NAS). Work on most powerful, enterprise-grade GPU clusters capable of hundreds of Peta FLOPS and on unreleased hardware before anyone in the world. Are you ready for this challenge?\u003C/span\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003E\u003Cb\u003EWhat you\u2019ll be doing:\u003C/b\u003E\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EDesign and implement a deep learning framework for compressing large language and vision-language models to deliver highly optimized, high-performance AI systems used worldwide.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EDevelop and integrate new algorithms for pruning, NAS, and distillation in collaboration with NVIDIA researchers and engineers.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperiment with compressing the latest LLMs and VLMs, analyzing their performance and behavior across diverse workloads.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003ECollaborate with researchers and engineers across NVIDIA, providing guidance on improving the design, usability and performance of workloads.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003ELead best-practices for building, testing, and releasing DL software.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003E\u003Cb\u003EWhat we need to see:\u003C/b\u003E\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003E8\u002B years of experience in Deep Learning and SW Development.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EBSc, MS or PhD degree in Computer Science, Computer Architecture or related technical field.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EHands-on experience with LLM or VLM model training or inference.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent Python programming skills.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExtensive knowledge of at least one DL Framework (PyTorch, TensorFlow, JAX, MxNet) with practical experience in PyTorch required.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EStrong problem solving and analytical skills.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EAlgorithms and DL fundamentals.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003E\u003Cb\u003EWays to stand out from the crowd:\u003C/b\u003E\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience applying and implementing model compression techniques such as pruning, NAS, distillation, and quantization.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience building deep learning frameworks for training, inference, model compression, or related topic.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EGPU programming experience (CUDA or OpenCL) is a plus but not required.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EFirst-author publication in a top-tier deep learning or AI conference.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most brilliant and forward-thinking people in the world working for us. If you\u0027re creative and autonomous, we want to hear from you! We are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.\u003C/span\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 292,500 PLN - 507,000 PLN for Level 4, and 375,000 PLN - 650,000 PLN for Level 5.\n\n\n#deeplearning",
+      "minimumQualificationsRaw": "\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003E8\u002B years of experience in Deep Learning and SW Development.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EBSc, MS or PhD degree in Computer Science, Computer Architecture or related technical field.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EHands-on experience with LLM or VLM model training or inference.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent Python programming skills.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExtensive knowledge of at least one DL Framework (PyTorch, TensorFlow, JAX, MxNet) with practical experience in PyTorch required.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EStrong problem solving and analytical skills.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EAlgorithms and DL fundamentals.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003E",
+      "preferredQualificationsRaw": "\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience applying and implementing model compression techniques such as pruning, NAS, distillation, and quantization.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience building deep learning frameworks for training, inference, model compression, or related topic.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EGPU programming experience (CUDA or OpenCL) is a plus but not required.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EFirst-author publication in a top-tier deep learning or AI conference.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most brilliant and forward-thinking people in the world working for us. If you\u0027re creative and autonomous, we want to hear from you! We are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.\u003C/span\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 292,500 PLN - 507,000 PLN for Level 4, and 375,000 PLN - 650,000 PLN for Level 5.\n\n\n#deeplearning",
+      "postedAtCandidate": "2026-03-17T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393720797",
+      "title": "Infiniband Network Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393720797",
+      "locations": [
+        "Remote - France",
+        "Remote - Italy",
+        "Remote - Poland",
+        "Remote - UK"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393720797",
+      "postedAtCandidate": "2026-03-03T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392889075",
+      "title": "Manager, SWQA Test Development",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392889075",
+      "locations": [
+        "UK, Belfast"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392889075",
+      "postedAtCandidate": "2026-02-25T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392950425",
+      "title": "Principal AI Developer Technology Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392950425",
+      "locations": [
+        "Germany, Berlin",
+        "Netherlands, Amsterdam",
+        "Remote - Germany",
+        "Remote - Italy",
+        "Remote - Spain"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392950425",
+      "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393559795",
+      "title": "Principal Developer Technology Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393559795",
+      "locations": [
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - Poland",
+        "Remote - Switzerland",
+        "Remote - UK"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393559795",
+      "postedAtCandidate": "2026-02-19T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392587678",
+      "title": "Research Scientist, ML Systems - PhD New College Grad 2026",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392587678",
+      "locations": [
+        "Germany, Berlin",
+        "Switzerland, Zurich"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392587678",
+      "postedAtCandidate": "2025-12-22T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392805000",
+      "title": "Robotics Developer Relations Manager",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392805000",
+      "locations": [
+        "Remote - Switzerland",
+        "Switzerland, Zurich"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392805000",
+      "postedAtCandidate": "2026-04-15T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393991136",
+      "title": "Robotics Research Intern - 2026",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393991136",
+      "locations": [
+        "Switzerland, Zurich"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393991136",
+      "postedAtCandidate": "2026-03-11T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393638975",
+      "title": "Senior Application Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393638975",
+      "locations": [
+        "Remote - Germany",
+        "Remote - UK"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393638975",
+      "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392673445",
+      "title": "Senior C\u002B\u002B Software Engineer, Developer Tools",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392673445",
+      "locations": [
+        "Poland, Warsaw",
+        "Remote - Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Remote/Senior-C---Software-Engineer--Developer-Tools_JR2010354/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003ENVIDIA\u0027s products, hardware and software, are world leaders for performance and efficiency. We are continually innovating in creative ways to improve our ability to deliver outstanding solutions across a wide range of sectors. We are seeking exceptional interns who will have a chance to play a key role in shipping user visible features in a large established product. In the Software Developer Tools Team, we enable internal and third-party developers to turn NVIDIA\u0027s hardware into groundbreaking cluster, server, professional, consumer, automotive, and embedded solutions.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "responsibilitiesRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EJoin the Developer Tools team to work on software such as Nsight Systems.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EWork with a wide variety of hardware platforms, ranging from small embedded systems, to large multi-GPU and NUMA servers and clusters.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EParticipate in research and benchmarking activities to develop industry-leading technology solutions needed to collect large amounts of performance data with the smallest possible overhead.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECommunicate across multiple teams to collect and understand the requirements. Understand how the underlying hardware and software works, and use that knowledge to deliver valuable features to the users. Participate in all phases of the software life cycle.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EWork out performance benchmark and performance regression testing methodology.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDrive research activities to productization in Nsight Systems and deliver value to our most advanced users.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECollaborate with team members across multiple time zones in a dynamic, high-energy work environment.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EInteract with internal and external users, help them get the maximum value out of our products, and deliver their feedback to the product team.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EExcellent problem solving, collaborative, and interpersonal skills.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong C\u002B\u002B knowledge, experience working with concurrent code.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong understanding of algorithms and computer architecture.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBS or MS in EE, CE, CS, Systems Engineering and 4 years of experience in a related software position.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "preferredQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EExperience with GPUs, CUDA, HPC, clusters, networking, and performance optimization in distributed environments.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHands on experience with profiling and performance optimizations (e.g. Linux perf, VTune).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EUnderstanding of software toolchains and its components (e.g. Arm tools, Android NDK tools, QNX).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with database engines.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with Python.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking and hardworking people in the world working for us. If you\u0027re creative and autonomous, we want to hear from you! We are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 183,750 PLN - 318,500 PLN.",
+      "postedAtCandidate": "2026-01-28T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392558436",
+      "title": "Senior Compiler Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392558436",
+      "locations": [
+        "Germany, Munich",
+        "Switzerland, Zurich",
+        "UK, Cambridge"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392558436",
+      "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893391032265",
+      "title": "Senior CPU Performance Developer Technology Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893391032265",
+      "locations": [
+        "Germany, Wuerselen",
+        "Remote - Germany",
+        "Remote - Poland",
+        "Remote - Switzerland",
+        "Switzerland, Zurich",
+        "UK, Bristol"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391032265",
+      "postedAtCandidate": "2026-03-19T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392912340",
+      "title": "Senior Data Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392912340",
+      "locations": [
+        "Armenia, Yerevan",
+        "Hungary, Budapest",
+        "Poland, Warsaw"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Warsaw/Senior-Data-Engineer_JR2011799/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003ENVIDIA has been transforming computer graphics, PC gaming, and accelerated computing for more than 25 years. It\u2019s a unique legacy of innovation that\u2019s fueled by great technology\u2014and amazing people. Today, we\u2019re tapping into the unlimited potential of AI to define the next era of computing. An era in which our GPU acts as the brains of computers, robots, and self-driving cars that can understand the world. Doing what\u2019s never been done before takes vision, innovation, and the world\u2019s best talent. As an NVIDIAN, you\u2019ll be immersed in a diverse, supportive environment where everyone is inspired to do their best work. Come join the team and see how you can make a lasting impact on the world.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWe are now looking for Senior Data Engineer to become a member of Data Platform Team to work on a multi-cluster multi-cloud set of engineering and customer engagement APIs. We serve an audience of more than 200M users with rich targeting and segmentation capabilities. Join us to support this development!\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "responsibilitiesRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EDesign various RESTful APIs and backend databases in multi region environment.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EContribute into targeting engine and segmentation pipelines.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDevelop automations and tests to ensure system stability.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECollaborate with various Engineering and Business teams on their needs.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDrive innovation in Data Platform architecture and software stack.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EA Bachelor\u0027s or Master\u0027s degree in a Computer Science, Engineering, or equivalent, and 6\u002B years of experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExpert knowledge of Java and Springboot.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHands on skills in Relational/NoSQL database technologies.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong understanding of distributed systems architecture.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EProficient in English.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "preferredQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EKnowledge of either Cassandra, Clickhouse or Postgres and ability to build solutions based on it.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EPast experience with Kubernetes and AWS.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECreative and autonomous with a genuinely real passion for the modern technologies is highly desired.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is committed to fostering a diverse work environment and proud to be an equal opportunity employer. As we highly value diversity in our current and future employees, we do not discriminate (including in our hiring and promotion practices) on the basis of race, religion, color, national origin, gender, gender expression, sexual orientation, age, marital status, veteran status, disability status or any other characteristic protected by law.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWidely considered to be one of the technology world\u2019s most desirable employers, NVIDIA offers highly competitive salaries and a comprehensive benefits package. As you plan your future, see what we can offer to you and your family www.nvidiabenefits.com/\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
+      "postedAtCandidate": "2026-02-10T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393271774",
+      "title": "Senior Debugger Software Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393271774",
+      "locations": [
+        "Poland, Warsaw",
+        "Remote - Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Warsaw/Senior-Debugger-Software-Engineer_JR2012631/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003EJoin the NVIDIA Developer Tools team and empower engineers throughout the world developing groundbreaking products in Automotive, VR, Gaming, Deep Learning, and High Performance Computing. See your efforts in action as developers use your products to debug, profile and analyze the performance of their systems/applications. Watch with satisfaction as 3rd-party developers use the CUDA Debugger API that you helped develop to create custom debug tools to tackle complex customer debugging problems. Innovate as you develop the debug and performance analysis capability of future generations of NVIDIA GPUs. Be a part of the team that brings new GPU technologies to market with sophisticated simulation/emulation systems and be among the first to breathe life into new silicon.\u003C/p\u003E\u003Cp\u003ENVIDIA is looking for a senior software engineer to join our efforts to advance our compute debugger products to the next level. The position will be part of a dynamic, worldwide team that develops and maintains a portfolio of debug tools and libraries that are hosted and targeting OSes including Windows, Linux, and other embedded system real time OSes (RTOS).\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat you\u2019ll be doing:\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003EYou will apply your knowledge of debuggers, binary instrumentation and computer architecture to enhance existing compute debugger tools and libraries, and extend them to new use cases. You should be comfortable working in C\u002B\u002B20 and Python on a wide range of supported platforms: Linux, Windows, and embedded real time OSes. You should also be comfortable interacting with different user and kernel mode driver and compiler teams, and have an eagerness to learn about new compute drivers, GPU architectures and operating systems.\u003C/span\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EDevelop the compute debugger tools for GPUs running on Linux, Windows, and embedded operating systems\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EWork with tools, compiler, architecture and driver teams to design, implement and verify new features in the compute debugger and CUDA Debugger API\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EWork closely with internal and external partners including other peer organizations within NVIDIA\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EEffectively estimate and prioritize tasks in order to create a realistic delivery schedule\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EWrite fast, effective, maintainable, reliable and well-documented code\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EProvide peer reviews to other engineers, including feedback on code performance, scalability and correctness\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EDocument requirements and designs, and review documents with teams throughout NVIDIA\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EMentor junior engineers\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003E\u003Cb\u003EWhat we need to see:\u003C/b\u003E\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EBS or MS or equivalent experience in Computer Science\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003E5\u002B years of experience\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EStrong programming ability in C\u002B\u002B20 and Python\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent knowledge of computer architecture of x86 or ARM CPUs\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EStrong problem solving and debugging skills\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EFamiliarity with low-level programming using assembly languages\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003ESource control understanding (git, Perforce, etc.)\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EAbility to self-manage, communicate, and adapt in a fast paced, high demand environment with changing priorities and direction\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EAbility to work remotely across multiple time zones\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent communication skills, written and verbal\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003E\u003Cb\u003EWays to stand out from the crowd:\u003C/b\u003E\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EGood understanding of runtime code patching\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience with LLVM/LLDB development\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EFamiliarity with Debugger Adapter Protocol\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking and hardworking people in the world working for us. If you\u0027re creative, driven, and passionate about software tools, we want to hear from you!\u003C/span\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
+      "minimumQualificationsRaw": "\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EBS or MS or equivalent experience in Computer Science\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003E5\u002B years of experience\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EStrong programming ability in C\u002B\u002B20 and Python\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent knowledge of computer architecture of x86 or ARM CPUs\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EStrong problem solving and debugging skills\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EFamiliarity with low-level programming using assembly languages\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003ESource control understanding (git, Perforce, etc.)\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EAbility to self-manage, communicate, and adapt in a fast paced, high demand environment with changing priorities and direction\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EAbility to work remotely across multiple time zones\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent communication skills, written and verbal\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003E",
+      "preferredQualificationsRaw": "\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EGood understanding of runtime code patching\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience with LLVM/LLDB development\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EFamiliarity with Debugger Adapter Protocol\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking and hardworking people in the world working for us. If you\u0027re creative, driven, and passionate about software tools, we want to hear from you!\u003C/span\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
+      "postedAtCandidate": "2026-04-09T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893391009867",
+      "title": "Senior Deep Learning Compiler Engineer - PyTorch",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893391009867",
+      "locations": [
+        "Germany, Berlin",
+        "Germany, Munich",
+        "Netherlands, Amsterdam",
+        "Poland, Warsaw",
+        "Switzerland, Zurich"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391009867",
+      "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393381994",
+      "title": "Senior Deep Learning Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393381994",
+      "locations": [
+        "Remote - Germany",
+        "Remote - Netherlands",
+        "Remote - Poland",
+        "Remote - Switzerland",
+        "Remote - UK"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393381994",
+      "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893382583022",
+      "title": "Senior Deep Learning Software Engineer, Inference",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893382583022",
+      "locations": [
+        "Remote - Italy",
+        "Remote - Netherlands",
+        "Remote - Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Netherlands-Remote/Senior-Deep-Learning-Software-Engineer--Inference_JR1997930/apply/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003E\u003Cspan\u003ENVIDIA seeks a Senior Software Engineer specializing in Deep Learning Inference for our growing team. As a key contributor, you will help design, build, and optimize the GPU-accelerated software that powers today\u2019s most sophisticated AI applications.\u003C/span\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003EOur team is responsible for developing and maintaining high-performance deep learning frameworks, including SGLang and vLLM, which are at the forefront of efficient large-scale model serving and inference. You will play a central role in improving these platforms, facilitating smooth deployment and serving of groundbreaking language models.\u003C/span\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003EYou\u2019ll work closely with the deep learning community to implement the latest algorithms for public release in frameworks like SGLang and vLLM, as well as other DL frameworks. Your work will focus on identifying and driving performance improvements for state-of-the-art LLM and Generative AI models across NVIDIA accelerators, from datacenter GPUs to edge SoCs. You\u0027ll bring to bear open-source tools and plugins\u2014including CUTLASS, OAI Triton, NCCL, and CUDA kernels\u2014to implement and optimize model serving pipelines.\u003C/span\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat you\u0027ll be doing:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPerformance optimization, analysis, and tuning of DL models in various domains like LLM, Multimodal and Generative AI.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EScale performance of DL models across different architectures and types of NVIDIA accelerators.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EContribute features and code to NVIDIA\u2019s inference libraries, vLLM and SGLang, FlashInfer and LLM software solutions.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EWork with cross-collaborative teams across frameworks, NVIDIA libraries and inference optimization innovative solutions.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat we need to see:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EMasters or PhD or equivalent experience in relevant field (Computer Engineering, Computer Science, EECS, AI).\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003E5\u002B years of relevant software development experience.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent C/C\u002B\u002B programming and software design skills. SW Agile skills are helpful and Python experience is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPrior experience with training, deploying or optimizing the inference of DL models in production is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPrior background with performance modeling, profiling, debug, and code optimization or architectural knowledge of CPU and GPU is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWays to stand out from the crowd:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EContribute to Deep Learning Software projects, such as PyTorch, vLLM, and SGLang to drive advancements in the field.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience with Multi-GPU Communications (NCCL, NVSHMEM)\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience building and shipping products to enterprise customers.\u00A0\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EGPU programming experience (CUDA, OAI TRITON or CUTLASS).\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003ENVIDIA is at the forefront of breakthroughs in Artificial Intelligence, High-Performance Computing, and Visualization. Our teams are\u00A0composed of driven, innovative professionals dedicated to pushing the boundaries of technology. We offer highly competitive salaries, an extensive benefits package, and a work environment that promotes diversity, inclusion, and flexibility. As an equal opportunity employer, we are committed to fostering a supportive and empowering workplace for all\u003C/span\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
+      "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EMasters or PhD or equivalent experience in relevant field (Computer Engineering, Computer Science, EECS, AI).\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003E5\u002B years of relevant software development experience.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent C/C\u002B\u002B programming and software design skills. SW Agile skills are helpful and Python experience is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPrior experience with training, deploying or optimizing the inference of DL models in production is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPrior background with performance modeling, profiling, debug, and code optimization or architectural knowledge of CPU and GPU is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "preferredQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EContribute to Deep Learning Software projects, such as PyTorch, vLLM, and SGLang to drive advancements in the field.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience with Multi-GPU Communications (NCCL, NVSHMEM)\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience building and shipping products to enterprise customers.\u00A0\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EGPU programming experience (CUDA, OAI TRITON or CUTLASS).\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003ENVIDIA is at the forefront of breakthroughs in Artificial Intelligence, High-Performance Computing, and Visualization. Our teams are\u00A0composed of driven, innovative professionals dedicated to pushing the boundaries of technology. We offer highly competitive salaries, an extensive benefits package, and a work environment that promotes diversity, inclusion, and flexibility. As an equal opportunity employer, we are committed to fostering a supportive and empowering workplace for all\u003C/span\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
+      "postedAtCandidate": "2026-01-09T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392081423",
+      "title": "Senior Developer Relations Manager, ISV",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392081423",
+      "locations": [
+        "Remote - UK",
+        "UK, Reading"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392081423",
+      "postedAtCandidate": "2026-04-14T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392081562",
+      "title": "Senior Embedded Solutions Architect",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392081562",
+      "locations": [
+        "Germany, Munich"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392081562",
+      "postedAtCandidate": "2025-11-14T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392984032",
+      "title": "Senior Full Stack Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392984032",
+      "locations": [
+        "Armenia, Yerevan",
+        "Hungary, Budapest",
+        "Poland, Warsaw",
+        "Remote - Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Warsaw/Senior-Frontend-Engineer_JR2011802/apply/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003ENVIDIA has been transforming computer graphics, PC gaming, and accelerated computing for more than 25 years. It\u2019s a unique legacy of innovation that\u2019s fueled by great technology\u2014and amazing people. Today, we\u2019re tapping into the unlimited potential of AI to define the next era of computing. An era in which our GPU acts as the brains of computers, robots, and self-driving cars that can understand the world. Doing what\u2019s never been done before takes vision, innovation, and the world\u2019s best talent. As an NVIDIAN, you\u2019ll be immersed in a diverse, supportive environment where everyone is inspired to do their best work. Come join the team and see how you can make a lasting impact on the world.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWe are looking for a Senior Full Stack Engineer to join our dynamic international team. This is a groundbreaking opportunity to work with innovative technologies and collaborate with world-class professionals. You will be part of a team that is developing an enterprise data platform with corporate-grade scale, which has a significant business impact.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat you\u0027ll be doing:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EDevelop and improve our enterprise applications to ensure flawless performance\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ELead the development of our Content Management System, implementing robust features and functionalities\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECollaborate with various teams and engineers to integrate their tools into our portal seamlessly\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDrive innovation and determine the guidelines for building the frontend\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EEfficiently implement solutions that meet our ambitious project goals\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat we need to see:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EMS or BS in Computer Science or an equivalent field\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E5\u002B years of software engineering experience\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E5\u002B years of overall UI/UX development using modern Front-end frameworks such as Angular, React, Vue or Lit\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong understanding of common API technologies (REST, gRPC, OpenAPI, GraphAPI, etc)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHands-on experience in enterprise applications development\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EIndependence, self-sufficiency, and a strong sense of ownership and accountability over your work\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EProficient in English\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWays to stand out from the crowd:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EExperience with Figma or similar tools to build user interfaces\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EPassion to use AI, and a basic understanding of MCP or Agent-to-Agent interoperability\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EFamiliarity with web-stack backend: python, MongoDB, Postgres, redis, etc\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHands-on experience with Kubernetes, Docker, and message brokers (Apache Kafka preferred)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with AWS Cloud technology stack (or similar)\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is committed to fostering a diverse work environment and proud to be an equal opportunity employer. As we highly value diversity in our current and future employees, we do not discriminate (including in our hiring and promotion practices) on the basis of race, religion, color, national origin, gender, gender expression, sexual orientation, age, marital status, veteran status, disability status or any other characteristic protected by law.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWidely considered to be one of the technology world\u2019s most desirable employers, NVIDIA offers highly competitive salaries and a comprehensive benefits package. As you plan your future, see what we can offer to you and your family www.nvidiabenefits.com/\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
+      "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EMS or BS in Computer Science or an equivalent field\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E5\u002B years of software engineering experience\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E5\u002B years of overall UI/UX development using modern Front-end frameworks such as Angular, React, Vue or Lit\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong understanding of common API technologies (REST, gRPC, OpenAPI, GraphAPI, etc)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHands-on experience in enterprise applications development\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EIndependence, self-sufficiency, and a strong sense of ownership and accountability over your work\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EProficient in English\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "preferredQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EExperience with Figma or similar tools to build user interfaces\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EPassion to use AI, and a basic understanding of MCP or Agent-to-Agent interoperability\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EFamiliarity with web-stack backend: python, MongoDB, Postgres, redis, etc\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHands-on experience with Kubernetes, Docker, and message brokers (Apache Kafka preferred)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with AWS Cloud technology stack (or similar)\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is committed to fostering a diverse work environment and proud to be an equal opportunity employer. As we highly value diversity in our current and future employees, we do not discriminate (including in our hiring and promotion practices) on the basis of race, religion, color, national origin, gender, gender expression, sexual orientation, age, marital status, veteran status, disability status or any other characteristic protected by law.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWidely considered to be one of the technology world\u2019s most desirable employers, NVIDIA offers highly competitive salaries and a comprehensive benefits package. As you plan your future, see what we can offer to you and your family www.nvidiabenefits.com/\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
+      "postedAtCandidate": "2026-03-20T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392964976",
+      "title": "Senior HPC and AI Networking Performance Research and Analysis Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392964976",
+      "locations": [
+        "Germany, Berlin",
+        "Germany, Munich",
+        "Remote - Germany",
+        "Switzerland, Zurich"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392964976",
+      "postedAtCandidate": "2026-02-20T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394437698",
+      "title": "Senior HPC Cluster Administrator - Deep Learning Frameworks Infrastructure",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394437698",
+      "locations": [
+        "Poland, Warsaw",
+        "Remote - Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Remote/Senior-HPC-Cluster-Administrator---Deep-Learning-Frameworks-Infrastructure_JR2015529/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003ENVIDIA\u0027s Deep Learning Frameworks (DLFW) Infrastructure team is looking for a deeply technical Senior HPC Cluster Administrator to lead the design, deployment, and reliability of our large-scale GPU compute clusters. These systems run the most demanding deep learning training, inference, and high-performance computing workloads in the industry \u2014 from DGX/HGX platforms to ground-breaking Grace Blackwell systems. You will drive architectural decisions across compute, networking, and storage, and partner closely with software, research, and product teams to keep our infrastructure ahead of the workloads it supports.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWhat you\u0027ll be doing:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EOwn the full lifecycle of GPU compute clusters \u2014 procurement, provisioning, configuration management, monitoring, and deprecation \u2014 across heterogeneous Linux environments (DGX, HGX, embedded systems)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDesign and scale storage solutions (NFS, Lustre, WekaFS, or equivalent) with a clear roadmap for capacity and performance growth\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ELead automation of infrastructure using modern IaC tools (Ansible, Terraform) and CI/CD pipelines (GitLab)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EManage and optimize job scheduling via Slurm, including fair-share policies, reservation management, and MIG/GPU partitioning strategies\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EMaintain and improve observability stacks (Prometheus, Grafana, DCGM) and drive proactive resolution of hardware and software incidents\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECollaborate with ML engineers and software teams to tune cluster configuration for large-scale distributed training workloads\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EEvaluate and introduce new technologies \u2014 networking fabrics (InfiniBand, NVLink, EFA/RDMA), storage tiers, container runtimes \u2014 to improve performance and reliability\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EMentor junior engineers and contribute to team-wide engineering standards\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWhat we need to see:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBS/MS in CS, EE, CE, or equivalent hands-on experience\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E5\u002B years of experience deploying and administering large-scale HPC or ML training clusters\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDeep expertise in Linux systems administration at scale\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong scripting and automation skills in Python and/or bash\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHands-on experience with Slurm (scheduling, accounting, cgroup configuration)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EProficiency with configuration management and IaC (Ansible required; Terraform a plus)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with container technologies (Docker, Apptainer/Singularity, Kubernetes)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ESolid understanding of high-speed networking (InfiniBand, RoCE, RDMA, EFA)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with distributed/parallel filesystems and storage architecture\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EAbility to own problems end-to-end and communicate clearly with engineering and management stakeholders\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWays to stand out from the crowd:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EExperience with NVIDIA GPU infrastructure tools (DCGM, nvidia-smi, MIG, NVSwitch diagnostics)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EFamiliarity with cluster management platforms (Colossus, Bright Cluster Manager, xCAT, or similar)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience supporting large-scale distributed deep learning workloads (PyTorch, JAX, Megatron)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EKnowledge of BMC/IPMI/Redfish for out-of-band management and hardware lifecycle\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBackground in MLOps tooling or ML platform engineering\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EJoin our team of world-class engineers and be part of the groundbreaking work we do at NVIDIA. We are committed to encouraging a collaborative and inclusive environment, where every team member has the opportunity to thrive and make a significant impact!\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
+      "postedAtCandidate": "2026-04-07T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893391933795",
+      "title": "Senior Libraries Engineer \u2013 AI and HPC",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893391933795",
+      "locations": [
+        "Poland, Warsaw",
+        "Remote - Germany",
+        "Remote - Hungary",
+        "Remote - Poland",
+        "Remote - Spain",
+        "Remote - Switzerland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391933795",
+      "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393620890",
+      "title": "Senior Machine Learning Applications and Compiler Engineer, LPX",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393620890",
+      "locations": [
+        "Remote - UK",
+        "UK, Cambridge"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393620890",
+      "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893391405393",
+      "title": "Senior Math Libraries Engineer \u2013 Emulation in AI and HPC",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893391405393",
+      "locations": [
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391405393",
+      "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393839353",
+      "title": "Senior Networking Solution Test Engineer \u2013 AI Cluster Debugging",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393839353",
+      "locations": [
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - Italy",
+        "Remote - Romania",
+        "Remote - Switzerland",
+        "Remote - UK"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393839353",
+      "postedAtCandidate": "2026-03-03T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392140425",
+      "title": "Senior Security Research Architect",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392140425",
+      "locations": [
+        "Remote - Germany",
+        "Remote - Switzerland",
+        "Switzerland, Zurich",
+        "UK, Cambridge"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392140425",
+      "postedAtCandidate": "2026-04-08T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393786899",
+      "title": "Senior Software Developer, AI Networking",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393786899",
+      "locations": [
+        "Remote - Czechia",
+        "Remote - Hungary",
+        "Remote - Poland",
+        "Remote - Romania"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Remote/Senior-Software-Developer--AI-Networking_JR2013723/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003EWe are looking for an enthusiastic software engineer to join our AI networking acceleration team, to work on a groundbreaking open-source library, using hardware offloads, GPU Kernels and RDMA network cards. Our product is a performance-oriented low-level infrastructure, crafted to change the way inference works.\u003C/p\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWe thrive as a team in a deeply strong environment, and we\u0027re passionate about innovation. The rewards are sweet and include working with some of the brightest people in the industry, an aggressive compensation plan that rewards top performers, and the opportunity to collaborate on products that transform daily the way people work and play.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat you\u0027ll be doing:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EDeveloping a highly optimized inference framework\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ERunning on the world\u2019s largest supercomputers and data centers.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EThe work environment is dynamic and challenging as our employees work on innovative, next-generation products at the forefront of technology in terms of performance, scalability, and features.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat we need to see:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EB.Sc. or equivalent experience in Computer Science or Software Engineering\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E6\u002B years of experience in modern C\u002B\u002B / C / Rust development\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E3 years of experience in Linux environment and familiarity with development tools\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDeep knowledge of the TCP/IP network stack\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EUnderstanding of computer architecture and operating systems concepts\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWays to stand out from the crowd:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBackground in Linux internals and low-level software optimizations (benchmarking, bottleneck research, performance tuning)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience in programming CUDA kernels is an advantage\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EFamiliarity with ML frameworks and LLMs\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBackground in parallel programming / high-performance computing / RDMA technology\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWith competitive salaries and a generous benefits package, we are widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking and hardworking people in the world working for us and, due to unprecedented growth, our exclusive engineering teams are rapidly growing. If you\u0027re a creative and autonomous engineer with a real passion for technology, we want to hear from you. NVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most hard-working and talented people in the world working for us. If you\u0027re creative and passionate about developing cloud services we want to hear from you!\u003C/p\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 292,500 PLN - 507,000 PLN for Level 4, and 375,000 PLN - 650,000 PLN for Level 5.",
+      "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EB.Sc. or equivalent experience in Computer Science or Software Engineering\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E6\u002B years of experience in modern C\u002B\u002B / C / Rust development\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E3 years of experience in Linux environment and familiarity with development tools\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDeep knowledge of the TCP/IP network stack\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EUnderstanding of computer architecture and operating systems concepts\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "preferredQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBackground in Linux internals and low-level software optimizations (benchmarking, bottleneck research, performance tuning)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience in programming CUDA kernels is an advantage\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EFamiliarity with ML frameworks and LLMs\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBackground in parallel programming / high-performance computing / RDMA technology\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWith competitive salaries and a generous benefits package, we are widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking and hardworking people in the world working for us and, due to unprecedented growth, our exclusive engineering teams are rapidly growing. If you\u0027re a creative and autonomous engineer with a real passion for technology, we want to hear from you. NVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most hard-working and talented people in the world working for us. If you\u0027re creative and passionate about developing cloud services we want to hear from you!\u003C/p\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 292,500 PLN - 507,000 PLN for Level 4, and 375,000 PLN - 650,000 PLN for Level 5.",
+      "postedAtCandidate": "2026-03-02T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394582417",
+      "title": "Senior Software Engineer - Autonomous Vehicles",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394582417",
+      "locations": [
+        "Remote - Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394582417",
+      "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394359038",
+      "title": "Senior Software Engineer Delivery Lead \u2013 Tegra System Software",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394359038",
+      "locations": [
+        "UK, Bristol",
+        "UK, Cambridge"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394359038",
+      "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393860551",
+      "title": "Senior Software Engineer \u2013 ADAS",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393860551",
+      "locations": [
+        "Germany, Munich"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393860551",
+      "postedAtCandidate": "2026-03-04T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393259650",
+      "title": "Senior Software Engineer \u2013 AI and Autonomous Driving",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393259650",
+      "locations": [
+        "Germany, Munich"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393259650",
+      "postedAtCandidate": "2026-02-05T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394712291",
+      "title": "Senior Software Engineer, AVOS, DRIVE OS and BSP - Automotive",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394712291",
+      "locations": [
+        "Germany, Munich",
+        "Remote - Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394712291",
+      "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394034331",
+      "title": "Senior Software Engineer, CUDA Core Libraries",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394034331",
+      "locations": [
+        "Germany, Munich",
+        "Remote - Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394034331",
+      "postedAtCandidate": "2026-03-13T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392034416",
+      "title": "Senior Software QA Test Development Engineer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392034416",
+      "locations": [
+        "UK, Belfast"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392034416",
+      "postedAtCandidate": "2025-11-18T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393680121",
+      "title": "Senior Solutions Architect, AI Factory",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393680121",
+      "locations": [
+        "Germany, Munich"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393680121",
+      "postedAtCandidate": "2026-02-26T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893391933771",
+      "title": "Senior Solutions Architect, HPC and AI",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893391933771",
+      "locations": [
+        "Remote - Germany",
+        "Remote - Italy",
+        "Remote - Poland",
+        "Remote - Spain",
+        "Remote - Switzerland",
+        "Remote - UK"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391933771",
+      "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394174026",
+      "title": "Senior System Software Engineer \u2013 Embedded AI Inference",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394174026",
+      "locations": [
+        "Germany, Munich"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394174026",
+      "postedAtCandidate": "2026-03-20T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392565316",
+      "title": "Software Engineer, CPU and SoC Profiling Tools",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392565316",
+      "locations": [
+        "Poland, Warsaw",
+        "Remote - Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Remote/Software-Engineer--CPU-and-SoC-Profiling-Tools_JR2010351/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003ENVIDIA\u0027s products, hardware and software, are world leaders for performance and efficiency. We are continually innovating in creative ways to improve our ability to deliver outstanding solutions across a wide range of sectors. We are seeking exceptional interns who will have a chance to play a key role in shipping user visible features in a large established product. In the Software Developer Tools Team, we enable internal and third-party developers to turn NVIDIA\u0027s hardware into groundbreaking cluster, server, professional, consumer, automotive, and embedded solutions.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "responsibilitiesRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EJoin the Developer Tools team to work on software such as Nsight Systems.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EWork with a wide variety of hardware platforms, ranging from small embedded systems, to large multi-GPU and NUMA servers and clusters.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBe the communicator between our Nsight Systems team, various chip and system design teams, and the metrics library team.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EWork with internal and external users to understand their software and performance goals, and use that knowledge to influence future chip design.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECommunicate across multiple teams to collect and understand the requirements. Understand how the underlying hardware and software works, and use that knowledge to deliver valuable features to the users. Participate in all phases of the software life cycle.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECollaborate with team members across multiple time zones in a dynamic, high-energy work environment.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EInteract with internal and external users, help them get the maximum value out of our products, and deliver their feedback to the product team.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EExcellent problem solving, collaborative, and interpersonal skills.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong C\u002B\u002B knowledge.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong understanding of algorithms and data structures.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDemonstrated ability to track large amounts of information across long periods of time, ability to explain complex concepts in clear and concise language.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBS or MS in EE, CE, CS, Systems Engineering and 4 years of experience in a related software position.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+      "preferredQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EExperience with GPUs, CUDA, HPC, clusters, networking, and performance optimization in distributed environments.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHands on experience with profiling and performance optimizations (e.g. Linux perf, VTune).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EUnderstanding of software toolchains and its components (e.g. Arm tools, Android NDK tools).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with data science, data analysis and Python.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience working in remote and distributed teams.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking and hardworking people in the world working for us. If you\u0027re creative and autonomous, we want to hear from you! We are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 183,750 PLN - 318,500 PLN.",
+      "postedAtCandidate": "2026-01-28T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394694452",
+      "title": "Software Engineer, Software Configuration Management \u2013 Hardware Infrastructure",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394694452",
+      "locations": [
+        "Remote - UK",
+        "UK, Cambridge"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394694452",
+      "postedAtCandidate": "2026-04-15T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393539853",
+      "title": "Software Engineering Manager - Data Center Systems",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393539853",
+      "locations": [
+        "Poland, Warsaw",
+        "Switzerland, Zurich"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Warsaw/Software-Engineering-Manager---Data-Center-Systems_JR2012298/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003ENVIDIA has been transforming computer graphics, PC gaming, and accelerated computing for more than 25 years. It\u2019s a unique legacy of innovation that\u2019s fueled by great technology\u2014and amazing people.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EToday, we\u2019re tapping into the unlimited potential of AI to define the next era of computing. An era in which our GPU acts as the brains of computers, robots, and self-driving cars that can understand the world. Doing what\u2019s never been done before takes vision, innovation, and the world\u2019s best talent. As an NVIDIAN, you\u2019ll be immersed in a diverse, supportive environment where everyone is inspired to do their best work. Come join the team and see how you can make a lasting impact on the world.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EThe Data Center System Engineering team is looking for a software engineering manager to lead a team working on system design and tuning mechanisms for large-scale AI system performance and datacenter applications. You will work with the latest accelerated computing, deep learning software and hardware platforms to craft improved workflows and develop new, leading differentiated solutions.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EBe a key player to the most exciting computing hardware and software to contribute to the latest breakthroughs in artificial intelligence and GPU computing!\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWhat you\u0027ll be doing:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003ELead, mentor, and grow your engineering team.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDrive strong software engineering practices in large scale infrastructure, deliver powerful tools, methodologies, and flows to validate and improve datacenter products in parallel.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ESpecific responsibilities include aligning the next generation AI workloads on top of next generation datacenter designs. This involves early engagement with HW/FW/SW/platform internal and customer teams, and other groups.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDeliver engineering solutions that offer insights into performance of AI workloads over evolving environments, generating quick insights to improvements and regressions over time.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDecompose high-complexity issues into minimal reproduction cases, working towards root cause of underlying problems.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EParticipate in engagements with various software and firmware (BMC/SBIOS/OS/drivers) teams to develop best-in-class practices and tools, you will be analyzing, debugging and resolving critical firmware and software issues for the best AI workload performance at scale.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWhat we need to see:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EProven understanding of accelerated computing software stacks (CUDA).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience using and handling modern Cloud and container-based Enterprise computing architectures.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong C/C\u002B\u002B/Python/Bash programming/scripting experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDeep experience with systems architecture and the impact of various components in performance\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with container technology and Linux based OSes.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience working with high performance computing or deep learning.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong verbal and written communication skills.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong teamwork and communication skills.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EAbility to multitask in a dynamic environment.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EAction driven with strong analytical and analytical skills.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBS in Engineering, Mathematics, Physics, or Computer Science, MS or PhD desirable (or equivalent).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E8\u002B overall years of experience, including 3\u002B years or more in team management\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWays to Stand Out from the Crowd:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EEnd-to-end performance engineering from the profiler to systems analysis\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ELinux systems programming and optimization experience\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExposure to virtualization techniques, cloud platform solutions.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExposure to scheduling and resource management systems.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with large scale HPC environments.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWidely considered to be one of the technology world\u2019s most desirable employers, NVIDIA offers highly competitive salaries and a comprehensive benefits package. As you plan your future, see what we can offer to you and your family\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 345,000 PLN - 598,000 PLN for Level 3, and 405,000 PLN - 702,000 PLN for Level 4.",
+      "postedAtCandidate": "2026-02-18T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394341954",
+      "title": "Solution Architect - Telco AI",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394341954",
+      "locations": [
+        "Germany, Munich",
+        "Poland, Warsaw",
+        "Sweden, Gothenburg"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394341954",
+      "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393900200",
+      "title": "Solution Architect, Computer Aided Engineering",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393900200",
+      "locations": [
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - Switzerland",
+        "Remote - UK"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393900200",
+      "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393839005",
+      "title": "Solution Architect, Energy",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393839005",
+      "locations": [
+        "Germany, Munich",
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - UK"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393839005",
+      "postedAtCandidate": "2026-03-25T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394342004",
+      "title": "Solution Architect, Financial Services",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394342004",
+      "locations": [
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - Netherlands",
+        "Remote - Switzerland",
+        "Remote - UK",
+        "UK, Cambridge"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394342004",
+      "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394016873",
+      "title": "Solutions Architect \u2013 AI Factory",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394016873",
+      "locations": [
+        "Remote - Denmark",
+        "Remote - Finland",
+        "Remote - France",
+        "Remote - Netherlands",
+        "Remote - Sweden",
+        "Remote - UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394016873",
+      "postedAtCandidate": "2026-03-12T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394019158",
+      "title": "Solutions Architect \u2013 AI Factory",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394019158",
+      "locations": [
+        "Remote - Czechia",
+        "Remote - Germany",
+        "Remote - Hungary",
+        "Remote - Poland",
+        "Remote - Switzerland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394019158",
+      "postedAtCandidate": "2026-03-13T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893392515884",
+      "title": "Solutions Architect, Edge AI in Robotics and Robotics Operation",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893392515884",
+      "locations": [
+        "Germany, Munich"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392515884",
+      "postedAtCandidate": "2025-12-17T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394341979",
+      "title": "Solutions Architect, Financial Services - Data Center and Infrastructure",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394341979",
+      "locations": [
+        "Remote - UK",
+        "UK, Reading"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394341979",
+      "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393382291",
+      "title": "System Software Engineer, Python and C/C\u002B\u002B - Deep Learning",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393382291",
+      "locations": [
+        "Poland, Warsaw",
+        "Remote - Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Warsaw/System-Software-Engineer--Python-and-C-C-----Deep-Learning_JR2013224/apply?source=Eightfold",
+      "aboutTheJobRaw": "\u003Cp\u003ENVIDIA is hiring system engineers for its Deep Learning Algorithms team. Academic and commercial groups around the world are using GPUs to revolutionize deep learning and data analytics, and to power data centers. Join the team building software which will be used by the entire world. Work with the scientific community to implement the latest AI solutions. Ability to work in a dynamic, fast-paced environment is required as well as strong interpersonal skills.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EIn this role you will be interacting with internal partners, users, and members of the open source community to analyze, define and implement highly optimized solutions. The scope of these efforts includes a combination of crafting and implementing new solutions, defining APIs, performance tuning and analysis, analyzing functionality coverage across multiple solutions, build larger, coherent AI toolset. Are you ready for this challenge?\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat you\u2019ll be doing:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EResearch, prototype, develop and optimize solutions, tools and libraries for deep learning, data analytics, machine learning, or scientific computing.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EAnalyse, influence and improve deep learning libraries and frameworks standards and APIs according to good engineering practices.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECollaborate with team members and other partners.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat we need to see:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBachelor\u0027s or Master\u0027s degree or equivalent experience in Computer Science, Engineering, or a related field.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E8\u002B years of work experience in software development.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExcellent Python and C/C\u002B\u002B programming knowledge.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience in design and implementation of complex systems with decoupled dependencies.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EKnowledge of design patterns and software engineering principles.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong analytical skill, knowledge about algorithms and data structures.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong time-management and organization skills for coordinating multiple initiatives, priorities and implementations of new technology and products into very complex projects.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EGood communication and documentation habits.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking people in the world working for us. If you\u0027re creative and autonomous, we want to hear from you!\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWe are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 292,500 PLN - 507,000 PLN for Level 4, and 375,000 PLN - 650,000 PLN for Level 5.",
+      "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBachelor\u0027s or Master\u0027s degree or equivalent experience in Computer Science, Engineering, or a related field.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E8\u002B years of work experience in software development.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExcellent Python and C/C\u002B\u002B programming knowledge.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience in design and implementation of complex systems with decoupled dependencies.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EKnowledge of design patterns and software engineering principles.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong analytical skill, knowledge about algorithms and data structures.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong time-management and organization skills for coordinating multiple initiatives, priorities and implementations of new technology and products into very complex projects.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EGood communication and documentation habits.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking people in the world working for us. If you\u0027re creative and autonomous, we want to hear from you!\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWe are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 292,500 PLN - 507,000 PLN for Level 4, and 375,000 PLN - 650,000 PLN for Level 5.",
+      "postedAtCandidate": "2026-02-12T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893394619437",
+      "title": "Vehicle Test Engineer - ADAS",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394619437",
+      "locations": [
+        "Remote - Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394619437",
+      "postedAtCandidate": "2026-04-14T00:00:00.0000000\u002B00:00"
+    }
+  ]
 }
