@@ -3815,6 +3815,311 @@
           "unchanged": []
         }
       ]
+    },
+    {
+      "runId": "2026-04-29T15-01-55Z",
+      "added": [],
+      "removed": [],
+      "changed": [],
+      "unchanged": [
+        {
+          "id": "893392964974",
+          "title": "Principal AI Developer Technology Engineer",
+          "company": "NVIDIA",
+          "url": "https://jobs.nvidia.com/careers/job/893392964974",
+          "locations": [
+            "France, Courbevoie",
+            "Germany, Munich",
+            "Switzerland, Zurich",
+            "UK, Bristol",
+            "UK, Reading"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "893377948130",
+          "title": "Principal Software Architect, GPU Networking Research",
+          "company": "NVIDIA",
+          "url": "https://jobs.nvidia.com/careers/job/893377948130",
+          "locations": [
+            "Remote - UK",
+            "Switzerland, Zurich"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "893394426716",
+          "title": "Senior HPC and AI Network Software Architect",
+          "company": "NVIDIA",
+          "url": "https://jobs.nvidia.com/careers/job/893394426716",
+          "locations": [
+            "Remote - Germany",
+            "Remote - Italy",
+            "Remote - Poland",
+            "Remote - UK",
+            "Switzerland, Zurich"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "893394712294",
+          "title": "Senior HPC Performance Engineer",
+          "company": "NVIDIA",
+          "url": "https://jobs.nvidia.com/careers/job/893394712294",
+          "locations": [
+            "Remote - France",
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - UK"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "893382452913",
+          "title": "Senior Software and System Architect",
+          "company": "NVIDIA",
+          "url": "https://jobs.nvidia.com/careers/job/893382452913",
+          "locations": [
+            "Remote - France",
+            "Remote - Germany",
+            "Remote - Spain",
+            "Remote - Switzerland",
+            "Remote - UK"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "893383895694",
+          "title": "Senior Software Architect - Deep Learning and HPC Communications",
+          "company": "NVIDIA",
+          "url": "https://jobs.nvidia.com/careers/job/893383895694",
+          "locations": [
+            "Remote - Germany",
+            "Remote - Poland",
+            "Remote - Switzerland",
+            "Remote - UK",
+            "Switzerland, Zurich"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "893392098780",
+          "title": "Senior Software Architect - Deep Learning and HPC Communications",
+          "company": "NVIDIA",
+          "url": "https://jobs.nvidia.com/careers/job/893392098780",
+          "locations": [
+            "Remote - Germany",
+            "Remote - Poland",
+            "Remote - Switzerland",
+            "Remote - UK"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "893392256499",
+          "title": "Senior Software Developer",
+          "company": "NVIDIA",
+          "url": "https://jobs.nvidia.com/careers/job/893392256499",
+          "locations": [
+            "Remote - Switzerland",
+            "Switzerland, Zurich"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "893394712289",
+          "title": "Senior Software Engineer, JAX",
+          "company": "NVIDIA",
+          "url": "https://jobs.nvidia.com/careers/job/893394712289",
+          "locations": [
+            "Remote - France",
+            "Remote - Germany",
+            "Remote - Poland",
+            "Remote - Switzerland",
+            "Remote - UK"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "893382545772",
+          "title": "Senior System Software Engineer, NCCL - Partner Enablement",
+          "company": "NVIDIA",
+          "url": "https://jobs.nvidia.com/careers/job/893382545772",
+          "locations": [
+            "Poland, Warsaw",
+            "Remote - Germany",
+            "Remote - Poland",
+            "Remote - Switzerland",
+            "Remote - UK",
+            "Switzerland, Zurich"
+          ],
+          "requestedLocation": "Switzerland"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Germany",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "Poland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "Switzerland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "893392964974",
+              "title": "Principal AI Developer Technology Engineer",
+              "company": "NVIDIA",
+              "url": "https://jobs.nvidia.com/careers/job/893392964974",
+              "locations": [
+                "France, Courbevoie",
+                "Germany, Munich",
+                "Switzerland, Zurich",
+                "UK, Bristol",
+                "UK, Reading"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "893377948130",
+              "title": "Principal Software Architect, GPU Networking Research",
+              "company": "NVIDIA",
+              "url": "https://jobs.nvidia.com/careers/job/893377948130",
+              "locations": [
+                "Remote - UK",
+                "Switzerland, Zurich"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "893394426716",
+              "title": "Senior HPC and AI Network Software Architect",
+              "company": "NVIDIA",
+              "url": "https://jobs.nvidia.com/careers/job/893394426716",
+              "locations": [
+                "Remote - Germany",
+                "Remote - Italy",
+                "Remote - Poland",
+                "Remote - UK",
+                "Switzerland, Zurich"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "893394712294",
+              "title": "Senior HPC Performance Engineer",
+              "company": "NVIDIA",
+              "url": "https://jobs.nvidia.com/careers/job/893394712294",
+              "locations": [
+                "Remote - France",
+                "Remote - Germany",
+                "Remote - Switzerland",
+                "Remote - UK"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "893382452913",
+              "title": "Senior Software and System Architect",
+              "company": "NVIDIA",
+              "url": "https://jobs.nvidia.com/careers/job/893382452913",
+              "locations": [
+                "Remote - France",
+                "Remote - Germany",
+                "Remote - Spain",
+                "Remote - Switzerland",
+                "Remote - UK"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "893383895694",
+              "title": "Senior Software Architect - Deep Learning and HPC Communications",
+              "company": "NVIDIA",
+              "url": "https://jobs.nvidia.com/careers/job/893383895694",
+              "locations": [
+                "Remote - Germany",
+                "Remote - Poland",
+                "Remote - Switzerland",
+                "Remote - UK",
+                "Switzerland, Zurich"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "893392098780",
+              "title": "Senior Software Architect - Deep Learning and HPC Communications",
+              "company": "NVIDIA",
+              "url": "https://jobs.nvidia.com/careers/job/893392098780",
+              "locations": [
+                "Remote - Germany",
+                "Remote - Poland",
+                "Remote - Switzerland",
+                "Remote - UK"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "893392256499",
+              "title": "Senior Software Developer",
+              "company": "NVIDIA",
+              "url": "https://jobs.nvidia.com/careers/job/893392256499",
+              "locations": [
+                "Remote - Switzerland",
+                "Switzerland, Zurich"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "893394712289",
+              "title": "Senior Software Engineer, JAX",
+              "company": "NVIDIA",
+              "url": "https://jobs.nvidia.com/careers/job/893394712289",
+              "locations": [
+                "Remote - France",
+                "Remote - Germany",
+                "Remote - Poland",
+                "Remote - Switzerland",
+                "Remote - UK"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "893382545772",
+              "title": "Senior System Software Engineer, NCCL - Partner Enablement",
+              "company": "NVIDIA",
+              "url": "https://jobs.nvidia.com/careers/job/893382545772",
+              "locations": [
+                "Poland, Warsaw",
+                "Remote - Germany",
+                "Remote - Poland",
+                "Remote - Switzerland",
+                "Remote - UK",
+                "Switzerland, Zurich"
+              ],
+              "requestedLocation": "Switzerland"
+            }
+          ]
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        }
+      ]
     }
   ]
 }
