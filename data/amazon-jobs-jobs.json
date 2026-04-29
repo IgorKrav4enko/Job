@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+  "generatedAt": "2026-04-29T16:01:25.9424454\u002B00:00",
   "source": "Amazon Jobs",
   "status": "success",
-  "notes": "Normalized 10 active Amazon jobs from latest raw snapshot.",
+  "notes": "Normalized 86 active Amazon jobs from latest raw snapshot.",
   "searchTerm": "Software Development | Software Engineer",
   "locations": [
     {
@@ -33,6 +33,56 @@
   ],
   "jobs": [
     {
+      "id": "3072042",
+      "title": "2026 Software Dev Engineer Intern - Ireland",
+      "company": "Amazon Development Centre Ireland Limited - D94",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3072042/2026-software-dev-engineer-intern-ireland",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-09-30T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "daf63aefd3d370120810336d926679b59cc17a21db1332bc3041432f373d0113"
+    },
+    {
+      "id": "3072061",
+      "title": "2026 Software Dev Engineer Intern - UK",
+      "company": "Amazon UK Services Ltd.",
+      "locations": [
+        "Cambridge, England, GBR",
+        "Edinburgh, Scotland, GBR",
+        "London, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3072061/2026-software-dev-engineer-intern-uk",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-09-03T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "81ba44cc2a7c40335f31f732a988d5af967a1f4b04eb458dbbec35725f5be998"
+    },
+    {
+      "id": "3115258",
+      "title": "Application Builder, Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3115258/application-builder-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-10-24T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "5ff317024a9203e16f75df3faa35d45ba513d3b7aab5f4e315c162b41668db9e"
+    },
+    {
       "id": "10381896",
       "title": "Applied Scientist, Data Center Design Engineering",
       "company": "A100 ROW GmbH",
@@ -44,9 +94,25 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
       "isActive": true,
       "contentHash": "c209676439eb535a825ef547f04d5ace0f3a6e9e19627ba01d5fad0fd56023e6"
+    },
+    {
+      "id": "2965851",
+      "title": "AWS Director of Technology, Germany \u0026 Central Europe, AWS Global Sales",
+      "company": "AWS EMEA SARL (Germany Branch)",
+      "locations": [
+        "Munich, Bavaria, DEU"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/2965851/aws-director-of-technology-germany-central-europe-aws-global-sales",
+      "requestedLocation": "Germany",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-06-20T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "2a7bd981d756df33f692525633d1dae259cac51ba27d86b71676729bb9132ce7"
     },
     {
       "id": "3082914",
@@ -60,9 +126,105 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-09-15T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
       "isActive": true,
       "contentHash": "66909e530629ab75fddf3596f4ce0aef65d6fdc28f13b2e85a99fc414c88371e"
+    },
+    {
+      "id": "10379245",
+      "title": "Drone Firmware Software Dev Engineer, Ring Robotics Platform Engineering",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10379245/drone-firmware-software-dev-engineer-ring-robotics-platform-engineering",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "d1aaaf5fd4f8245abf818572336cb1b2db8d10c3e7fb31a953eb04cd6b86a090"
+    },
+    {
+      "id": "3109401",
+      "title": "Embedded Senior Software Dev Engineer, Amazon Camera SDK",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3109401/embedded-senior-software-dev-engineer-amazon-camera-sdk",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-10-15T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "614530bb001f008aa1e770be740a023a909af1a6eff97c893f8016211673dff1"
+    },
+    {
+      "id": "3203075",
+      "title": "Embedded Software Engineer II, Ring",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3203075/embedded-software-engineer-ii-ring",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-12T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "13138e3d1b3b5b49d35ba729d69f846c4f4f7a1ef6ab7dec6faa75ede079fa16"
+    },
+    {
+      "id": "3201659",
+      "title": "Embedded Software Engineer, Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3201659/embedded-software-engineer-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-11T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "9c329af9be4ddc8069aa62b22e79c946d1de71569be45369d2630c4bfa0b5c05"
+    },
+    {
+      "id": "10399900",
+      "title": "iOS Developer, Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10399900/ios-developer-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-22T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "84d85b53ed271b4be5724e78e1baddbc79711de53bffe162784769cc691cc1bf"
+    },
+    {
+      "id": "10392611",
+      "title": "ITS Systems Dev Eng I (CIS), Corporate Infrastructure Services, IT, Corporate Infrastructure Services, IT",
+      "company": "Amazon UK Services Ltd.",
+      "locations": [
+        "Edinburgh, Scotland, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10392611/its-systems-dev-eng-i-cis-corporate-infrastructure-services-it-corporate-infrastructure-services-it",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-15T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "916136a910c15c73b8783bee231a9a6534c970c1c4824d70e59f59ef1a9a72d0"
     },
     {
       "id": "3041640",
@@ -76,9 +238,25 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-07-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
       "isActive": true,
       "contentHash": "3309ecbdf7ba7e61d9b3c1613a70c9a5e692d0ebffb8326c6dac588ee950804b"
+    },
+    {
+      "id": "3013604",
+      "title": "Principal Software Development Engineer , Ring Device Software",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3013604/principal-software-development-engineer-ring-device-software",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-06-19T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "6dea028c8639a4cf703a0b2c34a25ba01a5c5850d4786149fb3d8276aac9b8ad"
     },
     {
       "id": "3133471",
@@ -92,9 +270,25 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-11-27T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
       "isActive": true,
       "contentHash": "ea2b4f44e9e3ba75ae8d1da24ce972ad716d06a6f8c6fdfd750fc10efb8375f3"
+    },
+    {
+      "id": "3187273",
+      "title": "Principal Software Engineer, Amazon DynamoDB",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3187273/principal-software-engineer-amazon-dynamodb",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-23T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "c923e799b026c9fcd9ea2ddb0324da3a32c5cdf9042992ab170bb678cc3bffcd"
     },
     {
       "id": "3198549",
@@ -108,9 +302,234 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-06T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
       "isActive": true,
       "contentHash": "91b497fed13cc05972fd63d33198f2cc6424f1b46efd4795db1e70f0d00675c6"
+    },
+    {
+      "id": "10403066",
+      "title": "Senior Android Software Engineer, Ring Application Services",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10403066/senior-android-software-engineer-ring-application-services",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-24T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "10b742ccd609fc71657de6467e01ca8c64216f3c745cc83409ebdde12c495002"
+    },
+    {
+      "id": "3201538",
+      "title": "Senior Embedded Software Engineer, Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3201538/senior-embedded-software-engineer-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-10T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "65e92f58bd41d8255b8be4979d0be18da7924bea007738102448b42c04931a70"
+    },
+    {
+      "id": "3144664",
+      "title": "Senior SAP Solutions Architect, AGS Specialists, Europe Central",
+      "company": "AWS EMEA SARL (Switzerland Branch)",
+      "locations": [
+        "Zurich, Zurich, CHE"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3144664/senior-sap-solutions-architect-ags-specialists-europe-central",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-12-17T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "4b84feb8a5dbbfcc9c865acbcb7e8c41b7a00f2acd7f6917591f17dec1b1b98e"
+    },
+    {
+      "id": "3163019",
+      "title": "Senior Software Development Engineer - Ring AI",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3163019/senior-software-development-engineer-ring-ai",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-01-21T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "7f93a4d6e3e4e46887c3e60b952533567302fbe66fda8c90399f35d91a3d22b3"
+    },
+    {
+      "id": "10403120",
+      "title": "Senior Software Development Engineer,  Aurora Control Plane Developer Experience",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10403120/senior-software-development-engineer-aurora-control-plane-developer-experience",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-24T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "f4d8efacf8919931aef6a17bf92619c5e875b706d74297da1cbde3190b5b008d"
+    },
+    {
+      "id": "10406451",
+      "title": "Senior Software Development Engineer, AWS CloudFront",
+      "company": "Amazon Development Centre (London) Limited",
+      "locations": [
+        "London, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10406451/senior-software-development-engineer-aws-cloudfront",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-29T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "c9af20824749671dd1dcd4bc03ff653a4cd67ae30ad052a4dc2bf049a5ea3a8a"
+    },
+    {
+      "id": "10373566",
+      "title": "Senior Software Development Engineer, CloudFront Control Plane, CloudFront",
+      "company": "Amazon Development Centre (London) Limited",
+      "locations": [
+        "London, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10373566/senior-software-development-engineer-cloudfront-control-plane-cloudfront",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-23T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "ce573888c78a9befcd694ff0cecaaf3c59c15ccd31cbb67b27ed43484d6c53e6"
+    },
+    {
+      "id": "10379256",
+      "title": "Senior Software Engineer , Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10379256/senior-software-engineer-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "7ab3a9a3e174fc1eb04563ccb056cd4a65c22fa82aa2aa4d580c53e1129504fc"
+    },
+    {
+      "id": "3200356",
+      "title": "Senior Software Engineer , Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3200356/senior-software-engineer-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-10T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "7ab3a9a3e174fc1eb04563ccb056cd4a65c22fa82aa2aa4d580c53e1129504fc"
+    },
+    {
+      "id": "3169837",
+      "title": "Senior Software Engineer, Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3169837/senior-software-engineer-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-01-29T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "fbb6702e3759316f94a8c1c7cddb60c28b49bec38fe07500ab8dd92d6f9f936e"
+    },
+    {
+      "id": "3189399",
+      "title": "Senior Software Engineer, Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3189399/senior-software-engineer-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-25T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "fbb6702e3759316f94a8c1c7cddb60c28b49bec38fe07500ab8dd92d6f9f936e"
+    },
+    {
+      "id": "3195588",
+      "title": "Senior Software Engineer, Speech MLOps",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o - C35",
+      "locations": [
+        "Cracow, Lesser Poland Voivodeship, POL",
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3195588/senior-software-engineer-speech-mlops",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-04T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "2550dea4ee483403a8e1aa9ba76db068ae28d3adf22d5025d94dd23fa5309d72"
+    },
+    {
+      "id": "3178571",
+      "title": "Senior Specialist Solution Architect - Databases, AGS Specialists, Europe Central",
+      "company": "AWS EMEA SARL (Switzerland Branch)",
+      "locations": [
+        "Zurich, Zurich, CHE"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3178571/senior-specialist-solution-architect-databases-ags-specialists-europe-central",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-11T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "fb215385c37e8e0045b495c61e56c79bd3958d28bea8e4d9fd8b3808f901c066"
+    },
+    {
+      "id": "3150343",
+      "title": "Senior Worldwide Partner Specialist Solutions Architect, Amazon Connect",
+      "company": "AWS EMEA SARL (UK Branch)",
+      "locations": [
+        "London, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3150343/senior-worldwide-partner-specialist-solutions-architect-amazon-connect",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-12-30T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "d1500e52f3133fab30d02027ec342278be14e7f022d9630877c40b31ac20f764"
     },
     {
       "id": "3146239",
@@ -124,9 +543,761 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-12-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
       "isActive": true,
       "contentHash": "246dd9787178eafe4726dea11ff377f480d5986738b90bcdb0857568ab3de55c"
+    },
+    {
+      "id": "3125289",
+      "title": "Software Dev Engineer Internship - AI",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3125289/software-dev-engineer-internship-ai",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-11-27T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "fb0f208c43f5747ead941cca7b48d497ed11a895379eb2f62982ee31e1b75416"
+    },
+    {
+      "id": "10388013",
+      "title": "Software Dev Engineer, AWS Scalable Intent Driven Routing (SIDR)",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10388013/software-dev-engineer-aws-scalable-intent-driven-routing-sidr",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-09T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "63c804b8a3075b3c38bd97940dfb9f3062d7d53ee16d3f8552f53df48d2d3705"
+    },
+    {
+      "id": "10401482",
+      "title": "Software Development Engineer",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10401482/software-development-engineer",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-23T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "7d5e207fc506d8fbe2ec0964490556fa3f31fea99928078f0a8972412c684e4b"
+    },
+    {
+      "id": "10398638",
+      "title": "Software Development Engineer (Java/AWS), Alexa AI",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10398638/software-development-engineer-java-aws-alexa-ai",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-21T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "ffdb39fe008dacc25df044ef0dee18ecbdcfcd408ac1e1018a3c269eb5674340"
+    },
+    {
+      "id": "10388814",
+      "title": "Software Development Engineer - Elasticache, AWS ElastiCache",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10388814/software-development-engineer-elasticache-aws-elasticache",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "9ba8b49bc97fd1604dc4e9131da8ebfaf030c013d02c747173c58beefca45e50"
+    },
+    {
+      "id": "10383158",
+      "title": "Software Development Engineer - Ring AI",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10383158/software-development-engineer-ring-ai",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "3f126c60be86f4965bc5b9b0270a7b12233a3b3c4c184114a359784bc7c58397"
+    },
+    {
+      "id": "10399745",
+      "title": "Software Development Engineer - Test Automation, Amazon Camera SDK",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10399745/software-development-engineer-test-automation-amazon-camera-sdk",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-22T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "767ab585497fea2578070003f1f3b17331caa5b4a4ebc34d1fa060c95c1512e9"
+    },
+    {
+      "id": "3123145",
+      "title": "Software Development Engineer - Test Automation, Amazon Camera SDK",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3123145/software-development-engineer-test-automation-amazon-camera-sdk",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-11-07T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "767ab585497fea2578070003f1f3b17331caa5b4a4ebc34d1fa060c95c1512e9"
+    },
+    {
+      "id": "10403119",
+      "title": "Software Development Engineer II,  Aurora Control Plane Developer Experience",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10403119/software-development-engineer-ii-aurora-control-plane-developer-experience",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-24T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "a42a342952834241fa2251c8cd67137e77e8676d0afe39ed05b5c737b850baad"
+    },
+    {
+      "id": "10404216",
+      "title": "Software Development Engineer II,  Aurora Control Plane Developer Experience",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10404216/software-development-engineer-ii-aurora-control-plane-developer-experience",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-27T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "a42a342952834241fa2251c8cd67137e77e8676d0afe39ed05b5c737b850baad"
+    },
+    {
+      "id": "10393740",
+      "title": "Software Development Engineer II, Workforce Solutions",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10393740/software-development-engineer-ii-workforce-solutions",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "27cc984f4de6887e48afe40e25311256e1c7626eecf14ce43bcc4a0e952bffa9"
+    },
+    {
+      "id": "3119044",
+      "title": "Software Development Engineer \u2013 2026",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o - C35",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3119044/software-development-engineer-2026",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-10-31T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "87fce4d966118777d99b6d0762c1dd1039878914c0dd46d4eca273c3de626940"
+    },
+    {
+      "id": "3172080",
+      "title": "Software Development Engineer, Alexa",
+      "company": "Amazon Corporate Services Poland Sp. z o.o.",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3172080/software-development-engineer-alexa",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-02T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "ee5374f92859c7a1090608c48a1078aacdb4d95970af7b7dfbc030f3a4d21735"
+    },
+    {
+      "id": "3138000",
+      "title": "Software Development Engineer, Alexa AI",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3138000/software-development-engineer-alexa-ai",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-12-05T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "4d0d5820f026d5ab7f57b898a3cb35bb723ee85eb62dfd79e4c9a4d1fb29e6c9"
+    },
+    {
+      "id": "3196928",
+      "title": "Software Development Engineer, Alexa Edge AI",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3196928/software-development-engineer-alexa-edge-ai",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-05T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "91e51d01101e3a64d93b66ea7c5f9ce25dfb81c4271a3fa2ddb8030e9346bb00"
+    },
+    {
+      "id": "3194784",
+      "title": "Software Development Engineer, Amazon",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Warsaw, Woj. Mazowieckie, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3194784/software-development-engineer-amazon",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-03T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "8a4de646dfda0d32d6d3dfcc2e686d99d9051082fbb5fb6acbe79d17763110ee"
+    },
+    {
+      "id": "10396890",
+      "title": "Software Development Engineer, Amazon Optics",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10396890/software-development-engineer-amazon-optics",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-20T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "5e2e4808bac434dc2457d29d472a170336908afdeaf377584bb0ad6ea18be633"
+    },
+    {
+      "id": "3184252",
+      "title": "Software Development Engineer, Amazon Optics",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3184252/software-development-engineer-amazon-optics",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-18T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "5e2e4808bac434dc2457d29d472a170336908afdeaf377584bb0ad6ea18be633"
+    },
+    {
+      "id": "3184253",
+      "title": "Software Development Engineer, Amazon Optics",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3184253/software-development-engineer-amazon-optics",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-18T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "5e2e4808bac434dc2457d29d472a170336908afdeaf377584bb0ad6ea18be633"
+    },
+    {
+      "id": "3186987",
+      "title": "Software Development Engineer, AWS Security",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3186987/software-development-engineer-aws-security",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-23T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "cf47ebadcabd009a4136352ae23b08b26f714474e0896f05ce4068ad6071525b"
+    },
+    {
+      "id": "3167862",
+      "title": "Software Development Engineer, AWS Security, Software Engineering, AWS Security Operations Centre (SOC)",
+      "company": "Amazon Web Services EMEA SARL (Irish Branch)",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3167862/software-development-engineer-aws-security-software-engineering-aws-security-operations-centre-soc",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-01-27T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "824689c0acf20032cfdec5214178910818318af816985a671c61d1cc6e167e4f"
+    },
+    {
+      "id": "10393903",
+      "title": "Software Development Engineer, Business Information Governance",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10393903/software-development-engineer-business-information-governance",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "05148e7b1361ae60a5e254d4e9d2d82d1ea62019c8a72ea2af061e3e0f758bb4"
+    },
+    {
+      "id": "3190539",
+      "title": "Software Development Engineer, Core Network",
+      "company": "Amazon Data Services Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3190539/software-development-engineer-core-network",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-26T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "e6af6a30131dc17478c5b2937993bab9f78d5c650f445dbd032385a95b8fa2e9"
+    },
+    {
+      "id": "3185344",
+      "title": "Software Development Engineer, Firecracker",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3185344/software-development-engineer-firecracker",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-19T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "365e05fb0ae76680f5f8fcda1c4784b9a23f34fa31d9e67f673b83eecc75367f"
+    },
+    {
+      "id": "3185371",
+      "title": "Software Development Engineer, Firecracker",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3185371/software-development-engineer-firecracker",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-19T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "365e05fb0ae76680f5f8fcda1c4784b9a23f34fa31d9e67f673b83eecc75367f"
+    },
+    {
+      "id": "10380292",
+      "title": "Software Development Engineer, RBKS OpEx",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10380292/software-development-engineer-rbks-opex",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "1b4738832ff4845aa2526af325f011e0aa34fd95026a3696ea8b332dcc91927e"
+    },
+    {
+      "id": "10383155",
+      "title": "Software Development Engineer, Ring",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10383155/software-development-engineer-ring",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "b0dbb9088a1d1dd519f1e05eee11aba09f30291f962ac3c094ac500811ee4002"
+    },
+    {
+      "id": "10391296",
+      "title": "Software Development Engineer, Ring",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10391296/software-development-engineer-ring",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-14T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "b0dbb9088a1d1dd519f1e05eee11aba09f30291f962ac3c094ac500811ee4002"
+    },
+    {
+      "id": "10403067",
+      "title": "Software Development Engineer, Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10403067/software-development-engineer-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-24T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "91b8db3a00eb8c52efd7225e2b39011c2c2efc4cfc436e577fd211801feb7c31"
+    },
+    {
+      "id": "10380294",
+      "title": "Software Development Engineer, Ring Cloud Computer Vision",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10380294/software-development-engineer-ring-cloud-computer-vision",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "e303a4859febc364c227892180a562ab42d9d96659f543d2c3673a49c53d685e"
+    },
+    {
+      "id": "3179956",
+      "title": "Software Development Engineer, Ring Cloud Computer Vision",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3179956/software-development-engineer-ring-cloud-computer-vision",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-12T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "e303a4859febc364c227892180a562ab42d9d96659f543d2c3673a49c53d685e"
+    },
+    {
+      "id": "10401419",
+      "title": "Software Development Engineer, Ring Operations",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10401419/software-development-engineer-ring-operations",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-23T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "c3403b6572be2ae5edaf942d3fcb2220f4aaffca12412a04dfa907f16e72866a"
+    },
+    {
+      "id": "10398489",
+      "title": "Software Development Engineer, S3",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10398489/software-development-engineer-s3",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-21T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "b06dba4993436eeaedbe3636ab9670a2b418959de74801b1c31a5fa1d3efa18c"
+    },
+    {
+      "id": "10406711",
+      "title": "Software Development Engineer, Veeqo",
+      "company": "Veeqo Limited",
+      "locations": [
+        "Swansea, Wales, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10406711/software-development-engineer-veeqo",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-29T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "3b266837ec083d158c61a8ebe01d40e482df013d8b09bff3f222ad6f03280106"
+    },
+    {
+      "id": "10405001",
+      "title": "Software Development Manager - AWS DNS, AWS Infrastructure DNS",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10405001/software-development-manager-aws-dns-aws-infrastructure-dns",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-28T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "6018bdfe617345ed9139545932e8dec2755ecc2a0cfb64e15c93618607a19aea"
+    },
+    {
+      "id": "3152883",
+      "title": "Software Development Manager III, Simple Email Service",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3152883/software-development-manager-iii-simple-email-service",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-01-05T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "8a7c0d52459cc65c179451385ee03c671f1525048cdd315223714ef0e60fe4b6"
+    },
+    {
+      "id": "3198828",
+      "title": "Software Development Manager, AWS CloudFront",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3198828/software-development-manager-aws-cloudfront",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-06T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "fb30bdb4a6744dd5c7bbf29b639447fa20e4d72cd8440ea458abf8d85f900e7b"
+    },
+    {
+      "id": "3181980",
+      "title": "Software Development Manager, AWS Core Networking",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3181980/software-development-manager-aws-core-networking",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-02-16T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "301a2ee6b8ca769afad8cfb0b54005ab2b766d4b75c6ec01139e5a2de293337a"
+    },
+    {
+      "id": "3195963",
+      "title": "Software Development Manager, ICON",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3195963/software-development-manager-icon",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-04T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "60a26d52937602752e7a042af3045ffe88f12e09b572e23bc7935587ce037d28"
+    },
+    {
+      "id": "10371475",
+      "title": "Software Development Manager, Network Monitoring and Remediation",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10371475/software-development-manager-network-monitoring-and-remediation",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-19T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "2693bac0e55ff4ecbfb8b4e9311d57cbeedb283580e7302b63d6c3972e11c681"
+    },
+    {
+      "id": "10376877",
+      "title": "Software Development Manager, Prime Video \u0026 Studios Core Tech",
+      "company": "Amazon Development Centre (London) Limited",
+      "locations": [
+        "London, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10376877/software-development-manager-prime-video-studios-core-tech",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "eed8833c470db2a3d58f664ae909e1a03f078cb9c27d351401337e096e64e50e"
+    },
+    {
+      "id": "3159519",
+      "title": "Software Development Manager, Ring",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
+      "locations": [
+        "Gdansk, Pomeranian Voivodeship, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3159519/software-development-manager-ring",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-01-14T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "6a03fc578534f9d93ea7740cbc5609abc9d17f708fd1ea5f69378d8407c87caa"
+    },
+    {
+      "id": "3169843",
+      "title": "Software Engineer, Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3169843/software-engineer-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-01-29T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "e5997064d81b355ac3af12c6fccad70b65603e2527acd2c7c47900cf188ac24b"
+    },
+    {
+      "id": "3199237",
+      "title": "Solutions Architect, Public Sector",
+      "company": "AWS EMEA SARL (Poland Branch)",
+      "locations": [
+        "Warsaw, Woj. Mazowieckie, POL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3199237/solutions-architect-public-sector",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-09T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "33085b8ceb6223ec0339e8aa418d743eb1ca8491b92d62c1381edc8b7fb6898a"
+    },
+    {
+      "id": "10382761",
+      "title": "Sr. Manager, Software Dev, Next-Gen Security Automation",
+      "company": "Amazon UK Services Ltd.",
+      "locations": [
+        "London, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10382761/sr-manager-software-dev-next-gen-security-automation",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "cf85c8b9e536843fe9eacbe07e0e92c134bb9273ad89152bde0fa7d102ee5619"
+    },
+    {
+      "id": "10379544",
+      "title": "Sr. Software Dev Engineer, Amazon CloudFront (Routing Dataplane)",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10379544/sr-software-dev-engineer-amazon-cloudfront-routing-dataplane",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "8abf1cdac0a9d1bc49e4f912b03c12cfae2efa2b1dfee0a1b30fa163c6d1bbc7"
+    },
+    {
+      "id": "10383246",
+      "title": "Sr. Software Dev Engineer, AWS Scalable Intent Driven Routing (SIDR)",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10383246/sr-software-dev-engineer-aws-scalable-intent-driven-routing-sidr",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "02b6b2c066262a05b13eff3cbe220f87c3d4ce9cc61204225c42389473dc6996"
     },
     {
       "id": "3184840",
@@ -140,7 +1311,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-02-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
       "isActive": true,
       "contentHash": "9e7d50b616b5d77f80cf79e63832d500ddf06e73aa4a8c314f061d79d30188ee"
     },
@@ -156,9 +1327,25 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-02-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
       "isActive": true,
       "contentHash": "47b35641b2c7522ee5358260c5cc378415e3fcff1758a6924ed318ef2524f20e"
+    },
+    {
+      "id": "10394511",
+      "title": "Systems Development Manager",
+      "company": "Amazon EU SARL (UK Branch)",
+      "locations": [
+        "London, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10394511/systems-development-manager",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "a09ed6e11a70266ed4ae0381b1ee8f573d4ad55656d13b2f695c9e68503bfe29"
     },
     {
       "id": "3108181",
@@ -172,9 +1359,41 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-10-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
       "isActive": true,
       "contentHash": "0cca613ac9d361c53331e36f437cd573b86f98f77b3bf2238d35bd0a12914d23"
+    },
+    {
+      "id": "10403738",
+      "title": "Systems Engineer, AWS",
+      "company": "AWS EMEA SARL (UK Branch)",
+      "locations": [
+        "London, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10403738/systems-engineer-aws",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-27T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "65209a190cdbb4d07ab65ec4096a5ef9bb65af980ca8b803fc1da8c8e00028dc"
+    },
+    {
+      "id": "3087196",
+      "title": "Systems Engineer, AWS",
+      "company": "AWS EMEA SARL (UK Branch)",
+      "locations": [
+        "London, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3087196/systems-engineer-aws",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2025-09-18T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
+      "isActive": true,
+      "contentHash": "65209a190cdbb4d07ab65ec4096a5ef9bb65af980ca8b803fc1da8c8e00028dc"
     },
     {
       "id": "3153222",
@@ -188,59 +1407,9 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-01-06T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-29T15:01:55.1509040\u002B00:00",
+      "lastSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
       "isActive": true,
       "contentHash": "caec7a2f71ed52bd67a2dea3022069b3edd6959668ab1d665a2b1b0a53839f4b"
-    },
-    {
-      "id": "3072042",
-      "title": "2026 Software Dev Engineer Intern - Ireland",
-      "company": "Amazon Development Centre Ireland Limited - D94",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3072042/2026-software-dev-engineer-intern-ireland",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=20\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-09-30T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "daf63aefd3d370120810336d926679b59cc17a21db1332bc3041432f373d0113"
-    },
-    {
-      "id": "3072061",
-      "title": "2026 Software Dev Engineer Intern - UK",
-      "company": "Amazon UK Services Ltd.",
-      "locations": [
-        "Cambridge, England, GBR",
-        "Edinburgh, Scotland, GBR",
-        "London, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3072061/2026-software-dev-engineer-intern-uk",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-09-03T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "81ba44cc2a7c40335f31f732a988d5af967a1f4b04eb458dbbec35725f5be998"
-    },
-    {
-      "id": "3115258",
-      "title": "Application Builder, Ring",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3115258/application-builder-ring",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-10-24T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "5ff317024a9203e16f75df3faa35d45ba513d3b7aab5f4e315c162b41668db9e"
     },
     {
       "id": "3162712",
@@ -404,54 +1573,6 @@
       "contentHash": "b811b0c1e8e6395f206f00d8fa88471a6da4d4cb9608007b1237ded407e2d740"
     },
     {
-      "id": "10379245",
-      "title": "Drone Firmware Software Dev Engineer, Ring Robotics Platform Engineering",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10379245/drone-firmware-software-dev-engineer-ring-robotics-platform-engineering",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "d1aaaf5fd4f8245abf818572336cb1b2db8d10c3e7fb31a953eb04cd6b86a090"
-    },
-    {
-      "id": "3203075",
-      "title": "Embedded Software Engineer II, Ring",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3203075/embedded-software-engineer-ii-ring",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-12T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "13138e3d1b3b5b49d35ba729d69f846c4f4f7a1ef6ab7dec6faa75ede079fa16"
-    },
-    {
-      "id": "3201659",
-      "title": "Embedded Software Engineer, Ring",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3201659/embedded-software-engineer-ring",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-11T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "9c329af9be4ddc8069aa62b22e79c946d1de71569be45369d2630c4bfa0b5c05"
-    },
-    {
       "id": "3180613",
       "title": "GenAI/Agentic Sr. Customer Solutions Manager, EMEA ISV CSMs",
       "company": "AWS EMEA SARL (UK Branch)",
@@ -498,22 +1619,6 @@
       "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
       "isActive": false,
       "contentHash": "521405cdb79e7329d587e0673ed7ae84c5ce316dc87ba316ab384e1967ecd738"
-    },
-    {
-      "id": "10392611",
-      "title": "ITS Systems Dev Eng I (CIS), Corporate Infrastructure Services, IT, Corporate Infrastructure Services, IT",
-      "company": "Amazon UK Services Ltd.",
-      "locations": [
-        "Edinburgh, Scotland, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10392611/its-systems-dev-eng-i-cis-corporate-infrastructure-services-it-corporate-infrastructure-services-it",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-15T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "916136a910c15c73b8783bee231a9a6534c970c1c4824d70e59f59ef1a9a72d0"
     },
     {
       "id": "3190398",
@@ -613,38 +1718,6 @@
       "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
       "isActive": false,
       "contentHash": "d1ba1108b15f3439b6e0e29c58a994f70822bde79b691fc4ecc2ab29ca50769c"
-    },
-    {
-      "id": "3013604",
-      "title": "Principal Software Development Engineer , Ring Device Software",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3013604/principal-software-development-engineer-ring-device-software",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-06-19T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "6dea028c8639a4cf703a0b2c34a25ba01a5c5850d4786149fb3d8276aac9b8ad"
-    },
-    {
-      "id": "3187273",
-      "title": "Principal Software Engineer, Amazon DynamoDB",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3187273/principal-software-engineer-amazon-dynamodb",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=20\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-23T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "c923e799b026c9fcd9ea2ddb0324da3a32c5cdf9042992ab170bb678cc3bffcd"
     },
     {
       "id": "3192818",
@@ -825,22 +1898,6 @@
       "contentHash": "1036d4256e322632cb7963156050b6cf8e866ed33089601ac93f4b96c4dcc48c"
     },
     {
-      "id": "3201538",
-      "title": "Senior Embedded Software Engineer, Ring",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3201538/senior-embedded-software-engineer-ring",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-10T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "65e92f58bd41d8255b8be4979d0be18da7924bea007738102448b42c04931a70"
-    },
-    {
       "id": "10382820",
       "title": "Senior Partner Solutions Architect, End User Computing, EMEA, Applied AI Solutions Partner GTM",
       "company": "AWS EMEA SARL (UK Branch)",
@@ -873,22 +1930,6 @@
       "contentHash": "0d97b6b03ca22215bebfb6c8f8742609a9e70197d4104797e7655bb4182f9fb3"
     },
     {
-      "id": "3144664",
-      "title": "Senior SAP Solutions Architect, AGS Specialists, Europe Central",
-      "company": "AWS EMEA SARL (Switzerland Branch)",
-      "locations": [
-        "Zurich, Zurich, CHE"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3144664/senior-sap-solutions-architect-ags-specialists-europe-central",
-      "requestedLocation": "Switzerland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-12-17T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "4b84feb8a5dbbfcc9c865acbcb7e8c41b7a00f2acd7f6917591f17dec1b1b98e"
-    },
-    {
       "id": "10376470",
       "title": "Senior Software Dev Manager, DynamoDB",
       "company": "Amazon Development Centre Ireland Limited",
@@ -903,87 +1944,6 @@
       "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
       "isActive": false,
       "contentHash": "51e0d1261112357b8a44d939b4fc84f7456db10ba74c5e3d24886ce6a0b3bcbd"
-    },
-    {
-      "id": "3163019",
-      "title": "Senior Software Development Engineer - Ring AI",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3163019/senior-software-development-engineer-ring-ai",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-01-21T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "7f93a4d6e3e4e46887c3e60b952533567302fbe66fda8c90399f35d91a3d22b3"
-    },
-    {
-      "id": "10379256",
-      "title": "Senior Software Engineer , Ring",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10379256/senior-software-engineer-ring",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "7ab3a9a3e174fc1eb04563ccb056cd4a65c22fa82aa2aa4d580c53e1129504fc"
-    },
-    {
-      "id": "3169837",
-      "title": "Senior Software Engineer, Ring",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3169837/senior-software-engineer-ring",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-01-29T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "fbb6702e3759316f94a8c1c7cddb60c28b49bec38fe07500ab8dd92d6f9f936e"
-    },
-    {
-      "id": "3189399",
-      "title": "Senior Software Engineer, Ring",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3189399/senior-software-engineer-ring",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-25T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "fbb6702e3759316f94a8c1c7cddb60c28b49bec38fe07500ab8dd92d6f9f936e"
-    },
-    {
-      "id": "3195588",
-      "title": "Senior Software Engineer, Speech MLOps",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o - C35",
-      "locations": [
-        "Cracow, Lesser Poland Voivodeship, POL",
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3195588/senior-software-engineer-speech-mlops",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-04T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "2550dea4ee483403a8e1aa9ba76db068ae28d3adf22d5025d94dd23fa5309d72"
     },
     {
       "id": "3167305",
@@ -1050,22 +2010,6 @@
       "contentHash": "de4fbcdedc4d1926e17c87c7f620c3c3f691551987129f45669cf0b53a68dece"
     },
     {
-      "id": "3178571",
-      "title": "Senior Specialist Solution Architect - Databases, AGS Specialists, Europe Central",
-      "company": "AWS EMEA SARL (Switzerland Branch)",
-      "locations": [
-        "Zurich, Zurich, CHE"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3178571/senior-specialist-solution-architect-databases-ags-specialists-europe-central",
-      "requestedLocation": "Switzerland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-11T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "fb215385c37e8e0045b495c61e56c79bd3958d28bea8e4d9fd8b3808f901c066"
-    },
-    {
       "id": "3204410",
       "title": "Senior Technical Program Manager, Network Monitoring",
       "company": "Amazon Development Centre Ireland Limited",
@@ -1080,22 +2024,6 @@
       "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
       "isActive": false,
       "contentHash": "e87f830e825f1178ce7a2c269330b6cafb29f1d8a03ba8d9953d127d35ebc4e8"
-    },
-    {
-      "id": "3150343",
-      "title": "Senior Worldwide Partner Specialist Solutions Architect, Amazon Connect",
-      "company": "AWS EMEA SARL (UK Branch)",
-      "locations": [
-        "London, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3150343/senior-worldwide-partner-specialist-solutions-architect-amazon-connect",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-12-30T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "d1500e52f3133fab30d02027ec342278be14e7f022d9630877c40b31ac20f764"
     },
     {
       "id": "3081652",
@@ -1131,134 +2059,6 @@
       "contentHash": "c225a0ed6855fed6f9adfb564381eb284d77a22cb81b248ef9cdc402c4f2433f"
     },
     {
-      "id": "3125289",
-      "title": "Software Dev Engineer Internship - AI",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3125289/software-dev-engineer-internship-ai",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-11-27T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "fb0f208c43f5747ead941cca7b48d497ed11a895379eb2f62982ee31e1b75416"
-    },
-    {
-      "id": "10388013",
-      "title": "Software Dev Engineer, AWS Scalable Intent Driven Routing (SIDR)",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10388013/software-dev-engineer-aws-scalable-intent-driven-routing-sidr",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=20\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-09T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "63c804b8a3075b3c38bd97940dfb9f3062d7d53ee16d3f8552f53df48d2d3705"
-    },
-    {
-      "id": "10388814",
-      "title": "Software Development Engineer - Elasticache, AWS ElastiCache",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10388814/software-development-engineer-elasticache-aws-elasticache",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-10T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "9ba8b49bc97fd1604dc4e9131da8ebfaf030c013d02c747173c58beefca45e50"
-    },
-    {
-      "id": "10383158",
-      "title": "Software Development Engineer - Ring AI",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10383158/software-development-engineer-ring-ai",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "3f126c60be86f4965bc5b9b0270a7b12233a3b3c4c184114a359784bc7c58397"
-    },
-    {
-      "id": "3123145",
-      "title": "Software Development Engineer - Test Automation, Amazon Camera SDK",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3123145/software-development-engineer-test-automation-amazon-camera-sdk",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-11-07T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "767ab585497fea2578070003f1f3b17331caa5b4a4ebc34d1fa060c95c1512e9"
-    },
-    {
-      "id": "10393740",
-      "title": "Software Development Engineer II, Workforce Solutions",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10393740/software-development-engineer-ii-workforce-solutions",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "27cc984f4de6887e48afe40e25311256e1c7626eecf14ce43bcc4a0e952bffa9"
-    },
-    {
-      "id": "3119044",
-      "title": "Software Development Engineer \u2013 2026",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o - C35",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3119044/software-development-engineer-2026",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-10-31T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "87fce4d966118777d99b6d0762c1dd1039878914c0dd46d4eca273c3de626940"
-    },
-    {
-      "id": "3172080",
-      "title": "Software Development Engineer, Alexa",
-      "company": "Amazon Corporate Services Poland Sp. z o.o.",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3172080/software-development-engineer-alexa",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-02T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "ee5374f92859c7a1090608c48a1078aacdb4d95970af7b7dfbc030f3a4d21735"
-    },
-    {
       "id": "10396778",
       "title": "Software Development Engineer, Alexa AI",
       "company": "AMZN Dev Cntr Poland sp. z.o.o",
@@ -1275,102 +2075,6 @@
       "contentHash": "4d0d5820f026d5ab7f57b898a3cb35bb723ee85eb62dfd79e4c9a4d1fb29e6c9"
     },
     {
-      "id": "3138000",
-      "title": "Software Development Engineer, Alexa AI",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3138000/software-development-engineer-alexa-ai",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-12-05T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "4d0d5820f026d5ab7f57b898a3cb35bb723ee85eb62dfd79e4c9a4d1fb29e6c9"
-    },
-    {
-      "id": "3196928",
-      "title": "Software Development Engineer, Alexa Edge AI",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3196928/software-development-engineer-alexa-edge-ai",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-05T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "91e51d01101e3a64d93b66ea7c5f9ce25dfb81c4271a3fa2ddb8030e9346bb00"
-    },
-    {
-      "id": "3194784",
-      "title": "Software Development Engineer, Amazon",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Warsaw, Woj. Mazowieckie, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3194784/software-development-engineer-amazon",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-03T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "8a4de646dfda0d32d6d3dfcc2e686d99d9051082fbb5fb6acbe79d17763110ee"
-    },
-    {
-      "id": "10396890",
-      "title": "Software Development Engineer, Amazon Optics",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10396890/software-development-engineer-amazon-optics",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-20T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "5e2e4808bac434dc2457d29d472a170336908afdeaf377584bb0ad6ea18be633"
-    },
-    {
-      "id": "3184252",
-      "title": "Software Development Engineer, Amazon Optics",
-      "company": "Amazon Web Services EMEA SARL (Irish Branch)",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3184252/software-development-engineer-amazon-optics",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-18T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "0222e42a93b45023c9180d9fe807421cad4a68589da7a38c420c9c3dc797762f"
-    },
-    {
-      "id": "3184253",
-      "title": "Software Development Engineer, Amazon Optics",
-      "company": "Amazon Web Services EMEA SARL (Irish Branch)",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3184253/software-development-engineer-amazon-optics",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-18T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "0222e42a93b45023c9180d9fe807421cad4a68589da7a38c420c9c3dc797762f"
-    },
-    {
       "id": "10387406",
       "title": "Software Development Engineer, AWS Infrastructure Security",
       "company": "Amazon Development Centre Ireland Limited - D94",
@@ -1385,102 +2089,6 @@
       "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
       "isActive": false,
       "contentHash": "5f1a2332acf72994ce7d79e3a36c9dad95574e36d452b1c52d684f29c10d4238"
-    },
-    {
-      "id": "3186987",
-      "title": "Software Development Engineer, AWS Security",
-      "company": "Amazon Web Services EMEA SARL (Irish Branch)",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3186987/software-development-engineer-aws-security",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-23T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "018f92ad051fa358d864358c085cc92596d0d5e9e71059671d4dab5d83d06cdb"
-    },
-    {
-      "id": "3167862",
-      "title": "Software Development Engineer, AWS Security, Software Engineering, AWS Security Operations Centre (SOC)",
-      "company": "Amazon Web Services EMEA SARL (Irish Branch)",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3167862/software-development-engineer-aws-security-software-engineering-aws-security-operations-centre-soc",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-01-27T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "824689c0acf20032cfdec5214178910818318af816985a671c61d1cc6e167e4f"
-    },
-    {
-      "id": "10393903",
-      "title": "Software Development Engineer, Business Information Governance",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10393903/software-development-engineer-business-information-governance",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "05148e7b1361ae60a5e254d4e9d2d82d1ea62019c8a72ea2af061e3e0f758bb4"
-    },
-    {
-      "id": "3190539",
-      "title": "Software Development Engineer, Core Network",
-      "company": "Amazon Data Services Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3190539/software-development-engineer-core-network",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-26T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "e6af6a30131dc17478c5b2937993bab9f78d5c650f445dbd032385a95b8fa2e9"
-    },
-    {
-      "id": "3185344",
-      "title": "Software Development Engineer, Firecracker",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3185344/software-development-engineer-firecracker",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-19T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "365e05fb0ae76680f5f8fcda1c4784b9a23f34fa31d9e67f673b83eecc75367f"
-    },
-    {
-      "id": "3185371",
-      "title": "Software Development Engineer, Firecracker",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3185371/software-development-engineer-firecracker",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-19T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "365e05fb0ae76680f5f8fcda1c4784b9a23f34fa31d9e67f673b83eecc75367f"
     },
     {
       "id": "3206549",
@@ -1513,214 +2121,6 @@
       "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
       "isActive": false,
       "contentHash": "43712323acfbb103068aa4328967c64952edd7740d7ccc6525116690b518e9e2"
-    },
-    {
-      "id": "10380292",
-      "title": "Software Development Engineer, RBKS OpEx",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10380292/software-development-engineer-rbks-opex",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "1b4738832ff4845aa2526af325f011e0aa34fd95026a3696ea8b332dcc91927e"
-    },
-    {
-      "id": "10383155",
-      "title": "Software Development Engineer, Ring",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10383155/software-development-engineer-ring",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "b0dbb9088a1d1dd519f1e05eee11aba09f30291f962ac3c094ac500811ee4002"
-    },
-    {
-      "id": "10391296",
-      "title": "Software Development Engineer, Ring",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10391296/software-development-engineer-ring",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-14T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "b0dbb9088a1d1dd519f1e05eee11aba09f30291f962ac3c094ac500811ee4002"
-    },
-    {
-      "id": "10380294",
-      "title": "Software Development Engineer, Ring Cloud Computer Vision",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10380294/software-development-engineer-ring-cloud-computer-vision",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "e303a4859febc364c227892180a562ab42d9d96659f543d2c3673a49c53d685e"
-    },
-    {
-      "id": "3179956",
-      "title": "Software Development Engineer, Ring Cloud Computer Vision",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3179956/software-development-engineer-ring-cloud-computer-vision",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-12T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "e303a4859febc364c227892180a562ab42d9d96659f543d2c3673a49c53d685e"
-    },
-    {
-      "id": "3152883",
-      "title": "Software Development Manager III, Simple Email Service",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3152883/software-development-manager-iii-simple-email-service",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-01-05T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "8a7c0d52459cc65c179451385ee03c671f1525048cdd315223714ef0e60fe4b6"
-    },
-    {
-      "id": "3198828",
-      "title": "Software Development Manager, AWS CloudFront",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3198828/software-development-manager-aws-cloudfront",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-06T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "fb30bdb4a6744dd5c7bbf29b639447fa20e4d72cd8440ea458abf8d85f900e7b"
-    },
-    {
-      "id": "3181980",
-      "title": "Software Development Manager, AWS Core Networking",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3181980/software-development-manager-aws-core-networking",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-02-16T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "301a2ee6b8ca769afad8cfb0b54005ab2b766d4b75c6ec01139e5a2de293337a"
-    },
-    {
-      "id": "3195963",
-      "title": "Software Development Manager, ICON",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3195963/software-development-manager-icon",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-04T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "60a26d52937602752e7a042af3045ffe88f12e09b572e23bc7935587ce037d28"
-    },
-    {
-      "id": "10371475",
-      "title": "Software Development Manager, Network Monitoring and Remediation",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10371475/software-development-manager-network-monitoring-and-remediation",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-19T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "2693bac0e55ff4ecbfb8b4e9311d57cbeedb283580e7302b63d6c3972e11c681"
-    },
-    {
-      "id": "10376877",
-      "title": "Software Development Manager, Prime Video \u0026 Studios Core Tech",
-      "company": "Amazon Development Centre (London) Limited",
-      "locations": [
-        "London, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10376877/software-development-manager-prime-video-studios-core-tech",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "eed8833c470db2a3d58f664ae909e1a03f078cb9c27d351401337e096e64e50e"
-    },
-    {
-      "id": "3159519",
-      "title": "Software Development Manager, Ring",
-      "company": "AMZN Dev Cntr Poland sp. z.o.o",
-      "locations": [
-        "Gdansk, Pomeranian Voivodeship, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3159519/software-development-manager-ring",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-01-14T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "6a03fc578534f9d93ea7740cbc5609abc9d17f708fd1ea5f69378d8407c87caa"
-    },
-    {
-      "id": "3169843",
-      "title": "Software Engineer, Ring",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3169843/software-engineer-ring",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-01-29T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "e5997064d81b355ac3af12c6fccad70b65603e2527acd2c7c47900cf188ac24b"
     },
     {
       "id": "3189431",
@@ -1769,22 +2169,6 @@
       "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
       "isActive": false,
       "contentHash": "98dd153a41c02b17e442149b9d7bfae5c9e61dd4f46c6fdf789627075868ed21"
-    },
-    {
-      "id": "3199237",
-      "title": "Solutions Architect, Public Sector",
-      "company": "AWS EMEA SARL (Poland Branch)",
-      "locations": [
-        "Warsaw, Woj. Mazowieckie, POL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3199237/solutions-architect-public-sector",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-09T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "33085b8ceb6223ec0339e8aa418d743eb1ca8491b92d62c1381edc8b7fb6898a"
     },
     {
       "id": "3167437",
@@ -1947,38 +2331,6 @@
       "contentHash": "43981d71c7f96ecc13343340c5cde6842cd3a120a85fd5c1cfe787511a3aa06c"
     },
     {
-      "id": "10379544",
-      "title": "Sr. Software Dev Engineer, Amazon CloudFront (Routing Dataplane)",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10379544/sr-software-dev-engineer-amazon-cloudfront-routing-dataplane",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=30\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "8abf1cdac0a9d1bc49e4f912b03c12cfae2efa2b1dfee0a1b30fa163c6d1bbc7"
-    },
-    {
-      "id": "10383246",
-      "title": "Sr. Software Dev Engineer, AWS Scalable Intent Driven Routing (SIDR)",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10383246/sr-software-dev-engineer-aws-scalable-intent-driven-routing-sidr",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "02b6b2c066262a05b13eff3cbe220f87c3d4ce9cc61204225c42389473dc6996"
-    },
-    {
       "id": "3205281",
       "title": "Sr. Technical Program Manager, Benefits Experience and Technology (BXT)",
       "company": "Amazon Development Centre Ireland Limited",
@@ -2139,22 +2491,6 @@
       "contentHash": "3582cd3e775510179960069b6937bc52950fef9d0a72c93cccb1be0a9d2ebb3f"
     },
     {
-      "id": "10394511",
-      "title": "Systems Development Manager",
-      "company": "Amazon EU SARL (UK Branch)",
-      "locations": [
-        "London, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10394511/systems-development-manager",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "a09ed6e11a70266ed4ae0381b1ee8f573d4ad55656d13b2f695c9e68503bfe29"
-    },
-    {
       "id": "10379908",
       "title": "Systems Engineer, Amazon Foundational Security Services",
       "company": "Amazon Development Centre Ireland Limited",
@@ -2169,22 +2505,6 @@
       "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
       "isActive": false,
       "contentHash": "d0b50e2c622d6b51a095d422a4f66d1dedc49e2363fd8b4c4fefad86f40e19cc"
-    },
-    {
-      "id": "3087196",
-      "title": "Systems Engineer, AWS",
-      "company": "AWS EMEA SARL (UK Branch)",
-      "locations": [
-        "London, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3087196/systems-engineer-aws",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2025-09-18T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "isActive": false,
-      "contentHash": "65209a190cdbb4d07ab65ec4096a5ef9bb65af980ca8b803fc1da8c8e00028dc"
     },
     {
       "id": "3140287",
