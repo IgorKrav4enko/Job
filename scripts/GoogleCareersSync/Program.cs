@@ -3318,9 +3318,15 @@ static async Task<string> PostMetaGraphqlWithCurlAsync(
     startInfo.ArgumentList.Add("--silent");
     startInfo.ArgumentList.Add("--show-error");
     startInfo.ArgumentList.Add("--compressed");
-    startInfo.ArgumentList.Add("https://www.metacareers.com/api/graphql/");
+    startInfo.ArgumentList.Add("https://www.metacareers.com/graphql");
     startInfo.ArgumentList.Add("-H");
     startInfo.ArgumentList.Add("content-type: application/x-www-form-urlencoded");
+    startInfo.ArgumentList.Add("-H");
+    startInfo.ArgumentList.Add("origin: https://www.metacareers.com");
+    startInfo.ArgumentList.Add("-H");
+    startInfo.ArgumentList.Add("x-asbd-id: 359341");
+    startInfo.ArgumentList.Add("-H");
+    startInfo.ArgumentList.Add("x-fb-friendly-name: CareersJobSearchResultsDataQuery");
     startInfo.ArgumentList.Add("-H");
     startInfo.ArgumentList.Add($"x-fb-lsd: {lsdToken}");
     startInfo.ArgumentList.Add("-H");
@@ -3516,7 +3522,6 @@ static List<MetaSearchResult> ParseMetaGraphqlSearchResults(
     }
 
     var results = new List<MetaSearchResult>();
-    AddMetaGraphqlJobs(results, container, "featured_jobs", searchUrl, requestedLocation);
     AddMetaGraphqlJobs(results, container, "all_jobs", searchUrl, requestedLocation);
 
     return results
