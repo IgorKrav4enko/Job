@@ -35,6 +35,9 @@ jobs:
           GOOGLE_CAREERS_LOCATIONS: ${{ vars.GOOGLE_CAREERS_LOCATIONS }}
           GOOGLE_CAREERS_SEARCH_TERM: ${{ vars.GOOGLE_CAREERS_SEARCH_TERM }}
           GOOGLE_CAREERS_MAX_PAGES: ${{ vars.GOOGLE_CAREERS_MAX_PAGES }}
+          MICROSOFT_CAREERS_LIVE: "true"
+          NVIDIA_CAREERS_LIVE: "true"
+          AMAZON_JOBS_LIVE: "true"
         run: |
           dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- collect
           dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- collect-meta
