@@ -1,6 +1,77 @@
 {
   "jobs": [
     {
+      "id": "103047875755156166",
+      "title": "AI/ML Senior Software Engineer, Data Optimization and Platform",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/103047875755156166-aiml-senior-software-engineer-data-optimization-and-platform?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-15T23:21:43.0514110\u002B00:00",
+      "lastSeenAt": "2026-04-30T08:36:21.5807671\u002B00:00",
+      "removedAt": "2026-04-30T19:49:33.5597501\u002B00:00",
+      "removedInRunId": "2026-04-30T19-49-33Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckTYTAi1jB2tsMnZWXvIoptoVFx6bE4pXpJyanMbqRcjOEjsACxwdTO-o4KrFuec8MEJ-xZrhyk0Ciy1dZdG40wGBpz6zt220qjkefhShg5dmKceqz4l9iePZGWr1WQ%3D%3D_V2\u0026loc=GB\u0026title=AI/ML\u002BSenior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle Cloud\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google Cloud\u0027s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. You will anticipate our customer needs and be empowered to act like an owner, take action and innovate. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EIn this role, you will be a part a team operating in the Gemini Era, where AI is profoundly data-centric, the \u201Cquality\u201D data used for training, fine-tuning, or Retrieval-Augmented Generation (RAG) has greater impact one end product performance than almost anything else.\u003Cbr\u003E\u003Cbr\u003EYour mission is to improve the time to model quality for users, achieved  by bringing Data Optimization techniques to a broad audience through integrated tools and platforms. In this role, the tooling automatically and efficiently applies state-of-the art data optimization techniques, and runs structured ablations to demonstrate to users which ones work best for their use case, and deliver insights on how to improve further. You will collaborate with key product teams across Google.\u003Cbr\u003E\u003C/p\u003E\u003Cp\u003EThe ML, Systems, \u0026 Cloud AI (MSCA) organization at Google designs, implements, and manages the hardware, software, machine learning, and systems infrastructure for all Google services (Search, YouTube, etc.) and Google Cloud. Our end users are Googlers, Cloud customers and the billions of people who use Google services around the world. \u003C/p\u003E\u003Cp\u003EWe prioritize security, efficiency, and reliability across everything we do - from developing our latest TPUs to running a global network, while driving towards shaping the future of hyperscale computing. Our global impact spans software and hardware, including Google Cloud\u2019s Vertex AI, the leading AI platform for bringing Gemini models to enterprise customers.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EScale state-of-the-art data optimization techniques (including those from Google Research) to enhance the performance and quality of ML models, while heavily shaping the technical direction of data platforms for model tuning across multiple product areas.\u003C/li\u003E\n\u003Cli\u003EEstablish technical relationships with multiple product areas to define strategy and drive technical directions.\u003C/li\u003E\n\u003Cli\u003ELeverage existing assets and state-of-the-art techniques from Google Research to accelerate model tuning velocity for teams like Bard and other product areas fine-tuning Gemini models.\u003C/li\u003E\n\u003Cli\u003ECollaborate with Research teams and ML practitioners to identify, build and iterate on engineering tools, processing pipelines, data optimization techniques, integration with existing workflows, user interfaces and supporting users adoption.\u003C/li\u003E\n\u003Cli\u003EApply research and enage directly with users to advance Google\u2019s goal of making AI helpful for everyone.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with data structures and algorithms in Python.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with one or more of the following: Speech/audio (e.g., technology duplicating and responding to the human voice), reinforcement learning (e.g., sequential decision making), ML infrastructure, or specialization in another ML field.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with ML infrastructure (e.g., model deployment, model evaluation, data processing, debugging).\u003C/li\u003E\n\u003Cli\u003EExperience with data analysis, data optimizations and data evaluations.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or a related technical field.\u003C/li\u003E\n\u003Cli\u003E5 years of experience working in a complex, matrixed organization.\u003C/li\u003E\n\u003Cli\u003EExperience in Gen AI.\u003C/li\u003E\n\u003Cli\u003EExperience in data optimization and data platforms.\u003C/li\u003E\n\u003Cli\u003EExperience with research to production.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "123 Buckingham Palace Rd, London SW1W 9SH, UK"
+          ],
+          "city": "London",
+          "postalCode": "SW1W 9SH",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-08T09:29:26.1760000\u002B00:00",
+        "2026-04-08T09:29:26.3380000\u002B00:00"
+      ]
+    },
+    {
+      "id": "73817687695729350",
+      "title": "Software Engineer, PhD, GCE Control Plane, Early Career",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/73817687695729350-software-engineer-phd-gce-control-plane-early-career?location=Poland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-04-23T19:53:32.3376480\u002B00:00",
+      "lastSeenAt": "2026-04-30T08:36:21.5807671\u002B00:00",
+      "removedAt": "2026-04-30T19:49:33.5597501\u002B00:00",
+      "removedInRunId": "2026-04-30T19-49-33Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckaNh-6Umo-Gj5LBFLn5bP0X-GCNqfKQ3dcz090-ieQNQEjsACxwdTIATJSd_P9BCIxOnvl0JiGxeeOpcqi_5u4D8btphZzQHzWofTL7qYViXTs8gUKKxE6-BDXTfTw%3D%3D_V2\u0026loc=PL\u0026title=Software\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EWe develop tools, frameworks, and release processes that empower the GCE Control Plane to efficiently develop and release high quality software.\u003C/p\u003E\u003Cp\u003EOur mission is to improve the reliability of GCE services and decrease time to ship new features to customers.\u003C/p\u003E\u003Cp\u003EGCE Control Plane manages all of google compute offerings and is in the critical path for releasing new features for 300\u002B engineers across 15\u002B teams globally.\u003C/p\u003E\u003Cp\u003EWe are expanding the engineering productivity role to scale its support to critical reliability efforts to accelerate developer engineering productivity and improve product reliability.\u003C/p\u003E\u003Cp\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign, build, and maintain integrated tooling and core infrastructure that empowers GCE engineers to rapidly develop and validate changes before they reach staging.\u003C/li\u003E\n\u003Cli\u003EPartner with development teams to support a variety of workflows using frameworks such as BCT (Big Cluster Test), GCE Dev Clusters, and the Munchkin hermetic testing environment.\u003C/li\u003E\n\u003Cli\u003EPrioritize the developer experience by maintaining a reliable, efficient, and high-performing platform.\u003C/li\u003E\n\u003Cli\u003EPromote operational excellence by implementing robust monitoring and automation.\u003C/li\u003E\n\u003Cli\u003EShape the strategic roadmap of the platform by applying Google\u0027s proprietary technology to solve the evolving requirements of GCE development.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with infrastructure automation, cloud platforms (particularly Google Cloud/GCE), CI/CD systems, or building/maintaining large-scale testing/staging environments.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003E2 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Advanced",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-23T09:30:53.0290000\u002B00:00",
+        "2026-04-23T09:30:53.2390000\u002B00:00"
+      ]
+    },
+    {
       "id": "109190501474673350",
       "title": "Research Scientist, Frontier AI, Google DeepMind",
       "company": "Google",
