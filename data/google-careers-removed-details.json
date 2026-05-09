@@ -1,6 +1,78 @@
 {
   "jobs": [
     {
+      "id": "140140223714468550",
+      "title": "Data Engineer, Data Architecture and Engineering",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/140140223714468550-data-engineer-data-architecture-and-engineering?location=Ireland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "Ireland",
+      "firstSeenAt": "2026-04-30T19:49:33.5597501\u002B00:00",
+      "lastSeenAt": "2026-05-08T19:45:05.7192391\u002B00:00",
+      "removedAt": "2026-05-09T08:10:50.3764128\u002B00:00",
+      "removedInRunId": "2026-05-09T08-10-50Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckXPrDmRwTrK6a76brTsTCwyVolw4ktBHbCLbbnHtoW7YEjsACxwdTC8jnNAlDKpZQq3NlRF0ZctsXRX4mmHuSR72NDn1ibkYBG1t8jUHRxsv8E7OCwNZ5Bc9k14GvA%3D%3D_V2\u0026loc=IE\u0026title=Data\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EThe gSO Data, Architecture, Tools and Analytics (gData) team empowers Google to make brilliant business decisions by delivering critical data infrastructure and actionable insights. Supporting the global gTech Ads organization, gData manages massive datasets to solve complex, non-routine investigative issues. Ultimately, our insights optimize operations and enhance the advertiser experience that drives the majority of Alphabet\u0027s business.\u003C/p\u003E\u003Cdiv\u003EAs a Data Engineer in gData, you will design and build the foundational data infrastructure that powers the global gTech Ads organization. You\u2019ll address complex, large-scale issues using Google\u2019s proprietary tech stack to deliver a reliable single source of truth. In this role, you will have the opportunity to architect innovative data pipelines and solutions that directly enable predictive analytics and AI-driven business decisions at scale.\u003C/div\u003E\u003Cp\u003EGoogle creates products and services that make the world a better place, and gTech\u2019s role is to help bring them to life. Our teams of trusted advisors support customers globally. Our solutions are rooted in our technical skill, product expertise, and a thorough understanding of our customers\u2019 complex needs. Whether the answer is a bespoke solution to solve a unique problem, or a new tool that can scale across Google, everything we do aims to ensure our customers benefit from the full potential of Google products.\u003Cbr\u003E\u003Cbr\u003ETo learn more about gTech, check out our \u003Ca href=\u0022https://www.youtube.com/watch?v=HcjR6ZngQcw\u0022\u003Evideo\u003C/a\u003E.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign, develop, test, and maintain reliable and scalable data pipelines and Extract, Transform, and Load (ETL)/Extract, Load, and Transform (ELT) architectures using Google\u0027s distributed data systems (e.g., advanced SQL, Python).\u003C/li\u003E\n\u003Cli\u003EContribute to the development of our data infrastructure and data platform, optimizing data models to ensure our single source of truth remains performant.\u003C/li\u003E\n\u003Cli\u003EPartner closely with cross-functional stakeholders across business and engineering teams to translate evolving analytics requirements into actionable technical data solutions.\u003C/li\u003E\n\u003Cli\u003EWork seamlessly with data scientists and business analysts to transition investigative prototypes, metrics, and models into stable, production-grade reporting environments.\u003C/li\u003E\n\u003Cli\u003EAdvocate\u00A0data quality by authoring clear technical design documents, executing code reviews, and proactively resolving complex bugs and supporting escalations.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, Information Systems, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E3 years of experience in data engineering, database querying (e.g., SQL), developing data pipelines (ETL) and data visualization (dashboards/reports).\u003C/li\u003E\n\u003Cli\u003E3 years of experience coding in one or more programming languages.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience working with data infrastructure and data models by performing exploratory queries and scripts.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience designing data pipelines, and dimensional data modeling for synch and asynch system integration and implementation using internal (e.g., Flume, etc.) and external stacks (DataFlow, Spark, etc.).\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science, Engineering, Mathematics, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E3 years of experience partnering with stakeholders (e.g., users, partners, customer), and managing stakeholders/customers.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience developing project plans and delivering projects on time within budget and scope.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience using AI technologies to augment, improve or automate the development process.\u003C/li\u003E\n\u003Cli\u003EExperience writing and maintaining ETLs which operate on a variety of structured and unstructured sources.\u003C/li\u003E\n\u003Cli\u003EExperience in large-scale distributed data processing, including familiarity with NoSQL databases.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "1 Grand Canal Plaza, Grand Canal Street Upper, Dublin, D04 HR25, Ireland"
+          ],
+          "city": "Dublin",
+          "postalCode": "D04 HR25",
+          "regionCode": "D",
+          "countryCode": "IE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-30T15:32:57.5400000\u002B00:00",
+        "2026-04-30T15:32:57.7110000\u002B00:00"
+      ]
+    },
+    {
+      "id": "113197563154178758",
+      "title": "Software Engineer, Site Reliability Engineering, Google Cloud",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/113197563154178758-software-engineer-site-reliability-engineering-google-cloud?location=Ireland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "Ireland",
+      "firstSeenAt": "2026-05-07T19:53:53.5214422\u002B00:00",
+      "lastSeenAt": "2026-05-08T19:45:05.7192391\u002B00:00",
+      "removedAt": "2026-05-09T08:10:50.3764128\u002B00:00",
+      "removedInRunId": "2026-05-09T08-10-50Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckUmFghMPM37xyFMXslMTe36Fn5bOr7ZcIRKp4HNYwnbIEjsACxwdTGgPu2v_Yt2E4Y9-C6CPngBfvLJ0ZwzOZhD1rwsqFo7Q7Ms68KgJDYCA6mw2MRNM9kXa-qPo-Q%3D%3D_V2\u0026loc=IE\u0026title=Software\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003ESite Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google Cloud\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to customer\u0027s needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance. \u003C/p\u003E\u003Cdiv\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google Cloud, while using your expertise in coding, algorithms, complexity analysis and large-scale system design. SRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\u003C/div\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EReview code developed by other engineers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\n\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\n\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality. \n\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\n\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or Engineering, or a related field.\u003C/li\u003E\n\u003Cli\u003E2 years of experience designing, analyzing, and troubleshooting large-scale distributed systems. \u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "1 Grand Canal Plaza, Grand Canal Street Upper, Dublin, D04 HR25, Ireland"
+          ],
+          "city": "Dublin",
+          "postalCode": "D04 HR25",
+          "regionCode": "D",
+          "countryCode": "IE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-07T12:30:28.8380000\u002B00:00",
+        "2026-05-07T12:30:29.2360000\u002B00:00"
+      ]
+    },
+    {
       "id": "139635774436844230",
       "title": "Data Center Services Manager, Design and Engineering",
       "company": "Google",
