@@ -18,6 +18,26 @@
       "postedAtCandidate": "2024-09-03T00:00:00.0000000\u002B00:00"
     },
     {
+      "id": "893394327177",
+      "title": "Senior GPU Networking Architect",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893394327177",
+      "locations": [
+        "Remote - Germany",
+        "Remote - Italy",
+        "Remote - Poland",
+        "Remote - UK",
+        "Switzerland, Zurich"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-05-04T19:55:12.3999864\u002B00:00",
+      "lastSeenAt": "2026-05-12T09:13:06.4843502\u002B00:00",
+      "removedAt": "2026-05-05T19:52:42.4510786\u002B00:00",
+      "removedInRunId": "2026-05-05T19-52-42Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394327177",
+      "postedAtCandidate": "2026-03-30T00:00:00.0000000\u002B00:00"
+    },
+    {
       "id": "893392964936",
       "title": "Senior Software Engineer, Real-Time Data Platform",
       "company": "NVIDIA",
@@ -268,6 +288,27 @@
       "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Remote/Senior-HPC-Cluster-Administrator---Deep-Learning-Frameworks-Infrastructure_JR2015529/apply?source=Eightfold",
       "aboutTheJobRaw": "\u003Cp\u003ENVIDIA\u0027s Deep Learning Frameworks (DLFW) Infrastructure team is looking for a deeply technical Senior HPC Cluster Administrator to lead the design, deployment, and reliability of our large-scale GPU compute clusters. These systems run the most demanding deep learning training, inference, and high-performance computing workloads in the industry \u2014 from DGX/HGX platforms to ground-breaking Grace Blackwell systems. You will drive architectural decisions across compute, networking, and storage, and partner closely with software, research, and product teams to keep our infrastructure ahead of the workloads it supports.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWhat you\u0027ll be doing:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EOwn the full lifecycle of GPU compute clusters \u2014 procurement, provisioning, configuration management, monitoring, and deprecation \u2014 across heterogeneous Linux environments (DGX, HGX, embedded systems)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDesign and scale storage solutions (NFS, Lustre, WekaFS, or equivalent) with a clear roadmap for capacity and performance growth\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ELead automation of infrastructure using modern IaC tools (Ansible, Terraform) and CI/CD pipelines (GitLab)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EManage and optimize job scheduling via Slurm, including fair-share policies, reservation management, and MIG/GPU partitioning strategies\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EMaintain and improve observability stacks (Prometheus, Grafana, DCGM) and drive proactive resolution of hardware and software incidents\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECollaborate with ML engineers and software teams to tune cluster configuration for large-scale distributed training workloads\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EEvaluate and introduce new technologies \u2014 networking fabrics (InfiniBand, NVLink, EFA/RDMA), storage tiers, container runtimes \u2014 to improve performance and reliability\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EMentor junior engineers and contribute to team-wide engineering standards\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWhat we need to see:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBS/MS in CS, EE, CE, or equivalent hands-on experience\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E5\u002B years of experience deploying and administering large-scale HPC or ML training clusters\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDeep expertise in Linux systems administration at scale\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong scripting and automation skills in Python and/or bash\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHands-on experience with Slurm (scheduling, accounting, cgroup configuration)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EProficiency with configuration management and IaC (Ansible required; Terraform a plus)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with container technologies (Docker, Apptainer/Singularity, Kubernetes)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ESolid understanding of high-speed networking (InfiniBand, RoCE, RDMA, EFA)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with distributed/parallel filesystems and storage architecture\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EAbility to own problems end-to-end and communicate clearly with engineering and management stakeholders\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWays to stand out from the crowd:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EExperience with NVIDIA GPU infrastructure tools (DCGM, nvidia-smi, MIG, NVSwitch diagnostics)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EFamiliarity with cluster management platforms (Colossus, Bright Cluster Manager, xCAT, or similar)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience supporting large-scale distributed deep learning workloads (PyTorch, JAX, Megatron)\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EKnowledge of BMC/IPMI/Redfish for out-of-band management and hardware lifecycle\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBackground in MLOps tooling or ML platform engineering\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EJoin our team of world-class engineers and be part of the groundbreaking work we do at NVIDIA. We are committed to encouraging a collaborative and inclusive environment, where every team member has the opportunity to thrive and make a significant impact!\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
       "postedAtCandidate": "2026-04-07T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893393839353",
+      "title": "Senior Networking Solution Test Engineer \u2013 AI Cluster Debugging",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893393839353",
+      "locations": [
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - Italy",
+        "Remote - Romania",
+        "Remote - Switzerland",
+        "Remote - UK"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-05-12T09:13:06.4843502\u002B00:00",
+      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-11Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393839353",
+      "postedAtCandidate": "2026-03-03T00:00:00.0000000\u002B00:00"
     },
     {
       "id": "893392140425",
