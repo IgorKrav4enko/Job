@@ -1,6 +1,77 @@
 {
   "jobs": [
     {
+      "id": "110241581977477830",
+      "title": "Software Engineer ll, Account Threats Detection, Core",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/110241581977477830-software-engineer-ll-account-threats-detection-core?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-29T19:53:50.5542139\u002B00:00",
+      "lastSeenAt": "2026-05-13T20:08:37.9723487\u002B00:00",
+      "removedAt": "2026-05-14T08:50:07.2698388\u002B00:00",
+      "removedInRunId": "2026-05-14T08-50-07Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckSnB6PzTJ0jixUItzg53wgpILiv4w6pxv-mLNOvxXq61EjsACxwdTHdoejdSYQuOa1Arb5NBjrIDDp2nBfngCFn98V9fESV_CpgzkenVMMj6HHIfmiekARdrtHRlMw%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineer\u002Bll",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EThe Core team builds the technical foundation behind Google\u2019s flagship products. We are owners and advocates for the underlying design elements, developer platforms, product components, and infrastructure at Google. These are the essential building blocks for excellent, safe, and coherent experiences for our users and drive the pace of innovation for every developer. We look across Google\u2019s products to build central solutions, break down technical barriers and strengthen existing systems. As the Core team, we have a mandate and a unique opportunity to impact important technical decisions across the company.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EBuild, optimize, and operate the ML ecosystem that powers UMAMI\u0027s transformer-based account activity models.\u003C/li\u003E\n\u003Cli\u003EImplement robust ML pipelines and agentic setup for seamless experimentation, feature engineering, training, validation, and deployment, accelerating the time-to-production for new threat detection\u0027s.\u003C/li\u003E\n\u003Cli\u003EImplement model metrics and benchmarks aiding in explainability of model behavior and Analyze models drift and identify opportunities for refinement, ensuring sustained models\u2019 accuracy and effectiveness.\u003C/li\u003E\n\u003Cli\u003ECollaborate closely with our partners, incl. Trust and Safety, to ensure a seamless adoption of UMAMI in our daily threats fighting operations.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with software development in one or more programming languages (e.g., Python, C, C\u002B\u002B, Java, JavaScript).\u003C/li\u003E\n\u003Cli\u003E1 year of experience implementing core machine learning concepts.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in computer science, machine learning, or a related field, or equivalent experience demonstrating strong software engineering fundamentals in languages like Python, C\u002B\u002B, Java, or Kotlin.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E1 year experience with large-scale distributed systems, ideally in the context of machine learning infrastructure or applications.\u003C/li\u003E\n\u003Cli\u003E1 year of experience developing and deploying machine learning models, especially deep learning or natural language processing techniques.\u003C/li\u003E\n\u003Cli\u003EExperience in the adversarial space, fraud detection, or other anti-abuse domains.\u003C/li\u003E\n\u003Cli\u003EFamiliarity with TensorFlow or similar frameworks.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-29T16:31:49.1890000\u002B00:00",
+        "2026-04-29T16:31:49.2860000\u002B00:00"
+      ]
+    },
+    {
+      "id": "135313819713839814",
+      "title": "Staff Software Engineer, Rollouts",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/135313819713839814-staff-software-engineer-rollouts?location=Ireland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "Ireland",
+      "firstSeenAt": "2026-04-23T19:53:32.3376480\u002B00:00",
+      "lastSeenAt": "2026-05-13T20:08:37.9723487\u002B00:00",
+      "removedAt": "2026-05-14T08:50:07.2698388\u002B00:00",
+      "removedInRunId": "2026-05-14T08-50-07Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckeLl3ocwM8yJsWTh3WmbIrHsvFgKnOr6Z5DpZdRMAVvyEjsACxwdTEntIoVdnWmoTQNgfgd8xWO1QeCbp4XilFtF_EHEfjmyp3GCxpq6V1JIAhBB9ZNXj-Wmyl_mgA%3D%3D_V2\u0026loc=IE\u0026title=Staff\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle Cloud\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google Cloud\u0027s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. You will anticipate our customer needs and be empowered to act like an owner, take action and innovate. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EThe Rollouts team, part of the P2020 organization and Google Production Platform, provides Google\u0027s Continuous Delivery solution. We enable teams to deploy binaries, configurations, footprint changes, Spanner schema updates, and more to production with ease, safety, speed, scalability and reliability, all while adhering to production best practice. \u003Cbr\u003E\u003Cbr\u003EAs a Senior Engineering Lead in Rollouts, you will drive innovation and build high-impact features that define the customer experience. You will build and consume telemetry and data insights to help drive decision making and outcomes that help us understand how our product is performing and guide customers to get the best out of their usage.\u003C/p\u003E\u003Cp\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EServe as a key technical decision-maker for our technology stack, defining and extending it to meet strategic goals and helping shape future direction.\u003C/li\u003E\n\u003Cli\u003EShape and drive strategic projects that empower users to observe, debug, and control their Rollouts.\u003C/li\u003E\n\u003Cli\u003EContribute to operational procedures, leading initiatives to bolster system resilience and minimize on-call toil.\u003C/li\u003E\n\u003Cli\u003EPartner with external teams and other product functions (Product Management, UX) to enhance cross-product journeys and integrations.\u003C/li\u003E\n\u003Cli\u003EServe as an expert in telemetry and metrics, defining the insights required to measure system performance and output quality.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience in software development.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience testing, and launching software products.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience with software design and architecture.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience engaging with senior-level stakeholders.\u003C/li\u003E\n\u003Cli\u003EAbility to perform effectively in high-pressure dynamic environments.\u003C/li\u003E\n\u003Cli\u003EBackground in telemetry, observability, metrics, or data science.\u003C/li\u003E\n\u003Cli\u003EA proactive mindset and strong motivation to work on challenging problems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "Clanwilliam Pl, Dublin, Ireland"
+          ],
+          "city": "Dublin",
+          "regionCode": "D",
+          "countryCode": "IE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-22T23:59:48.8950000\u002B00:00",
+        "2026-04-22T23:59:49.0510000\u002B00:00"
+      ]
+    },
+    {
       "id": "111459017301074630",
       "title": "AI Engineer, Google Cloud Consulting (English, German)",
       "company": "Google",
