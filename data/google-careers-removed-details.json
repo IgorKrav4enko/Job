@@ -1,6 +1,87 @@
 {
   "jobs": [
     {
+      "id": "101734524148163270",
+      "title": "Senior Software Engineer, Site Reliability Engineering",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/101734524148163270-senior-software-engineer-site-reliability-engineering?location=Germany\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-15T23:21:43.0514110\u002B00:00",
+      "lastSeenAt": "2026-05-15T09:24:46.1878789\u002B00:00",
+      "removedAt": "2026-05-15T19:53:37.0218980\u002B00:00",
+      "removedInRunId": "2026-05-15T19-53-37Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckXt4mjpn3at-0-Fr5It0F907hY5Lkn04EN6BanYlimNkEjsACxwdTEPqR93lm8Jhgx8mG9HeYJzRW6SXRXmYhnJdkpJqhTjA2hRzaZKyFVDTk3Ab5Yx0osLbrK9LEQ%3D%3D_V2\u0026loc=DE\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003ESite Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google Cloud\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to customer\u0027s needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance. \u003C/p\u003E\u003Cdiv\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google Cloud, while using your expertise in coding, algorithms, complexity analysis and large-scale system design. SRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\u003C/div\u003E\n\u003Cp\u003EBehind everything our users see online is the architecture built by the Technical Infrastructure team to keep it running. From developing and maintaining our data centers to building the next generation of Google platforms, we make Google\u0027s product portfolio possible. We\u0027re proud to be our engineers\u0027 engineers and love voiding warranties by taking things apart so we can rebuild them. We keep our networks up and running, ensuring our users have the best and fastest experience possible.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EEngage in and improve the whole lifecycle of services\u2014from inception and design, through to deployment, operation and refinement.\u003C/li\u003E\n\u003Cli\u003ESupport services before they go live through activities such as system design consulting, developing software platforms and frameworks, capacity planning and launch reviews.\u003C/li\u003E\n\u003Cli\u003EMaintain services once they are live by measuring and monitoring availability, latency and overall system health.\u003C/li\u003E\n\u003Cli\u003EScale systems sustainably through mechanisms like automation, and evolve systems by pushing for changes that improve reliability and velocity.\u003C/li\u003E\n\u003Cli\u003EPractice sustainable incident response and blameless postmortems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience in designing, analyzing, and troubleshooting large-scale distributed systems.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience leading projects and providing technical leadership. \u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience working in computing, distributed systems, storage, or networking.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExpertise in designing, analyzing, and troubleshooting large-scale distributed systems.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EAbility to debug, optimize code, and to automate routine tasks.\u003C/li\u003E\n\u003Cli\u003ESystematic problem-solving approach, coupled with effective verbal and written communication skills.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Munich, Germany",
+          "addresses": [
+            "Munich, Germany"
+          ],
+          "city": "Munich",
+          "regionCode": "BY",
+          "countryCode": "DE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-13T15:31:38.3540000\u002B00:00",
+        "2026-04-13T15:31:38.6370000\u002B00:00"
+      ]
+    },
+    {
+      "id": "105093337823748806",
+      "title": "Technical Program Manager, Fibre Capacity Delivery",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/105093337823748806-technical-program-manager-fibre-capacity-delivery?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Dublin, Ireland",
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-07T19:53:53.5214422\u002B00:00",
+      "lastSeenAt": "2026-05-15T09:24:46.1878789\u002B00:00",
+      "removedAt": "2026-05-15T19:53:37.0218980\u002B00:00",
+      "removedInRunId": "2026-05-15T19-53-37Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckfC9PI-keFgD90ucn93AynPkNlxV5s1DuZBQnOQb7WCkEjsACxwdTIWJLZx8ZTZnGhmpnq6Sr42L6Wy2JXk2Kts2WT0zA5AlPI5BogbghRoMLZY6zw-bJr-2RmrNAg%3D%3D_V2\u0026loc=IE\u0026title=Technical\u002BProgram\u002BManager",
+      "aboutTheJobRaw": "\u003Cp\u003EA problem isn\u2019t truly solved until it\u2019s solved for all. That\u2019s why Googlers build products that help create opportunities for everyone, whether down the street or across the globe. As a Technical Program Manager at Google, you\u2019ll use your technical expertise to lead complex, multi-disciplinary projects from start to finish. You\u2019ll work with stakeholders to plan requirements, identify risks, manage project schedules, and communicate clearly with cross-functional partners across the company. You\u0027re equally comfortable explaining your team\u0027s analyses and recommendations to executives as you are discussing the technical tradeoffs in product development with engineers. \u003C/p\u003E\n\u003Cp\u003EBehind everything our users see online is the architecture built by the Technical Infrastructure team to keep it running. From developing and maintaining our data centers to building the next generation of Google platforms, we make Google\u0027s product portfolio possible. We\u0027re proud to be our engineers\u0027 engineers and love voiding warranties by taking things apart so we can rebuild them. We keep our networks up and running, ensuring our users have the best and fastest experience possible.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EManage the delivery of network infrastructure projects involving long-haul dark fiber, metro fiber, leased capacity and circuits, outside plant and inside plant fiber from inception through delivery.\u003C/li\u003E\n\u003Cli\u003ECoordinate with a wide range of internal teams and external entities like municipalities and colocation providers.\u003C/li\u003E\n\u003Cli\u003EServe as the primary Europe, Middle East, and Africa (EMEA) vendor contact for these activities.\u003C/li\u003E\n\u003Cli\u003EReview, interpret, and validate fiber designs (outside plant and inside plant) and engineering plans, including fiber routing, conduit infrastructure, splice schematics, rack layouts, and points of interface.\u003C/li\u003E\n\u003Cli\u003ECoordinate with internal partner teams and external entities (e.g., municipalities, utilities, colocation providers) on all OSP and ISP-related matters.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in a technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience in program management working across a cross-functional organization.\u003C/li\u003E\n\u003Cli\u003EExperience in an Outside Plant (OSP)-focused role within the telecommunications or network infrastructure industry (e.g., OSP engineer, fiber project manager, OSP construction manager).\u003C/li\u003E\n\u003Cli\u003EExperience with Inside Plant (ISP) fiber optic infrastructure, including design, installation, and testing within data centers, In-line Amplifier (ILA) sites, or colocation facilities.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003ECertification in formal project management, such as Project Management Professional (PMP), Projects IN Controlled Environments (PRINCE2), Project Management Institute Agile, or Certified Scrum Master.\u003C/li\u003E\n\u003Cli\u003EExperience with industry-specific tools, including project management software, network acquisition tools like Salesforce, and workflow management systems like Pega.\u003C/li\u003E\n\u003Cli\u003EExperience with agile or other process improvement frameworks, showcasing cross-functional agility and a focus on continuous improvement.\u003C/li\u003E\n\u003Cli\u003EExperience with both Outside Plant (OSP) and Inside Plant (ISP) fiber optic infrastructure.\u003C/li\u003E\n\u003Cli\u003EKnowledge of dark fiber, network infrastructure, inside plant and outside plant network architecture, network topology, and field deployment.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "1 Grand Canal Plaza, Grand Canal Street Upper, Dublin, D04 HR25, Ireland"
+          ],
+          "city": "Dublin",
+          "postalCode": "D04 HR25",
+          "regionCode": "D",
+          "countryCode": "IE"
+        },
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "London, UK"
+          ],
+          "city": "London",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-07T13:29:33.9300000\u002B00:00",
+        "2026-05-07T13:29:34.4210000\u002B00:00"
+      ]
+    },
+    {
       "id": "100512786341077702",
       "title": "Software Engineer III, Generative AI",
       "company": "Google",
