@@ -1,6 +1,41 @@
 {
   "jobs": [
     {
+      "id": "80459626985726662",
+      "title": "Software Engineer III, YouTube Trust and Safety",
+      "company": "YouTube",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/80459626985726662-software-engineer-iii-youtube-trust-and-safety?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-15T23:21:43.0514110\u002B00:00",
+      "lastSeenAt": "2026-05-17T19:35:57.9645933\u002B00:00",
+      "removedAt": "2026-05-18T10:40:38.5175696\u002B00:00",
+      "removedInRunId": "2026-05-18T10-40-38Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FcketKrbBYGDAttBksqe0_GF2fwecyVH90_GV46_Z6gkKQEjsACxwdTOBYYbdxwOMbTNp3X3nhDei4Yq9ZJtPTJ_jT6YnwpEogQpfDxJCyq0zXA9vncnXaOOeMDda1AA%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EWith your technical expertise, you will manage project priorities, deadlines, and deliverables. You will design, develop, test, deploy, maintain, and enhance software solutions.\u003C/p\u003E\u003Cp\u003EAt YouTube, we believe that everyone deserves to have a voice, and that the world is a better place when we listen, share, and build community through our stories. We work together to give everyone the power to share their story, explore what they love, and connect with one another in the process. Working at the intersection of cutting-edge technology and boundless creativity, we move at the speed of culture with a shared goal to show people the world. We explore new ideas, solve real problems, and have fun \u2014 and we do it all together.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EAnalyze and understand gaps in our content understanding.\u003C/li\u003E\n\u003Cli\u003EBuild classifiers to improve our automatic content detection by orchestrating signals from various expert models, and to make the most effective use of our human content reviewers.\u003C/li\u003E\n\u003Cli\u003EApply novel machine learning methods to address a variety of trust and safety challenges.\u003C/li\u003E\n\u003Cli\u003ECollaborate with research, operations, and product teams.\u003C/li\u003E\n\u003Cli\u003EDesign, build, productionize, and maintain your solutions.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in C\u002B\u002B, Python, or SQL.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development with machine learning.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical fields.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience with Machine Learning (ML), Learning to Rank (L2R), ranking/recommendation systems and data analysis (e.g., headroom analysis/opportunity sizing).\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-04-14T14:29:28.9390000\u002B00:00",
+        "2026-04-14T14:29:29.2190000\u002B00:00"
+      ]
+    },
+    {
       "id": "101734524148163270",
       "title": "Senior Software Engineer, Site Reliability Engineering",
       "company": "Google",
