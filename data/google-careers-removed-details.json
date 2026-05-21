@@ -1,6 +1,77 @@
 {
   "jobs": [
     {
+      "id": "107790016792404678",
+      "title": "Data Engineer, Data Architecture and Engineering",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/107790016792404678-data-engineer-data-architecture-and-engineering?location=Ireland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "Ireland",
+      "firstSeenAt": "2026-05-20T09:54:02.9803082\u002B00:00",
+      "lastSeenAt": "2026-05-21T10:02:57.1003476\u002B00:00",
+      "removedAt": "2026-05-21T20:09:27.1247213\u002B00:00",
+      "removedInRunId": "2026-05-21T20-09-27Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckaZZ1qRZ3zIlk37NJlQQBpKqv0WqnlAkatSXrsOT-rUMEjsACxwdTAp1tUHuBjPYN6G1MTun3e_icmbF3HdyekC--dC0PCKoozthv_GSSQf7fK_kjB6rojxu8oix-w%3D%3D_V2\u0026loc=IE\u0026title=Data\u002BEngineer",
+      "aboutTheJobRaw": "The gSO Data, Architecture, Tools and Analytics (gData) team empowers Google to make brilliant business decisions by delivering critical data infrastructure and actionable insights. Supporting the global gTech Ads organization, gData manages massive datasets to solve complex, non-routine investigative issues. Ultimately, our insights optimize operations and enhance the advertiser experience that drives the majority of Alphabet\u0027s business.\u003Cdiv\u003E\u003Cbr\u003EAs a Data Engineer in gData, you will design and build the foundational data infrastructure that powers the global gTech Ads organization. You\u2019ll address complex, large-scale issues using Google\u2019s proprietary tech stack to deliver a reliable single source of truth. In this role, you will have the opportunity to architect innovative data pipelines and solutions that directly enable predictive analytics and AI-driven business decisions at scale.\u003C/div\u003EGoogle creates products and services that make the world a better place, and gTech\u2019s role is to help bring them to life. Our teams of trusted advisors support customers globally. Our solutions are rooted in our technical skill, product expertise, and a thorough understanding of our customers\u2019 complex needs. Whether the answer is a bespoke solution to solve a unique problem, or a new tool that can scale across Google, everything we do aims to ensure our customers benefit from the full potential of Google products.\u003Cbr\u003E\u003Cbr\u003ETo learn more about gTech, check out our \u003Ca href=\u0022https://www.youtube.com/watch?v=HcjR6ZngQcw\u0022 target=\u0022_blank\u0022\u003Evideo\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign, develop, test, and maintain reliable and scalable data pipelines and Extract, Transform, and Load (ETL)/Extract, Load, and Transform (ELT) architectures using Google\u0027s distributed data systems (e.g., advanced SQL, Python).\u003C/li\u003E\n\u003Cli\u003EContribute to the development of our data infrastructure and data platform, optimizing data models to ensure our single source of truth remains performant.\u003C/li\u003E\n\u003Cli\u003EPartner closely with cross-functional stakeholders across business and engineering teams to translate evolving analytics requirements into actionable technical data solutions.\u003C/li\u003E\n\u003Cli\u003EWork seamlessly with data scientists and business analysts to transition investigative prototypes, metrics, and models into stable, production-grade reporting environments.\u003C/li\u003E\n\u003Cli\u003EAdvocate\u00A0data quality by authoring clear technical design documents, executing code reviews, and proactively resolving complex bugs and supporting escalations.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, Information Systems, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E3 years of experience in data engineering, database querying (e.g., SQL), developing data pipelines (ETL) and data visualization (dashboards/reports).\u003C/li\u003E\n\u003Cli\u003E3 years of experience coding in one or more programming languages.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience working with data infrastructure and data models by performing exploratory queries and scripts.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience designing data pipelines, and dimensional data modeling for synch and asynch system integration and implementation using internal (e.g., Flume, etc.) and external stacks (DataFlow, Spark, etc.).\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science, Engineering, Mathematics, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E3 years of experience partnering with stakeholders (e.g., users, partners, customer), and managing stakeholders/customers.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience developing project plans and delivering projects on time within budget and scope.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience using AI technologies to augment, improve or automate the development process.\u003C/li\u003E\n\u003Cli\u003EExperience writing and maintaining ETLs which operate on a variety of structured and unstructured sources.\u003C/li\u003E\n\u003Cli\u003EExperience in large-scale distributed data processing, including familiarity with NoSQL databases.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "1 Grand Canal Plaza, Grand Canal Street Upper, Dublin, D04 HR25, Ireland"
+          ],
+          "city": "Dublin",
+          "postalCode": "D04 HR25",
+          "regionCode": "D",
+          "countryCode": "IE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-19T13:29:22.9220000\u002B00:00",
+        "2026-05-19T13:29:23.4210000\u002B00:00"
+      ]
+    },
+    {
+      "id": "104741726031094470",
+      "title": "Staff Software Engineer, Site Reliability Engineering",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/104741726031094470-staff-software-engineer-site-reliability-engineering?location=Germany\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-05-11T20:03:31.9236102\u002B00:00",
+      "lastSeenAt": "2026-05-21T10:02:57.1003476\u002B00:00",
+      "removedAt": "2026-05-21T20:09:27.1247213\u002B00:00",
+      "removedInRunId": "2026-05-21T20-09-27Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckZLK7SRGb-IPtGj6Fg4ckugs5lLBp3y7NNA57Y2XIkVeEjsACxwdTBmVBrqfmJNuf6vxXolNzc634msQtzBDdqe940FRcL8GjfXI2fwAaEPQ0Spbw_it27zLfPhxjQ%3D%3D_V2\u0026loc=DE\u0026title=Staff\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003ESite Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google Cloud\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to customer\u0027s needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance. \u003C/p\u003E\u003Cdiv\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google Cloud, while using your expertise in coding, algorithms, complexity analysis and large-scale system design. SRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\u003C/div\u003E\n\u003Cp\u003EBehind everything our users see online is the architecture built by the Technical Infrastructure team to keep it running. From developing and maintaining our data centers to building the next generation of Google platforms, we make Google\u0027s product portfolio possible. We\u0027re proud to be our engineers\u0027 engineers and love voiding warranties by taking things apart so we can rebuild them. We keep our networks up and running, ensuring our users have the best and fastest experience possible.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EEngage in and improve the whole life-cycle of services from inception and design through to deployment, operation, and refinement.\u003C/li\u003E\n\u003Cli\u003ESupport services before they go live through activities such as system design consulting, developing software platforms and frameworks, capacity planning, and launch reviews.\u003C/li\u003E\n\u003Cli\u003EMaintain services once they are live by measuring and monitoring availability, latency, and overall system health.\u003C/li\u003E\n\u003Cli\u003EScale systems sustainably through mechanisms like automation and evolve systems by pushing for changes that improve reliability and velocity.\u003C/li\u003E\n\u003Cli\u003EPractice sustainable incident response and blameless postmortems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience with software development in one or more programming languages (e.g., Go, Java, C, C\u002B\u002B).\u003C/li\u003E\n\u003Cli\u003E4 years of experience designing, analyzing, and troubleshooting distributed systems.\u003C/li\u003E\n\u003Cli\u003E4 years of experience leading projects involving multiple teams.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience working in computing, distributed systems, storage, or networking.\u003C/li\u003E\n\u003Cli\u003EExperience in designing, analyzing, and troubleshooting large-scale distributed systems.\u003C/li\u003E\n\u003Cli\u003E Ability to debug, optimize code, and to automate routine tasks.\u003C/li\u003E\n\u003Cli\u003EExcellent problem-solving and verbal and written communication skills.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Munich, Germany",
+          "addresses": [
+            "Munich, Germany"
+          ],
+          "city": "Munich",
+          "regionCode": "BY",
+          "countryCode": "DE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-11T16:14:32.3030000\u002B00:00",
+        "2026-05-11T16:14:32.9120000\u002B00:00"
+      ]
+    },
+    {
       "id": "91723482588422854",
       "title": "Software Engineer III, Service Provisioning, EasyGCP",
       "company": "Google",
