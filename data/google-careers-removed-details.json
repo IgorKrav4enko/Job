@@ -1,6 +1,41 @@
 {
   "jobs": [
     {
+      "id": "133412771625607878",
+      "title": "Software Engineer III, Full Stack, AI Development Tools",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/133412771625607878-software-engineer-iii-full-stack-ai-development-tools?location=Poland\u0026q=Software\u002BEngineer\u0026page=3",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-05-07T19:53:53.5214422\u002B00:00",
+      "lastSeenAt": "2026-05-26T20:25:37.6677272\u002B00:00",
+      "removedAt": "2026-05-27T10:19:48.9130309\u002B00:00",
+      "removedInRunId": "2026-05-27T10-19-48Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckULaQjRQfVmqN21luN7hZouUz18Se1ygz4eGRRRVdSMuEjsACxwdTDF__JIx9P0rBWKUeSo3L1pmlqivqMNsWx5BmXKVZWCie-_qPOgpdySEAF8LSmnq0yyLEHKo9A%3D%3D_V2\u0026loc=PL\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "Google\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\n\u003Cp\u003EIn this role, you will develop GenAI and Vertex-based development tools that are propelling developers\u0027 productivity like never experienced before. You will develop server code as well as middleware code which implement functionalities that interact with Google\u0027s latest Large Language Models. You will work closely with top researchers, engineers, and product managers from both Google Cloud AI and Google Research, developing and testing machine learning solutions that will contribute directly to Google\u0027s product excellence. You will develop features that integrate the next-generation large language model with a balanced trade-off between performance and deployment constraints.\u003C/p\u003EThe Google Cloud AI Research team addresses AI challenges motivated by Google Cloud\u2019s mission of bringing AI to tech, healthcare, finance, retail and many other industries. We work on a range of unique problems focused on research topics that maximize scientific and real-world impact, aiming to push the state-of-the-art in AI and share findings with the broader research community. We also collaborate with product teams to bring innovations to real-world impact that benefits our customers.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign, develop, test, deploy, maintain, and enhance software solutions.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EReview code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with full stack development, across back-end such as Java, Python, Golang, or C\u002B\u002B codebases, and front-end experience including JavaScript or TypeScript, HTML, CSS or equivalent.\u003C/li\u003E\n\u003Cli\u003EExperience with google cloud platform and enterprise software architecture.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science, or a related technical field.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience with Generative AI and Performance Optimization.\u003C/li\u003E\n\u003Cli\u003EExperience with Go.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-07T15:02:28.8960000\u002B00:00",
+        "2026-05-07T15:02:29.3620000\u002B00:00"
+      ]
+    },
+    {
       "id": "80406527231304390",
       "title": "Research Data Scientist, Ads Metrics",
       "company": "Google",
