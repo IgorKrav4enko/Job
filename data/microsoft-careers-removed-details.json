@@ -1,6 +1,105 @@
 {
   "jobs": [
     {
+      "id": "1970393556868673",
+      "title": "Critical Environment Technical Trainer",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556868673",
+      "locations": [
+        "United Kingdom, Newport, Newport"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-29T20:38:24.3316480\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "removedInRunId": "2026-06-01T21-44-03Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556868673",
+      "postedAtCandidate": "2026-05-29T10:30:55.0000000\u002B00:00"
+    },
+    {
+      "id": "1970393556867642",
+      "title": "Critical Environment Technician (Shifts)",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556867642",
+      "locations": [
+        "United Kingdom, Newport, Newport"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-21T10:03:11.9178296\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "removedInRunId": "2026-06-01T21-44-03Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556867642",
+      "postedAtCandidate": "2026-05-18T14:03:01.0000000\u002B00:00"
+    },
+    {
+      "id": "1970393556844479",
+      "title": "Member of Technical Staff, AI Systems Engineer - Microsoft Superintelligence",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556844479",
+      "locations": [
+        "Switzerland, Z\u00FCrich, Z\u00FCrich"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "removedInRunId": "2026-06-01T21-44-03Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556844479",
+      "aboutTheJobRaw": "\u003Cbr\u003E\u003Cp\u003EWe are building next-generation customized AI silicon designed to accelerate AI workloads with unprecedented efficiency. We are looking for an exceptional Systems Engineer to bridge the gap between our custom hardware and modern AI inference frameworks.\u003C/p\u003E\u003Cp\u003EWe build foundational AI infrastructure that enables large-scale training and inference across diverse workloads and rapidly evolving hardware generations. Our work directly shapes how AI systems are designed, deployed, and scaled\u00A0today and into the future. Engineers on this team operate with end-to-end ownership, deep technical rigor, and a strong bias toward real-world impact.\u00A0\u003C/p\u003E\u003Cp\u003EMicrosoft Superintelligence team\u2019s mission is to empower every person and every organization on the planet to achieve more. As employees we come together with a growth mindset, innovate to empower others, and collaborate to realize our shared goals. Each day we build on our values of respect, integrity, and accountability to create a culture of inclusion where everyone can thrive at work and beyond.This role is part of Microsoft AI\u0027s Superintelligence Team. The MAIST is a\u00A0startup-like team inside Microsoft AI, created to push the boundaries of AI toward\u00A0Humanist Superintelligence\u2014ultra-capable systems that remain controllable, safety-aligned, and anchored to human values.\u00A0Our mission is to create AI that amplifies human potential while ensuring humanity remains firmly in control. We aim to deliver breakthroughs that benefit society\u2014advancing science, education, and global well-being.We\u2019re also fortunate to partner with incredible product teams giving our models the chance to reach billions of users and create immense positive impact. If you\u2019re a brilliant, highly-ambitious and low ego individual, you\u2019ll fit right in\u2014come and join us as we work on our next generation of models!\u00A0\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EThe Role\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EAs a Senior AI Systems Engineer, you will own the software integration layer between our custom AI chip\u0027s proprietary SDK and\u00A0SGLang, a state-of-the-art serving framework for Large Language Models (LLMs) and Vision-Language Models. You will be responsible for ensuring that our silicon can seamlessly run SGLang inference workloads at peak performance, bypassing the traditional CUDA ecosystem entirely.\u003C/p\u003E\u003Cbr\u003E\u003Cbr\u003E",
+      "responsibilitiesRaw": "\u003Cbr\u003E\u003Cul\u003E\u003Cli\u003E\u003Cstrong\u003EFramework Integration:\u003C/strong\u003E Architect and develop the backend integration to make our custom AI chip a first-class citizen in SGLang.\u003C/li\u003E\u003Cli\u003E\u003Cstrong\u003ECustom Operator Development:\u003C/strong\u003E Write custom C\u002B\u002B / PyTorch extensions that map SGLang\u2019s primitive operations (e.g., RadixAttention, FlashAttention, matrix multiplications) to our custom chip\u0027s proprietary software layer.\u003C/li\u003E\u003Cli\u003E\u003Cstrong\u003EPerformance Optimization:\u003C/strong\u003E Profile and optimize end-to-end LLM inference latency, throughput, and memory utilization (Paged Attention) on our hardware.\u003C/li\u003E\u003Cli\u003E\u003Cstrong\u003ECross-Functional Collaboration:\u003C/strong\u003E Work closely with our hardware architecture and compiler teams to provide feedback on our custom software stack and silicon design based on framework-level bottlenecks.\u003C/li\u003E\u003Cli\u003E\u003Cstrong\u003ETesting \u0026 Deployment:\u003C/strong\u003E Build robust testing pipelines to validate model accuracy and performance parity against standard GPU baselines.\u003C/li\u003E\u003C/ul\u003E\u003Cbr\u003E\u003Cbr\u003E",
+      "minimumQualificationsRaw": "\u003Cbr\u003E\u003Cdiv\u003E\u003Cstrong\u003EMust-Have Qualifications:\u003C/strong\u003E\u003C/div\u003E\u003Cul\u003E\u003Cli\u003EBS, MS, or PhD in Computer Science, Computer Engineering, or a related field.\u003C/li\u003E\u003Cli\u003ESoftware engineering experience focusing on systems programming, ML infrastructure, or AI compilers.\u003C/li\u003E\u003Cli\u003E\u003Cstrong\u003EExpertise in Python:\u003C/strong\u003E Deep understanding of memory management, concurrent programming.\u003C/li\u003E\u003Cli\u003E\u003Cstrong\u003EExperience with LLM Inference Engines:\u003C/strong\u003E Hands-on experience modifying or extending frameworks like SGLang, vLLM, DeepSpeed-FastGen, or TensorRT-LLM.\u003C/li\u003E\u003Cli\u003E\u003Cstrong\u003EPyTorch Internals:\u003C/strong\u003E Strong experience writing PyTorch C\u002B\u002B extensions and custom operators.\u003C/li\u003E\u003Cli\u003E\u003Cstrong\u003EHardware Interfacing:\u003C/strong\u003E Proven track record of integrating machine learning workloads with hardware accelerators (GPUs, TPUs, NPUs) using custom SDKs, APIs, or low-level drivers.\u003C/li\u003E\u003C/ul\u003E\u003Cdiv\u003E\u003Cstrong\u003ENice-to-Have Qualifications:\u003C/strong\u003E\u003C/div\u003E\u003Cul\u003E\u003Cli\u003EPrior experience working on non-CUDA software ecosystems (e.g., AMD ROCm, AWS Neuron, Google XLA).\u003C/li\u003E\u003Cli\u003EFamiliarity with AI compilers and intermediate representations (MLIR, Apache TVM, OpenAI Triton).\u003C/li\u003E\u003Cli\u003EStrong understanding of underlying LLM architectures (Transformers, MoE) and state-of-the-art attention algorithms (FlashAttention v2/v3).\u003C/li\u003E\u003Cli\u003EPrevious experience at an AI silicon startup or working on custom accelerators (e.g., Google TPU, AWS Trainium).\u003C/li\u003E\u003C/ul\u003E \u003Cbr\u003E\u003Cp\u003EThis position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.\u003C/p\u003E\u003Cbr\u003E\u003Chr\u003E\u003Cbr\u003E\u003Cp\u003EMicrosoft is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to age, ancestry, citizenship, color, family or medical care leave, gender identity or expression, genetic information, immigration status, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran or military status, race, ethnicity, religion, sex (including pregnancy), sexual orientation, or any other characteristic protected by applicable local laws, regulations and ordinances. If you need assistance with religious accommodations and/or a reasonable accommodation due to a disability during the application process, read more about \u003Ca href=\u0022https://careers.microsoft.com/v2/global/en/accessibility.html\u0022\u003E\u003Cb\u003E\u003Cu\u003Erequesting accommodations.\u003C/u\u003E\u003C/b\u003E\u003C/a\u003E\u003C/p\u003E",
+      "postedAtCandidate": "2026-03-23T15:30:29.0000000\u002B00:00"
+    },
+    {
+      "id": "1970393556866485",
+      "title": "Principal Optical Scientist",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556866485",
+      "locations": [
+        "United Kingdom, Cambridgeshire, Cambridge"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-21T10:03:11.9178296\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "removedInRunId": "2026-06-01T21-44-03Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556866485",
+      "postedAtCandidate": "2026-05-15T06:29:09.0000000\u002B00:00"
+    },
+    {
+      "id": "1970393556867906",
+      "title": "Research Science PhD Internship Opportunities - Coding Agents",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556867906",
+      "locations": [
+        "United Kingdom, Cambridgeshire, Cambridge"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-21T10:03:11.9178296\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "removedInRunId": "2026-06-01T21-44-03Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556867906",
+      "postedAtCandidate": "2026-05-19T13:07:06.0000000\u002B00:00"
+    },
+    {
+      "id": "1970393556870707",
+      "title": "Senior Critical Environment Technician",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556870707",
+      "locations": [
+        "United Kingdom, Newport, Newport"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-30T08:40:41.4987452\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "removedInRunId": "2026-06-01T21-44-03Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556870707",
+      "postedAtCandidate": "2026-05-29T20:16:53.0000000\u002B00:00"
+    },
+    {
       "id": "1970393556858371",
       "title": "Principal Product Designer, AI Experiences",
       "company": "Microsoft",
@@ -388,6 +487,22 @@
       "postedAtCandidate": "2026-04-23T13:51:45.0000000\u002B00:00"
     },
     {
+      "id": "1970393556866482",
+      "title": "Senior Researcher - AI Computer Architecture",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556866482",
+      "locations": [
+        "United Kingdom, Cambridgeshire, Cambridge"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-15T09:24:59.7660384\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-05-15T19:53:52.0914490\u002B00:00",
+      "removedInRunId": "2026-05-15T19-53-52Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556866482",
+      "postedAtCandidate": "2026-05-15T06:28:20.0000000\u002B00:00"
+    },
+    {
       "id": "1970393556861270",
       "title": "Cloud \u0026 AI Solution Engineer - AI Apps",
       "company": "Microsoft",
@@ -499,6 +614,22 @@
       "removedInRunId": "2026-05-13T09-19-39Z",
       "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556861516",
       "postedAtCandidate": "2026-04-28T18:53:44.0000000\u002B00:00"
+    },
+    {
+      "id": "1970393556866121",
+      "title": "Critical Environment Technician",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556866121",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-12T20:07:21.4037966\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-05-13T09:19:39.2645057\u002B00:00",
+      "removedInRunId": "2026-05-13T09-19-39Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556866121",
+      "postedAtCandidate": "2026-05-27T10:31:44.0000000\u002B00:00"
     },
     {
       "id": "1970393556668280",
@@ -715,22 +846,6 @@
       "removedInRunId": "2026-05-06T20-01-38Z",
       "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556860558",
       "postedAtCandidate": "2026-04-29T10:28:01.0000000\u002B00:00"
-    },
-    {
-      "id": "1970393556823720",
-      "title": "Principal Data Scientist - ISE",
-      "company": "Microsoft",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556823720",
-      "locations": [
-        "United Kingdom, London, London"
-      ],
-      "requestedLocation": "United Kingdom",
-      "firstSeenAt": "2026-04-30T19:49:47.0759236\u002B00:00",
-      "lastSeenAt": "2026-05-05T19:52:34.9434290\u002B00:00",
-      "removedAt": "2026-05-06T20:01:38.9220593\u002B00:00",
-      "removedInRunId": "2026-05-06T20-01-38Z",
-      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556823720",
-      "postedAtCandidate": "2026-04-30T17:44:38.0000000\u002B00:00"
     },
     {
       "id": "1970393556847455",
@@ -1181,6 +1296,22 @@
       "postedAtCandidate": "2026-04-08T15:13:54.0000000\u002B00:00"
     },
     {
+      "id": "1970393556754415",
+      "title": "Marketing Program Manager Apprentice",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556754415",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-21T17:07:45.3657080\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-04-23T19:54:06.3238720\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-06Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556754415",
+      "postedAtCandidate": "2026-02-12T19:43:41.0000000\u002B00:00"
+    },
+    {
       "id": "1970393556626996",
       "title": "Member of Technical Staff - AI Pretraining - MAI Superintelligence Team",
       "company": "Microsoft",
@@ -1245,6 +1376,42 @@
       "removedInRunId": "2026-04-23T19-54-06Z",
       "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556626990",
       "postedAtCandidate": "2025-12-01T11:55:41.0000000\u002B00:00"
+    },
+    {
+      "id": "1970393556648532",
+      "title": "Member of Technical Staff, AI Multimodal - MAI Superintelligence Team",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556648532",
+      "locations": [
+        "Switzerland, Z\u00FCrich, Z\u00FCrich"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-21T17:07:45.3657080\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-04-23T19:54:06.3238720\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-06Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556648532",
+      "aboutTheJobRaw": "\u003Cbr\u003E\u003Cdiv\u003EAt Microsoft AI, we are on a mission to train the world\u2019s most capable AI frontier models, pushing the boundaries of scale, performance and product deployment. The Multimodal team at Microsoft AI tackles some of the most challenging problems in deep learning at scale. As a team, we will deliver one of the best foundation models in the world, forming the foundation of many initiatives across Microsoft AI.\u00A0\u003C/div\u003E\u003Cdiv\u003E\u00A0\u003C/div\u003E\u003Cdiv\u003EWe are looking for outstanding individuals excited about contributing to the next generation of systems that will transform the field. In particular, we are looking for candidates who:\u00A0\u003C/div\u003E\u003Cul\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EHave proven expertise in areas of interest, evidenced by an exceptional publication track record and/or significant technical leadership in high-impact projects.\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EExhibit strong analytical skills, attention to detail, and a commitment to data-driven decision-making.\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EHave experience and/or in-depth understandings about large-scale distributed systems.\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EDemonstrate an ability to work collaboratively in a fast-paced, innovative environment.\u00A0\u003C/li\u003E\u003C/ul\u003E\u003Cdiv\u003E\u00A0\u003C/div\u003E\u003Cdiv\u003EStarting January 26, 2026, MAI employees are expected to work from a designated Microsoft office at least four days a week if they live within 50 miles (U.S.) or 25 miles (non-U.S., country-specific) of that location. This expectation is subject to local law and may vary by jurisdiction.\u003C/div\u003E\u003Cbr\u003E\u003Cbr\u003E",
+      "responsibilitiesRaw": "\u003Cbr\u003E\u003Cul\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EDevelop algorithms, design model architectures, conduct experiments, champion measurement and evaluation, innovate datasets and data pipelines\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EImprove training and deployment efficiency, paying careful attention to detail, persevering, and learning from everyone\u2019s attempts whether successful or not.\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EFollow a rigorous data-driven approach grounded in meticulous ablation studies and scientific analysis\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EInnovate and iterate over ideas, prototypes, and product.\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003ECollaborate closely with teams on infrastructure, data engineering, pre-training, post-training, and product feedback\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EAdvance the AI frontier responsibly\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EEmbody our \u003Ca href=\u0022https://careers.microsoft.com/v2/global/en/culture\u0022 target=\u0022_blank\u0022 rel=\u0022noopener\u0022\u003Eculture\u003C/a\u003E and \u003Ca href=\u0022https://www.microsoft.com/en-us/about/corporate-values\u0022 target=\u0022_blank\u0022 rel=\u0022noopener\u0022\u003Evalues\u003C/a\u003E.\u00A0\u003C/li\u003E\u003C/ul\u003E\u003Cbr\u003E\u003Cbr\u003E",
+      "minimumQualificationsRaw": "\u003Cbr\u003E\u003Cul\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EBachelor\u0027s Degree in Computer Science, Math, Software Engineering, Computer Engineering, or related field AND experience in business analytics, data science, software development, data modelling or data engineering work\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EOR Master\u0027s Degree in Computer Science, Math, Software Engineering, Computer Engineering, or related field AND experience in business analytics, data science, software development, or data engineering work\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EOR equivalent experience.\u00A0\u003C/li\u003E\u003Cli style=\u0022list-style-type: none;\u0022\u003EExpertise in multimodal Research with a strong publishing track record\u003C/li\u003E\u003C/ul\u003E \u003Cbr\u003E\u003Cp\u003EThis position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.\u003C/p\u003E\u003Cbr\u003E\u003Chr\u003E\u003Cbr\u003E\u003Cp\u003EMicrosoft is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to age, ancestry, citizenship, color, family or medical care leave, gender identity or expression, genetic information, immigration status, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran or military status, race, ethnicity, religion, sex (including pregnancy), sexual orientation, or any other characteristic protected by applicable local laws, regulations and ordinances. If you need assistance with religious accommodations and/or a reasonable accommodation due to a disability during the application process, read more about \u003Ca href=\u0022https://careers.microsoft.com/v2/global/en/accessibility.html\u0022\u003E\u003Cb\u003E\u003Cu\u003Erequesting accommodations.\u003C/u\u003E\u003C/b\u003E\u003C/a\u003E\u003C/p\u003E",
+      "postedAtCandidate": "2026-01-05T12:07:47.0000000\u002B00:00"
+    },
+    {
+      "id": "1970393556648705",
+      "title": "Member of Technical Staff, AI Post-Training - MAI Superintelligence Team  Post-Training -",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556648705",
+      "locations": [
+        "Switzerland, Z\u00FCrich, Z\u00FCrich",
+        "United Kingdom, London, London"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-04-21T17:07:45.3657080\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-04-23T19:54:06.3238720\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-06Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556648705",
+      "postedAtCandidate": "2026-01-05T11:57:49.0000000\u002B00:00"
     },
     {
       "id": "1970393556638799",
@@ -1461,6 +1628,22 @@
       "responsibilitiesRaw": "\u003Cbr\u003E\u003Cp\u003ECollaboration\u003Cbr\u003EOwns escalated issues and manages account-aligned customer incidents to identify and remove barriers. Ensures existing processes are not a blocker to customer issue resolution and influences the direction of process improvement efforts with a global perspective. Acts as an expert and provides informal guidance to Support Escalation team members on how to handle moderate to highly complex cases.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003ELeverages relationships across teams to remove roadblocks. Establishes and oversees the development of written protocols to ensure customer issues are resolved. Identifies reoccurring roadblocks across the team and escalates as needed.\u003Cbr\u003E\u003Cbr\u003ECommunication\u003Cbr\u003EIdentifies and builds strategic relationships with internal teams, partners, and communications with senior leadership to resolve issues that are complex in scope.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003EManages customer and field expectations around issue response and represents the company independently. Ensures customer and MSFT internal stakeholders stay informed on the response and resolution status of customer issues. Communicates and influences internally to drive faster issue resolution.\u003Cbr\u003E\u003Cbr\u003ECustomer Resolution\u003Cbr\u003ELeads strategic projects designed to improve resolution times, customer satisfaction, and support experience.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003ELeads inter-regions, cross-regions, cross-group, or account team unit (ATU) initiatives by creating plans and managing relationships with other business units to improve the customer support experience for a group of customers or a specific region/area. Acts as a subject matter expert on best practices to support the customer experience.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003EReviews status updates to customers and provides informal guidance to others on communicating with internal stakeholders through various channels of communication for highly sensitive or difficult issues.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003EProactively coordinates resources and establishes relationships to drive opportunities within the team and across stakeholder groups in postmortem discussions to remediate future issues.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003EActs as an internal expert to resolve longer running, sensitive, or escalated issues or acts as a primary contact for escalated issues on behalf of less experienced IC levels. Identifies and builds relationships with various internal and external teams and senior leaders to resolve customer issues. Leads strategic projects. Informally provides coaching, mentorship, or support to less experienced Support Escalation Managers to resolve customer issues.\u003Cbr\u003E\u003Cbr\u003EProcess Improvement\u003Cbr\u003EReviews postmortem executive summaries and identifies patterns across customer issues. Creates strategies to resolve reoccurring or highly sensitive issues in partnership with leadership.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003ESurfaces feedback from the team and drives collaboration across functions to identify systematic issues and leads process breakdowns to ensure resolution/progress. Creates strategy for process improvements and leads project or workgroup to improve internal processes.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003EVendor Relationships\u003Cbr\u003EOwns and leads relationships with outsource vendor to resolve issues and foster positive cultural and behavioral changes.\u003C/p\u003E\u003Cbr\u003E\u003Cbr\u003E",
       "minimumQualificationsRaw": "\u003Cbr\u003E\u003Cp\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003E\u003Cstrong\u003ERequired Qualifications:\u003C/strong\u003E\u003C/span\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003EExtensive experience in technology industry, customer service, or related experience.\u003C/li\u003E\u003Cli\u003EProject management experience.\u003C/li\u003E\u003Cli\u003EExperience working with Microsoft products and services.\u003C/li\u003E\u003Cli\u003ECloud Technology Certification (Azure Fundamentals. M365 Fundamentals).\u003C/li\u003E\u003Cli\u003EPrior Incident and escalation management experience.\u003C/li\u003E\u003Cli\u003EProficient in C-level stakeholder management.\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u00A0\u003C/p\u003E\u003Cp\u003EAbility to meet Microsoft, customer and / or government security screening requirements are required for this role. \u00A0These requirements include, but are not limited to the following specialized security screenings: Microsoft Cloud Background Check: This position will be required to pass the Microsoft Cloud Background Check upon hire / transfer and every two years thereafter.\u003C/p\u003E \u003Cbr\u003E\u003Cp\u003EThis position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.\u003C/p\u003E\u003Cbr\u003E\u003Chr\u003E\u003Cbr\u003E\u003Cp\u003EMicrosoft is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to age, ancestry, citizenship, color, family or medical care leave, gender identity or expression, genetic information, immigration status, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran or military status, race, ethnicity, religion, sex (including pregnancy), sexual orientation, or any other characteristic protected by applicable local laws, regulations and ordinances. If you need assistance with religious accommodations and/or a reasonable accommodation due to a disability during the application process, read more about \u003Ca href=\u0022https://careers.microsoft.com/v2/global/en/accessibility.html\u0022\u003E\u003Cb\u003E\u003Cu\u003Erequesting accommodations.\u003C/u\u003E\u003C/b\u003E\u003C/a\u003E\u003C/p\u003E",
       "postedAtCandidate": "2026-04-21T11:35:19.0000000\u002B00:00"
+    },
+    {
+      "id": "1970393556754500",
+      "title": "Technical Program Manager, Health AI",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556754500",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-04-21T17:07:45.3657080\u002B00:00",
+      "lastSeenAt": "2026-06-01T12:09:03.5654470\u002B00:00",
+      "removedAt": "2026-04-23T19:54:06.3238720\u002B00:00",
+      "removedInRunId": "2026-04-23T19-54-06Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556754500",
+      "postedAtCandidate": "2026-02-20T19:25:29.0000000\u002B00:00"
     },
     {
       "id": "1970393556857301",
