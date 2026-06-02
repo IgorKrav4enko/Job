@@ -57660,6 +57660,382 @@
           ]
         }
       ]
+    },
+    {
+      "runId": "2026-06-02T10-54-38Z",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "id": "1970393556648448",
+          "title": "AI Multimodal",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556648448",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom",
+          "previousHash": "bd36776da2ac8965616185879a8aef6a022238fe9ef103bd01e0ba21d7ee5ba5",
+          "currentHash": "573d5b903bf086211e893642e443e0a895c3a9482a6c432c98e29c9a075dd317",
+          "changedFields": [
+            "title"
+          ],
+          "fieldChanges": [
+            {
+              "field": "title",
+              "previous": "Member of Technical Staff, AI Multimodal - MAI Superintelligence Team",
+              "current": "AI Multimodal"
+            }
+          ]
+        }
+      ],
+      "unchanged": [
+        {
+          "id": "1970393556869781",
+          "title": "AI for Science Internship - Machine Learning Intern",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556869781",
+          "locations": [
+            "Germany, Berlin, Berlin"
+          ],
+          "requestedLocation": "Germany"
+        },
+        {
+          "id": "1970393556868978",
+          "title": "CE Field Service Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556868978",
+          "locations": [
+            "Poland, Mazowieckie, Warsaw"
+          ],
+          "requestedLocation": "Poland"
+        },
+        {
+          "id": "1970393556650632",
+          "title": "Critical Environment Industrial Controls Systems Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556650632",
+          "locations": [
+            "United Kingdom, Newport, Newport"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556858286",
+          "title": "Member of Technical Staff - Mobile Engineer, Health AI",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556858286",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556823720",
+          "title": "Principal Data Scientist - ISE",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556823720",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556866499",
+          "title": "Principal Optical Packaging Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556866499",
+          "locations": [
+            "United Kingdom, Cambridgeshire, Cambridge"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556866655",
+          "title": "Principal Opto-Electronics Device Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556866655",
+          "locations": [
+            "United Kingdom, Cambridgeshire, Cambridge"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556866505",
+          "title": "Principal Opto-Electronics Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556866505",
+          "locations": [
+            "United Kingdom, Cambridgeshire, Cambridge"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556864920",
+          "title": "Principal Software Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556864920",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556864924",
+          "title": "Principal Software Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556864924",
+          "locations": [
+            "Switzerland, Z\u00FCrich, Z\u00FCrich"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "1970393556867643",
+          "title": "Senior Critical Environment Technician (Shift Lead)",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556867643",
+          "locations": [
+            "United Kingdom, Newport, Newport"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556867640",
+          "title": "Senior Critical Environment Technician - Day Shift",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556867640",
+          "locations": [
+            "Ireland, Dublin, Dublin"
+          ],
+          "requestedLocation": "Ireland"
+        },
+        {
+          "id": "1970393556868159",
+          "title": "Senior Data Scientist - Industry Solutions Engineering",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556868159",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556867988",
+          "title": "Senior Security Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556867988",
+          "locations": [
+            "United Kingdom, Cambridgeshire, Cambridge"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Germany",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1970393556869781",
+              "title": "AI for Science Internship - Machine Learning Intern",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556869781",
+              "locations": [
+                "Germany, Berlin, Berlin"
+              ],
+              "requestedLocation": "Germany"
+            }
+          ]
+        },
+        {
+          "location": "Ireland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1970393556867640",
+              "title": "Senior Critical Environment Technician - Day Shift",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556867640",
+              "locations": [
+                "Ireland, Dublin, Dublin"
+              ],
+              "requestedLocation": "Ireland"
+            }
+          ]
+        },
+        {
+          "location": "Poland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1970393556868978",
+              "title": "CE Field Service Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556868978",
+              "locations": [
+                "Poland, Mazowieckie, Warsaw"
+              ],
+              "requestedLocation": "Poland"
+            }
+          ]
+        },
+        {
+          "location": "Switzerland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1970393556864924",
+              "title": "Principal Software Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556864924",
+              "locations": [
+                "Switzerland, Z\u00FCrich, Z\u00FCrich"
+              ],
+              "requestedLocation": "Switzerland"
+            }
+          ]
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [],
+          "changed": [
+            {
+              "id": "1970393556648448",
+              "title": "AI Multimodal",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556648448",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom",
+              "previousHash": "bd36776da2ac8965616185879a8aef6a022238fe9ef103bd01e0ba21d7ee5ba5",
+              "currentHash": "573d5b903bf086211e893642e443e0a895c3a9482a6c432c98e29c9a075dd317",
+              "changedFields": [
+                "title"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "title",
+                  "previous": "Member of Technical Staff, AI Multimodal - MAI Superintelligence Team",
+                  "current": "AI Multimodal"
+                }
+              ]
+            }
+          ],
+          "unchanged": [
+            {
+              "id": "1970393556650632",
+              "title": "Critical Environment Industrial Controls Systems Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556650632",
+              "locations": [
+                "United Kingdom, Newport, Newport"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556858286",
+              "title": "Member of Technical Staff - Mobile Engineer, Health AI",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556858286",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556823720",
+              "title": "Principal Data Scientist - ISE",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556823720",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556866499",
+              "title": "Principal Optical Packaging Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556866499",
+              "locations": [
+                "United Kingdom, Cambridgeshire, Cambridge"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556866655",
+              "title": "Principal Opto-Electronics Device Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556866655",
+              "locations": [
+                "United Kingdom, Cambridgeshire, Cambridge"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556866505",
+              "title": "Principal Opto-Electronics Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556866505",
+              "locations": [
+                "United Kingdom, Cambridgeshire, Cambridge"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556864920",
+              "title": "Principal Software Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556864920",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556867643",
+              "title": "Senior Critical Environment Technician (Shift Lead)",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556867643",
+              "locations": [
+                "United Kingdom, Newport, Newport"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556868159",
+              "title": "Senior Data Scientist - Industry Solutions Engineering",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556868159",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556867988",
+              "title": "Senior Security Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556867988",
+              "locations": [
+                "United Kingdom, Cambridgeshire, Cambridge"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

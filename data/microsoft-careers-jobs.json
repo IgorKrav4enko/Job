@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+  "generatedAt": "2026-06-02T10:54:38.6795644\u002B00:00",
   "source": "Microsoft Careers",
   "status": "success",
   "notes": "Normalized 15 active Microsoft jobs from latest raw snapshot.",
@@ -69,11 +69,31 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=Germany%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-27T10:40:39.0000000\u002B00:00",
       "firstSeenAt": "2026-05-27T20:29:19.1419652\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "e4d8c5d860dc05e5a33dc8ab9138e513ca6336bc7d9212672a0e6402e5d7c707",
       "matchedLocations": [
         "Germany"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "1970393556648448",
+      "title": "AI Multimodal",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556648448",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-01-05T12:03:38.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
+      "isActive": true,
+      "contentHash": "573d5b903bf086211e893642e443e0a895c3a9482a6c432c98e29c9a075dd317",
+      "matchedLocations": [
+        "United Kingdom"
       ],
       "searchMatchCount": 1
     },
@@ -89,7 +109,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=Poland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-26T10:22:57.0000000\u002B00:00",
       "firstSeenAt": "2026-05-26T20:25:53.0280355\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "d49e26f5ab5c26f30496824c97891b319d1a8f5e93e8c59325a627ebfb17cca7",
       "matchedLocations": [
@@ -109,7 +129,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-01-13T12:10:23.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "0c7bed0e04d8f5a8700db85bd418e3e15ab83a02b5a7d4a2fdca7f4d15c5037c",
       "matchedLocations": [
@@ -129,29 +149,9 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-04-14T11:56:01.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "b4f2ddaeb0121f7bce96a118775c05eb073a16d4469ce8531b937d9aaa6df37e",
-      "matchedLocations": [
-        "United Kingdom"
-      ],
-      "searchMatchCount": 1
-    },
-    {
-      "id": "1970393556648448",
-      "title": "Member of Technical Staff, AI Multimodal - MAI Superintelligence Team",
-      "company": "Microsoft",
-      "locations": [
-        "United Kingdom, London, London"
-      ],
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556648448",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-01-05T12:03:38.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
-      "isActive": true,
-      "contentHash": "bd36776da2ac8965616185879a8aef6a022238fe9ef103bd01e0ba21d7ee5ba5",
       "matchedLocations": [
         "United Kingdom"
       ],
@@ -169,7 +169,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-01T13:10:31.0000000\u002B00:00",
       "firstSeenAt": "2026-04-30T19:49:47.0759236\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "56164e4167c7e9690e3184e43a8cde5fa57c5fa5442577649af4b1354f578277",
       "matchedLocations": [
@@ -189,7 +189,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-15T06:29:44.0000000\u002B00:00",
       "firstSeenAt": "2026-05-15T09:24:59.7660384\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "00336950fb13ece0c3645efceb5313e35984f8c6124ae45be009bb01dad741b9",
       "matchedLocations": [
@@ -209,7 +209,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-15T06:31:03.0000000\u002B00:00",
       "firstSeenAt": "2026-05-15T09:24:59.7660384\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "816e7de1aa83e8a12fe55cdde59c9508ad77589b8aad2ab27242931b68125e88",
       "matchedLocations": [
@@ -229,7 +229,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-15T06:30:25.0000000\u002B00:00",
       "firstSeenAt": "2026-05-15T09:24:59.7660384\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "0a9838af7061ef5c9554d2964c2b83f976166ed1a613f9f1dfdd1eccba04dfc0",
       "matchedLocations": [
@@ -249,7 +249,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-20T11:17:43.0000000\u002B00:00",
       "firstSeenAt": "2026-05-20T20:30:23.5646378\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "7c7edd67b96ce134c41ef18e93add1d2c94ecb7aa5ef8c995175c9fb7a64ee2e",
       "matchedLocations": [
@@ -269,7 +269,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Switzerland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-20T11:31:34.0000000\u002B00:00",
       "firstSeenAt": "2026-05-20T20:30:23.5646378\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "117cd8901c3a095d880b2752330ae7b11c89827851ac0da2e5ff337386d8bcbf",
       "matchedLocations": [
@@ -289,7 +289,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-18T13:47:10.0000000\u002B00:00",
       "firstSeenAt": "2026-05-20T20:30:23.5646378\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "2b5573f253209d74b881a6fe17769cd0657bd0aca7d4761929c8ab208f79b718",
       "matchedLocations": [
@@ -309,7 +309,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-18T15:34:29.0000000\u002B00:00",
       "firstSeenAt": "2026-05-18T20:00:17.8617872\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "e089db4c84019dccb7c4783091a5ae2f1fab68b990e07d78b374fcc95221581a",
       "matchedLocations": [
@@ -329,7 +329,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-22T18:07:57.0000000\u002B00:00",
       "firstSeenAt": "2026-05-22T20:09:02.4857097\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "8122737c0d120b9cdfb1a0093e7cc510d4ad11bfaf2a7842033fcedf8266e8cb",
       "matchedLocations": [
@@ -349,7 +349,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-21T10:10:48.0000000\u002B00:00",
       "firstSeenAt": "2026-05-21T20:09:43.2066920\u002B00:00",
-      "lastSeenAt": "2026-06-01T21:44:03.7149105\u002B00:00",
+      "lastSeenAt": "2026-06-02T10:54:38.6795644\u002B00:00",
       "isActive": true,
       "contentHash": "4aa7166ab36c4caab64ea986dcb6fd6f14df37c341626f650597bdd773366581",
       "matchedLocations": [
