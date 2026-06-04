@@ -1,6 +1,97 @@
 {
   "jobs": [
     {
+      "id": "79021608684921542",
+      "title": "AI Innovation Technical Solutions Consultant, Google Cloud (English, German)",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/79021608684921542-ai-innovation-technical-solutions-consultant-google-cloud-english-german?location=Germany\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK",
+        "Frankfurt, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-06-03T11:22:34.9773837\u002B00:00",
+      "lastSeenAt": "2026-06-04T10:11:49.1505134\u002B00:00",
+      "removedAt": "2026-06-04T20:24:31.2115697\u002B00:00",
+      "removedInRunId": "2026-06-04T20-24-31Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2Fckb-sppqzIzRMs9x3gdH-Tp8Ln8HZ8iK-5eczFXDjcC1zEjsACxwdTA9VfUMrDM0B8CfjVzQL1xY08w4QxNKyzj8pBQKfBypKPjDX1_b_WZKKyQWqayPN_WVIHPHk0Q%3D%3D_V2\u0026loc=GB\u0026title=AI\u002BInnovation\u002BTechnical\u002BSolutions\u002BConsultant",
+      "aboutTheJobRaw": "\u003Cp\u003EThe Global Solutions and Consumer AI team accelerates customer value and increases adoption by delivering innovative, repeatable, and enterprise-ready solutions focused on business value. Make Google Cloud the preferred choice for customers by delivering the highest-value, industry relevant solutions.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003EIn this role, you will collaborate with clients to transform initial concepts into reality. You will create solutions using the latest machine learning and generative AI technologies to replace traditional workflows for a customer in the capital markets finance industry. You will work at the heart of financial market infrastructures (FMIs) including high-stakes clearing, settlement, and custody environments to identify where AI can drive systemic efficiency.\u003C/p\u003E\u003Cdiv\u003EYou will act as a motivated innovator and builder who can operate with minimal guidance. You will not only code and create functional prototypes but also help define the critical user journeys (CUJs) and technical requirements that turn a proof-of-concept (POC) into a scalable, production-ready solution usable across a broad base of Google Cloud Platform (GCP) clients.\u003C/div\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign and build autonomous agentic workflows utilizing Machine Learning and generative AI technologies as part of a fully autonomous or human-in-the-loop agentic workflow.\u003C/li\u003E\n\u003Cli\u003EPartner with client leads(business users) to identify high-impact AI use cases. Translate these into product requirement documents (PRDs), clearly defining critical user journeys (CUJs) and success metrics.\u003C/li\u003E\n\u003Cli\u003EEvaluate and integrate AI solutions with modern data foundations, including relational databases, data lake houses, and real-time streaming architectures.\u003C/li\u003E\n\u003Cli\u003EEnsure all prototypes are built with a \u0022production-first\u0022 mindset. Implement basic continuous integration (CI)/ continuous delivery (CD) pipelines and utilize infrastructure-as-code (IaC) (e.g., Terraform) to ensure environments are reproducible and secure.\u003C/li\u003E\n\u003Cli\u003ECreate clear technical guides to ensure a seamless hand-off from POC to engineering teams.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E7 years of experience in software or data engineering, including one or more programming languages (e.g., Python, Go, Java), and with design patterns, testing frameworks, and API contract design.\u003C/li\u003E\n\u003Cli\u003EExperience using machine learning methodologies (deep learning, reinforced learning), model identification, selection and AI operations (e.g., model monitoring).\u003C/li\u003E\n\u003Cli\u003EExperience using Generative AI and agentic orchestration utilizing frameworks (e.g., LangChain, CrewAI, or Vertex AI Agent Builder) and vector databases.\u003C/li\u003E\n\u003Cli\u003EAbility to communicate in English and German fluently in order to support client relationship management in Germany.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience in financial services, and with the regulatory and operational clearing, settlement, or custody.\u003C/li\u003E\n\u003Cli\u003EExperience with Financial Services Institution (FSI0 regulatory practices and data residency, encryption at rest/transit (CMEK), and \u0022explainable AI\u0022 requirements in banking.\u003C/li\u003E\n\u003Cli\u003EExperience with data modeling of relational, NoSQL, and data modeling (Star Schema, Data Vault, etc.).\u003C/li\u003E\n\u003Cli\u003EExperience in BigQuery, Vertex AI, Dataflow, and Pub/Sub with an ability to drive the discovery phase, moving from a vague business problem to a structured product requirement document (PRD) and a working technical demo.\u003C/li\u003E\n\u003Cli\u003EExperience working in a high-maturity Developer Operations culture (trunk-based development, automated testing, blue/green deployments).\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "123 Buckingham Palace Rd, London SW1W 9SH, UK"
+          ],
+          "city": "London",
+          "postalCode": "SW1W 9SH",
+          "regionCode": "England",
+          "countryCode": "GB"
+        },
+        {
+          "displayName": "Frankfurt, Germany",
+          "addresses": [
+            "Frankfurt am Main, Germany"
+          ],
+          "city": "Frankfurt am Main",
+          "regionCode": "HE",
+          "countryCode": "DE"
+        },
+        {
+          "displayName": "Munich, Germany",
+          "addresses": [
+            "Munich, Germany"
+          ],
+          "city": "Munich",
+          "regionCode": "BY",
+          "countryCode": "DE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-02T13:09:10.4230000\u002B00:00",
+        "2026-06-02T13:09:10.5650000\u002B00:00"
+      ]
+    },
+    {
+      "id": "95612480985670342",
+      "title": "Staff Software Engineer, Generative AI, Applied Innovation Factory",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/95612480985670342-staff-software-engineer-generative-ai-applied-innovation-factory?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-12T20:07:06.6290662\u002B00:00",
+      "lastSeenAt": "2026-06-04T10:11:49.1505134\u002B00:00",
+      "removedAt": "2026-06-04T20:24:31.2115697\u002B00:00",
+      "removedInRunId": "2026-06-04T20-24-31Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2Fckc1f5hNGL_72Ygb875Yk5LvtmfFCKz1wFAL_WHHFffhOEjsACxwdTIRUFpN1gCzziGbdUZ8gZPfxUJ7ep1iYpnXNFSYZ8oCwZiEl1BfF8Qp__iXV0FpdX3ByhdMfIA%3D%3D_V2\u0026loc=GB\u0026title=Staff\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EWe are a team of experienced engineers and technologists working directly with Cloud leadership. Our mission is to foster market-disrupting collaborative innovation between Google and the world\u0027s ambitious organizations. We focus on complex technical tests with Cloud\u2019s most important customers, delivering collaborative and practical solutions.\u003Cbr\u003E\u003Cbr\u003EIn this role, you will be running an incubation program designed to drive Cloud innovation through joint experimentation.You will partner with other engineering teams and key customers to build technology that pushes the boundaries of what\u0027s possible with real-world applications and open to impact in any area of technology, provided it aligns with the needs of Cloud customers.\u003C/p\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDrive the creation and execution of experiments across machine learning domains.\u003C/li\u003E\n\u003Cli\u003EAssess technical tests and develop practical, testable solutions.\u003C/li\u003E\n\u003Cli\u003EPartner with Google Cloud Platform (GCP) product and engineering teams, Google Research, and GCP customers to identify and implement real-world applications of generative AI and machine learning technologies.\u003C/li\u003E\n\u003Cli\u003EContribute to building a positive team culture that emphasizes teamwork, innovation, and collaboration including playing a key role in shaping and executing the team\u0027s tactical goal.\u003C/li\u003E\n\u003Cli\u003EWrite product or system development code and participate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E8 years of experience in software development and with data structures/algorithms in either (C, C\u002B\u002B, Python, Java or Go).\u003C/li\u003E\n\u003Cli\u003E5 years of experience with ML design and ML infrastructure (e.g., model deployment, model evaluation, data processing, debugging, fine tuning).\u003C/li\u003E\n\u003Cli\u003E5 years of experience designing, training, and evaluating machine learning models.\u003C/li\u003E\n\u003Cli\u003EExperience using generative AI, to solve real-world issues.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in Engineering, Computer Science, or a related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a technical leadership role leading project teams and setting technical direction.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EAbility to guide the work of others.\u003C/li\u003E\n\u003Cli\u003EAbility to take an issue and reduce it to a core experiment to verify or disprove a hypothesis.\u003C/li\u003E\n\u003Cli\u003EAbility to empathize with customers needs to generate solutions.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8AG, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8AG",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-12T16:31:39.5980000\u002B00:00",
+        "2026-05-12T16:31:39.7210000\u002B00:00"
+      ]
+    },
+    {
       "id": "143559253905285830",
       "title": "Security Technical Lead, Cluster Management",
       "company": "Google",
