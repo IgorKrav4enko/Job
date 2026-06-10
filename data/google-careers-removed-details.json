@@ -1,6 +1,115 @@
 {
   "jobs": [
     {
+      "id": "120278961451082438",
+      "title": "Senior Software Engineer, Fleet Maintenance",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/120278961451082438-senior-software-engineer-fleet-maintenance?location=Ireland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "Ireland",
+      "firstSeenAt": "2026-06-01T21:43:47.4856098\u002B00:00",
+      "lastSeenAt": "2026-06-09T20:20:40.5037946\u002B00:00",
+      "removedAt": "2026-06-10T10:31:40.0981956\u002B00:00",
+      "removedInRunId": "2026-06-10T10-31-40Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckXw7H3RHSvCa002QvEmDvjTLnXo6NPip_n4dOYDJeSrVEjsACxwdTPWZQ2lkBFhc8qEdRUqbpK1JmMI0p4KBrbPY1t6_1DjNAvQeqmy22qY5305Mejoj2879yaxuHw%3D%3D_V2\u0026loc=IE\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "Google Cloud\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google Cloud\u0027s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. You will anticipate our customer needs and be empowered to act like an owner, take action and innovate. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\nGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EIreland: \u20AC122000 - \u20AC126000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDevelop and implement scalable, and efficient software components for Google Cloud-based platforms, primarily within the GCE Node organization.\u003C/li\u003E\n\u003Cli\u003EParticipate in code reviews to ensure code quality, maintainability, and adherence to best practices.\u003C/li\u003E\n\u003Cli\u003EPartner with product managers and key stakeholders to understand requirements and translate them into technical specifications.\u003C/li\u003E\n\u003Cli\u003ETroubleshoot and debug production issues, providing timely resolutions.\u003C/li\u003E\n\u003Cli\u003EContribute to the architectural design and technical direction of our systems within the evolving Google Cloud ecosystem.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in software development, including contributions to the design, development, and deployment of large-scale, software systems or features.\u003C/li\u003E\n\u003Cli\u003EExperience with system design and architecture for distributed systems, cloud-based applications, or available services.\u003C/li\u003E\n\u003Cli\u003EExperience in one or more programming languages relevant to our tech stack (e.g., C\u002B\u002B, Go, Java).\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or a related technical field.\u003C/li\u003E\n\u003Cli\u003E5 years of experience applying data structures and algorithm design to solve ambiguous technical problems.\u003C/li\u003E\n\u003Cli\u003EExperience with cloud platforms, e.g., Google Cloud Platform (GCP).\u003C/li\u003E\n\u003Cli\u003EKnowledge of C\u002B\u002B and Go.\u003C/li\u003E\n\u003Cli\u003EAbility to drive projects from concept to successful completion, effectively managing cross-functional dependencies, and clearly communicating technical decisions and progress to stakeholders.\u003C/li\u003E\n\u003Cli\u003EExcellent technical leadership, including mentoring junior engineers, leading technical initiatives, and influencing team\u0027s technical direction and best practices.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "1 Grand Canal Plaza, Grand Canal Street Upper, Dublin, D04 HR25, Ireland"
+          ],
+          "city": "Dublin",
+          "postalCode": "D04 HR25",
+          "regionCode": "D",
+          "countryCode": "IE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-01T15:10:04.6750000\u002B00:00",
+        "2026-06-08T10:38:50.5920000\u002B00:00",
+        "2026-06-08T10:38:50.6240000\u002B00:00"
+      ]
+    },
+    {
+      "id": "87523251533554374",
+      "title": "Software Engineer III, Site Reliability Engineering",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/87523251533554374-software-engineer-iii-site-reliability-engineering?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-22T20:08:46.8693736\u002B00:00",
+      "lastSeenAt": "2026-06-09T20:20:40.5037946\u002B00:00",
+      "removedAt": "2026-06-10T10:31:40.0981956\u002B00:00",
+      "removedInRunId": "2026-06-10T10-31-40Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckZa5hshek7TeWTOcRw6eX0Fi_HA8E8P_UcVlTzFy6BLSEjsACxwdTLWvMmpXbaEs5Ynsrw1FbfVPZlJmREKMTEyqy8j2Xz5diY0TLDDCn8rC6j2n_crkPaGqde-iaw%3D%3D_V2\u0026loc=GB\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "\u003Cp\u003ESite Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google Cloud\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to customer\u0027s needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance. \u003C/p\u003E\u003Cdiv\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google Cloud, while using your expertise in coding, algorithms, complexity analysis and large-scale system design. SRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\u003C/div\u003E\u003Cdiv\u003E\u003Cbr\u003E\u003C/div\u003E\nThe ATS Matrix team is a unique SRE Product Group within the AI, Trust, and Security (ATS) SRE product area. Our mission is to proactively deliver risk assurance in Google\u0027s infrastructure and products through principled and innovative reliability engineering. We manage systemic security risks, from the network to the application layer, and research and mitigate emerging threats in areas like AI.\u003Cp\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWrite product or system development code.\u003C/li\u003E\n\u003Cli\u003EReview code developed by other engineers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\n\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\n\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality. \n\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\n\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or Engineering. \u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience designing, analyzing, and troubleshooting large-scale distributed systems. \u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8AG, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8AG",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-22T13:08:24.3270000\u002B00:00",
+        "2026-05-22T13:08:24.5350000\u002B00:00"
+      ]
+    },
+    {
+      "id": "79721276037309126",
+      "title": "Technical Program Manager III, Tech Foundations and Research",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/79721276037309126-technical-program-manager-iii-tech-foundations-and-research?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-06-01T21:43:47.4856098\u002B00:00",
+      "lastSeenAt": "2026-06-09T20:20:40.5037946\u002B00:00",
+      "removedAt": "2026-06-10T10:31:40.0981956\u002B00:00",
+      "removedInRunId": "2026-06-10T10-31-40Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2Fckdt1-K2GDqGtB-ARH28RmcCbm3iltJZqtmSc1B_-FFk1EjsACxwdTEgK5iaQgJn1mvOsKYOaxDWKt-gath9J0CDq82nufqNHd4cGRABIJ3ZygpVwGCKZYIWknvHUPQ%3D%3D_V2\u0026loc=CH\u0026title=Technical\u002BProgram\u002BManager\u002BIII",
+      "aboutTheJobRaw": "\u003Cp\u003EA problem isn\u2019t truly solved until it\u2019s solved for all. That\u2019s why Googlers build products that help create opportunities for everyone, whether down the street or across the globe. As a Technical Program Manager at Google, you\u2019ll use your technical expertise to lead complex, multi-disciplinary projects from start to finish. You\u2019ll work with stakeholders to plan requirements, identify risks, manage project schedules, and communicate clearly with cross-functional partners across the company. You\u0027re equally comfortable explaining your team\u0027s analyses and recommendations to executives as you are discussing the technical tradeoffs in product development with engineers. \u003C/p\u003E\n\u003Cp\u003EOur team is seeking a versatile and curious technical program manager with a go-to-market mindset to enable, empower, and accelerate the incubation and productionization of new capabilities for meeting the privacy, safety, and security challenges faced by Google and its users.\u003C/p\u003E\u003Cp\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EIdentify stakeholders and work with them to strategize, plan, and prioritize objectives and success criteria.\u003C/li\u003E\n\u003Cli\u003ESwitch cadences between prototype incubation (open-ended fast iteration) and go-to-market delivery (cross-organization agreements, fixed timelines and road maps).\u003C/li\u003E\n\u003Cli\u003EIdentify opportunities to improve program management processes and drive efficiencies.\u003C/li\u003E\n\u003Cli\u003EDevelop in a dynamic team environment. Communicate, collaborate, and negotiate with internal and external partners from requirements to impactful results.\u003C/li\u003E\n\u003Cli\u003EOrganize ambiguous projects into clear longer-term objectives, turning research ideation into real features.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in a technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in program management.\u003C/li\u003E\n\u003Cli\u003E2 years of experience managing technical programs or software engineering projects specifically within AI/ML, Generative AI, or data infrastructure.\u003C/li\u003E\n\u003Cli\u003EExperience in technical program management and project planning.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003E5 years of experience managing cross-functional or cross-team projects.\u003C/li\u003E\n\u003Cli\u003EExperience leading Generative AI programs or projects.\u003C/li\u003E\n\u003Cli\u003EDeep expertise and opinionated point of view on program management techniques, responsibilities, and outcomes.\u003C/li\u003E\n\u003Cli\u003ETechnical proficiency is sufficient to earn the trust of engineering teams and to exert consequential technical influence over the management of risk, schedule, and scope.\u003C/li\u003E\n\u003Cli\u003EExcellent communication skills, including the ability to clearly articulate thoughts to a variety of audiences and to secure buy-in with stakeholders.\u003C/li\u003E\n\u003Cli\u003EStrategic thinking and planning, anticipating future needs and challenges while also being able to operate tactically when necessary.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-01T14:38:07.8500000\u002B00:00",
+        "2026-06-01T14:38:07.8910000\u002B00:00"
+      ]
+    },
+    {
       "id": "97138089876431558",
       "title": "Forward Deployed Engineer II, GenAI, Google Cloud",
       "company": "Google",
