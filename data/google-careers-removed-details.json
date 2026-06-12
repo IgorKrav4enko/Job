@@ -1,6 +1,98 @@
 {
   "jobs": [
     {
+      "id": "111680417496474310",
+      "title": "Senior Software Engineer, Formal Verification Engineer",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/111680417496474310-senior-software-engineer-formal-verification-engineer?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Seattle, WA, USA",
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-05-13T20:08:37.9723487\u002B00:00",
+      "lastSeenAt": "2026-06-11T20:35:16.6372696\u002B00:00",
+      "removedAt": "2026-06-12T10:39:53.4962076\u002B00:00",
+      "removedInRunId": "2026-06-12T10-39-53Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckRiJSjyygHMyvRG6CORVHQzivdwlJpQ0sAZ3tIzbjQkrEjsACxwdTBg02wGOBijugUaCLY_bex7PcyUgQ9cXxsz0nO8UdIWJz-8GS7PVDVcoPoVlMojqCby48SIJiQ%3D%3D_V2\u0026loc=US\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EISE Formal is dedicated to building formally verified security-critical software and systems for Google. The team\u2019s mission is to help everyone at Alphabet, and on the Internet, to use verified software. We are a distributed, dynamic team; our areas of focus are Rust and x64 ASM verification, with applications to cryptography, systems-level Rust code, and more.\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EGermany: \u20AC128000 - \u20AC132000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003EUS: $174000 - $253000 (USD) \u002B 15% bonus target \u002B bonus \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EEvolve and improve the design verification frameworks written in Lean.\u003C/li\u003E\n\u003Cli\u003EEvolve Rust verification frameworks using Lean, notably around separation logic.\u003C/li\u003E\n\u003Cli\u003EUse these frameworks to formally verify security-critical code at Google to\u00A0eliminate subtle and common implementation vulnerabilities, working with library owners to land this code in critical cryptography libraries and other high-stakes environments.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EEngage in ongoing external collaborations to progress formal verification goals at Google, and work closely with the Lean FRO to develop features we need and improve current shortcomings.\u003C/li\u003E\n\u003Cli\u003EContribute to formal\u00A0verification formal tooling where appropriate, working with tool maintainers to improve the state for formal verification tools for Google\u2019s use cases.\u00A0\u003Cbr\u003E\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages.\u003C/li\u003E\n\u003Cli\u003E4 years of experience working in the area of formal verification, in the area of cryptography, or another security-related domain.\u003C/li\u003E\n\u003Cli\u003E3 years of experience building software for data privacy or security (e.g., identity and access management).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience testing, maintaining, or launching software products.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E1 year of experience in a technical leadership role.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Seattle, WA, USA",
+          "addresses": [
+            "601 N 34th St, Seattle, WA 98103, USA"
+          ],
+          "city": "Seattle",
+          "postalCode": "98103",
+          "regionCode": "WA",
+          "countryCode": "US"
+        },
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        },
+        {
+          "displayName": "Munich, Germany",
+          "addresses": [
+            "Munich, Germany"
+          ],
+          "city": "Munich",
+          "regionCode": "BY",
+          "countryCode": "DE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-13T16:29:56.3610000\u002B00:00",
+        "2026-06-08T09:10:21.5920000\u002B00:00",
+        "2026-06-08T09:10:21.8560000\u002B00:00"
+      ]
+    },
+    {
+      "id": "89028641966432966",
+      "title": "Technical Program Manager, Assurance Engineering",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/89028641966432966-technical-program-manager-assurance-engineering?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-06-01T21:43:47.4856098\u002B00:00",
+      "lastSeenAt": "2026-06-11T20:35:16.6372696\u002B00:00",
+      "removedAt": "2026-06-12T10:39:53.4962076\u002B00:00",
+      "removedInRunId": "2026-06-12T10-39-53Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckZdxk_GTy9o-JAHxjUWSaBY9j7ceS2q1LpQZtxKf5jY3EjsACxwdTHd029UDK_N8v1LaVkltzCbJd-Y0aVXxZi0uRCjLiPC8eANsVC1NcoQxK1ygcwV8BeoyAICo8A%3D%3D_V2\u0026loc=CH\u0026title=Technical\u002BProgram\u002BManager",
+      "aboutTheJobRaw": "A problem isn\u2019t truly solved until it\u2019s solved for all. That\u2019s why Googlers build products that help create opportunities for everyone, whether down the street or across the globe. As a Technical Program Manager at Google, you\u2019ll use your technical expertise to lead complex, multi-disciplinary projects from start to finish. You\u2019ll work with stakeholders to plan requirements, identify risks, manage project schedules, and communicate clearly with cross-functional partners across the company. You\u0027re equally comfortable explaining your team\u0027s analyses and recommendations to executives as you are discussing the technical tradeoffs in product development with engineers. \n\u003Cp\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EPartner with engineering and programs lead to plan, execute, and deliver technical programs that advance privacy, safety and security goals.\u003C/li\u003E\n\u003Cli\u003EDevelop a team of Technical Program Managers (TPMs), ensuring they are engaged, motivated, and aligned with business-critical initiatives, delivering  results and driving  outcomes.\u003C/li\u003E\n\u003Cli\u003EDefine the scope of projects and develop, execute, or manage project plans for supported programs.\u003C/li\u003E\n\u003Cli\u003EReview key metrics pertaining to a program, monitor potential metric deviations, and define corrective actions for critical deviations.\u003C/li\u003E\n\u003Cli\u003EPromote best practices and guide continuous improvement within your team and across safer products. Build, maintain and enhance business, operational, and management dashboards.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in program management.\u003C/li\u003E\n\u003Cli\u003EExperience working with machine learning and large language models or ML Operations (Ops).\u003C/li\u003E\n\u003Cli\u003EExperience in relationship management and stakeholder management.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003E5 years of experience managing cross-functional or cross-team projects.\u003C/li\u003E\n\u003Cli\u003EExperience working in a startup environment.\u003C/li\u003E\n\u003Cli\u003EExperience launching features to consumers through frontend software development or backend platform development.\u003C/li\u003E\n\u003Cli\u003EAbility to collaborate with and influence stakeholders across various functions and sites.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-01T15:42:16.2340000\u002B00:00",
+        "2026-06-01T15:42:16.2540000\u002B00:00"
+      ]
+    },
+    {
       "id": "110651933890355910",
       "title": "Product Manager I, Technical Risk Management",
       "company": "Google",
