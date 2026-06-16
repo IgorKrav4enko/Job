@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+  "generatedAt": "2026-06-16T21:18:54.6598784\u002B00:00",
   "source": "Microsoft Careers",
   "status": "success",
-  "notes": "Normalized 19 active Microsoft jobs from latest raw snapshot.",
+  "notes": "Normalized 28 active Microsoft jobs from latest raw snapshot.",
   "searchTerm": "Software Engineer | Software Development Engineer",
   "locations": [
     {
@@ -70,11 +70,32 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=Germany%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-02T17:06:21.0000000\u002B00:00",
       "firstSeenAt": "2026-06-03T11:22:49.4230797\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "ad2b76dcfc26a242964b2e4de4328eb9c31f3e3a50eaa16c00adae631cf14d2d",
       "matchedLocations": [
-        "Germany"
+        "Germany",
+        "United Kingdom"
+      ],
+      "searchMatchCount": 2
+    },
+    {
+      "id": "1970393556659022",
+      "title": "Cambridge Residency Programme - Postdoc Researcher, Generative Experiences \u0026 Collaborative Workflows",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, Cambridgeshire, Cambridge"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556659022",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-05-26T13:51:12.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "isActive": true,
+      "contentHash": "a1074eb8d928b93e90d5cbb54b67bde3eae54b90a1114ec170f616cc8e3c0d2b",
+      "matchedLocations": [
+        "United Kingdom"
       ],
       "searchMatchCount": 1
     },
@@ -90,7 +111,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-03T18:19:46.0000000\u002B00:00",
       "firstSeenAt": "2026-06-03T21:29:41.1661404\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "a38fb2bdb11f0a802e393b65ad295dcdb325e0515b2c2429facde8a23a43e3c8",
       "matchedLocations": [
@@ -110,7 +131,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-11T13:09:40.0000000\u002B00:00",
       "firstSeenAt": "2026-06-11T20:35:30.3969887\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "3d33ac00e9b6e18fa81e82316425af3deca21a1bdd96da3a46c1ae1e38326f36",
       "matchedLocations": [
@@ -131,7 +152,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=Germany%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-08T10:58:17.0000000\u002B00:00",
       "firstSeenAt": "2026-06-08T11:20:26.1040192\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "b265db4d042bca257b360516ffef55c131e834c2dec000a3e62e28e183897772",
       "matchedLocations": [
@@ -148,10 +169,10 @@
       ],
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556872793",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-11T09:02:59.0000000\u002B00:00",
       "firstSeenAt": "2026-06-11T10:58:18.5187236\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "55be6f3eb34dd9eac99d005ea55e4d4d2bddedcec773df77ccd95849fa243c17",
       "matchedLocations": [
@@ -171,7 +192,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-01-13T12:10:23.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T16:33:23.2807260\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "0c7bed0e04d8f5a8700db85bd418e3e15ab83a02b5a7d4a2fdca7f4d15c5037c",
       "matchedLocations": [
@@ -191,11 +212,31 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Poland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-10T10:12:03.0000000\u002B00:00",
       "firstSeenAt": "2026-05-06T20:01:38.9220593\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "0b0c889a6b0d2973a75a63a945f2519bbf7e6d7b5896d0a08a7ac84246c23335",
       "matchedLocations": [
         "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "1970393556875140",
+      "title": "Critical Environment Technician (Shifts)",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, Newport, Newport"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556875140",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-06-12T15:19:55.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "isActive": true,
+      "contentHash": "0920ca7d987274812490f7b90824fb71488223187eef64c3ab1c7a3f96770516",
+      "matchedLocations": [
+        "United Kingdom"
       ],
       "searchMatchCount": 1
     },
@@ -211,11 +252,51 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=Germany%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-03T10:52:45.0000000\u002B00:00",
       "firstSeenAt": "2026-06-03T11:22:49.4230797\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "c41c64645492a9d88df93150fe5490713148709db0c65910c75ec78e5221701d",
       "matchedLocations": [
         "Germany"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "1970393556867359",
+      "title": "Data Center Project Manager",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, Newport, Newport"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556867359",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-05-20T15:12:54.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "isActive": true,
+      "contentHash": "7ba2c8d56916885c9723486d8f9b1c323b873363c302213c1ddcc9471e68d83a",
+      "matchedLocations": [
+        "United Kingdom"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "1970393556867016",
+      "title": "Microsoft Data Center Technician (DCT) Manager",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556867016",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-05-21T11:49:41.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "isActive": true,
+      "contentHash": "2940be6a98e0b87142eecc8919c3319ecf34f66bf908ca49f3dd7f8a4a5de64e",
+      "matchedLocations": [
+        "United Kingdom"
       ],
       "searchMatchCount": 1
     },
@@ -232,7 +313,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-05T22:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-06T08:46:41.7691070\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "bfe55d4a458b76d74ffcc2b7c16d3ff3f308c7e61ac6c67ba4ea0c1e61ca75db",
       "matchedLocations": [
@@ -241,20 +322,100 @@
       "searchMatchCount": 1
     },
     {
-      "id": "1970393556868144",
-      "title": "Principal Technical Program Manager - Forward Deployed Engineering",
+      "id": "1970393556874820",
+      "title": "Principal Technical Program Management Specialist",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, Cambridgeshire, Cambridge"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556874820",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-06-11T14:03:58.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-15T12:42:07.9438293\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "isActive": true,
+      "contentHash": "8d00fba147bf60fbdfb4144f332e345298f0ecbf8d4a6b35ad57fc9956142393",
+      "matchedLocations": [
+        "United Kingdom"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "1970393556873908",
+      "title": "Regional Infrastructure Director",
+      "company": "Microsoft",
+      "locations": [
+        "Ireland, Dublin, Dublin"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556873908",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-06-16T14:17:15.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "isActive": true,
+      "contentHash": "5938134769686abf4aeec8dd1454266d6afe5bb96b80a7e80ed7a6f709dc080a",
+      "matchedLocations": [
+        "Ireland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "1970393556867906",
+      "title": "Research Science PhD Internship Opportunities - Coding Agents",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, Cambridgeshire, Cambridge"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556867906",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-05-19T13:07:06.0000000\u002B00:00",
+      "firstSeenAt": "2026-05-21T10:03:11.9178296\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "isActive": true,
+      "contentHash": "18ff994b9a0dfd56bdd7471d4dd642dcf7fd2fd08996ab5b191a17c1634689c5",
+      "matchedLocations": [
+        "United Kingdom"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "1970393556873873",
+      "title": "Senior Applied Scientist",
       "company": "Microsoft",
       "locations": [
         "United Kingdom, London, London"
       ],
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556868144",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556873873",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-06-02T14:08:45.0000000\u002B00:00",
-      "firstSeenAt": "2026-06-03T11:22:49.4230797\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-06-09T11:01:52.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-11T10:58:18.5187236\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
-      "contentHash": "6c0be36e23e4c1d9448b8ebdc91cf7466c25c638be4ba23c78790c0b77a4e937",
+      "contentHash": "c0f4f585043b920a8ae8c12176f265d605cc9c1ec2a0ec583dc233163be9bdcd",
+      "matchedLocations": [
+        "United Kingdom"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "1970393556864619",
+      "title": "Senior Critical Environment Technician",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556864619",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-06-09T07:12:59.0000000\u002B00:00",
+      "firstSeenAt": "2026-05-10T08:22:05.7141031\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "isActive": true,
+      "contentHash": "e7cc600d172ddd4e29181510077744cbc4fc4b24cb1516faca307d38007e1d33",
       "matchedLocations": [
         "United Kingdom"
       ],
@@ -272,7 +433,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-18T15:34:29.0000000\u002B00:00",
       "firstSeenAt": "2026-05-18T20:00:17.8617872\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "e089db4c84019dccb7c4783091a5ae2f1fab68b990e07d78b374fcc95221581a",
       "matchedLocations": [
@@ -292,7 +453,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Ireland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-10T07:13:49.0000000\u002B00:00",
       "firstSeenAt": "2026-06-10T10:31:54.1406753\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "50f9e1d6665458be9c42f1135bf1192ed6960c04b38514666ed89fd2bb175ad1",
       "matchedLocations": [
@@ -312,7 +473,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=Switzerland%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-15T14:37:14.0000000\u002B00:00",
       "firstSeenAt": "2026-06-11T10:58:18.5187236\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "d274ee47d7cb89d35a735f7534ecefb7973df6d451f4b7fa3d04ec589651f888",
       "matchedLocations": [
@@ -332,7 +493,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-22T18:07:57.0000000\u002B00:00",
       "firstSeenAt": "2026-05-22T20:09:02.4857097\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "8122737c0d120b9cdfb1a0093e7cc510d4ad11bfaf2a7842033fcedf8266e8cb",
       "matchedLocations": [
@@ -352,7 +513,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-11T10:51:27.0000000\u002B00:00",
       "firstSeenAt": "2026-06-11T10:58:18.5187236\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "8be6a6231d174d790cf8ca7353cfed6dc8c840663df207e876f6e195c504e07d",
       "matchedLocations": [
@@ -372,7 +533,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-11T10:54:46.0000000\u002B00:00",
       "firstSeenAt": "2026-06-11T20:35:30.3969887\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "7c2fe87e357780be8be102e17f92e4ddd315cef477a06c729a257d12fc1b0e13",
       "matchedLocations": [
@@ -392,7 +553,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-11T10:52:57.0000000\u002B00:00",
       "firstSeenAt": "2026-06-11T10:58:18.5187236\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "a0723113055e2e9fafbab7e5e1ce4546ad84a616b5c4b05a9bf8c271b51e0236",
       "matchedLocations": [
@@ -412,9 +573,29 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-05-21T10:10:48.0000000\u002B00:00",
       "firstSeenAt": "2026-05-21T20:09:43.2066920\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "4aa7166ab36c4caab64ea986dcb6fd6f14df37c341626f650597bdd773366581",
+      "matchedLocations": [
+        "United Kingdom"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "1970393556873413",
+      "title": "Senior Technical Program Manager",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, Cambridgeshire, Cambridge"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556873413",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-06-11T10:52:09.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-15T12:42:07.9438293\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
+      "isActive": true,
+      "contentHash": "180a390137e9d7913ece6a60613fdfa867b7e758abb04e41d5200fa3b375f4cc",
       "matchedLocations": [
         "United Kingdom"
       ],
@@ -433,7 +614,7 @@
       "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
       "postedAtCandidate": "2026-06-10T14:26:52.0000000\u002B00:00",
       "firstSeenAt": "2026-06-10T20:45:00.4576114\u002B00:00",
-      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "lastSeenAt": "2026-06-16T21:18:54.6598784\u002B00:00",
       "isActive": true,
       "contentHash": "c53081940b9d9d46a1ea84500ab360e632f011fe3513017b6f64e20f47d3cdd8",
       "matchedLocations": [
@@ -2185,26 +2366,6 @@
       "searchMatchCount": 1
     },
     {
-      "id": "1970393556874820",
-      "title": "Principal Technical Program Management Specialist",
-      "company": "Microsoft",
-      "locations": [
-        "United Kingdom, Cambridgeshire, Cambridge"
-      ],
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556874820",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-06-11T14:03:58.0000000\u002B00:00",
-      "firstSeenAt": "2026-06-15T12:42:07.9438293\u002B00:00",
-      "lastSeenAt": "2026-06-15T12:42:07.9438293\u002B00:00",
-      "isActive": false,
-      "contentHash": "8d00fba147bf60fbdfb4144f332e345298f0ecbf8d4a6b35ad57fc9956142393",
-      "matchedLocations": [
-        "United Kingdom"
-      ],
-      "searchMatchCount": 1
-    },
-    {
       "id": "1970393556853370",
       "title": "Principal Technical Program Manager",
       "company": "Microsoft",
@@ -2245,6 +2406,26 @@
       "searchMatchCount": 1
     },
     {
+      "id": "1970393556868144",
+      "title": "Principal Technical Program Manager - Forward Deployed Engineering",
+      "company": "Microsoft",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556868144",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=0\u0026sort_by=relevance\u0026filter_include_remote=1",
+      "postedAtCandidate": "2026-06-02T14:08:45.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-03T11:22:49.4230797\u002B00:00",
+      "lastSeenAt": "2026-06-16T11:33:29.7316123\u002B00:00",
+      "isActive": false,
+      "contentHash": "6c0be36e23e4c1d9448b8ebdc91cf7466c25c638be4ba23c78790c0b77a4e937",
+      "matchedLocations": [
+        "United Kingdom"
+      ],
+      "searchMatchCount": 1
+    },
+    {
       "id": "1970393556626895",
       "title": "Research Intern - AI Agents \u0026 Efficiency",
       "company": "Microsoft",
@@ -2259,46 +2440,6 @@
       "lastSeenAt": "2026-05-29T10:14:19.2982806\u002B00:00",
       "isActive": false,
       "contentHash": "5cba905abd3bad0857d207734dc8b67741774a970134433f9cf643b8c13be81e",
-      "matchedLocations": [
-        "United Kingdom"
-      ],
-      "searchMatchCount": 1
-    },
-    {
-      "id": "1970393556867906",
-      "title": "Research Science PhD Internship Opportunities - Coding Agents",
-      "company": "Microsoft",
-      "locations": [
-        "United Kingdom, Cambridgeshire, Cambridge"
-      ],
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556867906",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-05-19T13:07:06.0000000\u002B00:00",
-      "firstSeenAt": "2026-05-21T10:03:11.9178296\u002B00:00",
-      "lastSeenAt": "2026-06-15T12:42:07.9438293\u002B00:00",
-      "isActive": false,
-      "contentHash": "18ff994b9a0dfd56bdd7471d4dd642dcf7fd2fd08996ab5b191a17c1634689c5",
-      "matchedLocations": [
-        "United Kingdom"
-      ],
-      "searchMatchCount": 1
-    },
-    {
-      "id": "1970393556873873",
-      "title": "Senior Applied Scientist",
-      "company": "Microsoft",
-      "locations": [
-        "United Kingdom, London, London"
-      ],
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556873873",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-06-09T11:01:52.0000000\u002B00:00",
-      "firstSeenAt": "2026-06-11T10:58:18.5187236\u002B00:00",
-      "lastSeenAt": "2026-06-15T12:42:07.9438293\u002B00:00",
-      "isActive": false,
-      "contentHash": "c0f4f585043b920a8ae8c12176f265d605cc9c1ec2a0ec583dc233163be9bdcd",
       "matchedLocations": [
         "United Kingdom"
       ],
@@ -2339,26 +2480,6 @@
       "lastSeenAt": "2026-05-09T19:32:45.4813756\u002B00:00",
       "isActive": false,
       "contentHash": "a8ae44982210805c33bb6167f47aad43026d593610bd1fbab793f479bfdd278e",
-      "matchedLocations": [
-        "United Kingdom"
-      ],
-      "searchMatchCount": 1
-    },
-    {
-      "id": "1970393556864619",
-      "title": "Senior Critical Environment Technician",
-      "company": "Microsoft",
-      "locations": [
-        "United Kingdom, London, London"
-      ],
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556864619",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-05-08T09:07:16.0000000\u002B00:00",
-      "firstSeenAt": "2026-05-10T08:22:05.7141031\u002B00:00",
-      "lastSeenAt": "2026-05-22T09:49:15.6377576\u002B00:00",
-      "isActive": false,
-      "contentHash": "e7cc600d172ddd4e29181510077744cbc4fc4b24cb1516faca307d38007e1d33",
       "matchedLocations": [
         "United Kingdom"
       ],
@@ -2581,26 +2702,6 @@
       "contentHash": "7f24a0a940a157d1ceac5dffea81c79e4a919971038125b4e86812b5e9dca711",
       "matchedLocations": [
         "Ireland"
-      ],
-      "searchMatchCount": 1
-    },
-    {
-      "id": "1970393556873413",
-      "title": "Senior Technical Program Manager",
-      "company": "Microsoft",
-      "locations": [
-        "United Kingdom, Cambridgeshire, Cambridge"
-      ],
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556873413",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com\u0026query=Software%20Development%20Engineer\u0026location=United%20Kingdom%2C%20Multiple%20Locations%2C%20Multiple%20Locations\u0026start=10\u0026sort_by=relevance\u0026filter_include_remote=1",
-      "postedAtCandidate": "2026-06-11T10:52:09.0000000\u002B00:00",
-      "firstSeenAt": "2026-06-15T12:42:07.9438293\u002B00:00",
-      "lastSeenAt": "2026-06-15T12:42:07.9438293\u002B00:00",
-      "isActive": false,
-      "contentHash": "180a390137e9d7913ece6a60613fdfa867b7e758abb04e41d5200fa3b375f4cc",
-      "matchedLocations": [
-        "United Kingdom"
       ],
       "searchMatchCount": 1
     },

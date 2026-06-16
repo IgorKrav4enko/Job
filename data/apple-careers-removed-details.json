@@ -1,6 +1,38 @@
 {
   "jobs": [
     {
+      "id": "200665177",
+      "title": "Site Reliability Engineer, iCloud",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200665177-2114/site-reliability-engineer-icloud?team=SFTWR",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-27T10:19:59.8975243\u002B00:00",
+      "lastSeenAt": "2026-06-16T11:33:24.7003438\u002B00:00",
+      "removedAt": "2026-06-16T21:18:49.6586762\u002B00:00",
+      "removedInRunId": "2026-06-16T21-18-49Z",
+      "aboutTheJobRaw": "People at Apple don\u2019t just build products \u2014 they craft experiences our customers love and depend on. Apple Services Engineering (ASE) builds and supports the systems that make many of these daily experiences possible. If you\u2019ve used Apple products, you\u2019ve likely interacted with us. Apple Services Site Reliability Engineering (SRE) teams are responsible for the systems and services that directly support those customers and their experiences. We are looking for an SRE with experience in building and supporting highly available customer-facing services.",
+      "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200655100",
+      "title": "Software Engineer \u2013 Cellular Data Plane Systems (m/f/d)",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200655100-1731/software-engineer-cellular-data-plane-systems-m-f-d?team=HRDWR",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-04-20T10:48:24Z",
+      "lastSeenAt": "2026-06-16T11:33:24.7003438\u002B00:00",
+      "removedAt": "2026-06-16T21:18:49.6586762\u002B00:00",
+      "removedInRunId": "2026-06-16T21-18-49Z",
+      "aboutTheJobRaw": "Apple\u0027s Cellular Data Plane Systems team is seeking a motivated and talented junior software engineer to join our architecture, features, and validation efforts. In this role, you will contribute to a sophisticated system simulation environment that models and validates both hardware and software components. You will work alongside world-class engineers to shape next-generation cellular data plane technologies, helping define reference models and drive validation of complex, cutting-edge systems.",
+      "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00"
+    },
+    {
       "id": "200650800",
       "title": "Early Career CAD Tools Optimisation Engineer (Design Verification)",
       "company": "Apple",
