@@ -1,6 +1,52 @@
 {
   "jobs": [
     {
+      "id": "133344999289823942",
+      "title": "Senior Staff Software Engineer, Agentic Data Tooling, DeepMind",
+      "company": "DeepMind",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/133344999289823942-senior-staff-software-engineer-agentic-data-tooling-deepmind?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "New York, NY, USA",
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-06-05T20:11:22.0524880\u002B00:00",
+      "lastSeenAt": "2026-06-15T21:21:40.9893268\u002B00:00",
+      "removedAt": "2026-06-16T11:33:16.3114681\u002B00:00",
+      "removedInRunId": "2026-06-16T11-33-16Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckW4sXhvjUJPywfKfB5mxl12ehcltv95N22l8NDLEB1JeEjsACxwdTEHfYkikkn_uU1T8DSsnCo-iOlsjScHTKR_hbaXmCZ4kG2kbb9MulT7FcITzGRE5ZryvKjyM1Q%3D%3D_V2\u0026loc=US\u0026title=Senior\u002BStaff\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EAt Google DeepMind our mission is to build the world\u0027s first general-purpose learning agent. Central to this mission is the complex task of measuring the intelligence of our prototypes. As a Software Engineer, you will be working with the cutting edge AI agents developed by our exceptional team of Machine Learning and Neuroscience research scientists. Your responsibilities will include everything from creating systems for agent testing using 2D and 3D games to developing test problems within physics simulators. You will create graphical visualization of results, build competitive agent leaderboards and test new algorithms on robots. To succeed in this role you will need to have a strong foundation in software engineering and enjoy working on a wide range of challenging problems within a mission-driven team.\u003C/p\u003E\n\u003Cp\u003EShape the future of AI by building the core infrastructure and tooling that powers Gemini\u0027s agentic capabilities. Through advanced data curation and creation, you will drive the development of next-generation evaluation frameworks:\u003Cbr\u003E\u003Cbr\u003ESmithBench: Our gold-standard benchmark testing whether AI agents can autonomously execute complex, end-to-end, first-party Google engineering workflows (such as CL lifecycles, bug investigations, and pipeline orchestration).\u003Cbr\u003E\u003Cbr\u003ERE-Bench: Our benchmark designed to measure agent performance on highly complex, long-horizon research engineering tasks.\u003Cbr\u003E\u003Cbr\u003EWhether you are designing environments to record programmatic agent-API interactions or building computer-control systems to capture real-time human and model trajectories, your tooling will deliver the foundational training and evaluation data that accelerates AI capabilities across models, harnesses, and skills.\u003C/p\u003E\u003Cp\u003EArtificial intelligence will be one of humanity\u2019s most transformative inventions. At Google DeepMind, we are a pioneering AI lab with exceptional interdisciplinary teams focused on advancing AI development to solve complex global challenges and accelerate high-quality product innovation for billions of users. We use our technologies for widespread public benefit and scientific discovery, ensuring safety and ethics are always our highest priority.\u003C/p\u003EWe are pushing the boundaries across multiple domains. Our global teams offer diverse learning opportunities and varied career pathways for those driven to achieve exceptional results through collective effort.\u003Cbr\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EUS: $262000 - $365000 (USD) \u002B 25% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign and create novel data tooling to accelerate Gemini model evaluation, training, and hill climbing to improve agentic capabilities.\u003C/li\u003E\n\u003Cli\u003EFacilitate ingestion and creation of corpora representing complex worlds, and record human, agentic, and hybrid trajectories through the Reinforcement Learning (RL) environments.\u003C/li\u003E\n\u003Cli\u003EBuild scalable data collection pipelines bridging capturing multi-turn, tool-using agent interactions and enabling rapid iteration on environment complexity and reward design.\u003C/li\u003E\n\u003Cli\u003ECreate human-in-the-loop annotation and trajectory review tooling, analytics dashboards, and agentic orchestration frameworks to continuously generate, curate, and validate high-signal training corpora at scale.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, IT, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience with software development in one or more programming languages (e.g., Python, C, C\u002B\u002B, Java, JavaScript).\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s or Master\u0027s degree in Computer Science, Data Science, or a related field.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in systems design, product management, or software engineering roles.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "New York, NY, USA",
+          "addresses": [
+            "New York, NY, USA"
+          ],
+          "city": "New York",
+          "regionCode": "NY",
+          "countryCode": "US"
+        },
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "London, UK"
+          ],
+          "city": "London",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-03T15:08:39.7860000\u002B00:00",
+        "2026-06-15T19:08:09.7180000\u002B00:00",
+        "2026-06-15T19:08:09.8540000\u002B00:00"
+      ]
+    },
+    {
       "id": "106997221664137926",
       "title": "Data Center Technician II",
       "company": "Google",
