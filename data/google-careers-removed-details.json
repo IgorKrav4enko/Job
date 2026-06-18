@@ -1,6 +1,78 @@
 {
   "jobs": [
     {
+      "id": "86351120699400902",
+      "title": "Senior Software Engineer, Google Compute Engine Virtual Machine Site Reliability Engineering",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/86351120699400902-senior-software-engineer-google-compute-engine-virtual-machine-site-reliability-engineering?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-06-11T20:35:16.6372696\u002B00:00",
+      "lastSeenAt": "2026-06-17T20:29:53.9932484\u002B00:00",
+      "removedAt": "2026-06-18T10:46:54.3324519\u002B00:00",
+      "removedInRunId": "2026-06-18T10-46-54Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckUj-Yni5OE2clKW9350kg0pqWHnetDo6wbdyjtSpLphSEjsACxwdTPO1KqK5RyMlMja7Z4NIoHN53uHtnLAg9as3VeqhBXy3w901yAStczlH2JiCEXXAtMtcpgh4Ow%3D%3D_V2\u0026loc=GB\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003ESite Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google Cloud\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to customer\u0027s needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance. \u003C/p\u003E\u003Cdiv\u003E\u003Cbr\u003E\u003C/div\u003E\u003Cdiv\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google Cloud, while using your expertise in coding, algorithms, complexity analysis and large-scale system design. SRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\u003C/div\u003E\nBehind everything our users see online is the architecture built by the Technical Infrastructure team to keep it running. From developing and maintaining our data centers to building the next generation of Google platforms, we make Google\u0027s product portfolio possible. We\u0027re proud to be our engineers\u0027 engineers and love voiding warranties by taking things apart so we can rebuild them. We keep our networks up and running, ensuring our users have the best and fastest experience possible.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EEngage in and improve the whole lifecycle of services\u2014from inception and design, through to deployment, operation and refinement.\u003C/li\u003E\n\u003Cli\u003ESupport services before they go live through activities such as system design consulting, developing software platforms and frameworks, capacity planning and launch reviews.\u003C/li\u003E\n\u003Cli\u003EMaintain services once they are live by measuring and monitoring availability, latency and overall system health.\u003C/li\u003E\n\u003Cli\u003EScale systems sustainably through mechanisms like automation, and evolve systems by pushing for changes that improve reliability and velocity.\u003C/li\u003E\n\u003Cli\u003EPractice sustainable incident response and blameless postmortems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience in designing, analyzing, and troubleshooting large-scale distributed systems.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience leading projects and providing technical leadership. \u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or Engineering.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "123 Buckingham Palace Rd, London SW1W 9SH, UK"
+          ],
+          "city": "London",
+          "postalCode": "SW1W 9SH",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-11T13:09:11.4150000\u002B00:00",
+        "2026-06-11T13:09:11.5030000\u002B00:00"
+      ]
+    },
+    {
+      "id": "132869353035965126",
+      "title": "Senior Software Engineer, Google Kubernetes Engine",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/132869353035965126-senior-software-engineer-google-kubernetes-engine?location=Poland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-05-18T10:40:38.5175696\u002B00:00",
+      "lastSeenAt": "2026-06-17T20:29:53.9932484\u002B00:00",
+      "removedAt": "2026-06-18T10:46:54.3324519\u002B00:00",
+      "removedInRunId": "2026-06-18T10-46-54Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckWrQT5GzPi8DbUDn49OE6Q9XbpAZ9zlOnY3IwOORbopjEjsACxwdTE4xlvhJ3gN2g6qAvaeQFoRe_bb4MjhqiToT32Tf3TfnZ6jEXEAMqCW_KTOGVxpGUQ22NJjvTg%3D%3D_V2\u0026loc=PL\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "Google Cloud\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google Cloud\u0027s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. You will anticipate our customer needs and be empowered to act like an owner, take action and innovate. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.Google Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142364000 - z\u0142374000 (PLN) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign and implement new networking features in the Kubernetes and Google Kubernetes Engine (GKE) area.\u003C/li\u003E\n\u003Cli\u003EHelp external GKE customers who hit issues in production clusters.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EEngage with the open source community to help shape the direction of networking in Kubernetes.\u003C/li\u003E\n\u003Cli\u003EDesign and develop AI/ML Enablement high-performance networking solutions specifically optimized for large-scale model training, low-latency GPU communication and autonomous agentic workloads.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EDesign and develop network virtualization solutions for containers.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages.\u003C/li\u003E\n\u003Cli\u003E3 years of experience testing, maintaining, or launching software products, and 1 year of experience with software design and architecture.\u003C/li\u003E\n\u003Cli\u003EExperience with Linux networking stack.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science, or a related technical field.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EFamiliarity with technologies such as DNS, IPv6, eBPF, load balancing, or network security.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-18T08:29:00.9140000\u002B00:00",
+        "2026-06-08T10:38:26.0880000\u002B00:00",
+        "2026-06-08T10:38:26.2600000\u002B00:00"
+      ]
+    },
+    {
       "id": "138088270876549830",
       "title": "App Specialist, Customer Onboarding, Global Customer Solutions (Multiple Languages)",
       "company": "Google",
@@ -6173,6 +6245,52 @@
       "rawTimestampPairs": [
         "2026-04-28T13:31:08.9870000\u002B00:00",
         "2026-04-28T13:31:09.1050000\u002B00:00"
+      ]
+    },
+    {
+      "id": "114999789413638854",
+      "title": "Technical Solutions Engineer II, Infrastructure, Serverless, Google Cloud",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/114999789413638854-technical-solutions-engineer-ii-infrastructure-serverless-google-cloud?location=Poland\u0026q=Software\u002BEngineer\u0026page=4",
+      "locations": [
+        "Warsaw, Poland",
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-05-20T09:54:02.9803082\u002B00:00",
+      "lastSeenAt": "2026-06-17T20:29:53.9932484\u002B00:00",
+      "removedAt": "2026-05-29T20:38:08.5723180\u002B00:00",
+      "removedInRunId": "2026-05-29T20-38-08Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckZj1_Hv8ebMOpYFssJaMUI42wOWcQ8cFonb-Kob8dfVCEjsACxwdTCs-TLzxNswaEFoA0gRf-JkzDV0_dnqSy5fADQbVNsufiCnAgd56STYOVXm63wiQ-_LtWgG1dg%3D%3D_V2\u0026loc=PL\u0026title=Technical\u002BSolutions\u002BEngineer\u002BII",
+      "aboutTheJobRaw": "\u003Cp\u003EThe Google Cloud Platform team helps customers transform and build what\u0027s next for their business \u2014 all with technology built in the cloud. Our products are developed for security, reliability and scalability, running the full stack from infrastructure to applications to devices and hardware. Our teams are dedicated to helping our customers \u2014 developers, small and large businesses, educational institutions and government agencies \u2014 see the benefits of our technology come to life. As part of an entrepreneurial team in this rapidly growing business, you will play a key role in understanding the needs of our customers and help shape the future of businesses of all sizes use technology to connect with customers, employees and partners.\u003C/p\u003E\n\u003Cp\u003EOur Technical Solutions Engineers own our large and important customer issues in addition to providing level two support to our other support teams. You will be a part of a global team that provides 24x7 support to help customers seamlessly make the switch to Google Cloud.\u003Cbr\u003E\u003Cbr\u003EIn this role, you will troubleshoot technical problems for customers with a mix of debugging, networking, system administration, updating documentation, and when needed, coding and scripting. You will make our products easier to adopt and use by making improvements to the product, tools, processes, and documentation. Our Technical Solutions team is driven by customers, and you will help drive the success of Google Cloud by understanding and advocating for our customers\u2019 issues.\u003C/p\u003E\u003Cdiv\u003E\u003Cbr\u003E\u003C/div\u003E\u003Cp\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EIreland: \u20AC68000 - \u20AC70000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003EPoland: z\u0142176000 - z\u0142181000 (PLN) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWork as part of a team of engineers or consultants that globally ensure 24-hour customer support.\u003C/li\u003E\n\u003Cli\u003EManage the customer\u2019s problem through effective diagnosis, resolution, or implementation of new investigation tools to increase productivity for customer issues on Google Cloud Platform products.\u003C/li\u003E\n\u003Cli\u003EAct as a consultant and subject matter expert for internal stakeholders in Engineering, Sales, and customer organizations to resolve technical deployment obstacles and improve Google Cloud.\u003C/li\u003E\n\u003Cli\u003EWork with customers on their production serverless deployments and CICD deployments to resolve issues and achieve product readiness, availability, and scale.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EDevelop an understanding of Google Cloud\u0027s Serverless product technology and underlying architectures by troubleshooting, reproducing, and determining the root cause for customer-reported issues, building tools, and faster diagnosis.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Science, Technology, Engineering, Mathematics, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience troubleshooting and advocating for customer needs, and triaging technical issues (e.g., hardware, software, application, operational, process).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience in reading/debugging code written in a general purpose coding language (e.g., Java, C, C\u002B\u002B, Python, Shell, Go or JavaScript, etc.) and in virtualization and orchestration frameworks.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003E2 years of experience in technical consulting or supporting large enterprise customers with high Service-Level Agreement (SLA) requirements.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with web technologies, system or software architecture, Application Programming Interface (API) design and scalability, DevOps, and networking.\u003C/li\u003E\n\u003Cli\u003EExperience with cloud computing through certifications, internships, or coursework, and debugging workload issues across multi-node environments.\u003C/li\u003E\n\u003Cli\u003EExperience in computer networking, routing, load balancing, and with the Kubernetes framework.\u003C/li\u003E\n\u003Cli\u003EExperience working with public cloud services and infrastructure.\u003C/li\u003E\n\u003Cli\u003EExperience troubleshooting client-server architecture, including performing latency and packet capture analysis from serverless workloads to various egress components such as databases and storage.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        },
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "Dublin, Ireland"
+          ],
+          "city": "Dublin",
+          "regionCode": "D",
+          "countryCode": "IE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-19T12:57:35.0620000\u002B00:00",
+        "2026-06-15T16:37:57.2280000\u002B00:00",
+        "2026-06-15T16:37:57.4660000\u002B00:00"
       ]
     },
     {
