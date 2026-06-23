@@ -1,0 +1,1410 @@
+{
+  "runId": "2026-06-23T20-22-16Z",
+  "generatedAt": "2026-06-23T20:22:16.3736705\u002B00:00",
+  "source": "nvidia-careers",
+  "searchTerm": "software engineer",
+  "sources": [
+    {
+      "requestedLocation": "Poland",
+      "locationSlug": "poland",
+      "searchLocation": "Poland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "jobs": [
+        {
+          "jobId": "893392565316",
+          "titleRaw": "Software Engineer, CPU and SoC Profiling Tools",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Poland, Warsaw"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392565316",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Remote/Software-Engineer--CPU-and-SoC-Profiling-Tools_JR2010351/apply?source=Eightfold",
+          "aboutTheJobRaw": "\u003Cp\u003ENVIDIA\u0027s products, hardware and software, are world leaders for performance and efficiency. We are continually innovating in creative ways to improve our ability to deliver outstanding solutions across a wide range of sectors. We are seeking exceptional engineers who will have a chance to play a key role in shipping user visible features in a large established product. In the Software Developer Tools Team, we enable internal and third-party developers to turn NVIDIA\u0027s hardware into groundbreaking cluster, server, professional, consumer, automotive, and embedded solutions.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+          "responsibilitiesRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EJoin the Developer Tools team to work on software such as Nsight Systems.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EWork with a wide variety of hardware platforms, ranging from small embedded systems, to large multi-GPU and NUMA servers and clusters.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBe the communicator between our Nsight Systems team, various chip and system design teams, and the metrics library team.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EWork with internal and external users to understand their software and performance goals, and use that knowledge to influence future chip design.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECommunicate across multiple teams to collect and understand the requirements. Understand how the underlying hardware and software works, and use that knowledge to deliver valuable features to the users. Participate in all phases of the software life cycle.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECollaborate with team members across multiple time zones in a dynamic, high-energy work environment.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EInteract with internal and external users, help them get the maximum value out of our products, and deliver their feedback to the product team.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+          "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EExcellent problem solving, collaborative, and interpersonal skills.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong C\u002B\u002B knowledge.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong understanding of algorithms and data structures.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDemonstrated ability to track large amounts of information across long periods of time, ability to explain complex concepts in clear and concise language.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBS or MS in EE, CE, CS, Systems Engineering and 4 years of experience in a related software position.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+          "preferredQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EExperience with GPUs, CUDA, HPC, clusters, networking, and performance optimization in distributed environments.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHands on experience with profiling and performance optimizations (e.g. Linux perf, VTune).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EUnderstanding of software toolchains and its components (e.g. Arm tools, Android NDK tools).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with data science, data analysis and Python.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience working in remote and distributed teams.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking and hardworking people in the world working for us. If you\u0027re creative and autonomous, we want to hear from you! We are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 183,750 PLN - 318,500 PLN.",
+          "postedAtCandidate": "2026-05-15T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893382583022",
+          "titleRaw": "Senior Deep Learning Software Engineer, Inference",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - Netherlands",
+            "Remote - Italy"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893382583022",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Netherlands-Remote/Senior-Deep-Learning-Software-Engineer--Inference_JR1997930/apply/apply?source=Eightfold",
+          "aboutTheJobRaw": "\u003Cp\u003E\u003Cspan\u003ENVIDIA seeks a Senior Software Engineer specializing in Deep Learning Inference for our growing team. As a key contributor, you will help design, build, and optimize the GPU-accelerated software that powers today\u2019s most sophisticated AI applications.\u003C/span\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003EOur team is responsible for developing and maintaining high-performance deep learning frameworks, including SGLang and vLLM, which are at the forefront of efficient large-scale model serving and inference. You will play a central role in improving these platforms, facilitating smooth deployment and serving of groundbreaking language models.\u003C/span\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003EYou\u2019ll work closely with the deep learning community to implement the latest algorithms for public release in frameworks like SGLang and vLLM, as well as other DL frameworks. Your work will focus on identifying and driving performance improvements for state-of-the-art LLM and Generative AI models across NVIDIA accelerators, from datacenter GPUs to edge SoCs. You\u0027ll bring to bear open-source tools and plugins\u2014including CUTLASS, OAI Triton, NCCL, and CUDA kernels\u2014to implement and optimize model serving pipelines.\u003C/span\u003E\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat you\u0027ll be doing:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPerformance optimization, analysis, and tuning of DL models in various domains like LLM, Multimodal and Generative AI.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EScale performance of DL models across different architectures and types of NVIDIA accelerators.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EContribute features and code to NVIDIA\u2019s inference libraries, vLLM and SGLang, FlashInfer and LLM software solutions.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EWork with cross-collaborative teams across frameworks, NVIDIA libraries and inference optimization innovative solutions.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat we need to see:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EMasters or PhD or equivalent experience in relevant field (Computer Engineering, Computer Science, EECS, AI).\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003E5\u002B years of relevant software development experience.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent C/C\u002B\u002B programming and software design skills. SW Agile skills are helpful and Python experience is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPrior experience with training, deploying or optimizing the inference of DL models in production is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPrior background with performance modeling, profiling, debug, and code optimization or architectural knowledge of CPU and GPU is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWays to stand out from the crowd:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EContribute to Deep Learning Software projects, such as PyTorch, vLLM, and SGLang to drive advancements in the field.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience with Multi-GPU Communications (NCCL, NVSHMEM)\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience building and shipping products to enterprise customers.\u00A0\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EGPU programming experience (CUDA, OAI TRITON or CUTLASS).\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003ENVIDIA is at the forefront of breakthroughs in Artificial Intelligence, High-Performance Computing, and Visualization. Our teams are\u00A0composed of driven, innovative professionals dedicated to pushing the boundaries of technology. We offer highly competitive salaries, an extensive benefits package, and a work environment that promotes diversity, inclusion, and flexibility. As an equal opportunity employer, we are committed to fostering a supportive and empowering workplace for all\u003C/span\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
+          "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EMasters or PhD or equivalent experience in relevant field (Computer Engineering, Computer Science, EECS, AI).\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003E5\u002B years of relevant software development experience.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent C/C\u002B\u002B programming and software design skills. SW Agile skills are helpful and Python experience is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPrior experience with training, deploying or optimizing the inference of DL models in production is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPrior background with performance modeling, profiling, debug, and code optimization or architectural knowledge of CPU and GPU is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+          "preferredQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EContribute to Deep Learning Software projects, such as PyTorch, vLLM, and SGLang to drive advancements in the field.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience with Multi-GPU Communications (NCCL, NVSHMEM)\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience building and shipping products to enterprise customers.\u00A0\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EGPU programming experience (CUDA, OAI TRITON or CUTLASS).\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003ENVIDIA is at the forefront of breakthroughs in Artificial Intelligence, High-Performance Computing, and Visualization. Our teams are\u00A0composed of driven, innovative professionals dedicated to pushing the boundaries of technology. We offer highly competitive salaries, an extensive benefits package, and a work environment that promotes diversity, inclusion, and flexibility. As an equal opportunity employer, we are committed to fostering a supportive and empowering workplace for all\u003C/span\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.",
+          "postedAtCandidate": "2026-01-09T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893393382291",
+          "titleRaw": "System Software Engineer, Python and C/C\u002B\u002B - Deep Learning",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Poland, Warsaw"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893393382291",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Warsaw/System-Software-Engineer--Python-and-C-C-----Deep-Learning_JR2013224/apply?source=Eightfold",
+          "aboutTheJobRaw": "\u003Cp\u003ENVIDIA is hiring system engineers for its Deep Learning Algorithms team. Academic and commercial groups around the world are using GPUs to revolutionize deep learning and data analytics, and to power data centers. Join the team building software which will be used by the entire world. Work with the scientific community to implement the latest AI solutions. Ability to work in a dynamic, fast-paced environment is required as well as strong interpersonal skills.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EIn this role you will be interacting with internal partners, users, and members of the open source community to analyze, define and implement highly optimized solutions. The scope of these efforts includes a combination of crafting and implementing new solutions, defining APIs, performance tuning and analysis, analyzing functionality coverage across multiple solutions, build larger, coherent AI toolset. Are you ready for this challenge?\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat you\u2019ll be doing:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EResearch, prototype, develop and optimize solutions, tools and libraries for deep learning, data analytics, machine learning, or scientific computing.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EAnalyse, influence and improve deep learning libraries and frameworks standards and APIs according to good engineering practices.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECollaborate with team members and other partners.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EWhat we need to see:\u003C/b\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBachelor\u0027s or Master\u0027s degree or equivalent experience in Computer Science, Engineering, or a related field.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E8\u002B years of work experience in software development.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExcellent Python and C/C\u002B\u002B programming knowledge.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience in design and implementation of complex systems with decoupled dependencies.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EKnowledge of design patterns and software engineering principles.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong analytical skill, knowledge about algorithms and data structures.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong time-management and organization skills for coordinating multiple initiatives, priorities and implementations of new technology and products into very complex projects.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EGood communication and documentation habits.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking people in the world working for us. If you\u0027re creative and autonomous, we want to hear from you!\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWe are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 292,500 PLN - 507,000 PLN for Level 4, and 375,000 PLN - 650,000 PLN for Level 5.",
+          "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBachelor\u0027s or Master\u0027s degree or equivalent experience in Computer Science, Engineering, or a related field.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E8\u002B years of work experience in software development.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExcellent Python and C/C\u002B\u002B programming knowledge.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience in design and implementation of complex systems with decoupled dependencies.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EKnowledge of design patterns and software engineering principles.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong analytical skill, knowledge about algorithms and data structures.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EStrong time-management and organization skills for coordinating multiple initiatives, priorities and implementations of new technology and products into very complex projects.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EGood communication and documentation habits.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is widely considered to be one of the technology world\u2019s most desirable employers. We have some of the most forward-thinking people in the world working for us. If you\u0027re creative and autonomous, we want to hear from you!\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWe are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 292,500 PLN - 507,000 PLN for Level 4, and 375,000 PLN - 650,000 PLN for Level 5.",
+          "postedAtCandidate": "2026-02-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394712289",
+          "titleRaw": "Senior Software Engineer, JAX",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - Switzerland",
+            "Remote - UK",
+            "Remote - Germany",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394712289",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Switzerland-Remote/Senior-Software-Engineer--JAX_JR2016341/apply?source=Eightfold",
+          "aboutTheJobRaw": "\u003Cdiv\u003E\u003Cp\u003ENVIDIA is hiring senior engineers to develop its AI platform and more specifically its performance optimizations in deep learning frameworks using JAX, a tool that can differentiate between Python control code and NumPy code. Our goal is to deliver a polished, fast, modular and coordinated platform to handle data, training and analysis for a wide range of deep learning solutions using JAX. To achieve this and provide an excellent user experience, you have strong programming skills and excellent system design skills. You should have excellent communication and planning skills for this role. Come join us to build the next generation of tooling that will advance the numerical computing and machine learning research around the world!\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+          "responsibilitiesRaw": "\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EPlay meaningful role in NVIDIA\u0027s effort in contributing to JAX.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDesign and implement JAX core components and drive peak performance on NVIDIA products.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EWork with AI applied researchers and leaders to build future-proof models\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBuild tools that will increase the efficiency of teams developing AI-based systems.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EWork to bridge the gap between the latest in numerical computing, simulation and deep learning research and their applications in real world products.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+          "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBS in Computer Science or Computer Engineering or related field (or equivalent experience).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E6\u002B years relevant experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EC/C\u002B\u002B and Python programming.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with machine learning frameworks and their internals (e.g. PyTorch, TensorFlow, scikit-learn, etc.).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EProven ability developing customer-facing solutions, balancing feature requests and bugs.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EProven technical foundation in CPU and GPU architectures, numeric libraries, modular software design.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EHighly motivated with excellent verbal and written communication skills.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EAbility to work successfully with multi-functional teams, principles and architects. Coordinates effectively across organizational boundaries and geographies.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
+          "preferredQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EUnderstanding of JAX, Autograd, tracing, code generation and DSL compilers and their design.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EUnderstanding of deep learning training in distributed contexts: multi-GPU, multi-node, synchronous vs asynchronous.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBackground with software shipping cycles (dev, deploy, release, CI).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience building distributed systems and services at large scale.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003C/div\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 292,500 PLN - 507,000 PLN for Level 4, and 375,000 PLN - 650,000 PLN for Level 5.",
+          "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395528038",
+          "titleRaw": "Senior Software Engineer, Cloud Automation",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Poland, Warsaw"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395528038",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Poland-Warsaw/Senior-Software-Engineer--Cloud-Automation_JR2019580-1/apply?source=Eightfold",
+          "aboutTheJobRaw": "\u003Cp\u003EWe are now looking for a Senior Software Engineer for Cloud Automation\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA Cloud platform engineering is seeking exceptionally talented DevOps infrastructure automation engineers to deliver our NVIDIA GPU Cloud services. Join a team that accomplishes over 250K automation runs per week, operating 24x7 with thousands of automation projects. This outstanding opportunity will allow you to work on multi-OSes, multi-cloud platforms, and virtualization technologies simultaneously.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EOur team is ambitious, constantly seeking to improve our automation infrastructure through new DevOps and cloud technologies, processes, and tools. You will collaborate closely with application developers and QA to build flawless automation infrastructure for deployment, testing, monitoring, and CI/CD operations.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWhat you\u0027ll be doing:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003ECollaborate with Configuration Management tools and Workflow management tools such as Ansible and Stackstorm to handle and deploy COLO multi-platform server clusters in NVIDIA Data Centers worldwide.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBuild and develop infrastructures, tools, and automation scripts to improve automation support for various activities such as image management, switch management, deployment, data analytics, automated testing, logging, monitoring, and alerts for different micro-services.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EApply agentic AI to develop AI orchestration skills and manage Data Center operations at scale using infrastructure tools like netbox, foreman, and Mellanox switches.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EEmploy the latest infrastructure management technologies like Kubernetes and Docker to ensure fast and consistent delivery.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EOwn the infrastructure for micro-services and provide operational support to application teams, focusing on automation service, infrastructure and security improvement, and live service troubleshooting.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Ch2\u003EWhat we need to see:\u003C/h2\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBS in Computer Science/Engineering/Math/Physics or equivalent experience\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E3\u002B years of proven experience\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EOutstanding agentic AI experience with Codex, Claude code\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EProficient in scripting languages: Python, Bash, Groovy, GOLANG\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EOutstanding debugging skills\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECloud experience with AWS Compute, Containers, and Networking services is preferable.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ECI/CD experience with Jenkins and Jenkins pipeline\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience working with Configuration Management tools such as Ansible is highly advantageous.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with Packer, Terraform, and StackStorm is advantageous.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EExperience with Kubernetes, Docker, and Helm is highly desirable.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003ENVIDIA is widely considered one of the technology world\u2019s most desirable employers. We have some of the most experienced and talented individuals working for us. If you\u0027re creative and autonomous, we want to hear from you!\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003EWe are an AA/EEO/Veterans/Disabled employer. We will provide reasonable accommodation for individuals with disabilities during the application or interview process. Accommodations are also available to perform essential job functions and receive employment benefits. Please contact us to request accommodation.\u003C/p\u003E\u003Cp\u003EWidely considered to be one of the technology world\u2019s most desirable employers, NVIDIA offers highly competitive salaries and a comprehensive benefits package. As you plan your future, see what we can offer to you and your family www.nvidiabenefits.com/\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 183,750 PLN - 318,500 PLN for Level 3, and 240,000 PLN - 416,000 PLN for Level 4.",
+          "postedAtCandidate": "2026-06-11T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394980489",
+          "titleRaw": "Senior Software Engineer, AI Inference Systems",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - Germany",
+            "Remote - UK",
+            "Remote - Switzerland",
+            "Remote - Italy",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394980489",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394980489",
+          "postedAtCandidate": "2026-05-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893382818601",
+          "titleRaw": "Senior Software Verification Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Poland, Warsaw"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893382818601",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893382818601",
+          "postedAtCandidate": "2026-05-13T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893393786899",
+          "titleRaw": "Senior Software Developer, AI Networking",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - Hungary",
+            "Remote - Romania",
+            "Remote - Czechia"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893393786899",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393786899",
+          "postedAtCandidate": "2026-03-02T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893383895694",
+          "titleRaw": "Senior Software Architect - Deep Learning and HPC Communications",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - Germany",
+            "Remote - UK",
+            "Switzerland, Zurich",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893383895694",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893383895694",
+          "postedAtCandidate": "2026-01-09T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394426716",
+          "titleRaw": "Senior HPC and AI Network Software Architect",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Switzerland, Zurich",
+            "Remote - Germany",
+            "Remote - UK"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394426716",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394426716",
+          "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893383727482",
+          "titleRaw": "Senior HPC Performance Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - UK"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893383727482",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893383727482",
+          "postedAtCandidate": "2026-05-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391405393",
+          "titleRaw": "Senior Math Libraries Engineer \u2013 Emulation in AI and HPC",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - France",
+            "Remote - Germany"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391405393",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391405393",
+          "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391032265",
+          "titleRaw": "Senior CPU Performance Developer Technology Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - Switzerland",
+            "Switzerland, Zurich",
+            "UK, Bristol",
+            "Remote - Germany",
+            "Germany, Wuerselen"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391032265",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391032265",
+          "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893393381994",
+          "titleRaw": "Senior Deep Learning Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - UK",
+            "Remote - Netherlands",
+            "Remote - Germany",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893393381994",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393381994",
+          "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391933795",
+          "titleRaw": "Senior Libraries Engineer \u2013 AI and HPC",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Poland, Warsaw",
+            "Remote - Spain",
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - Hungary"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391933795",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391933795",
+          "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391009867",
+          "titleRaw": "Senior Deep Learning Compiler Engineer - PyTorch",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Germany, Berlin",
+            "Netherlands, Amsterdam",
+            "Poland, Warsaw",
+            "Switzerland, Zurich",
+            "Germany, Munich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391009867",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391009867",
+          "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394327177",
+          "titleRaw": "Senior GPU Networking Architect",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Switzerland, Zurich",
+            "Remote - Germany",
+            "Remote - UK"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394327177",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394327177",
+          "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394019158",
+          "titleRaw": "Solutions Architect \u2013 AI Factory",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - Germany",
+            "Remote - Czechia",
+            "Remote - Switzerland",
+            "Remote - Hungary"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394019158",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394019158",
+          "postedAtCandidate": "2026-03-13T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391933771",
+          "titleRaw": "Senior Solutions Architect, HPC and AI",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - UK",
+            "Remote - Spain",
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - Italy"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391933771",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391933771",
+          "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395235676",
+          "titleRaw": "Solution Architect, Public Sector",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Remote - Germany"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395235676",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Poland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395235676",
+          "postedAtCandidate": "2026-05-22T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Switzerland",
+      "locationSlug": "switzerland",
+      "searchLocation": "Zurich",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "jobs": [
+        {
+          "jobId": "893394712289",
+          "titleRaw": "Senior Software Engineer, JAX",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Switzerland",
+            "Remote - UK",
+            "Remote - Poland",
+            "Remote - Germany",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394712289",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394712289",
+          "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394980489",
+          "titleRaw": "Senior Software Engineer, AI Inference Systems",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - UK",
+            "Remote - Poland",
+            "Remote - Switzerland",
+            "Remote - Italy",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394980489",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394980489",
+          "postedAtCandidate": "2026-05-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395079315",
+          "titleRaw": "Software Verification Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395079315",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395079315",
+          "postedAtCandidate": "2026-05-11T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893392256499",
+          "titleRaw": "Senior Software Developer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392256499",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392256499",
+          "postedAtCandidate": "2026-06-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394959509",
+          "titleRaw": "Senior Software Developer, AI Networking",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394959509",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394959509",
+          "postedAtCandidate": "2026-04-29T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893383895694",
+          "titleRaw": "Senior Software Architect - Deep Learning and HPC Communications",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "Remote - Germany",
+            "Remote - UK",
+            "Remote - Poland",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893383895694",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893383895694",
+          "postedAtCandidate": "2026-01-09T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893382452913",
+          "titleRaw": "Senior Software and System Architect",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Spain",
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893382452913",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893382452913",
+          "postedAtCandidate": "2026-05-05T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394873686",
+          "titleRaw": "Senior Software Architect, GPU Networking Research",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394873686",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394873686",
+          "postedAtCandidate": "2026-06-02T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394426716",
+          "titleRaw": "Senior HPC and AI Network Software Architect",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "Remote - Germany",
+            "Remote - UK",
+            "Remote - Poland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394426716",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394426716",
+          "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893383727482",
+          "titleRaw": "Senior HPC Performance Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - UK",
+            "Remote - Poland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893383727482",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893383727482",
+          "postedAtCandidate": "2026-05-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395568952",
+          "titleRaw": "Senior Compiler Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "UK, Cambridge"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395568952",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395568952",
+          "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893392964974",
+          "titleRaw": "Principal AI Developer Technology Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "Germany, Munich",
+            "France, Courbevoie",
+            "UK, Bristol",
+            "UK, Reading"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392964974",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392964974",
+          "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394712294",
+          "titleRaw": "Senior HPC Performance Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - UK",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394712294",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394712294",
+          "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391032265",
+          "titleRaw": "Senior CPU Performance Developer Technology Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "Remote - Switzerland",
+            "Remote - Poland",
+            "UK, Bristol",
+            "Remote - Germany",
+            "Germany, Wuerselen"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391032265",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391032265",
+          "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893392558436",
+          "titleRaw": "Senior Compiler Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "UK, Cambridge",
+            "Germany, Munich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392558436",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392558436",
+          "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893393381994",
+          "titleRaw": "Senior Deep Learning Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Poland",
+            "Remote - Netherlands",
+            "Remote - Germany",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893393381994",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393381994",
+          "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395241918",
+          "titleRaw": "Senior HPC AI Cluster Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - UK",
+            "Remote - Sweden",
+            "Remote - Netherlands",
+            "Remote - Switzerland",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395241918",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395241918",
+          "postedAtCandidate": "2026-05-22T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391933795",
+          "titleRaw": "Senior Libraries Engineer \u2013 AI and HPC",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Poland",
+            "Poland, Warsaw",
+            "Remote - Spain",
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - Hungary"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391933795",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391933795",
+          "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395407410",
+          "titleRaw": "Senior Quantum Systems Engineer - Quantum Computing",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395407410",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395407410",
+          "postedAtCandidate": "2026-06-03T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391009867",
+          "titleRaw": "Senior Deep Learning Compiler Engineer - PyTorch",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Switzerland, Zurich",
+            "Germany, Berlin",
+            "Netherlands, Amsterdam",
+            "Poland, Warsaw",
+            "Germany, Munich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391009867",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Switzerland",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391009867",
+          "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Germany",
+      "locationSlug": "germany",
+      "searchLocation": "Germany",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "jobs": [
+        {
+          "jobId": "893394034331",
+          "titleRaw": "Senior Software Engineer, CUDA Core Libraries",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Germany, Munich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394034331",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394034331",
+          "postedAtCandidate": "2026-03-13T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394712289",
+          "titleRaw": "Senior Software Engineer, JAX",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - UK",
+            "Remote - Poland",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394712289",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394712289",
+          "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394712291",
+          "titleRaw": "Senior Software Engineer, AVOS, DRIVE OS and BSP - Automotive",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Germany, Munich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394712291",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394712291",
+          "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395382277",
+          "titleRaw": "Senior Software Engineer, Applied AI",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Germany, Munich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395382277",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395382277",
+          "postedAtCandidate": "2026-06-15T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395444544",
+          "titleRaw": "Senior Software Engineer - Rust for Linux",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Germany, Munich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395444544",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395444544",
+          "postedAtCandidate": "2026-06-05T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394582417",
+          "titleRaw": "Senior Software Engineer - Autonomous Vehicles",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394582417",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394582417",
+          "postedAtCandidate": "2026-04-29T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394980489",
+          "titleRaw": "Senior Software Engineer, AI Inference Systems",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - UK",
+            "Remote - Poland",
+            "Remote - Switzerland",
+            "Remote - Italy",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394980489",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394980489",
+          "postedAtCandidate": "2026-05-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893393860551",
+          "titleRaw": "Senior Software Engineer \u2013 ADAS",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Germany, Munich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893393860551",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393860551",
+          "postedAtCandidate": "2026-03-04T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395231208",
+          "titleRaw": "Software Engineer \u2013 Autonomous Driving (Fixed Term)",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Germany, Munich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395231208",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395231208",
+          "postedAtCandidate": "2026-05-22T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394877029",
+          "titleRaw": "Senior Software Test Engineer,  L3 and L4 - Autonomous Driving",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Germany, Munich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394877029",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394877029",
+          "postedAtCandidate": "2026-04-27T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893383895694",
+          "titleRaw": "Senior Software Architect - Deep Learning and HPC Communications",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - UK",
+            "Remote - Poland",
+            "Switzerland, Zurich",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893383895694",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893383895694",
+          "postedAtCandidate": "2026-01-09T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893382452913",
+          "titleRaw": "Senior Software and System Architect",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - UK",
+            "Remote - Spain",
+            "Remote - Switzerland",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893382452913",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893382452913",
+          "postedAtCandidate": "2026-05-05T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394426716",
+          "titleRaw": "Senior HPC and AI Network Software Architect",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Switzerland, Zurich",
+            "Remote - UK",
+            "Remote - Poland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394426716",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394426716",
+          "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893383727482",
+          "titleRaw": "Senior HPC Performance Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - UK",
+            "Remote - Poland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893383727482",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893383727482",
+          "postedAtCandidate": "2026-05-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391405393",
+          "titleRaw": "Senior Math Libraries Engineer \u2013 Emulation in AI and HPC",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - France",
+            "Remote - Poland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391405393",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391405393",
+          "postedAtCandidate": "2026-01-10T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893392950425",
+          "titleRaw": "Principal AI Developer Technology Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Germany, Berlin",
+            "Netherlands, Amsterdam",
+            "Remote - Spain",
+            "Remote - Italy"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392950425",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392950425",
+          "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893392964974",
+          "titleRaw": "Principal AI Developer Technology Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Germany, Munich",
+            "France, Courbevoie",
+            "Switzerland, Zurich",
+            "UK, Bristol",
+            "UK, Reading"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392964974",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392964974",
+          "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394712294",
+          "titleRaw": "Senior HPC Performance Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - UK",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394712294",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394712294",
+          "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391032265",
+          "titleRaw": "Senior CPU Performance Developer Technology Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - Poland",
+            "Switzerland, Zurich",
+            "UK, Bristol",
+            "Germany, Wuerselen"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391032265",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391032265",
+          "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893392558436",
+          "titleRaw": "Senior Compiler Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "UK, Cambridge",
+            "Germany, Munich",
+            "Switzerland, Zurich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392558436",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "Germany",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392558436",
+          "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "United Kingdom",
+      "locationSlug": "united-kingdom",
+      "searchLocation": "United Kingdom",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "jobs": [
+        {
+          "jobId": "893394712289",
+          "titleRaw": "Senior Software Engineer, JAX",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Switzerland",
+            "Remote - Poland",
+            "Remote - Germany",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394712289",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394712289",
+          "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394980489",
+          "titleRaw": "Senior Software Engineer, AI Inference Systems",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Germany",
+            "Remote - Poland",
+            "Remote - Switzerland",
+            "Remote - Italy",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394980489",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394980489",
+          "postedAtCandidate": "2026-05-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893392034416",
+          "titleRaw": "Senior Software QA Test Development Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "UK, Belfast"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392034416",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392034416",
+          "postedAtCandidate": "2025-11-18T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893383895694",
+          "titleRaw": "Senior Software Architect - Deep Learning and HPC Communications",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Germany",
+            "Remote - Poland",
+            "Switzerland, Zurich",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893383895694",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893383895694",
+          "postedAtCandidate": "2026-01-09T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893382452913",
+          "titleRaw": "Senior Software and System Architect",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Spain",
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893382452913",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893382452913",
+          "postedAtCandidate": "2026-05-05T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394426716",
+          "titleRaw": "Senior HPC and AI Network Software Architect",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Switzerland, Zurich",
+            "Remote - Germany",
+            "Remote - Poland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394426716",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394426716",
+          "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893393620890",
+          "titleRaw": "Senior Machine Learning Applications and Compiler Engineer, LPX",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "UK, Cambridge"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893393620890",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393620890",
+          "postedAtCandidate": "2026-05-13T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893383727482",
+          "titleRaw": "Senior HPC Performance Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - Poland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893383727482",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893383727482",
+          "postedAtCandidate": "2026-05-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395568952",
+          "titleRaw": "Senior Compiler Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "UK, Cambridge",
+            "Switzerland, Zurich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395568952",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395568952",
+          "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893392964974",
+          "titleRaw": "Principal AI Developer Technology Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Germany, Munich",
+            "France, Courbevoie",
+            "Switzerland, Zurich",
+            "UK, Bristol",
+            "UK, Reading"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392964974",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392964974",
+          "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893394712294",
+          "titleRaw": "Senior HPC Performance Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Germany",
+            "Remote - Switzerland",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893394712294",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394712294",
+          "postedAtCandidate": "2026-04-17T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893391032265",
+          "titleRaw": "Senior CPU Performance Developer Technology Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - Switzerland",
+            "Remote - Poland",
+            "Switzerland, Zurich",
+            "UK, Bristol",
+            "Remote - Germany",
+            "Germany, Wuerselen"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893391032265",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893391032265",
+          "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893392558436",
+          "titleRaw": "Senior Compiler Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "UK, Cambridge",
+            "Germany, Munich",
+            "Switzerland, Zurich"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392558436",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392558436",
+          "postedAtCandidate": "2026-04-03T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893392652316",
+          "titleRaw": "Senior HPC DevOps Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Germany",
+            "Remote - Spain",
+            "Remote - Netherlands",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893392652316",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392652316",
+          "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893393381994",
+          "titleRaw": "Senior Deep Learning Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Poland",
+            "Remote - Netherlands",
+            "Remote - Germany",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893393381994",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393381994",
+          "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395241918",
+          "titleRaw": "Senior HPC AI Cluster Engineer",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Germany",
+            "Remote - Sweden",
+            "Remote - Netherlands",
+            "Remote - Switzerland",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395241918",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395241918",
+          "postedAtCandidate": "2026-05-22T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395407410",
+          "titleRaw": "Senior Quantum Systems Engineer - Quantum Computing",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Switzerland"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395407410",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395407410",
+          "postedAtCandidate": "2026-06-03T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893395382281",
+          "titleRaw": "Principal Simulation Engineer, Industrial Physics and Robotics",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Switzerland",
+            "Remote - Czechia",
+            "Remote - Germany",
+            "Remote - Finland",
+            "Remote - Italy"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893395382281",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395382281",
+          "postedAtCandidate": "2026-06-02T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893393839353",
+          "titleRaw": "Senior Networking Solution Test Engineer \u2013 AI Cluster Debugging",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK",
+            "Remote - Germany",
+            "Remote - Romania",
+            "Remote - Switzerland",
+            "Remote - France"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893393839353",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393839353",
+          "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        },
+        {
+          "jobId": "893393259663",
+          "titleRaw": "Solution Architect, Urban AI",
+          "companyRaw": "NVIDIA",
+          "locationsRaw": [
+            "Remote - UK"
+          ],
+          "jobUrl": "https://jobs.nvidia.com/careers/job/893393259663",
+          "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+          "requestedLocation": "United Kingdom",
+          "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893393259663",
+          "postedAtCandidate": "2026-05-08T00:00:00.0000000\u002B00:00",
+          "capturedAt": "2026-06-23T20:22:16.3736705\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Ireland",
+      "locationSlug": "ireland",
+      "searchLocation": "Ireland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Ireland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1",
+      "jobs": []
+    }
+  ]
+}
