@@ -1,6 +1,42 @@
 {
   "jobs": [
     {
+      "id": "124018387612246726",
+      "title": "Uber Tech Lead, Critical Systems",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/124018387612246726-uber-tech-lead-critical-systems?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-06-08T11:20:10.8718108\u002B00:00",
+      "lastSeenAt": "2026-06-23T20:21:55.2979273\u002B00:00",
+      "removedAt": "2026-06-24T09:50:22.4247341\u002B00:00",
+      "removedInRunId": "2026-06-24T09-50-22Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckXyU2205H4W1Hx9twV2Tj3IRDrDExTEpmZa2mo8qgXy-EjsACxwdTPJPgh5QlEiURqh9_7a6fA7pPhgeIBtofIdAL80vhcGReQg6SxjrpbqMPjA-BeaaU0caNhi3BA%3D%3D_V2\u0026loc=GB\u0026title=Uber\u002BTech\u002BLead",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle Cloud\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google Cloud\u0027s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. You will anticipate our customer needs and be empowered to act like an owner, take action and innovate. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EThe Critical Systems team is part of the Google Cloud Platform Reliability (GCPR) organization within Platform Reliability Engineering (PRE) focusing on minimizing outages due to infrastructure failures.\u003Cbr\u003E\u003Cbr\u003EThis team is focused on establishing a durable, version-controlled single source of truth that accurately represents production asset criticality based on external customer impact and essential CUJs.\u003C/p\u003E\u003Cp\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003ETranslate high-level requirements into detailed technical designs, encompassing architecture, data structures, and algorithms.\u003C/li\u003E\n\u003Cli\u003EWrite clean, maintainable, and efficient code in accordance with established coding standards and best practices.\u003C/li\u003E\n\u003Cli\u003EDevelop and execute thorough unit, integration, and system tests to ensure code quality and functionality, including automated testing where applicable.\u003C/li\u003E\n\u003Cli\u003EParticipate in code reviews to provide constructive feedback and ensure adherence to best practices.\u003C/li\u003E\n\u003Cli\u003EDocument technical specifications, design decisions, and implementation details for future reference and knowledge sharing.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience with one or more general purpose programming such as: Java, C/C\u002B\u002B, Python, Objective C, JavaScript, or Go.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EAbility to manage issues and evolving changes in the areas of software design, integration, and infrastructure.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "123 Buckingham Palace Rd, London SW1W 9SH, UK"
+          ],
+          "city": "London",
+          "postalCode": "SW1W 9SH",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-08T04:38:12.3650000\u002B00:00",
+        "2026-06-08T04:38:12.5990000\u002B00:00"
+      ]
+    },
+    {
       "id": "115212482737251014",
       "title": "Electrical Engineer, Data Center",
       "company": "Google",
