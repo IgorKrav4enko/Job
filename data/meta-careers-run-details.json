@@ -15098,6 +15098,128 @@
           ]
         }
       ]
+    },
+    {
+      "runId": "2026-06-24T20-06-23Z",
+      "added": [],
+      "removed": [],
+      "changed": [],
+      "unchanged": [
+        {
+          "id": "2418816405226170",
+          "title": "Client Partner, CEE Tech Apps",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/2418816405226170",
+          "locations": [
+            "Warsaw, Poland"
+          ],
+          "requestedLocation": "Poland"
+        },
+        {
+          "id": "906391792398202",
+          "title": "Enterprise Technical Sales Specialist, EMEA",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/906391792398202",
+          "locations": [
+            "Dubai, United Arab Emirates",
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1368839171784149",
+          "title": "Network Engineer - Optical Deployment",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1368839171784149",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "926318253483210",
+          "title": "Research Scientist, Generative AI for Ads (Video)",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/926318253483210",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Ireland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "Poland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "2418816405226170",
+              "title": "Client Partner, CEE Tech Apps",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/2418816405226170",
+              "locations": [
+                "Warsaw, Poland"
+              ],
+              "requestedLocation": "Poland"
+            }
+          ]
+        },
+        {
+          "location": "Switzerland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "906391792398202",
+              "title": "Enterprise Technical Sales Specialist, EMEA",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/906391792398202",
+              "locations": [
+                "Dubai, United Arab Emirates",
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1368839171784149",
+              "title": "Network Engineer - Optical Deployment",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1368839171784149",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "926318253483210",
+              "title": "Research Scientist, Generative AI for Ads (Video)",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/926318253483210",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
