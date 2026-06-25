@@ -172,8 +172,8 @@
       </div>
     </section>
 
-    <section class="dashboard-panel grid gap-6" id="history-panel">
-      <div class="glass-panel rounded-[30px] p-5 shadow-panel md:p-6">
+    <section class="dashboard-panel grid min-w-0 gap-6" id="history-panel">
+      <div class="glass-panel min-w-0 overflow-hidden rounded-[30px] p-5 shadow-panel md:p-6">
         <div class="flex flex-col gap-5">
           <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
@@ -212,7 +212,7 @@
             </article>
           </div>
 
-          <div class="glass-panel rounded-[28px] border border-white/5 p-4">
+          <div class="glass-panel min-w-0 overflow-hidden rounded-[28px] border border-white/5 p-4">
             <div class="flex items-center justify-between gap-4">
               <div>
                 <p class="text-xs uppercase tracking-[0.28em] text-muted">Chart</p>
@@ -222,14 +222,14 @@
                 <p id="chart-range">0 runs</p>
               </div>
             </div>
-            <div class="mt-4 overflow-x-auto">
-              <svg id="runs-chart" class="h-[340px] min-w-[720px] w-full" viewBox="0 0 920 340" role="img" aria-label="Графік кількості вакансій"></svg>
+            <div class="mt-4 w-full min-w-0 overflow-x-auto overflow-y-hidden" id="runs-chart-scroll">
+              <svg id="runs-chart" class="block h-[340px] min-w-[720px]" viewBox="0 0 920 340" role="img" aria-label="Графік кількості вакансій"></svg>
             </div>
           </div>
         </div>
       </div>
 
-      <aside class="glass-panel rounded-[30px] p-5 shadow-panel md:p-6">
+      <aside class="glass-panel min-w-0 overflow-hidden rounded-[30px] p-5 shadow-panel md:p-6">
         <div class="flex flex-col gap-5">
           <div>
             <p class="text-xs uppercase tracking-[0.3em] text-muted">Run Detail</p>
@@ -415,7 +415,7 @@
         </div>
 
         <div class="grid gap-5 xl:grid-cols-2">
-          <section class="rounded-[28px] border border-white/10 bg-panelSoft/55 p-4">
+          <section class="min-w-0 overflow-hidden rounded-[28px] border border-white/10 bg-panelSoft/55 p-4">
             <div class="flex items-center justify-between gap-4">
               <div>
                 <p class="text-xs uppercase tracking-[0.28em] text-muted">Open Jobs</p>
@@ -426,12 +426,12 @@
               </div>
               <p class="text-right text-xs text-muted" id="compare-open-caption">0 series</p>
             </div>
-            <div class="mt-4 overflow-x-auto">
-              <svg id="compare-open-chart" class="h-[320px] min-w-[720px] w-full" viewBox="0 0 920 320" role="img" aria-label="Open jobs comparison chart"></svg>
+            <div class="mt-4 w-full min-w-0 overflow-x-auto overflow-y-hidden" id="compare-open-chart-scroll">
+              <svg id="compare-open-chart" class="block h-[320px] min-w-[720px]" viewBox="0 0 920 320" role="img" aria-label="Open jobs comparison chart"></svg>
             </div>
           </section>
 
-          <section class="rounded-[28px] border border-white/10 bg-panelSoft/55 p-4">
+          <section class="min-w-0 overflow-hidden rounded-[28px] border border-white/10 bg-panelSoft/55 p-4">
             <div class="flex items-center justify-between gap-4">
               <div>
                 <p class="text-xs uppercase tracking-[0.28em] text-muted">Net Change</p>
@@ -442,8 +442,8 @@
               </div>
               <p class="text-right text-xs text-muted" id="compare-net-caption">0 series</p>
             </div>
-            <div class="mt-4 overflow-x-auto">
-              <svg id="compare-net-chart" class="h-[320px] min-w-[720px] w-full" viewBox="0 0 920 320" role="img" aria-label="Net change comparison chart"></svg>
+            <div class="mt-4 w-full min-w-0 overflow-x-auto overflow-y-hidden" id="compare-net-chart-scroll">
+              <svg id="compare-net-chart" class="block h-[320px] min-w-[720px]" viewBox="0 0 920 320" role="img" aria-label="Net change comparison chart"></svg>
             </div>
           </section>
         </div>

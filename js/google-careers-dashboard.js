@@ -49,6 +49,7 @@ const SOURCES = {
 const SOURCE_STORAGE_KEY = "careers-dashboard-source";
 const UNKNOWN_CITY = "__unknown_city__";
 const UNKNOWN_CITY_LABEL = "Нерозпізнані";
+const DEFAULT_COUNTRY = "Switzerland";
 const COMPARE_SOURCE_KEYS = ["google", "meta", "apple", "microsoft", "nvidia"];
 const COMPARE_COLORS = ["#38bdf8", "#4ade80", "#f59e0b", "#fb7185", "#a78bfa"];
 
@@ -85,6 +86,7 @@ const refs = {
   removedPanel: document.getElementById("removed-panel"),
   comparePanel: document.getElementById("compare-panel"),
   filterRoot: document.getElementById("location-filter"),
+  chartScroll: document.getElementById("runs-chart-scroll"),
   chart: document.getElementById("runs-chart"),
   chartCaption: document.getElementById("chart-caption"),
   chartRange: document.getElementById("chart-range"),
@@ -127,6 +129,8 @@ const refs = {
   compareRangeFilter: document.getElementById("compare-range-filter"),
   compareModeFilter: document.getElementById("compare-mode-filter"),
   compareLimitationsNote: document.getElementById("compare-limitations-note"),
+  compareOpenChartScroll: document.getElementById("compare-open-chart-scroll"),
+  compareNetChartScroll: document.getElementById("compare-net-chart-scroll"),
   compareOpenChart: document.getElementById("compare-open-chart"),
   compareNetChart: document.getElementById("compare-net-chart"),
   compareChurnChart: document.getElementById("compare-churn-chart"),
@@ -165,8 +169,9 @@ async function loadSourceData(sourceKey) {
     );
     state.jobs = Array.isArray(jobsPayload.jobs) ? jobsPayload.jobs : [];
     resetSelectionState();
+    applyDefaultLocationSelection();
     if (state.runs.length > 0) {
-      state.activeRunId = state.runs[state.runs.length - 1].runId;
+      state.activeRunId = getFilteredRuns().at(-1)?.runId ?? state.runs[state.runs.length - 1].runId;
     }
 
     localStorage.setItem(SOURCE_STORAGE_KEY, state.activeSource);
@@ -195,6 +200,22 @@ function resetSelectionState() {
   state.activeCity = "all";
   state.removedCountry = "all";
   state.removedCity = "all";
+}
+
+function applyDefaultLocationSelection() {
+  const availableLocations = new Set();
+  for (const run of state.runs) {
+    for (const item of run.perLocation || []) {
+      if (item.location) {
+        availableLocations.add(item.location);
+      }
+    }
+  }
+
+  if (availableLocations.has(DEFAULT_COUNTRY)) {
+    state.activeLocation = DEFAULT_COUNTRY;
+    state.activeCountry = DEFAULT_COUNTRY;
+  }
 }
 
 function bindSourceSwitcher() {
@@ -495,10 +516,13 @@ function renderCompareLimitations(selected, series) {
 }
 
 function renderCompareLineChart(svg, series, metric, indexed) {
-  const width = 920;
+  const baseWidth = 920;
   const height = 320;
   const margin = { top: 30, right: 124, bottom: 54, left: 58 };
+  const width = getCompareLineChartWidth(series, baseWidth, margin);
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.style.width = `${width}px`;
+  svg.style.maxWidth = "none";
   svg.replaceChildren();
 
   const visibleSeries = series.filter((item) => item.points.length > 0);
@@ -585,6 +609,8 @@ function renderCompareLineChart(svg, series, metric, indexed) {
   const lastLabel = shortDate(new Date(maxDate).toISOString());
   svg.appendChild(createSvgText(margin.left, height - 20, firstLabel, "start", "rgba(148,163,184,0.82)"));
   svg.appendChild(createSvgText(width - margin.right, height - 20, lastLabel, "end", "rgba(148,163,184,0.82)"));
+
+  syncCompareChartScroll(metric === "open" ? refs.compareOpenChartScroll : refs.compareNetChartScroll);
 }
 
 function getComparePointValue(point, metric, indexed) {
@@ -705,6 +731,30 @@ function renderCompareAddedRemovedChart(svg, series) {
   svg.appendChild(createSvgText(margin.left, height - 8, `${formatCompareRangeLabel()} · ${state.compareCountry === "all" ? "all countries" : state.compareCountry}`, "start", "rgba(148,163,184,0.82)"));
 }
 
+function getCompareLineChartWidth(series, baseWidth, margin) {
+  const timestamps = series.flatMap((item) => item.points.map((point) => point.date.getTime())).filter(Number.isFinite);
+  if (timestamps.length < 2 || state.compareRange !== "all") {
+    return baseWidth;
+  }
+
+  const minDate = Math.min(...timestamps);
+  const maxDate = Math.max(...timestamps);
+  const daySpan = Math.max(1, Math.ceil((maxDate - minDate) / (24 * 60 * 60 * 1000)));
+  const viewportDays = 10;
+  const scrollableWidth = Math.round(((daySpan + 1) / viewportDays) * (baseWidth - margin.left - margin.right));
+  return Math.max(baseWidth, margin.left + margin.right + scrollableWidth);
+}
+
+function syncCompareChartScroll(container) {
+  if (!container || state.compareRange !== "all") {
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    container.scrollLeft = Math.max(0, container.scrollWidth - container.clientWidth);
+  });
+}
+
 function renderCompareSummary(selected) {
   const rows = selected.map((entry, index) => {
     const filteredRuns = filterCompareRuns(entry.runs);
@@ -771,10 +821,9 @@ function buildLocationFilters() {
 
   const countryButtons = document.createElement("div");
   countryButtons.className = "flex flex-wrap gap-2";
-  Array.from(locationNames)
+  getOrderedLocations(Array.from(locationNames)
     .filter((location) => location !== "all")
-    .sort((left, right) => left.localeCompare(right, "uk"))
-    .forEach((location) => {
+  ).forEach((location) => {
       const cities = getRelevantCitiesForCountry(location, state.jobs.filter((job) => job.isActive));
       const cityCaption = cities.length === 1 ? cities[0] : null;
       countryButtons.appendChild(createLocationButton(location, cityCaption));
@@ -846,6 +895,18 @@ function createLocationButton(location, subLabel = null) {
     render();
   });
   return button;
+}
+
+function getOrderedLocations(locations) {
+  return [...locations].sort((left, right) => {
+    if (left === DEFAULT_COUNTRY && right !== DEFAULT_COUNTRY) {
+      return -1;
+    }
+    if (right === DEFAULT_COUNTRY && left !== DEFAULT_COUNTRY) {
+      return 1;
+    }
+    return left.localeCompare(right, "uk");
+  });
 }
 
 function getCountryLabel(location) {
@@ -1576,11 +1637,14 @@ function getRemovedJobsHistory() {
 
 function renderChart(filteredRuns) {
   const svg = refs.chart;
-  const width = 920;
+  const baseWidth = 920;
   const height = 340;
-  const margin = { top: 28, right: 24, bottom: 58, left: 52 };
+  const margin = { top: 28, right: 24, bottom: 70, left: 52 };
+  const width = getHistoryChartWidth(filteredRuns, baseWidth, margin);
 
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.style.width = `${width}px`;
+  svg.style.maxWidth = "none";
   svg.replaceChildren();
 
   if (filteredRuns.length === 0) {
@@ -1662,9 +1726,17 @@ function renderChart(filteredRuns) {
     deltaText.setAttribute("font-size", "11");
     svg.appendChild(deltaText);
 
-    const label = createSvgText(x, height - 20, shortDate(run.generatedAt), "middle", "rgba(148,163,184,0.82)");
-    label.setAttribute("font-size", "11");
-    svg.appendChild(label);
+    const guide = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    guide.setAttribute("x1", String(x));
+    guide.setAttribute("x2", String(x));
+    guide.setAttribute("y1", String(y + 10));
+    guide.setAttribute("y2", String(height - 50));
+    guide.setAttribute("stroke", "rgba(148,163,184,0.28)");
+    guide.setAttribute("stroke-width", "1");
+    guide.setAttribute("stroke-dasharray", "3 4");
+    svg.appendChild(guide);
+
+    svg.appendChild(createSvgDateLabel(x, height - 30, run.generatedAt, "middle", "rgba(148,163,184,0.82)"));
 
     const hit = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     hit.setAttribute("class", "chart-hit");
@@ -1678,6 +1750,37 @@ function renderChart(filteredRuns) {
 
     svg.appendChild(pointGroup);
     svg.appendChild(hit);
+  });
+
+  syncHistoryChartScroll();
+}
+
+function getHistoryChartWidth(filteredRuns, baseWidth, margin) {
+  const timestamps = filteredRuns
+    .map((run) => new Date(run.generatedAt).getTime())
+    .filter(Number.isFinite);
+
+  if (timestamps.length < 2) {
+    return baseWidth;
+  }
+
+  const minDate = Math.min(...timestamps);
+  const maxDate = Math.max(...timestamps);
+  const daySpan = Math.max(1, Math.ceil((maxDate - minDate) / (24 * 60 * 60 * 1000)));
+  const viewportDays = 10;
+  const scrollableWidth = Math.round(((daySpan + 1) / viewportDays) * (baseWidth - margin.left - margin.right));
+  const minPointSpacing = 78;
+  const pointsWidth = (filteredRuns.length - 1) * minPointSpacing;
+  return Math.max(baseWidth, margin.left + margin.right + scrollableWidth, margin.left + margin.right + pointsWidth);
+}
+
+function syncHistoryChartScroll() {
+  if (!refs.chartScroll) {
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    refs.chartScroll.scrollLeft = Math.max(0, refs.chartScroll.scrollWidth - refs.chartScroll.clientWidth);
   });
 }
 
@@ -1960,6 +2063,31 @@ function createSvgText(x, y, text, anchor = "start", fill = "rgba(226,232,240,0.
   return node;
 }
 
+function createSvgDateLabel(x, y, value, anchor = "middle", fill = "rgba(148,163,184,0.82)") {
+  const node = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  node.setAttribute("x", String(x));
+  node.setAttribute("y", String(y));
+  node.setAttribute("fill", fill);
+  node.setAttribute("font-size", "11");
+  node.setAttribute("font-family", "Space Grotesk, sans-serif");
+  node.setAttribute("text-anchor", anchor);
+
+  const [datePart, timePart] = shortDateParts(value);
+
+  const dateLine = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+  dateLine.setAttribute("x", String(x));
+  dateLine.setAttribute("dy", "0");
+  dateLine.textContent = datePart;
+
+  const timeLine = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+  timeLine.setAttribute("x", String(x));
+  timeLine.setAttribute("dy", "14");
+  timeLine.textContent = timePart;
+
+  node.append(dateLine, timeLine);
+  return node;
+}
+
 function formatDate(value) {
   return new Intl.DateTimeFormat("uk-UA", {
     dateStyle: "medium",
@@ -1974,6 +2102,22 @@ function shortDate(value) {
     hour: "2-digit",
     minute: "2-digit"
   }).format(new Date(value));
+}
+
+function shortDateParts(value) {
+  const parts = new Intl.DateTimeFormat("uk-UA", {
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  }).formatToParts(new Date(value));
+
+  const day = parts.find((part) => part.type === "day")?.value || "";
+  const month = parts.find((part) => part.type === "month")?.value || "";
+  const hour = parts.find((part) => part.type === "hour")?.value || "";
+  const minute = parts.find((part) => part.type === "minute")?.value || "";
+
+  return [`${day} ${month}`.trim(), `${hour}:${minute}`];
 }
 
 function formatSigned(value) {
