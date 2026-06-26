@@ -1,6 +1,151 @@
 {
   "jobs": [
     {
+      "id": "111280764347130566",
+      "title": "Network Operations Engineer, Sovereign Operations, Hampshire",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/111280764347130566-network-operations-engineer-sovereign-operations-hampshire?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-27T20:29:06.9599294\u002B00:00",
+      "lastSeenAt": "2026-06-26T09:50:52.6355247\u002B00:00",
+      "removedAt": "2026-06-26T20:08:07.1016067\u002B00:00",
+      "removedInRunId": "2026-06-26T20-08-07Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckbS8o0RJtpiXCrPgzSJr1vheGKK8RbmXgZHMPLc5ywKWEjsACxwdTO2Z8xMA1iyekPvmVVf9cd2V27PlHaRq7Sv5AcSug-NWRF6FDg_kEG1kV8eKG6vkf7klju4_kA%3D%3D_V2\u0026loc=GB\u0026title=Network\u002BOperations\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EThe United Kingdom Sovereign Operations team in Google Public Sector delivers, operates and secures private cloud services. We aim to provide the flexibility, reliability, and scalability of public cloud for customers with high security requirements that can only be met in a private cloud environment. We deliver and operate these private cloud deployments for the most critical customers, helping scale, secure and maintain the deployment and working closely with Google product teams to continually improve our technology.\u003C/p\u003EAs a Network Operations Engineer, you will be part of a team of engineers that deploys and operates our private cloud services and underlying networks for critical customers in the UK. You will design and operate reliable and resilient networks, automate changes, implement monitoring, and manage core network components. Your work will bridge cloud native infrastructure engineering and platform networking, focusing on software defined networking within a Kubernetes architecture. You will be the glue that keeps containerized, and cloud-hosted services up and running, responsible for configuring and maintaining cloud platform infrastructure, virtual networking resources, and automation workflows from inception to optimization. You will participate in an on-call rotation to ensure incidents can be swiftly resolved.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EEngage and improve the whole life cycle of secure cloud platform network systems.\u003C/li\u003E\n\u003Cli\u003EAssist Engineering and Operations teams in building an ecosystem of integration, empowering software automation to scale within private/secure networks.\u003C/li\u003E\n\u003Cli\u003EMaintain, secure, and debug cross-cluster communications in an air-gapped kubernetes infrastructure using Cilium for eBPF-based container networking and Istio for microservice communication.\u003C/li\u003E\n\u003Cli\u003EScale systems sustainably through mechanisms like automation, and evolve systems by implementing changes that improve network reliability, security and performance.\u003C/li\u003E\n\u003Cli\u003EWork cross-functionally to drive Infrastructure as Code and GitOps pipelines, ensuring network configurations are deployed programmatically. Provide highly technical implementation and operational support in customer environments, including guidance on implementation feasibility of cross-product integrations.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, Computer Networking, Information Security, or a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with Linux Systems Administration and kernel level/data plane cloud native networking.\u003C/li\u003E\n\u003Cli\u003EExperience with one or more scripting languages e.g. Python, Bash, Poweshell.\u003C/li\u003E\n\u003Cli\u003EExperience with designing and implementing resilient, secure networks using a wide range of technologies.\u003C/li\u003E\n\u003Cli\u003EActive, or the ability to obtain, a Developed Vetting (DV) UK security clearance.\u003Cdiv\u003E\u003C/div\u003E\u003C/li\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003Cbr\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience deploying and operating production workloads in Kubernetes.\u003C/li\u003E\n\u003Cli\u003EExperience designing and implementing configuration management solutions to enable network and cloud platform operations (e.g. Ansible, Terraform, or Puppet).\u003C/li\u003E\n\u003Cli\u003EUnderstanding of the Kubernetes networking model, along with experience debugging CNI plugin (e.g. Cilium) configurations and Service Mesh (e.g. Istio) architectures.\u003C/li\u003E\n\u003Cli\u003EExcellent partner management, follow-through, resourcefulness, attention to detail, and verbal and written communication skills.\u003C/li\u003E\n\u003Cli\u003ECurrent and active UK Security Check (SC) or UK Developed Vetting (DV) security clearance.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8AG, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8AG",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-27T11:09:20.1650000\u002B00:00",
+        "2026-06-03T14:39:26.6580000\u002B00:00",
+        "2026-06-03T14:39:26.7140000\u002B00:00"
+      ]
+    },
+    {
+      "id": "107092913535492806",
+      "title": "Software Engineer III, YouTube Ads",
+      "company": "YouTube",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/107092913535492806-software-engineer-iii-youtube-ads?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-05-29T20:38:08.5723180\u002B00:00",
+      "lastSeenAt": "2026-06-26T09:50:52.6355247\u002B00:00",
+      "removedAt": "2026-06-26T20:08:07.1016067\u002B00:00",
+      "removedInRunId": "2026-06-26T20-08-07Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckR2CAOmc2JXhjJpQQLCzmbDpL-oIm3pfdA1B4baoY3fpEjsACxwdTKCPOfsspAewxlwm9A7uWJezeeAuLFf4_j4BNRjHWaw_0W2vpyw4aHgWcp3fUQnkyDR2ftxUOQ%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EWith your technical expertise you will manage project priorities, deadlines, and deliverables. You will design, develop, test, deploy, maintain, and enhance software solutions.\u003Cbr\u003E\u003C/p\u003E\u003Cp\u003EAt YouTube, we believe that everyone deserves to have a voice, and that the world is a better place when we listen, share, and build community through our stories. We work together to give everyone the power to share their story, explore what they love, and connect with one another in the process. Working at the intersection of cutting-edge technology and boundless creativity, we move at the speed of culture with a shared goal to show people the world. We explore new ideas, solve real problems, and have fun \u2014 and we do it all together.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003E\u003Cdiv\u003EWrite product or system development code.\u003C/div\u003E\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EReview code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical fields.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-29T11:37:51.3070000\u002B00:00",
+        "2026-05-29T11:37:51.6980000\u002B00:00"
+      ]
+    },
+    {
+      "id": "144038067596862150",
+      "title": "Technical Program Manager, Platforms and Devices, Health",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/144038067596862150-technical-program-manager-platforms-and-devices-health?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-05-28T10:34:04.8322898\u002B00:00",
+      "lastSeenAt": "2026-06-26T09:50:52.6355247\u002B00:00",
+      "removedAt": "2026-06-26T20:08:07.1016067\u002B00:00",
+      "removedInRunId": "2026-06-26T20-08-07Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckUg8-r__HGOLx4CiepQQVa6PBh0jTsj-0J27tnEKrsCaEjsACxwdTJ6FgbznDZZlSqcRukx66TYOmyfC8ZohaNDuQp7V-yEj7omKZeDG8aUK2JWKyXdAmNvU22gDiQ%3D%3D_V2\u0026loc=GB\u0026title=Technical\u002BProgram\u002BManager",
+      "aboutTheJobRaw": "\u003Cp\u003EA problem isn\u2019t truly solved until it\u2019s solved for all. That\u2019s why Googlers build products that help create opportunities for everyone, whether down the street or across the globe. As a Technical Program Manager at Google, you\u2019ll use your technical expertise to lead complex, multi-disciplinary projects from start to finish. You\u2019ll work with stakeholders to plan requirements, identify risks, manage project schedules, and communicate clearly with cross-functional partners across the company. You\u0027re equally comfortable explaining your team\u0027s analyses and recommendations to executives as you are discussing the technical tradeoffs in product development with engineers. \u003C/p\u003E\n\u003Cp\u003EThe Health Platforms and Devices team builds innovative products and services that help our users live longer, healthier lives. We bring together the best of Google technologies and AI, health behavior science, and user-centered design to help users organize the health and wellness data, get insight from it, and take action toward their health goals. We do this with a suite of apps, services, and health wearables. We aim to make consumer health more personal, proactive, and actionable.\u003Cbr\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003ERun projects end-to-end from early exploration, model development, user validation, to productionization.\u003C/li\u003E\n\u003Cli\u003ECollaborate and build alignment with cross-functional partners such as product management, engineering, research, design, user experience, clinical, regulatory, to define all workstreams, requirements, schedules, resourcing, and milestones.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EDevelop data-driven insights and solutions to issues, trends, and perspectives that may influence program execution and strategy.\u003C/li\u003E\n\u003Cli\u003ECommunicate project status to different audiences, including cross-functional teams and executives.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in a technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in program management.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with machine learning, LLM or AI.\u003C/li\u003E\n\u003Cli\u003EExperience managing programs across the full software development lifecycle.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003E5 years of experience managing cross-functional or cross-team projects.\u003C/li\u003E\n\u003Cli\u003EUnderstanding of software development life cycles and agile methodologies.\u003C/li\u003E\n\u003Cli\u003EExcellent organizational and communication skills, with the ability to influence without direct authority.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8AG, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8AG",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-27T21:39:16.3790000\u002B00:00",
+        "2026-05-27T21:39:16.5050000\u002B00:00"
+      ]
+    },
+    {
+      "id": "96402825835094726",
+      "title": "XR Audio Face Tracking ML Software Engineer",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/96402825835094726-xr-audio-face-tracking-ml-software-engineer?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-05-28T10:34:04.8322898\u002B00:00",
+      "lastSeenAt": "2026-06-26T09:50:52.6355247\u002B00:00",
+      "removedAt": "2026-06-26T20:08:07.1016067\u002B00:00",
+      "removedInRunId": "2026-06-26T20-08-07Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckdewPqvzAOiJB4p4kgt-hZeJqjt7oWpqKHfgkNMjXlKXEjsACxwdTKwkS9WqTisBUVhjsS13b8BEk6V76oB4zzovCemP6mnRgOoKVxM7I7NYir5lLr6-OeP60CJBbw%3D%3D_V2\u0026loc=CH\u0026title=XR\u002BAudio\u002BFace\u002BTracking\u002BML\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003Cbr\u003E\u003Cbr\u003EWith your technical expertise you will manage project priorities, deadlines, and deliverables. You will design, develop, test, deploy, maintain, and enhance software solutions.\u003C/p\u003E\u003Cp\u003EFor decades, the computing revolution has reshaped our world driven by breakthroughs in compute, connectivity, mobile, and now, AI. Google\u0027s XR team is at the forefront of the next major leap \u2013 the convergence of AI and XR. This is more than just new devices \u2013 it\u0027s about reimagining how we interact with the world around us. We\u0027re building a future where lightweight XR devices pair with helpful AI to augment human intelligence, offering personalized, conversational, and contextually aware experiences.\u003C/p\u003E\nFor decades, the computing revolution has reshaped our world driven by breakthroughs in compute, connectivity, mobile, and now, AI. Google\u0027s XR team is at the forefront of the next major leap \u2013 the convergence of AI and XR. This is more than just new devices \u2013 it\u0027s about reimagining how we interact with the world around us. We\u0027re building a future where lightweight XR devices like smart glasses and headsets pair with helpful AI to augment human intelligence, offering personalized, conversational, and contextually aware experiences.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EResearch and develop state-of-the-art algorithms and models for tracking and synthesizing facial motion from multimodal inputs.\u003C/li\u003E\n\u003Cli\u003EWork with data collection and synthesis teams to gather high-quality training data.\u003C/li\u003E\n\u003Cli\u003EOptimize models and algorithms to run on low-power XR devices in real time.\u003C/li\u003E\n\u003Cli\u003EPropose KPIs and metrics, and incorporate user feedback into the algorithm and model design.\u003C/li\u003E\n\u003Cli\u003EBe able to work alongside other software engineers and research scientists to deliver production-ready models and pipelines.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, a similar technical field of study, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience programming in Python.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science, Applied Math, or a related field with a focus on machine learning.\u003C/li\u003E\n\u003Cli\u003EExperience with deep learning frameworks (e.g., JAX) and edge frameworks (e.g. LiteRT).\u003C/li\u003E\n\u003Cli\u003EExperience with polygonal mesh representations and skeletal animation pipelines.\u003C/li\u003E\n\u003Cli\u003EProficiency with Python/C\u002B\u002B .\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-27T22:09:35.5100000\u002B00:00",
+        "2026-05-28T20:39:04.3020000\u002B00:00",
+        "2026-05-28T20:39:04.5230000\u002B00:00"
+      ]
+    },
+    {
       "id": "106772932130153158",
       "title": "Software Engineer II, YouTube Ad Infrastructures",
       "company": "YouTube",
