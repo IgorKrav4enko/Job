@@ -1,6 +1,42 @@
 {
   "jobs": [
     {
+      "id": "89550669370794694",
+      "title": "Senior Software Engineering Manager, Flume ML",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/89550669370794694-senior-software-engineering-manager-flume-ml?location=Poland\u0026q=Software\u002BEngineer\u0026page=3",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-05-28T10:34:04.8322898\u002B00:00",
+      "lastSeenAt": "2026-06-26T20:08:07.1016067\u002B00:00",
+      "removedAt": "2026-06-27T08:49:23.5878090\u002B00:00",
+      "removedInRunId": "2026-06-27T08-49-23Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckWweCpY0eyVznCWz_gwzNGUty8nT_ketR46v3fXfjPbMEjsACxwdTB9TMIEU0mdRWwmnK4pS_bqwrbsF6SI6sB6Lk4RSSJ1Jckz_pVlU328YL5KOclIJxh5E_tP1-g%3D%3D_V2\u0026loc=PL\u0026title=Senior\u002BSoftware\u002BEngineering\u002BManager",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle Cloud\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google Cloud\u0027s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. You will anticipate our customer needs and be empowered to act like an owner, take action and innovate. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EWe are seeking an Engineering Manager with an infrastructure technical background to lead the growing engineering team in Warsaw.\u003C/p\u003E\u003Cp\u003EThe team manages a data processing infra product. This platform is at the center of the organization, powering foundational AI/ML features related to YouTube or Search, and next-generation AI initiatives. \u003C/p\u003E\u003Cp\u003EIn this role, you will lead a team of high-performing Software Engineers dedicated to evolving the next generation of distributed computing. Your primary objective is to advance the scheduleability and auto-tuning capabilities of the data processing infrastructure. These optimizations are critical for supporting both Machine Learning (ML) pipelines and standard data workloads. You will bridge the gap between complex infrastructure and the products.\u003C/p\u003E\u003Cp\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142640000 - z\u0142660000 (PLN) \u002B 25% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDiscover and implement advanced optimization techniques to enhance system auto-tuning and resource scheduling.\u003C/li\u003E\n\u003Cli\u003EDeliver fleet-wide performance improvements while collaborating with key partners across the company, including teams working on autonomous driving and frontier AI models.\u003C/li\u003E\n\u003Cli\u003ELead research into AI-driven optimization strategies to make data processing more efficient and self-healing.\u003C/li\u003E\n\u003Cli\u003ERecruit, manage, and coach a growing team of engineers, foster a culture of technical excellence and professional growth.\u003C/li\u003E\n\u003Cli\u003EProvide technical guidance and collaborate effectively with leadership and global stakeholders to align on long-term infrastructure roadmaps.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\n\u003C/li\u003E\n\u003Cli\u003E8 years of experience programming in C\u002B\u002B, Java, Python, Kotlin or Go.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in a people management or team leadership role.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in a technical leadership role.\u003C/li\u003E\n\u003Cli\u003EExperience developing and deploying large-scale distributed systems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in Engineering, Computer Science, or a related technical field.\u003C/li\u003E\n\u003Cli\u003E5 years of experience working in a complex, matrixed organization.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience designing and implementing Machine Learning (ML) architectures.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-27T21:39:16.0510000\u002B00:00",
+        "2026-06-08T09:10:45.1560000\u002B00:00",
+        "2026-06-08T09:10:45.4210000\u002B00:00"
+      ]
+    },
+    {
       "id": "111280764347130566",
       "title": "Network Operations Engineer, Sovereign Operations, Hampshire",
       "company": "Google",
