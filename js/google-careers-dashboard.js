@@ -1517,6 +1517,9 @@ function renderRemovedJobs() {
       const timing = document.createElement("div");
       timing.className = "text-sm leading-6 text-muted";
       timing.innerHTML =
+        `<div>Posted: ${job.postedAtCandidate ? shortDate(job.postedAtCandidate) : "n/a"}</div>` +
+        `<div>Tracked: ${job.firstSeenAt ? shortDate(job.firstSeenAt) : "n/a"}</div>` +
+        `<div>Visible for: ${getRemovedLifetimeLabel(job)}</div>` +
         `<div>Removed: ${job.removedAt ? shortDate(job.removedAt) : "n/a"}</div>` +
         `<div>Last seen: ${job.lastSeenAt ? shortDate(job.lastSeenAt) : "n/a"}</div>`;
 
@@ -1614,6 +1617,8 @@ function getRemovedJobsHistory() {
         const snapshotJob = state.jobs.find((item) => item.id === job.id);
         return {
           ...job,
+          postedAtCandidate: snapshotJob?.postedAtCandidate || null,
+          firstSeenAt: snapshotJob?.firstSeenAt || null,
           lastSeenAt: snapshotJob?.lastSeenAt || null,
           removedAt: run?.generatedAt || detail.runId,
           removedRunId: detail.runId
@@ -2118,6 +2123,33 @@ function shortDateParts(value) {
   const minute = parts.find((part) => part.type === "minute")?.value || "";
 
   return [`${day} ${month}`.trim(), `${hour}:${minute}`];
+}
+
+function getRemovedLifetimeLabel(job) {
+  const start = getDateTime(job.postedAtCandidate || job.firstSeenAt);
+  const end = getDateTime(job.removedAt || job.lastSeenAt);
+
+  if (!start || !end || end < start) {
+    return "n/a";
+  }
+
+  const totalMinutes = Math.max(1, Math.round((end - start) / (1000 * 60)));
+  const days = Math.floor(totalMinutes / (60 * 24));
+  const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
+
+  if (days > 0 && hours > 0) {
+    return `${days}d ${hours}h`;
+  }
+
+  if (days > 0) {
+    return `${days}d`;
+  }
+
+  if (hours > 0) {
+    return `${hours}h`;
+  }
+
+  return "<1h";
 }
 
 function formatSigned(value) {
