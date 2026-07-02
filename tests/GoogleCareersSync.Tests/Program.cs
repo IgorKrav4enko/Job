@@ -22,6 +22,7 @@ internal sealed class ReflectionTestRunner
         var tests = new List<(string Name, Func<Task> Body)>
         {
             ("BuildSearchUrl encodes location, query and page", TestBuildSearchUrlAsync),
+            ("BuildMetaSearchUrl encodes teams and offices without q", TestBuildMetaSearchUrlAsync),
             ("ExtractJobId returns the numeric id from a Google Careers URL", TestExtractJobIdAsync),
             ("ComputeContentHash ignores location order but reacts to meaningful field changes", TestContentHashAsync),
             ("MergeJobs classifies added, removed, changed and unchanged correctly", TestMergeJobsAsync),
@@ -78,6 +79,19 @@ internal sealed class ReflectionTestRunner
             "https://www.google.com/about/careers/applications/jobs/results?location=Zurich%2C%20Switzerland&q=%22Software%20Engineer%22&page=3",
             result,
             "BuildSearchUrl should URL-encode both location and query.");
+        return Task.CompletedTask;
+    }
+
+    private Task TestBuildMetaSearchUrlAsync()
+    {
+        var offices = new List<string> { "Dublin, Ireland", "Remote, Ireland" };
+        var teams = new List<string> { "Software Engineering" };
+        var result = InvokeStatic<string>("BuildMetaSearchUrl", offices, teams, 1);
+
+        AssertEqual(
+            "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering&offices[0]=Dublin%2C%20Ireland&offices[1]=Remote%2C%20Ireland",
+            result,
+            "BuildMetaSearchUrl should encode teams and offices and omit q-based search.");
         return Task.CompletedTask;
     }
 

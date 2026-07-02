@@ -1551,6 +1551,13 @@ static string GetMetaSearchTerm()
     return Environment.GetEnvironmentVariable("META_CAREERS_SEARCH_TERM")?.Trim() ?? "Software Engineering";
 }
 
+static List<string> GetMetaTeams(string searchTerm)
+{
+    return string.IsNullOrWhiteSpace(searchTerm)
+        ? new List<string>()
+        : new List<string> { searchTerm.Trim() };
+}
+
 static string GetAppleSearchTerm()
 {
     return Environment.GetEnvironmentVariable("APPLE_JOBS_SEARCH_TERM")?.Trim() ?? "software engineer";
@@ -1837,16 +1844,17 @@ static async Task<MetaFetchResult> FetchMetaJobsAsync(
     {
         var rawJobs = new List<MetaRawJobItem>();
         var seenForLocation = new HashSet<string>(StringComparer.Ordinal);
+        var metaTeams = GetMetaTeams(searchTerm);
 
         for (var page = 1; page <= maxPages; page += 1)
         {
-            var searchUrl = BuildMetaSearchUrl(location.Offices, searchTerm, page);
+            var searchUrl = BuildMetaSearchUrl(location.Offices, metaTeams, page);
             Console.WriteLine($"Fetching Meta search {searchUrl}");
 
             List<MetaSearchResult> searchResults;
             try
             {
-                searchResults = await FetchMetaSearchResultsAsync(httpClient, searchUrl, location.Label, searchTerm, page, location.Offices);
+                searchResults = await FetchMetaSearchResultsAsync(httpClient, searchUrl, location.Label, metaTeams, page, location.Offices);
             }
             catch (HttpRequestException error)
             {
@@ -1897,7 +1905,7 @@ static async Task<MetaFetchResult> FetchMetaJobsAsync(
                 location.Label,
                 location.Slug,
                 location.Offices,
-                BuildMetaSearchUrl(location.Offices, searchTerm, 1),
+                BuildMetaSearchUrl(location.Offices, metaTeams, 1),
                 rawJobs));
     }
 
@@ -3356,7 +3364,7 @@ static async Task<List<MetaSearchResult>> FetchMetaSearchResultsAsync(
     HttpClient httpClient,
     string searchUrl,
     string requestedLocation,
-    string searchTerm,
+    List<string> teams,
     int page,
     List<string> offices)
 {
@@ -3371,7 +3379,7 @@ static async Task<List<MetaSearchResult>> FetchMetaSearchResultsAsync(
     {
         search_input = new
         {
-            q = searchTerm,
+            q = (string?)null,
             divisions = Array.Empty<string>(),
             offices,
             roles = Array.Empty<string>(),
@@ -3379,7 +3387,7 @@ static async Task<List<MetaSearchResult>> FetchMetaSearchResultsAsync(
             saved_jobs = Array.Empty<string>(),
             saved_searches = Array.Empty<string>(),
             sub_teams = Array.Empty<string>(),
-            teams = Array.Empty<string>(),
+            teams,
             is_remote_only = false,
             sort_by_new = false,
             page,
@@ -3457,16 +3465,12 @@ static MetaRawJobItem BuildMetaRawJob(
         capturedAt);
 }
 
-static string BuildMetaSearchUrl(List<string> offices, string searchTerm, int page)
+static string BuildMetaSearchUrl(List<string> offices, List<string> teams, int page)
 {
-    var parts = offices
-        .Select((office, index) => $"offices[{index}]={Uri.EscapeDataString(office)}")
+    var parts = teams
+        .Select((team, index) => $"teams[{index}]={Uri.EscapeDataString(team)}")
+        .Concat(offices.Select((office, index) => $"offices[{index}]={Uri.EscapeDataString(office)}"))
         .ToList();
-
-    if (!string.IsNullOrWhiteSpace(searchTerm))
-    {
-        parts.Add($"q={Uri.EscapeDataString(searchTerm)}");
-    }
 
     if (page > 1)
     {
