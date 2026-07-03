@@ -1,6 +1,78 @@
 {
   "jobs": [
     {
+      "id": "116674326396052166",
+      "title": "Senior Software Engineer, Site Reliability Engineering, Cloud IRT",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/116674326396052166-senior-software-engineer-site-reliability-engineering-cloud-irt?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-06-24T09:50:22.4247341\u002B00:00",
+      "lastSeenAt": "2026-07-03T09:34:35.2672658\u002B00:00",
+      "removedAt": "2026-07-03T19:48:09.5345643\u002B00:00",
+      "removedInRunId": "2026-07-03T19-48-09Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckXKrVrFni_ngyHyiig-xO0jiqSr4Lc-jZGjWLUtoKNG7EjsA1Ny_i_V3p7sOhOHQvUaG4ZDiV90nvGpOoNX5RAdgbpWK_Xh6YKdsBCMQpK-819KXtUIdm_D1MgWxMA%3D%3D_V2\u0026loc=GB\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003ESite Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google Cloud\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to customer\u0027s needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance. \u003C/p\u003E\u003Cdiv\u003E\u003Cbr\u003E\u003C/div\u003E\u003Cdiv\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google Cloud, while using your expertise in coding, algorithms, complexity analysis and large-scale system design. SRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\u003C/div\u003E\n\u003Cp\u003EAs Senior Software Engineer, Site Reliability Engineering, Cloud Incident Response Team (IRT), you will respond to and help coordinate, mitigate, or resolve major incidents across all of Google Cloud Platform. Our rotation includes a community of some of the most experienced and executive engineers in Cloud Site Reliability Engineering. You will build the processes, systems, and tooling necessary to deliver customer-focused mitigations to critical Google Cloud Platform incidents. This will involve working on tooling, systems, and processes.\u003C/p\u003EBehind everything our users see online is the architecture built by the Technical Infrastructure team to keep it running. From developing and maintaining our data centers to building the next generation of Google platforms, we make Google\u0027s product portfolio possible. We\u0027re proud to be our engineers\u0027 engineers and love voiding warranties by taking things apart so we can rebuild them. We keep our networks up and running, ensuring our users have the best and fastest experience possible.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EEngage in and improve the whole lifecycle of service from inception and design, through to deployment, operation, and refinement.\u003C/li\u003E\n\u003Cli\u003ESupport services before they go live through activities such as system design consulting, developing software platforms and frameworks, capacity planning, and launch reviews.\u003C/li\u003E\n\u003Cli\u003EMaintain services once they are live by measuring and monitoring availability, latency, and overall system health.\u003C/li\u003E\n\u003Cli\u003EBuild systems and tooling to support Cloud IRT team; improve visibility into state of Cloud, detection of large scale issues, communications to customers, stakeholders and customer facing teams.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003EParticipate in oncall rotation supporting critical incident response for Google Cloud Platform (GCP).\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience in designing, analyzing, and troubleshooting large-scale distributed systems.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience leading projects and providing technical leadership. \u003C/li\u003E\n\u003Cli\u003EExperience troubleshooting production incidents as part of an on-call rotation.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or Engineering.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003EExperience in telemetry systems, incident and risk management.\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/li\u003E\n\u003Cli\u003EAbility to work across organizational boundaries.\u003C/li\u003E\n\u003Cli\u003EExcellent systematic problem-solving approach, coupled with effective communication skills and a sense of drive.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-24T08:38:13.7440000\u002B00:00",
+        "2026-06-24T08:38:14.0720000\u002B00:00"
+      ]
+    },
+    {
+      "id": "139666478084301510",
+      "title": "Software Engineer III, Infrastructure",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/139666478084301510-software-engineer-iii-infrastructure?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-05-27T20:29:06.9599294\u002B00:00",
+      "lastSeenAt": "2026-07-03T09:34:35.2672658\u002B00:00",
+      "removedAt": "2026-07-03T19:48:09.5345643\u002B00:00",
+      "removedInRunId": "2026-07-03T19-48-09Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckQJskoUQffMz0urP4QgHj9cD2JoqHr5WdqYkqB7XEG_fEjsACxwdTLdIiu0YppIzXJuatXMiSu8crEBKYJjH3HKWjDQ2Eqk7LL2c2Nekf9wcA52DfCvrKjz9iH8T7A%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "Google\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.In Google Search, we\u0027re reimagining what it means to search for information \u2013 any way and anywhere. To do that, we need to solve complex engineering challenges and expand our infrastructure, while maintaining a universally accessible and useful experience that people around the world rely on. In joining the Search team, you\u0027ll have an opportunity to make an impact on billions of people globally.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWork on serving and indexing infrastructure that is currently serving millions, identify bottlenecks and deploy robust solutions.\u003C/li\u003E\n\u003Cli\u003EDesign, implement and execute a robust roll-out plan for the multiple components involved in model refreshes.\u003C/li\u003E\n\u003Cli\u003EWork with clients inside and outside of Search to understand their requirements and define their deployment strategy.\u003C/li\u003E\n\u003Cli\u003EEvaluate and analyze the performance of the various infrastructure components to identify their limitations and avenues for improvement.\u003C/li\u003E\n\u003Cli\u003ECollaborate with software site reliability engineers and core on designing and implementing best practices to improve the existing Machine Learning (ML) infrastructure.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in C\u002B\u002B or 1 year of experience with an advanced degree in an industry setting.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with developing large-scale infrastructure, distributed systems or networks, or experience with compute technologies, storage or hardware architecture.\u003C/li\u003E\n\u003Cli\u003E2 years of experience in performance optimization.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with debugging, troubleshooting and monitoring systems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical fields.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-05-27T13:09:15.3420000\u002B00:00",
+        "2026-05-27T13:09:15.8090000\u002B00:00"
+      ]
+    },
+    {
       "id": "75713869686678214",
       "title": "Security Technical Lead, Cluster Management",
       "company": "Google",
