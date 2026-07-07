@@ -38,6 +38,7 @@ jobs:
           META_CAREERS_LIVE: "true"
           MICROSOFT_CAREERS_LIVE: "true"
           NVIDIA_CAREERS_LIVE: "true"
+          NVIDIA_CAREERS_MAX_PAGES: "10"
           AMAZON_JOBS_LIVE: "true"
         run: |
           dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- collect
