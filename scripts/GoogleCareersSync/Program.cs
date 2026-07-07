@@ -2659,7 +2659,7 @@ static List<AppleRawJobItem> ParseAppleSearchHtml(
         }
 
         var sourceJobId = HtmlDecode(titleMatch.Groups["sourceId"].Value);
-        var jobId = sourceJobId.Split('-', StringSplitOptions.RemoveEmptyEntries).FirstOrDefault() ?? sourceJobId;
+        var jobId = sourceJobId;
         if (string.IsNullOrWhiteSpace(jobId) || !seen.Add(jobId))
         {
             continue;
