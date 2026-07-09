@@ -1,6 +1,113 @@
 {
   "jobs": [
     {
+      "id": "129062955550417606",
+      "title": "Research Engineer, Multi Agent Learning, DeepMind",
+      "company": "DeepMind",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/129062955550417606-research-engineer-multi-agent-learning-deepmind?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-06-11T20:35:16.6372696\u002B00:00",
+      "lastSeenAt": "2026-07-08T19:54:57.9334570\u002B00:00",
+      "removedAt": "2026-07-09T09:56:43.6589218\u002B00:00",
+      "removedInRunId": "2026-07-09T09-56-43Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckUVJ_fknRwwmzUD3BRPBd4cXgsMY-CeoWW0H6HYfyIR-EjsACxwdTJpPXz94VGDBP_tRaCrEhEK8Pog-XqS-3A5DFl5KIBrdSmRFx1qBHXyXDBwSTM8pYeTNohvdPQ%3D%3D_V2\u0026loc=GB\u0026title=Research\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EAt Google, research-focused Software Engineers are embedded throughout the company, allowing them to setup large-scale tests and deploy promising ideas quickly and broadly. Ideas may come from internal projects as well as from collaborations with research programs at partner universities and technical institutes all over the world.\u003C/p\u003E\u003Cp\u003EFrom creating experiments and prototyping implementations to designing new architectures, engineers work on real-world problems including artificial intelligence, data mining, natural language processing, hardware and software performance analysis, improving compilers for mobile platforms, as well as core search and much more. But you stay connected to your research roots as an active contributor to the wider research community by partnering with universities and publishing papers.\u003C/p\u003E\n\u003Cp\u003EArtificial intelligence will be one of humanity\u2019s most transformative inventions. At Google DeepMind, we are a pioneering AI lab with exceptional interdisciplinary teams focused on advancing AI development to solve complex global challenges and accelerate high-quality product innovation for billions of users. We use our technologies for widespread public benefit and scientific discovery, ensuring safety and ethics are always our highest priority.\u003C/p\u003E\u003Cdiv\u003EWe are pushing the boundaries across multiple domains. Our global teams offer learning opportunities and varied career pathways for those driven to achieve exceptional results through collective effort.\u003C/div\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EContribute to the creation of novel multi-agent learning algorithms and frameworks, with a focus on performance and scalability in\u00A0Just-In-Time (JIT) compilation, Autograd, and XLA (JAX).\u003C/li\u003E\n\u003Cli\u003EBuild and maintain large-scale simulation platforms and end-to-end research pipelines to run experiments on Google DeepMind\u2019s cutting-edge infrastructure, including massive TPU pods.\u003C/li\u003E\n\u003Cli\u003EPartner deeply with Research Scientists to transform mathematical concepts and research hypotheses into robust, production-quality code and reproducible experiments.\u003C/li\u003E\n\u003Cli\u003ELead the engineering direction for complex research projects, establish best practices for code quality and maintainability, and mentor junior engineers on the team.\u003C/li\u003E\n\u003Cli\u003EOptimize every part of the research workflow, from data processing and model training to results analysis, to accelerate the pace of discovery.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science or a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in software development using Python or C\u002B\u002B.\u003C/li\u003E\n\u003Cli\u003EExperience in deep learning frameworks, such as JAX or PyTorch.\u003C/li\u003E\n\u003Cli\u003EExperience in standard analysis and scientific computing libraries such as numpy, pandas, and matplotlib.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EPhD with a research focus on Machine Learning, Reinforcement Learning, or Multi-Agent Systems.\u003C/li\u003E\n\u003Cli\u003EExperience training large-scale models on accelerators (TPUs, GPUs) in a distributed environment.\u003C/li\u003E\n\u003Cli\u003EExperience working with language models such as designing agentic harnesses, memory retrieval, or fine-tuning.\u003C/li\u003E\n\u003Cli\u003EA track record of leading complex software projects and a passion for enabling groundbreaking research through engineering.\u003C/li\u003E\n\u003Cli\u003EDeep expertise building and optimizing complex systems in JAX.\u003C/li\u003E\n\u003Cli\u003EA strong background in multi-agent reinforcement learning, algorithmic game theory, or computational economics.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-11T14:38:25.7350000\u002B00:00",
+        "2026-06-11T14:38:25.7940000\u002B00:00"
+      ]
+    },
+    {
+      "id": "124091739211211462",
+      "title": "Research Scientist, Reinforcement Learning, DeepMind",
+      "company": "DeepMind",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/124091739211211462-research-scientist-reinforcement-learning-deepmind?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=3",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-07-02T19:50:45.9529209\u002B00:00",
+      "lastSeenAt": "2026-07-08T19:54:57.9334570\u002B00:00",
+      "removedAt": "2026-07-09T09:56:43.6589218\u002B00:00",
+      "removedInRunId": "2026-07-09T09-56-43Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckeFo10FQ3kXoZ_BJ1KWTeDS_An3WAsvCPz3c0JTXw0NrEjsA1Ny_i6kveK-D7NlTxtvbGtvppzDwJ-xzbjIffIV81cl2f8SkH0HrJJP4JR9AP2AclPmge8VCkYgYlQ%3D%3D_V2\u0026loc=GB\u0026title=Research\u002BScientist",
+      "aboutTheJobRaw": "As an organization, Google maintains a portfolio of research projects driven by fundamental research, new product innovation, product contribution and infrastructure goals, while providing individuals and teams the freedom to emphasize specific types of work. As a Research Scientist, you\u0027ll setup large-scale tests and deploy promising ideas quickly and broadly, managing deadlines and deliverables while applying the latest theories to develop new and improved products, processes, or technologies. From creating experiments and prototyping implementations to designing new architectures, our research scientists work on real-world problems that span the breadth of computer science, such as machine (and deep) learning, data mining, natural language processing, hardware and software performance analysis, improving compilers for mobile platforms, as well as core search and much more.\u003Cp\u003EAs a Research Scientist, you\u0027ll also actively contribute to the wider research community by sharing and publishing your findings, with ideas inspired by internal projects as well as from collaborations with research programs at partner universities and technical institutes all over the world.\u003C/p\u003E\n\u003Cp\u003EDeepMind\u2019s Reinforcement Learning (RL) team is a long-standing and tight-knit team of collaborative scientists and engineers, led by Tom Schaul. We address large-scale research issues in reinforcement learning. We design, refine, and scale RL algorithms and deliver meaningful scientific or product impact. Over the past decade, members of the RL team have been instrumental in building DQN, AlphaGo, Rainbow, AlphaZero, MuZero, AlphaStar, AlphaProof and Gemini.\u003C/p\u003E\u003Cp\u003EArtificial intelligence will be one of humanity\u2019s most transformative inventions. At Google DeepMind, we are a pioneering AI lab with exceptional interdisciplinary teams focused on advancing AI development to solve complex global challenges and accelerate high-quality product innovation for billions of users. We use our technologies for widespread public benefit and scientific discovery, ensuring safety and ethics are always our highest priority.\u003C/p\u003E\u003Cdiv\u003EWe are pushing the boundaries across multiple domains. Our global teams offer diverse learning opportunities and varied career pathways for those driven to achieve exceptional results through collective effort.\u003C/div\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EPropose and pursue novel research directions by formulating and testing hypotheses.\u003C/li\u003E\n\u003Cli\u003EImplement algorithmic ideas and conduct end-to-end experiments, analyzing results and iterating on findings.\u003C/li\u003E\n\u003Cli\u003EDesign evaluations and ablations to answer key questions and drive research decisions.\u003C/li\u003E\n\u003Cli\u003EBuild and improve infrastructure to enable research at scale.\u003C/li\u003E\n\u003Cli\u003ECommunicate research findings through write-ups, presentations, and publications, while fostering a culture of high standards and constructive feedback.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EPhD in Machine Learning, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience implementing algorithms within research codebases.\u003C/li\u003E\n\u003Cli\u003EExperience conducting research in reinforcement learning, including contributions to peer-reviewed publications.\u003C/li\u003E\n\u003Cli\u003EExperience designing and executing end-to-end experiments, including setup, analysis, and interpretation.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience with advanced reinforcement learning topics, such as RL for sequence models, post-training, preference-based learning, or agentic systems.\u003C/li\u003E\n\u003Cli\u003EFamiliarity with modern research stacks (e.g., JAX/Flax or PyTorch) and experience scaling experiments.\u003C/li\u003E\n\u003Cli\u003EStrong experimental judgment, including selecting appropriate baselines and designing insightful ablations.\u003C/li\u003E\n\u003Cli\u003EComfort with scaling methodologies, evaluation techniques, and diagnosing complex failure modes.\u003C/li\u003E\n\u003Cli\u003EHigh agency and drive to push projects forward, prioritize effectively, and take initiative.\u003C/li\u003E\n\u003Cli\u003EExcellent communication skills, with a focus on clear and honest presentation of research results.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-02T15:08:04.7820000\u002B00:00",
+        "2026-07-02T15:08:04.8520000\u002B00:00"
+      ]
+    },
+    {
+      "id": "141997839046582982",
+      "title": "Software Engineering Manager, Agent Development Kit",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/141997839046582982-software-engineering-manager-agent-development-kit?location=Poland\u0026q=Software\u002BEngineer\u0026page=3",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-07-07T09:59:48.5474997\u002B00:00",
+      "lastSeenAt": "2026-07-08T19:54:57.9334570\u002B00:00",
+      "removedAt": "2026-07-09T09:56:43.6589218\u002B00:00",
+      "removedInRunId": "2026-07-09T09-56-43Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckUuFBYt6Twf7cyXy7Gn5Iya3st9Nv6CEBTZHU9P2dcmcEjsA1Ny_i207nO6H7oJ2O_CQNUc8xHzrhLESPqmjzrqcqJNHuuHiEprTh5NfSCJb8EhN97-Hl3AUbUJOBA%3D%3D_V2\u0026loc=PL\u0026title=Software\u002BEngineering\u002BManager",
+      "aboutTheJobRaw": "\u003Cp\u003ELike Google\u0027s own ambitions, the work of a Software Engineer goes beyond just Search. Software Engineering Managers have not only the technical expertise to take on and provide technical leadership to major projects, but also manage a team of Engineers. You not only optimize your own code but make sure Engineers are able to optimize theirs. As a Software Engineering Manager you manage your project goals, contribute to product strategy and help develop your team. Teams work all across the company, in areas such as information retrieval, artificial intelligence, natural language processing, distributed computing, large-scale system design, networking, security, data compression, user interface design; the list goes on and is growing every day. Operating with scale and speed, our exceptional software engineers are just getting started -- and as a manager, you guide the way.\u003Cbr\u003E\u003Cbr\u003EWith technical and leadership expertise, you manage engineers across multiple teams and locations, a large product budget and oversee the deployment of large-scale projects across multiple sites internationally.\u003Cbr\u003E\u003C/p\u003E\n\u003Cp\u003EAs an Engineering Manager and Technical Lead for the Agent Development Kit (ADK) team, you will lead a high-performing engineering team dedicated to accelerating the evolution and widespread adoption of our multi-language framework stack. This role requires a strong background in building highly scalable frameworks, clean API design, and cross-functional leadership skills.\u003C/p\u003E\u003Cp\u003EIn this role, you will define the technical roadmap and drive ambitious, projects to significantly improve the core capabilities, performance, and developer experience of our Go, Java, and Kotlin ADKs, making it seamless for the global developer ecosystem to build and scale production-grade AI agents.\u003C/p\u003E\u003Cp\u003EThe Google Cloud AI Research team addresses AI challenges motivated by Google Cloud\u2019s mission of bringing AI to tech, healthcare, finance, retail and many other industries. We work on a range of unique problems focused on research topics that maximize scientific and real-world impact, aiming to push the state-of-the-art in AI and share findings with the broader research community. We also collaborate with product teams to bring innovations to real-world impact that benefits our customers. \u003Cbr\u003E\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142480000 - z\u0142492000 (PLN) \u002B 20% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EManage a high-performing team of software engineers, guiding their execution, career growth, and technical development.\u003C/li\u003E\n\u003Cli\u003ESet the technical outlook and long-term roadmap for your team, while influencing the cross-functional direction of the broader organization.\u003C/li\u003E\n\u003Cli\u003EMaintain a high bar for code quality through development, detailed code reviews, and robust technical design leadership across the entire stack.\u003C/li\u003E\n\u003Cli\u003ECollaborate across product and partner teams to align on technical requirements and clear technical blockers.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E8 years of experience in software development.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with one or more of the following: Speech/audio (e.g., technology duplicating and responding to the human voice), reinforcement learning (e.g., sequential decision making), ML infrastructure, or specialization in another ML field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience leading ML design and optimizing ML infrastructure (e.g., model deployment, model evaluation, data processing, debugging, fine tuning).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a technical leadership role.\u003C/li\u003E\n\u003Cli\u003E2 years of experience in a people management or team leadership role.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in Engineering, Computer Science, or a related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience working in a complex, matrixed organization involving cross-functional, or cross-business projects.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-06T15:48:29.6180000\u002B00:00",
+        "2026-07-06T15:48:30.1880000\u002B00:00"
+      ]
+    },
+    {
       "id": "121462950790603462",
       "title": "Content Strategist (Fixed-Term Contract)",
       "company": "Google",
