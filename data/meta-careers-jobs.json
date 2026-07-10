@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T09:52:15.4788119\u002B00:00",
+  "generatedAt": "2026-07-10T19:50:35.8484615\u002B00:00",
   "source": "Meta Careers",
   "status": "success",
   "notes": "Normalized 5 active Meta jobs from latest raw snapshot.",
@@ -38,6 +38,22 @@
   ],
   "jobs": [
     {
+      "id": "1564791422017150",
+      "title": "Business Engineer",
+      "company": "Meta",
+      "locations": [
+        "London, UK"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/1564791422017150/",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK",
+      "postedAtCandidate": "2026-07-08T15:58:09-07:00",
+      "firstSeenAt": "2026-07-10T19:50:35.8484615\u002B00:00",
+      "lastSeenAt": "2026-07-10T19:50:35.8484615\u002B00:00",
+      "isActive": true,
+      "contentHash": "b3f6e83738715cca3b3d093f25f98de3542b73cecf1d19ff84e5e25ff3de42e7"
+    },
+    {
       "id": "4625860837671772",
       "title": "Business Support Engineer",
       "company": "Meta",
@@ -49,7 +65,7 @@
       "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=Cork%2C%20Ireland\u0026offices[1]=Clonee%2C%20Ireland\u0026offices[2]=Dublin%2C%20Ireland\u0026offices[3]=Remote%2C%20Ireland",
       "postedAtCandidate": "2026-06-24T10:30:31-07:00",
       "firstSeenAt": "2026-07-08T08:43:25.6527931\u002B00:00",
-      "lastSeenAt": "2026-07-10T09:52:15.4788119\u002B00:00",
+      "lastSeenAt": "2026-07-10T19:50:35.8484615\u002B00:00",
       "isActive": true,
       "contentHash": "cb4b945cf93b40d9686f4c5365425512c64771a65e891f47043e3196be2cb4d5"
     },
@@ -65,7 +81,7 @@
       "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK",
       "postedAtCandidate": "2026-06-29T06:49:06-07:00",
       "firstSeenAt": "2026-07-08T08:43:25.6527931\u002B00:00",
-      "lastSeenAt": "2026-07-10T09:52:15.4788119\u002B00:00",
+      "lastSeenAt": "2026-07-10T19:50:35.8484615\u002B00:00",
       "isActive": true,
       "contentHash": "5552ebd83214df792074bd4c425b21b72c4452b60d19166c3d6563e832b394c1"
     },
@@ -81,25 +97,9 @@
       "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK",
       "postedAtCandidate": "2026-06-29T09:29:03-07:00",
       "firstSeenAt": "2026-07-08T08:43:25.6527931\u002B00:00",
-      "lastSeenAt": "2026-07-10T09:52:15.4788119\u002B00:00",
+      "lastSeenAt": "2026-07-10T19:50:35.8484615\u002B00:00",
       "isActive": true,
       "contentHash": "03615ddd90ef3aa0f470a0741b17f88ca985300edad5cb2537abb1a5aaacdd13"
-    },
-    {
-      "id": "1346169710279686",
-      "title": "Software Engineer - Cameras \u0026 Sensors",
-      "company": "Meta",
-      "locations": [
-        "Zurich, Switzerland"
-      ],
-      "url": "https://www.metacareers.com/profile/job_details/1346169710279686/",
-      "requestedLocation": "Switzerland",
-      "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=Geneva%2C%20Switzerland\u0026offices[1]=Zurich%2C%20Switzerland",
-      "postedAtCandidate": "2026-07-08T02:01:20-07:00",
-      "firstSeenAt": "2026-07-10T09:52:15.4788119\u002B00:00",
-      "lastSeenAt": "2026-07-10T09:52:15.4788119\u002B00:00",
-      "isActive": true,
-      "contentHash": "86cb331d4634d3dc39670f816cd69cfc91027e7f6abd5f5025172336439997b0"
     },
     {
       "id": "1866971030638899",
@@ -113,7 +113,7 @@
       "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK",
       "postedAtCandidate": "2026-06-10T07:51:20-07:00",
       "firstSeenAt": "2026-07-08T08:43:25.6527931\u002B00:00",
-      "lastSeenAt": "2026-07-10T09:52:15.4788119\u002B00:00",
+      "lastSeenAt": "2026-07-10T19:50:35.8484615\u002B00:00",
       "isActive": true,
       "contentHash": "8c91d9a81f67b244c50542fb070f2cab071ea5e7c9ecab904d36b82e9b6fcd0a"
     },
@@ -246,6 +246,22 @@
       "lastSeenAt": "2026-04-21T13:23:13.5101150\u002B00:00",
       "isActive": false,
       "contentHash": "d92b61afd5a28dcae24a7e86ab660c770ac43ecff7b7ee0658bf0ab885eb406c"
+    },
+    {
+      "id": "1346169710279686",
+      "title": "Software Engineer - Cameras \u0026 Sensors",
+      "company": "Meta",
+      "locations": [
+        "Zurich, Switzerland"
+      ],
+      "url": "https://www.metacareers.com/profile/job_details/1346169710279686/",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=Geneva%2C%20Switzerland\u0026offices[1]=Zurich%2C%20Switzerland",
+      "postedAtCandidate": "2026-07-08T02:01:20-07:00",
+      "firstSeenAt": "2026-07-10T09:52:15.4788119\u002B00:00",
+      "lastSeenAt": "2026-07-10T09:52:15.4788119\u002B00:00",
+      "isActive": false,
+      "contentHash": "86cb331d4634d3dc39670f816cd69cfc91027e7f6abd5f5025172336439997b0"
     },
     {
       "id": "677160418622314",
