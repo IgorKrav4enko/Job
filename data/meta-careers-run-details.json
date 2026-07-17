@@ -20843,6 +20843,167 @@
           ]
         }
       ]
+    },
+    {
+      "runId": "2026-07-17T08-27-23Z",
+      "added": [],
+      "removed": [],
+      "changed": [],
+      "unchanged": [
+        {
+          "id": "1564791422017150",
+          "title": "Business Engineer",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1564791422017150/",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "4625860837671772",
+          "title": "Business Support Engineer",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/4625860837671772",
+          "locations": [
+            "Dublin, Ireland"
+          ],
+          "requestedLocation": "Ireland"
+        },
+        {
+          "id": "1029177790044680",
+          "title": "Research Scientist Intern, 3D Scene Understanding (PhD)",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1029177790044680/",
+          "locations": [
+            "Zurich, Switzerland"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "1543431717365635",
+          "title": "Senior Software Specialist - AI/ML - Monetisation",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1543431717365635/",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1550400850050836",
+          "title": "Software Engineer (Leadership) - Machine Learning",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1550400850050836/",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1866971030638899",
+          "title": "Staff Software Specialist - AI - Monetisation",
+          "company": "Meta",
+          "url": "https://www.metacareers.com/profile/job_details/1866971030638899/",
+          "locations": [
+            "London, UK"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Ireland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "4625860837671772",
+              "title": "Business Support Engineer",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/4625860837671772",
+              "locations": [
+                "Dublin, Ireland"
+              ],
+              "requestedLocation": "Ireland"
+            }
+          ]
+        },
+        {
+          "location": "Poland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "Switzerland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1029177790044680",
+              "title": "Research Scientist Intern, 3D Scene Understanding (PhD)",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1029177790044680/",
+              "locations": [
+                "Zurich, Switzerland"
+              ],
+              "requestedLocation": "Switzerland"
+            }
+          ]
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1564791422017150",
+              "title": "Business Engineer",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1564791422017150/",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1543431717365635",
+              "title": "Senior Software Specialist - AI/ML - Monetisation",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1543431717365635/",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1550400850050836",
+              "title": "Software Engineer (Leadership) - Machine Learning",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1550400850050836/",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1866971030638899",
+              "title": "Staff Software Specialist - AI - Monetisation",
+              "company": "Meta",
+              "url": "https://www.metacareers.com/profile/job_details/1866971030638899/",
+              "locations": [
+                "London, UK"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
