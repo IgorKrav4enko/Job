@@ -1,6 +1,305 @@
 {
   "jobs": [
     {
+      "id": "129046850496799430",
+      "title": "Computer Vision Software Engineer, Calibration and Spatial Sensing",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/129046850496799430-computer-vision-software-engineer-calibration-and-spatial-sensing?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-07-17T08:27:15.4493681\u002B00:00",
+      "lastSeenAt": "2026-07-17T08:27:15.4493681\u002B00:00",
+      "removedAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "removedInRunId": "2026-07-17T19-31-27Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckTATgMDwsQQYdo9IBYho0GiJP4AsoLwOM692tBZxRfFVEjoA1Ny_i8bOeUyluqdmpgp2YYALW1uYkM8im6goR7DtyOkVE_JqLoY88QCkleHcYtXG25ABTYg8QlZ6_V2\u0026loc=CH\u0026title=Computer\u002BVision\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003Cbr\u003E\u003Cbr\u003EWith your technical expertise you will manage project priorities, deadlines, and deliverables. You will design, develop, test, deploy, maintain, and enhance software solutions.\u003C/p\u003E\n\u003Cp\u003EFor decades, the computing revolution has reshaped our world driven by  \u003Cbr\u003Ebreakthroughs in compute, connectivity, mobile, and now, AI. Google\u0027s XR  \u003Cbr\u003Eteam is at the forefront of the next major leap \u2013 the convergence of AI and  \u003Cbr\u003EXR. This is more than just new devices \u2013 it\u0027s about reimagining how we  \u003Cbr\u003Einteract with the world around us. We\u0027re building a future where  \u003Cbr\u003Elightweight XR devices like smart glasses and headsets pair with helpful AI  \u003Cbr\u003Eto augment human intelligence, offering personalized, conversational, and  \u003Cbr\u003Econtextually aware experiences.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDevelop foundational world-sensing technology that enables devices to track and understand their surroundings.\u003C/li\u003E\n\u003Cli\u003EOptimize the performance of the world-sensing stack to enable precise spatial localization, potentially leveraging the visual positioning service (VPS) and multi-device sensor fusion to achieve sub-meter, real-time accuracy within a tight power budget.\u003C/li\u003E\n\u003Cli\u003ECollaborate with stakeholders to define requirements and drive end-to-end algorithmic design, while leading research initiatives to solve the most difficult skip to main content technical issues facing consumer XR devices on commodity hardware.\u003C/li\u003E\n\u003Cli\u003EFocus on a large-scale localization and geospatial sensor fusion, design and implement next-generation components for spatial sensing and calibration.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, a similar technical field of study, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience programming in Python.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EPhD degree or equivalent experience in one of the following areas: Computer vision, machine learning, sensor fusion, image processing, deep learning, simultaneous localization and mapping (SLAM), sensor calibration, semantic perception.\u003C/li\u003E\n\u003Cli\u003EExperience driving end-to-end development of computer vision systems from initial research to production-quality code landed in demos/products.\u003C/li\u003E\n\u003Cli\u003EExperience developing high-performance computer vision systems for real-time applications on mobile platforms.\u003C/li\u003E\n\u003Cli\u003ETrack record of publications in computer vision or robotics.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-17T08:08:54.4440000\u002B00:00",
+        "2026-07-17T08:08:55.0090000\u002B00:00"
+      ]
+    },
+    {
+      "id": "100513210569761478",
+      "title": "Forward Deployed Engineer II, GenAI (French, German)",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/100513210569761478-forward-deployed-engineer-ii-genai-french-german?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-07-01T20:14:04.7356143\u002B00:00",
+      "lastSeenAt": "2026-07-17T08:27:15.4493681\u002B00:00",
+      "removedAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "removedInRunId": "2026-07-17T19-31-27Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckbVWjyOV0rUan1ZVbjIv5oU1dElLY-cbSHmNi8wpD0AyEjsA1Ny_i42M4FU25t8BCD_Qp8MyMPLdqCHaK8fF2iTxeR_ggYwohtBEFvLu1JzRjLhDcW2vxx7Afu5T3Q%3D%3D_V2\u0026loc=GB\u0026title=Forward\u002BDeployed\u002BEngineer\u002BII",
+      "aboutTheJobRaw": "Google Cloud\u2019s mission is to make every business successful through AI by combining cutting-edge technology, infrastructure, and talent. AI/ML software engineers in Cloud bridge the gap between pioneering models and a massive product vehicle reaching billions. Our talent density and AI-powered tools drive rapid development, rooted in a culture of empowerment and a bias to action. In this role, you aren\u2019t just building technology; you\u2019re shaping the frontier of enterprise and driving the evolution of advanced models.  \u003Cbr\u003E\u003Cbr\u003EAs a GenAI Forward Deployed Engineer at Google Cloud, you will be an embedded builder who bridges the gap between frontier AI products and production-grade reality within customers. Unlike traditional advisory roles, you will function as an innovator-builder, moving beyond high-level architecture to code, debug, and jointly ship bespoke agentic solutions directly within the customer\u2019s environment. This role is designed for high-agency engineers with a founder\u2019s mindset. You will address blockers to production including solving the integration complexities, data readiness issues, and state-management issues that prevent AI from reaching enterprise-grade maturity. By embedding with accounts, you will serve a dual purpose: providing white glove deployment of AI systems and acting as a critical feedback loop, transforming real-world field insights into Google Cloud\u2019s future product roadmap.It\u0027s an exciting time to join Google Cloud\u2019s Go-To-Market team, leading the AI revolution for businesses worldwide. You\u2019ll excel by leveraging Google\u0027s brand credibility\u2014a legacy built on inventing foundational technologies and proven at scale. We\u2019ll provide you with the world\u0027s most advanced AI portfolio, including frontier Gemini models, and the complete Vertex AI platform, helping you to solve business problems. We\u2019re a collaborative culture providing direct access to DeepMind\u0027s engineering and research minds, empowering you to solve customer challenges. Join us to be the catalyst for our mission, drive customer success, and define the new cloud era\u2014the market is yours.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003E\u003Cspan dir=\u0022ltr\u0022\u003EServe as the lead developer for complex AI applications, transitioning from rapid prototypes to production-grade agentic workflows (e.g., multi-agent systems, model context protocol (MCP) servers) that drive measurable return on investment.\u003C/span\u003E\u003C/li\u003E\n\u003Cli\u003EArchitect and code the connective tissue between Google\u2019s AI products and customer\u0027s live infrastructure, including APIs, legacy data silos, and security perimeters.\u003C/li\u003E\n\u003Cli\u003EBuild high-performance evaluation (Eval) pipelines and observability frameworks to ensure agentic systems meet rigorous requirements for accuracy, safety, and latency.\u003C/li\u003E\n\u003Cli\u003EIdentify repeatable field patterns and technical friction points in Google\u2019s AI stack, converting them into reusable modules or formal product feature requests for the Engineering teams.\u003C/li\u003E\n\u003Cli\u003ECo-build with customer engineering teams to instill Google-grade development best practices, ensuring long-term project success and high end-user adoption.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Engineering, Computer Science, a related field, or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with software development in one or more programming languages (e.g., Python).\u003C/li\u003E\n\u003Cli\u003EExperience in Machine Learning, Natural Language Processing (NLP), generative AI agents, and DevOps.\u003C/li\u003E\n\u003Cli\u003EAbility to communicate in French and German fluently to support client relationship management in this region.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s or PhD in AI, Computer Science, or a related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience implementing multi-agent systems using frameworks (e.g., LangGraph, CrewAI, ADK) and complex patterns (e.g., ReAct, self-reflection, hierarchical delegation).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EKnowledge of \u0022LLM-native\u0022 metrics (e.g., tokens/sec, cost-per-request) and techniques for optimizing state management and granular tracing.\u003C/li\u003E\n\u003Cli\u003EAbility to implement secure agentic workflows incorporating MCP, tool-calling, and OAuth-based authentication.\u003C/li\u003E\n\u003Cli\u003EAbility to communicate in French, Spanish, Italian or other European languages fluently to support client relationship management in this region.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-01T13:38:21.0770000\u002B00:00",
+        "2026-07-01T13:38:21.1510000\u002B00:00"
+      ]
+    },
+    {
+      "id": "123987614171570886",
+      "title": "Senior Software Engineer, Infrastructure, Data Generation Pipeline",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/123987614171570886-senior-software-engineer-infrastructure-data-generation-pipeline?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-06-01T21:43:47.4856098\u002B00:00",
+      "lastSeenAt": "2026-07-17T08:27:15.4493681\u002B00:00",
+      "removedAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "removedInRunId": "2026-07-17T19-31-27Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckQ_-RJFAPTN6_0Z7ZYFHOf5Kerp7PQYcXqKdXv5r3nXvEjsACxwdTEWM1T4yXy9pyimKunRdDnls0y74yBNuOHcEzvCr9_HfShBGNXtto4kNIxAH8f4jSWgqia3EPQ%3D%3D_V2\u0026loc=CH\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EThe Core team builds the technical foundation behind Google\u2019s flagship products. We are owners and advocates for the underlying design elements, developer platforms, product components, and infrastructure at Google. These are the essential building blocks for excellent, safe, and coherent experiences for our users and drive the pace of innovation for every developer. We look across Google\u2019s products to build central solutions, break down technical barriers and strengthen existing systems. As the Core team, we have a mandate and a unique opportunity to impact important technical decisions across the company.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWrite and test product or system development code.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EReview code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages.\u003C/li\u003E\n\u003Cli\u003E3 years of experience testing, maintaining, or launching software products, and 1 year of experience with software design and architecture.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience with developing large-scale infrastructure, distributed systems or networks, or experience with compute technologies, storage or hardware architecture.\u003C/li\u003E\n\u003Cli\u003EExperience with C\u002B\u002B.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science, or a related technical field.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E1 year of experience in a technical leadership role.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-01T15:10:07.1940000\u002B00:00",
+        "2026-06-01T15:10:07.3560000\u002B00:00"
+      ]
+    },
+    {
+      "id": "137060977077035718",
+      "title": "Senior Staff Site Reliability Engineer, AViD, YouTube Ads",
+      "company": "YouTube",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/137060977077035718-senior-staff-site-reliability-engineer-avid-youtube-ads?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Mountain View, CA, USA",
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-07-01T20:14:04.7356143\u002B00:00",
+      "lastSeenAt": "2026-07-17T08:27:15.4493681\u002B00:00",
+      "removedAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "removedInRunId": "2026-07-17T19-31-27Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckYMiaGkCBPiS9ggXKE_gc6IsEq7ag3MFg2BYEeUYu-aUEjsA1Ny_i4q18tE5bwFVFRkV_KzB3X4VM-4a-Ia56jkRpu6UUyIqubWEC5UtTzNs_cjWiFWG6laYD5eaTw%3D%3D_V2\u0026loc=US\u0026title=Senior\u002BStaff\u002BSite\u002BReliability\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003ESite Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to users\u0027 needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance.\u003C/p\u003E\u003Cdiv\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google, while using your expertise in coding, algorithms, complexity analysis and large-scale system design.\u003C/div\u003E\u003Cdiv\u003E\u003Cbr\u003E\u003C/div\u003E\u003Cdiv\u003ESRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\u003Cbr\u003E\u003Cbr\u003E\u003Cb\u003ETo learn more:\u003C/b\u003E check out our books on \u003Ca href=\u0022https://landing.google.com/sre/book.html\u0022 target=\u0022_blank\u0022\u003ESite Reliability Engineering\u003C/a\u003E or read a \u003Ca href=\u0022https://careers.google.com/stories/site-reliability-engineering-profile-google/\u0022 target=\u0022_blank\u0022\u003Ecareer profile\u003C/a\u003E about why a Software Engineer chose to join SRE.\u003C/div\u003E\n\u003Cp\u003EIn this role, you will develop, design, and drive technical engineering projects and decisions for Apps, Video and Display (AViD) infrastructure and production systems. You will mentor and lead other executive level engineers within AViD SRE and across Ads to achieve our aligned mission.\u003C/p\u003E\u003Cp\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EUS: $262000 - $365000 (USD) \u002B 25% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EEnsure that Google Ads services within the AViD ecosystem have reliability and uptime appropriate to users\u0027 needs with a fast rate of improvement, while keeping an ever-watchful eye on capacity and performance.\u003C/li\u003E\n\u003Cli\u003EBuild creative engineering solutions to operations and infrastructure problems, including AI-powered automation and agentic workflows for production operations.\u003C/li\u003E\n\u003Cli\u003ELead and contribute to the cross-SRE AI Ops program, driving the strategic adoption of AI/ML tools to improve incident response, reduce toil, and enhance service reliability across Ads SRE.\u003C/li\u003E\n\u003Cli\u003EFocus on optimizing existing systems, build infrastructure, and eliminate work through automation and AI-driven operational improvements.\u003C/li\u003E\n\u003Cli\u003EDetermine how our systems relate to each other and use a breadth of tools and approaches \u2014 including emerging AI capabilities \u2014 to solve a broad spectrum of problems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003E8 years of experience with software development in one or more programming languages (e.g., Python, C, C\u002B\u002B, Java, JavaScript).\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience collaborating effectively across organizational boundaries, building relationships, and importing and exporting ideas to achieve broad organizational goals.\u003C/li\u003E\n\u003Cli\u003EExperience leading technical strategy and influencing engineering direction across multiple teams.\u003C/li\u003E\n\u003Cli\u003EExperience leading cross-organizational technical programs or initiatives at scale.\u003C/li\u003E\n\u003Cli\u003EExperience with agentic systems and using AI to support production operations, including familiarity with LLM-based tooling, AI-driven automation, or intelligent incident response systems.\u003C/li\u003E\n\u003Cli\u003EAbility to understand complex relationship between the organization and its environment, identify connections, adopt different perspectives and quickly respond to changing circumstances in a strategic way.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Mountain View, CA, USA",
+          "addresses": [
+            "NASA Ames Building N-255, 100 Bay Vw Dr, Mountain View, CA 94043, USA"
+          ],
+          "city": "Mountain View",
+          "postalCode": "94043",
+          "regionCode": "CA",
+          "countryCode": "US"
+        },
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "London, UK"
+          ],
+          "city": "London",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-01T13:38:18.4480000\u002B00:00",
+        "2026-07-01T13:38:18.6920000\u002B00:00"
+      ]
+    },
+    {
+      "id": "140449219868533446",
+      "title": "Software Engineer II, Retrieval Engine, Infrastructure",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/140449219868533446-software-engineer-ii-retrieval-engine-infrastructure?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-07-10T19:50:25.7649924\u002B00:00",
+      "lastSeenAt": "2026-07-17T08:27:15.4493681\u002B00:00",
+      "removedAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "removedInRunId": "2026-07-17T19-31-27Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckSGzyBOU9g6zvbBgRqAuMDxD3yokrd0iS669d13D3MM1EjsA1Ny_i72IiSDFHWKsq6MZHBaOBNBK3xuzHM50s-6ziLTL1ar23T4tnIvtjjil7OSz6TXH-T9HQeUMvQ%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineer\u002BII",
+      "aboutTheJobRaw": "Google\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward. \u003Cbr\u003E\u003Cbr\u003ERetrieval Engine\u0027s mission is to provide scalable, easy-to-use, information retrieval over all Google\u0027s data. It enables efficient, reliable, real-time retrieval over large-scale datasets containing multiple types of data, including embeddings, text, geo-locations, and numerics.\u003Cbr\u003E\u003Cbr\u003ERetrieval Engine is used to power the worlds largest search engines such as google.com, YouTube.com and others and we\u0027re building infrastructure and quality systems that feed GenAI model\u0027s context windows with relevant information (example applications are Search AI Mode, Search AI Overviews, and Gemini).The Core team builds the technical foundation behind Google\u2019s flagship products. We are owners and advocates for the underlying design elements, developer platforms, product components, and infrastructure at Google. These are the essential building blocks for excellent, safe, and coherent experiences for our users and drive the pace of innovation for every developer. We look across Google\u2019s products to build central solutions, break down technical barriers and strengthen existing systems. As the Core team, we have a mandate and a unique opportunity to impact important technical decisions across the company.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003C/li\u003E\n\u003Cli\u003EWrite product or system development code; Review code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003C/li\u003E\n\u003Cli\u003EImprove the infrastructure and quality for Gemini, google.com, etc.\u003C/li\u003E\n\u003Cli\u003EWork at the intersection of infrastructure (run efficiently at scale) and quality (return the best results).\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with software development in one or more programming languages (e.g., Python, C, C\u002B\u002B, Java, JavaScript).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with data structures and algorithms.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with Infrastructure, Machine Learning.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or a related technical field.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with C\u002B\u002B.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-10T11:13:02.0980000\u002B00:00",
+        "2026-07-14T06:38:08.0770000\u002B00:00",
+        "2026-07-14T06:38:08.1790000\u002B00:00"
+      ]
+    },
+    {
+      "id": "77034166255788742",
+      "title": "Software Engineer III, AI/ML, Sensor Fusion, XR",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/77034166255788742-software-engineer-iii-aiml-sensor-fusion-xr?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-06-22T12:25:16.6482584\u002B00:00",
+      "lastSeenAt": "2026-07-17T08:27:15.4493681\u002B00:00",
+      "removedAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "removedInRunId": "2026-07-17T19-31-27Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckbjZl-LrBqO_WAC9Nda9qUm2iVrA1BlExULNv4KVNPz3EjsA1Ny_izV8ZNMClcDGMilwMHtuShfSw4OODYnF0ivCalrMGXCFObbtSJN_h4L87J85m8RpfKUpN2c9Aw%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "Google\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\n\u003Cp\u003EWe work in the research-to-product space, going 0-to-1 on foundational visual-inertial fusion for odometry, localization, mapping, along with calibration, image processing for head tracking. This work powers AndroidXR devices, including GalaxyXR and upcoming devices such as Aura.\u003C/p\u003E\u003Cp\u003EFurthermore, working alongside a group of Perception researchers and engineers, we push the boundaries of how these technologies can support delightful AR experiences, driving ideation and development cross-functionally to chart the future capabilities needed by our AR devices.\u003C/p\u003EFor decades, the computing revolution has reshaped our world driven by  \u003Cbr\u003Ebreakthroughs in compute, connectivity, mobile, and now, AI. Google\u0027s XR team is at the forefront of the next major leap \u2013 the convergence of AI and XR. This is more than just new devices \u2013 it\u0027s about reimagining how we interact with the world around us. We\u0027re building a future where  \u003Cbr\u003Elightweight XR devices like smart glasses and headsets pair with helpful AI to augment human intelligence, offering personalized, conversational, and contextually aware experiences.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWrite product or system development code.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003ECollaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies  (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EImplement solutions in one or more specialized ML areas, utilize ML infrastructure, and contribute to model optimization and data processing.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with one or more of the following: Speech/audio (e.g., technology duplicating and responding to the human voice), reinforcement learning (e.g., sequential decision making), ML infrastructure, or specialization in another ML field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with ML infrastructure (e.g., model deployment, model evaluation, optimization, data processing, debugging).\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science, or a related technical field.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience with sensor fusion, C\u002B\u002B, or computer vision.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-22T11:08:01.7780000\u002B00:00",
+        "2026-06-22T11:08:02.2770000\u002B00:00"
+      ]
+    },
+    {
+      "id": "141274000691995334",
+      "title": "Software Engineer III, GenAI Data Operations Research, XR",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/141274000691995334-software-engineer-iii-genai-data-operations-research-xr?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-06-19T20:02:43.5682050\u002B00:00",
+      "lastSeenAt": "2026-07-17T08:27:15.4493681\u002B00:00",
+      "removedAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "removedInRunId": "2026-07-17T19-31-27Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckWymtZA9_I90N23eetktq4BW0fFE6evEO9SCDZzxGeTVEjsA1Ny_i_wjSGvBvw-RYUQ85qOa5MI7v_-H1OlxwXCeTEIqxtqJlIL5p_cUSY1tGoiEk9vPGIevTZEzUA%3D%3D_V2\u0026loc=GB\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "Google\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\nThe Platforms and Devices team encompasses Google\u0027s various computing software platforms across environments (desktop, mobile, applications), as well as our first-party devices and services that combine the best of Google AI, software, and hardware. Teams across this area research, design, and develop new technologies to make our user\u0027s interaction with computing faster and more seamless, building innovative experiences for our users around the world.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003ECollaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency,)\u003C/li\u003E\n\u003Cli\u003EImplement solutions in one or more specialized ML areas, utilize ML infrastructure, and contribute to model optimization and data processing.\u003C/li\u003E\n\u003Cli\u003ELead high-volume synthetic datasets including metadata deliveries for XR and Platform and Devices (P\u0026D) projects.\u003C/li\u003E\n\u003Cli\u003EBuild modular toolkits for GenAI bulk inference and metadata extraction.\u003C/li\u003E\n\u003Cli\u003EDevelop end-to-end pipelines for fine-tuning in-house foundational models.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with one or more of the following: speech/audio (e.g., technology duplicating and responding to the human voice), reinforcement learning (e.g., sequential decision making), ML infrastructure, or specialization in another ML field.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with ML infrastructure (e.g., model deployment, model evaluation, data processing, debugging).\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical fields.\u003C/li\u003E\u003Cli\u003E2 years of experience with data structures and algorithms.\u003C/li\u003E\u003Cli\u003EExperience with C\u002B\u002B, Parallel Computing, Blender.\u003C/li\u003E\u003Cli\u003EExperience developing accessible technologies.\u003C/li\u003E\u003Cli\u003EProficiency in Python and experience with frameworks for large-scale data processing.\u003C/li\u003E\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-19T13:39:10.6050000\u002B00:00",
+        "2026-06-19T13:39:10.6990000\u002B00:00"
+      ]
+    },
+    {
+      "id": "107183078958342854",
+      "title": "Software Engineering Lead, Google Calendar",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/107183078958342854-software-engineering-lead-google-calendar?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-07-14T19:41:50.3220841\u002B00:00",
+      "lastSeenAt": "2026-07-17T08:27:15.4493681\u002B00:00",
+      "removedAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "removedInRunId": "2026-07-17T19-31-27Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckdvizBvyyzAv_otgZliidGzDQ-06uvlCLLq2L6gHSmwkEjsA1Ny_i-TgTQJ1jNkQ4LxOXr3ehCuhSU_rcvlbi1Uyny89UYYKFIj7GWczbIxoi9_VTR8UEgubE4QlDA%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineering\u002BLead",
+      "aboutTheJobRaw": "Google\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\nGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003ECollaborate with Engineering Managers on planning, stack ranks, prioritization, and staffing.\u003C/li\u003E\n\u003Cli\u003EAdvance the app architecture. Ensure sustainable development of the app. Represent platform-specific considerations in cross-stack developments. Ensure technical alignment with other Workspace iOS apps.\u003C/li\u003E\n\u003Cli\u003EEnsure the app is working reliably and with low latency.\u003C/li\u003E\n\u003Cli\u003EGuide and elevate mid-level and junior iOS engineers on the team.\u003C/li\u003E\n\u003Cli\u003EEnable the team to leverage DevAI productively.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with front-end and user interface development.\u003C/li\u003E\n\u003Cli\u003E3 years of experience testing, maintaining, or launching software product.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with software design and architecture.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or a related technical field.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E1 year of experience in a technical leadership role.\u003C/li\u003E\n\u003Cli\u003E Experience developing accessible technologies.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-14T14:39:21.6660000\u002B00:00",
+        "2026-07-14T14:39:21.7120000\u002B00:00"
+      ]
+    },
+    {
       "id": "139930030263149254",
       "title": "Forward Deployed Engineer III, Generative AI, Google Cloud",
       "company": "Google",
