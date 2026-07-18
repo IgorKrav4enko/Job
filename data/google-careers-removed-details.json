@@ -1,6 +1,42 @@
 {
   "jobs": [
     {
+      "id": "119636419311215302",
+      "title": "Google Cloud Consulting Forward Deployed Engineer, Generative AI, Google Cloud",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/119636419311215302-google-cloud-consulting-forward-deployed-engineer-generative-ai-google-cloud?location=Ireland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "Ireland",
+      "firstSeenAt": "2026-06-16T21:18:39.7344353\u002B00:00",
+      "lastSeenAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "removedAt": "2026-07-18T08:07:38.9501078\u002B00:00",
+      "removedInRunId": "2026-07-18T08-07-38Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckQDzuASItERTXm3kex-fq9DbPs0IulS40iBx0_rTN0KPEjoA1Ny_iyE4_p8y2nEFwS5YZsbshGO6tQznLdS_rlZBLYz8pm_ytWvMEOSp4cehIdO4vxDoPDpTwDQu_V2\u0026loc=IE\u0026title=Google\u002BCloud\u002BConsulting\u002BForward\u002BDeployed\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003E\n\u003Cp\u003ELeading with the future, the AI GTM team are trusted AI advisors, scaling across Google to deliver transformative customer experiences that shape the next generation of their business. Partnering to provide deep AI expertise, thought leadership, and industry best practices, we revolutionize customer outcomes.\u003Cbr\u003E\u003Cbr\u003EAs a GenAI Forward Deployed Engineer (FDE) at Google Cloud, you will be an embedded builder who bridges the gap between frontier AI products and production-grade reality within customers. Unlike traditional advisory roles, you will function as an \u0022innovator-builder,\u0022 moving beyond high-level architecture to code, debug, and jointly ship bespoke agentic solutions directly within the customer\u2019s environment. This role is designed for high-agency engineers with a founder\u2019s mindset. You will address blockers to production including solving the integration complexities, data readiness issues, and state-management challenges that prevent AI from reaching enterprise-grade maturity. \u003C/p\u003E\u003Cdiv\u003EBy embedding with strategic accounts, you will serve a dual purpose: providing \u0022white glove\u0022 deployment of complex AI systems and acting as a critical feedback loop, transforming real-world field insights into Google Cloud\u2019s future product roadmap.\u003C/div\u003EIt\u0027s an exciting time to join Google Cloud\u2019s Go-To-Market team, leading the AI revolution for businesses worldwide. You\u2019ll excel by leveraging Google\u0027s brand credibility\u2014a legacy built on inventing foundational technologies and proven at scale. We\u2019ll provide you with the world\u0027s most advanced AI portfolio, including frontier Gemini models, and the complete Vertex AI platform, helping you to solve business problems. We\u2019re a collaborative culture providing direct access to DeepMind\u0027s engineering and research minds, empowering you to solve customer challenges. Join us to be the catalyst for our mission, drive customer success, and define the new cloud era\u2014the market is yours. Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EIreland: \u20AC100000 - \u20AC103000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EServe as the lead developer for complex AI applications, transitioning from rapid prototypes to production-grade agentic workflows (e.g., multi-agent systems, model context protocol (MCP) servers) that drive measurable Return on Investment (ROI).\u003C/li\u003E\n\u003Cli\u003EArchitect and code the \u0022connective tissue\u0022 between Google\u2019s AI products and customer\u0027s live infrastructure, including APIs, legacy data silos, and security perimeters.\u003C/li\u003E\n\u003Cli\u003EBuild high-performance evaluation (Eval) pipelines and observability frameworks to ensure agentic systems meet rigorous requirements for accuracy, safety, and latency.\u003C/li\u003E\n\u003Cli\u003EIdentify repeatable field patterns and technical \u0022friction points\u0022 in Google\u2019s AI stack, converting them into reusable modules or formal product feature requests for the Engineering teams.\u003C/li\u003E\n\u003Cli\u003ECo-build with customer engineering teams to instill Google-grade development best practices, ensuring long-term project success and high end-user adoption.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Engineering, Computer Science, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages (e.g., Python).\u003C/li\u003E\n\u003Cli\u003EExperience taking production-grade AI-driven solutions from conception to launch and architecting AI systems on cloud platforms (e.g., Google Cloud Platform (GCP)).\u003C/li\u003E\n\u003Cli\u003EExperience building pipelines for structured and unstructured data using both vector databases and retrieval augmented generation like architectures to power enterprise AI solutions.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s or PhD in AI, Computer Science, or a related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience implementing multi-agent systems using frameworks (e.g., LangGraph, CrewAI, Agent Development Kit (ADK)) and complex patterns (e.g., ReAct, self-reflection, hierarchical delegation).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience leading technical discovery sessions.\u003C/li\u003E\n\u003Cli\u003EKnowledge of large language model native metrics (e.g., tokens/sec, cost-per-request) and techniques for optimizing state management and granular tracing.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "1 Grand Canal Plaza, Grand Canal Street Upper, Dublin, D04 HR25, Ireland"
+          ],
+          "city": "Dublin",
+          "postalCode": "D04 HR25",
+          "regionCode": "D",
+          "countryCode": "IE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-16T12:38:26.0820000\u002B00:00",
+        "2026-06-16T12:38:26.3360000\u002B00:00"
+      ]
+    },
+    {
       "id": "129046850496799430",
       "title": "Computer Vision Software Engineer, Calibration and Spatial Sensing",
       "company": "Google",
@@ -3982,6 +4018,49 @@
         "2026-05-21T06:32:27.2840000\u002B00:00",
         "2026-06-16T20:37:28.9560000\u002B00:00",
         "2026-06-16T20:37:29.0920000\u002B00:00"
+      ]
+    },
+    {
+      "id": "115386806869861062",
+      "title": "Staff Software Engineer, GKE Networking",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/115386806869861062-staff-software-engineer-gke-networking?location=Poland\u0026q=Software\u002BEngineer\u0026page=3",
+      "locations": [
+        "Warsaw, Poland",
+        "Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-06-16T21:18:39.7344353\u002B00:00",
+      "lastSeenAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "removedAt": "2026-07-06T11:01:33.8042408\u002B00:00",
+      "removedInRunId": "2026-07-06T11-01-33Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckZN3G68tmWqJCwjovGNpQRPmRDz4Vz05nha8PLezuImCEjsA1Ny_i8Su_ZAbizyQOpZCtAb4KZ9d_jsWVP1kEmqlzOuvbTO3xGA-xOhZlw-FWgh-fnpvtR0V7_YHNg%3D%3D_V2\u0026loc=PL\u0026title=Staff\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003Cbr\u003E\u003Cbr\u003EWith your technical expertise you will manage project priorities, deadlines, and deliverables. You will design, develop, test, deploy, maintain, and enhance software solutions.\u003C/p\u003E\n\u003Cp\u003EGoogle Kubernetes Engine (GKE) provides managed Kubernetes clusters on Google Cloud Platform. Its core component, Kubernetes, is an open-source platform for automating deployment, scaling, and operations of application containers across clusters of hosts, providing container-centric infrastructure. Some of the key focus areas of this initiative are to support IPAM, gateway, unified network policies and enable multi-NIC solutions for kubernetes workloads.\u003C/p\u003E\u003Cdiv\u003E\u003Cdiv\u003EThe Kubernetes Networking team is responsible for building networking solutions and networking abstractions for these environments and drive solutions integration and validation efforts collaborating with partners and customers.\u003C/div\u003E\u003C/div\u003E\u003Cp\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142480000 - z\u0142492000 (PLN) \u002B 20% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EOwn and lead the architectural planning, evolution and deliverables for GKE networking features and capabilities.\u003C/li\u003E\n\u003Cli\u003EPlan the strategy, execution, and deliverables for GKE development efforts in the area of networking virtualization solutions.\u003C/li\u003E\n\u003Cli\u003ELead the design and development of network connectivity, security and services solutions, involving data plane and control plane elements.\u003C/li\u003E\n\u003Cli\u003ELead the design and development of network virtualization solutions for container workloads running on Kubernetes platforms. Lead the design and implementation of new networking features for GKE platforms.\u003C/li\u003E\n\u003Cli\u003EHelp external GKE customers who hit issues in production clusters.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\n\u003C/li\u003E\n\u003Cli\u003E8 years of experience in software development, and with data structures/algorithms in C\u002B\u002B, Go or Java.\u003C/li\u003E\n\u003Cli\u003E5 years of experience testing, and launching software products, and 3 years of experience with software design and architecture. \n\u003C/li\u003E\n\u003Cli\u003E5 years of experience building and developing large-scale infrastructure, distributed systems or networks, or experience with compute technologies, storage, or hardware architecture.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience in Network Infrastructure.\u003C/li\u003E\n\u003Cli\u003EExperience with Kubernetes.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in Engineering, Computer Science, or a related technical field.\n\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a technical leadership role leading project teams and setting technical direction.\u003C/li\u003E\n\u003Cli\u003E3 years of experience working in a complex, matrixed organization involving cross-functional, or cross-business projects.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        },
+        {
+          "displayName": "Poland",
+          "addresses": [
+            "Poland"
+          ],
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-16T14:38:20.2700000\u002B00:00",
+        "2026-06-16T14:38:21.0660000\u002B00:00"
       ]
     },
     {
