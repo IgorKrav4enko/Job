@@ -1,0 +1,171 @@
+{
+  "runId": "2026-07-18T19-30-13Z",
+  "generatedAt": "2026-07-18T19:30:13.1336722\u002B00:00",
+  "source": "meta-careers",
+  "sources": [
+    {
+      "requestedLocation": "Poland",
+      "locationSlug": "poland",
+      "offices": [
+        "Remote, Poland",
+        "Warsaw, Poland"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=Remote%2C%20Poland\u0026offices[1]=Warsaw%2C%20Poland",
+      "jobs": []
+    },
+    {
+      "requestedLocation": "Switzerland",
+      "locationSlug": "switzerland",
+      "offices": [
+        "Geneva, Switzerland",
+        "Zurich, Switzerland"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=Geneva%2C%20Switzerland\u0026offices[1]=Zurich%2C%20Switzerland",
+      "jobs": [
+        {
+          "jobId": "1029177790044680",
+          "titleRaw": "Research Scientist Intern, 3D Scene Understanding (PhD)",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Zurich, Switzerland"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1029177790044680/",
+          "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=Geneva%2C%20Switzerland\u0026offices[1]=Zurich%2C%20Switzerland",
+          "requestedLocation": "Switzerland",
+          "aboutTheJobRaw": "Reality Labs Research is pioneering the next generation of AR/VR devices and intelligent systems. Our mission is to create the foundational technologies that enable contextual AI for AR glasses, VR headsets, and embodied agents. We are advancing the state of the art in 3D perception, multimodal scene understanding, and efficient on-device intelligence.\nWe are seeking a highly self-motivated and hands-on PhD student to join our team as a Research Scientist Intern for Summer 2026, focusing on 3D scene understanding.\n\nOur internships are twelve (12) to twenty-four (24) weeks long and we have various start dates throughout the year. ",
+          "responsibilitiesRaw": "Conduct research in 3D scene understanding, including but not limited to: Efficient and scalable 3D representation learning or reconstruction, Hierarchical / semantic scene graphs for large-scale environments,  Open-vocabulary multimodal grounding (text, image, video, audio etc), Dynamic object tracking and temporal scene reasoning, and Edge-aware 3D scene understanding.\u00A0Design and execute experiments on public datasets and/or internal data from AR/VR hardware.\u00A0Collaborate with researchers, engineers, and interns across Reality Labs to advance the research frontier.\u00A0Document findings and aim for submission to CVPR or equivalent top-tier conferences.",
+          "minimumQualificationsRaw": "Currently pursuing a PhD in Computer Vision, Machine Learning, Robotics, or a related field\u00A0Research background in at least one of: 3D scene understanding, semantic mapping, SLAM, or neural representations, Multimodal learning (vision \u002B language, vision \u002B audio), Large-scale 3D reconstruction or scene graph generation\u00A0Proven publication record in top-tier venues (CVPR, ICCV, ECCV, NeurIPS, ICLR, etc.)\u00A0Programming skills in Python and PyTorch (or equivalent deep learning frameworks)\u00A0Hands-on experience with 3D datasets, rendering, or AR/VR sensors\u00A0Must obtain work authorization in country of employment at the time of hire, and maintain ongoing work authorization during employment Experience with hybrid 3D representations (e.g., Gaussian Splatting, NeRFs, octree/voxel methods)\u00A0Familiarity with open-vocabulary or foundation models (CLIP, Segment-Anything, LLMs for vision-language reasoning)\u00A0Knowledge of real-time or efficient deployment techniques (quantization, distillation, adaptive inference)\u00A0Ability to integrate research code into practical prototypes on edge devices (Jetson, AR/VR headsets)\u00A0Intent to return to degree-program after the completion of the internship/co-op\u00A0Proven track record of achieving significant results as demonstrated by grants, fellowships, patents, as well as first-authored publications at leading workshops or conferences\u00A0Experience working and communicating cross functionally in a team environment",
+          "postedAtCandidate": "2026-07-08T09:44:43-07:00",
+          "capturedAt": "2026-07-18T19:30:13.1336722\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Germany",
+      "locationSlug": "germany",
+      "offices": [
+        "Berlin, Germany",
+        "Munich, Germany",
+        "Remote, Germany",
+        "Hamburg, Germany",
+        "Regensburg, Germany"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=Berlin%2C%20Germany\u0026offices[1]=Munich%2C%20Germany\u0026offices[2]=Remote%2C%20Germany\u0026offices[3]=Hamburg%2C%20Germany\u0026offices[4]=Regensburg%2C%20Germany",
+      "jobs": []
+    },
+    {
+      "requestedLocation": "United Kingdom",
+      "locationSlug": "united-kingdom",
+      "offices": [
+        "London, UK",
+        "Cambridge, UK",
+        "Leamington Spa, UK",
+        "Remote, UK"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK",
+      "jobs": [
+        {
+          "jobId": "1564791422017150",
+          "titleRaw": "Business Engineer",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1564791422017150/",
+          "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Business Engineering is looking for impact-focused, entrepreneurial engineers ready to bring their ideas and make a difference. We are technology experts that apply our software engineering skills to bring a unique blend of business and technology expertise to ensure our clients succeed. Business Engineers work directly with our clients \u2014 starting from their challenges and using deep platform expertise to design solutions and help clients integrate with Meta. Our team is at the intersection of business and innovation where you will execute on solving real-world business challenges through Meta\u0027s platforms and community in many of today\u0027s most exciting industries and products. These include Video, Commerce, Monetization, Metaverse, Gaming, Creators, AI, Messaging and more.\n\nYou will write scalable production-grade code across Meta\u0027s platforms in collaboration with other product engineering teams. You will get to learn and build on different tech stacks and languages. You will use your entrepreneurial passion and the freedom that the role provides to create your own opportunities and choose how you make an impact.\n\nThe work we do exceeds the boundaries of what is possible quickly, and at scale. Our work transcends technology and ensures the solutions we build translates into prosperity for all. Our code is designed to engineer and accelerate business growth. Growth is great. Rapid growth is better. Our approach aims to maximize positive impact for our clients as well as the billions of people that use their products and services.\n",
+          "responsibilitiesRaw": "Serve as a trusted technical advisor to Meta\u0027s clients \u2014 working directly with them to understand their challenges, helping them integrate with Meta\u0027s platforms, and feeding field insights back to Product teams to shape platform capabilities\u00A0From market insights, build new products and improve existing ones in collaboration with Meta product engineering teams and cross functional partners to meet business needs\u00A0Understand and apply deep knowledge of products, technologies, and business to build solutions to solve for problems at scale\u00A0Design and build end-to-end systems and launch-plan strategies\u00A0Guide workflow changes, and gain consensus from stakeholders while driving toward solutions\u00A0Respond and maintain effective communication with clients and internal stakeholders\u00A0Work with clients to develop a long-term strategic plan, grounded on business objectives, and manage clients during integrations with Meta\u0027s platform products and ensure value creation\u00A0Build and manage strong working relationships with technical counterparts. Mentor and share knowledge with peers, creating positive atmosphere amongst team\u00A0Conduct code reviews and provide constructive feedback while quickly actioning feedback from code reviews conducted of your code\u00A0Influence decision-making through presentation of data-centric business topics\u00A0Serve as a subject matter expert within Business Engineering and provide consultation on domain-level project\u00A0Participate in interviewing and onboarding of new team members\u00A0Willingness to travel 25% of the time",
+          "minimumQualificationsRaw": "3\u002B years as a software engineer building and shipping production quality code\u00A0Experience with open source languages such as PHP, Python, Java, or JavaScript Frameworks\u00A0Experience with writing and shipping reliable, scalable, and efficient code, with an emphasis on long-term maintainability, in partnership with all appropriate reviewers, in manageable pieces with relevant documentation and test plans\u00A0Experience with software design and architecture\u00A0Experience communicating technical concepts to non-technical audiences\u00A0Currently has, or is in the process of obtaining a Bachelor\u0027s degree in Computer Science, Computer Engineering, relevant technical field, or equivalent practical experience. Degree must be completed prior to joining Meta Demonstrated ongoing AI skill development (e.g., prompt/context engineering, agent orchestration) and staying current with emerging AI technologies\u00A0Experience contributing to open source projects, shared code repositories, and/or personal projects\u00A0Experience working in highly collaborative environments\u00A0Client facing and/or experience communicating to an audience\u00A0Experience contributing to developer and platform documentation\u00A0Experience adhering to and implementing responsible, ethical AI practices (e.g., risk assessment, bias mitigation, quality and accuracy reviews)\u00A0Demonstrated ability to integrate AI tools to optimize/redesign workflows and drive measurable impact (e.g., efficiency gains, quality improvements)",
+          "postedAtCandidate": "2026-07-08T15:58:09-07:00",
+          "capturedAt": "2026-07-18T19:30:13.1336722\u002B00:00"
+        },
+        {
+          "jobId": "1543431717365635",
+          "titleRaw": "Senior Software Specialist - AI/ML - Monetisation",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1543431717365635/",
+          "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Core Delivery Products is the Ads pillar that builds the products that power the core capabilities of our ads system: from targeting, to bidding, optimization, and user quality. The team has a strong and long-standing track record of making critical contributions to company top line goals with most of Meta revenue flowing through these core systems, and our year on year improvements continuing to drive significant top-line impact. \n\nIn EMEA, we have 3 complete sub-pillars operating with high autonomy: Targeting, Core Ads Quality, \u0026 Direct Response Optimization. All the sub-pillars are responsible for growing revenue, machine learning product solutions end to end, alongside the reliability and stability of these core products. All have their cross functional teams co-located with them.",
+          "responsibilitiesRaw": "Apply relevant AI and machine learning techniques to build Ads auction/user behaviour treatments\u00A0Develop novel, accurate AI algorithms and advanced systems for large scale applications\u00A0Work towards long-term ambitious production goals, while identifying intermediate milestones\u00A0Directly contribute to experiments, including designing experimental details, developing reusable code, running evaluations, and organizing results\u00A0Work with large data, and contribute to development of large scale foundation models\u00A0Design methods, tools, and infrastructure to advance AI capabilities through novel methods, tools, and infrastructure",
+          "minimumQualificationsRaw": "Experience developing machine learning algorithms or machine learning infrastructure in Python, PyTorch, and/or C/C\u002B\u002B\u00A0Bachelor\u0027s degree in Artificial Intelligence (AI), computer science, related technical fields, or equivalent practical experience\u00A0Experience in bringing research results into production\u00A0Experience in training, fine-tuning, and/or experimenting with foundation models beyond black-box use\u00A0Track record delivering successful products with large scale impact PhD in Artificial Intelligence (AI), computer science, related technical fields, or equivalent practical experience\u00A0Experience in Reinforcement Learning, GenAI, Large Language Models, etc\u00A0Experience in User Behavior modeling, Long-term Value optimization, or Causal Learning\u00A0Experience in Ads, especially in auction theory and implementation (bidding, budgeting, targeting)",
+          "postedAtCandidate": "2026-06-29T06:49:06-07:00",
+          "capturedAt": "2026-07-18T19:30:13.1336722\u002B00:00"
+        },
+        {
+          "jobId": "1550400850050836",
+          "titleRaw": "Software Engineer (Leadership) - Machine Learning",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1550400850050836/",
+          "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Meta is seeking Ads Engineers to join our engineering team. This role requires industry experience working on a range of AI and optimization problems in ads or related products. The position will involve taking these skills and applying them to some of the most exciting and massive social data and prediction problems that exist on the web.",
+          "responsibilitiesRaw": "Drive the team\u0027s goals \u0026 technical direction to pursue opportunities that make your larger organization more efficient\u00A0Effectively communicate complex features \u0026 systems in detail\u00A0Understand industry \u0026 company-wide trends to help assess \u0026 develop new technologies\u00A0Partner \u0026 collaborate with organization leaders to help improve the technical quality and delivery velocity of the team and organization\u00A0Identify new opportunities for the larger organization \u0026 influence the appropriate people for staffing/prioritizing these new ideas\u00A0Suggest, collect and synthesize requirements and create an effective feature roadmap\u00A0Develop highly scalable classifiers and tools leveraging machine learning, data regression, and rules-based models\u00A0Adapt standard machine learning methods to best exploit modern parallel environments (e.g. distributed clusters, multicore SMP, and GPU)",
+          "minimumQualificationsRaw": "Bachelor\u0027s degree in Computer Science, Computer Engineering, relevant technical field, or equivalent practical experience\u00A0Experience leading projects with industry-wide impact\u00A0Experience communicating and working across functions to drive solutions\u00A0Experience in mentoring/influencing engineers across organizations\u00A0Proven track record of planning multi-year roadmap in which short-term projects ladder to the long-term vision\u00A0Experience in driving large cross-functional/industry-wide engineering efforts\u00A0Significant experience in programming languages (Python, C\u002B\u002B, or Java) with technical background\u00A0Significant experience in one or more of the following areas: machine learning, recommendation systems, pattern recognition, data mining or deep learning based methods Experience in shipping products to millions of customers or have started a new line of product",
+          "postedAtCandidate": "2026-06-29T09:29:03-07:00",
+          "capturedAt": "2026-07-18T19:30:13.1336722\u002B00:00"
+        },
+        {
+          "jobId": "1866971030638899",
+          "titleRaw": "Staff Software Specialist - AI - Monetisation",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "London, UK"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/1866971030638899/",
+          "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=London%2C%20UK\u0026offices[1]=Cambridge%2C%20UK\u0026offices[2]=Leamington%20Spa%2C%20UK\u0026offices[3]=Remote%2C%20UK",
+          "requestedLocation": "United Kingdom",
+          "aboutTheJobRaw": "Ads is the largest revenue generator at Meta and Ads Quality represents around 20% of total revenues which are used to generate long term ads and organic engagement.\n\nCore Ads Quality is a unique team jointly optimizing for both quality and revenue, aiming at making this investment more revenue / quality trade-off efficient and generate long term revenue growth through user learning. Among others, Core Ads Quality focuses on:\n\n* Finding the right trade-off between short and long term revenues\n* Standardizing and optimizing quality treatment of ads across surfaces and page types\n* Understanding user behavior with respect to ads quality\n* Building a solid infrastructure around signals, labels and quality metrics\n\nWe work at the intersection of Ads, Machine Learning and User Behavior understanding. The nature of our work is very analytical, involving collaboration with our Data Scientist and a heavy focus on not only understand \u201Cwhat\u201D but also \u201Cwhy\u201D. Despite having been created a couple of years ago, the Ads Quality space at Meta is still nascent and full of unexploited opportunities. The org is further structured into the following teams/sub-pillars:\n\n* Integrity \u0026 Efficiency: Proactively cover long-term revenue risks from advertiser friction while supporting cross-functional teams with delivery expertise.\n* Ads Conversion Familiarity: Accelerate Non-Purchaser (NP) -\u003E Purchaser (P) transition by increasing familiarity of ads for users who don\u0027t interact with ads frequently\n* Post-Click Quality: Stop Purchaser (P) to Non-Purchaser (NP) user conversions from bad purchase experiences.\n* Modeling: Enhance quality and drive long-term revenue growth through modeling.\n* Quality Science: Build the foundational end to end understanding for funnel quality signals to ensure the efficiency, health and coverage.\n\nThe team has consistently hit their goals and delivered XXXM$ in incremental long term revenue for Meta while ensuring high ads quality.",
+          "responsibilitiesRaw": "Work on meaningful technical (ML and infra) problems at Meta\u2019s scale affecting multiple surfaces (Facebook, Instagram, Threads,...)\u00A0Fundamentally change how decisions are made across the business when investing on ads quality\u00A0Develop novel, accurate AI algorithms and advanced systems for large scale applications\u00A0Define long-term plans and lead teams on executing them\u00A0Improve the experience of users interacting with ads and help the company mission to establish valuable connections between users and businesses\u00A0Lead projects with clear top-line metric impact\u00A0Ensure Ads Quality is at the forefront of AI technologies",
+          "minimumQualificationsRaw": "Bachelor\u0027s degree in Artificial Intelligence (AI), computer science, related technical fields, or equivalent practical experience\u00A0Experience in bringing research results into production\u00A0Experience in training, fine-tuning, and/or experimenting with foundation models beyond black-box use\u00A0Experience developing machine learning algorithms or machine learning infrastructure in Python, PyTorch, and/or C/C\u002B\u002B\u00A0Track record delivering successful products with large scale impact Experience in User Behaviour modeling, Long-term Value optimization or Causal Learning\u00A0Experience in Reinforcement Learning, GenAI, Large Language Models, etc\u00A0PhD in Artificial Intelligence (AI), computer science, related technical fields, or equivalent practical experience\u00A0Experience in Ads, especially in auction theory and implementation (bidding, budgeting, targeting)",
+          "postedAtCandidate": "2026-06-10T07:51:20-07:00",
+          "capturedAt": "2026-07-18T19:30:13.1336722\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Ireland",
+      "locationSlug": "ireland",
+      "offices": [
+        "Cork, Ireland",
+        "Clonee, Ireland",
+        "Dublin, Ireland",
+        "Remote, Ireland"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=Cork%2C%20Ireland\u0026offices[1]=Clonee%2C%20Ireland\u0026offices[2]=Dublin%2C%20Ireland\u0026offices[3]=Remote%2C%20Ireland",
+      "jobs": [
+        {
+          "jobId": "4625860837671772",
+          "titleRaw": "Business Support Engineer",
+          "companyRaw": "Meta",
+          "locationsRaw": [
+            "Dublin, Ireland"
+          ],
+          "jobUrl": "https://www.metacareers.com/profile/job_details/4625860837671772",
+          "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=Cork%2C%20Ireland\u0026offices[1]=Clonee%2C%20Ireland\u0026offices[2]=Dublin%2C%20Ireland\u0026offices[3]=Remote%2C%20Ireland",
+          "requestedLocation": "Ireland",
+          "capturedAt": "2026-07-18T19:30:13.1336722\u002B00:00"
+        }
+      ]
+    },
+    {
+      "requestedLocation": "Canada",
+      "locationSlug": "canada",
+      "offices": [
+        "Ottawa, Canada",
+        "Remote, Canada",
+        "Montreal, Canada",
+        "Vancouver, Canada"
+      ],
+      "searchUrl": "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering\u0026offices[0]=Ottawa%2C%20Canada\u0026offices[1]=Remote%2C%20Canada\u0026offices[2]=Montreal%2C%20Canada\u0026offices[3]=Vancouver%2C%20Canada",
+      "jobs": []
+    }
+  ]
+}
