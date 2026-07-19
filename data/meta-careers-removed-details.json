@@ -1,6 +1,38 @@
 {
   "jobs": [
     {
+      "id": "4625860837671772",
+      "title": "Business Support Engineer",
+      "company": "Meta",
+      "url": "https://www.metacareers.com/profile/job_details/4625860837671772",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "Ireland",
+      "firstSeenAt": "2026-07-08T08:43:25.6527931\u002B00:00",
+      "lastSeenAt": "2026-07-18T19:30:13.1336722\u002B00:00",
+      "removedAt": "2026-07-19T08:32:20.6959053\u002B00:00",
+      "removedInRunId": "2026-07-19T08-32-20Z"
+    },
+    {
+      "id": "1029177790044680",
+      "title": "Research Scientist Intern, 3D Scene Understanding (PhD)",
+      "company": "Meta",
+      "url": "https://www.metacareers.com/profile/job_details/1029177790044680/",
+      "locations": [
+        "Zurich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-07-16T19:33:54.8862225\u002B00:00",
+      "lastSeenAt": "2026-07-18T19:30:13.1336722\u002B00:00",
+      "removedAt": "2026-07-19T08:32:20.6959053\u002B00:00",
+      "removedInRunId": "2026-07-19T08-32-20Z",
+      "aboutTheJobRaw": "Reality Labs Research is pioneering the next generation of AR/VR devices and intelligent systems. Our mission is to create the foundational technologies that enable contextual AI for AR glasses, VR headsets, and embodied agents. We are advancing the state of the art in 3D perception, multimodal scene understanding, and efficient on-device intelligence.\nWe are seeking a highly self-motivated and hands-on PhD student to join our team as a Research Scientist Intern for Summer 2026, focusing on 3D scene understanding.\n\nOur internships are twelve (12) to twenty-four (24) weeks long and we have various start dates throughout the year. ",
+      "responsibilitiesRaw": "Conduct research in 3D scene understanding, including but not limited to: Efficient and scalable 3D representation learning or reconstruction, Hierarchical / semantic scene graphs for large-scale environments,  Open-vocabulary multimodal grounding (text, image, video, audio etc), Dynamic object tracking and temporal scene reasoning, and Edge-aware 3D scene understanding.\u00A0Design and execute experiments on public datasets and/or internal data from AR/VR hardware.\u00A0Collaborate with researchers, engineers, and interns across Reality Labs to advance the research frontier.\u00A0Document findings and aim for submission to CVPR or equivalent top-tier conferences.",
+      "minimumQualificationsRaw": "Currently pursuing a PhD in Computer Vision, Machine Learning, Robotics, or a related field\u00A0Research background in at least one of: 3D scene understanding, semantic mapping, SLAM, or neural representations, Multimodal learning (vision \u002B language, vision \u002B audio), Large-scale 3D reconstruction or scene graph generation\u00A0Proven publication record in top-tier venues (CVPR, ICCV, ECCV, NeurIPS, ICLR, etc.)\u00A0Programming skills in Python and PyTorch (or equivalent deep learning frameworks)\u00A0Hands-on experience with 3D datasets, rendering, or AR/VR sensors\u00A0Must obtain work authorization in country of employment at the time of hire, and maintain ongoing work authorization during employment Experience with hybrid 3D representations (e.g., Gaussian Splatting, NeRFs, octree/voxel methods)\u00A0Familiarity with open-vocabulary or foundation models (CLIP, Segment-Anything, LLMs for vision-language reasoning)\u00A0Knowledge of real-time or efficient deployment techniques (quantization, distillation, adaptive inference)\u00A0Ability to integrate research code into practical prototypes on edge devices (Jetson, AR/VR headsets)\u00A0Intent to return to degree-program after the completion of the internship/co-op\u00A0Proven track record of achieving significant results as demonstrated by grants, fellowships, patents, as well as first-authored publications at leading workshops or conferences\u00A0Experience working and communicating cross functionally in a team environment",
+      "postedAtCandidate": "2026-07-08T09:44:43-07:00"
+    },
+    {
       "id": "1346169710279686",
       "title": "Software Engineer - Cameras \u0026 Sensors",
       "company": "Meta",
