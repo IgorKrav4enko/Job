@@ -1,6 +1,170 @@
 {
   "jobs": [
     {
+      "id": "112330263328891590",
+      "title": "Partner Forward Deployed Engineer III, Generative AI (French, German)",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/112330263328891590-partner-forward-deployed-engineer-iii-generative-ai-french-german?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-07-02T19:50:45.9529209\u002B00:00",
+      "lastSeenAt": "2026-07-22T08:43:23.4318255\u002B00:00",
+      "removedAt": "2026-07-22T19:42:46.9140519\u002B00:00",
+      "removedInRunId": "2026-07-22T19-42-46Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckTlRPCoyn3kPALWnFo5wfogUYT1umq8KEVjDvJ3WgeETEjsA1Ny_i4FLolPnsFU-X8b4tbWVzArT8KbVh7_K4ddZ3SoQ5HYtylsh1e_Cu5oZunTycMtE7-0WcnHqGg%3D%3D_V2\u0026loc=GB\u0026title=Partner\u002BForward\u002BDeployed\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "Google Cloud\u2019s mission is to make every business successful through AI by combining cutting-edge technology, infrastructure, and talent. AI/ML software engineers in Cloud bridge the gap between pioneering models and a massive product vehicle reaching billions. Our talent density and AI-powered tools drive rapid development, rooted in a culture of empowerment and a bias to action. In this role, you aren\u2019t just building technology; you\u2019re shaping the frontier of enterprise and driving the evolution of advanced models. \nIt\u0027s an exciting time to join Google Cloud\u2019s Go-To-Market team, leading the AI revolution for businesses worldwide. You\u2019ll excel by leveraging Google\u0027s brand credibility\u2014a legacy built on inventing foundational technologies and proven at scale. We\u2019ll provide you with the world\u0027s most advanced AI portfolio, including frontier Gemini models, and the complete Vertex AI platform, helping you to solve business problems. We\u2019re a collaborative culture providing direct access to DeepMind\u0027s engineering and research minds, empowering you to solve customer challenges. Join us to be the catalyst for our mission, drive customer success, and define the new cloud era\u2014the market is yours.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EServe as the lead developer for complex AI applications, transitioning from rapid prototypes to production-grade agentic workflows (e.g., multi-agent systems, model context protocol (MCP) servers) that drive measurable return on investment.\u003C/li\u003E\n\u003Cli\u003EArchitect and code the \u0022connective tissue\u0022 between Google\u2019s AI products and customer\u0027s live infrastructure, including APIs, legacy data silos, and security perimeters.\u003C/li\u003E\n\u003Cli\u003EBuild high-performance evaluation (Eval) pipelines and observability frameworks to ensure agentic systems meet rigorous requirements for accuracy, safety, and latency.\u003C/li\u003E\n\u003Cli\u003EIdentify repeatable field patterns and technical \u0022friction points\u0022 in Google\u2019s AI stack, converting them into reusable modules or formal product feature requests for the Engineering teams.\u003C/li\u003E\n\u003Cli\u003ECo-build with customer engineering teams to instill Google-grade development best practices, ensuring long-term project success and high end-user adoption.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with ML infrastructure (e.g., model deployment, model evaluation, optimization, data processing, debugging).\u003C/li\u003E\n\u003Cli\u003EExperience with GenAI techniques (e.g., LLMs, Multi-Modal, Large Vision Models) or with GenAI-related concepts (language modeling, computer vision).\u003C/li\u003E\n\u003Cli\u003EAbility to communicate in French and German fluently to support client relationship management in this region.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in AI, Computer Science, or a related technical field.\u003C/li\u003E\n\u003Cli\u003EExperience implementing multi-agent systems using frameworks (e.g., LangGraph, CrewAI, or Google\u2019s Agent Development Kit (ADK)) and complex patterns like ReAct, self-reflection, and hierarchical delegation.\u003C/li\u003E\n\u003Cli\u003EKnowledge of \u0022LLM-native\u0022 metrics (tokens/sec, cost-per-request) and techniques for optimizing state management and granular tracing.\u003C/li\u003E\n\u003Cli\u003EAbility to implement secure agentic workflows incorporating MCP, tool-calling, and OAuth-based authentication.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-02T17:09:39.5140000\u002B00:00",
+        "2026-07-02T17:09:39.5950000\u002B00:00"
+      ]
+    },
+    {
+      "id": "124092782888264390",
+      "title": "Software Developer III, Embedded Systems/Firmware, XR",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/124092782888264390-software-developer-iii-embedded-systemsfirmware-xr?location=Canada\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "San Jose, CA, USA",
+        "Miami, FL, USA"
+      ],
+      "requestedLocation": "Canada",
+      "firstSeenAt": "2026-07-02T19:50:45.9529209\u002B00:00",
+      "lastSeenAt": "2026-07-22T08:43:23.4318255\u002B00:00",
+      "removedAt": "2026-07-22T19:42:46.9140519\u002B00:00",
+      "removedInRunId": "2026-07-22T19-42-46Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckQF_6etKh-idOp6t7QulDU9_s_gkqLX5vVPjTXNrzWXuEjsA1Ny_i1FxwSZSuM73rxCdXh5HNboiI_Gum7G6QXqjQzFRlqIKnCPfqaf_ppos2wwVDk19u-A_03KBCw%3D%3D_V2\u0026loc=US\u0026title=Software\u002BDeveloper\u002BIII",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software developers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for software developers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software developer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our software developers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EWith your technical expertise you will manage project priorities, deadlines, and deliverables. You will design, develop, test, deploy, maintain, and enhance software solutions.\u003C/p\u003E\u003Cp\u003EThe Platforms and Devices team encompasses Google\u0027s various computing software platforms across environments (desktop, mobile, applications), as well as our first party devices and services that combine the best of Google AI, software, and hardware. Teams across this area research, design, and develop new technologies to make our user\u0027s interaction with computing faster and more seamless, building innovative experiences for our users around the world.\u003Cbr\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EUS: $147000 - $211000 (USD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003ECanada: $150000 - $154000 (CAD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\u003C/li\u003E\n\u003Cli\u003EReview code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\n\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\n\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality. \n\u003C/li\u003E\n\u003Cli\u003EWrite product or system development code.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\n\u003C/li\u003E\n\u003Cli\u003E2 years of experience in C\u002B\u002B.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with working with embedded operating systems. \u003C/li\u003E\n\u003Cli\u003EExperience in imaging-related domain such as image processing, computer vision, or computational photography.\u003C/li\u003E\n\u003Cli\u003EExperience in image processing pipelines design and implementation.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical field.\n\u003C/li\u003E\n\u003Cli\u003E2 years of experience with performance, large-scale systems data analysis, visualization tools, or debugging.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with data structures or algorithms in either an academic or industry setting.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies. \u003C/li\u003E\n\u003Cli\u003EProficiency in code and system health, diagnosis and resolution, and software test development.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "San Jose, CA, USA",
+          "addresses": [
+            "255 W Tasman Dr, San Jose, CA 95134, USA"
+          ],
+          "city": "San Jose",
+          "postalCode": "95134",
+          "regionCode": "CA",
+          "countryCode": "US"
+        },
+        {
+          "displayName": "Miami, FL, USA",
+          "addresses": [
+            "Miami, FL, USA"
+          ],
+          "city": "Miami",
+          "regionCode": "FL",
+          "countryCode": "US"
+        },
+        {
+          "displayName": "Waterloo, ON, Canada",
+          "addresses": [
+            "Waterloo, ON, Canada"
+          ],
+          "city": "Waterloo",
+          "regionCode": "ON",
+          "countryCode": "CA"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-22T18:36:19.9840000\u002B00:00",
+        "2026-06-25T20:39:09.4510000\u002B00:00",
+        "2026-06-25T20:39:09.7060000\u002B00:00"
+      ]
+    },
+    {
+      "id": "124969231094555334",
+      "title": "Software Engineer III, Cloud Security",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/124969231094555334-software-engineer-iii-cloud-security?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-06-22T21:13:23.5891345\u002B00:00",
+      "lastSeenAt": "2026-07-22T08:43:23.4318255\u002B00:00",
+      "removedAt": "2026-07-22T19:42:46.9140519\u002B00:00",
+      "removedInRunId": "2026-07-22T19-42-46Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckWbnK96ASFN2TMYAGGWt8PHR7mqXEPEMlFnhAZG6OkEvEjsA1Ny_i4otLrd5Zg2QzycVAVvV6DjFN2gv5m_yrcFv_jAjpcXoJVd8ndk6tKsoibES1dfOHOLk6JL81Q%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EIn this role, with your technical expertise you will manage project priorities, deadlines, and deliverables. You will design, develop, test, deploy, maintain, and enhance software solutions.\u003Cbr\u003E\u003C/p\u003E\u003Cp\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWrite product or system development code.\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\u003C/li\u003E\n\u003Cli\u003EReview code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003C/li\u003E\n\u003Cli\u003E2 years of experience building software for data privacy or security (e.g., identity and access management).\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical fields.\u003C/li\u003E\n\u003Cli\u003E2 years experience of working in a complex, matrixed organization involving cross-functional, or cross-business projects.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003C/li\u003E\n\u003Cli\u003EExperience building security tooling.\u003C/li\u003E\n\u003Cli\u003EExperience in static analysis or dynamic analysis.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-22T17:08:13.1750000\u002B00:00",
+        "2026-06-22T17:08:13.2640000\u002B00:00"
+      ]
+    },
+    {
+      "id": "96791840451109574",
+      "title": "Technical Leader, Infrastructure and Operations",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/96791840451109574-technical-leader-infrastructure-and-operations?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-06-22T21:13:23.5891345\u002B00:00",
+      "lastSeenAt": "2026-07-22T08:43:23.4318255\u002B00:00",
+      "removedAt": "2026-07-22T19:42:46.9140519\u002B00:00",
+      "removedInRunId": "2026-07-22T19-42-46Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2Fckb8_rTFbe2pt5u6EWwkCfcnA3pJuW-sy7nCKsp0c72r7EjsA1Ny_i8WZbLdV9S0UGnbIrQ3Cv3yoJuwQa0cZFs_qrIPcCePURVsrQhxXTktChUW9X2VHxRdtWCP_Vw%3D%3D_V2\u0026loc=GB\u0026title=Technical\u002BLeader",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EThe PDEIO (Platforms and Devices Engineering Infrastructure and Operations) Web on Android team is a critical pillar within the Android ecosystem. Our mission is to make the operating system easy to change, hard to break, and highly efficient to ship. We sit at the intersection of OS-level infrastructure and web technology, partnering directly with the Android Framework WebView team to ensure the web platform on Android is fast, stable, and developer-friendly.\u003C/p\u003E\u003Cp\u003EWe build high-fidelity benchmarking tools, automated triage systems, and release-blocking test suites. We collaborate horizontally across the Android platform and vertically with the WebView/Chromium developers. We value automation over manual toil, AI-driven tooling solutions and tight feedback loops that allow developers to build, test and ship code with confidence.\u003C/p\u003EThe Platforms and Ecosystems product area encompasses Google\u0027s various computing software platforms across environments (desktop, mobile, applications). The products provide enterprises, and ultimately end users, the ability to utilize and manage their services at scale. We build innovative and compelling software products\u2014from apps to TVs, from laptops to phones\u2014that have an impact on people\u2019s lives across the world.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003E\u003Cspan\u003EProvide technical leadership on projects.\u003C/span\u003E\u003C/li\u003E\n\u003Cli\u003E\u003Cspan\u003EInfluence and coach a distributed team of engineers.\u003C/span\u003E\u003C/li\u003E\n\u003Cli\u003E\u003Cspan\u003EFacilitate alignment and clarity across teams on goals, outcomes, and timelines.\u003C/span\u003E\u003C/li\u003E\n\u003Cli\u003E\u003Cspan\u003EManage project priorities, deadlines, and deliverables.\u003C/span\u003E\u003C/li\u003E\n\u003Cli\u003E\u003Cspan\u003EDesign, develop, test, deploy, maintain, and enhance large-scale software solutions.\u00A0\u003C/span\u003EWrite and review code, ensuring best practices in AI, testability, efficiency, and accuracy.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E8 years of experience in software development.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience testing, and launching software products.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience building developer tools that improve developer velocity, code quality and code health (e.g., compilers, automated releases, code design and testing, test automation frameworks).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience with software design and architecture.\u003C/li\u003E\n\u003Cli\u003E2 years of experience in a technical leadership or people management role.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in Engineering, Computer Science, or a related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E8 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a technical leadership role leading project teams and setting technical direction.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience working in a complex, matrixed organization involving cross-functional, or cross-business projects.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-22T13:09:02.6500000\u002B00:00",
+        "2026-06-22T13:09:03.1960000\u002B00:00"
+      ]
+    },
+    {
       "id": "89198715155161798",
       "title": "Software Engineer II, Infrastructure, Google Ads",
       "company": "Google",
@@ -555,52 +719,6 @@
         "2026-06-19T12:08:29.0220000\u002B00:00",
         "2026-07-16T08:38:23.1910000\u002B00:00",
         "2026-07-16T08:38:23.3310000\u002B00:00"
-      ]
-    },
-    {
-      "id": "130236711056614086",
-      "title": "Senior Hardware Developer, Android XR",
-      "company": "Google",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/130236711056614086-senior-hardware-developer-android-xr?location=Canada\u0026q=Software\u002BEngineer\u0026page=1",
-      "locations": [
-        "Waterloo, ON, Canada",
-        "San Jose, CA, USA"
-      ],
-      "requestedLocation": "Canada",
-      "firstSeenAt": "2026-07-15T19:35:44.3001193\u002B00:00",
-      "lastSeenAt": "2026-07-20T09:33:04.3894332\u002B00:00",
-      "removedAt": "2026-07-20T19:55:05.4764812\u002B00:00",
-      "removedInRunId": "2026-07-20T19-55-05Z",
-      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckQlftA1Pb-HxrGSTzEDdF43LF84csxpzYyRmr02IXdbKEjsA1Ny_izQkVjaXSNddbJmkN-oTagMiNMUNkGrqNcWGduSnfqoL6cCV9p-WYUsooYCM5ND0kuHcSwB1Cw%3D%3D_V2\u0026loc=CA\u0026title=Senior\u002BHardware\u002BDeveloper",
-      "aboutTheJobRaw": "\u003Cp\u003EBe part of a team that pushes boundaries, developing custom silicon solutions that power the future of Google\u0027s direct-to-consumer products. You\u0027ll contribute to the innovation behind products loved by millions worldwide. Your expertise will shape the next generation of hardware experiences, delivering unparalleled performance, efficiency, and integration.\u003C/p\u003E\n\u003Cp\u003EAs a Senior Specialized Hardware Developer on the Google Android XR Hardware team, you will be designing, implementing, and delivering Next Generation hardware systems and AR glasses. You will drive hardware solutions from concepts through prototyping and production, ensuring robust designs that meet performance, efficiency, reliability and ability to scale. Your work will directly impact how users perceive the power of Android XR and apps/services including Gemini.\u003C/p\u003E\u003Cp\u003EFor decades, the computing revolution has reshaped our world driven by  \u003Cbr\u003Ebreakthroughs in compute, connectivity, mobile, and now, AI. Google\u0027s XR  \u003Cbr\u003Eteam is at the forefront of the next major leap \u2013 the convergence of AI and  \u003Cbr\u003EXR. This is more than just new devices \u2013 it\u0027s about reimagining how we  \u003Cbr\u003Einteract with the world around us. We\u0027re building a future where  \u003Cbr\u003Elightweight XR devices like smart glasses and headsets pair with helpful AI  \u003Cbr\u003Eto augment human intelligence, offering personalized, conversational, and  \u003Cbr\u003Econtextually aware experiences.\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EUS: $159000 - $231000 (USD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003ECanada: $166000 - $171000 (CAD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
-      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EGather system requirements from product management and cross functional teams, define architecture, and execute hardware design for next generation AR glasses.\u00A0\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExecute hardware system development from initial concepts through schematics/PCB layout, bring up, debug and support high-volume production.\u00A0Travel as needed to support bring-up at factories in Taiwan, China and potential others.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EApply best practices to optimize or constrain hardware components to meet performance, power, and cost-effectiveness requirements. Predict consequences of hardware design decisions in cross-functional trade-off discussions, supported by simulation or measurement data, as needed.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003ECollaborate cross-functionally with Hardware, Firmware, Software, Power, Mechanical, Thermal, Validation, Signal Integrity, Manufacturing, and external vendors to ensure system integration meeting quality and schedule.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EDrive efforts for the documentation of the hardware design, its implementation, or test/validation results throughout the product life-cycle.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
-      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Electrical Engineering, Computer Engineering, Computer Science, Physics, or a specialized field (e.g., Optics, Sensors, Audio/DSP, etc.), or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E4 years of experience working in a Electrical Schematics technical environment.\u003C/li\u003E\n\u003Cli\u003EExperience in Power Management and Hardware Design Strategy.\u003C/li\u003E\n\u003C/ul\u003E",
-      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Electrical Engineering, Computer Engineering, Physics, or a related field (e.g., Optics, Sensors, Audio/DSP).\u003Cbr\u003E\u003C/li\u003E\u003Cli\u003EExperience with SOC/MCU selection, PMIC, integrating Camera, Display, Sensor and Eye Tracking systems.\u003Cbr\u003E\u003C/li\u003E\u003Cli\u003EExperience with board design, schematics capture tools, signal integrity and layout review.\u003Cbr\u003E\u003C/li\u003E\u003Cli\u003EExperience in prototype bring-up in house, debugging, functional verification and manufacturing, mitigating EMI and ESD problems and design for manufacturability and scaling.\u003C/li\u003E\u003Cli\u003EProficiency in communication protocols (especially USB-C, SPI, I2C, UART, MIPI, DSI, CSI). \u003C/li\u003E\u003Cli\u003EAbility to design SoC or MCU based designs for constrained form factors like AR glasses.\u003C/li\u003E\n\u003C/ul\u003E",
-      "experienceLevelRaw": "Mid",
-      "locationsRawDetailed": [
-        {
-          "displayName": "Waterloo, ON, Canada",
-          "addresses": [
-            "Waterloo, ON, Canada"
-          ],
-          "city": "Waterloo",
-          "regionCode": "ON",
-          "countryCode": "CA"
-        },
-        {
-          "displayName": "San Jose, CA, USA",
-          "addresses": [
-            "San Jose, CA, USA"
-          ],
-          "city": "San Jose",
-          "regionCode": "CA",
-          "countryCode": "US"
-        }
-      ],
-      "rawTimestampPairs": [
-        "2026-07-15T15:41:14.7330000\u002B00:00",
-        "2026-07-20T09:09:32.6940000\u002B00:00",
-        "2026-07-20T09:09:32.7270000\u002B00:00"
       ]
     },
     {

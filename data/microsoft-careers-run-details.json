@@ -135841,6 +135841,1456 @@
           ]
         }
       ]
+    },
+    {
+      "runId": "2026-07-22T19-43-26Z",
+      "added": [
+        {
+          "id": "1970393556941272",
+          "title": "Software Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556941272",
+          "locations": [
+            "Ireland, Dublin, Dublin"
+          ],
+          "requestedLocation": "Ireland"
+        }
+      ],
+      "removed": [
+        {
+          "id": "1970393556872793",
+          "title": "Critical Environment Field Service Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556872793",
+          "locations": [
+            "United Kingdom, Newport, Newport"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556883047",
+          "title": "Data Center Critical Environment Technician Manager",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556883047",
+          "locations": [
+            "United Kingdom, Newport, Newport"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556917444",
+          "title": "Data Center Inventory \u0026 Asset Technician (DIAT)",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556917444",
+          "locations": [
+            "United Kingdom, Berkshire, Slough"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556924569",
+          "title": "Data Center Inventory \u0026 Asset Technician Manager",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556924569",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556927479",
+          "title": "Data Center Logistics Technician",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556927479",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556927554",
+          "title": "Member of Technical Staff - Applied AI Lead, Health",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556927554",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556927509",
+          "title": "Principal Technical Program Manager - FDE - Security Check (SC) Clearance",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556927509",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556866482",
+          "title": "Senior Researcher - AI Computer Architecture",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556866482",
+          "locations": [
+            "United Kingdom, Cambridgeshire, Cambridge"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556856448",
+          "title": "Senior Software Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556856448",
+          "locations": [
+            "Canada, British Columbia, Vancouver",
+            "Canada, Ontario, Greater Toronto"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556875913",
+          "title": "Software Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556875913",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556856499",
+          "title": "Technicien principal de l\u0027environnement critique (CET)/Critical Environment Technician",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556856499",
+          "locations": [
+            "Canada, Qu\u00E9bec, Quebec City"
+          ],
+          "requestedLocation": "Canada"
+        }
+      ],
+      "changed": [
+        {
+          "id": "1970393556914210",
+          "title": "ACSM Solution Architect Manager",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556914210",
+          "locations": [
+            "France, Paris, Paris",
+            "Germany, Bavaria, Munich",
+            "Netherlands, Noord-Holland, Amsterdam",
+            "Spain, Madrid, Madrid",
+            "United Kingdom, Berkshire, Reading"
+          ],
+          "requestedLocation": "Germany",
+          "previousHash": "f5a61be7de66049902bba4819c7a099279aec5d09a9e1d736453f4991fe9de7d",
+          "currentHash": "24cc4d260990a606a503f6f0a5e2bcc82af298d6deebe8117097f91815c0e01b",
+          "changedFields": [
+            "locations"
+          ],
+          "fieldChanges": [
+            {
+              "field": "locations",
+              "added": [
+                "France, Paris, Paris"
+              ],
+              "removed": []
+            }
+          ]
+        },
+        {
+          "id": "1970393556933021",
+          "title": "Principal Forward Deployed Engineer - Software Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556933021",
+          "locations": [
+            "Netherlands, Multiple Locations, Multiple Locations",
+            "Switzerland, Multiple Locations, Multiple Locations",
+            "United Kingdom, Multiple Locations, Multiple Locations"
+          ],
+          "requestedLocation": "Switzerland",
+          "previousHash": "3b7d3ee0a3e34ffe5bd599e62f0a8b3d7484d63e6a833505a7dbb792dff3b47f",
+          "currentHash": "612eded77a10f8d0c89e6a5b15d3198f71b82dafda85c031e219fe1806d82243",
+          "changedFields": [
+            "title"
+          ],
+          "fieldChanges": [
+            {
+              "field": "title",
+              "previous": "Principal Account Aligned FDE - Software Engineer",
+              "current": "Principal Forward Deployed Engineer - Software Engineer"
+            }
+          ]
+        },
+        {
+          "id": "1970393556938560",
+          "title": "Principal Forward Deployed Engineer - Software Engineer - German Speaking",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556938560",
+          "locations": [
+            "Switzerland, Z\u00FCrich, Z\u00FCrich"
+          ],
+          "requestedLocation": "Switzerland",
+          "previousHash": "3d843be1734d0a00aff0f04b2e52d580c4a412b7c817fa89c14a5ba9d83b38f0",
+          "currentHash": "57407445c435ecbc778c45bbad865456e474b061907a5f963d361f66f2553b30",
+          "changedFields": [
+            "title"
+          ],
+          "fieldChanges": [
+            {
+              "field": "title",
+              "previous": "Principal Account Aligned FDE - Software Engineer - German Speaking",
+              "current": "Principal Forward Deployed Engineer - Software Engineer - German Speaking"
+            }
+          ]
+        },
+        {
+          "id": "1970393556933036",
+          "title": "Principal Forward Deployed Engineer - Technical Program Manager",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556933036",
+          "locations": [
+            "Netherlands, Multiple Locations, Multiple Locations",
+            "Switzerland, Multiple Locations, Multiple Locations",
+            "United Kingdom, Multiple Locations, Multiple Locations"
+          ],
+          "requestedLocation": "Switzerland",
+          "previousHash": "083923031693e990ead1325a50564a5738b555cd11ab3441b549e39aecebec47",
+          "currentHash": "675d0b972b7c5747bba407c3ddb245d69d426c0a08b23a6928915162817a9cb3",
+          "changedFields": [
+            "title"
+          ],
+          "fieldChanges": [
+            {
+              "field": "title",
+              "previous": "Principal Account Aligned FDE - Technical Program Manager",
+              "current": "Principal Forward Deployed Engineer - Technical Program Manager"
+            }
+          ]
+        },
+        {
+          "id": "1970393556938558",
+          "title": "Principal Forward Deployed Engineer - Technical Program Manager - German Speaking",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556938558",
+          "locations": [
+            "Switzerland, Z\u00FCrich, Z\u00FCrich"
+          ],
+          "requestedLocation": "Switzerland",
+          "previousHash": "21934fa87899c23d6493ca29fe6b4e3dc8ff1ab751f0a2e7043c7f80e96660e4",
+          "currentHash": "22f61ef17bdd322fd2d92f2d488df6b28d5da1b41fbb591da620103564dbeedc",
+          "changedFields": [
+            "title"
+          ],
+          "fieldChanges": [
+            {
+              "field": "title",
+              "previous": "Principal Account Aligned FDE - Technical Program Manager - German Speaking",
+              "current": "Principal Forward Deployed Engineer - Technical Program Manager - German Speaking"
+            }
+          ]
+        },
+        {
+          "id": "1970393556939162",
+          "title": "Principal Forward Deployed Engineer- German Speaking",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556939162",
+          "locations": [
+            "Switzerland, Z\u00FCrich, Z\u00FCrich"
+          ],
+          "requestedLocation": "Switzerland",
+          "previousHash": "2a99060b2b7a124023fb2b2968ce270287457bc7096f3b336f96e1e1c5d439e7",
+          "currentHash": "97ab669b9ec48708e9de64114ed97b4fd92e0ad703c43f03211c957a4eb457b3",
+          "changedFields": [
+            "title"
+          ],
+          "fieldChanges": [
+            {
+              "field": "title",
+              "previous": "Principal Account Aligned FDE - Data Scientist - German Speaking",
+              "current": "Principal Forward Deployed Engineer- German Speaking"
+            }
+          ]
+        },
+        {
+          "id": "1970393556933034",
+          "title": "Principal Principal Forward Deployed Engineer - Data Scientist",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556933034",
+          "locations": [
+            "Netherlands, Multiple Locations, Multiple Locations",
+            "Switzerland, Multiple Locations, Multiple Locations",
+            "United Kingdom, Multiple Locations, Multiple Locations"
+          ],
+          "requestedLocation": "Switzerland",
+          "previousHash": "77af585414737ef87e94149883336751b93450a2b80606c316239b8e6d47a1a3",
+          "currentHash": "89b883b85f75429cad28715d46f8ebdfad17ef01a574726a4d6cd10344a8c99b",
+          "changedFields": [
+            "title"
+          ],
+          "fieldChanges": [
+            {
+              "field": "title",
+              "previous": "Principal Account Aligned FDE - Data Scientist",
+              "current": "Principal Principal Forward Deployed Engineer - Data Scientist"
+            }
+          ]
+        }
+      ],
+      "unchanged": [
+        {
+          "id": "1970393556643216",
+          "title": "Applied AI Scientist",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556643216",
+          "locations": [
+            "Switzerland, Z\u00FCrich, Z\u00FCrich"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "1970393556926223",
+          "title": "Chief Information Officer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556926223",
+          "locations": [
+            "Ireland, Multiple Locations, Multiple Locations"
+          ],
+          "requestedLocation": "Ireland"
+        },
+        {
+          "id": "1970393556650632",
+          "title": "Critical Environment Industrial Controls Systems Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556650632",
+          "locations": [
+            "United Kingdom, Newport, Newport"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556861607",
+          "title": "Critical Environment Technician",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556861607",
+          "locations": [
+            "Poland, Mazowieckie, Warsaw"
+          ],
+          "requestedLocation": "Poland"
+        },
+        {
+          "id": "1970393556862302",
+          "title": "Critical Environment Technician",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556862302",
+          "locations": [
+            "Canada, Ontario, Toronto"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556916159",
+          "title": "Data Center Project Manager",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556916159",
+          "locations": [
+            "Germany, Berlin, Berlin"
+          ],
+          "requestedLocation": "Germany"
+        },
+        {
+          "id": "1970393556924215",
+          "title": "Data Center Project Manager",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556924215",
+          "locations": [
+            "Switzerland, Geneva, Geneva"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "1970393556899504",
+          "title": "Data Center Technician (DCT) Manager",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556899504",
+          "locations": [
+            "Ireland, Dublin, Dublin"
+          ],
+          "requestedLocation": "Ireland"
+        },
+        {
+          "id": "1970393556874593",
+          "title": "Logistics Technician",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556874593",
+          "locations": [
+            "Switzerland, Z\u00FCrich, Z\u00FCrich"
+          ],
+          "requestedLocation": "Switzerland"
+        },
+        {
+          "id": "1970393556933018",
+          "title": "Logistics Technician",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556933018",
+          "locations": [
+            "Ireland, Dublin, Dublin"
+          ],
+          "requestedLocation": "Ireland"
+        },
+        {
+          "id": "1970393556927547",
+          "title": "Member of Technical Staff - Privacy Engineer, Health",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556927547",
+          "locations": [
+            "United Kingdom, London, Enfield"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556866505",
+          "title": "Principal Opto-Electronics Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556866505",
+          "locations": [
+            "United Kingdom, Cambridgeshire, Cambridge"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556857289",
+          "title": "Principal Software Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556857289",
+          "locations": [
+            "Canada, British Columbia, Vancouver",
+            "United States, California, San Francisco",
+            "United States, Georgia, Atlanta",
+            "United States, Washington, Redmond"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556750512",
+          "title": "Principal Software Engineer - Distributed Systems",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556750512",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556929190",
+          "title": "Principal/ Senior Data Scientist - FDE",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556929190",
+          "locations": [
+            "United Kingdom, Multiple Locations, Multiple Locations"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556937848",
+          "title": "Security Solution Engineer (Presales) - Automotive, Travel \u0026 Transport Industry",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556937848",
+          "locations": [
+            "Germany, Multiple Locations, Multiple Locations"
+          ],
+          "requestedLocation": "Germany"
+        },
+        {
+          "id": "1970393556939218",
+          "title": "Security Solution Engineer (Presales) - Public Sector \u0026 Healthcare",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556939218",
+          "locations": [
+            "Germany, Multiple Locations, Multiple Locations"
+          ],
+          "requestedLocation": "Germany"
+        },
+        {
+          "id": "1970393556918457",
+          "title": "Senior Critical Environment Technician (Shift Lead)",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556918457",
+          "locations": [
+            "United Kingdom, Newport, Newport"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556918610",
+          "title": "Senior Machine Learning Research Engineer - Research Engineering - MSR Cambridge",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556918610",
+          "locations": [
+            "United Kingdom, Cambridgeshire, Cambridge"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556929045",
+          "title": "Senior Research Software Development Engineer, MSR AI for Science",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556929045",
+          "locations": [
+            "Germany, Multiple Locations, Multiple Locations",
+            "Netherlands, Multiple Locations, Multiple Locations"
+          ],
+          "requestedLocation": "Germany"
+        },
+        {
+          "id": "1970393556867988",
+          "title": "Senior Security Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556867988",
+          "locations": [
+            "United Kingdom, Cambridgeshire, Cambridge"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556639396",
+          "title": "Senior Software Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556639396",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556874614",
+          "title": "Senior Software Engineer - Backend",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556874614",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556928769",
+          "title": "Senior Software Engineer - Data Connectivity \u0026 Quality",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556928769",
+          "locations": [
+            "Canada, Multiple Locations, Multiple Locations"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556754238",
+          "title": "Senior Software Engineer - Distributed Systems",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556754238",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556769483",
+          "title": "Senior Software Engineer -Front End Development",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556769483",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556918615",
+          "title": "Senior Systems Research Engineer - Research Engineering - MSR Cambridge",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556918615",
+          "locations": [
+            "United Kingdom, Cambridgeshire, Cambridge"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556927647",
+          "title": "Service Engineer",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556927647",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "1970393556847455",
+          "title": "Software Engineer - Identity",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556847455",
+          "locations": [
+            "Ireland, Dublin, Dublin"
+          ],
+          "requestedLocation": "Ireland"
+        },
+        {
+          "id": "1970393556914546",
+          "title": "Software Engineer - Observability",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556914546",
+          "locations": [
+            "Ireland, Dublin, Dublin"
+          ],
+          "requestedLocation": "Ireland"
+        },
+        {
+          "id": "1970393556802657",
+          "title": "Software Engineer II",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556802657",
+          "locations": [
+            "Canada, British Columbia, Vancouver",
+            "Canada, Ontario, Greater Toronto"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556926174",
+          "title": "Software Engineer II - Azure AI Services",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556926174",
+          "locations": [
+            "Germany, Multiple Locations, Multiple Locations"
+          ],
+          "requestedLocation": "Germany"
+        },
+        {
+          "id": "1970393556750546",
+          "title": "Software Engineer II - Distributed Systems",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556750546",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556751263",
+          "title": "Software Engineer II - Full Stack",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556751263",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556753316",
+          "title": "Software Engineer II - Full Stack",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556753316",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556866289",
+          "title": "Software Engineer II - Full Stack",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556866289",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556914401",
+          "title": "Software Engineer II - Full Stack",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556914401",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556857372",
+          "title": "Software Engineer II -Fullstack",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556857372",
+          "locations": [
+            "Canada, British Columbia, Vancouver"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "1970393556914209",
+          "title": "Solution Architect Manager (SAM) - Germany \u0026 Austria",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556914209",
+          "locations": [
+            "Germany, Bavaria, Munich"
+          ],
+          "requestedLocation": "Germany"
+        },
+        {
+          "id": "1970393556928855",
+          "title": "Sr Data Scientist - FDE - Security Check (SC) Clearance",
+          "company": "Microsoft",
+          "url": "https://apply.careers.microsoft.com/careers/job/1970393556928855",
+          "locations": [
+            "United Kingdom, London, London"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Canada",
+          "added": [],
+          "removed": [
+            {
+              "id": "1970393556856448",
+              "title": "Senior Software Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556856448",
+              "locations": [
+                "Canada, British Columbia, Vancouver",
+                "Canada, Ontario, Greater Toronto"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556875913",
+              "title": "Software Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556875913",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556856499",
+              "title": "Technicien principal de l\u0027environnement critique (CET)/Critical Environment Technician",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556856499",
+              "locations": [
+                "Canada, Qu\u00E9bec, Quebec City"
+              ],
+              "requestedLocation": "Canada"
+            }
+          ],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1970393556862302",
+              "title": "Critical Environment Technician",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556862302",
+              "locations": [
+                "Canada, Ontario, Toronto"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556857289",
+              "title": "Principal Software Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556857289",
+              "locations": [
+                "Canada, British Columbia, Vancouver",
+                "United States, California, San Francisco",
+                "United States, Georgia, Atlanta",
+                "United States, Washington, Redmond"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556750512",
+              "title": "Principal Software Engineer - Distributed Systems",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556750512",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556639396",
+              "title": "Senior Software Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556639396",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556874614",
+              "title": "Senior Software Engineer - Backend",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556874614",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556928769",
+              "title": "Senior Software Engineer - Data Connectivity \u0026 Quality",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556928769",
+              "locations": [
+                "Canada, Multiple Locations, Multiple Locations"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556754238",
+              "title": "Senior Software Engineer - Distributed Systems",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556754238",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556769483",
+              "title": "Senior Software Engineer -Front End Development",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556769483",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556802657",
+              "title": "Software Engineer II",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556802657",
+              "locations": [
+                "Canada, British Columbia, Vancouver",
+                "Canada, Ontario, Greater Toronto"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556750546",
+              "title": "Software Engineer II - Distributed Systems",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556750546",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556751263",
+              "title": "Software Engineer II - Full Stack",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556751263",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556753316",
+              "title": "Software Engineer II - Full Stack",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556753316",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556866289",
+              "title": "Software Engineer II - Full Stack",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556866289",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556914401",
+              "title": "Software Engineer II - Full Stack",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556914401",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            },
+            {
+              "id": "1970393556857372",
+              "title": "Software Engineer II -Fullstack",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556857372",
+              "locations": [
+                "Canada, British Columbia, Vancouver"
+              ],
+              "requestedLocation": "Canada"
+            }
+          ]
+        },
+        {
+          "location": "Germany",
+          "added": [],
+          "removed": [],
+          "changed": [
+            {
+              "id": "1970393556914210",
+              "title": "ACSM Solution Architect Manager",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556914210",
+              "locations": [
+                "France, Paris, Paris",
+                "Germany, Bavaria, Munich",
+                "Netherlands, Noord-Holland, Amsterdam",
+                "Spain, Madrid, Madrid",
+                "United Kingdom, Berkshire, Reading"
+              ],
+              "requestedLocation": "Germany",
+              "previousHash": "f5a61be7de66049902bba4819c7a099279aec5d09a9e1d736453f4991fe9de7d",
+              "currentHash": "24cc4d260990a606a503f6f0a5e2bcc82af298d6deebe8117097f91815c0e01b",
+              "changedFields": [
+                "locations"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "locations",
+                  "added": [
+                    "France, Paris, Paris"
+                  ],
+                  "removed": []
+                }
+              ]
+            }
+          ],
+          "unchanged": [
+            {
+              "id": "1970393556916159",
+              "title": "Data Center Project Manager",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556916159",
+              "locations": [
+                "Germany, Berlin, Berlin"
+              ],
+              "requestedLocation": "Germany"
+            },
+            {
+              "id": "1970393556937848",
+              "title": "Security Solution Engineer (Presales) - Automotive, Travel \u0026 Transport Industry",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556937848",
+              "locations": [
+                "Germany, Multiple Locations, Multiple Locations"
+              ],
+              "requestedLocation": "Germany"
+            },
+            {
+              "id": "1970393556939218",
+              "title": "Security Solution Engineer (Presales) - Public Sector \u0026 Healthcare",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556939218",
+              "locations": [
+                "Germany, Multiple Locations, Multiple Locations"
+              ],
+              "requestedLocation": "Germany"
+            },
+            {
+              "id": "1970393556929045",
+              "title": "Senior Research Software Development Engineer, MSR AI for Science",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556929045",
+              "locations": [
+                "Germany, Multiple Locations, Multiple Locations",
+                "Netherlands, Multiple Locations, Multiple Locations"
+              ],
+              "requestedLocation": "Germany"
+            },
+            {
+              "id": "1970393556926174",
+              "title": "Software Engineer II - Azure AI Services",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556926174",
+              "locations": [
+                "Germany, Multiple Locations, Multiple Locations"
+              ],
+              "requestedLocation": "Germany"
+            },
+            {
+              "id": "1970393556914209",
+              "title": "Solution Architect Manager (SAM) - Germany \u0026 Austria",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556914209",
+              "locations": [
+                "Germany, Bavaria, Munich"
+              ],
+              "requestedLocation": "Germany"
+            }
+          ]
+        },
+        {
+          "location": "Ireland",
+          "added": [
+            {
+              "id": "1970393556941272",
+              "title": "Software Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556941272",
+              "locations": [
+                "Ireland, Dublin, Dublin"
+              ],
+              "requestedLocation": "Ireland"
+            }
+          ],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1970393556926223",
+              "title": "Chief Information Officer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556926223",
+              "locations": [
+                "Ireland, Multiple Locations, Multiple Locations"
+              ],
+              "requestedLocation": "Ireland"
+            },
+            {
+              "id": "1970393556899504",
+              "title": "Data Center Technician (DCT) Manager",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556899504",
+              "locations": [
+                "Ireland, Dublin, Dublin"
+              ],
+              "requestedLocation": "Ireland"
+            },
+            {
+              "id": "1970393556933018",
+              "title": "Logistics Technician",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556933018",
+              "locations": [
+                "Ireland, Dublin, Dublin"
+              ],
+              "requestedLocation": "Ireland"
+            },
+            {
+              "id": "1970393556847455",
+              "title": "Software Engineer - Identity",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556847455",
+              "locations": [
+                "Ireland, Dublin, Dublin"
+              ],
+              "requestedLocation": "Ireland"
+            },
+            {
+              "id": "1970393556914546",
+              "title": "Software Engineer - Observability",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556914546",
+              "locations": [
+                "Ireland, Dublin, Dublin"
+              ],
+              "requestedLocation": "Ireland"
+            }
+          ]
+        },
+        {
+          "location": "Poland",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1970393556861607",
+              "title": "Critical Environment Technician",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556861607",
+              "locations": [
+                "Poland, Mazowieckie, Warsaw"
+              ],
+              "requestedLocation": "Poland"
+            }
+          ]
+        },
+        {
+          "location": "Switzerland",
+          "added": [],
+          "removed": [],
+          "changed": [
+            {
+              "id": "1970393556933021",
+              "title": "Principal Forward Deployed Engineer - Software Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556933021",
+              "locations": [
+                "Netherlands, Multiple Locations, Multiple Locations",
+                "Switzerland, Multiple Locations, Multiple Locations",
+                "United Kingdom, Multiple Locations, Multiple Locations"
+              ],
+              "requestedLocation": "Switzerland",
+              "previousHash": "3b7d3ee0a3e34ffe5bd599e62f0a8b3d7484d63e6a833505a7dbb792dff3b47f",
+              "currentHash": "612eded77a10f8d0c89e6a5b15d3198f71b82dafda85c031e219fe1806d82243",
+              "changedFields": [
+                "title"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "title",
+                  "previous": "Principal Account Aligned FDE - Software Engineer",
+                  "current": "Principal Forward Deployed Engineer - Software Engineer"
+                }
+              ]
+            },
+            {
+              "id": "1970393556938560",
+              "title": "Principal Forward Deployed Engineer - Software Engineer - German Speaking",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556938560",
+              "locations": [
+                "Switzerland, Z\u00FCrich, Z\u00FCrich"
+              ],
+              "requestedLocation": "Switzerland",
+              "previousHash": "3d843be1734d0a00aff0f04b2e52d580c4a412b7c817fa89c14a5ba9d83b38f0",
+              "currentHash": "57407445c435ecbc778c45bbad865456e474b061907a5f963d361f66f2553b30",
+              "changedFields": [
+                "title"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "title",
+                  "previous": "Principal Account Aligned FDE - Software Engineer - German Speaking",
+                  "current": "Principal Forward Deployed Engineer - Software Engineer - German Speaking"
+                }
+              ]
+            },
+            {
+              "id": "1970393556933036",
+              "title": "Principal Forward Deployed Engineer - Technical Program Manager",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556933036",
+              "locations": [
+                "Netherlands, Multiple Locations, Multiple Locations",
+                "Switzerland, Multiple Locations, Multiple Locations",
+                "United Kingdom, Multiple Locations, Multiple Locations"
+              ],
+              "requestedLocation": "Switzerland",
+              "previousHash": "083923031693e990ead1325a50564a5738b555cd11ab3441b549e39aecebec47",
+              "currentHash": "675d0b972b7c5747bba407c3ddb245d69d426c0a08b23a6928915162817a9cb3",
+              "changedFields": [
+                "title"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "title",
+                  "previous": "Principal Account Aligned FDE - Technical Program Manager",
+                  "current": "Principal Forward Deployed Engineer - Technical Program Manager"
+                }
+              ]
+            },
+            {
+              "id": "1970393556938558",
+              "title": "Principal Forward Deployed Engineer - Technical Program Manager - German Speaking",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556938558",
+              "locations": [
+                "Switzerland, Z\u00FCrich, Z\u00FCrich"
+              ],
+              "requestedLocation": "Switzerland",
+              "previousHash": "21934fa87899c23d6493ca29fe6b4e3dc8ff1ab751f0a2e7043c7f80e96660e4",
+              "currentHash": "22f61ef17bdd322fd2d92f2d488df6b28d5da1b41fbb591da620103564dbeedc",
+              "changedFields": [
+                "title"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "title",
+                  "previous": "Principal Account Aligned FDE - Technical Program Manager - German Speaking",
+                  "current": "Principal Forward Deployed Engineer - Technical Program Manager - German Speaking"
+                }
+              ]
+            },
+            {
+              "id": "1970393556939162",
+              "title": "Principal Forward Deployed Engineer- German Speaking",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556939162",
+              "locations": [
+                "Switzerland, Z\u00FCrich, Z\u00FCrich"
+              ],
+              "requestedLocation": "Switzerland",
+              "previousHash": "2a99060b2b7a124023fb2b2968ce270287457bc7096f3b336f96e1e1c5d439e7",
+              "currentHash": "97ab669b9ec48708e9de64114ed97b4fd92e0ad703c43f03211c957a4eb457b3",
+              "changedFields": [
+                "title"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "title",
+                  "previous": "Principal Account Aligned FDE - Data Scientist - German Speaking",
+                  "current": "Principal Forward Deployed Engineer- German Speaking"
+                }
+              ]
+            },
+            {
+              "id": "1970393556933034",
+              "title": "Principal Principal Forward Deployed Engineer - Data Scientist",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556933034",
+              "locations": [
+                "Netherlands, Multiple Locations, Multiple Locations",
+                "Switzerland, Multiple Locations, Multiple Locations",
+                "United Kingdom, Multiple Locations, Multiple Locations"
+              ],
+              "requestedLocation": "Switzerland",
+              "previousHash": "77af585414737ef87e94149883336751b93450a2b80606c316239b8e6d47a1a3",
+              "currentHash": "89b883b85f75429cad28715d46f8ebdfad17ef01a574726a4d6cd10344a8c99b",
+              "changedFields": [
+                "title"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "title",
+                  "previous": "Principal Account Aligned FDE - Data Scientist",
+                  "current": "Principal Principal Forward Deployed Engineer - Data Scientist"
+                }
+              ]
+            }
+          ],
+          "unchanged": [
+            {
+              "id": "1970393556643216",
+              "title": "Applied AI Scientist",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556643216",
+              "locations": [
+                "Switzerland, Z\u00FCrich, Z\u00FCrich"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "1970393556924215",
+              "title": "Data Center Project Manager",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556924215",
+              "locations": [
+                "Switzerland, Geneva, Geneva"
+              ],
+              "requestedLocation": "Switzerland"
+            },
+            {
+              "id": "1970393556874593",
+              "title": "Logistics Technician",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556874593",
+              "locations": [
+                "Switzerland, Z\u00FCrich, Z\u00FCrich"
+              ],
+              "requestedLocation": "Switzerland"
+            }
+          ]
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [
+            {
+              "id": "1970393556872793",
+              "title": "Critical Environment Field Service Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556872793",
+              "locations": [
+                "United Kingdom, Newport, Newport"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556883047",
+              "title": "Data Center Critical Environment Technician Manager",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556883047",
+              "locations": [
+                "United Kingdom, Newport, Newport"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556917444",
+              "title": "Data Center Inventory \u0026 Asset Technician (DIAT)",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556917444",
+              "locations": [
+                "United Kingdom, Berkshire, Slough"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556924569",
+              "title": "Data Center Inventory \u0026 Asset Technician Manager",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556924569",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556927479",
+              "title": "Data Center Logistics Technician",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556927479",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556927554",
+              "title": "Member of Technical Staff - Applied AI Lead, Health",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556927554",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556927509",
+              "title": "Principal Technical Program Manager - FDE - Security Check (SC) Clearance",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556927509",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556866482",
+              "title": "Senior Researcher - AI Computer Architecture",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556866482",
+              "locations": [
+                "United Kingdom, Cambridgeshire, Cambridge"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "1970393556650632",
+              "title": "Critical Environment Industrial Controls Systems Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556650632",
+              "locations": [
+                "United Kingdom, Newport, Newport"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556927547",
+              "title": "Member of Technical Staff - Privacy Engineer, Health",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556927547",
+              "locations": [
+                "United Kingdom, London, Enfield"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556866505",
+              "title": "Principal Opto-Electronics Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556866505",
+              "locations": [
+                "United Kingdom, Cambridgeshire, Cambridge"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556929190",
+              "title": "Principal/ Senior Data Scientist - FDE",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556929190",
+              "locations": [
+                "United Kingdom, Multiple Locations, Multiple Locations"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556918457",
+              "title": "Senior Critical Environment Technician (Shift Lead)",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556918457",
+              "locations": [
+                "United Kingdom, Newport, Newport"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556918610",
+              "title": "Senior Machine Learning Research Engineer - Research Engineering - MSR Cambridge",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556918610",
+              "locations": [
+                "United Kingdom, Cambridgeshire, Cambridge"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556867988",
+              "title": "Senior Security Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556867988",
+              "locations": [
+                "United Kingdom, Cambridgeshire, Cambridge"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556918615",
+              "title": "Senior Systems Research Engineer - Research Engineering - MSR Cambridge",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556918615",
+              "locations": [
+                "United Kingdom, Cambridgeshire, Cambridge"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556927647",
+              "title": "Service Engineer",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556927647",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom"
+            },
+            {
+              "id": "1970393556928855",
+              "title": "Sr Data Scientist - FDE - Security Check (SC) Clearance",
+              "company": "Microsoft",
+              "url": "https://apply.careers.microsoft.com/careers/job/1970393556928855",
+              "locations": [
+                "United Kingdom, London, London"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
