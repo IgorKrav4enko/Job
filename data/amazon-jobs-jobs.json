@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+  "generatedAt": "2026-07-23T19:45:43.3559436\u002B00:00",
   "source": "Amazon Jobs",
   "status": "success",
-  "notes": "Normalized 100 active Amazon jobs from latest raw snapshot.",
+  "notes": "Normalized 99 active Amazon jobs from latest raw snapshot.",
   "searchTerm": "Software Development | Software Engineer",
   "locations": [
     {
@@ -44,10 +44,10 @@
       ],
       "url": "https://www.amazon.jobs/en/jobs/3074226/2026-software-dev-engineer-intern-germany",
       "requestedLocation": "Germany",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-09-05T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-13T09:47:52.1351145\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "55dcc975eb13e5bb45745680e10a1e4038660fae80a966587ee31d72adbfe163"
     },
@@ -63,7 +63,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-29T11:23:36.0277433\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "deba39260a2df6487500db64cf38a7a7896a5711270b3f910db59b5d5e7377c3"
     },
@@ -79,7 +79,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-04-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "a162672b5179fe36a826bfb8f070ceffa82ffeee4a211469f3f535997eefd358"
     },
@@ -92,10 +92,10 @@
       ],
       "url": "https://www.amazon.jobs/en/jobs/10474491/application-builder-ring",
       "requestedLocation": "Poland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-15T08:35:44.8094918\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "304e119a3f2def0556411d550ddf5d1bbeb6aa42e7b0c49a122573f541bf3dab"
     },
@@ -111,7 +111,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-20T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-20T20:30:37.3531011\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "2ed18a9130b619138d057758a3dadc81888591e2a6352b95122e00c739262ce6"
     },
@@ -127,7 +127,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-06T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-07T10:00:20.0635870\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "9b7df19f87c5fe3dd8f39b0e62d53f30bba63fb067b665be59fee73c845f9fd0"
     },
@@ -143,7 +143,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "13138e3d1b3b5b49d35ba729d69f846c4f4f7a1ef6ab7dec6faa75ede079fa16"
     },
@@ -159,7 +159,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-25T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-25T20:22:30.5769935\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "eb1c17ce3b12e6f655d001e23e17d988505c92ca7febae6639f2bf01754a754e"
     },
@@ -175,7 +175,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-20T09:54:31.1728507\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "9c329af9be4ddc8069aa62b22e79c946d1de71569be45369d2630c4bfa0b5c05"
     },
@@ -191,7 +191,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-15T08:35:44.8094918\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "84bef3aa5eeb5f917c7bcd05d2165e518c29776678cc26a375363325496582e2"
     },
@@ -207,7 +207,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-18T10:47:22.3780696\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "a0d3798017a491928eaeb5e8374f245f07f6ef4a65a89ff193e0f9f392089345"
     },
@@ -223,7 +223,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-21T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-07T20:13:54.6841525\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "2e870e7ae0d69f1d24a371e52d3147c141d3bcadda7a20cebdf54ff23cefda69"
     },
@@ -239,9 +239,25 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-21T19:51:48.9350634\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "e027870859dfd808cabf6ed9e4ecafe6c673174758bda6afb5054fa5259cb11b"
+    },
+    {
+      "id": "10459788",
+      "title": "Kernel/Hypervisor Engineer, EC2 Core Compute",
+      "company": "Amazon Web Services Development Center Germany GmbH",
+      "locations": [
+        "Berlin, Berlin, DEU"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10459788/kernel-hypervisor-engineer-ec2-core-compute",
+      "requestedLocation": "Germany",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-06-26T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-30T10:00:19.2752316\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
+      "isActive": true,
+      "contentHash": "be22be66be4ebc91f72d6717695e20e33f829bea1198a12ab9dcbe8ce6578222"
     },
     {
       "id": "10470883",
@@ -255,7 +271,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-10T19:51:22.1672791\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "97180113310ba9c1b83bb1adb6abba0c50dc69a3bec0dcc8670d010c7cd5336f"
     },
@@ -271,7 +287,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-15T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-15T19:36:47.6434640\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "5badeaa50892102f5783d6d789675d4f4057639fddbf4b8c4c933c882a0b91f8"
     },
@@ -287,7 +303,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-07-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-07T20:13:54.6841525\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "84ed0eca9b732f6b615db8def8b92f449e9d5f8c65f3443936e7cc94daae52e5"
     },
@@ -304,7 +320,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-26T20:08:35.4274843\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "730d471b24f355ff4b74dd082873251f8ea78f98f3ab6998f7b12eb270501fea"
     },
@@ -322,7 +338,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-20T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-20T09:33:53.0560527\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "6bb99e3d41edc76a864eb84b1afe1ff737c9ba7fb995a36ee0afa20634feb7a6"
     },
@@ -338,7 +354,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-07-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "3309ecbdf7ba7e61d9b3c1613a70c9a5e692d0ebffb8326c6dac588ee950804b"
     },
@@ -354,7 +370,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-04-22T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-14T19:42:43.8494778\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "fb8bb0b3266d42b17fbdae74832228e0ab91a299daf720298614bdadde028f1e"
     },
@@ -367,10 +383,10 @@
       ],
       "url": "https://www.amazon.jobs/en/jobs/3133471/principal-software-engineer",
       "requestedLocation": "Germany",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-11-27T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "ea2b4f44e9e3ba75ae8d1da24ce972ad716d06a6f8c6fdfd750fc10efb8375f3"
     },
@@ -386,7 +402,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-02-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "c923e799b026c9fcd9ea2ddb0324da3a32c5cdf9042992ab170bb678cc3bffcd"
     },
@@ -402,7 +418,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-29T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-29T10:14:34.2886822\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "7590d3c10431038f77962c4c9cb80d23913281b23ffe0e1f55134b4340b7f495"
     },
@@ -420,7 +436,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "b8ad1e318e2d1eac99f306dcbf55cd197c21caebc20adef0f2d7d04414157537"
     },
@@ -436,7 +452,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-06T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-06T20:01:51.7760154\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "2b7f52ba1bb25bf498dec6f3bbcb031618ca86cb7efc3b567c992a6c2c04c7d9"
     },
@@ -452,7 +468,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-29T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-29T20:15:26.9157526\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "e944049b2eb45519a422735714db4a6e1fc1b1ef23f47a09c9f3b15d8dddb3c3"
     },
@@ -468,7 +484,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-17T08:28:01.8188313\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "7b58a607173efec4cbf516e0b1352d374cff44255f390c5f9a66ca197d88f173"
     },
@@ -484,9 +500,25 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-04-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "10b742ccd609fc71657de6467e01ca8c64216f3c745cc83409ebdde12c495002"
+    },
+    {
+      "id": "3208024",
+      "title": "Senior Drone Software Dev Engineer, Ring Robotics Platform Engineering",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/3208024/senior-drone-software-dev-engineer-ring-robotics-platform-engineering",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-05-02T07:59:57.2453910\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
+      "isActive": true,
+      "contentHash": "f72c36ea8cc2e81dde458fed424142fbc037d9538e84238dd2149c50d62706e4"
     },
     {
       "id": "3201538",
@@ -500,7 +532,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "65e92f58bd41d8255b8be4979d0be18da7924bea007738102448b42c04931a70"
     },
@@ -513,10 +545,10 @@
       ],
       "url": "https://www.amazon.jobs/en/jobs/10435563/senior-firmware-engineer-industrial-robotics-group",
       "requestedLocation": "Germany",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-18T10:47:22.3780696\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "2080d32ee0efbafc31d246a499b64198d621bd0a9860838788adcc71ab2e706e"
     },
@@ -532,7 +564,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-30T20:18:46.4133073\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "0d97b6b03ca22215bebfb6c8f8742609a9e70197d4104797e7655bb4182f9fb3"
     },
@@ -548,7 +580,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-04-29T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "c9af20824749671dd1dcd4bc03ff653a4cd67ae30ad052a4dc2bf049a5ea3a8a"
     },
@@ -564,7 +596,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-29T16:01:25.9424454\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "ce573888c78a9befcd694ff0cecaaf3c59c15ccd31cbb67b27ed43484d6c53e6"
     },
@@ -580,7 +612,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-21T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-21T19:51:48.9350634\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "7946d6d0ffebe9622965c214f53d89e9b58433bb8bc56aedafbf075682036898"
     },
@@ -597,7 +629,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-04T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "2550dea4ee483403a8e1aa9ba76db068ae28d3adf22d5025d94dd23fa5309d72"
     },
@@ -613,7 +645,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-22T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-25T20:22:30.5769935\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "7e62bf12023d45cd25742a06e0079a607612505f8624736322347e800c18e51a"
     },
@@ -631,25 +663,25 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-08T11:20:37.4447744\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "442811a61d951aa26ccb8e6f52848efdb2984561b81204be5e28f2df8da2d72b"
     },
     {
-      "id": "10410429",
-      "title": "Senior Solutions Architect, Enterprise FSI, Switzerland",
-      "company": "AWS EMEA SARL (Switzerland Branch)",
+      "id": "10482551",
+      "title": "Software Builder, Builder Ops",
+      "company": "AMZN Dev Cntr Poland sp. z.o.o",
       "locations": [
-        "Zurich, Zurich, CHE"
+        "Gdansk, Pomeranian Voivodeship, POL"
       ],
-      "url": "https://www.amazon.jobs/en/jobs/10410429/senior-solutions-architect-enterprise-fsi-switzerland",
-      "requestedLocation": "Switzerland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-05-05T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-05-05T19:52:48.1909067\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "url": "https://www.amazon.jobs/en/jobs/10482551/software-builder-builder-ops",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-07-23T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
-      "contentHash": "5ef964082bf1fb1da88cf1cf24c5a14f82c916d5984a9c594261f33183aaaee9"
+      "contentHash": "8ed62aa9efd247759e664a2b8cf60972eea9b0ff500364b17eb44b7cea97af03"
     },
     {
       "id": "10467304",
@@ -661,10 +693,10 @@
       ],
       "url": "https://www.amazon.jobs/en/jobs/10467304/software-dev-engineer",
       "requestedLocation": "Germany",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-07T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-22T19:43:41.1223985\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "59b6c73902a3056ea84d0c6cdce2f120fcfd18afc889d153f35e338b2d9a47c4"
     },
@@ -680,7 +712,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-12-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-02T19:51:13.7862416\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "442852a6e7f1cef61393362c392e69086be7e85bc19bb950118c7a55543a444d"
     },
@@ -693,28 +725,12 @@
       ],
       "url": "https://www.amazon.jobs/en/jobs/3130528/software-dev-engineer-internship-embedded-development-linux",
       "requestedLocation": "Germany",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-11-21T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-20T19:56:08.0751250\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "e05b7f23621afe4be2ac6f6b8be20cd387c33a90777e99691f2891fc529c639d"
-    },
-    {
-      "id": "10435054",
-      "title": "Software Dev Engineer, Amazon Security Automation",
-      "company": "Amazon Development Centre (London) Limited",
-      "locations": [
-        "London, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10435054/software-dev-engineer-amazon-security-automation",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-05-29T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-05-30T08:40:55.6912036\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
-      "isActive": true,
-      "contentHash": "a521420969377f134ed81dc8273de62c275b9ab55956ea8103c6a39a8160a02a"
     },
     {
       "id": "10463819",
@@ -728,7 +744,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-09T20:04:12.0338355\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "f5b548d0a52bbfa0e64b35f6f43229de884104b6cb559e8ddee8f7a579f7c8d8"
     },
@@ -744,7 +760,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-21T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-21T20:09:57.1343326\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "7d5e207fc506d8fbe2ec0964490556fa3f31fea99928078f0a8972412c684e4b"
     },
@@ -757,10 +773,10 @@
       ],
       "url": "https://www.amazon.jobs/en/jobs/10454256/software-development-engineer-java-aws-ring",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-19T20:03:12.0326173\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "0f51fb1dd33eeb68c647ac3e29e8645b7ddc8ee956f4bed277115536295442c2"
     },
@@ -776,7 +792,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-08T20:33:25.4026293\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "e8d1238eb352ea43566dab36da61fc85f838a8433cd2f72dc79e3cfc2c5580e4"
     },
@@ -792,7 +808,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-04-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-21T19:51:48.9350634\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "294d3728ee9ee0696328febdaa0b6d7cc41b31864d6eba876795dcea321b28fc"
     },
@@ -808,7 +824,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-07T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-07T20:13:54.6841525\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "e6f9b9b53619e35fb1765316faa28e26db3a6082eb6eb5a2272252599526144d"
     },
@@ -824,7 +840,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-21T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-21T19:51:48.9350634\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "a48fc450e679108a36d5dc9ceb32bf5def1a83353768216f8b9552f2f651cca3"
     },
@@ -841,7 +857,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-10-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-17T19:32:17.7565195\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "f5c69774cf966bc85caf307bf39d42b1f1d3eb76e52ea1ce5df4c6670e413fec"
     },
@@ -857,7 +873,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-16T21:19:09.1274639\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "feaacbfd57c46ca4119b9ad6edeca94f408f122deb2443011c70a608089b96d0"
     },
@@ -873,7 +889,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-11T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-21T19:51:48.9350634\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "9ba8b49bc97fd1604dc4e9131da8ebfaf030c013d02c747173c58beefca45e50"
     },
@@ -889,7 +905,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-20T09:54:31.1728507\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "d677c18248e8f11ba69d337d5f8620aeb549dc03708190f838ae911d88973a59"
     },
@@ -902,28 +918,12 @@
       ],
       "url": "https://www.amazon.jobs/en/jobs/10469071/software-development-engineer-rds-platform-rds",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-17T19:32:17.7565195\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "d677c18248e8f11ba69d337d5f8620aeb549dc03708190f838ae911d88973a59"
-    },
-    {
-      "id": "10376146",
-      "title": "Software Development Engineer in Test, Fire TV",
-      "company": "Amazon Development Center Germany GmbH",
-      "locations": [
-        "Berlin, Berlin, DEU"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10376146/software-development-engineer-in-test-fire-tv",
-      "requestedLocation": "Germany",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-06-11T20:35:43.1090946\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
-      "isActive": true,
-      "contentHash": "4a51b671c85ac0dd172ad5a9c0897b55595099f8cbd8477a8ce872554bd8ae45"
     },
     {
       "id": "10376161",
@@ -937,7 +937,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-11T20:35:43.1090946\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "4a51b671c85ac0dd172ad5a9c0897b55595099f8cbd8477a8ce872554bd8ae45"
     },
@@ -955,7 +955,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-01T19:38:23.4361159\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "7dfc49c8c2a9b53712fac6ad40413ad75b122e327efec08ed942e72047428076"
     },
@@ -971,7 +971,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-16T11:33:44.2800135\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "9e99d279af4c13c37cfe7b92425b11ba0dbb3ea61f6421c0cfaf94722e53ab68"
     },
@@ -987,7 +987,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-03T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-22T19:43:41.1223985\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "eb1795fcc39380ea5cb9109811e13a51386b5bd14b093ca7c38e981461a13609"
     },
@@ -1003,7 +1003,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-25T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-26T10:18:28.1618566\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "418687235c521651f772dba84615e39d7d975bae527826b8dab9249e05252b5c"
     },
@@ -1019,7 +1019,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-03T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "8a4de646dfda0d32d6d3dfcc2e686d99d9051082fbb5fb6acbe79d17763110ee"
     },
@@ -1035,7 +1035,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-23T20:22:22.5017587\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "d92be557cc7a8fdf03415cc36df78bf2c0b0d0f1c93270a38702b93fd98aeb2f"
     },
@@ -1051,7 +1051,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-02-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "5e2e4808bac434dc2457d29d472a170336908afdeaf377584bb0ad6ea18be633"
     },
@@ -1067,9 +1067,25 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-02-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "5e2e4808bac434dc2457d29d472a170336908afdeaf377584bb0ad6ea18be633"
+    },
+    {
+      "id": "10463017",
+      "title": "Software Development Engineer, Apache Iceberg Table Maintenance for S3 Tables and Glue Table Optimization",
+      "company": "Amazon Development Centre (London) Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10463017/software-development-engineer-apache-iceberg-table-maintenance-for-s3-tables-and-glue-table-optimization",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-06-30T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
+      "isActive": true,
+      "contentHash": "46755dc4316d93d7b414117c113440dde4c9fb79998a9489c31a7c7332aa8b03"
     },
     {
       "id": "10431867",
@@ -1083,7 +1099,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-27T20:29:31.8152869\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "fca229f3144e77705fa6eee53c5340013fa3d5eba1f5d3e67d3dd033f8db99a0"
     },
@@ -1099,7 +1115,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-27T20:29:31.8152869\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "fca229f3144e77705fa6eee53c5340013fa3d5eba1f5d3e67d3dd033f8db99a0"
     },
@@ -1115,7 +1131,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-02T19:51:13.7862416\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "d98006ea8b15e321fbab91765248df526612b39e56dc287d7274853052e6ee28"
     },
@@ -1131,7 +1147,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-15T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-03T11:23:02.2527389\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "82e3a2c8840d38ea03fa7e653d54e792fb698141efe773ff1dfa373afa78e3f6"
     },
@@ -1147,25 +1163,9 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-02-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "cf47ebadcabd009a4136352ae23b08b26f714474e0896f05ce4068ad6071525b"
-    },
-    {
-      "id": "10393903",
-      "title": "Software Development Engineer, Business Information Governance",
-      "company": "Amazon Development Centre Ireland Limited",
-      "locations": [
-        "Dublin, IRL"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10393903/software-development-engineer-business-information-governance",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
-      "isActive": true,
-      "contentHash": "05148e7b1361ae60a5e254d4e9d2d82d1ea62019c8a72ea2af061e3e0f758bb4"
     },
     {
       "id": "10407805",
@@ -1179,7 +1179,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-04-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-30T19:50:02.2192195\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "d27cf1a02836fe4b2e65fddfeae709ed73089651223509dd4c15817f78e495dc"
     },
@@ -1195,7 +1195,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-13T19:48:36.6674643\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "6912b40844af09e999e87fb5e7db6a2567c2dbb3946988b0b86d01bb9caab6eb"
     },
@@ -1211,7 +1211,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-21T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-22T08:44:19.8685261\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "f948bb9fefbe931322bed9e6286b38a2b6e301bf361d5842ef13eaa8cbaef888"
     },
@@ -1227,7 +1227,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-09T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "d2e60c52373e82570f86ab14a7ec3f30576d3d269844178bb22b8c8bb055fcf5"
     },
@@ -1243,7 +1243,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-20T19:56:08.0751250\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "988db87032392a00e3fe93408d6ccdd3c45eae2fb9b1a053a62a685fe4169caf"
     },
@@ -1259,7 +1259,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-20T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-20T19:56:08.0751250\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "f36cfe4234a61a676fdf7d5252b5298c1e87c477d542f01a06e2edfb63cada64"
     },
@@ -1275,7 +1275,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-07T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-07T19:54:23.2117113\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "b9c70847c7ba2524507dba5596a46cbaf73142633f088362945734ba65d378d6"
     },
@@ -1291,25 +1291,9 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-20T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-15T19:54:05.8033835\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "b0dbb9088a1d1dd519f1e05eee11aba09f30291f962ac3c094ac500811ee4002"
-    },
-    {
-      "id": "10411168",
-      "title": "Software Development Engineer, Ring",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10411168/software-development-engineer-ring",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-05-05T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-05-05T19:52:48.1909067\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
-      "isActive": true,
-      "contentHash": "91b8db3a00eb8c52efd7225e2b39011c2c2efc4cfc436e577fd211801feb7c31"
     },
     {
       "id": "10380294",
@@ -1323,7 +1307,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-31T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "e303a4859febc364c227892180a562ab42d9d96659f543d2c3673a49c53d685e"
     },
@@ -1339,7 +1323,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-02-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "e303a4859febc364c227892180a562ab42d9d96659f543d2c3673a49c53d685e"
     },
@@ -1355,7 +1339,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-22T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-22T19:43:41.1223985\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "c3403b6572be2ae5edaf942d3fcb2220f4aaffca12412a04dfa907f16e72866a"
     },
@@ -1371,7 +1355,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-18T20:38:36.0194190\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "3c1520b1ddc300bcfba700b47618941d9cb0c7ed9adddfb96685c2ae3c640cfd"
     },
@@ -1387,7 +1371,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-05-11T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-15T12:42:22.1795347\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "728f4a7497c93e77e03c950eb50dbd6799242cc6f0daacd74b3e6480f6bf3aaa"
     },
@@ -1403,7 +1387,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-24T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-20T19:56:08.0751250\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "f94d03ec38a4daf5dd1da098db415d9d729b72b5ccee951f9118dbd8c583a5c2"
     },
@@ -1419,7 +1403,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-02T10:54:50.3539257\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "61382b02e30b7e4975412e80f5548f3a10a163867cb928a78c493b9e885dadc2"
     },
@@ -1435,7 +1419,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-14T19:42:43.8494778\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "82d5d65f521d5c5faa5928ac55f70d847aa139c1b54960a333283873e1c8d358"
     },
@@ -1451,7 +1435,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2025-12-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-24T20:06:42.5795631\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "60a26d52937602752e7a042af3045ffe88f12e09b572e23bc7935587ce037d28"
     },
@@ -1467,7 +1451,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-04T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "60a26d52937602752e7a042af3045ffe88f12e09b572e23bc7935587ce037d28"
     },
@@ -1483,7 +1467,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-07T20:13:54.6841525\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "b01087cbfe1cbef112b0a318e25233f17f258590353bfb2728e6bdd3de0cf6fd"
     },
@@ -1499,7 +1483,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-08T08:44:02.3275792\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "99b2a390553cef6a05092320ff0d6cf30ba1b5b3fdcb416b651d9ac21f7a57b9"
     },
@@ -1515,7 +1499,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-17T20:30:22.3636969\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "1c1bff22d4d62cecf4405217743a2d92b54af9ccc424a3585e88c6a075302e95"
     },
@@ -1531,7 +1515,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-13T09:34:18.8154534\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "33085b8ceb6223ec0339e8aa418d743eb1ca8491b92d62c1381edc8b7fb6898a"
     },
@@ -1547,7 +1531,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Poland\u0026country=POL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-01-27T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "96d2f10c2381e2e00e76a326b498a7c094898e2cdca57dc878a9e1f2c41c4640"
     },
@@ -1563,7 +1547,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-01T12:09:17.4724234\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "8754f8b0b0a4c0f9f9b4a7662b77e52c5a54ac6a8c7f1395a5425671038ce909"
     },
@@ -1579,7 +1563,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-29T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-21T19:51:48.9350634\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "ebc1cd7ab963829985b037368fc57c270c8350b5827cb6e6e1f6d98941e441c7"
     },
@@ -1595,7 +1579,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-27T20:29:31.8152869\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "7fd9e1166064deb2c9de85e6bc51476796d6b1fc2605e451a1d248c9aefd2ec4"
     },
@@ -1611,7 +1595,7 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-07-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-02T19:51:13.7862416\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "0dbcf0e9635c87122600a345a5256e19fd6dcdb432e7d6f46bb0aed9f18a272b"
     },
@@ -1627,25 +1611,25 @@
       "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
       "postedAtCandidate": "2026-06-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-21T19:51:48.9350634\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
       "contentHash": "e6dbda195b69f764551b2e8ff61e3ae405a36a96d9e9daca7623b2b9fc340a60"
     },
     {
-      "id": "10390051",
-      "title": "Sr. Software Engineer , Community Feedback",
-      "company": "Amazon Development Center Germany GmbH",
+      "id": "10431864",
+      "title": "Sr. Software Development Engineer, AWS DMS",
+      "company": "Amazon Development Centre Ireland Limited",
       "locations": [
-        "Berlin, Berlin, DEU"
+        "Dublin, IRL"
       ],
-      "url": "https://www.amazon.jobs/en/jobs/10390051/sr-software-engineer-community-feedback",
-      "requestedLocation": "Germany",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-07-21T19:51:48.9350634\u002B00:00",
-      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "url": "https://www.amazon.jobs/en/jobs/10431864/sr-software-development-engineer-aws-dms",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-05-27T20:29:31.8152869\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:45:43.3559436\u002B00:00",
       "isActive": true,
-      "contentHash": "77cd4b2ced7c78a0875d6e31a873ba973bb9edde8654351a3aa53c11ff99614c"
+      "contentHash": "36b926c3db854c9ea60bb3a45386f45f6799590d4858c2c08fb8f5114b1b5778"
     },
     {
       "id": "3072042",
@@ -2323,22 +2307,6 @@
       "contentHash": "916136a910c15c73b8783bee231a9a6534c970c1c4824d70e59f59ef1a9a72d0"
     },
     {
-      "id": "10459788",
-      "title": "Kernel/Hypervisor Engineer, EC2 Core Compute",
-      "company": "Amazon Web Services Development Center Germany GmbH",
-      "locations": [
-        "Berlin, Berlin, DEU"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/10459788/kernel-hypervisor-engineer-ec2-core-compute",
-      "requestedLocation": "Germany",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-06-26T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-06-30T10:00:19.2752316\u002B00:00",
-      "lastSeenAt": "2026-07-21T08:44:06.5378171\u002B00:00",
-      "isActive": false,
-      "contentHash": "be22be66be4ebc91f72d6717695e20e33f829bea1198a12ab9dcbe8ce6578222"
-    },
-    {
       "id": "3010831",
       "title": "Kernel/Hypervisor Engineer, EC2 Deep Learning Accelerators",
       "company": "Amazon Web Services Development Center Germany GmbH",
@@ -2775,22 +2743,6 @@
       "contentHash": "1036d4256e322632cb7963156050b6cf8e866ed33089601ac93f4b96c4dcc48c"
     },
     {
-      "id": "3208024",
-      "title": "Senior Drone Software Dev Engineer, Ring Robotics Platform Engineering",
-      "company": "Evi Technologies Limited",
-      "locations": [
-        "Cambridge, England, GBR"
-      ],
-      "url": "https://www.amazon.jobs/en/jobs/3208024/senior-drone-software-dev-engineer-ring-robotics-platform-engineering",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-03-18T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-05-02T07:59:57.2453910\u002B00:00",
-      "lastSeenAt": "2026-05-08T07:57:51.2639702\u002B00:00",
-      "isActive": false,
-      "contentHash": "f72c36ea8cc2e81dde458fed424142fbc037d9538e84238dd2149c50d62706e4"
-    },
-    {
       "id": "10459773",
       "title": "Senior Kernel/Hypervisor Engineer, EC2 Core Compute",
       "company": "Amazon Web Services Development Center Germany GmbH",
@@ -3079,6 +3031,22 @@
       "contentHash": "15426a82fe684abfb4f5233b9719908776d7ef19fe4b933928aa0f5c7c25728a"
     },
     {
+      "id": "10410429",
+      "title": "Senior Solutions Architect, Enterprise FSI, Switzerland",
+      "company": "AWS EMEA SARL (Switzerland Branch)",
+      "locations": [
+        "Zurich, Zurich, CHE"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10410429/senior-solutions-architect-enterprise-fsi-switzerland",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Switzerland\u0026country=CHE\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-05-05T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-05-05T19:52:48.1909067\u002B00:00",
+      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "isActive": false,
+      "contentHash": "5ef964082bf1fb1da88cf1cf24c5a14f82c916d5984a9c594261f33183aaaee9"
+    },
+    {
       "id": "10393711",
       "title": "Senior Solutions Architect, SMB UKI",
       "company": "AWS EMEA SARL (UK Branch)",
@@ -3286,6 +3254,22 @@
       "lastSeenAt": "2026-05-27T20:29:31.8152869\u002B00:00",
       "isActive": false,
       "contentHash": "fb0f208c43f5747ead941cca7b48d497ed11a895379eb2f62982ee31e1b75416"
+    },
+    {
+      "id": "10435054",
+      "title": "Software Dev Engineer, Amazon Security Automation",
+      "company": "Amazon Development Centre (London) Limited",
+      "locations": [
+        "London, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10435054/software-dev-engineer-amazon-security-automation",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-05-29T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-05-30T08:40:55.6912036\u002B00:00",
+      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "isActive": false,
+      "contentHash": "a521420969377f134ed81dc8273de62c275b9ab55956ea8103c6a39a8160a02a"
     },
     {
       "id": "10391806",
@@ -3705,6 +3689,22 @@
       "contentHash": "27cc984f4de6887e48afe40e25311256e1c7626eecf14ce43bcc4a0e952bffa9"
     },
     {
+      "id": "10376146",
+      "title": "Software Development Engineer in Test, Fire TV",
+      "company": "Amazon Development Center Germany GmbH",
+      "locations": [
+        "Berlin, Berlin, DEU"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10376146/software-development-engineer-in-test-fire-tv",
+      "requestedLocation": "Germany",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-03-26T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-06-11T20:35:43.1090946\u002B00:00",
+      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "isActive": false,
+      "contentHash": "4a51b671c85ac0dd172ad5a9c0897b55595099f8cbd8477a8ce872554bd8ae45"
+    },
+    {
       "id": "3119044",
       "title": "Software Development Engineer \u2013 2026",
       "company": "AMZN Dev Cntr Poland sp. z.o.o - C35",
@@ -4089,6 +4089,22 @@
       "lastSeenAt": "2026-05-13T09:19:50.5833483\u002B00:00",
       "isActive": false,
       "contentHash": "824689c0acf20032cfdec5214178910818318af816985a671c61d1cc6e167e4f"
+    },
+    {
+      "id": "10393903",
+      "title": "Software Development Engineer, Business Information Governance",
+      "company": "Amazon Development Centre Ireland Limited",
+      "locations": [
+        "Dublin, IRL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10393903/software-development-engineer-business-information-governance",
+      "requestedLocation": "Ireland",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-21T11:59:14.8185430\u002B00:00",
+      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "isActive": false,
+      "contentHash": "05148e7b1361ae60a5e254d4e9d2d82d1ea62019c8a72ea2af061e3e0f758bb4"
     },
     {
       "id": "10432304",
@@ -4490,6 +4506,22 @@
       "lastSeenAt": "2026-05-20T20:30:37.3531011\u002B00:00",
       "isActive": false,
       "contentHash": "b0dbb9088a1d1dd519f1e05eee11aba09f30291f962ac3c094ac500811ee4002"
+    },
+    {
+      "id": "10411168",
+      "title": "Software Development Engineer, Ring",
+      "company": "Evi Technologies Limited",
+      "locations": [
+        "Cambridge, England, GBR"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10411168/software-development-engineer-ring",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Development\u0026loc_query=United%20Kingdom\u0026country=GBR\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-05-05T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-05-05T19:52:48.1909067\u002B00:00",
+      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
+      "isActive": false,
+      "contentHash": "91b8db3a00eb8c52efd7225e2b39011c2c2efc4cfc436e577fd211801feb7c31"
     },
     {
       "id": "10411171",
@@ -5404,20 +5436,20 @@
       "contentHash": "3de9a608c961f9e69056f98c4d8e0cf0f00c824973d5ed3d15fc985e7474235e"
     },
     {
-      "id": "10431864",
-      "title": "Sr. Software Development Engineer, AWS DMS",
-      "company": "Amazon Development Centre Ireland Limited",
+      "id": "10390051",
+      "title": "Sr. Software Engineer , Community Feedback",
+      "company": "Amazon Development Center Germany GmbH",
       "locations": [
-        "Dublin, IRL"
+        "Berlin, Berlin, DEU"
       ],
-      "url": "https://www.amazon.jobs/en/jobs/10431864/sr-software-development-engineer-aws-dms",
-      "requestedLocation": "Ireland",
-      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=10\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Ireland\u0026country=IRL\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
-      "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-05-27T20:29:31.8152869\u002B00:00",
-      "lastSeenAt": "2026-07-21T08:44:06.5378171\u002B00:00",
+      "url": "https://www.amazon.jobs/en/jobs/10390051/sr-software-engineer-community-feedback",
+      "requestedLocation": "Germany",
+      "searchUrl": "https://www.amazon.jobs/en/search.json?offset=0\u0026result_limit=10\u0026sort=relevant\u0026base_query=Software%20Engineer\u0026loc_query=Germany\u0026country=DEU\u0026latitude=\u0026longitude=\u0026loc_group_id=\u0026invalid_location=false\u0026city=\u0026region=\u0026county=",
+      "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-07-21T19:51:48.9350634\u002B00:00",
+      "lastSeenAt": "2026-07-23T08:44:47.1982018\u002B00:00",
       "isActive": false,
-      "contentHash": "36b926c3db854c9ea60bb3a45386f45f6799590d4858c2c08fb8f5114b1b5778"
+      "contentHash": "77cd4b2ced7c78a0875d6e31a873ba973bb9edde8654351a3aa53c11ff99614c"
     },
     {
       "id": "3127773",
