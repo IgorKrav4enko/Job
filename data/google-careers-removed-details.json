@@ -1,6 +1,51 @@
 {
   "jobs": [
     {
+      "id": "136586589349257926",
+      "title": "Software Engineer, Distributed Systems, Cluster Management, Autopilot",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/136586589349257926-software-engineer-distributed-systems-cluster-management-autopilot?location=Poland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Warsaw, Poland",
+        "Krak\u00F3w, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-07-02T19:50:45.9529209\u002B00:00",
+      "lastSeenAt": "2026-07-23T19:44:52.9001424\u002B00:00",
+      "removedAt": "2026-07-24T08:41:30.7502713\u002B00:00",
+      "removedInRunId": "2026-07-24T08-41-30Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckVLUTQ8RISMmH6jJZGRW-TUAm_L4nT4WCsY-_bzYnmhNEjsA1Ny_i0USxd8vRFSh6RpvAub8bFSYDf9v41nOL_XEivH7Wj9XeAzvUUuKOhLXj3KckB6JZ-FqAIHkNQ%3D%3D_V2\u0026loc=PL\u0026title=Software\u002BEngineer",
+      "aboutTheJobRaw": "Google Cloud\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google Cloud\u0027s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. You will anticipate our customer needs and be empowered to act like an owner, take action and innovate. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\nGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142364000 - z\u0142374000 (PLN) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign, develop, and maintain clean, reliable code to enhance the Autopilot system, leveraging AI to optimize how memory and compute resources are allocated across applications.\u003C/li\u003E\n\u003Cli\u003ELead the end-to-end life-cycle of new features, from initial planning and design to launch, ensuring they operate safely and effectively in production environments.\u003C/li\u003E\n\u003Cli\u003EAddress large-scale engineering challenges by identifying ways to increase system efficiency, enabling infrastructure to manage millions of tasks concurrently without performance degradation.\u003C/li\u003E\n\u003Cli\u003EMaintain system reliability by investigating software issues, debugging code, and actively monitoring operations to ensure Autopilot runs smoothly for all dependent applications.\u003C/li\u003E\n\u003Cli\u003ECollaborate closely with teammates and partner engineering groups to understand requirements, conduct code reviews, and share innovative ideas for building better infrastructure tools.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in software development using general-purpose programming languages, with a focus on C\u002B\u002B.\u003C/li\u003E\n\u003Cli\u003EExperience with data structures and algorithm design.\u003C/li\u003E\n\u003Cli\u003EExperience designing, building, and maintaining large-scale distributed computing systems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science, Computer Engineering, or a related technical field.\u003C/li\u003E\n\u003Cli\u003EExperience applying artificial intelligence to create a software.\u003C/li\u003E\n\u003Cli\u003EDemonstrated experience taking end-to-end ownership of complex technical projects and successfully launching impactful features in production environments.\u003C/li\u003E\n\u003Cli\u003EFamiliarity with data analysis and querying languages, such as SQL, to make data-driven decisions regarding fleet performance.\u003C/li\u003E\n\u003Cli\u003EFamiliarity with Google-internal development tools and build systems like Blaze.\u003C/li\u003E\n\u003Cli\u003EDeep understanding of operating systems internals, resource management (CPU, memory), and system performance optimization.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        },
+        {
+          "displayName": "Krak\u00F3w, Poland",
+          "addresses": [
+            "Krak\u00F3w, Poland"
+          ],
+          "city": "Krak\u00F3w",
+          "regionCode": "Lesser Poland Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-02T14:07:12.5310000\u002B00:00",
+        "2026-07-02T14:07:13.0800000\u002B00:00"
+      ]
+    },
+    {
       "id": "136889431788266182",
       "title": "Cloud Web Application Engineer",
       "company": "Google",
