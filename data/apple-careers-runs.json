@@ -8019,6 +8019,57 @@
           "unchangedCount": 40
         }
       ]
+    },
+    {
+      "runId": "2026-07-27T10-08-41Z",
+      "generatedAt": "2026-07-27T10:08:41.9492576\u002B00:00",
+      "totalJobs": 98,
+      "addedCount": 1,
+      "removedCount": 0,
+      "changedCount": 5,
+      "unchangedCount": 92,
+      "perLocation": [
+        {
+          "location": "Canada",
+          "totalJobs": 11,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 11
+        },
+        {
+          "location": "Germany",
+          "totalJobs": 23,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 23
+        },
+        {
+          "location": "Ireland",
+          "totalJobs": 19,
+          "addedCount": 1,
+          "removedCount": 0,
+          "changedCount": 5,
+          "unchangedCount": 13
+        },
+        {
+          "location": "Switzerland",
+          "totalJobs": 5,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 5
+        },
+        {
+          "location": "United Kingdom",
+          "totalJobs": 40,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 40
+        }
+      ]
     }
   ]
 }
