@@ -1,6 +1,113 @@
 {
   "jobs": [
     {
+      "id": "81546170060415686",
+      "title": "Senior Software Engineer, Site Reliability Engineering, Vertex AI 3P SRE",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/81546170060415686-senior-software-engineer-site-reliability-engineering-vertex-ai-3p-sre?location=Poland\u0026q=Software\u002BEngineer\u0026page=3",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-07-21T19:50:49.8809110\u002B00:00",
+      "lastSeenAt": "2026-07-28T08:50:09.9633659\u002B00:00",
+      "removedAt": "2026-07-28T19:51:42.4347520\u002B00:00",
+      "removedInRunId": "2026-07-28T19-51-42Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckVa0K0h7aztKRLYytX86c1Hjg9fszl2NLnc2d4Y76vzrEjsA1Ny_i0JAZkuyD8_nAW_Q-es83a0HPU85D5-JtVCpEtmZvyBHWlvzPVx1XTfu-Hc8grje5ZhIItxOdw%3D%3D_V2\u0026loc=PL\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003ESite Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google Cloud\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to customer\u0027s needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance. \u003C/p\u003E\u003Cdiv\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google Cloud, while using your expertise in coding, algorithms, complexity analysis and large-scale system design. SRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\u003C/div\u003E\n\u003Cp\u003EVertex AI is Google Cloud\u0027s flagship AI platform, offering a suite of tools and services for the entire ML lifecycle. This includes everything from data preparation and experimentation to training, tuning, and serving models at scale. Vertex AI supports platforms for third-party models, including popular open-source models from Model Garden and enterprise-grade models from key partners like Anthropic.\u003Cbr\u003E\u003Cbr\u003EIn this role, you will be at the forefront of ensuring the rock-solid reliability and performance of the infrastructure underpinning these third-party model deployments, with a focus on our GKE-based serving stack.\u003C/p\u003EBehind everything our users see online is the architecture built by the Technical Infrastructure team to keep it running. From developing and maintaining our data centers to building the next generation of Google platforms, we make Google\u0027s product portfolio possible. We\u0027re proud to be our engineers\u0027 engineers and love voiding warranties by taking things apart so we can rebuild them. We keep our networks up and running, ensuring our users have the best and fastest experience possible.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142364000 - z\u0142374000 (PLN) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EEngage in and improve the whole lifecycle of servicesfrom inception and design through to deployment, operation, and refinement.\u003C/li\u003E\n\u003Cli\u003ESupport services before they go live through activities such as system design consulting, developing software platforms and frameworks, capacity planning, and launch reviews.\u003C/li\u003E\n\u003Cli\u003EMaintain services once they are live by measuring and monitoring availability, latency, and overall system health.\u003C/li\u003E\n\u003Cli\u003EScale systems sustainably through mechanisms like automation and evolve systems by pushing for changes that improve reliability and velocity.\u003C/li\u003E\n\u003Cli\u003EPractice sustainable incident response and blameless post-mortems (Post-Mortem Examinations).\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience in designing, analyzing, and troubleshooting large-scale distributed systems.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience leading projects and providing technical leadership. \u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or Engineering or a related technical field.\u003C/li\u003E\n\u003Cli\u003EExperience with Load Balancing, high-availability, and scalable system design.\u003C/li\u003E\n\u003Cli\u003EExperience with Monitoring and Observability in Cloud and cluster management systems (e.g., Cloud Monitoring, Monarch, Automon).\u003C/li\u003E\n\u003Cli\u003EExperience with Performance analysis and optimization (e.g., Dapper, pprof).\u003C/li\u003E\n\u003Cli\u003EExperience with cluster management system and Google Cloud interactions.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-21T14:38:33.8700000\u002B00:00",
+        "2026-07-21T14:38:33.9110000\u002B00:00"
+      ]
+    },
+    {
+      "id": "96181004833563334",
+      "title": "Software Engineer III, Site Reliability Engineering, Alphanet",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/96181004833563334-software-engineer-iii-site-reliability-engineering-alphanet?location=Ireland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "Ireland",
+      "firstSeenAt": "2026-07-17T19:31:27.2368625\u002B00:00",
+      "lastSeenAt": "2026-07-28T08:50:09.9633659\u002B00:00",
+      "removedAt": "2026-07-28T19:51:42.4347520\u002B00:00",
+      "removedInRunId": "2026-07-28T19-51-42Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckfZ_qyEW7xmZ6sEZ16V7h83f6P79xKRj5y9gcezqRMtwEjoA1Ny_i4AEbiYc-D70JGD-3ssYnkakZGQhEBYHmEJgAVUdyd0qp1R6Za0juVYwq0r9uHs5_F9Ae9BC_V2\u0026loc=IE\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "\u003Cp\u003ESite Reliability Engineering (SRE) is what you get when you treat operations as if it\u2019s a software problem. Our mission is to progress, protect, and provide for the software and systems behind all of Google\u2019s public services - Search, Ads, Gmail, Android, YouTube, and AppEngine, to name just a few - with an ever-watchful eye on their availability, latency, performance, and capacity. \u003Cbr\u003E\u003Cbr\u003EThis is an unusual job, unlike others in the industry. Like traditional operations groups, we keep important, revenue-critical systems up and running despite hurricanes, bandwidth outages, and \u003Ca href=\u0022http://googleblog.blogspot.ie/2014/01/todays-outage-for-several-google.html\u0022\u003Econfiguration problems\u003C/a\u003E. Unlike traditional operations groups, we also have full access to and authority to fix, extend, and scale the code to keep it working and harden it against all the vagaries of the Internet. We hire people from both systems and software backgrounds. Strong candidates will have experience with both. \u003Cbr\u003E\u003Cbr\u003EJust as what we do is unique, where we do it is unique too. At Google, we have the good fortune to have developed many interesting systems ranging from \u003Ca href=\u0022http://research.google.com/archive/spanner.html\u0022\u003Eplanet-spanning databases\u003C/a\u003E to \u003Ca href=\u0022http://research.google.com/pubs/pub42851.html\u0022\u003Enear real-time scalable data warehousing\u003C/a\u003E to \u003Ca href=\u0022http://research.google.com/pubs/pub41318.html\u0022\u003Efault-tolerant datastream joining\u003C/a\u003E. In SRE, we flip between the fine-grained detail of disk driver I/O scheduling to the big picture of continental-level service capacity, across a range of systems and a user population measured in billions. We own those products in production. We drive reliability and performance across massive scale by mastering the full depth of the stack. We literally do learn something new every day - usually surprising things - that have the potential to transform the lives of billions of our users around the world.\u003C/p\u003E\n\u003Cp\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EIreland: \u20AC100000 - \u20AC103000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWrite product or system development code.\u003C/li\u003E\n\u003Cli\u003EReview code developed by other engineers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or Engineering.\u003C/li\u003E\n\u003Cli\u003E2 years of experience designing, analyzing, and troubleshooting large-scale distributed systems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "1 Grand Canal Plaza, Grand Canal Street Upper, Dublin, D04 HR25, Ireland"
+          ],
+          "city": "Dublin",
+          "postalCode": "D04 HR25",
+          "regionCode": "D",
+          "countryCode": "IE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-17T10:38:42.1600000\u002B00:00",
+        "2026-07-17T10:38:43.4350000\u002B00:00"
+      ]
+    },
+    {
+      "id": "115044758895633094",
+      "title": "Software Engineer, Site Reliability Engineering",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/115044758895633094-software-engineer-site-reliability-engineering?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-07-15T19:35:44.3001193\u002B00:00",
+      "lastSeenAt": "2026-07-28T08:50:09.9633659\u002B00:00",
+      "removedAt": "2026-07-28T19:51:42.4347520\u002B00:00",
+      "removedInRunId": "2026-07-28T19-51-42Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckaeCHB_4SxOVtQWXd_OESjfIJMEAq07tsDwtQHGkjmFjEjsA1Ny_i86MNQMMpVrEuiTa0OUuPy58lyX84IW3Sef7Vv4R4Itl3CYLl-2w0jzxC_yeFKD94nrR1XFjDg%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineer",
+      "aboutTheJobRaw": "Site Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google Cloud\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to customer\u0027s needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance. \u003Cbr\u003E\u003Cbr\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google Cloud, while using your expertise in coding, algorithms, complexity analysis and large-scale system design. SRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\n\u003Cp\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWrite product or system development code.\u003C/li\u003E\n\u003Cli\u003EReview code developed by other engineers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or Engineering.\u003C/li\u003E\n\u003Cli\u003E2 years of experience designing, analyzing, and troubleshooting large-scale distributed systems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-15T14:37:01.7600000\u002B00:00",
+        "2026-07-15T14:37:01.9820000\u002B00:00"
+      ]
+    },
+    {
       "id": "132657652051124934",
       "title": "Security Engineer III, Offensive Security",
       "company": "Google",
