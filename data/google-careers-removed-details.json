@@ -1,6 +1,211 @@
 {
   "jobs": [
     {
+      "id": "120100860968477382",
+      "title": "AI Innovation Engineer, Google Cloud",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/120100860968477382-ai-innovation-engineer-google-cloud?location=Germany\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Munich, Germany",
+        "Frankfurt am Main, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-07-23T19:44:52.9001424\u002B00:00",
+      "lastSeenAt": "2026-07-30T08:48:07.5855328\u002B00:00",
+      "removedAt": "2026-07-30T19:50:35.9065060\u002B00:00",
+      "removedInRunId": "2026-07-30T19-50-35Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckZdrYZYJkf5020E2vrqQbHrSyNHK5iKVoYaisoAaKqmQEjsA1Ny_i7gm9nPuMw1lN-6ntWxczThhNHsCMXhtOEH8ceqHvvSuqXRGxwQYFZAsDNATJUYhND4iSKrg4g%3D%3D_V2\u0026loc=DE\u0026title=AI\u002BInnovation\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EThe Global Solutions and Consumer AI team accelerates customer value and increase adoption by delivering innovative, repeatable, and enterprise-ready solutions focused on business value. Make Google Cloud the preferred choice for customers by delivering the highest-value, industry relevant solutions.\u003C/p\u003E\u003Cp\u003EIn this role, you will collaborate with clients to transform initial concepts into reality. You will create solutions using the latest machine learning and Generative AI technologies to replace traditional workflows for a customer in the capital markets finance industry. You will work at the heart of Financial Market Infrastructures (FMIs) including high-stakes clearing, settlement, and custody environments to identify where AI can drive systemic efficiency.\u003C/p\u003E\u003Cp\u003EYou will act as a motivated innovator and builder who can operate with minimal guidance. You will not only code and create functional prototypes but also help define the Critical User Journeys (CUJs) and technical requirements that turn a Proof-of-Concept (POC) into a scalable, production-ready solution usable across a broad base of Google Cloud Platform (GCP) clients.\u003C/p\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EGermany: \u20AC124000 - \u20AC128000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign and build autonomous agentic workflows utilizing machine learning and Generative AI technologies as part of a fully autonomous or human-in-the-loop agentic workflow.\u003C/li\u003E\n\u003Cli\u003EPartner with client leads (business user) to identify high-impact AI use cases. Translate these into Product Requirement Documents (PRDs), clearly defining CUJs and success metrics.\u003C/li\u003E\n\u003Cli\u003EEvaluate and integrate AI solutions with modern data foundations, including relational databases, data lake houses, and real-time streaming architectures.\u003C/li\u003E\n\u003Cli\u003EEnsure all prototypes are built with a \u0022production-first\u0022 mindset. Implement basic CI/CD pipelines and utilize Infrastructure-as-Code (IaC) (e.g., Terraform) to ensure environments are reproducible and secure.\u003C/li\u003E\n\u003Cli\u003ECreate clear technical guides to ensure a seamless hand-off from POC to engineering teams.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003E\u003Cem\u003EBachelor\u0027s degree in Computer Science, a related field, or equivalent practical experience.\u003C/em\u003E\u003C/li\u003E\n\u003Cli\u003E6 years of experience in software or data engineering.\u003C/li\u003E\n\u003Cli\u003EExperience solving real-world problems using machine learning methodologies (deep learning, reinforced learning), model identification, selection and AI operations (e.g., model monitoring).\u003C/li\u003E\n\u003Cli\u003EExperience solving real-world problems using Generative AI and agentic orchestration utilizing frameworks (e.g., LangChain, CrewAI, or Vertex AI Agent Builder) and vector databases.\u003C/li\u003E\n\u003Cli\u003EExperience with one of the following programming languages: Python, Go, or Java.\u003C/li\u003E\n\u003Cli\u003EExperience with design patterns, testing frameworks, and API contract design.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience in financial services, and with the regulatory and operational clearing, settlement, or custody.\u003C/li\u003E\n\u003Cli\u003EExperience with FSI regulatory practices and data residency, encryption at rest/transit (CMEK), and \u0022explainable AI\u0022 requirements in banking.\u003C/li\u003E\n\u003Cli\u003EExperience with data modeling of relational, NoSQL, and analytical data modeling (Star Schema, Data Vault, etc.).\u003C/li\u003E\n\u003Cli\u003EExperience working in a high-maturity DevOps culture (trunk-based development, automated testing, blue/green deployments).\u003C/li\u003E\n\u003Cli\u003EExperience in BigQuery, Vertex AI, Dataflow, and Pub/Sub with an ability to drive the discovery phase, moving from a vague business problem to a structured PRD and a working technical demo.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Munich, Germany",
+          "addresses": [
+            "Munich, Germany"
+          ],
+          "city": "Munich",
+          "regionCode": "BY",
+          "countryCode": "DE"
+        },
+        {
+          "displayName": "Frankfurt am Main, Germany",
+          "addresses": [
+            "Frankfurt am Main, Germany"
+          ],
+          "city": "Frankfurt am Main",
+          "regionCode": "HE",
+          "countryCode": "DE"
+        },
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "London, UK"
+          ],
+          "city": "London",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-23T15:39:45.1160000\u002B00:00",
+        "2026-07-23T15:39:45.7480000\u002B00:00"
+      ]
+    },
+    {
+      "id": "90731371013513926",
+      "title": "Forward Deployed Engineer II, GCC",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/90731371013513926-forward-deployed-engineer-ii-gcc?location=Poland\u0026q=Software\u002BEngineer\u0026page=4",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-06-30T09:59:48.8217972\u002B00:00",
+      "lastSeenAt": "2026-07-30T08:48:07.5855328\u002B00:00",
+      "removedAt": "2026-07-30T19:50:35.9065060\u002B00:00",
+      "removedInRunId": "2026-07-30T19-50-35Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckQlil0FnGa0FDludUCLI4q_qQmpMkf7bHcPTrf9qQW9SEjsA1Ny_i79g16y6QsgtkHmITZOFNWfV5zfG2vFTkz5jLLKbv1OpW1A8Tl81-G3Ma0ZQF-3MLZESucQGHA%3D%3D_V2\u0026loc=PL\u0026title=Forward\u002BDeployed\u002BEngineer\u002BII",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle Cloud\u2019s mission is to make every business successful through AI by combining cutting-edge technology, infrastructure, and talent. AI/ML software engineers in Cloud bridge the gap between pioneering models and a massive product vehicle reaching billions. Our talent density and AI-powered tools drive rapid development, rooted in a culture of empowerment and a bias to action. In this role, you aren\u2019t just building technology; you\u2019re shaping the frontier of enterprise and driving the evolution of advanced models. \u003C/p\u003E\n\u003Cp\u003EAs a GenAI Forward Deployed Engineer at Google Cloud, you are an embedded builder who bridges the gap between frontier AI products and production-grade reality within customers.Unlike traditional advisory roles, you function as an innovator-builder, moving beyond high-level architecture to code, debug, and jointly ship bespoke agentic solutions directly within the customer\u2019s environment. This role is designed for high-agency engineers with a founder\u2019s mindset. You will address blockers to production including solving the integration complexities, data readiness issues, and state-management challenges that prevent AI from reaching enterprise-grade maturity. By embedding with strategic accounts, you serve a dual purpose: providing white glove deployment of complex AI systems and acting as a critical feedback loop, transforming real-world field insights into Google Cloud\u2019s future product roadmap.\u003C/p\u003E\u003Cp\u003EIt\u0027s an exciting time to join Google Cloud\u2019s Go-To-Market team, leading the AI revolution for businesses worldwide. You\u2019ll excel by leveraging Google\u0027s brand credibility\u2014a legacy built on inventing foundational technologies and proven at scale. We\u2019ll provide you with the world\u0027s most advanced AI portfolio, including frontier Gemini models, and the complete Vertex AI platform, helping you to solve business problems. We\u2019re a collaborative culture providing direct access to DeepMind\u0027s engineering and research minds, empowering you to solve customer challenges. Join us to be the catalyst for our mission, drive customer success, and define the new cloud era\u2014the market is yours. \u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142206000 - z\u0142212000 (PLN) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003E\u003Cspan dir=\u0022ltr\u0022\u003ELead the Discovery-to-Deployment Journey:\u00A0Serve as the lead developer for complex AI applications, transitioning from rapid prototypes to production-grade agentic workflows (e.g., multi-agent systems, MCP servers) that drive measurable ROI.\u003C/span\u003E\u003C/li\u003E\n\u003Cli\u003EBridge the Enterprise Gap:\u00A0Architect and code the connective tissue between Google\u2019s AI products and customer\u0027s live infrastructure, including APIs, legacy data silos, and security perimeters.\u003C/li\u003E\n\u003Cli\u003EEngineer for Production Excellence:\u00A0Build high-performance evaluation (Eval) pipelines and observability frameworks to ensure agentic systems meet rigorous requirements for accuracy, safety, and latency.\u003C/li\u003E\n\u003Cli\u003EAct as a Product Catalyst: Identify repeatable field patterns and technical friction points in Google\u2019s AI stack, converting them into reusable modules or formal product feature requests for the Engineering teams.\u003C/li\u003E\n\u003Cli\u003EUpskill and Embed:\u00A0Co-build with customer engineering teams to instill Google-grade development best practices, ensuring long-term project success and high end-user adoption.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Engineering, Computer Science, a related field, or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with software development in one or more programming languages (e.g., Python)\u003C/li\u003E\n\u003Cli\u003EExperience in Machine Learning, Natural Language Processing (NLP), generative AI agents, and DevOps.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s or PhD in AI, Computer Science, or a related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience implementing multi-agent systems using frameworks (e.g., LangGraph, CrewAI, ADK) and complex patterns (e.g., ReAct, self-reflection, hierarchical delegation).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EKnowledge of \u0022LLM-native\u0022 metrics (e.g., tokens/sec, cost-per-request) and techniques for optimizing state management and granular tracing.\u003C/li\u003E\n\u003Cli\u003EProven ability to implement secure agentic workflows incorporating MCP, tool-calling, and OAuth-based authentication.\u003C/li\u003E\n\u003Cli\u003EFluent in French, Spanish, Italian or other European languages.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-30T09:09:21.0140000\u002B00:00",
+        "2026-06-30T09:09:21.1580000\u002B00:00"
+      ]
+    },
+    {
+      "id": "94277673970213574",
+      "title": "Senior Software Engineer, Agent Building, Google Cloud",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/94277673970213574-senior-software-engineer-agent-building-google-cloud?location=Poland\u0026q=Software\u002BEngineer\u0026page=3",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-06-30T20:18:18.1334897\u002B00:00",
+      "lastSeenAt": "2026-07-30T08:48:07.5855328\u002B00:00",
+      "removedAt": "2026-07-30T19:50:35.9065060\u002B00:00",
+      "removedInRunId": "2026-07-30T19-50-35Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckYwgQ4l8Ct9XgLyIcTEkWjjDTgoJun98Scc-QEkvWp0dEjsA1Ny_i_k2xab96l3gWn_RbL1TOydJCMQMAHzuKAbFGiFSgjnLx7ROQMcbQXOVch4ZB3QHM8XKJRx9dg%3D%3D_V2\u0026loc=PL\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EAs a GenAI Forward Deployed Engineer at Google Cloud, you will be an embedded builder bridging the gap between frontier AI products and production-grade reality for our customers. You will function as a builder-consultant, moving beyond high-level architecture to code, debug, and jointly ship bespoke agentic solutions directly within the customer\u2019s environment.\u003C/p\u003E\u003Cp\u003EIn this role, you will manage blockers to production including solving the integration complexities, data readiness issues, and state-management issues that prevent AI from reaching enterprise-grade maturity. By embedding with accounts, you will serve a dual purpose: providing white-glove deployment of AI systems and acting as a critical feedback loop, transforming real-world field insights into Google Cloud\u2019s future product roadmap.\u003C/p\u003E\u003Cp\u003EIt\u0027s an exciting time to join Google Cloud\u2019s Go-To-Market team, leading the AI revolution for businesses worldwide. You\u2019ll succeed by leveraging Google\u0027s brand credibility\u2014a legacy built on inventing foundational technologies and proven at scale. We\u2019ll provide you with the world\u0027s most advanced AI portfolio, including frontier Gemini models, and the complete Vertex AI platform, helping you to solve business problems. We\u2019re a collaborative culture providing direct access to DeepMind\u0027s engineering and research minds, empowering you to solve customer challenges. Join us to be the catalyst for our mission, drive customer success, and define the new cloud era\u2014the market is yours. \u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142364000 - z\u0142374000 (PLN) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EServe as the lead developer for AI applications, transitioning from rapid prototypes to production-grade agentic workflows (e.g., multi-agent systems, model context protocol servers) that drive measurable return on investment.\u003C/li\u003E\n\u003Cli\u003EArchitect and code the connective tissue between Google\u2019s AI products and customer\u0027s live infrastructure, including APIs, legacy data silos, and security perimeters.\u003C/li\u003E\n\u003Cli\u003EBuild high-performance evaluation pipelines and observability frameworks to ensure agentic systems meet requirements for accuracy, safety, and latency.\u003C/li\u003E\n\u003Cli\u003EIdentify repeatable field patterns and technical friction points in Google\u2019s AI stack, converting them into reusable modules or product feature requests for the Engineering teams.\u003C/li\u003E\n\u003Cli\u003EDrive engineering excellence by mentoring talent, co-building with customer teams, and influencing cross-functional strategies to up-level organizational technical capabilities.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Engineering, Computer Science, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience building and shipping production-grade AI-driven solutions to external or internal customers using Python, Typescript or comparable languages.\u003C/li\u003E\n\u003Cli\u003EExperience leading technical discovery sessions with business stakeholders and engineering teams to define AI and hardware infrastructure requirements.\u003C/li\u003E\n\u003Cli\u003EExperience designing and building AI systems on cloud platforms (e.g., Google Cloud Platform (GCP)).\u003C/li\u003E\n\u003Cli\u003EExperience building pipelines for structured, unstructured data, incorporating vector databases and retrieval-augmented generation (RAG)-like architectures to power enterprise-grade AI solutions.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in AI, Computer Science, or a related technical field.\u003C/li\u003E\n\u003Cli\u003EExperience implementing multi-agent systems using frameworks (e.g., LangGraph, CrewAI, or Google\u2019s Agent Development Kit (ADK)) and patterns like ReAct, self-reflection, and hierarchical delegation.\u003C/li\u003E\n\u003Cli\u003EKnowledge of large language model native metrics (tokens/sec, cost-per-request) and techniques for optimizing state management and granular tracing.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-30T13:37:23.9690000\u002B00:00",
+        "2026-06-30T13:37:24.0220000\u002B00:00"
+      ]
+    },
+    {
+      "id": "76983222574949062",
+      "title": "Software Engineer II, BigQuery UI, Adoption Pod",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/76983222574949062-software-engineer-ii-bigquery-ui-adoption-pod?location=Poland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Krak\u00F3w, Poland",
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-07-16T19:33:45.7325680\u002B00:00",
+      "lastSeenAt": "2026-07-30T08:48:07.5855328\u002B00:00",
+      "removedAt": "2026-07-30T19:50:35.9065060\u002B00:00",
+      "removedInRunId": "2026-07-30T19-50-35Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckVC4FwHucTllnpBsWlJQ_-BgiLOfxzi65fXYkF0UebIgEjsA1Ny_i3FZVzjBhxJ2vhHs8TWN9axa1nuPuoUjjk2VpjunLvLN6r7MSucJlZmham45bkJEy4zKcycREA%3D%3D_V2\u0026loc=PL\u0026title=Software\u002BEngineer\u002BII",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EThe BigQuery UI team (go/bqui) is on a mission to design and build an exceptional, intuitive, and powerful experience for BigQuery, one of Google Cloud\u0027s cornerstone products. We are the creative team behind the BigQuery (BQ) user interface in the Google Cloud Console (go/pantheon), enabling thousands of data analysts, scientists, data engineers, and administrators to unlock the potential of their business data. Our team\u0027s charter comprises the end-to-end user experience for key BigQuery journeys, including creating a welcoming and frictionless path for users new to BigQuery, building the user interface (UI) to help customers easily transition their data to Google Cloud, and delivering intuitive interfaces for at-scale data protection and management.\u003C/p\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142206000 - z\u0142212000 (PLN) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003C/li\u003E\n\u003Cli\u003EWrite product or system development code; Review code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003C/li\u003E\n\u003Cli\u003EWork closely with BigQuery backend teams, Product, Managers, User Experience (UX) Researchers, and UX Designers on improvements to Cloud Data Analytics Products.\u003C/li\u003E\n\u003Cli\u003EDesign, build new or improve components use by features for Cloud Data Analytics Front Ends; Collaborate with other Data Analytics UI teams and Google Cloud Platform (GCP) teams whilst creating/using shared/common components in the Cloud Console (e.g., Pantheon).\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003E Bachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with software development in one or more programming languages (e.g., Python, C, C\u002B\u002B, Java, JavaScript).\u003C/li\u003E\n\u003Cli\u003E1 year of experience with data structures and algorithms.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or a related technical field.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with TypeScript, JavaScript, Angular, Java, GraphQL.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Krak\u00F3w, Poland",
+          "addresses": [
+            "Krak\u00F3w, Poland"
+          ],
+          "city": "Krak\u00F3w",
+          "regionCode": "Lesser Poland Voivodeship",
+          "countryCode": "PL"
+        },
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-16T14:09:25.0150000\u002B00:00",
+        "2026-07-17T09:40:51.4340000\u002B00:00",
+        "2026-07-17T09:40:51.5230000\u002B00:00"
+      ]
+    },
+    {
+      "id": "85013635671171782",
+      "title": "Software Engineering Manager, Android Automotive AI/ML",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/85013635671171782-software-engineering-manager-android-automotive-aiml?location=Poland\u0026q=Software\u002BEngineer\u0026page=3",
+      "locations": [
+        "Krak\u00F3w, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-06-30T20:18:18.1334897\u002B00:00",
+      "lastSeenAt": "2026-07-30T08:48:07.5855328\u002B00:00",
+      "removedAt": "2026-07-30T19:50:35.9065060\u002B00:00",
+      "removedInRunId": "2026-07-30T19-50-35Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckQE5tB6dIxypeQQKwN0oLwQZQg31Bcwdsaw5GFnic64iEjsA1Ny_i-FoAHfk6FCOGAL024EWHYRmiR7GC1N7bykWR3_QtYvW6DVsjtmIpR8p7xKh6gUlqMhwM0QbzA%3D%3D_V2\u0026loc=PL\u0026title=Software\u002BEngineering\u002BManager",
+      "aboutTheJobRaw": "\u003Cp\u003ELike Google\u0027s own ambitions, the work of a Software Engineer (SWE) goes way beyond just Search. SWE Managers have not only the technical expertise to take on and provide technical leadership to major projects, but also manage a team of engineers. You not only optimize your own code but make sure engineers are able to optimize theirs. As a SWE Manager you manage your project goals, contribute to product strategy and help develop your team. SWE teams work all across the company, in areas such as information retrieval, artificial intelligence, natural language processing, distributed computing, large-scale system design, networking, security, data compression, user interface design; the list goes on and is growing every day. Operating with scale and speed, our exceptional software engineers are just getting started -- and as a manager, you guide the way.\u003C/p\u003E\n\u003Cp\u003EIn this role, you will not only optimize your own code but also ensure engineers optimize theirs. You will manage project goals, contribute to product strategy, and help develop the team.\u003Cbr\u003E\u003Cbr\u003EAs a part of Android Automotive, you will develop platforms and services that bring Google\u2019s ecosystem to vehicles. You will address tests such as bridging the gap between car sensors and Android Frameworks, building feature user experiences that are driver distraction-safe, and defining the future of Google\u2019s AI technologies. Additionally, you will build and manage Engineering teams of low-level system architecture, application development, and back-end systems. You will help reimagine the Android operating system, and apps and services for end users.\u003C/p\u003EAutomotive industry executives say there will be more change in their business in the next 5 years than they have seen in the last 50 years. The Android Auto team collaborates with vehicle manufacturers to develop and deliver on this massive opportunity, building on a proven embedded platform to create a leading Assistant-powered, navigation, entertainment, and communication vehicle system, which will be delivered to specialized people-moving devices.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142480000 - z\u0142492000 (PLN) \u002B 20% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003ESet and communicate team priorities that support the broader organization\u0027s goals. Align strategy, processes, and decision-making across teams.\u003C/li\u003E\n\u003Cli\u003ESet clear expectations with individuals based on their level and role and aligned to the broader organization\u0027s goals. Meet regularly with individuals to discuss performance, development and provide feedback and coaching.\u003C/li\u003E\n\u003Cli\u003EDevelop the mid-term technical direction and roadmap within the scope of the teams. Evolve the roadmap to meet anticipated future requirements and infrastructure needs.\u003C/li\u003E\n\u003Cli\u003EDesign, guide and vet systems designs within the scope of the broader area, and write product or system development code to solve ambiguous problems.\u003C/li\u003E\n\u003Cli\u003EReview code developed by other engineers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience with software development in one or more programming languages (e.g., Python, C, C\u002B\u002B, Java, JavaScript).\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a technical leadership role; overseeing projects, with 2 years of experience in a people management, supervision/team leadership role.\u003C/li\u003E\n\u003Cli\u003EExperience with object-oriented development, with a focus on either embedded systems or Android platform engineering.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Engineering, Computer Science, or a related technical field.\u003C/li\u003E\n\u003Cli\u003E3 years of experience working in an organization involving cross-functional, or cross-business projects.\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a technical leadership role leading project teams and setting technical direction.\u003C/li\u003E\n\u003Cli\u003EExperience with software development in the automotive industry.\u003C/li\u003E\n\u003Cli\u003EExperience with leading and shipping on-device Machine Learning (ML) related products or solutions.\u003C/li\u003E\n\u003Cli\u003EAbility to collaborate, deliver results and hire engineers.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Krak\u00F3w, Poland",
+          "addresses": [
+            "Krak\u00F3w, Poland"
+          ],
+          "city": "Krak\u00F3w",
+          "regionCode": "Lesser Poland Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-06-30T11:38:13.9490000\u002B00:00",
+        "2026-06-30T11:38:13.9920000\u002B00:00"
+      ]
+    },
+    {
       "id": "79479704528003782",
       "title": "Cloud Engineer, Application Modernization",
       "company": "Google",
