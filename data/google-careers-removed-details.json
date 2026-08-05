@@ -1,6 +1,207 @@
 {
   "jobs": [
     {
+      "id": "106128536711897798",
+      "title": "Forward Deployed Engineer II, GCC (French, German)",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/106128536711897798-forward-deployed-engineer-ii-gcc-french-german?location=Ireland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "Ireland",
+      "firstSeenAt": "2026-07-03T09:34:35.2672658\u002B00:00",
+      "lastSeenAt": "2026-08-05T08:51:37.4376922\u002B00:00",
+      "removedAt": "2026-08-05T19:53:13.2630669\u002B00:00",
+      "removedInRunId": "2026-08-05T19-53-13Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckdfdpPZlzruHtrgCUGf_ZQZHutN6AjLH0tG5KpQlU2WkEjsA1Ny_i4tyJr0VNKeJPeOKAgocZ9ZGCh3a__rezwTln-5pWkdfFo-QdPiWLxJ93UZliuGjmOCWAEURvA%3D%3D_V2\u0026loc=IE\u0026title=Forward\u002BDeployed\u002BEngineer\u002BII",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle Cloud\u2019s mission is to make every business successful through AI by combining cutting-edge technology, infrastructure, and talent. AI/ML software engineers in Cloud bridge the gap between pioneering models and a massive product vehicle reaching billions. Our talent density and AI-powered tools drive rapid development, rooted in a culture of empowerment and a bias to action. In this role, you aren\u2019t just building technology; you\u2019re shaping the frontier of enterprise and driving the evolution of advanced models. \u003C/p\u003E\n\u003Cp\u003EAs a GenAI Forward Deployed Engineer at Google Cloud, you are an embedded builder who bridges the gap between frontier AI products and production-grade reality within customers.Unlike traditional advisory roles, you function as an innovator-builder, moving beyond high-level architecture to code, debug, and jointly ship bespoke agentic solutions directly within the customer\u2019s environment. This role is designed for high-agency engineers with a founder\u2019s mindset. You will address blockers to production including solving the integration complexities, data readiness issues, and state-management challenges that prevent AI from reaching enterprise-grade maturity. By embedding with strategic accounts, you serve a dual purpose: providing white glove deployment of complex AI systems and acting as a critical feedback loop, transforming real-world field insights into Google Cloud\u2019s future product roadmap.\u003C/p\u003E\u003Cp\u003EIt\u0027s an exciting time to join Google Cloud\u2019s Go-To-Market team, leading the AI revolution for businesses worldwide. You\u2019ll excel by leveraging Google\u0027s brand credibility\u2014a legacy built on inventing foundational technologies and proven at scale. We\u2019ll provide you with the world\u0027s most advanced AI portfolio, including frontier Gemini models, and the complete Vertex AI platform, helping you to solve business problems. We\u2019re a collaborative culture providing direct access to DeepMind\u0027s engineering and research minds, empowering you to solve customer challenges. Join us to be the catalyst for our mission, drive customer success, and define the new cloud era\u2014the market is yours. \u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EIreland: \u20AC76000 - \u20AC78000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003E\u003Cspan dir=\u0022ltr\u0022\u003ELead the Discovery-to-Deployment Journey:\u00A0Serve as the lead developer for complex AI applications, transitioning from rapid prototypes to production-grade agentic workflows (e.g., multi-agent systems, MCP servers) that drive measurable ROI.\u003C/span\u003E\u003C/li\u003E\n\u003Cli\u003EBridge the Enterprise Gap:\u00A0Architect and code the connective tissue between Google\u2019s AI products and customer\u0027s live infrastructure, including APIs, legacy data silos, and security perimeters.\u003C/li\u003E\n\u003Cli\u003EEngineer for Production Excellence:\u00A0Build high-performance evaluation (Eval) pipelines and observability frameworks to ensure agentic systems meet rigorous requirements for accuracy, safety, and latency.\u003C/li\u003E\n\u003Cli\u003EAct as a Product Catalyst: Identify repeatable field patterns and technical friction points in Google\u2019s AI stack, converting them into reusable modules or formal product feature requests for the Engineering teams.\u003C/li\u003E\n\u003Cli\u003EUpskill and Embed:\u00A0Co-build with customer engineering teams to instill Google-grade development best practices, ensuring long-term project success and high end-user adoption.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Engineering, Computer Science, a related field, or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with software development in one or more programming languages (e.g., Python)\u003C/li\u003E\n\u003Cli\u003EExperience in Machine Learning, Natural Language Processing (NLP), generative AI agents, and DevOps.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s or PhD in AI, Computer Science, or a related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience implementing multi-agent systems using frameworks (e.g., LangGraph, CrewAI, ADK) and complex patterns (e.g., ReAct, self-reflection, hierarchical delegation).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EKnowledge of \u0022LLM-native\u0022 metrics (e.g., tokens/sec, cost-per-request) and techniques for optimizing state management and granular tracing.\u003C/li\u003E\n\u003Cli\u003EProven ability to implement secure agentic workflows incorporating MCP, tool-calling, and OAuth-based authentication.\u003C/li\u003E\n\u003Cli\u003EFluent in French, Spanish, Italian or other European languages.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "1 Grand Canal Plaza, Grand Canal Street Upper, Dublin, D04 HR25, Ireland"
+          ],
+          "city": "Dublin",
+          "postalCode": "D04 HR25",
+          "regionCode": "D",
+          "countryCode": "IE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-03T06:39:14.0060000\u002B00:00",
+        "2026-07-03T06:39:14.3580000\u002B00:00"
+      ]
+    },
+    {
+      "id": "108160409503965894",
+      "title": "Research Engineer, Gemini Large Scale Pretraining, DeepMind",
+      "company": "DeepMind",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/108160409503965894-research-engineer-gemini-large-scale-pretraining-deepmind?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK",
+        "Mountain View, CA, USA"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-07-29T19:41:47.2703003\u002B00:00",
+      "lastSeenAt": "2026-08-05T08:51:37.4376922\u002B00:00",
+      "removedAt": "2026-08-05T19:53:13.2630669\u002B00:00",
+      "removedInRunId": "2026-08-05T19-53-13Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckZBGXEnOz2lUUilco_rncPlluXpwjdXh9iLtu9wXE-5gEjoA1Ny_i0yFD4a9iVzfCqZ3JbNaImeT9zXP6T0oGiYUb1HK0nJxnNfkdtpZZA7qXaGG7ToO2o4WjRoG_V2\u0026loc=GB\u0026title=Research\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EAt Google, research-focused Software Engineers are embedded throughout the company, allowing them to setup large-scale tests and deploy promising ideas quickly and broadly. Ideas may come from internal projects as well as from collaborations with research programs at partner universities and technical institutes all over the world.\u003C/p\u003E\u003Cp\u003EFrom creating experiments and prototyping implementations to designing new architectures, engineers work on real-world problems including artificial intelligence, data mining, natural language processing, hardware and software performance analysis, improving compilers for mobile platforms, as well as core search and much more. But you stay connected to your research roots as an active contributor to the wider research community by partnering with universities and publishing papers.\u003C/p\u003E\n\u003Cp\u003EArtificial intelligence will be one of humanity\u2019s most transformative inventions. At DeepMind, we are a pioneering AI lab with exceptional interdisciplinary teams focused on advancing AI development to solve complex global challenges and accelerate high-quality product innovation for billions of users. We use our technologies for widespread public benefit and scientific discovery, ensuring safety and ethics are always our highest priority.\u003C/p\u003E\u003Cdiv\u003EWe are pushing the boundaries across multiple domains. Our global teams offer diverse learning opportunities and varied career pathways for those driven to achieve exceptional results through collective effort.\u003C/div\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EUS: $147000 - $210000 (USD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWork on long term projects to enable new research, which involve multiple team members and require good software engineering and design.\u003C/li\u003E\n\u003Cli\u003ERespond to time-sensitive issues arising in large-scale training runs, and in ongoing research.\u003C/li\u003E\n\u003Cli\u003EMake systematic improvements to technical workflows and tooling used across pretraining.\u003C/li\u003E\n\u003Cli\u003EApply engineering expertise to help researchers navigate technical challenges. This requires both a deep understanding of the codebase and a broad understanding of the tech stack, the model architecture and data pipeline.\u003C/li\u003E\n\u003Cli\u003EDevelop the right balance between good engineering practices and having a flexible codebase which researchers find easy to use and extend.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, or a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software engineering involving Python-based ML/scientific libraries such as JAX or internship experience in these areas or Open Source Software (OSS) contributions.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with machine learning.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience with large-scale system design, distributed systems, or performance engineering.\u003C/li\u003E\n\u003Cli\u003EA good understanding of engineering best practices, codebase design, and testing.\u003C/li\u003E\n\u003Cli\u003EFamiliarity with how modern large language models are trained.\u003C/li\u003E\n\u003Cli\u003EAbility to collaborate with, and communicate effectively with, people with different skill sets and needs, and who may be distributed across different time zones.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        },
+        {
+          "displayName": "Mountain View, CA, USA",
+          "addresses": [
+            "Mountain View, CA, USA"
+          ],
+          "city": "Mountain View",
+          "regionCode": "CA",
+          "countryCode": "US"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-29T13:09:15.4290000\u002B00:00",
+        "2026-07-30T11:39:52.1870000\u002B00:00",
+        "2026-07-30T11:39:52.3250000\u002B00:00"
+      ]
+    },
+    {
+      "id": "133503821811720902",
+      "title": "Software Developer, Android, Glasses System UI",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/133503821811720902-software-developer-android-glasses-system-ui?location=Canada\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Waterloo, ON, Canada",
+        "San Jose, CA, USA"
+      ],
+      "requestedLocation": "Canada",
+      "firstSeenAt": "2026-07-24T08:41:30.7502713\u002B00:00",
+      "lastSeenAt": "2026-08-05T08:51:37.4376922\u002B00:00",
+      "removedAt": "2026-08-05T19:53:13.2630669\u002B00:00",
+      "removedInRunId": "2026-08-05T19-53-13Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckfBsHCoUN5hSdwnxFnjVcJCbRF7OhdLhuwp8kUXuWCPdEjsA1Ny_i0nrT5nsmWxL6ACoxdktCGu0dps_hiKBysQ7sLBTGaE5GGg4GtfJYHbcMVAxfI9SCtu8xWhKUg%3D%3D_V2\u0026loc=CA\u0026title=Software\u002BDeveloper",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software developers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for software developers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software developer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our software developers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\u003Cp\u003EAndroid is Google\u2019s mobile operating system powering more than 3 billion devices worldwide. Android is about bringing computing to everyone in the world. We believe computing is a super power for good, enabling access to information, economic opportunity, productivity, connectivity between friends and family and more. We think everyone in the world should have access to the best computing has to offer. We provide the platform for original equipment manufacturers (OEMs) and developers to build compelling computing devices (smartphones, tablets, TVs, wearables, etc) that run the best apps/services for everyone in the world.\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EUS: $147000 - $211000 (USD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003ECanada: $150000 - $154000 (CAD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003ECreate groundbreaking, user-centric experiences and foundational platform components, from concept to deployment. Design and build an intuitive home screen and innovative Artificial Intelligence agent interfaces that will define the future of the Android glasses platform.\u003C/li\u003E\n\u003Cli\u003EDesign and implement shared system User Interface services to enable seamless functionality across our future glasses hardware. Drive innovation in areas like dynamic widgets, deep artificial intelligence agent integration, and sophisticated notification management.\u003C/li\u003E\n\u003Cli\u003EPioneer and enhance novel interaction methodologies for augmented reality. Collaborate with cutting-edge machine learning perception specialists to create magical and intuitive user experiences.\u003C/li\u003E\n\u003Cli\u003EDrive experience definition and refinement by closely partnering with User Experience and Product Management teams. Translate user needs into tangible prototypes and conduct user testing to deliver maximum user benefit.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in Kotlin.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience in Java or other languages/frameworks used in mobile app development (Jetpack Compose).\u003C/li\u003E\n\u003Cli\u003EExperience with mobile app development.\u003C/li\u003E\n\u003Cli\u003EKnowledge of or experience in any of the following: Android apps, mobile development, graphical user interfaces, natural language processing and large language models.\u003C/li\u003E\n\u003Cli\u003EAbility to learn new coding languages as needed.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Waterloo, ON, Canada",
+          "addresses": [
+            "Waterloo, ON, Canada"
+          ],
+          "city": "Waterloo",
+          "regionCode": "ON",
+          "countryCode": "CA"
+        },
+        {
+          "displayName": "San Jose, CA, USA",
+          "addresses": [
+            "San Jose, CA, USA"
+          ],
+          "city": "San Jose",
+          "regionCode": "CA",
+          "countryCode": "US"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-24T04:39:44.3480000\u002B00:00",
+        "2026-07-28T12:07:34.7270000\u002B00:00",
+        "2026-07-28T12:07:34.9710000\u002B00:00"
+      ]
+    },
+    {
+      "id": "75401377529897670",
+      "title": "Software Engineer III, Vertex Inference",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/75401377529897670-software-engineer-iii-vertex-inference?location=Poland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-07-20T19:55:05.4764812\u002B00:00",
+      "lastSeenAt": "2026-08-05T08:51:37.4376922\u002B00:00",
+      "removedAt": "2026-08-05T19:53:13.2630669\u002B00:00",
+      "removedInRunId": "2026-08-05T19-53-13Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckSBmG-cd3ZWRT3kTv0eqIePZugkMu_6O8VdekZNTrDkGEjsA1Ny_i1pUjcGfgs3AjMIOFHtWkkcOXFO0TBg_HhqWqArOh7uhmeYLeXIsc8XACS33uAsJsWfuy2PvRA%3D%3D_V2\u0026loc=PL\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "Google\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward. \u003Cbr\u003E\u003Cbr\u003EAs a part of the Vertex Inference On Hybrid Clouds team, your mission is to introduce AI/ML capabilities (including GenAI, MLOps, etc.) to Google Cloud.\u003Cbr\u003E\u003Cbr\u003EAs a part of this team, you will be focused on delivering various components of the dataplane for serving various first-party models such as Gemini.The Google Cloud AI Research team addresses AI challenges motivated by Google Cloud\u2019s mission of bringing AI to tech, healthcare, finance, retail and many other industries. We work on a range of unique problems focused on research topics that maximize scientific and real-world impact, aiming to push the state-of-the-art in AI and share findings with the broader research community. We also collaborate with product teams to bring innovations to real-world impact that benefits our customers. Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142280000 - z\u0142287000 (PLN) \u002B 0% bonus target\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EImplement GenAI solutions, utilize ML infrastructure, and contribute to data preparation, optimization, and performance enhancements.\u003C/li\u003E\n\u003Cli\u003EWrite product or system development code.\u003C/li\u003E\n\u003Cli\u003ECollaborate with peers and stakeholders through design and code reviews to ensure best practices among available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003C/li\u003E\n\u003Cli\u003E1 year of experience with ML infrastructure (e.g., model deployment, model evaluation, data processing, debugging).\u003C/li\u003E\n\u003Cli\u003EExperience with GenAI techniques (e.g., Large Language Models (LLMs), Multi-Modal, Large Vision Models) or with GenAI-related concepts (language modeling, computer vision).\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical fields.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience with GenAI serving infrastructure.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-20T14:39:50.3340000\u002B00:00",
+        "2026-07-20T14:39:50.6440000\u002B00:00"
+      ]
+    },
+    {
+      "id": "128120149025661638",
+      "title": "Software Engineer, Cloud AI Research, Co-Scientist",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/128120149025661638-software-engineer-cloud-ai-research-coscientist?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-07-23T19:44:52.9001424\u002B00:00",
+      "lastSeenAt": "2026-08-05T08:51:37.4376922\u002B00:00",
+      "removedAt": "2026-08-05T19:53:13.2630669\u002B00:00",
+      "removedInRunId": "2026-08-05T19-53-13Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckQEXEW1rEWwi8yxT1om3f41TfmLWkmexwumwixeVDkGLEjoA1Ny_i1WayZGEhdQD7_5jn6AmJfDe-ZTq6BDp-8L8PDvHJIThnM5yN_wc3uDh9_o_T0b80uftH-wQ_V2\u0026loc=CH\u0026title=Software\u002BEngineer",
+      "aboutTheJobRaw": "Google Cloud\u2019s mission is to make every business successful through AI by combining cutting-edge technology, infrastructure, and talent. AI/ML software engineers in Cloud bridge the gap between pioneering models and a massive product vehicle reaching billions. Our talent density and AI-powered tools drive rapid development, rooted in a culture of empowerment and a bias to action. In this role, you aren\u2019t just building technology; you\u2019re shaping the frontier of enterprise and driving the evolution of advanced models.\u003Cbr\u003E\u003Cdiv\u003E\u003Cbr\u003E\u003C/div\u003E\u003Cdiv\u003ECo-Scientist is a research team with the mission to accelerate scientific discovery with Artificial Intelligence (AI). We do much of the research behind Google\u2019s Co-Scientist product which is an Agentic AI system for science. We also work with scientists inside and outside of Google on some of their biggest challenges.\u003Cbr\u003E\u003Cbr\u003EIn this role you will develop a system for scientific discovery which entails literature research, data analysis, hypothesis generation and validation. You will use Google\u2019s latest AI tools and models and have the opportunity to collaborate with scientists in Google and from universities and partner labs.\u003C/div\u003EThe Google Cloud AI Research team addresses AI challenges motivated by Google Cloud\u2019s mission of bringing AI to tech, healthcare, finance, retail and many other industries. We work on a range of unique problems focused on research topics that maximize scientific and real-world impact, aiming to push the state-of-the-art in AI and share findings with the broader research community. We also collaborate with product teams to bring innovations to real-world impact that benefits our customers.",
+      "responsibilitiesRaw": "\u003Cul\u003E\u003Cli\u003EOwn projects end-to-end, taking software systems from initial design and prototyping to full deployment and analysis. \u003C/li\u003E\u003Cli\u003EDesign, build, deploy, and scale agentic AI systems, robust tool-use mechanisms, and multi-agent tournament workflows. \u003C/li\u003E\u003Cli\u003EBuild robust system evaluation pipelines and curate diagnostic datasets to systematically measure agentic accuracy and progress.\u003C/li\u003E\u003Cli\u003ECollaborate with scientists and researchers across Google DeepMind, Google Research, and prestigious external academic partners to publish original research.\u003C/li\u003E\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages, and with data structures and algorithms.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBackground in Computer Science, Applied Mathematics, Computational Biology, or a related technical field.\u003C/li\u003E\n\u003Cli\u003EStrong hands-on experience with deep learning and agentic frameworks and developing in both Python and C\u002B\u002B.\u003C/li\u003E\n\u003Cli\u003EProven track record of carrying out quantitative data analysis and translating complex research ideas into concrete engineering features.\u003C/li\u003E\n\u003Cli\u003EAbility to drive independent research from initial ideas to publication or product implementation.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-23T16:09:19.9960000\u002B00:00",
+        "2026-07-30T11:11:22.5950000\u002B00:00",
+        "2026-07-30T11:11:22.7190000\u002B00:00"
+      ]
+    },
+    {
       "id": "141308108101034694",
       "title": "AI Infrastructure Engineer",
       "company": "Google",
