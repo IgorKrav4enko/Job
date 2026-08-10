@@ -1,0 +1,723 @@
+{
+  "generatedAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+  "source": "Netflix Jobs",
+  "status": "success",
+  "notes": "Normalized 32 active Netflix jobs from latest raw snapshot.",
+  "searchTerm": "Software Engineering",
+  "locations": [
+    {
+      "slug": "canada",
+      "label": "Canada",
+      "query": "Canada"
+    },
+    {
+      "slug": "france",
+      "label": "France",
+      "query": "France"
+    },
+    {
+      "slug": "germany",
+      "label": "Germany",
+      "query": "Germany"
+    },
+    {
+      "slug": "ireland",
+      "label": "Ireland",
+      "query": "Ireland"
+    },
+    {
+      "slug": "poland",
+      "label": "Poland",
+      "query": "Poland"
+    },
+    {
+      "slug": "spain",
+      "label": "Spain",
+      "query": "Spain"
+    },
+    {
+      "slug": "switzerland",
+      "label": "Switzerland",
+      "query": "Switzerland"
+    },
+    {
+      "slug": "united-kingdom",
+      "label": "United Kingdom",
+      "query": "United Kingdom"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "790315043614",
+      "title": "Associate Technical Supervisor (Back-End) - Netflix Animation Studios",
+      "company": "Netflix",
+      "locations": [
+        "Vancouver,Canada"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790315043614?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2026-03-25T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-03-25T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "002787fcf757b434a8b85ca96708408c1f64886430b01a89d27ea26ab1856252",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316431938",
+      "title": "Associate Technical Supervisor (Front End) - Netflix Animation Studios",
+      "company": "Netflix",
+      "locations": [
+        "Vancouver,Canada"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316431938?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-06-15T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-06-15T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "2dba244e50883fefaa304a7d7d6a6669fdaffc7af11a94cf68b81d7404d57fb4",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316432046",
+      "title": "Associate Technical Supervisor (Performance) - Netflix Animation Studios",
+      "company": "Netflix",
+      "locations": [
+        "Vancouver,Canada"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316432046?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-06-15T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-06-15T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "a8dca3232f2996cab05a8d95f8c4b7c4bad7ec007c4f803c19a0e59333f86ed9",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790313612549",
+      "title": "Data \u0026 Software Engineer 5 \u2014 System Insights \u0026 Productivity Metrics",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790313612549?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-01-15T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-01-15T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "9352afae8ad0dcbb18ad5f737e925bb345fbeac7fb9a1548767d070bd3a7eb63",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790304902589",
+      "title": "Distributed Systems Engineer 4 - Data Platform Poland",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790304902589?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2025-08-25T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2025-08-25T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "ab59482e442bd871423f5f1f6a925a022469705e5e2d8eeee3b2f58b262cb2e1",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790315756513",
+      "title": "Distributed Systems Engineer 4/5 - Cloud Platform Infrastructure Engineering Tooling",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790315756513?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-04-30T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-04-30T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "00d5c18c52cea0f3564416e6707c12ad843acab0bbee410736d3ae7edd9f48e2",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790317741558",
+      "title": "Distributed Systems Engineer 5 - Data Platform Poland",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790317741558?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2026-08-10T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-08-10T22:34:28.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "6225e7dfccc72ffbda374c5c0d34883bf84b3a93737a5dfcdefc1c7677c52060",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790317586281",
+      "title": "Engineering Manager - Partner Enablement Applications",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790317586281?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-07-30T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-07-30T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "a771c8d9fd29b4448110f7e79553419da84a6646a8b126317f519cfd3660ee45",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316851901",
+      "title": "Full Stack Software Engineer 4 -  Content Promotion \u0026 Distribution Engineering",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316851901?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-07-03T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-07-03T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "7bd8eff04dea4b974498a875071402ec4e07ef155431bf0a853ee3eefc0b82c9",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316470001",
+      "title": "Post Engineer - Netflix Animation Studios",
+      "company": "Netflix",
+      "locations": [
+        "Vancouver,Canada"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316470001?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-06-17T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-06-17T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "fe49de1c3d1186994c0a80d874994e3045cd37614f7d1bc13acdacaaa43544fe",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790317037861",
+      "title": "Product Manager 6 - Partner Device Tools and Services",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790317037861?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2026-07-09T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-07-09T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "09dead429cad9cc98ea3ab1e850d3195545929511a52d3cca7202f722af0d3f1",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316452720",
+      "title": "Security Software Engineer 5",
+      "company": "Netflix",
+      "locations": [
+        "Poland - Remote"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316452720?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-06-16T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-06-16T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "987f2652c6334cb7fddeb7692113b45d787cd6e82a11bff88ef81fe169bad275",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316283146",
+      "title": "Senior Ads Revenue Business Partner (EMEA)",
+      "company": "Netflix",
+      "locations": [
+        "London,United Kingdom"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316283146?microsite=netflix.com",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=United%20Kingdom\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-06-09T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-06-09T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "1f789f5ae67d5e58f99ef86b6aa01fcf61aeeecb022bae2f7e4b4ef6b173a3d0",
+      "matchedLocations": [
+        "United Kingdom"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790302856610",
+      "title": "Senior Data Engineer 5",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790302856610?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2025-04-29T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2025-04-29T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "aeb0031ae4ce774d55121fb424f1937a773d1e1e71714aec332c7d8ac73fef47",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316177871",
+      "title": "Senior Full Stack Software Engineer 4/5 -  Client and Partner Technologies",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316177871?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2026-06-02T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-06-02T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "595ab47891048c76db1f1917d19270647418e1c510ce166647a8bc0fd96c707a",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316906653",
+      "title": "Senior Gameplay Programmer, Game Prototypes",
+      "company": "Netflix",
+      "locations": [
+        "Canada - Remote"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316906653?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-07-06T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-07-06T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "9d9ee578ce5794bee3ba1f491c940db52794e429ea3ff54facb5df855d83f989",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316305188",
+      "title": "Senior Manager, Engineering - Partner Enablement Applications",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316305188?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-06-10T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-06-10T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "cb30df8bdb356b65fb839fa1c8887952a9e75b1b32658d3afd686e99bad1b18e",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316170435",
+      "title": "Senior Software Engineer 4/5 - Client And Partner Technologies",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316170435?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2026-06-02T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-06-02T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "355a5c9d7b22504e95565cb9c6afc90c3c5cb299de6f8b3c53ff1aa8d5174285",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790313763527",
+      "title": "Senior Software Engineer 5 - Consumer Lifecycle Experiences Platform",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790313763527?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2026-01-28T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-01-28T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "5eff6e0fd6f669dab2062e2d18b087ea45ad5a6b8e4384af1e29de6e56b992c2",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790301977513",
+      "title": "Software Engineer (4/5) \u2014 Developer Platform",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790301977513?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2025-03-28T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2025-03-28T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "9a0c292244d387cdd32874d89e48647fecf729428de79bd88e21862d03de1f5a",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316163146",
+      "title": "Software Engineer 4 - Graph Search",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316163146?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-06-01T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-06-01T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "656cfa685c44a74b97305dd9f3ba93eff2b9f1f0b02b58047fdad4e8129488cc",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316022866",
+      "title": "Software Engineer 5 - Python Platform",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316022866?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2026-05-22T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-05-22T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "a032c5caa606b317d6a9153006d56b9d7cd22bf3612d34c323364a6fed3bd690",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316855872",
+      "title": "Software Engineer 5 - Studio Production Engineering",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316855872?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-07-03T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-07-03T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "d881287d92f774918c2ae1f66eadf560a8a26e2506b189e7f35f9f4bf4312610",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790317047395",
+      "title": "Software Engineer 5\u2014 Platform Modernization Engineering",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790317047395?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-07-10T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-07-10T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "fb20dfa0162fdc4e4836142a8cf459e20605003670071ef94c83a48e5d2a46d5",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790315484105",
+      "title": "Software Engineer L4/5, Javascript Foundations",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790315484105?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=10",
+      "postedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-04-16T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "c616244884c9d788247489fa6792d84d89ddbf4a4fbfb828240f61143f1caabb",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316455998",
+      "title": "Software Engineer Production Systems - Netflix Animation Studios",
+      "company": "Netflix",
+      "locations": [
+        "Vancouver,Canada"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316455998?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-06-16T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-06-16T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "26b268da441362f802f23fa81ab3098811ffce32be5dd0702b6796df9c79afd5",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790315363829",
+      "title": "Software Engineer Rendering - Netflix Animation Studios",
+      "company": "Netflix",
+      "locations": [
+        "Vancouver,Canada"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790315363829?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2025-04-09T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2025-04-09T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "ed603204f0237defc842ed9471fc4eeb8306253ffde0af0c18c75afd394e9342",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790315772882",
+      "title": "Technical Director Core Assets - Netflix Animation Studios",
+      "company": "Netflix",
+      "locations": [
+        "Vancouver,Canada"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790315772882?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-05-14T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-05-14T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "a2350473370644b247eff8f9cf3f2174effb4748868b4ee21d2d6ef0848c99a4",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790315772885",
+      "title": "Technical Director Lighting - Netflix Animation Studios",
+      "company": "Netflix",
+      "locations": [
+        "Vancouver,Canada"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790315772885?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-05-01T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-05-01T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "338ed56eebf1967565dd54daa27f83442fd61f4c4aeffe7ec72f32977abdc637",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790315772884",
+      "title": "Technical Director PaFX (Houdini) - Netflix Animation Studios",
+      "company": "Netflix",
+      "locations": [
+        "Vancouver,Canada"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790315772884?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "630f1495421075ade6fc75fbc702587aae17215048695c3f4f17947e2b233dc7",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790301728220",
+      "title": "Technical Director Pre-Production - Netflix Animation Studios",
+      "company": "Netflix",
+      "locations": [
+        "Vancouver,Canada"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790301728220?microsite=netflix.com",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Canada\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2025-03-14T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2025-11-24T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "991e3447637e6873a0977889262d8ccf0db03d045c9c9b8df60489d319bdcae9",
+      "matchedLocations": [
+        "Canada"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "790316855311",
+      "title": "UI Engineer 5 - Studio Foundation Apps Engineering",
+      "company": "Netflix",
+      "locations": [
+        "Warsaw,Poland"
+      ],
+      "url": "https://explore.jobs.netflix.net/careers/job/790316855311?microsite=netflix.com",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com\u0026profile=\u0026query=Software%20Engineering\u0026location=Poland\u0026sort_by=relevance\u0026start=0",
+      "postedAtCandidate": "2026-07-03T00:00:00.0000000\u002B00:00",
+      "updatedAtCandidate": "2026-07-03T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "lastSeenAt": "2026-08-10T22:45:47.5382323\u002B00:00",
+      "isActive": true,
+      "contentHash": "225a2bb29d9b1ea28b803ca9919b4aed203a3337eac13b7a5c10dbb1fce4d0b9",
+      "matchedLocations": [
+        "Poland"
+      ],
+      "searchMatchCount": 1
+    }
+  ]
+}
