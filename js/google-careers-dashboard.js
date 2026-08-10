@@ -43,6 +43,14 @@ const SOURCES = {
     detailsUrl: "./data/amazon-jobs-run-details.json",
     jobsUrl: "./data/amazon-jobs-jobs.json",
     allowMissingHistory: true
+  },
+  netflix: {
+    key: "netflix",
+    label: "Netflix Jobs",
+    runsUrl: "./data/netflix-jobs-runs.json",
+    detailsUrl: "./data/netflix-jobs-run-details.json",
+    jobsUrl: "./data/netflix-jobs-jobs.json",
+    allowMissingHistory: true
   }
 };
 
@@ -50,8 +58,8 @@ const SOURCE_STORAGE_KEY = "careers-dashboard-source";
 const UNKNOWN_CITY = "__unknown_city__";
 const UNKNOWN_CITY_LABEL = "Нерозпізнані";
 const DEFAULT_COUNTRY = "Switzerland";
-const COMPARE_SOURCE_KEYS = ["google", "meta", "apple", "microsoft", "nvidia"];
-const COMPARE_COLORS = ["#38bdf8", "#4ade80", "#f59e0b", "#fb7185", "#a78bfa"];
+const COMPARE_SOURCE_KEYS = ["google", "meta", "apple", "microsoft", "nvidia", "netflix"];
+const COMPARE_COLORS = ["#38bdf8", "#4ade80", "#f59e0b", "#fb7185", "#a78bfa", "#e50914"];
 
 const state = {
   activeSource: getInitialSourceKey(),

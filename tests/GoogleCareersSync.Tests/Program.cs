@@ -22,6 +22,8 @@ internal sealed class ReflectionTestRunner
         var tests = new List<(string Name, Func<Task> Body)>
         {
             ("BuildSearchUrl encodes location, query and page", TestBuildSearchUrlAsync),
+            ("BuildAppleSearchUrl uses the current search parameter", TestBuildAppleSearchUrlAsync),
+            ("Netflix search URL and payload preserve pagination fields", TestNetflixSearchApiAsync),
             ("BuildMetaSearchUrl encodes teams and offices without q", TestBuildMetaSearchUrlAsync),
             ("ExtractJobId returns the numeric id from a Google Careers URL", TestExtractJobIdAsync),
             ("ComputeContentHash ignores location order but reacts to meaningful field changes", TestContentHashAsync),
@@ -32,6 +34,7 @@ internal sealed class ReflectionTestRunner
             ("Apple normalization preserves firstSeenAt, updates lastSeenAt and deactivates missing jobs", TestAppleNormalizationStateTrackingAsync),
             ("Microsoft normalization preserves firstSeenAt, updates lastSeenAt and deactivates missing jobs", TestMicrosoftNormalizationStateTrackingAsync),
             ("NVIDIA normalization preserves firstSeenAt, updates lastSeenAt and deactivates missing jobs", TestNvidiaNormalizationStateTrackingAsync),
+            ("Netflix normalization preserves history and deactivates missing jobs", TestNetflixNormalizationStateTrackingAsync),
             ("Apple history outputs include changed fields, per-location summaries and removed raw details", TestAppleHistoryOutputsAsync),
             ("Meta history outputs include changed fields, per-location summaries and removed raw details", TestMetaHistoryOutputsAsync),
             ("NVIDIA history outputs include changed fields, per-location summaries and removed raw details", TestNvidiaHistoryOutputsAsync)
@@ -92,6 +95,88 @@ internal sealed class ReflectionTestRunner
             "https://www.metacareers.com/jobsearch?teams[0]=Software%20Engineering&offices[0]=Dublin%2C%20Ireland&offices[1]=Remote%2C%20Ireland",
             result,
             "BuildMetaSearchUrl should encode teams and offices and omit q-based search.");
+        return Task.CompletedTask;
+    }
+
+    private Task TestBuildAppleSearchUrlAsync()
+    {
+        var result = InvokeStatic<string>("BuildAppleSearchUrl", "canada-CANC", "software engineer", 2);
+
+        AssertEqual(
+            "https://jobs.apple.com/en-us/search?location=canada-CANC&search=software%20engineer&sort=relevance&page=2",
+            result,
+            "BuildAppleSearchUrl should use Apple's current search parameter and relevance sorting.");
+        return Task.CompletedTask;
+    }
+
+    private Task TestNetflixSearchApiAsync()
+    {
+        var url = InvokeStatic<string>("BuildNetflixSearchApiUrl", "Canada", "Software Engineering", 10);
+        AssertEqual(
+            "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com&profile=&query=Software%20Engineering&location=Canada&sort_by=relevance&start=10",
+            url,
+            "Netflix search URL should encode the query, country and start offset.");
+
+        const string payload = """
+            {
+              "count": 11,
+              "positions": [
+                {
+                  "id": 790316455998,
+                  "ats_job_id": "JR41195",
+                  "posting_name": "Software Engineer Production Systems",
+                  "locations": ["Vancouver,Canada"],
+                  "department": "Feature Animation",
+                  "business_unit": "Animation",
+                  "t_create": 1781568000,
+                  "t_update": 1781654400,
+                  "locale": "en-US",
+                  "canonicalPositionUrl": "https://explore.jobs.netflix.net/careers/job/790316455998"
+                }
+              ]
+            }
+            """;
+        var page = InvokeStatic("ParseNetflixSearchPayload", payload, url, "Canada")!;
+        AssertEqual(11, GetIntProperty(page, "TotalCount"), "Netflix parser should preserve the total count.");
+        AssertEqual(1, GetListCount(page, "Results"), "Netflix parser should return the page positions.");
+        var job = GetListItem(page, "Results", 0);
+        AssertEqual("790316455998", GetStringProperty(job, "JobId"), "Netflix parser should normalize numeric job ids.");
+        AssertEqual("JR41195", GetStringProperty(job, "SourceJobId"), "Netflix parser should preserve ATS ids.");
+        AssertEqual("Canada", GetStringProperty(job, "RequestedLocation"), "Netflix parser should preserve requestedLocation.");
+        return Task.CompletedTask;
+    }
+
+    private Task TestNetflixNormalizationStateTrackingAsync()
+    {
+        const string firstRunAt = "2026-08-10T10:00:00.0000000+00:00";
+        const string secondRunAt = "2026-08-11T10:00:00.0000000+00:00";
+        var firstRawRun = CreateNetflixRawRun(
+            "netflix-run-1",
+            firstRunAt,
+            CreateNetflixRawJob("keep", "Software Engineer", firstRunAt),
+            CreateNetflixRawJob("remove", "Senior Software Engineer", firstRunAt));
+        var secondRawRun = CreateNetflixRawRun(
+            "netflix-run-2",
+            secondRunAt,
+            CreateNetflixRawJob("keep", "Software Engineer", secondRunAt),
+            CreateNetflixRawJob("add", "Distributed Systems Engineer", secondRunAt));
+
+        var firstMerge = InvokeStatic(
+            "MergeJobs",
+            CreateList("JobItem"),
+            InvokeStatic("BuildNetflixJobsFromRawRun", firstRawRun),
+            firstRunAt)!;
+        var secondMerge = InvokeStatic(
+            "MergeJobs",
+            GetList(firstMerge, "Jobs"),
+            InvokeStatic("BuildNetflixJobsFromRawRun", secondRawRun),
+            secondRunAt)!;
+
+        AssertEqual(1, GetListCount(secondMerge, "Added"), "Netflix merge should identify newly added jobs.");
+        AssertEqual(1, GetListCount(secondMerge, "Removed"), "Netflix merge should deactivate missing jobs.");
+        AssertEqual(2, GetList(secondMerge, "Jobs").Cast<object>().Count(job => GetBooleanProperty(job, "IsActive")), "Netflix merge should preserve active jobs.");
+        var removed = GetList(secondMerge, "Jobs").Cast<object>().Single(job => GetStringProperty(job, "Id") == "remove");
+        AssertTrue(!GetBooleanProperty(removed, "IsActive"), "Missing Netflix jobs should become inactive.");
         return Task.CompletedTask;
     }
 
@@ -1040,7 +1125,7 @@ internal sealed class ReflectionTestRunner
             "AppleRawSource",
             "United Kingdom",
             "united-kingdom",
-            "https://jobs.apple.com/en-us/search?location=united-kingdom-GBR&key=software%2520engineer",
+            "https://jobs.apple.com/en-us/search?search=software%20engineer&sort=relevance&location=united-kingdom-GBR",
             CreateList("AppleRawJobItem", jobs));
 
         return CreateRecord(
@@ -1069,7 +1154,7 @@ internal sealed class ReflectionTestRunner
             "Apple",
             locationsRaw.ToList(),
             $"https://jobs.apple.com/en-us/details/{sourceJobId}/test-role",
-            $"https://jobs.apple.com/en-us/search?location={Uri.EscapeDataString(requestedLocation)}&key=software%2520engineer",
+            $"https://jobs.apple.com/en-us/search?search=software%20engineer&sort=relevance&location={Uri.EscapeDataString(requestedLocation)}",
             requestedLocation,
             null,
             "Apple job summary",
@@ -1078,6 +1163,51 @@ internal sealed class ReflectionTestRunner
             null,
             postedAtCandidate,
             null,
+            capturedAt);
+    }
+
+    private object CreateNetflixRawRun(string runId, string generatedAt, params object[] jobs)
+    {
+        var source = CreateRecord(
+            "NetflixRawSource",
+            "Canada",
+            "canada",
+            "Canada",
+            "https://explore.jobs.netflix.net/api/apply/v2/jobs?query=Software%20Engineering&location=Canada",
+            CreateList("NetflixRawJobItem", jobs));
+
+        return CreateRecord(
+            "NetflixRawRun",
+            runId,
+            generatedAt,
+            "netflix-jobs",
+            "Software Engineering",
+            CreateList("NetflixRawSource", source));
+    }
+
+    private object CreateNetflixRawJob(string jobId, string titleRaw, string capturedAt)
+    {
+        return CreateRecord(
+            "NetflixRawJobItem",
+            jobId,
+            $"JR-{jobId}",
+            titleRaw,
+            "Netflix",
+            new List<string> { "Vancouver,Canada" },
+            $"https://explore.jobs.netflix.net/careers/job/{jobId}",
+            "https://explore.jobs.netflix.net/api/apply/v2/jobs?query=Software%20Engineering&location=Canada",
+            "Canada",
+            $"https://explore.jobs.netflix.net/careers/job/{jobId}",
+            "Netflix job description",
+            null,
+            null,
+            null,
+            "Engineering",
+            "Streaming",
+            "Onsite",
+            "en-US",
+            capturedAt,
+            capturedAt,
             capturedAt);
     }
 

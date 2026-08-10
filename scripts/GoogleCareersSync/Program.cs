@@ -10,6 +10,8 @@ using System.Diagnostics;
 const int MicrosoftSearchPageSize = 10;
 const int NvidiaSearchPageSize = 10;
 const int AmazonSearchPageSize = 10;
+const int NetflixSearchPageSize = 10;
+const int DefaultMaxPages = 100;
 
 var mode = GetMode(args);
 var root = FindRepositoryRoot();
@@ -53,6 +55,12 @@ var amazonRunDetailsPath = Path.Combine(root, "data", "amazon-jobs-run-details.j
 var amazonRemovedDetailsPath = Path.Combine(root, "data", "amazon-jobs-removed-details.json");
 var amazonRawRunsDirectoryPath = Path.Combine(root, "data-raw", "amazon-jobs", "runs");
 var amazonFixturesDirectoryPath = Path.Combine(root, "data-debug", "amazon-jobs", "payloads");
+var netflixConfigPath = Path.Combine(root, "config", "netflix-jobs-locations.json");
+var netflixOutputPath = Path.Combine(root, "data", "netflix-jobs-jobs.json");
+var netflixRunsPath = Path.Combine(root, "data", "netflix-jobs-runs.json");
+var netflixRunDetailsPath = Path.Combine(root, "data", "netflix-jobs-run-details.json");
+var netflixRemovedDetailsPath = Path.Combine(root, "data", "netflix-jobs-removed-details.json");
+var netflixRawRunsDirectoryPath = Path.Combine(root, "data-raw", "netflix-jobs", "runs");
 
 var locations = LoadLocations(configPath);
 var searchTerm = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_SEARCH_TERM")?.Trim();
@@ -463,6 +471,103 @@ switch (mode)
         break;
     }
 
+    case PipelineMode.CollectNetflix:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var runCapturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var netflixLocations = LoadNetflixLocations(netflixConfigPath);
+        var netflixSearchTerm = GetNetflixSearchTerm();
+        var fetchResult = await FetchNetflixJobsAsync(
+            netflixLocations,
+            netflixSearchTerm,
+            runCapturedAt,
+            GetNetflixMaxPages(),
+            GetNetflixMaxDetails());
+        var rawRun = new NetflixRawRun(runId, runCapturedAt, "netflix-jobs", netflixSearchTerm, fetchResult.Sources);
+
+        Directory.CreateDirectory(netflixRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(netflixRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+
+        Console.WriteLine($"Collected Netflix raw run {runId} with {fetchResult.JobCount} unique jobs.");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
+    case PipelineMode.NormalizeNetflixLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(netflixRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No Netflix raw runs found. Run collect-netflix first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<NetflixRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Netflix raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(netflixOutputPath);
+        var latestJobs = BuildNetflixJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildNetflixDataset(latestRawRun, mergeResult.Jobs);
+
+        await WriteJsonFileAsync(netflixOutputPath, dataset);
+
+        Console.WriteLine(
+            $"Normalized latest Netflix raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"({mergeResult.Jobs.Count(static job => job.IsActive)} active / " +
+            $"{mergeResult.Jobs.Count(static job => !job.IsActive)} inactive).");
+        Console.WriteLine($"Wrote {netflixOutputPath}.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeNetflixLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(netflixRawRunsDirectoryPath).LastOrDefault();
+        if (latestRawRunPath is null)
+        {
+            throw new FileNotFoundException("No Netflix raw runs found. Run collect-netflix first.");
+        }
+
+        var latestRawRun = LoadJsonOrDefault<NetflixRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Netflix raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(netflixOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(netflixRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousRunDetails = LoadJsonOrDefault<RunDetailsDataset>(netflixRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRunDetails = NormalizeRunDetails(previousRunDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousRunDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Netflix raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildNetflixJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0
+            ? new List<JobItem>()
+            : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildNetflixDataset(latestRawRun, mergeResult.Jobs);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var runDetailsDataset = BuildRunDetailsDataset(previousRunDetails, latestRawRun.RunId, mergeResult);
+        var rawRuns = LoadNetflixRawRuns(netflixRawRunsDirectoryPath);
+        var removedDetailsDataset = BuildNetflixRemovedDetailsDataset(dataset, runDetailsDataset, rawRuns);
+
+        await WriteNetflixDatasetsAsync(
+            netflixOutputPath,
+            netflixRunsPath,
+            netflixRunDetailsPath,
+            netflixRemovedDetailsPath,
+            dataset,
+            runsDataset,
+            runDetailsDataset,
+            removedDetailsDataset);
+
+        Console.WriteLine(
+            $"Analyzed latest Netflix raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs " +
+            $"(+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
     case PipelineMode.NormalizeAmazonLatest:
     {
         var latestRawRunPath = GetRawRunFilePaths(amazonRawRunsDirectoryPath).LastOrDefault();
@@ -684,6 +789,9 @@ static PipelineMode GetMode(string[] args)
         "collect-amazon" => PipelineMode.CollectAmazon,
         "normalize-amazon-latest" => PipelineMode.NormalizeAmazonLatest,
         "analyze-amazon-latest" => PipelineMode.AnalyzeAmazonLatest,
+        "collect-netflix" => PipelineMode.CollectNetflix,
+        "normalize-netflix-latest" => PipelineMode.NormalizeNetflixLatest,
+        "analyze-netflix-latest" => PipelineMode.AnalyzeNetflixLatest,
         _ => throw new ArgumentOutOfRangeException(nameof(args), $"Unknown mode '{args[0]}'.")
     };
 }
@@ -790,6 +898,23 @@ static async Task WriteAmazonDatasetsAsync(
     await WriteJsonFileAsync(removedDetailsPath, removedDetailsDataset);
 }
 
+static async Task WriteNetflixDatasetsAsync(
+    string outputPath,
+    string runsPath,
+    string runDetailsPath,
+    string removedDetailsPath,
+    JobDataset dataset,
+    RunHistoryDataset runsDataset,
+    RunDetailsDataset runDetailsDataset,
+    NetflixRemovedDetailsDataset removedDetailsDataset)
+{
+    Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+    await WriteJsonFileAsync(outputPath, dataset);
+    await WriteJsonFileAsync(runsPath, runsDataset);
+    await WriteJsonFileAsync(runDetailsPath, runDetailsDataset);
+    await WriteJsonFileAsync(removedDetailsPath, removedDetailsDataset);
+}
+
 static async Task WriteJsonFileAsync<T>(string path, T value)
 {
     Directory.CreateDirectory(Path.GetDirectoryName(path)!);
@@ -881,6 +1006,15 @@ static List<AmazonRawRun> LoadAmazonRawRuns(string rawRunsDirectoryPath)
 {
     return GetRawRunFilePaths(rawRunsDirectoryPath)
         .Select(path => LoadJsonOrDefault<AmazonRawRun>(path) ?? throw new InvalidOperationException($"Could not read Amazon raw run file '{path}'."))
+        .OrderBy(static run => run.GeneratedAt, StringComparer.Ordinal)
+        .ThenBy(static run => run.RunId, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<NetflixRawRun> LoadNetflixRawRuns(string rawRunsDirectoryPath)
+{
+    return GetRawRunFilePaths(rawRunsDirectoryPath)
+        .Select(path => LoadJsonOrDefault<NetflixRawRun>(path) ?? throw new InvalidOperationException($"Could not read Netflix raw run file '{path}'."))
         .OrderBy(static run => run.GeneratedAt, StringComparer.Ordinal)
         .ThenBy(static run => run.RunId, StringComparer.Ordinal)
         .ToList();
@@ -1071,6 +1205,51 @@ static List<JobItem> BuildAmazonJobsFromRawRun(AmazonRawRun rawRun)
                 .ToList();
 
             return first with { Locations = locations.Count == 0 ? first.Locations : locations };
+        })
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildNetflixJobsFromRawRun(NetflixRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source =>
+            source.Jobs.Select(job =>
+                new JobItem(
+                    job.JobId,
+                    HtmlDecode(job.TitleRaw ?? string.Empty),
+                    string.IsNullOrWhiteSpace(job.CompanyRaw) ? "Netflix" : HtmlDecode(job.CompanyRaw),
+                    job.LocationsRaw ?? new List<string>(),
+                    job.JobUrl,
+                    job.RequestedLocation,
+                    job.SearchUrl,
+                    job.PostedAtCandidate,
+                    job.UpdatedAtCandidate)))
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var first = group.First();
+            var locations = group
+                .SelectMany(static job => job.Locations)
+                .Where(static location => !string.IsNullOrWhiteSpace(location))
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static location => location, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+            var matchedLocations = group
+                .Select(static job => job.RequestedLocation)
+                .Where(static location => !string.IsNullOrWhiteSpace(location))
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static location => location, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            return first with
+            {
+                Locations = locations.Count == 0 ? first.Locations : locations,
+                MatchedLocations = matchedLocations,
+                SearchMatchCount = matchedLocations.Count
+            };
         })
         .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
         .ThenBy(static job => job.Id, StringComparer.Ordinal)
@@ -1445,6 +1624,72 @@ static AmazonRemovedDetailsDataset BuildAmazonRemovedDetailsDataset(
     return new AmazonRemovedDetailsDataset(jobs);
 }
 
+static NetflixRemovedDetailsDataset BuildNetflixRemovedDetailsDataset(
+    JobDataset dataset,
+    RunDetailsDataset runDetailsDataset,
+    List<NetflixRawRun> rawRuns)
+{
+    var inactiveJobs = dataset.Jobs
+        .Where(static job => !job.IsActive)
+        .ToDictionary(static job => job.Id, StringComparer.Ordinal);
+
+    var removedAtById = runDetailsDataset.Runs
+        .SelectMany(run => run.Removed.Select(job => new { job.Id, run.RunId }))
+        .GroupBy(static item => item.Id, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.First().RunId,
+            StringComparer.Ordinal);
+
+    var rawByJobId = rawRuns
+        .SelectMany(run => run.Sources.SelectMany(source => source.Jobs.Select(job => new { run, job })))
+        .GroupBy(static item => item.job.JobId, StringComparer.Ordinal)
+        .ToDictionary(
+            static group => group.Key,
+            group => group.Last(),
+            StringComparer.Ordinal);
+    var generatedAtByRunId = rawRuns.ToDictionary(static run => run.RunId, static run => run.GeneratedAt, StringComparer.Ordinal);
+
+    var jobs = inactiveJobs.Values
+        .Select(job =>
+        {
+            rawByJobId.TryGetValue(job.Id, out var rawMatch);
+            removedAtById.TryGetValue(job.Id, out var removedInRunId);
+            var removedAt = removedInRunId is not null && generatedAtByRunId.TryGetValue(removedInRunId, out var generatedAt)
+                ? generatedAt
+                : removedInRunId;
+
+            return new NetflixRemovedJobDetail(
+                job.Id,
+                job.Title,
+                job.Company,
+                job.Url,
+                job.Locations,
+                job.RequestedLocation,
+                job.FirstSeenAt,
+                job.LastSeenAt,
+                removedAt,
+                removedInRunId,
+                rawMatch?.job.SourceJobId,
+                rawMatch?.job.ApplyUrlRaw,
+                rawMatch?.job.AboutTheJobRaw,
+                rawMatch?.job.ResponsibilitiesRaw,
+                rawMatch?.job.MinimumQualificationsRaw,
+                rawMatch?.job.PreferredQualificationsRaw,
+                rawMatch?.job.DepartmentRaw,
+                rawMatch?.job.BusinessUnitRaw,
+                rawMatch?.job.WorkTypeRaw,
+                rawMatch?.job.LocaleRaw,
+                rawMatch?.job.PostedAtCandidate,
+                rawMatch?.job.UpdatedAtCandidate);
+        })
+        .OrderByDescending(static job => job.RemovedAt, StringComparer.Ordinal)
+        .ThenBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ToList();
+
+    return new NetflixRemovedDetailsDataset(jobs);
+}
+
 static string FindRepositoryRoot()
 {
     var current = new DirectoryInfo(AppContext.BaseDirectory);
@@ -1534,16 +1779,27 @@ static List<AmazonLocationConfig> LoadAmazonLocations(string configPath)
     return locations ?? new List<AmazonLocationConfig>();
 }
 
+static List<NetflixLocationConfig> LoadNetflixLocations(string configPath)
+{
+    var envValue = Environment.GetEnvironmentVariable("NETFLIX_JOBS_LOCATIONS");
+    var json = string.IsNullOrWhiteSpace(envValue)
+        ? File.ReadAllText(configPath)
+        : envValue;
+
+    var locations = JsonSerializer.Deserialize<List<NetflixLocationConfig>>(json, JsonOptions());
+    return locations ?? new List<NetflixLocationConfig>();
+}
+
 static int GetMaxPages()
 {
     var rawValue = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_MAX_PAGES");
-    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 5;
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : DefaultMaxPages;
 }
 
 static int GetMetaMaxPages()
 {
     var rawValue = Environment.GetEnvironmentVariable("META_CAREERS_MAX_PAGES");
-    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 2;
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : DefaultMaxPages;
 }
 
 static string GetMetaSearchTerm()
@@ -1566,7 +1822,7 @@ static string GetAppleSearchTerm()
 static int GetAppleMaxPages()
 {
     var rawValue = Environment.GetEnvironmentVariable("APPLE_JOBS_MAX_PAGES");
-    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 10;
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : DefaultMaxPages;
 }
 
 static int GetMetaMaxDetails()
@@ -1585,7 +1841,7 @@ static bool ShouldFetchMetaLive()
 static int GetMicrosoftMaxPages()
 {
     var rawValue = Environment.GetEnvironmentVariable("MICROSOFT_CAREERS_MAX_PAGES");
-    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 2;
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : DefaultMaxPages;
 }
 
 static int GetMicrosoftMaxDetails()
@@ -1619,7 +1875,7 @@ static bool ShouldFetchMicrosoftLive()
 static int GetNvidiaMaxPages()
 {
     var rawValue = Environment.GetEnvironmentVariable("NVIDIA_CAREERS_MAX_PAGES");
-    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 2;
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : DefaultMaxPages;
 }
 
 static int GetNvidiaMaxDetails()
@@ -1643,7 +1899,7 @@ static bool ShouldFetchNvidiaLive()
 static int GetAmazonMaxPages()
 {
     var rawValue = Environment.GetEnvironmentVariable("AMAZON_JOBS_MAX_PAGES");
-    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : 2;
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : DefaultMaxPages;
 }
 
 static bool ShouldFetchAmazonLive()
@@ -1651,6 +1907,23 @@ static bool ShouldFetchAmazonLive()
     var rawValue = Environment.GetEnvironmentVariable("AMAZON_JOBS_LIVE");
     return string.Equals(rawValue, "true", StringComparison.OrdinalIgnoreCase) ||
         string.Equals(rawValue, "1", StringComparison.Ordinal);
+}
+
+static string GetNetflixSearchTerm()
+{
+    return Environment.GetEnvironmentVariable("NETFLIX_JOBS_SEARCH_TERM")?.Trim() ?? "Software Engineering";
+}
+
+static int GetNetflixMaxPages()
+{
+    var rawValue = Environment.GetEnvironmentVariable("NETFLIX_JOBS_MAX_PAGES");
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : DefaultMaxPages;
+}
+
+static int GetNetflixMaxDetails()
+{
+    var rawValue = Environment.GetEnvironmentVariable("NETFLIX_JOBS_MAX_DETAILS");
+    return int.TryParse(rawValue, out var parsed) && parsed >= 0 ? parsed : int.MaxValue;
 }
 
 static T? LoadJsonOrDefault<T>(string path)
@@ -2320,6 +2593,124 @@ static async Task<NvidiaFetchResult> FetchNvidiaJobsFromCacheAsync(
     return new NvidiaFetchResult(sources, uniqueJobIds.Count);
 }
 
+static async Task<NetflixFetchResult> FetchNetflixJobsAsync(
+    List<NetflixLocationConfig> locations,
+    string searchTerm,
+    string capturedAt,
+    int maxPages,
+    int maxDetails)
+{
+    using var httpClient = CreateNetflixHttpClient();
+    var sources = new List<NetflixRawSource>();
+    var uniqueJobIds = new HashSet<string>(StringComparer.Ordinal);
+    var detailCache = new Dictionary<string, NetflixJobDetail?>(StringComparer.Ordinal);
+    var enrichedDetails = 0;
+
+    foreach (var location in locations)
+    {
+        var rawJobs = new List<NetflixRawJobItem>();
+        var seenForLocation = new HashSet<string>(StringComparer.Ordinal);
+
+        for (var page = 0; page < maxPages; page += 1)
+        {
+            var start = page * NetflixSearchPageSize;
+            var searchUrl = BuildNetflixSearchApiUrl(location.SearchLocation, searchTerm, start);
+            Console.WriteLine($"Fetching Netflix search {searchUrl}");
+            var payload = await httpClient.GetStringAsync(searchUrl);
+            var searchPage = ParseNetflixSearchPayload(payload, searchUrl, location.Label);
+            var newJobsOnPage = 0;
+
+            foreach (var searchResult in searchPage.Results)
+            {
+                if (!seenForLocation.Add(searchResult.JobId))
+                {
+                    continue;
+                }
+
+                newJobsOnPage += 1;
+                uniqueJobIds.Add(searchResult.JobId);
+
+                if (!detailCache.TryGetValue(searchResult.JobId, out var detail) && enrichedDetails < maxDetails)
+                {
+                    detail = await FetchNetflixJobDetailAsync(httpClient, searchResult);
+                    detailCache[searchResult.JobId] = detail;
+                    enrichedDetails += 1;
+                }
+
+                rawJobs.Add(BuildNetflixRawJob(searchResult, detail, capturedAt));
+            }
+
+            if (searchPage.Results.Count == 0 ||
+                newJobsOnPage == 0 ||
+                start + NetflixSearchPageSize >= searchPage.TotalCount)
+            {
+                break;
+            }
+        }
+
+        sources.Add(
+            new NetflixRawSource(
+                location.Label,
+                location.Slug,
+                location.SearchLocation,
+                BuildNetflixSearchApiUrl(location.SearchLocation, searchTerm, 0),
+                rawJobs));
+    }
+
+    return new NetflixFetchResult(sources, uniqueJobIds.Count);
+}
+
+static async Task<NetflixJobDetail?> FetchNetflixJobDetailAsync(
+    HttpClient httpClient,
+    NetflixSearchResult searchResult)
+{
+    try
+    {
+        var detailUrl = BuildNetflixDetailApiUrl(searchResult.JobId);
+        Console.WriteLine($"Fetching Netflix detail {detailUrl}");
+        var payload = await httpClient.GetStringAsync(detailUrl);
+        return ParseNetflixDetailPayload(payload, searchResult);
+    }
+    catch (HttpRequestException error)
+    {
+        Console.WriteLine($"Netflix detail fetch failed for {searchResult.JobId}: {error.Message}");
+        return null;
+    }
+    catch (JsonException error)
+    {
+        Console.WriteLine($"Netflix detail parse failed for {searchResult.JobId}: {error.Message}");
+        return null;
+    }
+}
+
+static NetflixRawJobItem BuildNetflixRawJob(
+    NetflixSearchResult searchResult,
+    NetflixJobDetail? detail,
+    string capturedAt)
+{
+    return new NetflixRawJobItem(
+        searchResult.JobId,
+        detail?.SourceJobId ?? searchResult.SourceJobId,
+        detail?.TitleRaw ?? searchResult.TitleRaw,
+        "Netflix",
+        detail?.LocationsRaw is { Count: > 0 } ? detail.LocationsRaw : searchResult.LocationsRaw,
+        detail?.JobUrl ?? searchResult.JobUrl,
+        searchResult.SearchUrl,
+        searchResult.RequestedLocation,
+        detail?.JobUrl ?? searchResult.JobUrl,
+        detail?.AboutTheJobRaw,
+        null,
+        null,
+        null,
+        detail?.DepartmentRaw ?? searchResult.DepartmentRaw,
+        detail?.BusinessUnitRaw ?? searchResult.BusinessUnitRaw,
+        detail?.WorkTypeRaw ?? searchResult.WorkTypeRaw,
+        detail?.LocaleRaw ?? searchResult.LocaleRaw,
+        detail?.PostedAtCandidate ?? searchResult.PostedAtCandidate,
+        detail?.UpdatedAtCandidate ?? searchResult.UpdatedAtCandidate,
+        capturedAt);
+}
+
 static async Task<AmazonFetchResult> FetchAmazonJobsAsync(
     List<AmazonLocationConfig> locations,
     string capturedAt,
@@ -2821,6 +3212,76 @@ static NvidiaJobDetail? ParseNvidiaDetailPayload(string payload, NvidiaSearchRes
         null);
 }
 
+static NetflixSearchPage ParseNetflixSearchPayload(string payload, string searchUrl, string requestedLocation)
+{
+    using var document = JsonDocument.Parse(payload);
+    var root = document.RootElement;
+    var totalCount = ReadJsonInt(root, "count") ?? 0;
+    var positions = GetJsonPropertyOrDefault(root, "positions");
+    var results = new List<NetflixSearchResult>();
+
+    if (positions.ValueKind != JsonValueKind.Array)
+    {
+        return new NetflixSearchPage(totalCount, results);
+    }
+
+    foreach (var position in positions.EnumerateArray())
+    {
+        var id = ReadJsonStringOrNumber(position, "id");
+        if (string.IsNullOrWhiteSpace(id))
+        {
+            continue;
+        }
+
+        results.Add(
+            new NetflixSearchResult(
+                id,
+                ReadJsonString(position, "ats_job_id") ?? ReadJsonString(position, "display_job_id"),
+                ReadJsonString(position, "posting_name") ?? ReadJsonString(position, "name"),
+                ReadJsonStringList(position, "locations"),
+                NormalizeNetflixJobUrl(ReadJsonString(position, "canonicalPositionUrl"), id),
+                searchUrl,
+                requestedLocation,
+                ReadJsonString(position, "department"),
+                ReadJsonString(position, "business_unit"),
+                ReadJsonString(position, "work_location_option"),
+                ReadJsonString(position, "locale"),
+                ReadUnixTimestamp(position, "t_create"),
+                ReadUnixTimestamp(position, "t_update")));
+    }
+
+    return new NetflixSearchPage(totalCount, results);
+}
+
+static NetflixJobDetail? ParseNetflixDetailPayload(string payload, NetflixSearchResult fallback)
+{
+    using var document = JsonDocument.Parse(payload);
+    var root = document.RootElement;
+    if (root.ValueKind != JsonValueKind.Object)
+    {
+        return null;
+    }
+
+    var id = ReadJsonStringOrNumber(root, "id") ?? fallback.JobId;
+    var customDataFields = GetJsonPropertyOrDefault(GetJsonPropertyOrDefault(root, "custom_JD"), "data_fields");
+    var workType = ReadJsonStringList(customDataFields, "work_type").FirstOrDefault()
+        ?? ReadJsonString(root, "work_location_option");
+
+    return new NetflixJobDetail(
+        id,
+        ReadJsonString(root, "ats_job_id") ?? ReadJsonString(root, "display_job_id") ?? fallback.SourceJobId,
+        ReadJsonString(root, "posting_name") ?? ReadJsonString(root, "name") ?? fallback.TitleRaw,
+        ReadJsonStringList(root, "locations"),
+        NormalizeNetflixJobUrl(ReadJsonString(root, "canonicalPositionUrl"), id),
+        ReadJsonString(root, "job_description"),
+        ReadJsonString(root, "department") ?? fallback.DepartmentRaw,
+        ReadJsonString(root, "business_unit") ?? fallback.BusinessUnitRaw,
+        workType ?? fallback.WorkTypeRaw,
+        ReadJsonString(root, "locale") ?? fallback.LocaleRaw,
+        ReadUnixTimestamp(root, "t_create") ?? fallback.PostedAtCandidate,
+        ReadUnixTimestamp(root, "t_update") ?? fallback.UpdatedAtCandidate);
+}
+
 static AmazonSearchPage ParseAmazonSearchPayload(string payload, string searchUrl, string requestedLocation, string capturedAt)
 {
     using var document = JsonDocument.Parse(payload);
@@ -3077,7 +3538,8 @@ static string BuildMicrosoftSearchApiUrl(string sourceLocation, string searchTer
         ["location"] = sourceLocation,
         ["start"] = start.ToString(CultureInfo.InvariantCulture),
         ["sort_by"] = "relevance",
-        ["filter_include_remote"] = "1"
+        ["filter_include_remote"] = "1",
+        ["filter_include_relocation"] = "1"
     };
 
     return "https://apply.careers.microsoft.com/api/pcsx/search?" + BuildQueryString(query);
@@ -3088,8 +3550,8 @@ static string BuildAppleSearchUrl(string sourceLocation, string searchTerm, int 
     var query = new Dictionary<string, string?>
     {
         ["location"] = sourceLocation,
-        // Apple search URLs expect the keyword to be encoded before normal query-string encoding.
-        ["key"] = Uri.EscapeDataString(searchTerm),
+        ["search"] = searchTerm,
+        ["sort"] = "relevance",
         ["page"] = page.ToString(CultureInfo.InvariantCulture)
     };
 
@@ -3106,7 +3568,8 @@ static string BuildNvidiaSearchApiUrl(string sourceLocation, string searchTerm, 
         ["start"] = start.ToString(CultureInfo.InvariantCulture),
         ["sort_by"] = "relevance",
         ["filter_distance"] = "160",
-        ["filter_include_remote"] = "1"
+        ["filter_include_remote"] = "1",
+        ["filter_include_relocation"] = "1"
     };
 
     return "https://jobs.nvidia.com/api/pcsx/search?" + BuildQueryString(query);
@@ -3132,6 +3595,26 @@ static string BuildAmazonSearchApiUrl(string searchTerm, string countryCode, str
     };
 
     return "https://www.amazon.jobs/en/search.json?" + BuildQueryString(query);
+}
+
+static string BuildNetflixSearchApiUrl(string searchLocation, string searchTerm, int start)
+{
+    var query = new Dictionary<string, string?>
+    {
+        ["domain"] = "netflix.com",
+        ["profile"] = string.Empty,
+        ["query"] = searchTerm,
+        ["location"] = searchLocation,
+        ["sort_by"] = "relevance",
+        ["start"] = start.ToString(CultureInfo.InvariantCulture)
+    };
+
+    return "https://explore.jobs.netflix.net/api/apply/v2/jobs?" + BuildQueryString(query);
+}
+
+static string BuildNetflixDetailApiUrl(string jobId)
+{
+    return $"https://explore.jobs.netflix.net/api/apply/v2/jobs/{Uri.EscapeDataString(jobId)}?domain=netflix.com";
 }
 
 static string BuildMicrosoftDetailApiUrl(string jobId, string queriedLocation)
@@ -3220,10 +3703,27 @@ static string NormalizeAmazonJobUrl(string? rawUrl, string jobId)
     return $"https://www.amazon.jobs/{rawUrl.TrimStart('/')}";
 }
 
-static string? ReadMicrosoftUnixTimestamp(JsonElement element, string propertyName)
+static string NormalizeNetflixJobUrl(string? rawUrl, string jobId)
+{
+    if (string.IsNullOrWhiteSpace(rawUrl))
+    {
+        return $"https://explore.jobs.netflix.net/careers/job/{jobId}";
+    }
+
+    return rawUrl.StartsWith("http", StringComparison.OrdinalIgnoreCase)
+        ? rawUrl
+        : $"https://explore.jobs.netflix.net/{rawUrl.TrimStart('/')}";
+}
+
+static string? ReadUnixTimestamp(JsonElement element, string propertyName)
 {
     var value = ReadJsonLong(element, propertyName);
     return value is null ? null : DateTimeOffset.FromUnixTimeSeconds(value.Value).ToString("O");
+}
+
+static string? ReadMicrosoftUnixTimestamp(JsonElement element, string propertyName)
+{
+    return ReadUnixTimestamp(element, propertyName);
 }
 
 static int? ReadJsonInt(JsonElement element, string propertyName)
@@ -3760,6 +4260,14 @@ static HttpClient CreateHttpClient()
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
         "(KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36");
     client.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.9");
+    return client;
+}
+
+static HttpClient CreateNetflixHttpClient()
+{
+    var client = CreateHttpClient();
+    client.DefaultRequestHeaders.Accept.ParseAdd("application/json, text/plain, */*");
+    client.DefaultRequestHeaders.Referrer = new Uri("https://explore.jobs.netflix.net/careers");
     return client;
 }
 
@@ -4819,6 +5327,28 @@ static JobDataset BuildAmazonDataset(AmazonRawRun rawRun, List<JobItem> jobs)
         jobs);
 }
 
+static JobDataset BuildNetflixDataset(NetflixRawRun rawRun, List<JobItem> jobs)
+{
+    var locations = rawRun.Sources
+        .GroupBy(static source => source.LocationSlug, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var source = group.First();
+            return new LocationConfig(source.LocationSlug, source.RequestedLocation, source.SearchLocation);
+        })
+        .OrderBy(static location => location.Label, StringComparer.Ordinal)
+        .ToList();
+
+    return new JobDataset(
+        rawRun.GeneratedAt,
+        "Netflix Jobs",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active Netflix jobs from latest raw snapshot.",
+        rawRun.SearchTerm,
+        locations,
+        jobs);
+}
+
 static JsonSerializerOptions JsonOptions()
 {
     return new JsonSerializerOptions
@@ -4863,6 +5393,11 @@ internal sealed record AmazonLocationConfig(
     [property: JsonPropertyName("locQuery")] string LocQuery,
     [property: JsonPropertyName("queries")] List<string> Queries,
     [property: JsonPropertyName("cacheSlug")] string? CacheSlug = null);
+
+internal sealed record NetflixLocationConfig(
+    [property: JsonPropertyName("slug")] string Slug,
+    [property: JsonPropertyName("label")] string Label,
+    [property: JsonPropertyName("searchLocation")] string SearchLocation);
 
 internal sealed record ParseHtmlPreview(
     [property: JsonPropertyName("source")] string Source,
@@ -5124,6 +5659,46 @@ internal sealed record AmazonRawJobItem(
     [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate,
     [property: JsonPropertyName("capturedAt")] string CapturedAt);
 
+internal sealed record NetflixRawRun(
+    [property: JsonPropertyName("runId")] string RunId,
+    [property: JsonPropertyName("generatedAt")] string GeneratedAt,
+    [property: JsonPropertyName("source")] string Source,
+    [property: JsonPropertyName("searchTerm")] string SearchTerm,
+    [property: JsonPropertyName("sources")] List<NetflixRawSource> Sources);
+
+internal sealed record NetflixRawSource(
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("locationSlug")] string LocationSlug,
+    [property: JsonPropertyName("searchLocation")] string SearchLocation,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("jobs")] List<NetflixRawJobItem> Jobs);
+
+internal sealed record NetflixRawJobItem(
+    [property: JsonPropertyName("jobId")] string JobId,
+    [property: JsonPropertyName("sourceJobId")] string? SourceJobId,
+    [property: JsonPropertyName("titleRaw")] string? TitleRaw,
+    [property: JsonPropertyName("companyRaw")] string? CompanyRaw,
+    [property: JsonPropertyName("locationsRaw")] List<string> LocationsRaw,
+    [property: JsonPropertyName("jobUrl")] string JobUrl,
+    [property: JsonPropertyName("searchUrl")] string SearchUrl,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("departmentRaw")] string? DepartmentRaw,
+    [property: JsonPropertyName("businessUnitRaw")] string? BusinessUnitRaw,
+    [property: JsonPropertyName("workTypeRaw")] string? WorkTypeRaw,
+    [property: JsonPropertyName("localeRaw")] string? LocaleRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate,
+    [property: JsonPropertyName("capturedAt")] string CapturedAt);
+
+internal sealed record NetflixFetchResult(
+    List<NetflixRawSource> Sources,
+    int JobCount);
+
 internal sealed record MetaSearchResult(
     string JobId,
     string? TitleRaw,
@@ -5219,6 +5794,39 @@ internal sealed record AmazonSearchPage(
     int Hits,
     List<AmazonRawJobItem> Jobs);
 
+internal sealed record NetflixSearchResult(
+    string JobId,
+    string? SourceJobId,
+    string? TitleRaw,
+    List<string> LocationsRaw,
+    string JobUrl,
+    string SearchUrl,
+    string RequestedLocation,
+    string? DepartmentRaw,
+    string? BusinessUnitRaw,
+    string? WorkTypeRaw,
+    string? LocaleRaw,
+    string? PostedAtCandidate,
+    string? UpdatedAtCandidate);
+
+internal sealed record NetflixSearchPage(
+    int TotalCount,
+    List<NetflixSearchResult> Results);
+
+internal sealed record NetflixJobDetail(
+    string JobId,
+    string? SourceJobId,
+    string? TitleRaw,
+    List<string> LocationsRaw,
+    string JobUrl,
+    string? AboutTheJobRaw,
+    string? DepartmentRaw,
+    string? BusinessUnitRaw,
+    string? WorkTypeRaw,
+    string? LocaleRaw,
+    string? PostedAtCandidate,
+    string? UpdatedAtCandidate);
+
 internal sealed record MetaQualifications(
     string? MinimumQualificationsRaw,
     string? PreferredQualificationsRaw);
@@ -5298,6 +5906,9 @@ internal sealed record NvidiaRemovedDetailsDataset(
 
 internal sealed record AmazonRemovedDetailsDataset(
     [property: JsonPropertyName("jobs")] List<AmazonRemovedJobDetail> Jobs);
+
+internal sealed record NetflixRemovedDetailsDataset(
+    [property: JsonPropertyName("jobs")] List<NetflixRemovedJobDetail> Jobs);
 
 internal sealed record MetaRemovedJobDetail(
     [property: JsonPropertyName("id")] string Id,
@@ -5391,6 +6002,30 @@ internal sealed record AmazonRemovedJobDetail(
     [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
     [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
     [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
+    [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate);
+
+internal sealed record NetflixRemovedJobDetail(
+    [property: JsonPropertyName("id")] string Id,
+    [property: JsonPropertyName("title")] string Title,
+    [property: JsonPropertyName("company")] string? Company,
+    [property: JsonPropertyName("url")] string Url,
+    [property: JsonPropertyName("locations")] List<string> Locations,
+    [property: JsonPropertyName("requestedLocation")] string RequestedLocation,
+    [property: JsonPropertyName("firstSeenAt")] string? FirstSeenAt,
+    [property: JsonPropertyName("lastSeenAt")] string? LastSeenAt,
+    [property: JsonPropertyName("removedAt")] string? RemovedAt,
+    [property: JsonPropertyName("removedInRunId")] string? RemovedInRunId,
+    [property: JsonPropertyName("sourceJobId")] string? SourceJobId,
+    [property: JsonPropertyName("applyUrlRaw")] string? ApplyUrlRaw,
+    [property: JsonPropertyName("aboutTheJobRaw")] string? AboutTheJobRaw,
+    [property: JsonPropertyName("responsibilitiesRaw")] string? ResponsibilitiesRaw,
+    [property: JsonPropertyName("minimumQualificationsRaw")] string? MinimumQualificationsRaw,
+    [property: JsonPropertyName("preferredQualificationsRaw")] string? PreferredQualificationsRaw,
+    [property: JsonPropertyName("departmentRaw")] string? DepartmentRaw,
+    [property: JsonPropertyName("businessUnitRaw")] string? BusinessUnitRaw,
+    [property: JsonPropertyName("workTypeRaw")] string? WorkTypeRaw,
+    [property: JsonPropertyName("localeRaw")] string? LocaleRaw,
     [property: JsonPropertyName("postedAtCandidate")] string? PostedAtCandidate,
     [property: JsonPropertyName("updatedAtCandidate")] string? UpdatedAtCandidate);
 
@@ -5503,6 +6138,9 @@ internal enum PipelineMode
     CollectAmazon,
     NormalizeAmazonLatest,
     AnalyzeAmazonLatest,
+    CollectNetflix,
+    NormalizeNetflixLatest,
+    AnalyzeNetflixLatest,
     CollectAndAnalyze,
     Collect,
     AnalyzeLatest,

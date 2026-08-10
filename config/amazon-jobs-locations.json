@@ -48,5 +48,35 @@
       "Software Development",
       "Software Engineer"
     ]
+  },
+  {
+    "slug": "canada",
+    "label": "Canada",
+    "countryCode": "CAN",
+    "locQuery": "Canada",
+    "queries": [
+      "Software Development",
+      "Software Engineer"
+    ]
+  },
+  {
+    "slug": "france",
+    "label": "France",
+    "countryCode": "FRA",
+    "locQuery": "France",
+    "queries": [
+      "Software Development",
+      "Software Engineer"
+    ]
+  },
+  {
+    "slug": "spain",
+    "label": "Spain",
+    "countryCode": "ESP",
+    "locQuery": "Spain",
+    "queries": [
+      "Software Development",
+      "Software Engineer"
+    ]
   }
 ]

@@ -34,12 +34,19 @@ jobs:
         env:
           GOOGLE_CAREERS_LOCATIONS: ${{ vars.GOOGLE_CAREERS_LOCATIONS }}
           GOOGLE_CAREERS_SEARCH_TERM: ${{ vars.GOOGLE_CAREERS_SEARCH_TERM }}
-          GOOGLE_CAREERS_MAX_PAGES: ${{ vars.GOOGLE_CAREERS_MAX_PAGES }}
+          GOOGLE_CAREERS_MAX_PAGES: "100"
           META_CAREERS_LIVE: "true"
+          META_CAREERS_MAX_PAGES: "100"
           MICROSOFT_CAREERS_LIVE: "true"
+          MICROSOFT_CAREERS_MAX_PAGES: "100"
           NVIDIA_CAREERS_LIVE: "true"
-          NVIDIA_CAREERS_MAX_PAGES: "10"
+          NVIDIA_CAREERS_MAX_PAGES: "100"
           AMAZON_JOBS_LIVE: "true"
+          AMAZON_JOBS_MAX_PAGES: "100"
+          APPLE_JOBS_MAX_PAGES: "100"
+          NETFLIX_JOBS_SEARCH_TERM: "Software Engineering"
+          NETFLIX_JOBS_MAX_PAGES: "100"
+          NETFLIX_JOBS_MAX_DETAILS: "1000"
         run: |
           status_file="$RUNNER_TEMP/collector-status.tsv"
           : > "$status_file"
@@ -64,6 +71,7 @@ jobs:
           collect_source microsoft collect-microsoft
           collect_source nvidia collect-nvidia
           collect_source amazon collect-amazon
+          collect_source netflix collect-netflix
 
       - name: Analyze latest runs
         env:
@@ -101,6 +109,7 @@ jobs:
           analyze_source microsoft analyze-microsoft-latest
           analyze_source nvidia analyze-nvidia-latest
           analyze_source amazon analyze-amazon-latest
+          analyze_source netflix analyze-netflix-latest
 
       - name: Commit updated datasets
         run: |
