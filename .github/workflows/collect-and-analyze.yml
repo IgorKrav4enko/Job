@@ -41,12 +41,29 @@ jobs:
           NVIDIA_CAREERS_MAX_PAGES: "10"
           AMAZON_JOBS_LIVE: "true"
         run: |
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- collect
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- collect-meta
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- collect-apple
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- collect-microsoft
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- collect-nvidia
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- collect-amazon
+          status_file="$RUNNER_TEMP/collector-status.tsv"
+          : > "$status_file"
+
+          collect_source() {
+            source="$1"
+            command="$2"
+            echo "::group::Collect $source"
+            if timeout 20m dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- "$command"; then
+              printf '%s\tcollected\n' "$source" >> "$status_file"
+            else
+              exit_code=$?
+              printf '%s\tcollection_failed\n' "$source" >> "$status_file"
+              echo "::error title=$source collection failed::Collector exited with code $exit_code"
+            fi
+            echo "::endgroup::"
+          }
+
+          collect_source google collect
+          collect_source meta collect-meta
+          collect_source apple collect-apple
+          collect_source microsoft collect-microsoft
+          collect_source nvidia collect-nvidia
+          collect_source amazon collect-amazon
 
       - name: Analyze latest runs
         env:
@@ -54,12 +71,36 @@ jobs:
           GOOGLE_CAREERS_SEARCH_TERM: ${{ vars.GOOGLE_CAREERS_SEARCH_TERM }}
           GOOGLE_CAREERS_MAX_PAGES: ${{ vars.GOOGLE_CAREERS_MAX_PAGES }}
         run: |
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- analyze-latest
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- analyze-meta-latest
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- analyze-apple-latest
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- analyze-microsoft-latest
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- analyze-nvidia-latest
-          dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- analyze-amazon-latest
+          collection_status="$RUNNER_TEMP/collector-status.tsv"
+          final_status="$RUNNER_TEMP/pipeline-status.tsv"
+          : > "$final_status"
+
+          analyze_source() {
+            source="$1"
+            command="$2"
+            if ! grep -q "^${source}[[:space:]]collected$" "$collection_status"; then
+              printf '%s\tcollection_failed\n' "$source" >> "$final_status"
+              echo "Skipping $source analysis because collection failed."
+              return
+            fi
+
+            echo "::group::Analyze $source"
+            if timeout 10m dotnet run --project scripts/GoogleCareersSync/GoogleCareersSync.csproj -- "$command"; then
+              printf '%s\tsuccess\n' "$source" >> "$final_status"
+            else
+              exit_code=$?
+              printf '%s\tanalysis_failed\n' "$source" >> "$final_status"
+              echo "::error title=$source analysis failed::Analyzer exited with code $exit_code"
+            fi
+            echo "::endgroup::"
+          }
+
+          analyze_source google analyze-latest
+          analyze_source meta analyze-meta-latest
+          analyze_source apple analyze-apple-latest
+          analyze_source microsoft analyze-microsoft-latest
+          analyze_source nvidia analyze-nvidia-latest
+          analyze_source amazon analyze-amazon-latest
 
       - name: Commit updated datasets
         run: |
@@ -73,3 +114,32 @@ jobs:
           git add data data-raw
           git commit -m "chore: collect and analyze latest job data"
           git push origin "${{ github.event.repository.default_branch }}"
+
+      - name: Report collection status
+        if: always()
+        run: |
+          status_file="$RUNNER_TEMP/pipeline-status.tsv"
+          echo "## Collection summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Company | Result |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| --- | --- |" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ ! -s "$status_file" ]; then
+            echo "| Pipeline | Failed before collection completed |" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+          while IFS=$'\t' read -r source result; do
+            case "$result" in
+              success) label="Success" ;;
+              collection_failed) label="Collection failed" ;;
+              analysis_failed) label="Analysis failed" ;;
+              *) label="$result" ;;
+            esac
+            echo "| $source | $label |" >> "$GITHUB_STEP_SUMMARY"
+          done < "$status_file"
+
+          if grep -Eq $'\t(collection_failed|analysis_failed)$' "$status_file"; then
+            echo "One or more company pipelines failed after successful results were preserved."
+            exit 1
+          fi
