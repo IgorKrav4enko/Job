@@ -1,6 +1,22 @@
 {
   "jobs": [
     {
+      "id": "1970393556945570",
+      "title": "Principal Software Engineering Manager - FDE",
+      "company": "Microsoft",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556945570",
+      "locations": [
+        "United Kingdom, London, London"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-08-07T19:14:40.7034529\u002B00:00",
+      "lastSeenAt": "2026-08-10T08:03:46.1798083\u002B00:00",
+      "removedAt": "2026-08-10T19:16:22.5415586\u002B00:00",
+      "removedInRunId": "2026-08-10T19-16-22Z",
+      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556945570",
+      "postedAtCandidate": "2026-08-07T11:31:26.0000000\u002B00:00"
+    },
+    {
       "id": "1970393556927547",
       "title": "Member of Technical Staff - Privacy Engineer, Health",
       "company": "Microsoft",
@@ -312,25 +328,6 @@
       "removedInRunId": "2026-08-03T10-05-38Z",
       "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556943851",
       "postedAtCandidate": "2026-07-28T12:12:24.0000000\u002B00:00"
-    },
-    {
-      "id": "1970393556943701",
-      "title": "Member of Technical Staff, Software Engineer",
-      "company": "Microsoft",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556943701",
-      "locations": [
-        "Switzerland, Z\u00FCrich, Z\u00FCrich"
-      ],
-      "requestedLocation": "Switzerland",
-      "firstSeenAt": "2026-07-25T08:23:46.6260432\u002B00:00",
-      "lastSeenAt": "2026-08-02T08:36:51.3519958\u002B00:00",
-      "removedAt": "2026-08-03T10:05:38.8603431\u002B00:00",
-      "removedInRunId": "2026-08-03T10-05-38Z",
-      "applyUrlRaw": "https://apply.careers.microsoft.com/careers/job/1970393556943701",
-      "aboutTheJobRaw": "\u003Cbr\u003E\u003Cdiv\u003E\u00A0\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EWe are seeking \u003C/span\u003E\u003Cspan\u003EData Research Engineers\u003C/span\u003E\u003Cspan\u003E\u00A0to join our\u00A0\u003C/span\u003E\u003Cspan\u003EMultimodal team\u003C/span\u003E\u003Cspan\u003E, where we are building the next generation of foundation models across vision, language, audio, and beyond. If you are passionate about exploring, designing, and building high-quality datasets to drive frontier AI models, this role is for you.\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EAt Microsoft AI, data is at the heart of innovation\u2014and in this role, you will collaborate closely with scientists, engineers, and annotators to curate, analyse, and evaluate diverse multimodal data sources critical to model development.\u00A0You\u2019ll\u00A0lead efforts in developing novel data collection strategies, improving dataset quality, understanding data-driven model behaviours, and aligning datasets with ethical and societal values.\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EThis is a cross-disciplinary, high-impact role ideal for engineers who want to push the boundaries of what AI can learn from data, especially in multimodal contexts.\u00A0\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EMicrosoft\u2019s mission is to empower every person and every organization on the planet to achieve more. As employees we come together with a growth mindset, innovate to empower others, and collaborate to realize our shared goals. Each day we build on our values of respect, integrity, and accountability to create a culture of inclusion where everyone can thrive at work and beyond.\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cbr\u003E\u003Cbr\u003E",
-      "responsibilitiesRaw": "\u003Cbr\u003E\u003Cdiv\u003E\u00A0\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003ECreate high-quality datasets for training and evaluation; run experiments on new datasets (data ablations) to assess their impact and determine the most effective data\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EDevelop and\u00A0maintain\u00A0scalable data pipelines for multimodal ingestion, pre-processing, filtering, and annotation\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EAnalyse real-world multimodal datasets to assess quality, diversity, relevance, and\u00A0identify\u00A0areas for improvement\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EBuild lightweight tools and workflows for dataset auditing, visualization, and versioning\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003ECollaborate with Safety, Ethics, and Governance teams to ensure datasets meet standards for quality, privacy, and responsible AI practices\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cbr\u003E\u003Cbr\u003E",
-      "minimumQualificationsRaw": "\u003Cbr\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003ERequired Qualifications:\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EBachelor\u0027s Degree in AI, Computer Science, Data Science, Statistics, Physics, Engineering, or a related technical field AND technical engineering experience with coding in languages including, but not limited to, Python and common data libraries (Pandas, NumPy, etc.)\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EOR equivalent experience\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EExperience in data analysis or data engineering\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EProficiency\u00A0in statistics and exploratory data analysis methods\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EAbility to communicate technical findings effectively to research and product teams\u003C/span\u003E \u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EPreferred Qualifications:\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EMaster\u0027s Degree in Computer Science\u00A0or related technical field AND technical engineering experience with coding in languages including, but not limited to, Python and common data libraries (Pandas, NumPy, etc.)\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EFamiliarity with data processing frameworks such as Spark, Ray, Apache Beam\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E\u003Cdiv\u003E\u003Cp\u003E\u003Cspan\u003EExperience working with large-scale, real-world datasets that are unstructured or semi-structured\u003C/span\u003E\u003Cspan\u003E\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/div\u003E \u003Cbr\u003E\u003Cbr\u003E\u003Cp\u003ESoftware Engineering IC5 - The typical base pay range for this role across Switzerland is  CHF 183,800.00 - CHF 309,700.00 per year. Certain roles may be eligible for benefits and other compensation. \u003C/p\u003E\u003Cp\u003E\u003C/p\u003E \u003Cp\u003EFind additional benefits and pay information here:\u003Cbr\u003E\u003Ca href=\u0022https://careers.microsoft.com/v2/global/en/corporate-pay/switzerland-corporate-pay.html\u0022\u003Ehttps://careers.microsoft.com/v2/global/en/corporate-pay/switzerland-corporate-pay.html\u003C/a\u003E\u003C/p\u003E\u003Cbr\u003E\u003Cp\u003EThis position will be open for a minimum of 5 days, with applications accepted on an ongoing basis until the position is filled.\u003C/p\u003E\u003Cbr\u003E\u003Chr\u003E\u003Cbr\u003E\u003Cp\u003EMicrosoft is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to age, ancestry, citizenship, color, family or medical care leave, gender identity or expression, genetic information, immigration status, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran or military status, race, ethnicity, religion, sex (including pregnancy), sexual orientation, or any other characteristic protected by applicable local laws, regulations and ordinances. If you need assistance with religious accommodations and/or a reasonable accommodation due to a disability during the application process, read more about \u003Ca href=\u0022https://careers.microsoft.com/v2/global/en/accessibility.html\u0022\u003E\u003Cb\u003E\u003Cu\u003Erequesting accommodations.\u003C/u\u003E\u003C/b\u003E\u003C/a\u003E\u003C/p\u003E",
-      "postedAtCandidate": "2026-07-24T20:04:30.0000000\u002B00:00"
     },
     {
       "id": "1970393556753750",
