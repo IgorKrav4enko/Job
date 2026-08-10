@@ -78,5 +78,25 @@
       "Software Development",
       "Software Engineer"
     ]
+  },
+  {
+    "slug": "czechia",
+    "label": "Czechia",
+    "countryCode": "CZE",
+    "locQuery": "Czechia",
+    "queries": [
+      "Software Development",
+      "Software Engineer"
+    ]
+  },
+  {
+    "slug": "netherlands",
+    "label": "Netherlands",
+    "countryCode": "NLD",
+    "locQuery": "Netherlands",
+    "queries": [
+      "Software Development",
+      "Software Engineer"
+    ]
   }
 ]
