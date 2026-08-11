@@ -51,6 +51,30 @@ const SOURCES = {
     detailsUrl: "./data/netflix-jobs-run-details.json",
     jobsUrl: "./data/netflix-jobs-jobs.json",
     allowMissingHistory: true
+  },
+  uber: {
+    key: "uber",
+    label: "Uber Jobs",
+    runsUrl: "./data/uber-jobs-runs.json",
+    detailsUrl: "./data/uber-jobs-run-details.json",
+    jobsUrl: "./data/uber-jobs-jobs.json",
+    allowMissingHistory: true
+  },
+  datadog: {
+    key: "datadog",
+    label: "Datadog Jobs",
+    runsUrl: "./data/datadog-jobs-runs.json",
+    detailsUrl: "./data/datadog-jobs-run-details.json",
+    jobsUrl: "./data/datadog-jobs-jobs.json",
+    allowMissingHistory: true
+  },
+  databricks: {
+    key: "databricks",
+    label: "Databricks Jobs",
+    runsUrl: "./data/databricks-jobs-runs.json",
+    detailsUrl: "./data/databricks-jobs-run-details.json",
+    jobsUrl: "./data/databricks-jobs-jobs.json",
+    allowMissingHistory: true
   }
 };
 

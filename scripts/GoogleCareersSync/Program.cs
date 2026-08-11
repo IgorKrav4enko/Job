@@ -61,6 +61,19 @@ var netflixRunsPath = Path.Combine(root, "data", "netflix-jobs-runs.json");
 var netflixRunDetailsPath = Path.Combine(root, "data", "netflix-jobs-run-details.json");
 var netflixRemovedDetailsPath = Path.Combine(root, "data", "netflix-jobs-removed-details.json");
 var netflixRawRunsDirectoryPath = Path.Combine(root, "data-raw", "netflix-jobs", "runs");
+var uberConfigPath = Path.Combine(root, "config", "uber-jobs-locations.json");
+var uberOutputPath = Path.Combine(root, "data", "uber-jobs-jobs.json");
+var uberRunsPath = Path.Combine(root, "data", "uber-jobs-runs.json");
+var uberRunDetailsPath = Path.Combine(root, "data", "uber-jobs-run-details.json");
+var uberRawRunsDirectoryPath = Path.Combine(root, "data-raw", "uber-jobs", "runs");
+var datadogRawRunsDirectoryPath = Path.Combine(root, "data-raw", "datadog-jobs", "runs");
+var datadogOutputPath = Path.Combine(root, "data", "datadog-jobs-jobs.json");
+var datadogRunsPath = Path.Combine(root, "data", "datadog-jobs-runs.json");
+var datadogRunDetailsPath = Path.Combine(root, "data", "datadog-jobs-run-details.json");
+var databricksRawRunsDirectoryPath = Path.Combine(root, "data-raw", "databricks-jobs", "runs");
+var databricksOutputPath = Path.Combine(root, "data", "databricks-jobs-jobs.json");
+var databricksRunsPath = Path.Combine(root, "data", "databricks-jobs-runs.json");
+var databricksRunDetailsPath = Path.Combine(root, "data", "databricks-jobs-run-details.json");
 
 var locations = LoadLocations(configPath);
 var searchTerm = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_SEARCH_TERM")?.Trim();
@@ -568,6 +581,213 @@ switch (mode)
         break;
     }
 
+    case PipelineMode.CollectUber:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var capturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var uberLocations = LoadUberLocations(uberConfigPath);
+        var uberSearchTerm = Environment.GetEnvironmentVariable("UBER_JOBS_SEARCH_TERM")?.Trim();
+        if (string.IsNullOrWhiteSpace(uberSearchTerm)) uberSearchTerm = "software engineer";
+        var fetchResult = await UberCollector.FetchAsync(
+            uberLocations,
+            uberSearchTerm,
+            capturedAt,
+            GetPositiveEnvironmentInt("UBER_JOBS_MAX_PAGES", DefaultMaxPages),
+            GetPositiveEnvironmentInt("UBER_JOBS_MAX_DETAILS", 500));
+        var rawRun = new UberRawRun(runId, capturedAt, "uber-jobs", uberSearchTerm, fetchResult.Sources);
+
+        Directory.CreateDirectory(uberRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(uberRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+        Console.WriteLine($"Collected Uber raw run {runId} with {fetchResult.JobCount} unique jobs.");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
+    case PipelineMode.CollectDatadog:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var capturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var fetchResult = await DatadogCollector.FetchAsync(capturedAt);
+        var rawRun = new DatadogRawRun(
+            runId,
+            capturedAt,
+            "datadog-jobs",
+            fetchResult.SearchTerm,
+            fetchResult.Filter,
+            new List<DatadogRawSource>
+            {
+                new("EMEA", "emea", fetchResult.SearchUrl, fetchResult.Jobs)
+            });
+
+        Directory.CreateDirectory(datadogRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(datadogRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+        Console.WriteLine($"Collected Datadog raw run {runId} with {fetchResult.Jobs.Count} jobs.");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
+    case PipelineMode.CollectDatabricks:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var capturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var fetchResult = await DatabricksCollector.FetchAsync(capturedAt);
+        var sources = fetchResult.JobsByCountry
+            .OrderBy(static pair => pair.Key, StringComparer.Ordinal)
+            .Select(pair => new DatabricksRawSource(
+                pair.Key,
+                pair.Key.ToLowerInvariant().Replace(' ', '-'),
+                fetchResult.SearchUrl,
+                pair.Value))
+            .ToList();
+        var rawRun = new DatabricksRawRun(runId, capturedAt, "databricks-jobs", sources);
+        Directory.CreateDirectory(databricksRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(databricksRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+        Console.WriteLine($"Collected Databricks raw run {runId} with {sources.SelectMany(static source => source.Jobs).Select(static job => job.JobId).Distinct(StringComparer.Ordinal).Count()} unique jobs.");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
+    case PipelineMode.NormalizeDatabricksLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(databricksRawRunsDirectoryPath).LastOrDefault()
+            ?? throw new FileNotFoundException("No Databricks raw runs found. Run collect-databricks first.");
+        var latestRawRun = LoadJsonOrDefault<DatabricksRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Databricks raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(databricksOutputPath);
+        var latestJobs = BuildDatabricksJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        await WriteJsonFileAsync(databricksOutputPath, BuildDatabricksDataset(latestRawRun, mergeResult.Jobs));
+        Console.WriteLine($"Normalized latest Databricks raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeDatabricksLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(databricksRawRunsDirectoryPath).LastOrDefault()
+            ?? throw new FileNotFoundException("No Databricks raw runs found. Run collect-databricks first.");
+        var latestRawRun = LoadJsonOrDefault<DatabricksRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Databricks raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(databricksOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(databricksRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousDetails = LoadJsonOrDefault<RunDetailsDataset>(databricksRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousDetails = NormalizeRunDetails(previousDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Databricks raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildDatabricksJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0 ? new List<JobItem>() : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildDatabricksDataset(latestRawRun, mergeResult.Jobs);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var detailsDataset = BuildRunDetailsDataset(previousDetails, latestRawRun.RunId, mergeResult);
+
+        await WriteJsonFileAsync(databricksOutputPath, dataset);
+        await WriteJsonFileAsync(databricksRunsPath, runsDataset);
+        await WriteJsonFileAsync(databricksRunDetailsPath, detailsDataset);
+        Console.WriteLine($"Analyzed latest Databricks raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs (+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
+    case PipelineMode.NormalizeDatadogLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(datadogRawRunsDirectoryPath).LastOrDefault()
+            ?? throw new FileNotFoundException("No Datadog raw runs found. Run collect-datadog first.");
+        var latestRawRun = LoadJsonOrDefault<DatadogRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Datadog raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(datadogOutputPath);
+        var latestJobs = BuildDatadogJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        await WriteJsonFileAsync(datadogOutputPath, BuildDatadogDataset(latestRawRun, mergeResult.Jobs));
+        Console.WriteLine($"Normalized latest Datadog raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeDatadogLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(datadogRawRunsDirectoryPath).LastOrDefault()
+            ?? throw new FileNotFoundException("No Datadog raw runs found. Run collect-datadog first.");
+        var latestRawRun = LoadJsonOrDefault<DatadogRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Datadog raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(datadogOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(datadogRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousDetails = LoadJsonOrDefault<RunDetailsDataset>(datadogRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousDetails = NormalizeRunDetails(previousDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Datadog raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildDatadogJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0 ? new List<JobItem>() : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildDatadogDataset(latestRawRun, mergeResult.Jobs);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var detailsDataset = BuildRunDetailsDataset(previousDetails, latestRawRun.RunId, mergeResult);
+
+        await WriteJsonFileAsync(datadogOutputPath, dataset);
+        await WriteJsonFileAsync(datadogRunsPath, runsDataset);
+        await WriteJsonFileAsync(datadogRunDetailsPath, detailsDataset);
+        Console.WriteLine($"Analyzed latest Datadog raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs (+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
+    case PipelineMode.NormalizeUberLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(uberRawRunsDirectoryPath).LastOrDefault()
+            ?? throw new FileNotFoundException("No Uber raw runs found. Run collect-uber first.");
+        var latestRawRun = LoadJsonOrDefault<UberRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Uber raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(uberOutputPath);
+        var latestJobs = BuildUberJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        await WriteJsonFileAsync(uberOutputPath, BuildUberDataset(latestRawRun, mergeResult.Jobs));
+        Console.WriteLine($"Normalized latest Uber raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeUberLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(uberRawRunsDirectoryPath).LastOrDefault()
+            ?? throw new FileNotFoundException("No Uber raw runs found. Run collect-uber first.");
+        var latestRawRun = LoadJsonOrDefault<UberRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Uber raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(uberOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(uberRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousDetails = LoadJsonOrDefault<RunDetailsDataset>(uberRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousDetails = NormalizeRunDetails(previousDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Uber raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildUberJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0 ? new List<JobItem>() : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildUberDataset(latestRawRun, mergeResult.Jobs);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var detailsDataset = BuildRunDetailsDataset(previousDetails, latestRawRun.RunId, mergeResult);
+
+        await WriteJsonFileAsync(uberOutputPath, dataset);
+        await WriteJsonFileAsync(uberRunsPath, runsDataset);
+        await WriteJsonFileAsync(uberRunDetailsPath, detailsDataset);
+        Console.WriteLine($"Analyzed latest Uber raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs (+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
     case PipelineMode.NormalizeAmazonLatest:
     {
         var latestRawRunPath = GetRawRunFilePaths(amazonRawRunsDirectoryPath).LastOrDefault();
@@ -792,6 +1012,15 @@ static PipelineMode GetMode(string[] args)
         "collect-netflix" => PipelineMode.CollectNetflix,
         "normalize-netflix-latest" => PipelineMode.NormalizeNetflixLatest,
         "analyze-netflix-latest" => PipelineMode.AnalyzeNetflixLatest,
+        "collect-uber" => PipelineMode.CollectUber,
+        "normalize-uber-latest" => PipelineMode.NormalizeUberLatest,
+        "analyze-uber-latest" => PipelineMode.AnalyzeUberLatest,
+        "collect-datadog" => PipelineMode.CollectDatadog,
+        "normalize-datadog-latest" => PipelineMode.NormalizeDatadogLatest,
+        "analyze-datadog-latest" => PipelineMode.AnalyzeDatadogLatest,
+        "collect-databricks" => PipelineMode.CollectDatabricks,
+        "normalize-databricks-latest" => PipelineMode.NormalizeDatabricksLatest,
+        "analyze-databricks-latest" => PipelineMode.AnalyzeDatabricksLatest,
         _ => throw new ArgumentOutOfRangeException(nameof(args), $"Unknown mode '{args[0]}'.")
     };
 }
@@ -1253,6 +1482,117 @@ static List<JobItem> BuildNetflixJobsFromRawRun(NetflixRawRun rawRun)
         })
         .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
         .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildUberJobsFromRawRun(UberRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source => source.Jobs.Select(job => new JobItem(
+            job.JobId,
+            HtmlDecode(job.TitleRaw ?? string.Empty),
+            "Uber",
+            job.LocationsRaw,
+            job.JobUrl,
+            job.RequestedLocation,
+            job.SearchUrl,
+            job.PostedAtCandidate,
+            job.UpdatedAtCandidate)))
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var first = group.First();
+            var locations = group.SelectMany(static job => job.Locations)
+                .Where(static location => !string.IsNullOrWhiteSpace(location))
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .OrderBy(static location => location, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+            var matchedLocations = group.Select(static job => job.RequestedLocation)
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static location => location, StringComparer.Ordinal)
+                .ToList();
+            return first with
+            {
+                Locations = locations,
+                MatchedLocations = matchedLocations,
+                SearchMatchCount = matchedLocations.Count
+            };
+        })
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildDatadogJobsFromRawRun(DatadogRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(static source => source.Jobs)
+        .Select(job =>
+        {
+            var countries = InferDatadogCountries(job.LocationsRaw);
+            var requestedLocation = countries.FirstOrDefault() ?? "Unknown";
+            return new JobItem(
+                job.JobId,
+                HtmlDecode(job.TitleRaw ?? string.Empty),
+                "Datadog",
+                job.LocationsRaw,
+                job.JobUrl,
+                requestedLocation,
+                job.SearchUrl,
+                job.PostedAtCandidate,
+                job.UpdatedAtCandidate,
+                MatchedLocations: countries,
+                SearchMatchCount: countries.Count);
+        })
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group => group.First())
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildDatabricksJobsFromRawRun(DatabricksRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source => source.Jobs.Select(job => new JobItem(
+            job.JobId,
+            HtmlDecode(job.TitleRaw ?? string.Empty),
+            "Databricks",
+            job.LocationsRaw,
+            job.JobUrl,
+            source.RequestedLocation,
+            job.SearchUrl,
+            job.PostedAtCandidate,
+            job.UpdatedAtCandidate)))
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var first = group.First();
+            var countries = group.Select(static job => job.RequestedLocation)
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static country => country, StringComparer.Ordinal)
+                .ToList();
+            return first with { MatchedLocations = countries, SearchMatchCount = countries.Count };
+        })
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<string> InferDatadogCountries(List<string> locations)
+{
+    var knownCountries = new[]
+    {
+        "Switzerland", "United Kingdom", "Canada", "Germany", "Netherlands",
+        "Ireland", "France", "Czechia", "Spain", "Poland", "Portugal", "Italy", "Israel"
+    };
+
+    return knownCountries
+        .Where(country => locations.Any(location => location.Contains(country, StringComparison.OrdinalIgnoreCase)))
+        .OrderBy(static country => country, StringComparer.Ordinal)
         .ToList();
 }
 
@@ -1788,6 +2128,19 @@ static List<NetflixLocationConfig> LoadNetflixLocations(string configPath)
 
     var locations = JsonSerializer.Deserialize<List<NetflixLocationConfig>>(json, JsonOptions());
     return locations ?? new List<NetflixLocationConfig>();
+}
+
+static List<UberLocationConfig> LoadUberLocations(string configPath)
+{
+    var envValue = Environment.GetEnvironmentVariable("UBER_JOBS_LOCATIONS");
+    var json = string.IsNullOrWhiteSpace(envValue) ? File.ReadAllText(configPath) : envValue;
+    return JsonSerializer.Deserialize<List<UberLocationConfig>>(json, JsonOptions()) ?? new List<UberLocationConfig>();
+}
+
+static int GetPositiveEnvironmentInt(string name, int fallback)
+{
+    var rawValue = Environment.GetEnvironmentVariable(name);
+    return int.TryParse(rawValue, out var parsed) && parsed > 0 ? parsed : fallback;
 }
 
 static int GetMaxPages()
@@ -5349,6 +5702,68 @@ static JobDataset BuildNetflixDataset(NetflixRawRun rawRun, List<JobItem> jobs)
         jobs);
 }
 
+static JobDataset BuildUberDataset(UberRawRun rawRun, List<JobItem> jobs)
+{
+    var locations = rawRun.Sources
+        .GroupBy(static source => source.LocationSlug, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var source = group.First();
+            return new LocationConfig(source.LocationSlug, source.RequestedLocation, source.SearchLocation);
+        })
+        .OrderBy(static location => location.Label, StringComparer.Ordinal)
+        .ToList();
+
+    return new JobDataset(
+        rawRun.GeneratedAt,
+        "Uber Jobs",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active Uber jobs from latest raw snapshot.",
+        rawRun.SearchTerm,
+        locations,
+        jobs);
+}
+
+static JobDataset BuildDatadogDataset(DatadogRawRun rawRun, List<JobItem> jobs)
+{
+    var locations = jobs
+        .SelectMany(job => job.MatchedLocations ?? new List<string> { job.RequestedLocation })
+        .Where(static country => !string.IsNullOrWhiteSpace(country) && country != "Unknown")
+        .Distinct(StringComparer.Ordinal)
+        .OrderBy(static country => country, StringComparer.Ordinal)
+        .Select(country => new LocationConfig(
+            country.ToLowerInvariant().Replace(' ', '-'),
+            country,
+            country))
+        .ToList();
+
+    return new JobDataset(
+        rawRun.GeneratedAt,
+        "Datadog Jobs",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active Datadog jobs from latest raw snapshot.",
+        rawRun.SearchTerm,
+        locations,
+        jobs);
+}
+
+static JobDataset BuildDatabricksDataset(DatabricksRawRun rawRun, List<JobItem> jobs)
+{
+    var locations = rawRun.Sources
+        .Select(source => new LocationConfig(source.LocationSlug, source.RequestedLocation, source.RequestedLocation))
+        .OrderBy(static location => location.Label, StringComparer.Ordinal)
+        .ToList();
+
+    return new JobDataset(
+        rawRun.GeneratedAt,
+        "Databricks Jobs",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active Databricks jobs from latest raw snapshot.",
+        "Engineering",
+        locations,
+        jobs);
+}
+
 static JsonSerializerOptions JsonOptions()
 {
     return new JsonSerializerOptions
@@ -6141,6 +6556,15 @@ internal enum PipelineMode
     CollectNetflix,
     NormalizeNetflixLatest,
     AnalyzeNetflixLatest,
+    CollectUber,
+    NormalizeUberLatest,
+    AnalyzeUberLatest,
+    CollectDatadog,
+    NormalizeDatadogLatest,
+    AnalyzeDatadogLatest,
+    CollectDatabricks,
+    NormalizeDatabricksLatest,
+    AnalyzeDatabricksLatest,
     CollectAndAnalyze,
     Collect,
     AnalyzeLatest,

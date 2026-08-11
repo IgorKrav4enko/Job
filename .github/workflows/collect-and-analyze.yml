@@ -72,6 +72,7 @@ jobs:
           collect_source nvidia collect-nvidia
           collect_source amazon collect-amazon
           collect_source netflix collect-netflix
+          collect_source databricks collect-databricks
 
       - name: Analyze latest runs
         env:
@@ -110,6 +111,7 @@ jobs:
           analyze_source nvidia analyze-nvidia-latest
           analyze_source amazon analyze-amazon-latest
           analyze_source netflix analyze-netflix-latest
+          analyze_source databricks analyze-databricks-latest
 
       - name: Commit updated datasets
         run: |
