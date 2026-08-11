@@ -1,20 +1,212 @@
 {
   "jobs": [
     {
-      "id": "200667397-1731",
-      "title": "Early Careers SoC Physical Design Engineer (m/f/d)",
+      "id": "200670490-5487",
+      "title": "AIML - Applied Research Engineer, Machine Translation",
       "company": "Apple",
-      "url": "https://jobs.apple.com/en-us/details/200667397-1731/early-careers-soc-physical-design-engineer-m-f-d?team=HRDWR",
+      "url": "https://jobs.apple.com/en-us/details/200670490-5487/aiml-applied-research-engineer-machine-translation?team=MLAI",
+      "locations": [
+        "Aachen, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-07-14T19:42:21.6735209\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Would you like to play a critical part in the next revolution of human-computer interaction? The Apple Machine Translation team is building groundbreaking technology that enables connecting people across language barriers. We are looking for an Applied Research Engineer who is passionate about leveraging the latest advances in large language models and reinforcement learning to create, maintain, and ship scalable, high-quality model assets across a multitude of languages \u2014 powering Apple\u0027s Machine Translation products such as the Translate App, Safari web translation, system-wide translatio...",
+      "postedAtCandidate": "2026-07-14T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200621099-1731",
+      "title": "AMS Lab Validation Engineer (m/f/d)",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200621099-1731/ams-lab-validation-engineer-m-f-d?team=HRDWR",
       "locations": [
         "Munich, Germany"
       ],
       "requestedLocation": "Germany",
       "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
-      "lastSeenAt": "2026-08-11T01:02:38.7373402\u002B00:00",
-      "removedAt": "2026-08-11T07:36:41.9725638\u002B00:00",
-      "removedInRunId": "2026-08-11T07-36-41Z",
-      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new insights have a way of becoming phenomenal products very quickly. There\u0027s no telling what you could accomplish at Apple. As Physical Design Engineer, you will take part in the large scale physical design cycle from netlist to tape-out, including full flow of back-end implementation and verification always meeting schedule and design goals. By now the industry is accustomed to Apple taping out the SoCs for our various products at a rigorous pace. In order to achieve this, our world-class design processes are driven by our outstanding Physical Des...",
-      "postedAtCandidate": "2026-07-13T00:00:00.0000000\u002B00:00"
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Why Apple? We live in a mobile and device driven world where knowledge of the physical world around us is needed. We rely on this knowledge to get around, to learn about our environment and to enable spectacular new features for custom applications. Apple is meeting those needs as robustly and as creatively as possible and is interested in people who want to help meet that commitment. The success we are striving will be the result of very skilled people working in an environment which cultivates creativity, partnership, and thinking of old problems in new ways. If that sounds like the ki...",
+      "postedAtCandidate": "2026-01-16T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200667400-1251",
+      "title": "CAD Physical Design Engineer",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200667400-1251/cad-physical-design-engineer?team=HRDWR",
+      "locations": [
+        "Cambridge, United Kingdom"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-07-08T08:43:42.8443670\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish. Multifaceted, amazing people and inspiring, innovative technologies are the norm here. The people who work here have reinvented entire industries with all Apple Hardware products. The same passion for innovation that goes into our products also applies to our practices strengthening our commitment to leave the world better than we found it. Join us to help...",
+      "postedAtCandidate": "2026-06-09T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200654077-1731",
+      "title": "Design Verification Engineer for Cellular SoC (m/f/d)",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200654077-1731/design-verification-engineer-for-cellular-soc-m-f-d?team=HRDWR",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new insights have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion and dedication to your job, and there\u0027s no telling what you could accomplish. Hard-working people and inspiring, innovative technologies are the norms here. Enter a multifunctional role as a Design Verification Engineer in our team. We are at the center of the IP and full-chip verification effort within a silicon design group responsible for verifying the state-of-the-art Cellular RF SoCs. This position requires someone comfor...",
+      "postedAtCandidate": "2026-03-29T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200621108-1731",
+      "title": "Experienced Analog Design Engineer (m/f/d)",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200621108-1731/experienced-analog-design-engineer-m-f-d?team=HRDWR",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "At Apple, we work every single day to craft products that enrich people\u2019s lives. Do you love working on challenges that no one has solved yet? Do you like changing the game? We have an opportunity for a forward-thinking and unusually hardworking IC Designer. As a member of our dynamic group, you will have the rare and rewarding opportunity to craft upcoming products that will delight and encourage millions of Apple\u2019s customers every single day.",
+      "postedAtCandidate": "2025-10-30T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200655452-1731",
+      "title": "Experienced Power/EMIR Design Engineer (M, F, D)",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200655452-1731/experienced-power-emir-design-engineer-m-f-d?team=HRDWR",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new insights have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion and dedication to your job and there is no telling what you could accomplish. Multifaceted, amazing people and inspiring, innovative technologies are the norm here. The people who work here have reinvented entire industries with all Apple Hardware products. The same passion for innovation that goes into our products also applies to our practices strengthening our dedication to leave the world better than we found it. Join us to ...",
+      "postedAtCandidate": "2026-04-02T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200588521-1251",
+      "title": "GPU Design Verification Engineer",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200588521-1251/gpu-design-verification-engineer?team=HRDWR",
+      "locations": [
+        "Cambridge, United Kingdom"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Do your life\u2019s best work here - with the whole world watching . Join a rapidly growing team at our UK GPU design centre. At Apple, new ideas and complex challenges have a way of becoming phenomenal products, services, and customer experiences very quickly. The Design Verification Engineer will be responsible for the pre-silicon RTL verification of blocks in low power embedded graphics cores. This includes deep understanding of the micro-architectural details of their block and how it works within the broader GPU design. A strong computer architecture background, preferably in graphics, an...",
+      "postedAtCandidate": "2025-01-27T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200644838-2114",
+      "title": "GPU Electrical Analysis Engineer",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200644838-2114/gpu-electrical-analysis-engineer?team=HRDWR",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Do you love creating elegant solutions to highly complex challenges? Do you intrinsically see the importance in every detail? As part of our Silicon Technologies group, you\u2019ll help design and manufacture our next-generation, high-performance, power-efficient GPU. You\u2019ll ensure Apple products and services can seamlessly and efficiently handle the tasks that make them beloved by millions. Joining this group means you\u2019ll be responsible for crafting and building the technology that fuels Apple\u2019s devices. Together, you and your team will enable our customers to do all the things they love with t...",
+      "postedAtCandidate": "2026-02-02T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200627128-1251",
+      "title": "GPU Physical Design Engineer",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200627128-1251/gpu-physical-design-engineer?team=HRDWR",
+      "locations": [
+        "Cambridge, United Kingdom"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Do you love creating elegant solutions to highly complex challenges? Do you intrinsically see the importance in every detail? As part of our Silicon Technologies group, you will help design and manufacture our next-generation, high-performance, power-efficient Graphics processors (GPUs). You will ensure Apple products and services can seamlessly and expertly handle the tasks that make them beloved by millions. Joining this group means you will be crafting and building the technology that fuels Apple\u2019s devices. Together, we enable our customers to do all the things they love with their devi...",
+      "postedAtCandidate": "2025-10-23T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200645976-1731",
+      "title": "PMU Analog Layout Engineer (m/f/d)",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200645976-1731/pmu-analog-layout-engineer-m-f-d?team=HRDWR",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Will you help us design future generations of revolutionary Apple products? The Silicon Engineering team is seeking an Analog Layout Engineer with a strong foundation in custom analog layout and a real passion for building new technologies. At Apple, we work every single day to craft products that enrich people\u2019s lives. Do you love working on challenges that no one has solved yet? Do you like changing the game? We have an opportunity for a visionary Layout Engineer. As a member of our dynamic group, you will have the rare and rewarding opportunity to craft upcoming products that will deligh...",
+      "postedAtCandidate": "2026-02-09T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200669121-1731",
+      "title": "SoC Digital Verification Engineer (m/f/d)",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200669121-1731/soc-digital-verification-engineer-m-f-d?team=HRDWR",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Imagine yourself at the center of our SOC/chip DV effort. Where we are collaborating with all fields, playing a meaningful role of getting functional products to millions of customers quickly.",
+      "postedAtCandidate": "2026-06-18T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200671536-1654",
+      "title": "Swift Engineer - Music Apps - m/f/d",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200671536-1654/swift-engineer-music-apps-m-f-d?team=SFTWR",
+      "locations": [
+        "Hamburg, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-07-20T19:55:45.7118170\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming great products very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish! The Audio \u0026 Music Apps group is looking for a senior software engineer. We are an international team with a presence in Rellingen/Germany, Edinburgh and Cupertino. The Rellingen and Edinburgh engineering team works on GarageBand iOS, Logic, GarageBand macOS, and MainStage.",
+      "postedAtCandidate": "2026-07-20T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200671536-3241",
+      "title": "Swift Engineer - Music Apps - m/f/d",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200671536-3241/swift-engineer-music-apps-m-f-d?team=SFTWR",
+      "locations": [
+        "Rellingen, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-07-20T19:55:45.7118170\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:41.9725638\u002B00:00",
+      "removedAt": "2026-08-11T14:31:36.4234354\u002B00:00",
+      "removedInRunId": "2026-08-11T14-31-36Z",
+      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming great products very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish! The Audio \u0026 Music Apps group is looking for a senior software engineer. We are an international team with a presence in Rellingen/Germany, Edinburgh and Cupertino. The Rellingen and Edinburgh engineering team works on GarageBand iOS, Logic, GarageBand macOS, and MainStage.",
+      "postedAtCandidate": "2026-07-20T00:00:00.0000000\u002B00:00"
     },
     {
       "id": "200605389-2114",
@@ -33,22 +225,6 @@
       "postedAtCandidate": "2025-05-19T00:00:00.0000000\u002B00:00"
     },
     {
-      "id": "200633850-1731",
-      "title": "PHY Systems Engineer \u2013 Demodulation Internship (M/F/D)",
-      "company": "Apple",
-      "url": "https://jobs.apple.com/en-us/details/200633850-1731/phy-systems-engineer-demodulation-internship-m-f-d?team=HRDWR",
-      "locations": [
-        "Munich, Germany"
-      ],
-      "requestedLocation": "Germany",
-      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
-      "lastSeenAt": "2026-08-11T01:02:38.7373402\u002B00:00",
-      "removedAt": "2026-08-11T07:36:41.9725638\u002B00:00",
-      "removedInRunId": "2026-08-11T07-36-41Z",
-      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish. Dynamic, amazing people and inspiring, innovative technologies are the norm here. The people who work here have reinvented entire industries with all Apple Hardware products. The same passion for innovation that goes into our products also applies to our practices strengthening our commitment to leave the world better than we found it. Join us to help deli...",
-      "postedAtCandidate": "2025-11-25T00:00:00.0000000\u002B00:00"
-    },
-    {
       "id": "200665379-2114",
       "title": "Site Reliability Engineer, iCloud",
       "company": "Apple",
@@ -63,54 +239,6 @@
       "removedInRunId": "2026-08-11T07-36-41Z",
       "aboutTheJobRaw": "People at Apple don\u2019t just build products \u2014 they craft experiences our customers love and depend on. Apple Services Engineering (ASE) builds and supports the systems that make many of these daily experiences possible. If you\u2019ve used Apple products, you\u2019ve likely interacted with us. Apple Services Site Reliability Engineering (SRE) teams are responsible for the systems and services that directly support those customers and their experiences. We are looking for an SRE with experience in building and supporting highly available customer-facing services.",
       "postedAtCandidate": "2026-05-27T00:00:00.0000000\u002B00:00"
-    },
-    {
-      "id": "200642449-1731",
-      "title": "SOC Physical Design Engineer (M, F, D)",
-      "company": "Apple",
-      "url": "https://jobs.apple.com/en-us/details/200642449-1731/soc-physical-design-engineer-m-f-d?team=HRDWR",
-      "locations": [
-        "Munich, Germany"
-      ],
-      "requestedLocation": "Germany",
-      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
-      "lastSeenAt": "2026-08-11T01:02:38.7373402\u002B00:00",
-      "removedAt": "2026-08-11T07:36:41.9725638\u002B00:00",
-      "removedInRunId": "2026-08-11T07-36-41Z",
-      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming great products very quickly. Do you want to bring passion and dedication to your job? There\u0027s no telling what you could accomplish at Apple. The people who work here have reinvented entire industries with all Apple Hardware products. The same real passion for innovation that goes into our products also applies to our practices \u2014 we continue to strengthen our commitment to leave the world better than we found it. By now the industry is accustomed to Apple taping out the SoCs for our various products at a rigorous pace...",
-      "postedAtCandidate": "2026-01-21T00:00:00.0000000\u002B00:00"
-    },
-    {
-      "id": "200671536-0399",
-      "title": "Swift Engineer - Music Apps - m/f/d",
-      "company": "Apple",
-      "url": "https://jobs.apple.com/en-us/details/200671536-0399/swift-engineer-music-apps-m-f-d?team=SFTWR",
-      "locations": [
-        "Berlin, Germany"
-      ],
-      "requestedLocation": "Germany",
-      "firstSeenAt": "2026-07-29T19:42:30.6633744\u002B00:00",
-      "lastSeenAt": "2026-08-11T01:02:38.7373402\u002B00:00",
-      "removedAt": "2026-08-11T07:36:41.9725638\u002B00:00",
-      "removedInRunId": "2026-08-11T07-36-41Z",
-      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming great products very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish! The Audio \u0026 Music Apps group is looking for a senior software engineer. We are an international team with a presence in Rellingen/Germany, Edinburgh and Cupertino. The Rellingen and Edinburgh engineering team works on GarageBand iOS, Logic, GarageBand macOS, and MainStage.",
-      "postedAtCandidate": "2026-07-20T00:00:00.0000000\u002B00:00"
-    },
-    {
-      "id": "200652359-1731",
-      "title": "Systems Engineer - Enterprise and Education Sales",
-      "company": "Apple",
-      "url": "https://jobs.apple.com/en-us/details/200652359-1731/systems-engineer-enterprise-and-education-sales?team=SFTWR",
-      "locations": [
-        "Munich, Germany"
-      ],
-      "requestedLocation": "Germany",
-      "firstSeenAt": "2026-07-08T08:43:42.8443670\u002B00:00",
-      "lastSeenAt": "2026-08-11T01:02:38.7373402\u002B00:00",
-      "removedAt": "2026-08-11T07:36:41.9725638\u002B00:00",
-      "removedInRunId": "2026-08-11T07-36-41Z",
-      "aboutTheJobRaw": "The people here at Apple don\u2019t just build products \u2014 they build the kind of wonder that\u2019s revolutionized entire industries. It\u2019s the diversity of those people and their ideas that inspires the innovation that runs through everything we do, from amazing technology to industry-leading environmental efforts. Join Apple, and help us leave the world better than we found it. Imagine what you could do here! The Systems Engineering team is responsible for long term customer success, enabling transformation through execution of Apple standard methodology and development of a modern IT infrastructu...",
-      "postedAtCandidate": "2026-03-24T00:00:00.0000000\u002B00:00"
     },
     {
       "id": "200674176-3350",

@@ -1,6 +1,201 @@
 {
   "jobs": [
     {
+      "id": "142489649309196998",
+      "title": "Senior Software Developer, SCS Control Plane",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/142489649309196998-senior-software-developer-scs-control-plane?location=Canada\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Waterloo, ON, Canada"
+      ],
+      "requestedLocation": "Canada",
+      "firstSeenAt": "2026-07-24T19:45:12.8120152\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:06.9796004\u002B00:00",
+      "removedAt": "2026-08-11T14:30:26.1407820\u002B00:00",
+      "removedInRunId": "2026-08-11T14-30-26Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckdP51o_VRuKc4S71QmsZO1FmEJbKhghmTFbVWJKT27wPEjsA1Ny_i1FEqLgJsNJ3SpUxtDWcgm8LBnwkEhUlF1TRO0NeUIbaGHlp3s0IBb-1boQWchYkwlyHtR1m6Q%3D%3D_V2\u0026loc=CA\u0026title=Senior\u002BSoftware\u002BDeveloper",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EThe SCS Control Plane team operates at the exciting intersection of enterprise security and AI, bridging centralized Google Cloud governance with secure, low-latency AI execution directly on end-user devices.\u003C/p\u003E\u003Cp\u003EIn this role, you will be instrumental in driving our technical roadmap, building the core infrastructure that powers this ecosystem from the ground up. You will address unique, complex developing issues across cloud services, cross-platform process isolation, and secure networking to enforce strict zero-trust boundaries at the client edge. This is a unique hybrid role, where you will bridge the gap between back-end infrastructure and client-side software, writing code that powers both our global Cloud APIs and the local daemons running on developers\u0027 laptops.\u003C/p\u003EGoogle Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003ECanada: $182000 - $187000 (CAD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign and develop scalable control plane services that bridge cloud-based enterprise governance with local, on-device execution environments.\u003C/li\u003E\n\u003Cli\u003EBuild cross-platform client-side components and daemon processes that seamlessly orchestrate the lifecycle of local AI agents and their dependencies.\u003C/li\u003E\n\u003Cli\u003ESecure zero-trust execution boundaries and network enforcement mechanisms that protect corporate data while maintaining a frictionless developer experience.\u003C/li\u003E\n\u003Cli\u003EDrive the end-to-end integration and testing of the secure sandbox architecture. Design the connective tissue between cloud control planes, local orchestrators (ACC), local registries (LAR), and Envoy-based gateways (LAG) to ensure seamless, secure AI agent execution.\u003C/li\u003E\n\u003Cli\u003EAct as an executive technical leader within the team to manage stakeholders effectively and solve ambiguous technical issues, contributing to the overall strategy and roadmap for the team.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages.\u003C/li\u003E\n\u003Cli\u003E3 years of experience testing, maintaining, or launching software products, and 1 year of experience with software design and architecture.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience with developing large-scale infrastructure, distributed systems or networks, or experience with compute technologies, storage or hardware architecture.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with sandboxing or isolation techniques in a production environment.\u003C/li\u003E\n\u003Cli\u003E2 years of experience programming in Go.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E1 year of experience in a technical leadership role.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience building and scaling foundational AI prototyping frameworks, sandboxes, or tooling.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Waterloo, ON, Canada",
+          "addresses": [
+            "Waterloo, ON, Canada"
+          ],
+          "city": "Waterloo",
+          "regionCode": "ON",
+          "countryCode": "CA"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-24T14:09:22.4430000\u002B00:00",
+        "2026-07-24T14:09:22.5370000\u002B00:00"
+      ]
+    },
+    {
+      "id": "98850926155965126",
+      "title": "Software Developer III, Full Stack, GCP Telemetry Collection",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/98850926155965126-software-developer-iii-full-stack-gcp-telemetry-collection?location=Canada\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Waterloo, ON, Canada"
+      ],
+      "requestedLocation": "Canada",
+      "firstSeenAt": "2026-07-24T19:45:12.8120152\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:06.9796004\u002B00:00",
+      "removedAt": "2026-08-11T14:30:26.1407820\u002B00:00",
+      "removedInRunId": "2026-08-11T14-30-26Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckaoQcajr1KKklPufLtJuMMSVVA4peFB05sdzkPr53aRLEjsA1Ny_iz-NxjdP30XotUuMlJEoZ-qRumbHtm6Kwe5-KEFUtznS2iChNyzocJSOgt4PzMfTr2o6W11ZJg%3D%3D_V2\u0026loc=CA\u0026title=Software\u002BDeveloper\u002BIII",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software developers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for developers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software developer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our developers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\u003Cp\u003EGoogle is a software development company at heart. We hire people with a broad set of technical skills who are ready to take on some of technology\u0027s greatest challenges and make an impact on users around the world. At Google, software developers not only revolutionize search, they routinely work on scalability and storage solutions, large-scale applications and entirely new platforms for developers around the world. From Google Ads to Chrome, Android to YouTube, social to local, Google software developers are changing the world one technological achievement after another.\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003ECanada: $150000 - $154000 (CAD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003E\u003Cdiv\u003EWrite product or system development code.\u003C/div\u003E\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EReview code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with full stack development, across back-end such as Go/Golang, Java, Javascript, Python or C\u002B\u002B.\u003C/li\u003E\n\u003Cli\u003EExperience with open-source observability backends and protocols (e.g., OpenTelemetry, Prometheus, Fluent Bit).\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical fields.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EDemonstrated experience with Go/Golang, C\u002B\u002B or OpenTelemetry (OTel) Collector or open source projects.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Waterloo, ON, Canada",
+          "addresses": [
+            "Waterloo, ON, Canada"
+          ],
+          "city": "Waterloo",
+          "regionCode": "ON",
+          "countryCode": "CA"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-24T10:09:22.5130000\u002B00:00",
+        "2026-07-24T10:09:22.7230000\u002B00:00"
+      ]
+    },
+    {
+      "id": "75888744648843974",
+      "title": "Staff Software Engineer, Beyond Live, DeepMind",
+      "company": "DeepMind",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/75888744648843974-staff-software-engineer-beyond-live-deepmind?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "New York, NY, USA",
+        "Mountain View, CA, USA"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-07-15T19:35:44.3001193\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:06.9796004\u002B00:00",
+      "removedAt": "2026-08-11T14:30:26.1407820\u002B00:00",
+      "removedInRunId": "2026-08-11T14-30-26Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2Fckc8ZtP8K_fwLyxwUuWLBwDQn4dhNQaUAIxGSGznhUXu6EjsA1Ny_i4jg37LmHFodb8_eFFopVn6KRnIROSbmUe6A8inLauW3055SGn8FUiRfv8RSPdLlezmqOzZb_A%3D%3D_V2\u0026loc=US\u0026title=Staff\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EAt Google DeepMind our mission is to build the world\u0027s first general-purpose learning agent. Central to this mission is the complex task of measuring the intelligence of our prototypes. As a Software Engineer, you will be working with the cutting edge AI agents developed by our exceptional team of Machine Learning and Neuroscience research scientists. Your responsibilities will include everything from creating systems for agent testing using 2D and 3D games to developing test problems within physics simulators. You will create graphical visualization of results, build competitive agent leaderboards and test new algorithms on robots. To succeed in this role you will need to have a strong foundation in software engineering and enjoy working on a wide range of challenging problems within a mission-driven team.\u003C/p\u003E\n\u003Cp\u003EIn this role, you will shape the future of human-AI interaction with the Beyond Live team. You will design and build the serving platform and core orchestration infrastructure enabling Google\u0027s next-generation conversational AI, powering flagship experiences, including partners in Gemini Live, Vertex, Workspace, and more, platform breaks traditional turn-based barriers to support real-time, low-latency, multimodal, and bidirectional communication (streaming audio, video, and text) between users and Gemini models.\u003Cbr\u003E\u003Cbr\u003EAs an engineer on our team, you will address systems issues in C\u002B\u002B (mostly), from low-latency streaming and audio/video tokenization to proactive orchestration and multiple-model (e.g., talker/thinker) interactions. You will collaborate closely with DeepMind researchers to translate AI breakthroughs into production services at Google scale. You will build the foundational platform that makes AI agents feel truly conversational and alive, defining the next era of AI assistant technology.\u003C/p\u003E\u003Cp\u003EArtificial intelligence will be one of humanity\u2019s most transformative inventions. At Google DeepMind, we are a pioneering AI lab with exceptional interdisciplinary teams focused on advancing AI development to solve complex global challenges and accelerate high-quality product innovation for billions of users. We use our technologies for widespread public benefit and scientific discovery, ensuring safety and ethics are always our highest priority.\u003C/p\u003E\u003Cdiv\u003EWe are pushing the boundaries across multiple domains. Our global teams offer learning opportunities and varied career pathways for those driven to achieve exceptional results through collective effort.\u003C/div\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EUS: $207000 - $301000 (USD) \u002B 20% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign and implement multi-threaded and multi-system orchestration to manage real-time user-model interactions.\u003C/li\u003E\n\u003Cli\u003EOptimize end-to-end latency using speculative decoding, audio/video pacing, flow control.\u003C/li\u003E\n\u003Cli\u003EManage TPU capacity by tuning model exports and estimating launch footprints to guarantee service reliability.\u003C/li\u003E\n\u003Cli\u003EBuild bidirectional streaming APIs for multimodal inference.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience in software development.\u003C/li\u003E\n\u003Cli\u003E5 years of experience testing, and launching software products.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with software design and architecture.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience evaluating and vetting technical designs, feature requests, and code implementations to maintain simple-as-possible, high-quality systems.\u003C/li\u003E\n\u003Cli\u003EAbility to navigate ambiguity, drive alignment on technical direction, and translate experimental features into concrete engineering plans.\u003C/li\u003E\n\u003Cli\u003EAbility to quickly pivot and adapt to rapid changes in product decisions and research breakthroughs.\u003C/li\u003E\n\u003Cli\u003EExcellent communication skills, with a track record of effectively collaborating across both research and product client teams.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "New York, NY, USA",
+          "addresses": [
+            "New York, NY, USA"
+          ],
+          "city": "New York",
+          "regionCode": "NY",
+          "countryCode": "US"
+        },
+        {
+          "displayName": "Mountain View, CA, USA",
+          "addresses": [
+            "Mountain View, CA, USA"
+          ],
+          "city": "Mountain View",
+          "regionCode": "CA",
+          "countryCode": "US"
+        },
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-15T09:40:39.7250000\u002B00:00",
+        "2026-07-15T09:40:39.8780000\u002B00:00"
+      ]
+    },
+    {
+      "id": "116055826409366214",
+      "title": "Technical Program Manager, CoreOS",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/116055826409366214-technical-program-manager-coreos?location=Poland\u0026q=Software\u002BEngineer\u0026page=3",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-07-23T08:43:55.0678450\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:06.9796004\u002B00:00",
+      "removedAt": "2026-08-11T14:30:26.1407820\u002B00:00",
+      "removedInRunId": "2026-08-11T14-30-26Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckVZCxq5vb9uThaGd4DZk09MMOgtoZt_DOQYQ99HPnXG_EjsA1Ny_i6yKWOVkRrXbumf0o18Qs6zHXwTHH4Qvt3WvswzeKVsDDk1KEIKE1mQUjEc5f-xEqJ8WFDz9Ww%3D%3D_V2\u0026loc=PL\u0026title=Technical\u002BProgram\u002BManager",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s projects, like our users, span the globe and require managers to keep the big picture in focus while being able to dive into the unique engineering challenges we face daily. As a Technical Program Manager at Google, you lead complex, multi-disciplinary engineering projects using your engineering expertise. You plan requirements with internal customers and usher projects through the entire project lifecycle. This includes managing project schedules, identifying risks and clearly communicating them to project stakeholders. You\u0027re equally at home explaining your team\u0027s analyses and recommendations to executives as you are discussing the technical trade-offs in product development with engineers.\u003Cbr\u003E\u003Cbr\u003EUsing your extensive technical and leadership expertise, you manage projects of various size and scope, identifying future opportunities, improving processes and driving the technical directions of your programs.\u003C/p\u003E\n\u003Cp\u003EIn this role, you will focus on partnering with Platforms Infrastructure Engineering CoreOS engineering organization, which is responsible for the kernel and operating system that runs on all of Google\u0027s production machines. As part of the team, you will be driving Software programs and operational processes that improve the performance, scale, and security of our kernel and OS.\u003C/p\u003E\u003Cp\u003EThe Core team builds the technical foundation behind Google\u2019s flagship products. We are owners and advocates for the underlying design elements, developer platforms, product components, and infrastructure at Google. These are the essential building blocks for excellent, safe, and coherent experiences for our users and drive the pace of innovation for every developer. We look across Google\u2019s products to build central solutions, break down technical barriers and strengthen existing systems. As the Core team, we have a mandate and a unique opportunity to impact important technical decisions across the company.\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142440000 - z\u0142451000 (PLN) \u002B 20% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EPartner with engineering leads and product management in CoreOS area, contribute the development of strategic roadmaps and execution plans for NodeOS and Kernel security areas.\u003C/li\u003E\n\u003Cli\u003ELead cross functional program teams to scope, plan and execute software programs in NodeOS and Kernel Security space, to deliver improvements in Kernel and OS scalability/security.\u003C/li\u003E\n\u003Cli\u003EDrive operational processes, provide program management leadership to monitor, prioritize and resolve production issues, including kernel security vulnerabilities.\u003C/li\u003E\n\u003Cli\u003ETrack progress of execution plans, ensure all leadership/stakeholders are aware of progress/blockers on a continuous basis, drive strategic and tactical decisions throughout all organizations and levels.\u003C/li\u003E\n\u003Cli\u003ERepresent programs and engineering teams in execution/program review forums.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, IT, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience in program management, identifying process improvements, and orienting teams to agile methodologies.\u003C/li\u003E\n\u003Cli\u003E8 years of experience in leading projects through the full software development lifecycle.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003E10 years of experience in program management roles focused on Operating System (OS), software development and delivery.\u003C/li\u003E\n\u003Cli\u003EExperience in Linux Kernel development.\u003C/li\u003E\n\u003Cli\u003EExperience with information security incidents and threat assessments (e.g., incident response, penetration testing, vulnerability assessments).\u003C/li\u003E\n\u003Cli\u003EExperience in security assessments, vulnerability management and security research.\u003C/li\u003E\n\u003Cli\u003EKnowledge of encrypt/decrypt algorithms or security software stack design.\u003C/li\u003E\n\u003Cli\u003EUnderstanding of operating systems internals, including kernel security and memory protection mechanisms.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-23T08:38:19.9640000\u002B00:00",
+        "2026-07-23T08:38:20.0800000\u002B00:00"
+      ]
+    },
+    {
+      "id": "125326285684515526",
+      "title": "Technical Program Manager, Privacy and Trust Incident Response",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/125326285684515526-technical-program-manager-privacy-and-trust-incident-response?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-08-04T19:55:20.4906235\u002B00:00",
+      "lastSeenAt": "2026-08-11T07:36:06.9796004\u002B00:00",
+      "removedAt": "2026-08-11T14:30:26.1407820\u002B00:00",
+      "removedInRunId": "2026-08-11T14-30-26Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckR0f6-AvlKJh5eI-8CuCMk37S4Qbcc9Awt0hIa4v0P4LEjsA1Ny_i17JWFKlV53opVeRrWIGiSgf-_YzZGaG7qDlCPwu2FEosxgDsEcY5J1sh0DcR2EonL1wLIejfQ%3D%3D_V2\u0026loc=CH\u0026title=Technical\u002BProgram\u002BManager",
+      "aboutTheJobRaw": "\u003Cp\u003EA problem isn\u2019t truly solved until it\u2019s solved for all. That\u2019s why Googlers build products that help create opportunities for everyone, whether down the street or across the globe. As a Technical Program Manager at Google, you\u2019ll use your technical expertise to lead complex, multi-disciplinary projects from start to finish. You\u2019ll work with stakeholders to plan requirements, identify risks, manage project schedules, and communicate clearly with cross-functional partners across the company. You\u0027re equally comfortable explaining your team\u0027s analyses and recommendations to executives as you are discussing the technical tradeoffs in product development with engineers. \u003C/p\u003E\n\u003Cp\u003EAlphabet is creating next-generation technologies that will revolutionize how billions of people connect and interact with each other and information. User privacy is a key component in maximizing trust in our products and experiences. You will join a high-caliber team of experienced responders dedicated to safeguarding Alphabet and its users globally through rapid triage, risk mitigation, and data remediation to ensure privacy incidents are resolved quickly and thoroughly.\u003C/p\u003EAs a Technical Program Manager for Privacy and Trust Incident Response, you will be a trust anchor for our customers. You will be part of a team of professionals including Engineering, Communications, Legal and other key partners in Alphabet, focused on the investigation and resolution of reported incidents to a swift and solid closure. You will shape the processes and tools for Alphabet-wide privacy incident management while maintaining a super-strong culture of trust, respect, and collaboration. You will be central to ensuring that Alphabet\u0027s products remain the most innovative, useful, and trusted guardians of user data in the world.\u003Cp\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EOrganize and lead response teams for privacy or user trust incidents always with the utmost respect for our users\u2019 data.\u003C/li\u003E\n\u003Cli\u003ELead the full lifecycle of complex incident communications, from drafting communications strategies to delivering communications.\u003C/li\u003E\n\u003Cli\u003ECollaborate actively with engineering towards improved product processes and related policy decisions to prevent incidents and on education initiatives to improve incident response readiness. Support automation, analysis and tool improvement initiatives in support of reduced time to resolution for all incident types.\u003C/li\u003E\n\u003Cli\u003ELead initiatives to improve our incident management or compliance processes, lead prevention initiatives to mitigate any risks related to privacy, security and user trust.\u003C/li\u003E\n\u003Cli\u003EBe available for oncall to support our global team operations.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in a technical field, or equivalent practical experience. \u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience in program management, with experience in privacy incident management, cybersecurity incident response, or crisis management.\u003C/li\u003E\n\u003Cli\u003EExperience with system architecture, technical troubleshooting, security/privacy standards, operations management, or enterprise software.\u003C/li\u003E\n\u003Cli\u003E\u003Cdiv\u003E\u003Cdiv\u003EExperience working within privacy, incident management, or cybersecurity domains.\u003C/div\u003E\u003C/div\u003E\u003C/li\u003E\n\u003Cli\u003E\u003Cdiv\u003E\u003Cdiv\u003EExperience driving QA, privacy, or security improvements at the project or team level.\u003C/div\u003E\u003C/div\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience managing project-level architectures, team-specific privacy workflows, or technical troubleshooting processes.\u003C/li\u003E\n\u003Cli\u003EExperience presenting project updates or incident post-mortems to cross-functional stakeholders, team and senior leadership.\u003C/li\u003E\n\u003Cli\u003E\u003Cdiv\u003E\u003Cdiv\u003EAbility to collaborate with Engineering and Product teams to drive project-level improvements, alongside experience managing team-level communications.\u003C/div\u003E\u003C/div\u003E\u003C/li\u003E\n\u003Cli\u003EAbility to coordinate cross-functional projects within a team or specific product area.\u003C/li\u003E\n\u003Cli\u003EStrong communication and collaboration skills with product and engineering partners.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-08-04T15:41:57.9120000\u002B00:00",
+        "2026-08-04T15:41:57.9980000\u002B00:00"
+      ]
+    },
+    {
       "id": "79483456181936838",
       "title": "Technical Solutions Consultant Manager, Geo Auto",
       "company": "Google",
