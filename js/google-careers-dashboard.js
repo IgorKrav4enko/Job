@@ -75,6 +75,14 @@ const SOURCES = {
     detailsUrl: "./data/databricks-jobs-run-details.json",
     jobsUrl: "./data/databricks-jobs-jobs.json",
     allowMissingHistory: true
+  },
+  stripe: {
+    key: "stripe",
+    label: "Stripe Jobs",
+    runsUrl: "./data/stripe-jobs-runs.json",
+    detailsUrl: "./data/stripe-jobs-run-details.json",
+    jobsUrl: "./data/stripe-jobs-jobs.json",
+    allowMissingHistory: true
   }
 };
 

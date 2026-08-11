@@ -74,6 +74,10 @@ var databricksRawRunsDirectoryPath = Path.Combine(root, "data-raw", "databricks-
 var databricksOutputPath = Path.Combine(root, "data", "databricks-jobs-jobs.json");
 var databricksRunsPath = Path.Combine(root, "data", "databricks-jobs-runs.json");
 var databricksRunDetailsPath = Path.Combine(root, "data", "databricks-jobs-run-details.json");
+var stripeRawRunsDirectoryPath = Path.Combine(root, "data-raw", "stripe-jobs", "runs");
+var stripeOutputPath = Path.Combine(root, "data", "stripe-jobs-jobs.json");
+var stripeRunsPath = Path.Combine(root, "data", "stripe-jobs-runs.json");
+var stripeRunDetailsPath = Path.Combine(root, "data", "stripe-jobs-run-details.json");
 
 var locations = LoadLocations(configPath);
 var searchTerm = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_SEARCH_TERM")?.Trim();
@@ -664,6 +668,83 @@ switch (mode)
         break;
     }
 
+    case PipelineMode.CollectStripe:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var capturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var previousRawRunPath = GetRawRunFilePaths(stripeRawRunsDirectoryPath).LastOrDefault();
+        var previousRawRun = previousRawRunPath is null
+            ? null
+            : LoadJsonOrDefault<StripeRawRun>(previousRawRunPath);
+        var cachedJobs = previousRawRun?.Sources
+            .SelectMany(static source => source.Jobs)
+            .GroupBy(static job => job.JobId, StringComparer.Ordinal)
+            .ToDictionary(static group => group.Key, static group => group.First(), StringComparer.Ordinal);
+        var fetchResult = await StripeCollector.FetchAsync(capturedAt, cachedJobs);
+        var sources = fetchResult.JobsByCountry
+            .Where(static pair => pair.Value.Count > 0)
+            .OrderBy(static pair => pair.Key, StringComparer.Ordinal)
+            .Select(pair => new StripeRawSource(
+                pair.Key,
+                pair.Key.ToLowerInvariant().Replace(' ', '-'),
+                fetchResult.SearchUrl,
+                pair.Value))
+            .ToList();
+        var rawRun = new StripeRawRun(runId, capturedAt, "stripe-jobs", sources);
+        Directory.CreateDirectory(stripeRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(stripeRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+        Console.WriteLine($"Collected Stripe raw run {runId} with {sources.SelectMany(static source => source.Jobs).Select(static job => job.JobId).Distinct(StringComparer.Ordinal).Count()} unique jobs.");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
+    case PipelineMode.NormalizeStripeLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(stripeRawRunsDirectoryPath).LastOrDefault()
+            ?? throw new FileNotFoundException("No Stripe raw runs found. Run collect-stripe first.");
+        var latestRawRun = LoadJsonOrDefault<StripeRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Stripe raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(stripeOutputPath);
+        var latestJobs = BuildStripeJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        await WriteJsonFileAsync(stripeOutputPath, BuildStripeDataset(latestRawRun, mergeResult.Jobs));
+        Console.WriteLine($"Normalized latest Stripe raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeStripeLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(stripeRawRunsDirectoryPath).LastOrDefault()
+            ?? throw new FileNotFoundException("No Stripe raw runs found. Run collect-stripe first.");
+        var latestRawRun = LoadJsonOrDefault<StripeRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Stripe raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(stripeOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(stripeRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousDetails = LoadJsonOrDefault<RunDetailsDataset>(stripeRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousDetails = NormalizeRunDetails(previousDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Stripe raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildStripeJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0 ? new List<JobItem>() : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildStripeDataset(latestRawRun, mergeResult.Jobs);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var detailsDataset = BuildRunDetailsDataset(previousDetails, latestRawRun.RunId, mergeResult);
+
+        await WriteJsonFileAsync(stripeOutputPath, dataset);
+        await WriteJsonFileAsync(stripeRunsPath, runsDataset);
+        await WriteJsonFileAsync(stripeRunDetailsPath, detailsDataset);
+        Console.WriteLine($"Analyzed latest Stripe raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs (+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
     case PipelineMode.AnalyzeDatabricksLatest:
     {
         var latestRawRunPath = GetRawRunFilePaths(databricksRawRunsDirectoryPath).LastOrDefault()
@@ -1021,6 +1102,9 @@ static PipelineMode GetMode(string[] args)
         "collect-databricks" => PipelineMode.CollectDatabricks,
         "normalize-databricks-latest" => PipelineMode.NormalizeDatabricksLatest,
         "analyze-databricks-latest" => PipelineMode.AnalyzeDatabricksLatest,
+        "collect-stripe" => PipelineMode.CollectStripe,
+        "normalize-stripe-latest" => PipelineMode.NormalizeStripeLatest,
+        "analyze-stripe-latest" => PipelineMode.AnalyzeStripeLatest,
         _ => throw new ArgumentOutOfRangeException(nameof(args), $"Unknown mode '{args[0]}'.")
     };
 }
@@ -1576,6 +1660,43 @@ static List<JobItem> BuildDatabricksJobsFromRawRun(DatabricksRawRun rawRun)
                 .OrderBy(static country => country, StringComparer.Ordinal)
                 .ToList();
             return first with { MatchedLocations = countries, SearchMatchCount = countries.Count };
+        })
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildStripeJobsFromRawRun(StripeRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source => source.Jobs.Select(job => new JobItem(
+            job.JobId,
+            HtmlDecode(job.TitleRaw ?? string.Empty),
+            "Stripe",
+            job.LocationsRaw,
+            job.JobUrl,
+            source.RequestedLocation,
+            job.SearchUrl,
+            job.PostedAtCandidate,
+            null)))
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var first = group.First();
+            var countries = group.Select(static job => job.RequestedLocation)
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static country => country, StringComparer.Ordinal)
+                .ToList();
+            var locations = group.SelectMany(static job => job.Locations)
+                .Distinct(StringComparer.Ordinal)
+                .ToList();
+            return first with
+            {
+                Locations = locations,
+                MatchedLocations = countries,
+                SearchMatchCount = countries.Count
+            };
         })
         .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
         .ThenBy(static job => job.Id, StringComparer.Ordinal)
@@ -5764,6 +5885,23 @@ static JobDataset BuildDatabricksDataset(DatabricksRawRun rawRun, List<JobItem> 
         jobs);
 }
 
+static JobDataset BuildStripeDataset(StripeRawRun rawRun, List<JobItem> jobs)
+{
+    var locations = rawRun.Sources
+        .Select(source => new LocationConfig(source.LocationSlug, source.RequestedLocation, source.RequestedLocation))
+        .OrderBy(static location => location.Label, StringComparer.Ordinal)
+        .ToList();
+
+    return new JobDataset(
+        rawRun.GeneratedAt,
+        "Stripe Jobs",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active Stripe jobs from latest raw snapshot.",
+        "Engineer / Developer",
+        locations,
+        jobs);
+}
+
 static JsonSerializerOptions JsonOptions()
 {
     return new JsonSerializerOptions
@@ -6565,6 +6703,9 @@ internal enum PipelineMode
     CollectDatabricks,
     NormalizeDatabricksLatest,
     AnalyzeDatabricksLatest,
+    CollectStripe,
+    NormalizeStripeLatest,
+    AnalyzeStripeLatest,
     CollectAndAnalyze,
     Collect,
     AnalyzeLatest,
