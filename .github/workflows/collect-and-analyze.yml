@@ -30,6 +30,9 @@ jobs:
       - name: Build sync tool
         run: dotnet build Job.sln --configuration Release
 
+      - name: Install Playwright Chromium
+        run: pwsh scripts/GoogleCareersSync/bin/Release/net8.0/playwright.ps1 install --with-deps chromium
+
       - name: Collect raw runs
         env:
           GOOGLE_CAREERS_LOCATIONS: ${{ vars.GOOGLE_CAREERS_LOCATIONS }}
@@ -72,6 +75,7 @@ jobs:
           collect_source nvidia collect-nvidia
           collect_source amazon collect-amazon
           collect_source netflix collect-netflix
+          collect_source uber collect-uber
           collect_source databricks collect-databricks
           collect_source stripe collect-stripe
 
@@ -112,6 +116,7 @@ jobs:
           analyze_source nvidia analyze-nvidia-latest
           analyze_source amazon analyze-amazon-latest
           analyze_source netflix analyze-netflix-latest
+          analyze_source uber analyze-uber-latest
           analyze_source databricks analyze-databricks-latest
           analyze_source stripe analyze-stripe-latest
 
