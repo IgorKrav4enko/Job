@@ -1,0 +1,191 @@
+{
+  "generatedAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+  "source": "Uber Jobs",
+  "status": "success",
+  "notes": "Normalized 8 active Uber jobs from latest raw snapshot.",
+  "searchTerm": "software engineer",
+  "locations": [
+    {
+      "slug": "canada",
+      "label": "Canada",
+      "query": "Toronto"
+    },
+    {
+      "slug": "denmark",
+      "label": "Denmark",
+      "query": "Midtjylland"
+    },
+    {
+      "slug": "netherlands",
+      "label": "Netherlands",
+      "query": "Amsterdam"
+    },
+    {
+      "slug": "united-kingdom",
+      "label": "United Kingdom",
+      "query": "London"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "153809",
+      "title": "Engineering Manager II - Benefits",
+      "company": "Uber",
+      "locations": [
+        "Amsterdam, Netherlands"
+      ],
+      "url": "https://jobs.uber.com/en/jobs/153809/",
+      "requestedLocation": "Netherlands",
+      "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Amsterdam\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
+      "postedAtCandidate": "2026-08-06T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "lastSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "isActive": true,
+      "contentHash": "a7441e14337d23e786b2eaebfbbd872c78ca4061ae0df3849ac56e475f21914f",
+      "matchedLocations": [
+        "Netherlands"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "154838",
+      "title": "Engineering Manager II - Catalog Platform",
+      "company": "Uber",
+      "locations": [
+        "Midtjylland, Denmark"
+      ],
+      "url": "https://jobs.uber.com/en/jobs/154838/",
+      "requestedLocation": "Denmark",
+      "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Midtjylland\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
+      "postedAtCandidate": "2026-06-19T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "lastSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "isActive": true,
+      "contentHash": "62ff25891e09c209bcbdad3816be41ddc514af592514819ce43acacf1662f009",
+      "matchedLocations": [
+        "Denmark"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "300441",
+      "title": "Engineering Manager II - Container Platform",
+      "company": "Uber",
+      "locations": [
+        "Amsterdam, Netherlands"
+      ],
+      "url": "https://jobs.uber.com/en/jobs/300441/",
+      "requestedLocation": "Netherlands",
+      "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Amsterdam\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
+      "postedAtCandidate": "2026-08-03T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "lastSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "isActive": true,
+      "contentHash": "ed328484e99a300e7de96bbcf9bb9f95765cac8b2717a013b61fc0f34207c631",
+      "matchedLocations": [
+        "Netherlands"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "150819",
+      "title": "Partner Engineer",
+      "company": "Uber",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "url": "https://jobs.uber.com/en/jobs/150819/",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=London\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
+      "postedAtCandidate": "2026-07-16T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "lastSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "isActive": true,
+      "contentHash": "0fc4a6eb12f0c98d9fb815c28c9716e732f6a25b627fb23a1a3f3f729b42bb79",
+      "matchedLocations": [
+        "United Kingdom"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "300419",
+      "title": "Software Engineer II - Deployment Platform",
+      "company": "Uber",
+      "locations": [
+        "Midtjylland, Denmark"
+      ],
+      "url": "https://jobs.uber.com/en/jobs/300419/",
+      "requestedLocation": "Denmark",
+      "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Midtjylland\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
+      "postedAtCandidate": "2026-08-07T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "lastSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "isActive": true,
+      "contentHash": "489b7cbd217b7129becbfd7365b8e9874c12dab38baded1252530cbffa551161",
+      "matchedLocations": [
+        "Denmark"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "300427",
+      "title": "Sr Software Engineer - Deployment Platform",
+      "company": "Uber",
+      "locations": [
+        "Midtjylland, Denmark"
+      ],
+      "url": "https://jobs.uber.com/en/jobs/300427/",
+      "requestedLocation": "Denmark",
+      "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Midtjylland\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
+      "postedAtCandidate": "2026-08-07T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "lastSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "isActive": true,
+      "contentHash": "86dc283e2e6f4669822a4c4b7fcbe59185f1316e6359299fd8f7d1040efbeb75",
+      "matchedLocations": [
+        "Denmark"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "300425",
+      "title": "Staff Software Engineer - Configuration Platform",
+      "company": "Uber",
+      "locations": [
+        "Midtjylland, Denmark"
+      ],
+      "url": "https://jobs.uber.com/en/jobs/300425/",
+      "requestedLocation": "Denmark",
+      "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Midtjylland\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
+      "postedAtCandidate": "2026-07-28T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "lastSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "isActive": true,
+      "contentHash": "4761a24d6c9ed771798df0a53b0a5e9f1e57d2bd7e4a0c55c1fa56579bce3265",
+      "matchedLocations": [
+        "Denmark"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "300426",
+      "title": "Staff Software Engineer - Deployment Platform",
+      "company": "Uber",
+      "locations": [
+        "Midtjylland, Denmark"
+      ],
+      "url": "https://jobs.uber.com/en/jobs/300426/",
+      "requestedLocation": "Denmark",
+      "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Midtjylland\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
+      "postedAtCandidate": "2026-08-07T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "lastSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "isActive": true,
+      "contentHash": "b429a2f790b2a0c1cdc54f7eede1b94d51e1dcab92122eb300f6f272f7351633",
+      "matchedLocations": [
+        "Denmark"
+      ],
+      "searchMatchCount": 1
+    }
+  ]
+}
