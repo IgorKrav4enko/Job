@@ -83,6 +83,14 @@ const SOURCES = {
     detailsUrl: "./data/stripe-jobs-run-details.json",
     jobsUrl: "./data/stripe-jobs-jobs.json",
     allowMissingHistory: true
+  },
+  bloomberg: {
+    key: "bloomberg",
+    label: "Bloomberg Careers",
+    runsUrl: "./data/bloomberg-jobs-runs.json",
+    detailsUrl: "./data/bloomberg-jobs-run-details.json",
+    jobsUrl: "./data/bloomberg-jobs-jobs.json",
+    allowMissingHistory: true
   }
 };
 

@@ -78,6 +78,10 @@ var stripeRawRunsDirectoryPath = Path.Combine(root, "data-raw", "stripe-jobs", "
 var stripeOutputPath = Path.Combine(root, "data", "stripe-jobs-jobs.json");
 var stripeRunsPath = Path.Combine(root, "data", "stripe-jobs-runs.json");
 var stripeRunDetailsPath = Path.Combine(root, "data", "stripe-jobs-run-details.json");
+var bloombergRawRunsDirectoryPath = Path.Combine(root, "data-raw", "bloomberg-jobs", "runs");
+var bloombergOutputPath = Path.Combine(root, "data", "bloomberg-jobs-jobs.json");
+var bloombergRunsPath = Path.Combine(root, "data", "bloomberg-jobs-runs.json");
+var bloombergRunDetailsPath = Path.Combine(root, "data", "bloomberg-jobs-run-details.json");
 
 var locations = LoadLocations(configPath);
 var searchTerm = Environment.GetEnvironmentVariable("GOOGLE_CAREERS_SEARCH_TERM")?.Trim();
@@ -745,6 +749,87 @@ switch (mode)
         break;
     }
 
+    case PipelineMode.CollectBloomberg:
+    {
+        var runId = DateTimeOffset.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ", CultureInfo.InvariantCulture);
+        var capturedAt = DateTimeOffset.UtcNow.ToString("O");
+        var maxPagesRaw = Environment.GetEnvironmentVariable("BLOOMBERG_JOBS_MAX_PAGES");
+        var bloombergMaxPages = int.TryParse(maxPagesRaw, out var parsedMaxPages) && parsedMaxPages > 0
+            ? parsedMaxPages
+            : 2;
+        var previousRawRunPath = GetRawRunFilePaths(bloombergRawRunsDirectoryPath).LastOrDefault();
+        var previousRawRun = previousRawRunPath is null
+            ? null
+            : LoadJsonOrDefault<BloombergRawRun>(previousRawRunPath);
+        var cachedJobs = previousRawRun?.Sources
+            .SelectMany(static source => source.Jobs)
+            .GroupBy(static job => job.JobId, StringComparer.Ordinal)
+            .ToDictionary(static group => group.Key, static group => group.First(), StringComparer.Ordinal);
+        var fetchResult = await BloombergCollector.FetchAsync(capturedAt, bloombergMaxPages, cachedJobs);
+        var sources = fetchResult.Jobs
+            .GroupBy(static job => job.RequestedLocation, StringComparer.Ordinal)
+            .OrderBy(static group => group.Key, StringComparer.Ordinal)
+            .Select(group => new BloombergRawSource(
+                group.Key,
+                group.Key.ToLowerInvariant().Replace(' ', '-'),
+                fetchResult.SearchUrl,
+                group.ToList()))
+            .ToList();
+        var rawRun = new BloombergRawRun(runId, capturedAt, "bloomberg-jobs", fetchResult.SearchUrl, sources);
+        Directory.CreateDirectory(bloombergRawRunsDirectoryPath);
+        var rawRunPath = Path.Combine(bloombergRawRunsDirectoryPath, $"{runId}.json");
+        await WriteJsonFileAsync(rawRunPath, rawRun);
+        Console.WriteLine($"Collected Bloomberg raw run {runId} with {fetchResult.Jobs.Count} unique jobs from {bloombergMaxPages} page(s).");
+        Console.WriteLine($"Wrote {rawRunPath}.");
+        break;
+    }
+
+    case PipelineMode.NormalizeBloombergLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(bloombergRawRunsDirectoryPath).LastOrDefault()
+            ?? throw new FileNotFoundException("No Bloomberg raw runs found. Run collect-bloomberg first.");
+        var latestRawRun = LoadJsonOrDefault<BloombergRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Bloomberg raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(bloombergOutputPath);
+        var latestJobs = BuildBloombergJobsFromRawRun(latestRawRun);
+        var mergeResult = MergeJobs(previousDataset?.Jobs ?? new List<JobItem>(), latestJobs, latestRawRun.GeneratedAt);
+        await WriteJsonFileAsync(bloombergOutputPath, BuildBloombergDataset(latestRawRun, mergeResult.Jobs));
+        Console.WriteLine($"Normalized latest Bloomberg raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs.");
+        break;
+    }
+
+    case PipelineMode.AnalyzeBloombergLatest:
+    {
+        var latestRawRunPath = GetRawRunFilePaths(bloombergRawRunsDirectoryPath).LastOrDefault()
+            ?? throw new FileNotFoundException("No Bloomberg raw runs found. Run collect-bloomberg first.");
+        var latestRawRun = LoadJsonOrDefault<BloombergRawRun>(latestRawRunPath)
+            ?? throw new InvalidOperationException($"Could not read Bloomberg raw run file '{latestRawRunPath}'.");
+        var previousDataset = LoadJsonOrDefault<JobDataset>(bloombergOutputPath);
+        var previousRuns = LoadJsonOrDefault<RunHistoryDataset>(bloombergRunsPath) ?? new RunHistoryDataset(new List<RunSummary>());
+        var previousDetails = LoadJsonOrDefault<RunDetailsDataset>(bloombergRunDetailsPath) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousDetails = NormalizeRunDetails(previousDetails) ?? new RunDetailsDataset(new List<RunDetail>());
+        previousRuns = NormalizeRunHistory(previousRuns, previousDetails) ?? new RunHistoryDataset(new List<RunSummary>());
+
+        if (previousRuns.Runs.Any(run => run.RunId == latestRawRun.RunId))
+        {
+            Console.WriteLine($"Bloomberg raw run {latestRawRun.RunId} is already analyzed. Skipping.");
+            break;
+        }
+
+        var latestJobs = BuildBloombergJobsFromRawRun(latestRawRun);
+        var previousJobs = previousRuns.Runs.Count == 0 ? new List<JobItem>() : previousDataset?.Jobs ?? new List<JobItem>();
+        var mergeResult = MergeJobs(previousJobs, latestJobs, latestRawRun.GeneratedAt);
+        var dataset = BuildBloombergDataset(latestRawRun, mergeResult.Jobs);
+        var runsDataset = BuildRunsDataset(previousRuns, latestRawRun.RunId, latestRawRun.GeneratedAt, mergeResult);
+        var detailsDataset = BuildRunDetailsDataset(previousDetails, latestRawRun.RunId, mergeResult);
+
+        await WriteJsonFileAsync(bloombergOutputPath, dataset);
+        await WriteJsonFileAsync(bloombergRunsPath, runsDataset);
+        await WriteJsonFileAsync(bloombergRunDetailsPath, detailsDataset);
+        Console.WriteLine($"Analyzed latest Bloomberg raw run {latestRawRun.RunId} -> {mergeResult.Jobs.Count} jobs (+{mergeResult.Added.Count} / -{mergeResult.Removed.Count} / ~{mergeResult.Changed.Count})");
+        break;
+    }
+
     case PipelineMode.AnalyzeDatabricksLatest:
     {
         var latestRawRunPath = GetRawRunFilePaths(databricksRawRunsDirectoryPath).LastOrDefault()
@@ -1105,6 +1190,9 @@ static PipelineMode GetMode(string[] args)
         "collect-stripe" => PipelineMode.CollectStripe,
         "normalize-stripe-latest" => PipelineMode.NormalizeStripeLatest,
         "analyze-stripe-latest" => PipelineMode.AnalyzeStripeLatest,
+        "collect-bloomberg" => PipelineMode.CollectBloomberg,
+        "normalize-bloomberg-latest" => PipelineMode.NormalizeBloombergLatest,
+        "analyze-bloomberg-latest" => PipelineMode.AnalyzeBloombergLatest,
         _ => throw new ArgumentOutOfRangeException(nameof(args), $"Unknown mode '{args[0]}'.")
     };
 }
@@ -1697,6 +1785,35 @@ static List<JobItem> BuildStripeJobsFromRawRun(StripeRawRun rawRun)
                 MatchedLocations = countries,
                 SearchMatchCount = countries.Count
             };
+        })
+        .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(static job => job.Id, StringComparer.Ordinal)
+        .ToList();
+}
+
+static List<JobItem> BuildBloombergJobsFromRawRun(BloombergRawRun rawRun)
+{
+    return rawRun.Sources
+        .SelectMany(source => source.Jobs.Select(job => new JobItem(
+            job.JobId,
+            HtmlDecode(job.TitleRaw ?? string.Empty),
+            "Bloomberg",
+            job.LocationsRaw,
+            job.JobUrl,
+            source.RequestedLocation,
+            job.SearchUrl,
+            job.PostedAtCandidate,
+            null)))
+        .Where(static job => !string.IsNullOrWhiteSpace(job.Id) && !string.IsNullOrWhiteSpace(job.Title))
+        .GroupBy(static job => job.Id, StringComparer.Ordinal)
+        .Select(static group =>
+        {
+            var first = group.First();
+            var countries = group.Select(static job => job.RequestedLocation)
+                .Distinct(StringComparer.Ordinal)
+                .OrderBy(static country => country, StringComparer.Ordinal)
+                .ToList();
+            return first with { MatchedLocations = countries, SearchMatchCount = countries.Count };
         })
         .OrderBy(static job => job.Title, StringComparer.OrdinalIgnoreCase)
         .ThenBy(static job => job.Id, StringComparer.Ordinal)
@@ -5902,6 +6019,23 @@ static JobDataset BuildStripeDataset(StripeRawRun rawRun, List<JobItem> jobs)
         jobs);
 }
 
+static JobDataset BuildBloombergDataset(BloombergRawRun rawRun, List<JobItem> jobs)
+{
+    var locations = rawRun.Sources
+        .Select(source => new LocationConfig(source.LocationSlug, source.RequestedLocation, source.RequestedLocation))
+        .OrderBy(static location => location.Label, StringComparer.Ordinal)
+        .ToList();
+
+    return new JobDataset(
+        rawRun.GeneratedAt,
+        "Bloomberg Careers",
+        "success",
+        $"Normalized {jobs.Count(static job => job.IsActive)} active Bloomberg jobs from latest raw snapshot.",
+        "software engineer",
+        locations,
+        jobs);
+}
+
 static JsonSerializerOptions JsonOptions()
 {
     return new JsonSerializerOptions
@@ -6706,6 +6840,9 @@ internal enum PipelineMode
     CollectStripe,
     NormalizeStripeLatest,
     AnalyzeStripeLatest,
+    CollectBloomberg,
+    NormalizeBloombergLatest,
+    AnalyzeBloombergLatest,
     CollectAndAnalyze,
     Collect,
     AnalyzeLatest,

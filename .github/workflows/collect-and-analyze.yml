@@ -50,6 +50,7 @@ jobs:
           NETFLIX_JOBS_SEARCH_TERM: "Software Engineering"
           NETFLIX_JOBS_MAX_PAGES: "100"
           NETFLIX_JOBS_MAX_DETAILS: "1000"
+          BLOOMBERG_JOBS_MAX_PAGES: "100"
         run: |
           status_file="$RUNNER_TEMP/collector-status.tsv"
           : > "$status_file"
@@ -78,6 +79,7 @@ jobs:
           collect_source uber collect-uber
           collect_source databricks collect-databricks
           collect_source stripe collect-stripe
+          collect_source bloomberg collect-bloomberg
 
       - name: Analyze latest runs
         env:
@@ -119,6 +121,7 @@ jobs:
           analyze_source uber analyze-uber-latest
           analyze_source databricks analyze-databricks-latest
           analyze_source stripe analyze-stripe-latest
+          analyze_source bloomberg analyze-bloomberg-latest
 
       - name: Commit updated datasets
         run: |
