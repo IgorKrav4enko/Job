@@ -107,6 +107,10 @@
       display: none;
     }
 
+    [hidden] {
+      display: none !important;
+    }
+
     .chip-row {
       display: flex;
       flex-wrap: wrap;
@@ -127,6 +131,17 @@
       <button class="rounded-t-[18px] border px-5 py-3 text-sm font-semibold transition-colors" data-workspace="analytics" type="button">
         Аналітика
       </button>
+    </section>
+
+    <section class="glass-panel rounded-[24px] p-3 shadow-panel" id="browse-mode-tabs" aria-label="Browse mode">
+      <div class="flex flex-wrap gap-2">
+        <button class="rounded-full border px-5 py-3 text-sm font-semibold transition-colors" data-browse-mode="company" type="button">
+          Компанії → країни
+        </button>
+        <button class="rounded-full border px-5 py-3 text-sm font-semibold transition-colors" data-browse-mode="country" type="button">
+          Країни → компанії
+        </button>
+      </div>
     </section>
 
     <header class="glass-panel rounded-[24px] px-5 py-4 shadow-panel md:px-6 md:py-5" id="source-header">
@@ -175,6 +190,26 @@
         </div>
       </div>
     </header>
+
+    <section class="grid gap-6" id="country-company-panel" hidden>
+      <div class="glass-panel rounded-[24px] p-5 shadow-panel md:p-6" id="country-company-filters">
+        <div class="grid gap-6">
+          <fieldset>
+            <legend class="text-xs font-semibold uppercase tracking-[0.24em] text-muted">Країни</legend>
+            <div class="chip-row mt-3" id="country-first-country-chips"></div>
+          </fieldset>
+          <fieldset class="border-t border-white/10 pt-5">
+            <legend class="text-xs font-semibold uppercase tracking-[0.24em] text-muted">Компанії</legend>
+            <div class="chip-row mt-3" id="country-first-company-chips"></div>
+          </fieldset>
+          <fieldset class="border-t border-white/10 pt-5">
+            <legend class="text-xs font-semibold uppercase tracking-[0.24em] text-muted">Період</legend>
+            <div class="chip-row mt-3" id="country-first-range-chips"></div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="grid gap-5" id="country-company-results"></div>
+    </section>
 
     <section class="glass-panel rounded-[28px] p-3 shadow-panel" id="tracker-tabs-shell">
       <div class="flex flex-wrap gap-3" id="dashboard-tabs">

@@ -95,6 +95,21 @@ const SOURCES = {
 };
 
 const SOURCE_STORAGE_KEY = "careers-dashboard-source";
+const BROWSE_MODE_STORAGE_KEY = "careers-dashboard-browse-mode";
+const COUNTRY_FIRST_COUNTRIES_STORAGE_KEY = "careers-dashboard-country-first-countries";
+const COUNTRY_FIRST_SOURCES_STORAGE_KEY = "careers-dashboard-country-first-sources";
+const COUNTRY_FIRST_RANGE_STORAGE_KEY = "careers-dashboard-country-first-range";
+const COUNTRY_FIRST_COUNTRIES = [
+  "Canada", "Switzerland", "United Kingdom", "Germany", "Netherlands", "Ireland",
+  "France", "Spain", "Poland", "Czechia", "Romania", "Portugal", "Italy", "Austria",
+  "Belgium", "Denmark", "Sweden", "Norway", "Finland", "Luxembourg"
+];
+const COUNTRY_FIRST_RANGES = [
+  { value: "7", label: "7д" },
+  { value: "14", label: "14д" },
+  { value: "30", label: "30д" },
+  { value: "all", label: "Весь час" }
+];
 const UNKNOWN_CITY = "__unknown_city__";
 const UNKNOWN_CITY_LABEL = "Нерозпізнані";
 const DEFAULT_COUNTRY = "Switzerland";
@@ -102,6 +117,13 @@ const COMPARE_SOURCE_KEYS = ["google", "meta", "apple", "microsoft", "nvidia", "
 const COMPARE_COLORS = ["#38bdf8", "#4ade80", "#f59e0b", "#fb7185", "#a78bfa", "#e50914"];
 
 const state = {
+  browseMode: getInitialBrowseMode(),
+  countryFirstCountries: new Set(getStoredSelection(COUNTRY_FIRST_COUNTRIES_STORAGE_KEY, ["Canada"])),
+  countryFirstSources: new Set(getStoredSelection(COUNTRY_FIRST_SOURCES_STORAGE_KEY, Object.keys(SOURCES))),
+  countryFirstRange: getStoredRange(),
+  countryFirstLoaded: false,
+  countryFirstLoading: false,
+  countryFirstData: new Map(),
   activeSource: getInitialSourceKey(),
   activeTab: "history",
   activeLocation: "all",
@@ -124,6 +146,12 @@ const state = {
 
 const refs = {
   workspaceTabsRoot: document.getElementById("workspace-tabs"),
+  browseModeTabs: document.getElementById("browse-mode-tabs"),
+  countryCompanyPanel: document.getElementById("country-company-panel"),
+  countryFirstCountryChips: document.getElementById("country-first-country-chips"),
+  countryFirstCompanyChips: document.getElementById("country-first-company-chips"),
+  countryFirstRangeChips: document.getElementById("country-first-range-chips"),
+  countryCompanyResults: document.getElementById("country-company-results"),
   sourceHeader: document.getElementById("source-header"),
   trackerTabsShell: document.getElementById("tracker-tabs-shell"),
   sourceRoot: document.getElementById("source-switcher"),
@@ -195,10 +223,85 @@ window.addEventListener("DOMContentLoaded", () => {
 
 async function initializeDashboard() {
   bindWorkspaceTabs();
+  bindBrowseModeTabs();
+  bindCountryFirstControls();
   bindSourceSwitcher();
   bindTabs();
   bindCompareControls();
   await loadSourceData(state.activeSource);
+  if (state.browseMode === "country") await ensureCountryFirstDataLoaded();
+}
+
+function bindCountryFirstControls() {
+  refs.countryFirstCountryChips.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-country-first-country]");
+    if (!button) return;
+    toggleSetValue(state.countryFirstCountries, button.dataset.countryFirstCountry);
+    storeSelection(COUNTRY_FIRST_COUNTRIES_STORAGE_KEY, state.countryFirstCountries);
+    render();
+  });
+
+  refs.countryFirstCompanyChips.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-country-first-source]");
+    if (!button || button.disabled) return;
+    toggleSetValue(state.countryFirstSources, button.dataset.countryFirstSource);
+    storeSelection(COUNTRY_FIRST_SOURCES_STORAGE_KEY, state.countryFirstSources);
+    render();
+  });
+
+  refs.countryFirstRangeChips.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-country-first-range]");
+    if (!button) return;
+    state.countryFirstRange = button.dataset.countryFirstRange || "7";
+    localStorage.setItem(COUNTRY_FIRST_RANGE_STORAGE_KEY, state.countryFirstRange);
+    render();
+  });
+}
+
+function toggleSetValue(values, value) {
+  if (!value) return;
+  if (values.has(value)) values.delete(value);
+  else values.add(value);
+}
+
+function storeSelection(key, values) {
+  localStorage.setItem(key, JSON.stringify([...values]));
+}
+
+function bindBrowseModeTabs() {
+  for (const button of refs.browseModeTabs.querySelectorAll("[data-browse-mode]")) {
+    button.addEventListener("click", () => {
+      state.browseMode = button.dataset.browseMode === "country" ? "country" : "company";
+      localStorage.setItem(BROWSE_MODE_STORAGE_KEY, state.browseMode);
+      if (state.browseMode === "country") void ensureCountryFirstDataLoaded();
+      render();
+    });
+  }
+}
+
+async function ensureCountryFirstDataLoaded() {
+  if (state.countryFirstLoaded || state.countryFirstLoading) return;
+  state.countryFirstLoading = true;
+  refs.countryCompanyResults.setAttribute("aria-busy", "true");
+  render();
+
+  const entries = await Promise.all(Object.values(SOURCES).map(async (source) => {
+    try {
+      const payload = await fetchJsonOrDefault(source.jobsUrl, { jobs: [] });
+      return [source.key, {
+        generatedAt: payload.generatedAt || null,
+        jobs: Array.isArray(payload.jobs) ? payload.jobs : []
+      }];
+    } catch {
+      return [source.key, { generatedAt: null, jobs: [] }];
+    }
+  }));
+
+  state.countryFirstData = new Map(entries);
+  state.countryFirstLoaded = true;
+  state.countryFirstLoading = false;
+  refs.countryCompanyResults.removeAttribute("aria-busy");
+  render();
 }
 
 async function loadSourceData(sourceKey) {
@@ -239,6 +342,25 @@ async function loadSourceData(sourceKey) {
 function getInitialSourceKey() {
   const stored = localStorage.getItem(SOURCE_STORAGE_KEY);
   return stored && SOURCES[stored] ? stored : "google";
+}
+
+function getInitialBrowseMode() {
+  const stored = localStorage.getItem(BROWSE_MODE_STORAGE_KEY);
+  return stored === "company" ? "company" : "country";
+}
+
+function getStoredSelection(key, fallback) {
+  try {
+    const stored = JSON.parse(localStorage.getItem(key) || "null");
+    return Array.isArray(stored) ? stored : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function getStoredRange() {
+  const stored = localStorage.getItem(COUNTRY_FIRST_RANGE_STORAGE_KEY);
+  return COUNTRY_FIRST_RANGES.some((range) => range.value === stored) ? stored : "7";
 }
 
 function resetSelectionState() {
@@ -1011,6 +1133,214 @@ function render() {
   renderRemovedJobs();
   if (state.activeTab === "compare") {
     renderCompare();
+  }
+  renderBrowseMode();
+}
+
+function renderBrowseMode() {
+  const isTracker = state.activeTab !== "compare";
+  const isCountryMode = isTracker && state.browseMode === "country";
+  refs.browseModeTabs.hidden = !isTracker;
+
+  for (const button of refs.browseModeTabs.querySelectorAll("[data-browse-mode]")) {
+    const isActive = button.dataset.browseMode === state.browseMode;
+    button.className =
+      "rounded-full border px-5 py-3 text-sm font-semibold transition-colors " +
+      (isActive
+        ? "border-accent bg-accent text-base"
+        : "border-white/10 bg-panelSoft text-text hover:border-sky hover:text-sky");
+  }
+
+  refs.countryCompanyPanel.hidden = !isCountryMode;
+  renderCountryFirstControls();
+  renderCountryFirstResults();
+  if (isCountryMode) {
+    refs.sourceHeader.hidden = true;
+    refs.trackerTabsShell.hidden = true;
+    refs.historyPanel.hidden = true;
+    refs.livePanel.hidden = true;
+    refs.removedPanel.hidden = true;
+  }
+}
+
+function renderCountryFirstResults() {
+  refs.countryCompanyResults.replaceChildren();
+  if (state.countryFirstLoading) {
+    refs.countryCompanyResults.append(createCountryFirstStatus("Завантаження…"));
+    return;
+  }
+  if (!state.countryFirstLoaded) return;
+
+  let renderedSections = 0;
+  for (const source of Object.values(SOURCES)) {
+    if (!state.countryFirstSources.has(source.key)) continue;
+    const jobs = getCountryFirstFilteredJobs(source.key)
+      .sort((left, right) =>
+        getDateTime(right.firstSeenAt) - getDateTime(left.firstSeenAt) ||
+        String(left.title || "").localeCompare(String(right.title || ""), "uk"));
+    if (jobs.length === 0) continue;
+    refs.countryCompanyResults.append(createCountryFirstCompanySection(source, jobs));
+    renderedSections += 1;
+  }
+
+  if (renderedSections === 0) {
+    refs.countryCompanyResults.append(createCountryFirstStatus("Немає активних вакансій за вибраними фільтрами."));
+  }
+}
+
+function createCountryFirstCompanySection(source, jobs) {
+  const section = document.createElement("section");
+  section.className = "glass-panel overflow-hidden rounded-[24px] shadow-panel";
+
+  const header = document.createElement("header");
+  header.className = "flex items-center justify-between gap-4 border-b border-white/10 px-5 py-4 md:px-6";
+  const title = document.createElement("h2");
+  title.className = "font-heading text-xl font-bold";
+  title.textContent = source.label.replace(/ (Careers|Jobs)$/, "");
+  const count = document.createElement("span");
+  count.className = "text-sm font-semibold text-sky";
+  count.textContent = String(jobs.length);
+  header.append(title, count);
+
+  const list = document.createElement("div");
+  list.className = "divide-y divide-white/10";
+  for (const job of jobs) list.append(createCountryFirstJobRow(job));
+  section.append(header, list);
+  return section;
+}
+
+function createCountryFirstJobRow(job) {
+  const row = document.createElement("article");
+  row.className = "grid gap-3 px-5 py-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-start md:px-6";
+
+  const content = document.createElement("div");
+  content.className = "min-w-0";
+  const link = document.createElement("a");
+  link.className = "font-semibold text-text transition-colors hover:text-sky";
+  link.href = job.url || "#";
+  link.target = "_blank";
+  link.rel = "noreferrer";
+  link.textContent = job.title || "Untitled role";
+  const locations = document.createElement("p");
+  locations.className = "mt-2 text-sm text-muted";
+  locations.textContent = Array.isArray(job.locations) ? job.locations.join(" · ") : "";
+  content.append(link, locations);
+
+  const meta = document.createElement("div");
+  meta.className = "flex flex-wrap items-center gap-2 md:max-w-sm md:justify-end";
+  for (const country of getCountryFirstJobCountries(job)) {
+    if (!state.countryFirstCountries.has(country)) continue;
+    const chip = document.createElement("span");
+    chip.className = "rounded-full border border-white/10 bg-panelSoft px-3 py-1 text-xs font-semibold text-muted";
+    chip.textContent = country;
+    meta.append(chip);
+  }
+  if (job.firstSeenAt) {
+    const date = document.createElement("time");
+    date.className = "text-xs text-muted";
+    date.dateTime = job.firstSeenAt;
+    date.textContent = formatDate(job.firstSeenAt);
+    meta.append(date);
+  }
+
+  row.append(content, meta);
+  return row;
+}
+
+function createCountryFirstStatus(text) {
+  const status = document.createElement("p");
+  status.className = "glass-panel rounded-[24px] px-5 py-8 text-center text-sm text-muted shadow-panel";
+  status.textContent = text;
+  return status;
+}
+
+function renderCountryFirstControls() {
+  renderCountryFirstChipGroup(
+    refs.countryFirstCountryChips,
+    COUNTRY_FIRST_COUNTRIES.map((country) => ({ value: country, label: country })),
+    state.countryFirstCountries,
+    "country-first-country"
+  );
+  renderCountryFirstCompanyChips();
+  renderCountryFirstChipGroup(
+    refs.countryFirstRangeChips,
+    COUNTRY_FIRST_RANGES,
+    new Set([state.countryFirstRange]),
+    "country-first-range"
+  );
+}
+
+function renderCountryFirstCompanyChips() {
+  refs.countryFirstCompanyChips.replaceChildren();
+  for (const source of Object.values(SOURCES)) {
+    const button = document.createElement("button");
+    const jobs = getCountryFirstFilteredJobs(source.key);
+    const count = jobs.length;
+    const isLoaded = state.countryFirstLoaded;
+    const isUnavailable = isLoaded && count === 0;
+    const isSelected = state.countryFirstSources.has(source.key) && !isUnavailable;
+    const label = source.label.replace(/ (Careers|Jobs)$/, "");
+    button.type = "button";
+    button.dataset.countryFirstSource = source.key;
+    button.disabled = isUnavailable;
+    button.className =
+      "rounded-full border px-4 py-2 text-sm font-semibold transition-colors " +
+      (isUnavailable
+        ? "cursor-not-allowed border-white/5 bg-panelSoft/40 text-muted/50"
+        : isSelected
+          ? "border-accent bg-accent text-base"
+          : "border-white/10 bg-panelSoft text-muted hover:border-sky hover:text-sky");
+    button.textContent = `${label} · ${isLoaded ? count : "…"}`;
+    refs.countryFirstCompanyChips.append(button);
+  }
+}
+
+function getCountryFirstFilteredJobs(sourceKey) {
+  const sourceData = state.countryFirstData.get(sourceKey);
+  if (!sourceData || state.countryFirstCountries.size === 0) return [];
+  const cutoff = getCountryFirstCutoff();
+  const jobsById = new Map();
+
+  for (const job of sourceData.jobs) {
+    if (job.isActive === false) continue;
+    const countries = getCountryFirstJobCountries(job);
+    if (!countries.some((country) => state.countryFirstCountries.has(country))) continue;
+    if (cutoff !== null) {
+      const firstSeenAt = getDateTime(job.firstSeenAt);
+      if (!firstSeenAt || firstSeenAt < cutoff) continue;
+    }
+    if (!jobsById.has(job.id)) jobsById.set(job.id, job);
+  }
+
+  return [...jobsById.values()];
+}
+
+function getCountryFirstJobCountries(job) {
+  return Array.isArray(job.matchedLocations) && job.matchedLocations.length > 0
+    ? [...new Set(job.matchedLocations.filter(Boolean))]
+    : [job.requestedLocation].filter(Boolean);
+}
+
+function getCountryFirstCutoff() {
+  if (state.countryFirstRange === "all") return null;
+  const days = Number(state.countryFirstRange);
+  return Date.now() - days * 24 * 60 * 60 * 1000;
+}
+
+function renderCountryFirstChipGroup(root, items, selectedValues, dataName) {
+  root.replaceChildren();
+  for (const item of items) {
+    const button = document.createElement("button");
+    const isSelected = selectedValues.has(item.value);
+    button.type = "button";
+    button.dataset[dataName.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())] = item.value;
+    button.className =
+      "rounded-full border px-4 py-2 text-sm font-semibold transition-colors " +
+      (isSelected
+        ? "border-accent bg-accent text-base"
+        : "border-white/10 bg-panelSoft text-muted hover:border-sky hover:text-sky");
+    button.textContent = item.label;
+    root.append(button);
   }
 }
 
