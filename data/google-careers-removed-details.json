@@ -1,6 +1,42 @@
 {
   "jobs": [
     {
+      "id": "102552346151527110",
+      "title": "Research Engineer, AGI Safety and Alignment, DeepMind",
+      "company": "DeepMind",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/102552346151527110-research-engineer-agi-safety-and-alignment-deepmind?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-07-22T19:42:46.9140519\u002B00:00",
+      "lastSeenAt": "2026-08-21T18:55:39.2590985\u002B00:00",
+      "removedAt": "2026-08-22T06:58:54.2329873\u002B00:00",
+      "removedInRunId": "2026-08-22T06-58-54Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckU7etcL4OiSDtcDvk6SERZXKUHm3aeSTpb96ySfZasPPEjoA1Ny_i0ZR9ngWiJQUL0DnuSbgBoxhNrtYaiKyqGgT_Kh6hobeWdDz76X6dOgxCKh4uBRTPNI06hJp_V2\u0026loc=GB\u0026title=Research\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EThe Artificial General Intelligence (AGI) Safety and Alignment Team (ASAT) aims to reduce existential and catastrophic risk from AGI and eventually Artificial Superintelligence (ASI). We research novel techniques and work with the rest of GDM and Google to apply them. We advise executive leadership on safety.\u003C/p\u003E\u003Cp\u003EASAT has sub-teams specialising in making future Geminis more thoroughly aligned by finding and fixing sources of misalignment and exploring alignment techniques with better generalization. Preparing for future AGI risks by simulating them today and using interpretability techniques to understand AI and solve practical problems like model forensics or eval awareness. Building control for GDM\u2019s agents as defense-in-depth against potential misaligned internal deployments. Researching training techniques, like debate, for aligning superhuman AI and ways to retain, improve, and measure monitorability. Researching and implementing ways to assess the ways in which a given model might be imperfectly aligned and developing and implementing tools and AI assistance that accelerates safety research. Advising executive leadership on risks posed by AI systems via the frontier safety framework based on our threat models and evaluations.\u003Cbr\u003E\u003Cbr\u003EWe are prioritising hires for deep alignment, alignment stress testing, language model interpretability, agent control, and amplified oversight. We are looking to grow our team with researchers and engineers. Depending on your background, we have opportunities available as both Research Scientists and Software Engineers.\u003C/p\u003E\u003Cp\u003EArtificial intelligence will be one of humanity\u2019s most transformative inventions. At Google DeepMind, we are a pioneering AI lab with exceptional interdisciplinary teams focused on advancing AI development to solve complex global challenges and accelerate high-quality product innovation for billions of users. We use our technologies for widespread public benefit and scientific discovery, ensuring safety and ethics are always our highest priority.\u003C/p\u003E\u003Cdiv\u003E\u003Cbr\u003EWe are pushing the boundaries across multiple domains. Our global teams offer diverse learning opportunities and varied career pathways for those driven to achieve exceptional results through collective effort.\u003C/div\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EResearch new alignment methods, studying alignment failures, and applying AGI-scalable alignment techniques to frontier models.\u003C/li\u003E\n\u003Cli\u003EDevelop adversarially robust AGI control systems and implement them in production.\u003C/li\u003E\n\u003Cli\u003EResearch interpretability techniques to understand what AI systems are \u2018thinking\u2019.\u003C/li\u003E\n\u003Cli\u003EWork with product teams to ensure that our research is correctly adopted.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, a related Software Engineering field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E3 years of experience in software development, ML engineering, or ML research.\u003C/li\u003E\n\u003Cli\u003EExperience working with research teams.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience conducting or contributing to applied research to improve the safety and alignment of frontier AI systems.\u003C/li\u003E\n\u003Cli\u003EExperience with training large models (e.g., supervised finetuning, RLHF).\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-22T15:38:47.3590000\u002B00:00",
+        "2026-07-22T15:38:47.4660000\u002B00:00"
+      ]
+    },
+    {
       "id": "139820460714926790",
       "title": "Data Center Technician III, Global Server Operations",
       "company": "Google",
@@ -71,52 +107,6 @@
       "rawTimestampPairs": [
         "2026-07-22T09:38:24.8650000\u002B00:00",
         "2026-07-22T09:38:24.9490000\u002B00:00"
-      ]
-    },
-    {
-      "id": "134408614117810886",
-      "title": "Senior Software Developer, Generative AI, Google Cloud Applied AI, Concorde Gateway",
-      "company": "Google",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/134408614117810886-senior-software-developer-generative-ai-google-cloud-applied-ai-concorde-gateway?location=Canada\u0026q=Software\u002BEngineer\u0026page=2",
-      "locations": [
-        "Waterloo, ON, Canada",
-        "Toronto, ON, Canada"
-      ],
-      "requestedLocation": "Canada",
-      "firstSeenAt": "2026-08-10T19:15:32.1613915\u002B00:00",
-      "lastSeenAt": "2026-08-21T07:07:30.6178411\u002B00:00",
-      "removedAt": "2026-08-21T18:55:39.2590985\u002B00:00",
-      "removedInRunId": "2026-08-21T18-55-39Z",
-      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckSdIHy2ZBiXpJ5AFF3YkLUtFYK3617Mj9-utI1YB9ACVEjsA1Ny_i2g_4n1BBSd6f-wwKt5TgDftX0fKpVglXNs34BpStHeqtWDRULVlKenbv7ccdYzLWM6y5c5Eqw%3D%3D_V2\u0026loc=CA\u0026title=Senior\u002BSoftware\u002BDeveloper",
-      "aboutTheJobRaw": "Google\u0027s software developers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at a massive scale, and extend well beyond web search. We\u0027re looking for developers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software developer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our developers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward. \u003Cbr\u003E\u003Cbr\u003EYou will join a highly technical, fast-paced developing team transforming customer interactions through AI. In this role, you will build the \u0022front door\u0022 connecting next-generation AI agents to millions of users, and develop cloud-based \u0022last-mile\u0022 integrations that power seamless chat and voice experiences.You will ensure reliable and scalable GenAI interactions directly at the customer touchpoint that shape the future of applied AI by developing our core first-party integration platforms.\u003Cbr\u003EThe Cloud Applied AI (AAI) powers business growth with Gemini Enterprise. Our portfolio includes Gemini Enterprise for Customer Experience (Shopping Agent, CX Agent Studio, Agent Assist, Vertex AI Search - Commerce, Customer Experience Insights), along with other vertical and domain packaged solutions. We enable high adoption and speed to value by building solutions that are quickly deployed, delivering new 0-to-1 capabilities with startup agility. Team members operate at the forefront of AI, collaborating directly with model builders with unprecedented speed. Join us to work on cutting-edge projects and shape the future of AI in a fast-paced, collaborative, and impactful environment.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003ECanada: $182000 - $186000 (CAD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
-      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDrive the end-to-end development and technical design for integrating AI agents across various first- and third-party chat and voice surfaces, guiding the team through complex performance and reliability challenges.\u003C/li\u003E\n\u003Cli\u003EPartner closely with Product Management, UX, and AI research teams to translate complex requirements into AI-powered customer support experience.\u003C/li\u003E\n\u003Cli\u003ELead technical relationship-building and co-development efforts with key external partners to ensure their technologies integrate seamlessly with our platform.\u003C/li\u003E\n\u003Cli\u003EApply deep technical knowledge in telephony, chat, or Generative AI to guide product direction and successfully navigate complex technical trade-offs.\u003C/li\u003E\n\u003Cli\u003EDeliver in a fast-paced, action-oriented environment to accelerate development and deliver robust solutions in a rapidly evolving domain.\u003C/li\u003E\n\u003C/ul\u003E",
-      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages.\u003C/li\u003E\n\u003Cli\u003E3 years of experience testing, maintaining, or launching software products, and 1 year of experience with software design and architecture.\u003C/li\u003E\n\u003C/ul\u003E",
-      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or a related technical field.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E3 years of experience working in a complex, matrixed organization involving cross-functional, or cross-business projects.\u003C/li\u003E\n\u003Cli\u003EExperience building or integrating with communication systems (e.g., telephony, WebRTC, chat) and AI agents.\u003C/li\u003E\n\u003Cli\u003EExperience with Generative AI, large language models (LLMs), or conversational AI systems, especially in the development of AI agents or agentic frameworks.\u003C/li\u003E\n\u003C/ul\u003E",
-      "experienceLevelRaw": "Mid",
-      "locationsRawDetailed": [
-        {
-          "displayName": "Waterloo, ON, Canada",
-          "addresses": [
-            "Waterloo, ON, Canada"
-          ],
-          "city": "Waterloo",
-          "regionCode": "ON",
-          "countryCode": "CA"
-        },
-        {
-          "displayName": "Toronto, ON, Canada",
-          "addresses": [
-            "Toronto, ON, Canada"
-          ],
-          "city": "Toronto",
-          "regionCode": "ON",
-          "countryCode": "CA"
-        }
-      ],
-      "rawTimestampPairs": [
-        "2026-08-10T11:08:35.9320000\u002B00:00",
-        "2026-08-20T11:09:11.8920000\u002B00:00",
-        "2026-08-20T11:09:11.9590000\u002B00:00"
       ]
     },
     {
@@ -351,42 +341,6 @@
         "2026-07-22T18:08:25.8790000\u002B00:00",
         "2026-08-18T15:08:58.6840000\u002B00:00",
         "2026-08-18T15:08:58.8490000\u002B00:00"
-      ]
-    },
-    {
-      "id": "120286571059389126",
-      "title": "Software Developer, Fighting Ad Fraud",
-      "company": "Google",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/120286571059389126-software-developer-fighting-ad-fraud?location=Canada\u0026q=Software\u002BEngineer\u0026page=1",
-      "locations": [
-        "Waterloo, ON, Canada"
-      ],
-      "requestedLocation": "Canada",
-      "firstSeenAt": "2026-08-07T00:14:22.4386219\u002B00:00",
-      "lastSeenAt": "2026-08-21T07:07:30.6178411\u002B00:00",
-      "removedAt": "2026-08-21T18:55:39.2590985\u002B00:00",
-      "removedInRunId": "2026-08-21T18-55-39Z",
-      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckWGKb9Jis9xtxMzwVd-h4DMTHXUoCrsGFOgpdNBmsld0EjsA1Ny_i91BGEuG3ZLt5b1BEfRi71G1-WKVsNu_MGh24fN4-_VY4yMMKkN7DK0cpeDNasXQqNlmmDRuhg%3D%3D_V2\u0026loc=CA\u0026title=Software\u002BDeveloper",
-      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software developers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for software developers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software developer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our software developers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003Cbr\u003E\u003Cbr\u003EWith your technical expertise you will manage project priorities, deadlines, and deliverables. You will design, develop, test, deploy, maintain, and enhance software solutions.\u003C/p\u003E\n\u003Cp\u003EAs a key member of the Botnets team, you will be instrumental in building resilient, industry-leading defenses against the scale and sophistication of automated and distributed spam attacks targeting Google\u0027s ads ecosystem. \u003C/p\u003E\u003Cp\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003ECanada: $150000 - $153000 (CAD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
-      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EStay up-to-date on industry trends and emerging threats and build new initiatives and roadmaps to defend Google\u0027s ads ecosystem.\u003C/li\u003E\n\u003Cli\u003EWork cross-functionally with Google research teams to influence and apply state-of-the-art machine learning technologies in fraud detection.\u003C/li\u003E\n\u003Cli\u003EBuild statistical and machine learning models to automate spam detection and filtering.\u003C/li\u003E\n\u003Cli\u003EInstrument Google ads products to collect traffic signals for building robust and privacy-friendly anomaly detection.\u003C/li\u003E\n\u003Cli\u003EEstablish ground-truth and dissect botnet workflows through traffic analysis and reverse developing.\u003C/li\u003E\n\u003C/ul\u003E",
-      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003C/li\u003E\n\u003Cli\u003E2 years of experience in Machine Learning or Statistical Analysis.\u003C/li\u003E\n\u003C/ul\u003E",
-      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical fields.\u003C/li\u003E\n\u003Cli\u003EExperience in reverse developing and security analysis.\u003C/li\u003E\n\u003Cli\u003E Experience with anti-abuse systems.\u003C/li\u003E\n\u003Cli\u003EExperience with web browsers or mobile app development.\u003C/li\u003E\n\u003C/ul\u003E",
-      "experienceLevelRaw": "Mid",
-      "locationsRawDetailed": [
-        {
-          "displayName": "Waterloo, ON, Canada",
-          "addresses": [
-            "Waterloo, ON, Canada"
-          ],
-          "city": "Waterloo",
-          "regionCode": "ON",
-          "countryCode": "CA"
-        }
-      ],
-      "rawTimestampPairs": [
-        "2026-08-06T09:37:58.3530000\u002B00:00",
-        "2026-08-07T11:40:17.5470000\u002B00:00",
-        "2026-08-07T11:40:17.5900000\u002B00:00"
       ]
     },
     {
