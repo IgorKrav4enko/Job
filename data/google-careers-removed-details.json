@@ -1,6 +1,52 @@
 {
   "jobs": [
     {
+      "id": "109974274587927238",
+      "title": "Software Engineer, Science and Strategic Initiatives, DeepMind",
+      "company": "DeepMind",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/109974274587927238-software-engineer-science-and-strategic-initiatives-deepmind?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK",
+        "Mountain View, CA, USA"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-08-17T18:57:36.4167730\u002B00:00",
+      "lastSeenAt": "2026-08-25T18:56:57.9910222\u002B00:00",
+      "removedAt": "2026-08-26T07:08:13.2710820\u002B00:00",
+      "removedInRunId": "2026-08-26T07-08-13Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckXXGJ2VHTw0V-M3BYI0xmFcBzpeDIJexSCLxx7nfMmV0EjsA1Ny_i7i5BvthGySmcZiZwYjPlRYVinT3_FvNvBuJvHaEBG47_xEE7mSvafnA9lE7MEwzmFgz3dgvtw%3D%3D_V2\u0026loc=GB\u0026title=Software\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle DeepMind\u0027s Science and Strategic Initiatives unit is building a new team focused on the commercialization and real-world academic impact of AI models across Science, Cybersecurity (CodeMender), and Coding Agents. We sit at the intersection of Google DeepMind\u0027s frontier research and Google Cloud\u0027s enterprise reach, transferring breakthroughs into products that generate groundbreaking discoveries and commercial impact with exceptional institutions (Harvard, Broad Institute, Roche, AstraZeneca), leading enterprises, and internal Google teams.\u003C/p\u003E\u003Cp\u003EWe are building a self-improving meta-agent framework to automatically diagnose failure modes, generalize learnings across customer engagements, and continuously improve agent quality at scale. We look for engineers comfortable building production systems and reasoning about research problems, who thrive in ambiguity, engage directly with customers, and want to see AI agents work in the real world\u2014not just on benchmarks.\u003C/p\u003E\u003Cp\u003EIn this role, you will design, build, and operate the scaffolding and meta-agent framework across four key failure categories. You will build diagnostic agents and automated validation pipelines to detect and remediate real-world integration issues before they impact agent quality. You will design robust evaluation frameworks to measure production performance when lab benchmarks fail, and identify when evaluation methodology itself is the root cause of perceived failures. You will develop memory and knowledge architectures that extract, distill, and generalize insights across multi-agent deployments to prevent learnings from remaining episodic. Additionally, you will characterize model capability gaps with empirical evidence, partnering with Google DeepMind research teams to drive targeted model improvements.\u003C/p\u003E\u003Cp\u003EArtificial intelligence will be one of humanity\u2019s most transformative inventions. At Google DeepMind, we are a pioneering AI lab with exceptional interdisciplinary teams focused on advancing AI development to solve complex global challenges and accelerate high-quality product innovation for billions of users. We use our technologies for widespread public benefit and scientific discovery, ensuring safety and ethics are always our highest priority.\u003C/p\u003E\u003Cdiv\u003E\u003Cbr\u003EWe are pushing the boundaries across multiple domains. Our global teams offer diverse learning opportunities and varied career pathways for those driven to achieve exceptional results through collective effort.\u003C/div\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EUS: $174000 - $252000 (USD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign and build the self-improving meta-agent framework\u2014scaffolding, diagnostic tools, and feedback loops across science, cybersecurity, and coding agents.\u003C/li\u003E\n\u003Cli\u003EDeploy, monitor, and improve AI agents in real-world settings with enterprise customers and academic partners, transitioning direct engagements into a scalable deployment model.\u003C/li\u003E\n\u003Cli\u003EBuild automated evaluation pipelines that capture real-world agent quality, robustness, and performance beyond lab benchmarks.\u003C/li\u003E\n\u003Cli\u003EDevelop cross-engagement learning systems and memory architectures that extract and generalize insights across multi-agent deployments.\u003C/li\u003E\n\u003Cli\u003ECharacterize core foundation model limitations with empirical evidence, collaborating with Google DeepMind research teams to drive foundational improvements.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in software design and development using Python, distributed systems, or cloud infrastructure.\u003C/li\u003E\n\u003Cli\u003EExperience building, deploying, and operating multi-agent or AI systems in production or near-production environments.\u003C/li\u003E\n\u003Cli\u003EExperience with evaluation frameworks, metrics design, or quality measurement for machine learning systems.\u003C/li\u003E\n\u003Cli\u003EExperience collaborating with cross-functional research teams, external partners, or enterprise customers to translate requirements into technical solutions.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science, Artificial Intelligence, or a related field.\u003C/li\u003E\n\u003Cli\u003EExperience with LLM agents, autonomous multi-step reasoning systems, meta-learning, or self-improving ML pipelines.\u003C/li\u003E\n\u003Cli\u003EExperience with large-scale data pipelines (e.g., Apache Beam) or foundation model training and fine-tuning at scale.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience working in research environments or track record of published research in relevant AI/ML conferences.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EDomain experience in life sciences, drug discovery, cybersecurity, or developer tools/coding agents.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        },
+        {
+          "displayName": "Mountain View, CA, USA",
+          "addresses": [
+            "Mountain View, CA, USA"
+          ],
+          "city": "Mountain View",
+          "regionCode": "CA",
+          "countryCode": "US"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-08-17T18:38:33.6740000\u002B00:00",
+        "2026-08-17T18:38:33.7620000\u002B00:00"
+      ]
+    },
+    {
       "id": "89216124805096134",
       "title": "Customer Engineer, Platform, Software and Media, DACH (German)",
       "company": "Google",
@@ -115,41 +161,6 @@
       "rawTimestampPairs": [
         "2026-08-11T22:10:00.1810000\u002B00:00",
         "2026-08-11T22:10:00.3710000\u002B00:00"
-      ]
-    },
-    {
-      "id": "125009656400487110",
-      "title": "Security Engineer, Product, Cloud CISO",
-      "company": "Google",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/125009656400487110-security-engineer-product-cloud-ciso?location=Spain\u0026q=Software\u002BEngineer\u0026page=1",
-      "locations": [
-        "M\u00E1laga, Spain"
-      ],
-      "requestedLocation": "Spain",
-      "firstSeenAt": "2026-08-10T22:44:33.1163558\u002B00:00",
-      "lastSeenAt": "2026-08-25T07:07:48.6557760\u002B00:00",
-      "removedAt": "2026-08-25T18:56:57.9910222\u002B00:00",
-      "removedInRunId": "2026-08-25T18-56-57Z",
-      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckeoItZz3WCdEXvPIlskEiYBT120lTO687sEVJ7aqWX-aEjsA1Ny_i9YMR9oxmveXp-2EqTLppVZErXJJOvR16N0z3W5i5SqejDgrX5OLeb782OIxLGijyow9gaX-ag%3D%3D_V2\u0026loc=ES\u0026title=Security\u002BEngineer",
-      "aboutTheJobRaw": "Our Security team works to create and maintain the safest operating environment for Google\u0027s users and developers. Security Engineers work with network equipment and actively monitor our systems for attacks and intrusions. In this role, you will also work with software engineers to proactively identify and fix security flaws and vulnerabilities. \u003Cbr\u003E\u003Cbr\u003EAs an information security engineer you will help to ensure that our software and systems are designed and implemented to the highest security standards. You will perform technical security assessments, code reviews and vulnerability testing to highlight risk, helping Google teams and partners to improve security, and work on a wide variety of software designs and technology stacks.Google Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.\u003Cbr\u003E\u003Cbr\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training. \u003Cdiv\u003E\u003Cbr\u003E\u003C/div\u003E\u003Cdiv\u003ESpain: \u20AC70000 - \u20AC71500 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003C/div\u003E\u003Cdiv\u003E\u003Cbr\u003E\u003C/div\u003E\u003Cdiv\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.\u003C/div\u003E",
-      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EIdentify security issues, implement and design security controls, tools, and services to improve security systems and processes.\u003C/li\u003E\n\u003Cli\u003EConduct security reviews, research and reproduce vulnerabilities, design secure protocols and systems, and write tests and fuzzers.\u003C/li\u003E\n\u003Cli\u003EPerform security reviews, research and reproduce vulnerabilities.\u003C/li\u003E\n\u003Cli\u003ERespond to vulnerabilities with repos, mitigations, and hardening.\u003C/li\u003E\n\u003C/ul\u003E",
-      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with security assessments or security design reviews or threat modeling.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with security engineering, computer and network security and security protocols.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of coding experience in one or more general purpose languages.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
-      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience in building relationships at various levels, along with advanced written and verbal communications skills and the ability to influence others.\u003C/li\u003E\n\u003Cli\u003EExperience in consulting or project management with the ability to meet or exceed goals.\u003C/li\u003E\n\u003Cli\u003E Understanding of both offensive and defensive security methods.\u003C/li\u003E\n\u003C/ul\u003E",
-      "experienceLevelRaw": "Mid",
-      "locationsRawDetailed": [
-        {
-          "displayName": "M\u00E1laga, Spain",
-          "addresses": [
-            "M\u00E1laga, Spain"
-          ],
-          "city": "M\u00E1laga",
-          "regionCode": "AN",
-          "countryCode": "ES"
-        }
-      ],
-      "rawTimestampPairs": [
-        "2026-07-28T14:09:19.8560000\u002B00:00",
-        "2026-07-28T14:09:20.0040000\u002B00:00"
       ]
     },
     {
