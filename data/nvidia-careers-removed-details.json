@@ -1,23 +1,19 @@
 {
   "jobs": [
     {
-      "id": "893396845381",
-      "title": "Firmware Engineer",
+      "id": "893394595213",
+      "title": "Senior Software Engineer, AI Inference",
       "company": "NVIDIA",
-      "url": "https://jobs.nvidia.com/careers/job/893396845381",
+      "url": "https://jobs.nvidia.com/careers/job/893394595213",
       "locations": [
-        "Finland, Helsinki",
-        "Remote - Finland",
-        "Remote - Germany",
-        "Remote - Sweden"
+        "Canada, Toronto"
       ],
-      "requestedLocation": "Germany",
-      "firstSeenAt": "2026-08-04T09:06:16.7609218\u002B00:00",
-      "lastSeenAt": "2026-08-25T07:08:41.8880561\u002B00:00",
-      "removedAt": "2026-08-25T18:57:56.9977134\u002B00:00",
-      "removedInRunId": "2026-08-25T18-57-56Z",
-      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893396845381",
-      "postedAtCandidate": "2026-08-03T00:00:00.0000000\u002B00:00"
+      "requestedLocation": "Canada",
+      "firstSeenAt": "2026-08-10T22:45:13.3859656\u002B00:00",
+      "lastSeenAt": "2026-08-26T20:03:57.7190386\u002B00:00",
+      "removedAt": "2026-08-27T17:39:03.5085187\u002B00:00",
+      "removedInRunId": "2026-08-27T17-39-03Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893394595213"
     },
     {
       "id": "893396999274",
@@ -143,6 +139,25 @@
       "removedInRunId": "2026-08-18T07-04-38Z",
       "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893395488136",
       "postedAtCandidate": "2026-06-09T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "893396981921",
+      "title": "Senior Software Developer",
+      "company": "NVIDIA",
+      "url": "https://jobs.nvidia.com/careers/job/893396981921",
+      "locations": [
+        "Remote - Denmark",
+        "Remote - Germany",
+        "Remote - Netherlands",
+        "Remote - UK"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-08-12T19:20:34.8715799\u002B00:00",
+      "lastSeenAt": "2026-08-26T20:03:57.7190386\u002B00:00",
+      "removedAt": "2026-08-17T18:58:29.6622000\u002B00:00",
+      "removedInRunId": "2026-08-17T18-58-29Z",
+      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893396981921",
+      "postedAtCandidate": "2026-08-26T00:00:00.0000000\u002B00:00"
     },
     {
       "id": "893396791750",
@@ -1329,23 +1344,6 @@
       "minimumQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EMasters or PhD or equivalent experience in relevant field (Computer Engineering, Computer Science, EECS, AI).\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003E5\u002B years of relevant software development experience.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExcellent C/C\u002B\u002B programming and software design skills. SW Agile skills are helpful and Python experience is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPrior experience with training, deploying or optimizing the inference of DL models in production is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EPrior background with performance modeling, profiling, debug, and code optimization or architectural knowledge of CPU and GPU is a plus.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E",
       "preferredQualificationsRaw": "\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EContribute to Deep Learning Software projects, such as PyTorch, vLLM, and SGLang to drive advancements in the field.\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience with Multi-GPU Communications (NCCL, NVSHMEM)\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EExperience building and shipping products to enterprise customers.\u00A0\u00A0\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan\u003EGPU programming experience (CUDA, OAI TRITON or CUTLASS).\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp\u003E\u003Cspan\u003ENVIDIA is at the forefront of breakthroughs in Artificial Intelligence, High-Performance Computing, and Visualization. Our teams are\u00A0composed of driven, innovative professionals dedicated to pushing the boundaries of technology. We offer highly competitive salaries, an extensive benefits package, and a work environment that promotes diversity, inclusion, and flexibility. As an equal opportunity employer, we are committed to fostering a supportive and empowering workplace for all\u003C/span\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003E\u003Cp style=\u0022text-align:inherit\u0022\u003E\u003C/p\u003EYour base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4.\u0026#xa;\u0026#xa;\u0026#xa;",
       "postedAtCandidate": "2026-01-09T00:00:00.0000000\u002B00:00"
-    },
-    {
-      "id": "893392081423",
-      "title": "Senior Developer Relations Manager, ISV",
-      "company": "NVIDIA",
-      "url": "https://jobs.nvidia.com/careers/job/893392081423",
-      "locations": [
-        "Remote - UK",
-        "UK, Reading"
-      ],
-      "requestedLocation": "United Kingdom",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-08-24T07:20:45.5034426\u002B00:00",
-      "removedAt": "2026-04-23T19:54:11.7526020\u002B00:00",
-      "removedInRunId": "2026-04-23T19-54-11Z",
-      "applyUrlRaw": "https://jobs.nvidia.com/careers/job/893392081423",
-      "postedAtCandidate": "2026-06-04T00:00:00.0000000\u002B00:00"
     },
     {
       "id": "893392081562",
