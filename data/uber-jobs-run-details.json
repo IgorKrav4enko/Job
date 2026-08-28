@@ -6293,6 +6293,200 @@
           ]
         }
       ]
+    },
+    {
+      "runId": "2026-08-28T02-15-33Z",
+      "added": [],
+      "removed": [],
+      "changed": [],
+      "unchanged": [
+        {
+          "id": "301972",
+          "title": "Applications Developer II - Engineer",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/301972/",
+          "locations": [
+            "Amsterdam, Netherlands"
+          ],
+          "requestedLocation": "Netherlands"
+        },
+        {
+          "id": "153809",
+          "title": "Engineering Manager II - Benefits",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/153809/",
+          "locations": [
+            "Amsterdam, Netherlands"
+          ],
+          "requestedLocation": "Netherlands"
+        },
+        {
+          "id": "154838",
+          "title": "Engineering Manager II - Catalog Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/154838/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        },
+        {
+          "id": "300441",
+          "title": "Engineering Manager II - Container Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300441/",
+          "locations": [
+            "Amsterdam, Netherlands"
+          ],
+          "requestedLocation": "Netherlands"
+        },
+        {
+          "id": "150819",
+          "title": "Partner Engineer",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/150819/",
+          "locations": [
+            "London, United Kingdom"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "300427",
+          "title": "Sr Software Engineer - Deployment Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300427/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        },
+        {
+          "id": "300425",
+          "title": "Staff Software Engineer - Configuration Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300425/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        },
+        {
+          "id": "300426",
+          "title": "Staff Software Engineer - Deployment Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300426/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Denmark",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "154838",
+              "title": "Engineering Manager II - Catalog Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/154838/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            },
+            {
+              "id": "300427",
+              "title": "Sr Software Engineer - Deployment Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300427/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            },
+            {
+              "id": "300425",
+              "title": "Staff Software Engineer - Configuration Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300425/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            },
+            {
+              "id": "300426",
+              "title": "Staff Software Engineer - Deployment Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300426/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            }
+          ]
+        },
+        {
+          "location": "Netherlands",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "301972",
+              "title": "Applications Developer II - Engineer",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/301972/",
+              "locations": [
+                "Amsterdam, Netherlands"
+              ],
+              "requestedLocation": "Netherlands"
+            },
+            {
+              "id": "153809",
+              "title": "Engineering Manager II - Benefits",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/153809/",
+              "locations": [
+                "Amsterdam, Netherlands"
+              ],
+              "requestedLocation": "Netherlands"
+            },
+            {
+              "id": "300441",
+              "title": "Engineering Manager II - Container Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300441/",
+              "locations": [
+                "Amsterdam, Netherlands"
+              ],
+              "requestedLocation": "Netherlands"
+            }
+          ]
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "150819",
+              "title": "Partner Engineer",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/150819/",
+              "locations": [
+                "London, United Kingdom"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
