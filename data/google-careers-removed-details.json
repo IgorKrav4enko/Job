@@ -1,6 +1,78 @@
 {
   "jobs": [
     {
+      "id": "124826554965336774",
+      "title": "Senior Partner Forward Deployed Engineer, Google Cloud (French, German)",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/124826554965336774-senior-partner-forward-deployed-engineer-google-cloud-french-german?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-08-24T18:59:36.2673118\u002B00:00",
+      "lastSeenAt": "2026-09-01T11:38:20.2173658\u002B00:00",
+      "removedAt": "2026-09-01T21:02:06.6007570\u002B00:00",
+      "removedInRunId": "2026-09-01T21-02-06Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckUReRcrHLIVAOBnn8a_UuLyV5GASmbIR_PKyfJaEXW8QEjsA1Ny_i4-4cMrQ4Cvf7v17A8JcOmZjsx9uaCEMCKOWxEvj4dLHlMS2AdylrVfBv-4XSw5_poV-5pRa9A%3D%3D_V2\u0026loc=CH\u0026title=Senior\u002BPartner\u002BForward\u002BDeployed\u002BEngineer",
+      "aboutTheJobRaw": "As a Forward Deployed Engineer (FDE) in the Google Cloud organization, you will be an embedded builder who bridges the gap between frontier AI products and production-grade reality within customers. You will function as an innovator-builder, moving beyond high-level architecture to code, debug, and jointly ship bespoke agentic solutions directly within the customer\u2019s environment. Your role is designed for high-agency engineers with a founder\u2019s mindset. You will address blockers to production including solving the integration complexities, data readiness issues, and state-management issues that prevent AI from reaching enterprise-grade maturity. You will embed with accounts, serve a dual purpose providing white glove deployment of complex AI systems and acting as a critical feedback loop, transforming real-world field insights into Google Cloud\u2019s future product roadmap.It\u0027s an exciting time to join Google Cloud\u2019s Go-To-Market team, leading the AI revolution for businesses worldwide. You\u2019ll excel by leveraging Google\u0027s brand credibility\u2014a legacy built on inventing foundational technologies and proven at scale. We\u2019ll provide you with the world\u0027s most advanced AI portfolio, including frontier Gemini models, and the complete Vertex AI platform, helping you to solve business problems. We\u2019re a collaborative culture providing direct access to DeepMind\u0027s engineering and research minds, empowering you to solve customer challenges. Join us to be the catalyst for our mission, drive customer success, and define the new cloud era\u2014the market is yours.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EServe as a developer for AI applications, transitioning from rapid prototypes to production-grade agentic workflows (e.g., multi-agent systems, Model Context Protocol (MCP) servers) that drive measurable Return on Investment (ROI).\u003C/li\u003E\n\u003Cli\u003EArchitect and code the connective tissue between Google\u2019s AI products and customer\u0027s live infrastructure, including APIs, legacy data silos, and security perimeters as part of an expert team.\u003C/li\u003E\n\u003Cli\u003EBuild high-performance evaluation pipelines and observability frameworks to ensure agentic systems meet requirements for accuracy, safety, and latency.\u003C/li\u003E\n\u003Cli\u003EIdentify repeatable field patterns and friction points in Google\u2019s AI stack, converting them into reusable modules or formal product feature requests for the Engineering teams.\u003C/li\u003E\n\u003Cli\u003ECo-build with partner\u2019s engineering teams to instill Google-grade development best practices, ensuring project success and high end-user adoption and scale impact through assets and scaled technical events, such as scaled and bespoke partner hackathons.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Engineering, Computer Science, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience with software development using Python or similar coding languages.\u003C/li\u003E\n\u003Cli\u003EExperience building pipelines for structured and unstructured data using both vector databases and Retrieval-Augmented Generation (RAG)-like architectures to power enterprise AI solutions.\u003C/li\u003E\n\u003Cli\u003EExperience taking production-grade AI-driven solutions from conception to launch, and architecting AI systems on cloud platforms (e.g., Google Cloud Platform).\u003C/li\u003E\n\u003Cli\u003EExperience leading technical discovery sessions with customers.\u003C/li\u003E\n\u003Cli\u003EAbility to communicate in French or German fluently as this is a customer-facing role that requires interactions in French or German with local stakeholders.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in AI, Computer Science, or a related technical field.\u003C/li\u003E\n\u003Cli\u003EExperience implementing multi-agent systems using frameworks (e.g., LangGraph, CrewAI, ADK) and complex patterns (e.g., ReAct, self-reflection, hierarchical delegation).\u003C/li\u003E\n\u003Cli\u003EExperience in a post-sales or technical consulting delivery function.\u003C/li\u003E\n\u003Cli\u003EKnowledge of Large Language Model (LLM) native metrics (e.g., tokens/sec, cost-per-request) and techniques for optimizing state management and granular tracing.\u003C/li\u003E\n\u003Cli\u003EExcellent communication skills, and proven experience enabling technical teams on Agentic AI, at scale.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-08-24T15:42:31.1100000\u002B00:00",
+        "2026-08-24T15:42:31.2180000\u002B00:00"
+      ]
+    },
+    {
+      "id": "137009605510079174",
+      "title": "Software Engineer II, Feeds Features",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/137009605510079174-software-engineer-ii-feeds-features?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-08-31T13:46:51.9512701\u002B00:00",
+      "lastSeenAt": "2026-09-01T11:38:20.2173658\u002B00:00",
+      "removedAt": "2026-09-01T21:02:06.6007570\u002B00:00",
+      "removedInRunId": "2026-09-01T21-02-06Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckTajv2WnKORnmWD07PpquQRwBQE0J6qNjdvB9CmggJT7EjsA1Ny_i0rZtoNzJfMbirNPtkG3nId7pUjKCWQWNTh2CK_Zohz_HUa-sA7kiam797spQJYVhCoIiqRQuA%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineer\u002BII",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\u003Cp\u003EThe Core team builds the technical foundation behind Google\u2019s flagship products. We are owners and advocates for the underlying design elements, developer platforms, product components, and infrastructure at Google. These are the essential building blocks for excellent, safe, and coherent experiences for our users and drive the pace of innovation for every developer. We look across Google\u2019s products to build central solutions, break down technical barriers and strengthen existing systems. As the Core team, we have a mandate and a unique opportunity to impact important technical decisions across the company.\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDevelop, test, and maintain code for software solutions supporting Google Merchant Center\u0027s data ingestion and feed management systems based on defined requirements.\u003C/li\u003E\n\u003Cli\u003EContribute to backend services and frontend experiences (using C\u002B\u002B, Java, Dart, or distributed systems) that process merchant product data, ensuring code is high-quality, well-factored, and resilient.\u003C/li\u003E\n\u003Cli\u003EWork alongside cross-functional partners (Product, UX, and other Engineering teams) to implement merchant-facing features and data quality insights.\u003C/li\u003E\n\u003Cli\u003ESupport engineering excellence by participating in code reviews and writing thoroughly tested code. Help keep data pipelines reliable by troubleshooting system issues and applying standard technical solutions.\u003C/li\u003E\n\u003Cli\u003EUtilize LLMs and Gemini to help build autoraters for evaluating product data quality and to automate testing workflows.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with software development in one or more programming languages (e.g., Python, C, C\u002B\u002B, Java, JavaScript).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with data structures or algorithms.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E1 year of experience with full stack development, across back-end such as Java, Python, GO, or C\u002B\u002B codebases, and front-end experience including JavaScript or TypeScript, HTML, CSS or equivalent.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience utilizing modern IDEs (such as VSCode or Cider-V) and leveraging AI assistance for code generation or workflow automation.\u003C/li\u003E\n\u003Cli\u003EExperience in using LLM and applying AI/ML concepts to design autoraters, evaluate data quality, or streamline development processes.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-08-31T07:08:12.7710000\u002B00:00",
+        "2026-08-31T07:08:12.9330000\u002B00:00"
+      ]
+    },
+    {
       "id": "133862899868148422",
       "title": "Technical Program Manager II, Cloud Networking, Telecommunications",
       "company": "Google",
