@@ -1,6 +1,124 @@
 {
   "jobs": [
     {
+      "id": "106894897390199494",
+      "title": "Network Operations Engineer, Sovereign Operations, Hampshire",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/106894897390199494-network-operations-engineer-sovereign-operations-hampshire?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-08-04T19:55:20.4906235\u002B00:00",
+      "lastSeenAt": "2026-09-04T20:45:45.5813553\u002B00:00",
+      "removedAt": "2026-09-05T10:33:57.7418689\u002B00:00",
+      "removedInRunId": "2026-09-05T10-33-57Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckRf8HWfcSXSCTvktMoXz7-mHVgjiNw4JsrUEUYKu9tksEjsA1Ny_i9o9Sa3gl-vESCSAQcBNGC-5TRxtcw65XnWMenwBmK0oxa1jCr5BInajyTuVOEl_SYBO1o0iJw%3D%3D_V2\u0026loc=GB\u0026title=Network\u002BOperations\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EThe United Kingdom Sovereign Operations team in Google Public Sector delivers, operates and secures private cloud services. We aim to provide the flexibility, reliability, and scalability of public cloud for customers with high security requirements that can only be met in a private cloud environment. We deliver and operate these private cloud deployments for the most critical customers, helping scale, secure and maintain the deployment and working closely with Google product teams to continually improve our technology.\u003C/p\u003E\u003Cp\u003EAs a Network Operations Engineer, you will be part of a team of engineers that deploys and operates our private cloud services and underlying networks for critical customers in the UK. You will design and operate reliable and resilient networks, automate changes, implement monitoring, and manage core network components. Your work will bridge cloud native infrastructure engineering and platform networking, focusing on software defined networking within a Kubernetes architecture. You will be the glue that keeps containerized, and cloud-hosted services up and running, responsible for configuring and maintaining cloud platform infrastructure, virtual networking resources, and automation workflows from inception to optimization and will participate in an on-call rotation to ensure incidents can be swiftly resolved.\u003Cbr\u003E\u003C/p\u003E\u003Cp\u003E     \u003Cb\u003E\u003C/b\u003E\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EEngage and improve the whole life cycle of secure cloud platform network systems.\u003C/li\u003E\n\u003Cli\u003EAssist Engineering and Operations teams in building an ecosystem of integration, empowering software automation to scale within private/secure networks.\u003C/li\u003E\n\u003Cli\u003EMaintain, secure, and debug cross-cluster communications in an air-gapped kubernetes infrastructure using Cilium for eBPF-based container networking and Istio for microservice communication.\u003C/li\u003E\n\u003Cli\u003EScale systems sustainably through mechanisms like automation, and evolve systems by implementing changes that improve network reliability, security and performance.\u003C/li\u003E\n\u003Cli\u003EWork cross-functionally to drive Infrastructure as Code and GitOps pipelines, ensuring network configurations are deployed programmatically. Provide highly technical implementation and operational support in customer environments, including guidance on implementation feasibility of cross-product integrations.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, Computer Networking, Information Security, or a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with Linux Systems Administration and kernel level/data plane cloud native networking.\u003C/li\u003E\n\u003Cli\u003EExperience with one or more scripting languages e.g. Python, Bash, Poweshell.\u003C/li\u003E\n\u003Cli\u003EExperience with designing and implementing resilient, secure networks using a wide range of technologies.\u003C/li\u003E\n\u003Cli\u003EActive, or the ability to obtain, a Developed Vetting (DV) UK security clearance.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience deploying and operating production workloads in Kubernetes.\u003C/li\u003E\n\u003Cli\u003EExperience designing and implementing configuration management solutions to enable network and cloud platform operations (e.g., Ansible, Terraform, or Puppet).\u003C/li\u003E\n\u003Cli\u003EUnderstanding of the Kubernetes networking model, along with experience debugging CNI plugin (e.g., Cilium) configurations and Service Mesh (e.g., Istio) architectures.\u003C/li\u003E\n\u003Cli\u003EExcellent partner management, follow-through, resourcefulness, attention to detail, and verbal and written communication skills.\u003C/li\u003E\n\u003Cli\u003ECurrent and active UK Security Check (SC) or UK Developed Vetting (DV) security clearance.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-08-04T16:10:35.2840000\u002B00:00",
+        "2026-08-05T14:08:07.7890000\u002B00:00",
+        "2026-08-05T14:08:08.0340000\u002B00:00"
+      ]
+    },
+    {
+      "id": "126387206494266054",
+      "title": "Senior Connectivity Software Developer, Embedded Systems/Firmware, XR",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/126387206494266054-senior-connectivity-software-developer-embedded-systemsfirmware-xr?location=Canada\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "San Jose, CA, USA",
+        "Waterloo, ON, Canada"
+      ],
+      "requestedLocation": "Canada",
+      "firstSeenAt": "2026-09-04T11:17:04.8131403\u002B00:00",
+      "lastSeenAt": "2026-09-04T20:45:45.5813553\u002B00:00",
+      "removedAt": "2026-09-05T10:33:57.7418689\u002B00:00",
+      "removedInRunId": "2026-09-05T10-33-57Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckRtqKNDk2n_JywZM2pJAUpgnkZ_kSWMKsdRdvGuFBaM_EjsA1Ny_i-9UjggfN_Dic2YulfSi_Bi6sllBVYBzdyXx--6jdRV-iJBjzlED4goiyn1CI7CMa3t2GLUM5w%3D%3D_V2\u0026loc=US\u0026title=Senior\u002BConnectivity\u002BSoftware\u002BDeveloper",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EAs a Connectivity Software Developer on the XR Glasses OS System Software team, you will design, implement and maintain the low-level system software that enables  next-generation Augmented Reality (AR) reference platforms. \u003Cbr\u003E\u003Cbr\u003EIn this capacity, you will apply your extensive embedded systems expertise to lead the integration, bring-up, and refinement of low-power WiFi and Bluetooth subsystems. You will collaborate with the MicroXR connectivity, Electrical Engineering (EE), and power/thermal teams to achieve the rigorous performance and power Key Performance Indicator (KPIs) necessary for launching groundbreaking product categories.\u003C/p\u003EFor decades, the computing revolution has reshaped our world driven by  \u003Cbr\u003Ebreakthroughs in compute, connectivity, mobile, and now, AI. Google\u0027s XR team is at the forefront of the next major leap \u2013 the convergence of AI and XR. This is more than just new devices \u2013 it\u0027s about reimagining how we interact with the world around us. We\u0027re building a future where  \u003Cbr\u003Elightweight XR devices like smart glasses and headsets pair with helpful AI  to augment human intelligence, offering personalized, conversational, and  contextually aware experiences.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EUS: $174000 - $252000 (USD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003ECanada: $182000 - $186000 (CAD) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign and implement Android and Microcontroller unit (MCU) device drivers and hardware abstraction layers (HALs) for next-generation Augmented Reality (AR) reference platforms.\u003C/li\u003E\n\u003Cli\u003EIntegrate and bring up new wireless chipsets.\u003C/li\u003E\n\u003Cli\u003EDrive Wi-Fi and Bluetooth driver and firmware level power, thermal and latency improvements to meet product targets.\u003C/li\u003E\n\u003Cli\u003ECollaborate closely with EE, MicroXR connectivity and power teams to optimize the E2E connectivity solution.\u003C/li\u003E\n\u003Cli\u003ELead technical engagements with third-party partners, providing the deep-dive architectural support and debugging expertise necessary to accelerate their device bring-up cycles.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in C/C\u002B\u002B, Firmware, Connectivity, Embedded Systems.\u003C/li\u003E\n\u003Cli\u003E3 years of experience testing, maintaining, or launching software products, and 1 year of experience with software design and architecture.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with embedded development.\u003C/li\u003E\n\u003Cli\u003EExperience with Android platform or Microcontroller unit (MCU) software development.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical field.\u003C/li\u003E\n\u003Cli\u003E1 year of experience in a technical leadership role.\u003C/li\u003E\n\u003Cli\u003EExperience in low-level embedded systems using application processors or microcontrollers.\u003C/li\u003E\n\u003Cli\u003EExperience with 802.11 and BT/BLE device drivers and host interfaces (PCIe, SDIO, UART).\u003C/li\u003E\n\u003Cli\u003EProficient in using tools such as Wireshark, logic analyzers, and kernel tracing to resolve deep-seated issues in the driver, firmware, or hardware interface.\u003C/li\u003E\n\u003Cli\u003EAbility to debug hardware using logic analyzers, oscilloscopes, etc.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "San Jose, CA, USA",
+          "addresses": [
+            "San Jose, CA, USA"
+          ],
+          "city": "San Jose",
+          "regionCode": "CA",
+          "countryCode": "US"
+        },
+        {
+          "displayName": "Waterloo, ON, Canada",
+          "addresses": [
+            "Waterloo, ON, Canada"
+          ],
+          "city": "Waterloo",
+          "regionCode": "ON",
+          "countryCode": "CA"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-09-04T10:37:43.7830000\u002B00:00",
+        "2026-09-04T10:37:43.8470000\u002B00:00"
+      ]
+    },
+    {
+      "id": "112670357092999878",
+      "title": "Software Engineering Manager, Google Messages Wear",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/112670357092999878-software-engineering-manager-google-messages-wear?location=Poland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Krak\u00F3w, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-08-04T19:55:20.4906235\u002B00:00",
+      "lastSeenAt": "2026-09-04T20:45:45.5813553\u002B00:00",
+      "removedAt": "2026-09-05T10:33:57.7418689\u002B00:00",
+      "removedInRunId": "2026-09-05T10-33-57Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckSL6LEfAkcmf7IHZF-lyz6y5jsV8E7HTbtyPIWxeKnAuEjsA1Ny_i5hOp5ZTnQCQHNrfIAzOH4tHxFafW7DwPl1yi8FiOyPwnUi2OvCbaBanPm51LM-GTs93kNLImw%3D%3D_V2\u0026loc=PL\u0026title=Software\u002BEngineering\u002BManager",
+      "aboutTheJobRaw": "\u003Cp\u003ELike Google\u0027s own ambitions, the work of a Software Engineer goes beyond just Search. Software Engineering Managers have not only the technical expertise to take on and provide technical leadership to major projects, but also manage a team of Engineers. You not only optimize your own code but make sure Engineers are able to optimize theirs. As a Software Engineering Manager you manage your project goals, contribute to product strategy and help develop your team. Teams work all across the company, in areas such as information retrieval, artificial intelligence, natural language processing, distributed computing, large-scale system design, networking, security, data compression, user interface design; the list goes on and is growing every day. Operating with scale and speed, our exceptional software engineers are just getting started -- and as a manager, you guide the way.\u003Cbr\u003E\u003Cbr\u003EWith technical and leadership expertise, you manage engineers across multiple teams and locations, a large product budget and oversee the deployment of large-scale projects across multiple sites internationally.\u003Cbr\u003E\u003C/p\u003E\n\u003Cp\u003EJoin us in building a delightful and reliable messaging experience for the millions of people that love an Android device on their wrist. Messages has more than a billion monthly active users who expect to continue to communicate with ease while on the go.\u003C/p\u003EThe Platforms and Ecosystems product area encompasses Google\u0027s various computing software platforms across environments (desktop, mobile, applications). The products provide enterprises, and ultimately end users, the ability to utilize and manage their services at scale. We build innovative and compelling software products\u2014from apps to TVs, from laptops to phones\u2014that have an impact on people\u2019s lives across the world.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142480000 - z\u0142492000 (PLN) \u002B 20% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003ESet and communicate team priorities that support the broader organization\u0027s goals. Align strategy, processes, and decision-making across teams.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003ESet clear expectations with individuals based on their level and role and aligned to the broader organization\u0027s goals. Meet regularly with individuals to discuss performance and development and provide feedback and coaching.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EDevelop the long-term technical direction and roadmap within, and often beyond, the scope of your teams. Evolve the roadmap to meet anticipated future requirements and infrastructure needs.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EOversee system designs within the scope of the broader area, and review product or system development code to solve ambiguous problems.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E\u003Cdiv\u003E\u003Cdiv\u003EReview code developed by other engineers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\u003C/div\u003E\u003C/div\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience with software development in one or more programming languages (e.g., Python, C, C\u002B\u002B, Java, JavaScript).\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience in a technical leadership role; overseeing projects, with 3 years of experience in a people management, supervision/team leadership role.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science, or a related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience working in a complex, matrixed organization.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience with Android application development.\u003C/li\u003E\n\u003Cli\u003EExperience in scaling a system from the pilot/start-up phase to a mature product.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Krak\u00F3w, Poland",
+          "addresses": [
+            "Krak\u00F3w, Poland"
+          ],
+          "city": "Krak\u00F3w",
+          "regionCode": "Lesser Poland Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-08-04T12:07:57.5110000\u002B00:00",
+        "2026-08-20T13:10:02.8710000\u002B00:00",
+        "2026-08-20T13:10:02.9350000\u002B00:00"
+      ]
+    },
+    {
       "id": "102004544547758790",
       "title": "Engineering Manager, Consensus",
       "company": "Google",
