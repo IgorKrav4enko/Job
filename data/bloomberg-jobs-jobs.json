@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+  "generatedAt": "2026-09-06T20:27:05.4980598\u002B00:00",
   "source": "Bloomberg Careers",
   "status": "success",
-  "notes": "Normalized 26 active Bloomberg jobs from latest raw snapshot.",
+  "notes": "Normalized 23 active Bloomberg jobs from latest raw snapshot.",
   "searchTerm": "software engineer",
   "locations": [
     {
@@ -23,25 +23,6 @@
   ],
   "jobs": [
     {
-      "id": "20781",
-      "title": "BQUANT Sales Specialist, Enterprise Sales - Financial Solutions",
-      "company": "Bloomberg",
-      "locations": [
-        "London, United Kingdom"
-      ],
-      "url": "https://bloomberg.avature.net/careers/JobDetail/BQUANT-Sales-Specialist-Enterprise-Sales-Financial-Solutions/20781",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=84",
-      "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
-      "isActive": true,
-      "contentHash": "6855c53bd9c2c52c986ac04d846666b085044cb46923c16631755d65d19ba9c1",
-      "matchedLocations": [
-        "United Kingdom"
-      ],
-      "searchMatchCount": 1
-    },
-    {
       "id": "21058",
       "title": "Business Information Security Officer",
       "company": "Bloomberg",
@@ -52,7 +33,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=48",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "0900a7b4e43a615b1f230a4f4b78f50a1b78a7e628f6b44630318705339d5c12",
       "matchedLocations": [
@@ -71,7 +52,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=36",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "01fa916bd6674764b58645910af9604dfae956709c6665ff2295166642013844",
       "matchedLocations": [
@@ -90,30 +71,11 @@
       "requestedLocation": "Ireland",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=36",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "01fa93bdb0addff36eaff7f160e50668426343ecf310dbcf3ef7cbe378981585",
       "matchedLocations": [
         "Ireland"
-      ],
-      "searchMatchCount": 1
-    },
-    {
-      "id": "21845",
-      "title": "Financial Solutions - Electronic Trading Solutions, Account Manager Listed Products, German Speaker - London",
-      "company": "Bloomberg",
-      "locations": [
-        "London, United Kingdom"
-      ],
-      "url": "https://bloomberg.avature.net/careers/JobDetail/Financial-Solutions-Electronic-Trading-Solutions-Account-Manager-Listed-Products-German-Speaker-London/21845",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=72",
-      "firstSeenAt": "2026-09-03T21:03:45.3301185\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
-      "isActive": true,
-      "contentHash": "4208fcf94e688ffc4006fb2f647b6fed08e5d875cc5461c7590a64a1b9a44772",
-      "matchedLocations": [
-        "United Kingdom"
       ],
       "searchMatchCount": 1
     },
@@ -128,7 +90,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=48",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "558c407cbfe373b1052db87f8f8514ddeae95bc3a84cbe1471b1309bf1b19754",
       "matchedLocations": [
@@ -147,7 +109,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=48",
       "firstSeenAt": "2026-08-12T19:22:09.8175720\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "8e86abce8dc25d67f44d7ef0f7c49861c18bbb6117af53450f2df94f375af7db",
       "matchedLocations": [
@@ -164,9 +126,9 @@
       ],
       "url": "https://bloomberg.avature.net/careers/JobDetail/Product-Manager-Terminal-Controls-Compliance-Policy/21653",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=60",
+      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=48",
       "firstSeenAt": "2026-08-28T18:43:25.1227954\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "190f18fa13dc7d320cf295386007ff1fa74354be49c77262a890fca5341d256b",
       "matchedLocations": [
@@ -185,7 +147,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=0",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "b9ba4f7ff89e0022e99db771e56f7bec3cc04535d46f538add88e5a0d6fc926c",
       "matchedLocations": [
@@ -204,7 +166,7 @@
       "requestedLocation": "Ireland",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=24",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "6a367e51913f00cc208aea498c32a02d25f08510f7b587f8641d32b047703dd1",
       "matchedLocations": [
@@ -223,7 +185,7 @@
       "requestedLocation": "Ireland",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=24",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "f92cde52dedd9a3d8ccdf14233d238040f48068ba2aaa62fb6aedec6e92cf45e",
       "matchedLocations": [
@@ -240,9 +202,9 @@
       ],
       "url": "https://bloomberg.avature.net/careers/JobDetail/Senior-Software-Engineer-Data-License-Plus/20644",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=0",
+      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=12",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "fe453bb2cd2aa71f5dd7638a880294f8fc5edc62dbfd674162835980c74d65ec",
       "matchedLocations": [
@@ -261,7 +223,7 @@
       "requestedLocation": "Ireland",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=0",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "23dfe66d626cce810c67fd922b220c0d70d2fcbeaa63e8c50febeed82651fa92",
       "matchedLocations": [
@@ -278,9 +240,9 @@
       ],
       "url": "https://bloomberg.avature.net/careers/JobDetail/Senior-Software-Engineer-DataHub-Experience-Control-Plane/19859",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=12",
+      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=24",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "7275248861f64c9b3f70f9f5412ee5e93d8c5a48360d9512c90584c28eed70a5",
       "matchedLocations": [
@@ -299,7 +261,7 @@
       "requestedLocation": "Ireland",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=12",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "65e7ecef2fd3478eb219c11520871b6c2ef4b432a07245eb41d975f03b67e333",
       "matchedLocations": [
@@ -318,7 +280,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=24",
       "firstSeenAt": "2026-08-12T19:22:09.8175720\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "cb4c82e6ade26bf39c9d0662340faa5831002c6e62300a434ce6ee2ec1077b63",
       "matchedLocations": [
@@ -337,7 +299,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=24",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "f8b5aaa6aa5693a9d8e7563559cd2cefae3d5943e315b939434caade01e69fe8",
       "matchedLocations": [
@@ -356,7 +318,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=24",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "bfd6a1e4510714885f3e72a35ee762afe908afc027f9bea93ecf261e8d1faadf",
       "matchedLocations": [
@@ -373,9 +335,9 @@
       ],
       "url": "https://bloomberg.avature.net/careers/JobDetail/Senior-Software-Engineer-News-Content-Platform/20300",
       "requestedLocation": "Ireland",
-      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=12",
+      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=0",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "5449279790de1773c2c51d5378ef617731e0423ece1f7559633326e25a0bf1dd",
       "matchedLocations": [
@@ -394,7 +356,7 @@
       "requestedLocation": "Ireland",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=0",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "6a0aa3e89e82670863f6e81a8cac1539b890a11dba5329951846821fce44c709",
       "matchedLocations": [
@@ -413,7 +375,7 @@
       "requestedLocation": "Ireland",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=12",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "64d2df59001ecf4663cd42b07a01c4a95ebcd027c25224fece04af80ecec654c",
       "matchedLocations": [
@@ -432,7 +394,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=24",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "3dace8b8dd304463b1abc3d53b65665b44037d06209a6ef4b10b4aad72df0e5e",
       "matchedLocations": [
@@ -451,7 +413,7 @@
       "requestedLocation": "Germany",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=0",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "f4ea65546dab7c0669c911cac495461884850ab522442553715429d9bad0dba9",
       "matchedLocations": [
@@ -470,7 +432,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=36",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "2e32138d264abbb8cd8f0f2d4dec87091dd74c83be7f00a850ac3cf925de0f70",
       "matchedLocations": [
@@ -489,7 +451,7 @@
       "requestedLocation": "United Kingdom",
       "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=48",
       "firstSeenAt": "2026-08-12T19:22:09.8175720\u002B00:00",
-      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "lastSeenAt": "2026-09-06T20:27:05.4980598\u002B00:00",
       "isActive": true,
       "contentHash": "cc6699e0a36e707319e56d199b24fed2ae3e2c781d2e875420ea0e01a7c48b0a",
       "matchedLocations": [
@@ -498,19 +460,19 @@
       "searchMatchCount": 1
     },
     {
-      "id": "20400",
-      "title": "Technical Product Manager - GenAI Platforms - Agentic Infrastructure - CTO Office",
+      "id": "20781",
+      "title": "BQUANT Sales Specialist, Enterprise Sales - Financial Solutions",
       "company": "Bloomberg",
       "locations": [
         "London, United Kingdom"
       ],
-      "url": "https://bloomberg.avature.net/careers/JobDetail/Technical-Product-Manager-GenAI-Platforms-Agentic-Infrastructure-CTO-Office/20400",
+      "url": "https://bloomberg.avature.net/careers/JobDetail/BQUANT-Sales-Specialist-Enterprise-Sales-Financial-Solutions/20781",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=72",
+      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=84",
       "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
       "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
-      "isActive": true,
-      "contentHash": "75fb853f3a1ca3a00875bfd34fd2455e0935446c68c75d62891ce865b0d19870",
+      "isActive": false,
+      "contentHash": "6855c53bd9c2c52c986ac04d846666b085044cb46923c16631755d65d19ba9c1",
       "matchedLocations": [
         "United Kingdom"
       ],
@@ -530,6 +492,25 @@
       "lastSeenAt": "2026-08-25T07:10:24.5448390\u002B00:00",
       "isActive": false,
       "contentHash": "441cffb1caf9ceb1b1e6f79b909fb8c4fe6addca81c4d482f2a5b7f488719be4",
+      "matchedLocations": [
+        "United Kingdom"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "21845",
+      "title": "Financial Solutions - Electronic Trading Solutions, Account Manager Listed Products, German Speaker - London",
+      "company": "Bloomberg",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "url": "https://bloomberg.avature.net/careers/JobDetail/Financial-Solutions-Electronic-Trading-Solutions-Account-Manager-Listed-Products-German-Speaker-London/21845",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=72",
+      "firstSeenAt": "2026-09-03T21:03:45.3301185\u002B00:00",
+      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "isActive": false,
+      "contentHash": "4208fcf94e688ffc4006fb2f647b6fed08e5d875cc5461c7590a64a1b9a44772",
       "matchedLocations": [
         "United Kingdom"
       ],
@@ -853,6 +834,25 @@
       "lastSeenAt": "2026-08-18T07:05:54.4070769\u002B00:00",
       "isActive": false,
       "contentHash": "a4083b675c89388c4adc77edce458d7f66c7ca5c89ba3b0ddfe19746b04d13f7",
+      "matchedLocations": [
+        "United Kingdom"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "20400",
+      "title": "Technical Product Manager - GenAI Platforms - Agentic Infrastructure - CTO Office",
+      "company": "Bloomberg",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "url": "https://bloomberg.avature.net/careers/JobDetail/Technical-Product-Manager-GenAI-Platforms-Agentic-Infrastructure-CTO-Office/20400",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://bloomberg.avature.net/careers/SearchJobs/software%20engineer?jobRecordsPerPage=12\u0026jobOffset=72",
+      "firstSeenAt": "2026-08-11T14:33:25.9952409\u002B00:00",
+      "lastSeenAt": "2026-09-06T10:57:23.7869182\u002B00:00",
+      "isActive": false,
+      "contentHash": "75fb853f3a1ca3a00875bfd34fd2455e0935446c68c75d62891ce865b0d19870",
       "matchedLocations": [
         "United Kingdom"
       ],
