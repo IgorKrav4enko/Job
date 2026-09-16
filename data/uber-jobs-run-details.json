@@ -12048,6 +12048,234 @@
           ]
         }
       ]
+    },
+    {
+      "runId": "2026-09-16T21-19-27Z",
+      "added": [],
+      "removed": [
+        {
+          "id": "150819",
+          "title": "Partner Engineer",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/150819/",
+          "locations": [
+            "London, United Kingdom"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "changed": [
+        {
+          "id": "159029",
+          "title": "jobs.uber.com",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/159029/",
+          "locations": [
+            "Amsterdam, Netherlands"
+          ],
+          "requestedLocation": "Netherlands",
+          "previousHash": "f391376171c141b75d0750128423f7ac0059a09f1a1a3ed66bd29dec185b59a6",
+          "currentHash": "5251ff8627c0b00a289d3575cd752ed80f28576f1e4d2272929ad72e099a9d41",
+          "changedFields": [
+            "title"
+          ],
+          "fieldChanges": [
+            {
+              "field": "title",
+              "previous": "Engineering Manager II - AI \u0026 Security",
+              "current": "jobs.uber.com"
+            }
+          ]
+        },
+        {
+          "id": "300441",
+          "title": "jobs.uber.com",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300441/",
+          "locations": [
+            "Amsterdam, Netherlands"
+          ],
+          "requestedLocation": "Netherlands",
+          "previousHash": "ed328484e99a300e7de96bbcf9bb9f95765cac8b2717a013b61fc0f34207c631",
+          "currentHash": "5251ff8627c0b00a289d3575cd752ed80f28576f1e4d2272929ad72e099a9d41",
+          "changedFields": [
+            "title"
+          ],
+          "fieldChanges": [
+            {
+              "field": "title",
+              "previous": "Engineering Manager II - Container Platform",
+              "current": "jobs.uber.com"
+            }
+          ]
+        },
+        {
+          "id": "301979",
+          "title": "jobs.uber.com",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/301979/",
+          "locations": [
+            "Amsterdam, Netherlands"
+          ],
+          "requestedLocation": "Netherlands",
+          "previousHash": "53fa59cb9df02765f562346a1898b82adcd8057bd03776a33c34ea038d79b1ea",
+          "currentHash": "5251ff8627c0b00a289d3575cd752ed80f28576f1e4d2272929ad72e099a9d41",
+          "changedFields": [
+            "title"
+          ],
+          "fieldChanges": [
+            {
+              "field": "title",
+              "previous": "Sales Engineer I",
+              "current": "jobs.uber.com"
+            }
+          ]
+        }
+      ],
+      "unchanged": [
+        {
+          "id": "300427",
+          "title": "Sr Software Engineer - Deployment Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300427/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        },
+        {
+          "id": "300425",
+          "title": "Staff Software Engineer - Configuration Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300425/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Denmark",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "300427",
+              "title": "Sr Software Engineer - Deployment Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300427/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            },
+            {
+              "id": "300425",
+              "title": "Staff Software Engineer - Configuration Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300425/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            }
+          ]
+        },
+        {
+          "location": "Netherlands",
+          "added": [],
+          "removed": [],
+          "changed": [
+            {
+              "id": "159029",
+              "title": "jobs.uber.com",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/159029/",
+              "locations": [
+                "Amsterdam, Netherlands"
+              ],
+              "requestedLocation": "Netherlands",
+              "previousHash": "f391376171c141b75d0750128423f7ac0059a09f1a1a3ed66bd29dec185b59a6",
+              "currentHash": "5251ff8627c0b00a289d3575cd752ed80f28576f1e4d2272929ad72e099a9d41",
+              "changedFields": [
+                "title"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "title",
+                  "previous": "Engineering Manager II - AI \u0026 Security",
+                  "current": "jobs.uber.com"
+                }
+              ]
+            },
+            {
+              "id": "300441",
+              "title": "jobs.uber.com",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300441/",
+              "locations": [
+                "Amsterdam, Netherlands"
+              ],
+              "requestedLocation": "Netherlands",
+              "previousHash": "ed328484e99a300e7de96bbcf9bb9f95765cac8b2717a013b61fc0f34207c631",
+              "currentHash": "5251ff8627c0b00a289d3575cd752ed80f28576f1e4d2272929ad72e099a9d41",
+              "changedFields": [
+                "title"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "title",
+                  "previous": "Engineering Manager II - Container Platform",
+                  "current": "jobs.uber.com"
+                }
+              ]
+            },
+            {
+              "id": "301979",
+              "title": "jobs.uber.com",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/301979/",
+              "locations": [
+                "Amsterdam, Netherlands"
+              ],
+              "requestedLocation": "Netherlands",
+              "previousHash": "53fa59cb9df02765f562346a1898b82adcd8057bd03776a33c34ea038d79b1ea",
+              "currentHash": "5251ff8627c0b00a289d3575cd752ed80f28576f1e4d2272929ad72e099a9d41",
+              "changedFields": [
+                "title"
+              ],
+              "fieldChanges": [
+                {
+                  "field": "title",
+                  "previous": "Sales Engineer I",
+                  "current": "jobs.uber.com"
+                }
+              ]
+            }
+          ],
+          "unchanged": []
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [
+            {
+              "id": "150819",
+              "title": "Partner Engineer",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/150819/",
+              "locations": [
+                "London, United Kingdom"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ],
+          "changed": [],
+          "unchanged": []
+        }
+      ]
     }
   ]
 }

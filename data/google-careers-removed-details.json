@@ -1,6 +1,243 @@
 {
   "jobs": [
     {
+      "id": "130897867047871174",
+      "title": "Applied AI Engineer",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/130897867047871174-applied-ai-engineer?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "London, UK",
+        "Madrid, Spain"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-09-01T21:02:06.6007570\u002B00:00",
+      "lastSeenAt": "2026-09-16T11:30:46.9204738\u002B00:00",
+      "removedAt": "2026-09-16T21:17:45.7934707\u002B00:00",
+      "removedInRunId": "2026-09-16T21-17-45Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckVg2FI2VeJBgiYcoMah_m0A9c1bxcIfo5yZGzwiUpbSCEjsA1Ny_i67Sfr-PEW_jjSvWoTSnZ3KjoBPIyhhGqm5lHMTfWOvyISwwgpGNBuoyz92lQWShyTXzd3wWYQ%3D%3D_V2\u0026loc=GB\u0026title=Applied\u002BAI\u002BEngineer",
+      "aboutTheJobRaw": "Google Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003ESpain: \u20AC90000 - \u20AC92000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\u003Cli\u003EBuild high-performance evaluation (Eval) pipelines and observability frameworks to ensure agentic systems meet requirements for accuracy, safety, and latency.\u003C/li\u003E\u003Cli\u003EOwn the delivery of the Customer User Journeys (CUJs), ensuring that conversational flows are not just functional, but optimized and production ready for [top customer/industry priorities].\u003C/li\u003E\u003Cli\u003EArchitect and optimize complex agentic workloads, focusing on reasoning loops, tool selection, and reducing latency while maintaining production-grade security and networking.\u003C/li\u003E\u003Cli\u003EImplement critical infrastructure including rate limiting, error managing, and regional failover strategies; develop monitor systems and alerting dashboards during \u0022Go-Live\u0022 windows to ensure stability as traffic scales.\u003C/li\u003E\u003Cli\u003ETravel up to 50% of the time.\u003C/li\u003E\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Engineering, Computer Science, a related field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E6 years of experience with software development using Python or similar coding languages.\u003C/li\u003E\n\u003Cli\u003EExperience taking production-grade AI-driven solutions from conception to launch and architecting AI systems on cloud platforms (e.g., GCP).\u003C/li\u003E\n\u003Cli\u003EExperience developing AI/GenAI solutions utilizing AI tools, or designing multi-agent workflows or RAG systems.\u003C/li\u003E\n\u003Cli\u003EExperience developing and deploying multilingual natural language processing models.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience connecting agents to enterprise knowledge bases and optimizing RAG chunking to prevent hallucinations.\u003C/li\u003E\n\u003Cli\u003EExperience in debugging Agent logic (ReAct loops, Chain of Thought) and optimizing tool selection.\u003C/li\u003E\n\u003Cli\u003EExperience with troubleshooting live, high-traffic systems during critical windows.\u003C/li\u003E\n\u003Cli\u003EAbility to trace conversation IDs across microservices to identify and resolve failures in real-time.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        },
+        {
+          "displayName": "Madrid, Spain",
+          "addresses": [
+            "Madrid, Spain"
+          ],
+          "city": "Madrid",
+          "regionCode": "MD",
+          "countryCode": "ES"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-09-01T12:09:24.3640000\u002B00:00",
+        "2026-09-02T09:36:03.9480000\u002B00:00",
+        "2026-09-02T09:36:04.0130000\u002B00:00"
+      ]
+    },
+    {
+      "id": "141122013073679046",
+      "title": "Product Manager, Android App Performance",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/141122013073679046-product-manager-android-app-performance?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-08-17T18:57:36.4167730\u002B00:00",
+      "lastSeenAt": "2026-09-16T11:30:46.9204738\u002B00:00",
+      "removedAt": "2026-09-16T21:17:45.7934707\u002B00:00",
+      "removedInRunId": "2026-09-16T21-17-45Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckV83dw-yDPsP8O-8FXANsCeazH9IYpeMe1AqifzziYpTEjsA1Ny_iyb_LrvLLIU2_TZlK_aY1g0gs-TI0cFUt4IduLTzgwP0yT8sk3n5YsOuX-i-sKUKe3kzR6Xt4A%3D%3D_V2\u0026loc=GB\u0026title=Product\u002BManager",
+      "aboutTheJobRaw": "\u003Cp\u003EAt Google, we put our users first. The world is always changing, so we need Product Managers who are continuously adapting and excited to work on products that affect millions of people every day. \u003Cbr\u003E\u003Cbr\u003EIn this role, you will work cross-functionally to guide products from conception to launch by connecting the technical and business worlds. You can break down complex problems into steps that drive product development.\u003Cbr\u003E\u003Cbr\u003EOne of the many reasons Google consistently brings innovative, world-changing products to market is because of the collaborative work we do in Product Management. Our team works closely with creative engineers, designers, marketers, etc. to help design and develop technologies that improve access to the world\u0027s information.  We\u0027re responsible for guiding products throughout the execution cycle, focusing specifically on analyzing, positioning, packaging, promoting, and tailoring our solutions to our users.\u003Cbr\u003E\u003C/p\u003E\n\u003Cp\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EOwn and drive product goal, developer journeys and product roadmap for App Performance, driving projects to evolve our performance story such as AI driven insights.\u003C/li\u003E\n\u003Cli\u003EBe a daily user of the tools you own to build Android apps, building empathy and providing feedback.\u003C/li\u003E\n\u003Cli\u003EPartner with other cross-functional teams working on performance and work collaboratively with engineering, marketing, legal, UX, DevRel.\u003C/li\u003E\n\u003Cli\u003EEvolve our performance story for new agentic development patterns.\u003C/li\u003E\n\u003Cli\u003EDevelop solutions to problems by collaborating as needed across regions, product areas, and functions.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience in product management or related technical role.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience taking technical products from conception to launch (e.g., ideation to execution, end-to-end, 0 to 1, etc.).\u003C/li\u003E\n\u003Cli\u003EExperience with Android or iOS mobile application development. \u003C/li\u003E\n\u003Cli\u003EExperience defining and delivering developer tools. \u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in a technology or business related field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a business function or role (e.g., marketing, business operations, consulting).\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a role preparing and delivering technical presentations to executive leadership.\u003C/li\u003E\n\u003Cli\u003E2 years of experience in software development or engineering.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience working cross-functionally with engineering, UX/UI, sales finance, and other stakeholders.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-08-17T13:13:10.8110000\u002B00:00",
+        "2026-08-17T13:13:10.9720000\u002B00:00"
+      ]
+    },
+    {
+      "id": "82563260728910534",
+      "title": "Senior Data Center Engineer, Telecom Lead, Systems Architecture, EMEA",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/82563260728910534-senior-data-center-engineer-telecom-lead-systems-architecture-emea?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "London, UK",
+        "Dublin, Ireland"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-08-17T18:57:36.4167730\u002B00:00",
+      "lastSeenAt": "2026-09-16T11:30:46.9204738\u002B00:00",
+      "removedAt": "2026-09-16T21:17:45.7934707\u002B00:00",
+      "removedInRunId": "2026-09-16T21-17-45Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckV__UIZfQkVZ7tv27GSk7YOD_EHazh2AwmBhaayP15CEEjsA1Ny_i9yEhZZ2Zrygkj9g4duCLCQr0HG2O8FIXIr3g3Qm0LWIdVpHeNdpv_4Qn1DjvB5M-lJ0gmsVlQ%3D%3D_V2\u0026loc=GB\u0026title=Senior\u002BData\u002BCenter\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EOur thirst for technology is a part of everything we do. The Data Center Engineering team takes the physical design of our data centers into the future. Our lab mirrors a research and development department -- cutting-edge strategies are born, tested and tested again. Along with a team of great minds, you take on complex topics like how we use power or how to run state-of-the-art, environmentally-friendly facilities. You\u0027re a visionary who optimizes for efficiencies and never stops seeking improvements -- even small changes that can make a huge impact. You generate ideas, communicate recommendations to senior-level executives and drive implementation alongside facilities technicians.\u003Cbr\u003E\u003Cbr\u003EWith your technical expertise, you ensure compliance with codes and standards, develop infrastructure improvements and serve as an expert in your specialty (e.g., cooling, electrical).\u003C/p\u003E\n\u003Cp\u003EThe passion for technology and understanding how things are put together is a part of everything we do. \u003C/p\u003E\u003Cp\u003EThe Data Center Design Integration team is a multi disciplinary team of architects and Telecom/ICT designers that work on next generation data center designs. \u003C/p\u003E\u003Cp\u003EYou enjoy working across multiple discipline trades (Architectural, Structural, MEP, Telecom/ICT Networking, Controls (BMS/PMS) and Security systems) and you have great time management skills to meet changing project priorities and deadlines across the world.\u003C/p\u003E\u003Cp\u003EAs a Telecom/ICT Lead you will be responsible for working with senior level engineers across all disciplines to develop integrated telecom communication designs at the product and top level assembly state of a data center.\u003C/p\u003E\u003Cp\u003EBehind everything our users see online is the architecture built by the Technical Infrastructure team to keep it running. From developing and maintaining our data centers to building the next generation of Google platforms, we make Google\u0027s product portfolio possible. We\u0027re proud to be our engineers\u0027 engineers and love voiding warranties by taking things apart so we can rebuild them. We keep our networks up and running, ensuring our users have the best and fastest experience possible.\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EIreland: \u20AC110000 - \u20AC112000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWork With Internal Telecom Engineers and network designers to rationalize requirements into products , conceptual one lines and conceptual rack/tray layouts to enable adequate telecom infrastructure is provided.\u003C/li\u003E\n\u003Cli\u003EWork with cross-functional disciplines across architecture, civil, mechanical, electrical, controls, security on product development and top level assembly integration of telecom infrastructure.\u003C/li\u003E\n\u003Cli\u003ELead internal and external ICT/telecom Product and data center design reviews across the following disciplines: Telecom, Security, Controls, Networking.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EReview construction level drawings produced by internal and external vendors that document ICT/Telecom scope for program reference.\u003C/li\u003E\n\u003Cli\u003EReview and enable best practices for converged network allocations across all mechanical, electrical and controls products.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Mechanical Engineering, Electrical Engineering, Information Technology, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience in data center infrastructure, telecommunications, or construction industries.\u003C/li\u003E\n\u003Cli\u003E5 years of engineering experience in the telecommunications industry.\u003C/li\u003E\n\u003Cli\u003EExperience in a data center or similar mission-critical environment.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience as key contributor on ICT/Telecom design on large-scale data centers (40mw\u002B).\u003C/li\u003E\n\u003Cli\u003ERCDD /CNIDP/CDCDP or equivalent Certified professional.\u003C/li\u003E\n\u003Cli\u003EExperience working with external telecom vendors on telecom products and ability to review their specifications for applicability in ICT/Telecom design.\u003C/li\u003E\n\u003Cli\u003EAutodesk Revit or other 3D modeling software experience developing telecom rack and tray layouts.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        },
+        {
+          "displayName": "Dublin, Ireland",
+          "addresses": [
+            "Dublin, Ireland"
+          ],
+          "city": "Dublin",
+          "regionCode": "D",
+          "countryCode": "IE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-08-17T08:39:22.0380000\u002B00:00",
+        "2026-08-17T08:39:22.1940000\u002B00:00"
+      ]
+    },
+    {
+      "id": "92922294497616582",
+      "title": "Senior Software Engineer, Gemini and Search",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/92922294497616582-senior-software-engineer-gemini-and-search?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-09-08T21:09:52.5535884\u002B00:00",
+      "lastSeenAt": "2026-09-16T11:30:46.9204738\u002B00:00",
+      "removedAt": "2026-09-16T21:17:45.7934707\u002B00:00",
+      "removedInRunId": "2026-09-16T21-17-45Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckYOAUfmSz5fyDYnZqL1oqm5BaZ-7C6yxoX87g0Her6uDEjsA1Ny_i7LmPEAsdNtXzkwkuZtiidNaMApm8tvEQWAOot2kY3zgCLILRSWfty_f9YHoNjn8zSndx2oQIw%3D%3D_V2\u0026loc=CH\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003Cbr\u003E\u003Cbr\u003EWith your technical expertise you will manage project priorities, deadlines, and deliverables. You will design, develop, test, deploy, maintain, and enhance software solutions.\u003C/p\u003E\nPeople shop on Google more than a billion times a day - and the Commerce team is responsible for building the experiences that serve these users. The mission for Google Commerce is to be an essential part of the shopping journey for consumers - from inspiration to to a simple and secure checkout experience - and the best place for retailers/merchants to connect with consumers. We support and partner with the commerce ecosystem, from large retailers to small local merchants, to give them the tools, technology and scale to thrive in today\u2019s digital world.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003ESolve challenging quality and infra problems.\u003C/li\u003E\n\u003Cli\u003EWork with Python, C\u002B\u002B and (sometimes) Kotlin languages.\u003C/li\u003E\n\u003Cli\u003EBuild end-to-end user experiences on different surfaces (AI Mode and Gemini App are priorities), with the focus on backend work (often collaborating with frontend teams).\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E\u003Cdiv\u003E\u003Cdiv\u003E\u003Cdiv\u003E5 years of experience in back-end development in C\u002B\u002B and Python.\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/li\u003E\n\u003Cli\u003EExperience with machine learning and AI algorithms.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExperience with quality analysis and evals.\u003C/li\u003E\n\u003Cli\u003EAbility to effectively collaborate across time zones.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-09-08T13:08:03.7020000\u002B00:00",
+        "2026-09-11T09:17:11.2370000\u002B00:00",
+        "2026-09-11T09:17:11.3530000\u002B00:00"
+      ]
+    },
+    {
+      "id": "72650658745852614",
+      "title": "Software Engineer, Search Ads in AI Experiences",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/72650658745852614-software-engineer-search-ads-in-ai-experiences?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-09-11T11:19:44.6874683\u002B00:00",
+      "lastSeenAt": "2026-09-16T11:30:46.9204738\u002B00:00",
+      "removedAt": "2026-09-16T21:17:45.7934707\u002B00:00",
+      "removedInRunId": "2026-09-16T21-17-45Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckV7-cNBBe-WKE3RoE3JphSs-ghUJsleMyAoHcs9jG868EjsA1Ny_i4eU3iYB-a5MKmoLTDzrwmnywQvnQofe4HujEmNw3NgVrX6Mhz-FogXprjcfxzTFDUKFhFpyYA%3D%3D_V2\u0026loc=CH\u0026title=Software\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cdiv\u003E\u003Cp\u003EThe Ads Targeting team is responsible for one of the highest-priority initiatives at Google: reinventing Search Ads for the AI era (AI Overview, AI Mode). Our mission is to ensure that as Search experience evolves with AI, we unlock new ways for users to discover and engage with businesses through seamless, next-generation commercial experiences. We are a team of risk-takers and builders, responsible for experimenting with rapid velocity to define the next decade of Google\u2019s revenue engine.\u003C/p\u003E\u003C/div\u003E\u003Cp\u003EGoogle Ads is helping power the open internet with the best technology that connects and creates value for people, publishers, advertisers, and Google. We\u2019re made up of multiple teams, building Google\u2019s Advertising products including search, display, shopping, travel and video advertising, as well as analytics. Our teams create trusted experiences between people and businesses with useful ads. We help grow businesses of all sizes from small businesses, to large brands, to YouTube creators, with effective advertiser tools that deliver measurable results. We also enable Google to engage with customers at scale. \u003Cb\u003E\u003C/b\u003E\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EOwn projects end-to-end from initial idea to design, analysis, and implementation.\u003C/li\u003E\n\u003Cli\u003EPerform model training, evaluation, and deployment to solve business-critical problems. This includes exploration of new model architectures, augmenting existing training data, finding better evaluation methods and feedback signals, and identifying headroom opportunities.\u003C/li\u003E\n\u003Cli\u003EUnderstand production systems, visualize, monitor, and optimize performance.\u003C/li\u003E\n\u003Cli\u003EStay up-to-date with the latest tools and research in the field, working with our collaborators in Google Research and Deep Mind.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in C\u002B\u002B and Python.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with one or more of the following: deep learning, reinforcement learning, generative AI, or specialization in another ML field.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with ML infrastructure (e.g., model deployment, model evaluation, data processing, debugging).\u003C/li\u003E\n\u003Cli\u003E3 years of experience testing, maintaining, or launching software products, and 1 year of experience with software design and architecture.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical field.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E1 year of experience in a technical leadership role.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003C/li\u003E\n\u003Cli\u003EExperience with machine learning, data science, statistics, natural language processing, computer vision, etc.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Brandschenkestrasse 110, 8002 Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "postalCode": "8002",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-09-10T21:09:43.1820000\u002B00:00",
+        "2026-09-10T21:09:45.3610000\u002B00:00"
+      ]
+    },
+    {
+      "id": "117380930657493702",
+      "title": "Software Engineer, Site Reliability Engineering, Workspace AI",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/117380930657493702-software-engineer-site-reliability-engineering-workspace-ai?location=Germany\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-09-08T21:09:52.5535884\u002B00:00",
+      "lastSeenAt": "2026-09-16T11:30:46.9204738\u002B00:00",
+      "removedAt": "2026-09-16T21:17:45.7934707\u002B00:00",
+      "removedInRunId": "2026-09-16T21-17-45Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckX1-St1qsXkAqBaOIrHKqWsa3SKy7xSXIFDG3Pt87-NQEjsA1Ny_iyZBJZiO10H861wOqTVhAYSGiWXqnlyaKFy2jalS-TLX6oqeGvAbqZJLS2kZFDWWeD_c6XURhQ%3D%3D_V2\u0026loc=DE\u0026title=Software\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003ESite Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that Google Cloud\u0027s services\u2014both our internally critical and our externally-visible systems\u2014have reliability, uptime appropriate to customer\u0027s needs and a fast rate of improvement. Additionally SRE\u2019s will keep an ever-watchful eye on our systems capacity and performance. \u003C/p\u003E\u003Cdiv\u003EMuch of our software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation. On the SRE team, you\u2019ll have the opportunity to manage the complex challenges of scale which are unique to Google Cloud, while using your expertise in coding, algorithms, complexity analysis and large-scale system design. SRE\u0027s culture of intellectual curiosity, problem solving and openness is key to its success. Our organization brings together people with a wide variety of backgrounds, experiences and perspectives. We encourage them to collaborate, think big and take risks in a blame-free environment. We promote self-direction to work on meaningful projects, while we also strive to create an environment that provides the support and mentorship needed to learn and grow.\u003C/div\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EGermany: \u20AC106000 - \u20AC108000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EWrite product or system development code.\u003C/li\u003E\n\u003Cli\u003EReview code developed by other engineers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).\n\u003C/li\u003E\n\u003Cli\u003EContribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.\n\u003C/li\u003E\n\u003Cli\u003ETriage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality. \n\u003C/li\u003E\n\u003Cli\u003EParticipate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.\n\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree in Computer Science, a related field, or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree in Computer Science or Engineering, or a related field.\u003C/li\u003E\n\u003Cli\u003E2 years of experience designing, analyzing, and troubleshooting large-scale distributed systems. \u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Munich, Germany",
+          "addresses": [
+            "Munich, Germany"
+          ],
+          "city": "Munich",
+          "regionCode": "BY",
+          "countryCode": "DE"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-09-08T15:06:16.2840000\u002B00:00",
+        "2026-09-08T15:06:16.4720000\u002B00:00"
+      ]
+    },
+    {
       "id": "82937045290230470",
       "title": "Research Engineer, Astra, DeepMind",
       "company": "DeepMind",

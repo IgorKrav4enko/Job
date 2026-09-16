@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-16T11:32:34.7986830\u002B00:00",
+  "generatedAt": "2026-09-16T21:19:27.8922249\u002B00:00",
   "source": "Uber Jobs",
   "status": "success",
-  "notes": "Normalized 6 active Uber jobs from latest raw snapshot.",
+  "notes": "Normalized 5 active Uber jobs from latest raw snapshot.",
   "searchTerm": "software engineer",
   "locations": [
     {
@@ -29,7 +29,7 @@
   "jobs": [
     {
       "id": "159029",
-      "title": "Engineering Manager II - AI \u0026 Security",
+      "title": "jobs.uber.com",
       "company": "Uber",
       "locations": [
         "Amsterdam, Netherlands"
@@ -37,11 +37,10 @@
       "url": "https://jobs.uber.com/en/jobs/159029/",
       "requestedLocation": "Netherlands",
       "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Amsterdam\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
-      "postedAtCandidate": "2026-09-09T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-14T21:51:13.0617457\u002B00:00",
-      "lastSeenAt": "2026-09-16T11:32:34.7986830\u002B00:00",
+      "lastSeenAt": "2026-09-16T21:19:27.8922249\u002B00:00",
       "isActive": true,
-      "contentHash": "f391376171c141b75d0750128423f7ac0059a09f1a1a3ed66bd29dec185b59a6",
+      "contentHash": "5251ff8627c0b00a289d3575cd752ed80f28576f1e4d2272929ad72e099a9d41",
       "matchedLocations": [
         "Netherlands"
       ],
@@ -49,7 +48,7 @@
     },
     {
       "id": "300441",
-      "title": "Engineering Manager II - Container Platform",
+      "title": "jobs.uber.com",
       "company": "Uber",
       "locations": [
         "Amsterdam, Netherlands"
@@ -57,39 +56,18 @@
       "url": "https://jobs.uber.com/en/jobs/300441/",
       "requestedLocation": "Netherlands",
       "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Amsterdam\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
-      "postedAtCandidate": "2026-08-03T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
-      "lastSeenAt": "2026-09-16T11:32:34.7986830\u002B00:00",
+      "lastSeenAt": "2026-09-16T21:19:27.8922249\u002B00:00",
       "isActive": true,
-      "contentHash": "ed328484e99a300e7de96bbcf9bb9f95765cac8b2717a013b61fc0f34207c631",
+      "contentHash": "5251ff8627c0b00a289d3575cd752ed80f28576f1e4d2272929ad72e099a9d41",
       "matchedLocations": [
         "Netherlands"
       ],
       "searchMatchCount": 1
     },
     {
-      "id": "150819",
-      "title": "Partner Engineer",
-      "company": "Uber",
-      "locations": [
-        "London, United Kingdom"
-      ],
-      "url": "https://jobs.uber.com/en/jobs/150819/",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=London\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
-      "postedAtCandidate": "2026-07-16T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
-      "lastSeenAt": "2026-09-16T11:32:34.7986830\u002B00:00",
-      "isActive": true,
-      "contentHash": "0fc4a6eb12f0c98d9fb815c28c9716e732f6a25b627fb23a1a3f3f729b42bb79",
-      "matchedLocations": [
-        "United Kingdom"
-      ],
-      "searchMatchCount": 1
-    },
-    {
       "id": "301979",
-      "title": "Sales Engineer I",
+      "title": "jobs.uber.com",
       "company": "Uber",
       "locations": [
         "Amsterdam, Netherlands"
@@ -97,11 +75,10 @@
       "url": "https://jobs.uber.com/en/jobs/301979/",
       "requestedLocation": "Netherlands",
       "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Amsterdam\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
-      "postedAtCandidate": "2026-09-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-15T21:22:15.1658294\u002B00:00",
-      "lastSeenAt": "2026-09-16T11:32:34.7986830\u002B00:00",
+      "lastSeenAt": "2026-09-16T21:19:27.8922249\u002B00:00",
       "isActive": true,
-      "contentHash": "53fa59cb9df02765f562346a1898b82adcd8057bd03776a33c34ea038d79b1ea",
+      "contentHash": "5251ff8627c0b00a289d3575cd752ed80f28576f1e4d2272929ad72e099a9d41",
       "matchedLocations": [
         "Netherlands"
       ],
@@ -119,7 +96,7 @@
       "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Midtjylland\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
       "postedAtCandidate": "2026-08-07T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
-      "lastSeenAt": "2026-09-16T11:32:34.7986830\u002B00:00",
+      "lastSeenAt": "2026-09-16T21:19:27.8922249\u002B00:00",
       "isActive": true,
       "contentHash": "86dc283e2e6f4669822a4c4b7fcbe59185f1316e6359299fd8f7d1040efbeb75",
       "matchedLocations": [
@@ -139,7 +116,7 @@
       "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=Midtjylland\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
       "postedAtCandidate": "2026-07-28T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
-      "lastSeenAt": "2026-09-16T11:32:34.7986830\u002B00:00",
+      "lastSeenAt": "2026-09-16T21:19:27.8922249\u002B00:00",
       "isActive": true,
       "contentHash": "4761a24d6c9ed771798df0a53b0a5e9f1e57d2bd7e4a0c55c1fa56579bce3265",
       "matchedLocations": [
@@ -204,6 +181,26 @@
       "contentHash": "62ff25891e09c209bcbdad3816be41ddc514af592514819ce43acacf1662f009",
       "matchedLocations": [
         "Denmark"
+      ],
+      "searchMatchCount": 1
+    },
+    {
+      "id": "150819",
+      "title": "Partner Engineer",
+      "company": "Uber",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "url": "https://jobs.uber.com/en/jobs/150819/",
+      "requestedLocation": "United Kingdom",
+      "searchUrl": "https://jobs.uber.com/en/jobs/?search=software%20engineer\u0026location=London\u0026radius=50\u0026team=Engineer\u0026page=1\u0026pagesize=10",
+      "postedAtCandidate": "2026-07-16T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-08-11T01:03:53.6375924\u002B00:00",
+      "lastSeenAt": "2026-09-16T11:32:34.7986830\u002B00:00",
+      "isActive": false,
+      "contentHash": "0fc4a6eb12f0c98d9fb815c28c9716e732f6a25b627fb23a1a3f3f729b42bb79",
+      "matchedLocations": [
+        "United Kingdom"
       ],
       "searchMatchCount": 1
     },
