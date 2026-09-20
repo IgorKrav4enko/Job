@@ -2869,6 +2869,41 @@
           "unchangedCount": 0
         }
       ]
+    },
+    {
+      "runId": "2026-09-20T20-50-50Z",
+      "generatedAt": "2026-09-20T20:50:50.4025316\u002B00:00",
+      "totalJobs": 2,
+      "addedCount": 0,
+      "removedCount": 0,
+      "changedCount": 0,
+      "unchangedCount": 2,
+      "perLocation": [
+        {
+          "location": "Denmark",
+          "totalJobs": 2,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 2
+        },
+        {
+          "location": "Netherlands",
+          "totalJobs": 0,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 0
+        },
+        {
+          "location": "United Kingdom",
+          "totalJobs": 0,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 0
+        }
+      ]
     }
   ]
 }
