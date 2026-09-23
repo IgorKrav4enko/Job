@@ -13453,6 +13453,142 @@
           ]
         }
       ]
+    },
+    {
+      "runId": "2026-09-23T11-36-14Z",
+      "added": [
+        {
+          "id": "154820",
+          "title": "Senior Software Engineer",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/154820/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        }
+      ],
+      "removed": [],
+      "changed": [],
+      "unchanged": [
+        {
+          "id": "150819",
+          "title": "Partner Engineer",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/150819/",
+          "locations": [
+            "London, United Kingdom"
+          ],
+          "requestedLocation": "United Kingdom"
+        },
+        {
+          "id": "301979",
+          "title": "Sales Engineer I",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/301979/",
+          "locations": [
+            "Amsterdam, Netherlands"
+          ],
+          "requestedLocation": "Netherlands"
+        },
+        {
+          "id": "300427",
+          "title": "Sr Software Engineer - Deployment Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300427/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        },
+        {
+          "id": "300425",
+          "title": "Staff Software Engineer - Configuration Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300425/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Denmark",
+          "added": [
+            {
+              "id": "154820",
+              "title": "Senior Software Engineer",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/154820/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            }
+          ],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "300427",
+              "title": "Sr Software Engineer - Deployment Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300427/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            },
+            {
+              "id": "300425",
+              "title": "Staff Software Engineer - Configuration Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300425/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            }
+          ]
+        },
+        {
+          "location": "Netherlands",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "301979",
+              "title": "Sales Engineer I",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/301979/",
+              "locations": [
+                "Amsterdam, Netherlands"
+              ],
+              "requestedLocation": "Netherlands"
+            }
+          ]
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "150819",
+              "title": "Partner Engineer",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/150819/",
+              "locations": [
+                "London, United Kingdom"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
