@@ -1,6 +1,38 @@
 {
   "jobs": [
     {
+      "id": "200629965-2114",
+      "title": "SoC Performance Modeling Internship - Platform Architecture",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200629965-2114/soc-performance-modeling-internship-platform-architecture?team=HRDWR",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-09-25T21:35:22.4211062\u002B00:00",
+      "removedAt": "2026-09-26T11:24:09.1908888\u002B00:00",
+      "removedInRunId": "2026-09-26T11-24-09Z",
+      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish. Multifaceted, amazing people and inspiring, innovative technologies are the norm here. The people who work here have reinvented entire industries with all Apple Hardware products. The same passion for innovation that goes into our products also applies to our practices strengthening our commitment to leave the world better than we found it. Join us to help...",
+      "postedAtCandidate": "2025-11-04T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200661327-1731",
+      "title": "SoC Physical Design Verification Engineer (M, F, D)",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200661327-1731/soc-physical-design-verification-engineer-m-f-d?team=HRDWR",
+      "locations": [
+        "Munich, Germany"
+      ],
+      "requestedLocation": "Germany",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-09-25T21:35:22.4211062\u002B00:00",
+      "removedAt": "2026-09-26T11:24:09.1908888\u002B00:00",
+      "removedInRunId": "2026-09-26T11-24-09Z",
+      "aboutTheJobRaw": "Do you love creating elegant solutions to highly complex challenges? Do you intrinsically see the importance in every detail? As part of our Silicon Technologies group, you\u2019ll help design and manufacture our next-generation, high-performance, power-efficient processor, system-on-chip (SoC). You\u2019ll ensure Apple products and services can seamlessly handle the tasks that make them beloved by millions. Joining this group means you\u2019ll be crafting and building the technology that fuels Apple\u2019s devices. Together, we enable our customers to do all the things they love with their devices. In this hi...",
+      "postedAtCandidate": "2026-05-04T00:00:00.0000000\u002B00:00"
+    },
+    {
       "id": "200677257-2114",
       "title": "Accessibility Engineer (Web Accessibility SME)",
       "company": "Apple",
@@ -15,70 +47,6 @@
       "removedInRunId": "2026-09-25T21-35-22Z",
       "aboutTheJobRaw": "Imagine what you could do here. At Apple, great ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion and dedication to your job and there\u2019s no telling what you could accomplish. Apple has an exciting opportunity in our IS\u0026T team for an experienced Web Accessibility Engineer ready to deepen their craft and broaden their impact. You will bring solid hands-on experience building and evaluating accessible web experiences and testing with assistive technologies. You consider accessibility a basic human right and you want to work some...",
       "postedAtCandidate": "2026-09-01T00:00:00.0000000\u002B00:00"
-    },
-    {
-      "id": "200648453-1731",
-      "title": "Build and Developer Productivity Engineer (m/f/d)",
-      "company": "Apple",
-      "url": "https://jobs.apple.com/en-us/details/200648453-1731/build-and-developer-productivity-engineer-m-f-d?team=HRDWR",
-      "locations": [
-        "Munich, Germany"
-      ],
-      "requestedLocation": "Germany",
-      "firstSeenAt": "2026-07-08T08:43:42.8443670\u002B00:00",
-      "lastSeenAt": "2026-09-25T11:50:10.8092053\u002B00:00",
-      "removedAt": "2026-09-25T21:35:22.4211062\u002B00:00",
-      "removedInRunId": "2026-09-25T21-35-22Z",
-      "aboutTheJobRaw": "We\u2019re looking for a Build Engineer who can operate at the intersection of Bazel internals, remote execution infrastructure, and Apple technologies. This is a hands-on engineering role; heavy on Bazel rule design, hermeticity, toolchain modeling, and Apple platform integration. If you\u2019ve spent time taming Xcode, aligning Apple SDKs with Bazel toolchains, or wrangling with xcodebuild, codesign and ibtool, you\u2019ll feel right at home. Beyond the technical responsibilities, what we are looking for is someone who gets a deep sense of satisfaction from making the everyday lived experience of devel...",
-      "postedAtCandidate": "2026-02-24T00:00:00.0000000\u002B00:00"
-    },
-    {
-      "id": "200660431-1731",
-      "title": "CAD Logic Equivalence Checking (LEC) Engineer - m/f/d",
-      "company": "Apple",
-      "url": "https://jobs.apple.com/en-us/details/200660431-1731/cad-logic-equivalence-checking-lec-engineer-m-f-d?team=HRDWR",
-      "locations": [
-        "Munich, Germany"
-      ],
-      "requestedLocation": "Germany",
-      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
-      "lastSeenAt": "2026-09-25T11:50:10.8092053\u002B00:00",
-      "removedAt": "2026-09-25T21:35:22.4211062\u002B00:00",
-      "removedInRunId": "2026-09-25T21-35-22Z",
-      "aboutTheJobRaw": "Imagine what you could do here. At Apple, new ideas have a way of becoming extraordinary products, services, and customer experiences very quickly. Bring passion and dedication to your job and there\u0027s no telling what you could accomplish. Multifaceted, amazing people and inspiring, innovative technologies are the norm here. The people who work here have reinvented entire industries with all Apple Hardware products. The same passion for innovation that goes into our products also applies to our practices strengthening our commitment to leave the world better than we found it. Join us to help...",
-      "postedAtCandidate": "2026-04-28T00:00:00.0000000\u002B00:00"
-    },
-    {
-      "id": "200678117-1731",
-      "title": "Cellular RF Transmitter Systems Engineer (m/f/d)",
-      "company": "Apple",
-      "url": "https://jobs.apple.com/en-us/details/200678117-1731/cellular-rf-transmitter-systems-engineer-m-f-d?team=HRDWR",
-      "locations": [
-        "Munich, Germany"
-      ],
-      "requestedLocation": "Germany",
-      "firstSeenAt": "2026-08-17T18:58:08.9676099\u002B00:00",
-      "lastSeenAt": "2026-09-25T11:50:10.8092053\u002B00:00",
-      "removedAt": "2026-09-25T21:35:22.4211062\u002B00:00",
-      "removedInRunId": "2026-09-25T21-35-22Z",
-      "aboutTheJobRaw": "At Apple, we work every single day to craft products that enrich people\u2019s lives. The people here at Apple don\u2019t just create products \u2014 they create the kind of wonder that revolutionizes entire industries. We invite you to join our dynamic group, for the unique and rewarding opportunity to contribute to upcoming products that will delight and inspire millions of Apple\u2019s customers every day. Are you interested in doing work that challenges you, expands your thinking, provides innovative solutions for future problems while driving your growth as recognized technical leader in the cellular ind...",
-      "postedAtCandidate": "2026-08-17T00:00:00.0000000\u002B00:00"
-    },
-    {
-      "id": "200674060-2114",
-      "title": "Data Platform Infra Site Reliability Engineer",
-      "company": "Apple",
-      "url": "https://jobs.apple.com/en-us/details/200674060-2114/data-platform-infra-site-reliability-engineer?team=SFTWR",
-      "locations": [
-        "London, United Kingdom"
-      ],
-      "requestedLocation": "United Kingdom",
-      "firstSeenAt": "2026-07-29T19:42:30.6633744\u002B00:00",
-      "lastSeenAt": "2026-09-25T11:50:10.8092053\u002B00:00",
-      "removedAt": "2026-09-25T21:35:22.4211062\u002B00:00",
-      "removedInRunId": "2026-09-25T21-35-22Z",
-      "aboutTheJobRaw": "At Apple, we believe that innovation flourishes in an environment where ideas are challenged, collaboration is encouraged, and technology is pushed to its limits. This environment is only possible when diverse minds come together, bringing unique perspectives and experiences. Our people and their ideas inspire innovation in everything we do. Imagine what you could accomplish here! Join Apple and help us make the world a better place. As an SRE on our team, you\u0027ll own the reliability, performance, and scale of the distributed storage and data platform systems that power Apple\u0027s services. Yo...",
-      "postedAtCandidate": "2026-07-29T00:00:00.0000000\u002B00:00"
     },
     {
       "id": "200656715-1731",
@@ -1231,6 +1199,22 @@
       "removedInRunId": "2026-08-27T17-38-47Z",
       "aboutTheJobRaw": "Imagine what you could do here! At Apple, great ideas have a way of becoming phenomenal products, services, and customer experiences very quickly. The Wallet, Payments \u0026 Commerce (WPC) team is building the world\u0027s best software for paying and interacting with the world, from Apple Pay, transit, and event tickets to digital keys and identity. We are looking for an exceptional engineering leader to build and grow a team of engineers who architect systems at Apple\u0027s scale. This is a role for a leader who is equally credible in an architecture review and in a career conversation, someone who c...",
       "postedAtCandidate": "2026-08-13T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200672534-1418",
+      "title": "Business Process Re-engineer",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200672534-1418/business-process-re-engineer?team=OPMFG",
+      "locations": [
+        "Cork, Ireland"
+      ],
+      "requestedLocation": "Ireland",
+      "firstSeenAt": "2026-08-10T22:44:55.7170233\u002B00:00",
+      "lastSeenAt": "2026-09-25T21:35:22.4211062\u002B00:00",
+      "removedAt": "2026-08-26T20:03:32.5511943\u002B00:00",
+      "removedInRunId": "2026-08-26T20-03-32Z",
+      "aboutTheJobRaw": "Apple is a place where extraordinary people gather to do their best work. Together we build products and experiences people once couldn\u0027t have envisioned and now can\u0027t imagine living without. Are you excited by the idea of making a real impact? Are you prepared to dream big? Then a career with Apple might be your dream job. We would love to hear from you!",
+      "postedAtCandidate": "2026-07-30T00:00:00.0000000\u002B00:00"
     },
     {
       "id": "200664884-1418",
