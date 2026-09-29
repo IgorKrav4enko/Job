@@ -14837,6 +14837,102 @@
           ]
         }
       ]
+    },
+    {
+      "runId": "2026-09-29T12-53-00Z",
+      "added": [
+        {
+          "id": "154346",
+          "title": "Partner Engineer",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/154346/",
+          "locations": [
+            "London, United Kingdom"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "removed": [
+        {
+          "id": "150819",
+          "title": "Partner Engineer",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/150819/",
+          "locations": [
+            "London, United Kingdom"
+          ],
+          "requestedLocation": "United Kingdom"
+        }
+      ],
+      "changed": [],
+      "unchanged": [
+        {
+          "id": "300427",
+          "title": "Sr Software Engineer - Deployment Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300427/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Denmark",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "300427",
+              "title": "Sr Software Engineer - Deployment Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300427/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            }
+          ]
+        },
+        {
+          "location": "Netherlands",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "United Kingdom",
+          "added": [
+            {
+              "id": "154346",
+              "title": "Partner Engineer",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/154346/",
+              "locations": [
+                "London, United Kingdom"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ],
+          "removed": [
+            {
+              "id": "150819",
+              "title": "Partner Engineer",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/150819/",
+              "locations": [
+                "London, United Kingdom"
+              ],
+              "requestedLocation": "United Kingdom"
+            }
+          ],
+          "changed": [],
+          "unchanged": []
+        }
+      ]
     }
   ]
 }
