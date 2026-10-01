@@ -19988,6 +19988,97 @@
           "unchangedCount": 111
         }
       ]
+    },
+    {
+      "runId": "2026-10-01T22-42-21Z",
+      "generatedAt": "2026-10-01T22:42:21.8988505\u002B00:00",
+      "totalJobs": 551,
+      "addedCount": 7,
+      "removedCount": 4,
+      "changedCount": 1,
+      "unchangedCount": 543,
+      "perLocation": [
+        {
+          "location": "Canada",
+          "totalJobs": 227,
+          "addedCount": 4,
+          "removedCount": 3,
+          "changedCount": 1,
+          "unchangedCount": 222
+        },
+        {
+          "location": "Czechia",
+          "totalJobs": 1,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 1
+        },
+        {
+          "location": "France",
+          "totalJobs": 18,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 18
+        },
+        {
+          "location": "Germany",
+          "totalJobs": 54,
+          "addedCount": 1,
+          "removedCount": 1,
+          "changedCount": 0,
+          "unchangedCount": 53
+        },
+        {
+          "location": "Ireland",
+          "totalJobs": 83,
+          "addedCount": 1,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 82
+        },
+        {
+          "location": "Netherlands",
+          "totalJobs": 3,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 3
+        },
+        {
+          "location": "Poland",
+          "totalJobs": 17,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 17
+        },
+        {
+          "location": "Spain",
+          "totalJobs": 28,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 28
+        },
+        {
+          "location": "Switzerland",
+          "totalJobs": 7,
+          "addedCount": 1,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 6
+        },
+        {
+          "location": "United Kingdom",
+          "totalJobs": 113,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 113
+        }
+      ]
     }
   ]
 }
