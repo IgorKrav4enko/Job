@@ -1,6 +1,42 @@
 {
   "jobs": [
     {
+      "id": "120402478804935366",
+      "title": "Staff Software Engineer, Google Health Coach",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/120402478804935366-staff-software-engineer-google-health-coach?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-09-01T11:38:20.2173658\u002B00:00",
+      "lastSeenAt": "2026-10-01T22:41:15.5875612\u002B00:00",
+      "removedAt": "2026-10-02T12:32:33.6849796\u002B00:00",
+      "removedInRunId": "2026-10-02T12-32-33Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckZ7vb8HtZipnAZbDWgElydmZMWu7QOLu-MvUNzj6GvwDEjsA1Ny_i17h7Cgm7kMIfgE-DV0QMrY9uNHynyR6Xe5E2lfqbXhwy_R19aF1qvxPUi10RoU6PW8zowZigg%3D%3D_V2\u0026loc=GB\u0026title=Staff\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cdiv\u003E\u003Cp\u003EIn this role, you will deliver the foundational intelligence and full-stack platforms required to power a proactive, always-available, and cohesive Health and Wellness Coach, enabling client and vertical teams to deploy features with high velocity. Our next-generation systems utilize AI techniques, spec-driven development, and dynamic UI generation to create deeply personalized, agent-driven experiences.\u003C/p\u003E\u003C/div\u003E\u003Cp\u003EThe Health Platforms and Devices team builds innovative products and services that help our users live longer, healthier lives. We bring together the best of Google technologies and AI, health behavior science, and user-centered design to help users organize the health and wellness data, get insight from it, and take action toward their health goals. We do this with a suite of apps, services, and health wearables. We aim to make consumer health more personal, proactive, and actionable.\u003Cbr\u003E\u003Cb\u003E\u003C/b\u003E\u003C/p\u003E",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EProvide technical leadership on high-impact projects.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EInfluence and coach a distributed team of engineers.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EFacilitate alignment and clarity across teams on goals, outcomes, and timelines.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EManage project priorities, deadlines, and deliverables.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EDesign, develop, test, deploy, maintain, and enhance large-scale software solutions.\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E\u003Cdiv\u003E8 years of experience programming in Java, Python, Kotlin or C\u002B\u002B.\u003C/div\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience testing, and launching software products.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E3 years of experience with software design and architecture.\u003C/li\u003E\n\u003Cli\u003EExperience integrating generative AI tools or LLM interfaces into workflows.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in Engineering, Computer Science, or a related technical field.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E8 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a technical leadership role leading project teams and setting technical direction.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003EExperience processing time-series, wearable/sensor, or biometric data.\u003C/li\u003E\n\u003Cli\u003EExperience with advanced GenAI paradigms, including flat agent orchestration, single-agent reasoning loops, tool-use/function calling, and agentic data grounding.\u003C/li\u003E\n\u003Cli\u003EProven experience with evaluation frameworks and multi-agent simulation to improve and adapt non-deterministic systems.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-09-01T11:06:47.6720000\u002B00:00",
+        "2026-09-01T11:06:47.7340000\u002B00:00"
+      ]
+    },
+    {
       "id": "126395641810035398",
       "title": "Product Manager, Search Ads in AI Experiences",
       "company": "Google",
@@ -6697,6 +6733,42 @@
       "rawTimestampPairs": [
         "2026-08-24T11:39:59.6480000\u002B00:00",
         "2026-08-24T11:39:59.7500000\u002B00:00"
+      ]
+    },
+    {
+      "id": "131759334408233670",
+      "title": "Technical Lead, Android Growth Systems and App Foundations",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/131759334408233670-technical-lead-android-growth-systems-and-app-foundations?location=United\u002BKingdom\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "London, UK"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-09-01T11:38:20.2173658\u002B00:00",
+      "lastSeenAt": "2026-10-01T22:41:15.5875612\u002B00:00",
+      "removedAt": "2026-09-09T11:21:32.9865004\u002B00:00",
+      "removedInRunId": "2026-09-09T11-21-32Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckUaueLlwu08Cmf6sxwxNPGkxWgkbOaQkEBlq58WEezyrEjsA1Ny_i8TxAnyFhc-EKBOXDU7DdMw0n9vnkoP56K6cG768K9DcjSmtGeaTx_3b58OcB3lE06gSv60iug%3D%3D_V2\u0026loc=GB\u0026title=Technical\u002BLead",
+      "aboutTheJobRaw": "\u003Cp\u003EGoogle\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003C/p\u003E\n\u003Cp\u003EAs a Technical Lead, you will drive the technical strategy to make Google Search an omnipresent, instantly callable, and proactively helpful companion across the Android ecosystem. You will lead the evolution of our OS-level entry points (e.g., the Android Quick Search Box) transitioning them from isolated utilities into a single, cohesive access system.\u003C/p\u003E\u003Cp\u003EYou will ensure our features feel like flawless, visually rich extensions of the Android launcher itself, rather than a layered third-party app. You will also pioneer proactive assistance, leveraging native surfaces like lockscreen and widgets to anticipate user needs and deliver high-value information before a query is even typed.\u003C/p\u003E\u003Cp\u003EPartnering closely with Product, UX, and cross-functional teams, your technical leadership will weave Search directly into the fabric of Android.\u003C/p\u003EIn Google Search, we\u0027re reimagining what it means to search for information \u2013 any way and anywhere. To do that, we need to solve complex engineering challenges and expand our infrastructure, while maintaining a universally accessible and useful experience that people around the world rely on. In joining the Search team, you\u0027ll have an opportunity to make an impact on billions of people globally.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EProvide technical leadership on high-impact projects.\u003C/li\u003E\n\u003Cli\u003EFacilitate alignment and clarity across teams on goals, outcomes, and timelines.\u003C/li\u003E\n\u003Cli\u003EDesign, develop, test, deploy, maintain, and enhance large-scale software solutions.\u003C/li\u003E\n\u003Cli\u003ELeverage AI development tools to optimize daily workflows\u003C/li\u003E\n\u003Cli\u003EManage a technical team of 6 engineers while spending 50% of time on IC contributions.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E8 years of experience in software development.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience testing, and launching software products.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E5 years of experience with Android application development.\u003C/li\u003E\n\u003Cli\u003E3 years of experience with software design and architecture.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u2019s degree or PhD in Engineering, Computer Science, or a related technical field.\u003C/li\u003E\n\u003Cli\u003E8 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003E3 years of experience in a technical leadership role leading project teams and setting technical direction.\u003C/li\u003E\n\u003Cli\u003E3 years of experience working in a complex, matrixed organization involving cross-functional, or cross-business projects.\u003C/li\u003E\n\u003Cli\u003EExperience with modern Android development: Kotlin, Jetpack Compose, Material Design.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "London, UK",
+          "addresses": [
+            "1 St Giles High St, London WC2H 8JR, UK"
+          ],
+          "city": "London",
+          "postalCode": "WC2H 8JR",
+          "regionCode": "England",
+          "countryCode": "GB"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-09-01T10:37:41.1590000\u002B00:00",
+        "2026-09-01T10:37:41.1960000\u002B00:00"
       ]
     },
     {
@@ -22201,6 +22273,42 @@
       "rawTimestampPairs": [
         "2026-06-23T14:43:08.1420000\u002B00:00",
         "2026-06-23T14:43:08.4380000\u002B00:00"
+      ]
+    },
+    {
+      "id": "105831903721857734",
+      "title": "Senior Software Engineer, AI Agent Ecosystem, ADK",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/105831903721857734-senior-software-engineer-ai-agent-ecosystem-adk?location=Poland\u0026q=Software\u002BEngineer\u0026page=2",
+      "locations": [
+        "Warsaw, Poland"
+      ],
+      "requestedLocation": "Poland",
+      "firstSeenAt": "2026-07-13T19:47:41.4562737\u002B00:00",
+      "lastSeenAt": "2026-10-01T22:41:15.5875612\u002B00:00",
+      "removedAt": "2026-07-23T08:43:55.0678450\u002B00:00",
+      "removedInRunId": "2026-07-23T08-43-55Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckUdgtaPe9pMPlj1DpR5yyW5pGdjxDNzdQ0K1USzrQaHWEjsA1Ny_i7tWlRtoEXObPzPEVSljN6W2fPdRCNf3qiWzPqExDZrwcM1HccPaOFHkBDEkRebed36jNHbfCQ%3D%3D_V2\u0026loc=PL\u0026title=Senior\u002BSoftware\u002BEngineer",
+      "aboutTheJobRaw": "Google Cloud\u2019s mission is to make every business successful through AI by combining cutting-edge technology, infrastructure, and talent. AI/ML software engineers in Cloud bridge the gap between pioneering models and a massive product vehicle reaching billions. Our talent density and AI-powered tools drive rapid development, rooted in a culture of empowerment and a bias to action. In this role, you aren\u2019t just building technology; you\u2019re shaping the frontier of enterprise and driving the evolution of advanced models. \n\u003Cp\u003EWe are dedicated to simplifying the creation, deployment, and management of production-grade AI agents. By building and supporting a comprehensive, open-source, multi-language ecosystem\u2014highlighted by our agent development kit (ADK) and related agentic protocols we serve developers both inside and outside of Google. Our work is pivotal to forging a unified and powerful GenAI landscape for the entire developer community.\u003C/p\u003E\u003Cdiv\u003EAs a Senior Software Engineer, you will drive the technical goals, strategy, and architecture for the open-source components and tooling of our AI Agent ecosystem, including the agent development kit (ADK). You will lead the design and development of foundational libraries, SDKs, and developer tools, managing ambiguous issues to enhance the end-to-end agent development lifecycle.\u003C/div\u003E\u003Cdiv\u003E\u003Cbr\u003E\u003C/div\u003E\u003Cdiv\u003EThis role requires technical leadership to influence and collaborate with internal, external, and cloud platform teams, shaping the roadmap and ensuring seamless integration and deployment of AI agents.\u003C/div\u003E\u003Cdiv\u003E\u003Cbr\u003E\u003C/div\u003E\u003Cdiv\u003EYou will be a key technical voice, mentoring engineers, setting standards for engineering excellence, and driving long-term investments to scale the platform and empower a vibrant developer community.\u003C/div\u003E\u003Cp\u003EThe ML, Systems, and Cloud AI (MSCA) organization at Google designs, implements, and manages the hardware, software, machine learning, and systems infrastructure for all Google services (Search, YouTube, etc.) and Google Cloud. Our end users are Googlers, Cloud customers and the billions of people who use Google services around the world.\u003C/p\u003E\u003Cp\u003EWe prioritize security, efficiency, and reliability across everything we do - from developing our latest TPUs to running a global network, while driving towards shaping the future of hyperscale computing. Our global impact spans software and hardware, including Google Cloud\u2019s Vertex AI, the leading AI platform for bringing Gemini models to enterprise customers.\u003C/p\u003EIndividual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EPoland: z\u0142364000 - z\u0142374000 (PLN) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDefine and drive the architectural goals, technical strategy, and roadmap for foundational, scalable, and extensible open-source libraries and SDKs within the agent development kit (ADK) and related agentic protocols.\u003C/li\u003E\n\u003Cli\u003EArchitect and lead the development of mission-critical tooling and infrastructure that improves the end-to-end AI agent development lifecycle (testing, debugging, deployment, observability), focusing on developer velocity, reliability, and scale.\u003C/li\u003E\n\u003Cli\u003EProvide technical leadership across the agent platform domain by managing the most ambiguous technical issues, mentoring junior engineers, advocating engineering excellence, and influencing technical direction through design reviews and setting team-wide standards.\u003C/li\u003E\n\u003Cli\u003EIdentify and initiate long-term investments to reduce architectural complexity, improve system health, and unlock new capabilities for the AI agent ecosystem.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with software development in one or more programming languages (e.g., Kotlin, C\u002B\u002B, Java).\u003C/li\u003E\n\u003Cli\u003E3 years of experience testing, maintaining, or launching software products, and 1 year of experience with software design and architecture.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical field.\u003C/li\u003E\n\u003Cli\u003E5 years of experience with data structures and algorithms.\u003C/li\u003E\n\u003Cli\u003EExperience developing accessible technologies.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Warsaw, Poland",
+          "addresses": [
+            "Warsaw, Poland"
+          ],
+          "city": "Warsaw",
+          "regionCode": "Masovian Voivodeship",
+          "countryCode": "PL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-07-13T10:43:16.7210000\u002B00:00",
+        "2026-08-20T11:09:07.9060000\u002B00:00",
+        "2026-08-20T11:09:08.2690000\u002B00:00"
       ]
     },
     {
