@@ -18365,6 +18365,89 @@
           "unchangedCount": 111
         }
       ]
+    },
+    {
+      "runId": "2026-10-06T22-40-57Z",
+      "generatedAt": "2026-10-06T22:40:57.9760295\u002B00:00",
+      "totalJobs": 266,
+      "addedCount": 2,
+      "removedCount": 7,
+      "changedCount": 2,
+      "unchangedCount": 262,
+      "perLocation": [
+        {
+          "location": "Canada",
+          "totalJobs": 16,
+          "addedCount": 0,
+          "removedCount": 1,
+          "changedCount": 0,
+          "unchangedCount": 16
+        },
+        {
+          "location": "Czechia",
+          "totalJobs": 1,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 1
+        },
+        {
+          "location": "France",
+          "totalJobs": 23,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 23
+        },
+        {
+          "location": "Germany",
+          "totalJobs": 71,
+          "addedCount": 1,
+          "removedCount": 0,
+          "changedCount": 2,
+          "unchangedCount": 68
+        },
+        {
+          "location": "Ireland",
+          "totalJobs": 28,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 28
+        },
+        {
+          "location": "Netherlands",
+          "totalJobs": 0,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 0
+        },
+        {
+          "location": "Poland",
+          "totalJobs": 2,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 2
+        },
+        {
+          "location": "Switzerland",
+          "totalJobs": 17,
+          "addedCount": 0,
+          "removedCount": 0,
+          "changedCount": 0,
+          "unchangedCount": 17
+        },
+        {
+          "location": "United Kingdom",
+          "totalJobs": 108,
+          "addedCount": 1,
+          "removedCount": 6,
+          "changedCount": 0,
+          "unchangedCount": 107
+        }
+      ]
     }
   ]
 }
