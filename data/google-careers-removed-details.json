@@ -1,6 +1,39 @@
 {
   "jobs": [
     {
+      "id": "88040023709885126",
+      "title": "Staff Security Engineer",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/88040023709885126-staff-security-engineer?location=Netherlands\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Netherlands"
+      ],
+      "requestedLocation": "Netherlands",
+      "firstSeenAt": "2026-09-30T12:33:15.1109133\u002B00:00",
+      "lastSeenAt": "2026-10-06T22:40:29.3184044\u002B00:00",
+      "removedAt": "2026-10-07T13:21:16.0813409\u002B00:00",
+      "removedInRunId": "2026-10-07T13-21-16Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckWDx3dGMh_CLhhAvzUPBoSP2uoAxWAfJI6nILQcKFGk6EjsA9yzvgoUupELakVzpAo4BiMTms2mJsvEQwI6BB86nhCGDAZt9gRg4PnZsQCyPevJVQcL1_J5UGe2g3w%3D%3D_V2\u0026loc=US\u0026title=Staff\u002BSecurity\u002BEngineer",
+      "aboutTheJobRaw": "Security is at the core of Google\u0027s design and development process: it is built into the DNA of our products. The same is true of our offices. You\u0027re an expert who shares our seriousness about security and our commitment to confidentiality. You\u0027ll collaborate with our Facilities Management team to create innovative security strategies, investigate breaches and create risk assessment plans for the future. You believe that providing effective security doesn\u0027t come at the expense of customer service - you will be our bodyguard (and our long lost pal).Google Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003ENetherlands: \u20AC160000 - \u20AC164000 (EUR) \u002B 20% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003ETake end-to-end ownership of the GTI Agentic data layer, defining the technical strategy, architecture, and governance for curating and structuring multi-modal security datasets across Google Threat Intelligence.\u003C/li\u003E\n\u003Cli\u003EDesign, architect, and build novel investigative tools, link-analysis frameworks, and data-mining pipelines to discover previously unseen relationships, campaign clusters, and threat actor patterns across massive internal and external security datasets.\u003C/li\u003E\n\u003Cli\u003EOwn the quality, fidelity, taxonomy, and ground truth of our AI and autonomous agent evaluation frameworks (evals), ensuring benchmarks accurately reflect real-world malware reversing, threat hunting, deobfuscation, and CTI workflows.\u003C/li\u003E\n\u003Cli\u003EAct as the primary technical stakeholder and liaison for partner organizations, aligning roadmaps, co-designing agentic skills, and integrating front-line threat intelligence and reverse engineering workflows into the agentic platform.\u003C/li\u003E\n\u003Cli\u003ESolve complex, zero-to-one data engineering bottlenecks, such as distinguishing true agentic reasoning failures from dataset artifacts.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u0027s degree in Computer Science, Data Science, Information Security, a related technical field, or equivalent practical experience.\u003C/li\u003E\n\u003Cli\u003E8 years of experience in security engineering, CTI, or security data analysis, and software development in Python, Go, or C\u002B\u002B.\u003C/li\u003E\n\u003Cli\u003EExperience in CTI, threat actor tracking, malware analysis, or threat hunting, and modeling and analyzing security datasets.\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EExtensive experience working directly with or embedded alongside front-line threat intelligence and reverse engineering teams to operationalize adversary tradecraft into structured datasets and automated tooling.\u003C/li\u003E\n\u003Cli\u003EExperience building and scaling ground-truth evaluation datasets, trajectory grading pipelines, and agentic benchmarking frameworks.\u003C/li\u003E\n\u003Cli\u003EExperience analytically owning large-scale data layers, data quality pipelines, or evaluation/benchmarking frameworks for AI/ML systems, LLMs, or autonomous agents.\u003C/li\u003E\n\u003Cli\u003EDeep expertise in graph analytics, knowledge graphs, clustering, embeddings, and petabyte-scale data processing engines (e.g., BigQuery, Cloud Spanner, distributed data pipelines) applied to threat intelligence corpora.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Netherlands",
+          "addresses": [
+            "Netherlands"
+          ],
+          "countryCode": "NL"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-09-30T11:08:51.2160000\u002B00:00",
+        "2026-09-30T11:08:51.5020000\u002B00:00"
+      ]
+    },
+    {
       "id": "95973171902980806",
       "title": "Staff Software Engineer, Agent Development Lifecycle",
       "company": "Google",
