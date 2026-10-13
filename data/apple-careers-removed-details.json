@@ -1,6 +1,22 @@
 {
   "jobs": [
     {
+      "id": "200670286-2114",
+      "title": "Software Engineer - Private Cloud Compute, On-Device Client Frameworks",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200670286-2114/software-engineer-private-cloud-compute-on-device-client-frameworks?team=SFTWR",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-07-08T08:43:42.8443670\u002B00:00",
+      "lastSeenAt": "2026-10-13T00:39:54.2998767\u002B00:00",
+      "removedAt": "2026-10-13T14:10:41.0233533\u002B00:00",
+      "removedInRunId": "2026-10-13T14-10-41Z",
+      "aboutTheJobRaw": "The Private Cloud Compute (PCC) team builds Apple\u0027s privacy-preserving cloud inference platform \u2014 the system that lets generative-AI features on iPhone, iPad, Mac, and Vision Pro reach into the cloud without compromising user privacy. We are looking for a Software Engineer to join the team that builds the on-device client side of that pipeline: the system frameworks and sandboxed services that every Apple Intelligence and Foundation Models request flows through before it ever leaves the device. This is system-level Apple platform work. You will design and ship the Swift frameworks that tur...",
+      "postedAtCandidate": "2026-06-29T00:00:00.0000000\u002B00:00"
+    },
+    {
       "id": "200687844-3250",
       "title": "CA-Technical Specialist",
       "company": "Apple",
@@ -351,22 +367,6 @@
       "removedInRunId": "2026-10-07T13-22-03Z",
       "aboutTheJobRaw": "Apple\u0027s cloud AI inference platform is growing quickly, and so is the organisation that builds it. We have a complex inference stack, a rapidly changing generative-AI landscape, and more responsibility than our current teams can hold \u2014 so we are looking for engineering managers to take ownership of components of that stack and lead the teams that build them. This role is based in London.",
       "postedAtCandidate": "2026-08-19T00:00:00.0000000\u002B00:00"
-    },
-    {
-      "id": "200685035-4170",
-      "title": "Internship - Machine Learning (Foundation Models)",
-      "company": "Apple",
-      "url": "https://jobs.apple.com/en-us/details/200685035-4170/internship-machine-learning-foundation-models?team=MLAI",
-      "locations": [
-        "Zurich, Switzerland"
-      ],
-      "requestedLocation": "Switzerland",
-      "firstSeenAt": "2026-09-22T21:19:10.2338112\u002B00:00",
-      "lastSeenAt": "2026-10-06T22:40:57.9760295\u002B00:00",
-      "removedAt": "2026-10-07T13:22:03.9542810\u002B00:00",
-      "removedInRunId": "2026-10-07T13-22-03Z",
-      "aboutTheJobRaw": "We are looking for a machine learning research intern with passion to spearhead new solutions to challenging problems in foundation model development with an emphasis on agentic capabilities and Reinforcement Learning. You will closely work with an applied ML team of around 35 engineers in Zurich, and get the chance to connect with other experts in the US.",
-      "postedAtCandidate": "2026-09-22T00:00:00.0000000\u002B00:00"
     },
     {
       "id": "200626867-2114",
@@ -1487,6 +1487,22 @@
       "removedInRunId": "2026-09-09T20-56-37Z",
       "aboutTheJobRaw": "Join our team leading operational relationships with Apple Resellers across EMEIA. As a Reseller Operations Supply Chain Account Manager, you\u0027ll cultivate strong external and internal partnerships, leveraging your analytical skills and influence to optimise product availability and drive sell-through. You\u0027ll be a key voice for the Reseller Channel within Operations, ensuring our products are in the right places at the right time. If you thrive in a fast-paced environment and enjoy influencing complex business relationships, this is your opportunity to make a significant impact.",
       "postedAtCandidate": "2026-06-10T00:00:00.0000000\u002B00:00"
+    },
+    {
+      "id": "200669097-2114",
+      "title": "SRE, London",
+      "company": "Apple",
+      "url": "https://jobs.apple.com/en-us/details/200669097-2114/sre-london?team=SFTWR",
+      "locations": [
+        "London, United Kingdom"
+      ],
+      "requestedLocation": "United Kingdom",
+      "firstSeenAt": "2026-07-08T08:43:42.8443670\u002B00:00",
+      "lastSeenAt": "2026-10-13T00:39:54.2998767\u002B00:00",
+      "removedAt": "2026-09-09T20:56:37.5364948\u002B00:00",
+      "removedInRunId": "2026-09-09T20-56-37Z",
+      "aboutTheJobRaw": "People at Apple don\u2019t just build products \u2014 they craft the kind of experience that have revolutionized entire industries. The diverse collection of our people and their ideas inspire innovation in everything we do. Imagine what you could do here! Join Apple, and help us leave the world better than we found it. The Apple Services Engineering (ASE) team builds and provides systems and infrastructure that fuel Apple\u2019s services (such as iCloud, iTunes, Siri, and Maps). We are the foundation on which Apple\u2019s software developers build the products that our customers love. We are looking for pass...",
+      "postedAtCandidate": "2026-09-17T00:00:00.0000000\u002B00:00"
     },
     {
       "id": "200680120-1731",
