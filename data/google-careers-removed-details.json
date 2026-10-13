@@ -1,6 +1,51 @@
 {
   "jobs": [
     {
+      "id": "134227636007117510",
+      "title": "Software Engineer III, Information Security",
+      "company": "Google",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/134227636007117510-software-engineer-iii-information-security?location=Switzerland\u0026q=Software\u002BEngineer\u0026page=1",
+      "locations": [
+        "Munich, Germany",
+        "Z\u00FCrich, Switzerland"
+      ],
+      "requestedLocation": "Switzerland",
+      "firstSeenAt": "2026-10-08T23:20:55.2377437\u002B00:00",
+      "lastSeenAt": "2026-10-12T15:21:05.7705107\u002B00:00",
+      "removedAt": "2026-10-13T00:39:22.1840437\u002B00:00",
+      "removedInRunId": "2026-10-13T00-39-22Z",
+      "applyUrlRaw": "https://www.google.com/about/careers/applications/signin?jobId=CiUAL2FckX2QIDgx89h0PkSLFN3Gzje3jVV1GHJq6q8OD8PhpG86EjsA9yzvgsKdR0OjrkZi6HYS9e5GmIv7hFeXa6dK1UMqLGDfx9G8cP8QpLFDY0LG74inFT9WrcqgVJ_-YQ%3D%3D_V2\u0026loc=DE\u0026title=Software\u002BEngineer\u002BIII",
+      "aboutTheJobRaw": "Google\u0027s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\u0027re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google\u2019s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.\u003Cbr\u003EThe Core team builds the technical foundation behind Google\u2019s flagship products. We are owners and advocates for the underlying design elements, developer platforms, product components, and infrastructure at Google. These are the essential building blocks for excellent, safe, and coherent experiences for our users and drive the pace of innovation for every developer. We look across Google\u2019s products to build central solutions, break down technical barriers and strengthen existing systems. As the Core team, we have a mandate and a unique opportunity to impact important technical decisions across the company.Individual pay is determined by factors including job-related skills, experience, and relevant education or training.  \u003Cbr\u003E\u003Cbr\u003EGermany: \u20AC106000 - \u20AC108000 (EUR) \u002B 15% bonus target \u002B equity \u002B benefits\u003Cbr\u003E\u003Cbr\u003ELearn more about \u003Ca href=\u0022https://www.google.com/about/careers/applications/benefits/\u0022 target=\u0022_blank\u0022\u003Ebenefits at Google\u003C/a\u003E.",
+      "responsibilitiesRaw": "\u003Cul\u003E\n\u003Cli\u003EDesign and implement new techniques and make them work for extremely large scale software systems across many product teams. Help deploy exploit mitigations, retrofit spatial safety to C\u002B\u002B and transition Google to memory safe programming languages such as Rust.\u003C/li\u003E\u003Cli\u003EBuild strong partnerships and collaborate with partner teams in Google\u0027s Memory Safety program, as well as with industry and academia.\u003C/li\u003E\u003Cli\u003EFix memory safety across all Google products. From initial security research and tactical exploit mitigations to engineering away classes of problems and addressing their root cause.\u003C/li\u003E\u003Cli\u003EResearch and apply innovative techniques for memory safety, from program analysis to machine learning.\u003C/li\u003E\n\u003C/ul\u003E",
+      "minimumQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EBachelor\u2019s degree or equivalent practical experience.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree.\u003Cbr\u003E\u003C/li\u003E\n\u003Cli\u003E2 years of experience building software for data privacy or security (e.g., identity and access management).\u003Cbr\u003E\u003C/li\u003E\n\u003C/ul\u003E",
+      "preferredQualificationsRaw": "\u003Cul\u003E\n\u003Cli\u003EMaster\u0027s degree or PhD in Computer Science or related technical fields.\u003Cbr\u003E\u003C/li\u003E\u003Cli\u003E2 years of experience with data structures and algorithms.\u003Cbr\u003E\u003C/li\u003E\u003Cli\u003EExperience with Rust coding language.\u003C/li\u003E\u003Cli\u003ESystem Architecture, Compilers, Open Source Technologies, Open Source Contributor, Programming Language Implementation experience.\u003C/li\u003E\u003Cli\u003ESecurity and API Design experience.\u003C/li\u003E\u003Cli\u003EFoundations in security engineering, computer and network security.\u003C/li\u003E\n\u003C/ul\u003E",
+      "experienceLevelRaw": "Mid",
+      "locationsRawDetailed": [
+        {
+          "displayName": "Munich, Germany",
+          "addresses": [
+            "Munich, Germany"
+          ],
+          "city": "Munich",
+          "regionCode": "BY",
+          "countryCode": "DE"
+        },
+        {
+          "displayName": "Z\u00FCrich, Switzerland",
+          "addresses": [
+            "Z\u00FCrich, Switzerland"
+          ],
+          "city": "Z\u00FCrich",
+          "regionCode": "ZH",
+          "countryCode": "CH"
+        }
+      ],
+      "rawTimestampPairs": [
+        "2026-10-08T14:39:13.2770000\u002B00:00",
+        "2026-10-08T14:39:13.3940000\u002B00:00"
+      ]
+    },
+    {
       "id": "124745382230926022",
       "title": "Customer Developer, Cloud AI, Google Cloud",
       "company": "Google",
