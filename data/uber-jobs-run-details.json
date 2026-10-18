@@ -17926,6 +17926,126 @@
           "unchanged": []
         }
       ]
+    },
+    {
+      "runId": "2026-10-18T11-04-34Z",
+      "added": [],
+      "removed": [],
+      "changed": [],
+      "unchanged": [
+        {
+          "id": "303326",
+          "title": "Senior Software Engineer - Storage Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/303326/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        },
+        {
+          "id": "155089",
+          "title": "Software Engineer - Denmark Pool",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/155089/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        },
+        {
+          "id": "303602",
+          "title": "Software Engineer II - Engineer",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/303602/",
+          "locations": [
+            "Toronto, Canada"
+          ],
+          "requestedLocation": "Canada"
+        },
+        {
+          "id": "300427",
+          "title": "Sr Software Engineer - Deployment Platform",
+          "company": "Uber",
+          "url": "https://jobs.uber.com/en/jobs/300427/",
+          "locations": [
+            "Midtjylland, Denmark"
+          ],
+          "requestedLocation": "Denmark"
+        }
+      ],
+      "perLocation": [
+        {
+          "location": "Canada",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "303602",
+              "title": "Software Engineer II - Engineer",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/303602/",
+              "locations": [
+                "Toronto, Canada"
+              ],
+              "requestedLocation": "Canada"
+            }
+          ]
+        },
+        {
+          "location": "Denmark",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": [
+            {
+              "id": "303326",
+              "title": "Senior Software Engineer - Storage Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/303326/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            },
+            {
+              "id": "155089",
+              "title": "Software Engineer - Denmark Pool",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/155089/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            },
+            {
+              "id": "300427",
+              "title": "Sr Software Engineer - Deployment Platform",
+              "company": "Uber",
+              "url": "https://jobs.uber.com/en/jobs/300427/",
+              "locations": [
+                "Midtjylland, Denmark"
+              ],
+              "requestedLocation": "Denmark"
+            }
+          ]
+        },
+        {
+          "location": "Netherlands",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        },
+        {
+          "location": "United Kingdom",
+          "added": [],
+          "removed": [],
+          "changed": [],
+          "unchanged": []
+        }
+      ]
     }
   ]
 }
