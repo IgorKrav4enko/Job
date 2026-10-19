@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+  "generatedAt": "2026-10-19T22:23:22.1629807\u002B00:00",
   "source": "NVIDIA Careers",
   "status": "success",
-  "notes": "Normalized 77 active NVIDIA jobs from latest raw snapshot.",
+  "notes": "Normalized 78 active NVIDIA jobs from latest raw snapshot.",
   "searchTerm": "software engineer",
   "locations": [
     {
@@ -67,10 +67,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893392950408",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-22T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-22T21:19:30.1490427\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "62d86080d9c7c35a1afa4130769e459b34b84652ed7c795a15eadff0b995fdfd"
     },
@@ -87,9 +87,25 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-09T13:16:24.4781712\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "40c01ab9413d19d8ab03fe66df155302f3b140320d253c828a023704c9b87fcf"
+    },
+    {
+      "id": "893398235775",
+      "title": "ASIC Verification Intern - Summer 2027",
+      "company": "NVIDIA",
+      "locations": [
+        "Canada, Toronto"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893398235775",
+      "requestedLocation": "Canada",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Canada\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
+      "isActive": true,
+      "contentHash": "b40070e42296ef929800c3e18ffa5bbe3aca945a26f4f1fa6f7d23b6fc0df165"
     },
     {
       "id": "893397024287",
@@ -104,7 +120,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-08-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-14T19:14:16.5374444\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "60d26f9836533e3b226b18236bb2a2b5bb3aac282686be493ce447742599ea7e"
     },
@@ -120,7 +136,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Spain\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-08-04T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-10T22:45:13.3859656\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "8d060069d1b13669d7877efae49005e0bad0dbcfa20f8ba6e6939006810bc938"
     },
@@ -139,7 +155,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-07-29T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-29T19:42:45.1945297\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "a6d6ee6d2c14ef26c7c0f44bd2065bac866097cd6140a90f7c6d2efb07f63e40"
     },
@@ -155,7 +171,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-07-29T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-29T19:42:45.1945297\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "93cf61bfc29d58d96aaec02b3ef3a6208dc159c3b4516c44f1bebf64b0c584fa"
     },
@@ -171,7 +187,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-07-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-30T08:48:47.5675459\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "3ce4ad0801a61679436825d1974b136975ccc05f92d3fcc3405caba0424cf1e9"
     },
@@ -189,7 +205,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-30T22:16:24.2636043\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "2acbdcec1ae557ea979f78addf8b8eed5d64c644151cae055235f09ad7b752ab"
     },
@@ -203,10 +219,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893398190712",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-15T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-15T21:23:35.2595131\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "598396f1a997583c07f994205e6ce15d6de932b091c8bfe2e793519fe68f958f"
     },
@@ -219,10 +235,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893398202749",
       "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-16T11:22:32.9455376\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "847631e197458942b9c00d5a7b33db78fdc79ae6468c180bda1a087a3fb368f9"
     },
@@ -238,7 +254,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Canada\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-13T22:45:02.0492484\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "42d25d3c7aabaf781aab16363fff09fa2db9356bc6a7ee538e97863e8ab674d5"
     },
@@ -254,10 +270,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893397640600",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-10T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-10T20:52:55.3167312\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "137e3c0d044e2fb2add600ce6b668357ea4a9efc95390a4c259d3a4b1431b650"
     },
@@ -274,10 +290,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893392964974",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-04-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "6c2eeffae1df564a8e25e2175f2f9bbb429ca3837065b648f6293ed269c7efbe"
     },
@@ -288,18 +304,16 @@
       "locations": [
         "Germany, Munich",
         "Remote - France",
-        "Remote - Germany",
-        "Remote - Switzerland",
-        "Remote - UK"
+        "Remote - Germany"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893396030753",
-      "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-09-30T00:00:00.0000000\u002B00:00",
+      "requestedLocation": "Germany",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-16T08:33:49.4619031\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "541310ccba4cff26b859ae483bf1ae00b33b794379175f066e4a2631ac7d6146"
+      "contentHash": "e0abc15c44ef0e961866affc9f59e2274e496ae6d1531e812a920002fc179c36"
     },
     {
       "id": "893395799578",
@@ -316,7 +330,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-21T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-08T19:55:47.1963933\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "de4d7e3351ab731b722044b67bf7d2b88f498f1fd2e45f7d44bbcdfbd83dcd56"
     },
@@ -332,7 +346,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Canada\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-07-06T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-21T07:08:26.9420700\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "94238a14517a6a2e9c691185a4bc4756db8802a053535cadf5177066af482453"
     },
@@ -348,7 +362,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-13T00:40:15.0949524\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "0370aff48a41b086ac203477d6bfa3d9713028907f010c0750211f4ad9452e05"
     },
@@ -364,10 +378,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893397757194",
       "requestedLocation": "Germany",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-18T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-18T20:55:45.4163506\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "5b601ba935e12aa9854bd40e1fafbf05a38678d8ceb278ffddaec168991f213d"
     },
@@ -387,7 +401,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-01T13:18:53.8672362\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "9185c196855c6c6ae219bb3df1508accd83b94161f049475be1683d6bcae3782"
     },
@@ -406,7 +420,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-13T14:11:01.2069508\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "34633b13d2e903afa4a7aa80ca74362f0d045fb6dd8779fb3812c6caaf513674"
     },
@@ -423,7 +437,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-06-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-12T10:40:14.3375383\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "0f36d1172db78ee9656d8a409cd914b799e9f26c02290892b3af6213b3158d58"
     },
@@ -433,18 +447,32 @@
       "company": "NVIDIA",
       "locations": [
         "Germany, Munich",
-        "Remote - UK",
-        "Switzerland, Zurich",
         "UK, Cambridge"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893396408293",
+      "requestedLocation": "Germany",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-07-17T08:27:54.6608819\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
+      "isActive": true,
+      "contentHash": "8371e20dd9aab1625ef33312a9d67ff6ef64e90480fe5f9c2d6bebf528394b51"
+    },
+    {
+      "id": "893391032265",
+      "title": "Senior CPU Performance Developer Technology Engineer",
+      "company": "NVIDIA",
+      "locations": [
+        "Switzerland, Zurich"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893391032265",
       "requestedLocation": "Switzerland",
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-07-17T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-07-17T08:27:54.6608819\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "cd2e842664188e5eaa01ba010835edeceb07552234997af7d27eb965c4ffbbd0"
+      "contentHash": "70ce331b4fd3e89b378f969b6b90a37b8311a4bcbec2ecc274bbefafa961e2d0"
     },
     {
       "id": "893391009867",
@@ -452,19 +480,17 @@
       "company": "NVIDIA",
       "locations": [
         "Germany, Berlin",
-        "Germany, Munich",
         "Netherlands, Amsterdam",
-        "Poland, Warsaw",
-        "Switzerland, Zurich"
+        "Poland, Warsaw"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893391009867",
       "requestedLocation": "Poland",
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-09-23T00:00:00.0000000\u002B00:00",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "fe1d670d2e0823593d557afe44e2d462e0604dd6d66fbb6a0f11a97e292cb59e"
+      "contentHash": "ba72820e4a80e3390e38ceac4f9c4acf94f0f73e0b11b587f8f2b1cd4e345c0a"
     },
     {
       "id": "893396896658",
@@ -473,18 +499,16 @@
       "locations": [
         "Remote - France",
         "Remote - Netherlands",
-        "Remote - Poland",
-        "Remote - Spain",
-        "Remote - Switzerland"
+        "Remote - Poland"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893396896658",
       "requestedLocation": "Poland",
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-09-22T00:00:00.0000000\u002B00:00",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-20T18:59:59.9987488\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "e09ec9556aeba8974796bc405d59ab10feb48335ab0a449ea18ab70949b122c7"
+      "contentHash": "0ef43cca9521b71b927891885b857969d57ca33053084fceabe3e57ab072c4ce"
     },
     {
       "id": "893396950854",
@@ -500,7 +524,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-10T19:16:29.1537527\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "a8472c413a305c28b8a62a814019011107779ccf9838bb71c9d6c7986c106c60"
     },
@@ -519,7 +543,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-11T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-12T10:45:51.7593115\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "d8cf1ae9d8c93013df7321ad82c75cdf8380e3e519acdab1f01652a5c043d8e4"
     },
@@ -536,7 +560,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=France\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-11T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-12T10:45:51.7593115\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "dae752b230957d2b6411b2c2b61b170745bbe31542a00bb2508b2a4a6f838b14"
     },
@@ -553,7 +577,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-08-26T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "f0621f1469b6465c62154ea7e209029b953bca59e7e24ceb0adb9d9df4baa88b"
     },
@@ -567,10 +591,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893397739768",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-17T21:22:34.5115005\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "8eb53b3fcec96f3c79b2e13757d151003638ef1becfcda34393fecdd781fcaf5"
     },
@@ -587,7 +611,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-08T11:19:02.3442836\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "fdf889680e8902e800127ea59aef546563bf542962ef9a1666101cfa37dc4458"
     },
@@ -603,7 +627,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-17T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-17T21:22:34.5115005\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "ccdb33b22f2939cee46552b42d34314ae35934115f84a6b2d5471f9d9f94a032"
     },
@@ -620,7 +644,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Canada\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-16T21:07:58.9193728\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "dbc3aae9ef572cc8909c87d480d2f958b53acb065d68560d19ca4d2eab722909"
     },
@@ -638,7 +662,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-01T21:03:01.5424474\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "62e8892b083fad241b03a0fd8c64b9d91aa0169d3920ce07b1f70bec9788e593"
     },
@@ -654,7 +678,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Canada\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-09T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-22T18:49:28.6334147\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "73bc524f9dcfba2e73295d9860501219f68b47e8d2ee1666075527800e600f1a"
     },
@@ -664,17 +688,16 @@
       "company": "NVIDIA",
       "locations": [
         "Remote - Germany",
-        "Remote - UK",
         "Switzerland, Zurich"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893394327177",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-10-14T00:00:00.0000000\u002B00:00",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-04T19:55:12.3999864\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "b21fa814c46922b1d5e093ee3b28a1b7bf2d97a6c4cc03f8b226287b04228a9b"
+      "contentHash": "d524fb247e8bce392daa3859752b7f49636df85375bbd1ce9da2e1f8095fb025"
     },
     {
       "id": "893397430737",
@@ -689,7 +712,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-08-28T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-28T18:42:03.0617854\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "518b923d35fdf6fbfee10d60aff7532331a46daeb5b5368ec5ae3d97ddb9cd78"
     },
@@ -705,7 +728,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-01T21:03:01.5424474\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "2c3b7148f10695ff5867e0ca6ad8162f61b7c57659e8cfa3bc4b66fd8a9be312"
     },
@@ -714,21 +737,18 @@
       "title": "Senior Libraries Engineer \u2013 AI and HPC",
       "company": "NVIDIA",
       "locations": [
-        "Poland, Warsaw",
-        "Remote - Germany",
-        "Remote - Hungary",
-        "Remote - Poland",
-        "Remote - Spain",
-        "Remote - Switzerland"
+        "Remote - Switzerland",
+        "Remote - UK",
+        "Switzerland, Zurich"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893391933795",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-09-22T00:00:00.0000000\u002B00:00",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "355ab1f97fe6290354df8aea6457935f46072518830881c774bb2fec281c7fc9"
+      "contentHash": "40634da08caddc19d2a777ae6d00a63fbb9090dfa5285aab4a9108aee30a9b50"
     },
     {
       "id": "893393240433",
@@ -743,7 +763,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Canada\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-03-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-10T22:45:13.3859656\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "9176c856705791cae268b300655adb8eecc364c741b8588addf7012fc58a5116"
     },
@@ -760,7 +780,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-05-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "ff07667416d759d846b2e30dd28da87fd24b627e6abcd7527d08e8d93db105af"
     },
@@ -770,35 +790,16 @@
       "company": "NVIDIA",
       "locations": [
         "Remote - France",
-        "Remote - Poland",
-        "Remote - Switzerland"
+        "Remote - Poland"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893397758833",
       "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-10-16T00:00:00.0000000\u002B00:00",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-18T20:55:45.4163506\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "65c3f88c66644b2413ebed27d944168c7c2082c355f1371943033fa2d96ebe7e"
-    },
-    {
-      "id": "893391405393",
-      "title": "Senior Math Libraries Engineer \u2013 Emulation in AI and HPC",
-      "company": "NVIDIA",
-      "locations": [
-        "Remote - France",
-        "Remote - Germany",
-        "Remote - Poland"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893391405393",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-09-23T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
-      "isActive": true,
-      "contentHash": "a3957817f90c4343e8d17ebef7575210ca5f5ecf67e993ea3696f070db595c40"
+      "contentHash": "46b193b0ad2edf1df8bc3ee46ea1f656b99b34457baed2d0e5faf6399e5d21ea"
     },
     {
       "id": "893397522395",
@@ -814,7 +815,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-01T21:03:01.5424474\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "c18946dad10b3bf1bd4c5f59399a68baf4195ab0e65012deffb597aa5e567b21"
     },
@@ -831,7 +832,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-08-04T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-04T19:56:09.5882433\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "6af73e8ae57393da4575b5c532ed9d71c228c11b49756a7fac70e63b355b1c75"
     },
@@ -845,10 +846,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893398023834",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-06T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-06T22:41:12.0965458\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "6d80d39bd7ae151bd5eada76c63e07f41870843d8214baa94dbdcef5372ceed6"
     },
@@ -865,7 +866,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-22T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-26T20:03:57.7190386\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "3c08b4af8f8cace73a9a29ac61e7984bc8164737bcb612884b47a7c7c0f1b122"
     },
@@ -882,7 +883,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-22T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-26T20:03:57.7190386\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "488670f09b85645147a811ead9918d6e40b26461c71d50e75d3d714ffef9308a"
     },
@@ -899,7 +900,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-22T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-26T20:03:57.7190386\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "488670f09b85645147a811ead9918d6e40b26461c71d50e75d3d714ffef9308a"
     },
@@ -915,7 +916,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-05-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-08T19:55:47.1963933\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "9252c476883c5ead465872eddaa91f1f879d527f1ecef6897960e6934087652d"
     },
@@ -925,17 +926,16 @@
       "company": "NVIDIA",
       "locations": [
         "Remote - France",
-        "Remote - Spain",
-        "Remote - UK"
+        "Remote - Spain"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893382452913",
-      "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-10-14T00:00:00.0000000\u002B00:00",
+      "requestedLocation": "France",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=France\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "80e91d8f455d7a9bf83629613239f8847d33207490915af8def3185ee3ebad1f"
+      "contentHash": "6240eea39454b018418544dea181f1c9e65210db012a7f0b9a5fb846fdd35cc5"
     },
     {
       "id": "893394873686",
@@ -950,7 +950,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-06-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-03T11:22:55.9766698\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "c1ebaa786ee272276dfb19188cdc97a0b61cc2b2d92f754c9df9b2c9255b63e4"
     },
@@ -967,7 +967,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-16T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "55968fa0dc193e617ed0eb4929236856b87b8d7fd989243c514256dde7d3ac51"
     },
@@ -984,7 +984,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "fdfb4b22db0366b7aef761bdea5f9f48cd904886841892b64a5cfdb9d456fbb1"
     },
@@ -1000,7 +1000,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-30T22:16:24.2636043\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "1fdb9d23b64cf4cef4896bd47859fd8a40156d5339917a5369cbb1a2c143fda7"
     },
@@ -1010,17 +1010,16 @@
       "company": "NVIDIA",
       "locations": [
         "Germany, Munich",
-        "Remote - Poland",
-        "Remote - Switzerland"
+        "Remote - Poland"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893396999274",
       "requestedLocation": "Poland",
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-09-22T00:00:00.0000000\u002B00:00",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-13T07:52:52.9148827\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "c07375663fa96fdc6346a15164ad6269a894c2dc794402591bec202d867524e2"
+      "contentHash": "7c2417d8f2b9bfc055552bb589a3296b3533e4bfc9795c5b84487703d100accf"
     },
     {
       "id": "893395382277",
@@ -1034,7 +1033,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-13T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-06-15T12:42:15.6899785\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "b2eec4ad399f1495dd5efa8faed2332f219ebf98ffa9517832c49c48846dbe2d"
     },
@@ -1043,20 +1042,17 @@
       "title": "Senior Software Engineer, JAX",
       "company": "NVIDIA",
       "locations": [
-        "Remote - France",
-        "Remote - Germany",
-        "Remote - Poland",
         "Remote - Switzerland",
         "Remote - UK"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893394712289",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-10-12T00:00:00.0000000\u002B00:00",
+      "requestedLocation": "Switzerland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "b9492727fb002e692d19e917d2c4f965fe490cbf0e0590cc466be3cc0e2b5369"
+      "contentHash": "f2dda39f6f0dea99f3d0ffb2948a34c23a2299b3cd8134fbe81e986dfcdb4a11"
     },
     {
       "id": "893397901996",
@@ -1071,7 +1067,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Canada\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-28T23:17:46.4134262\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "6cc76e5d6194d618db789a5287c31f07dfb2dbee4031b315d1074bf065cf3faf"
     },
@@ -1088,7 +1084,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-08T13:28:49.3980713\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "24e8a94c043283b3fb3f39d9a6eb0c7b5e4a28ae895563e82a372130b9095742"
     },
@@ -1099,18 +1095,16 @@
       "locations": [
         "Remote - Germany",
         "Remote - Netherlands",
-        "Remote - Poland",
-        "Remote - Switzerland",
-        "Remote - Ukraine"
+        "Remote - Poland"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893396981878",
       "requestedLocation": "Poland",
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-09-22T00:00:00.0000000\u002B00:00",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-08-12T19:20:34.8715799\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "0bf8c27c9116b8c1bd81bcc444d3bbcd036102da74807ce77e7ce014a508c440"
+      "contentHash": "e0373142562b87fbbb53b408e5a4384f674362c765ac037a34291a56ae7c50aa"
     },
     {
       "id": "893382818601",
@@ -1125,7 +1119,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-30T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-13T20:08:59.1697354\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "e8de46d01a34e3256ce584c57c24ba41de74cdb5ecef9bf64e7ead227d316485"
     },
@@ -1145,7 +1139,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-16T11:31:39.3418475\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "69b90b2a9de65e768addb660221a76f62b41c0f60a1c1b5b97985154ac607582"
     },
@@ -1162,10 +1156,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893397606550",
       "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-23T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-23T21:31:12.4721130\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "b6aa457d4a9cd6331ef8d96daa41fa20533d7fa97e9bc692f9efabd31c0436a4"
     },
@@ -1182,7 +1176,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-02T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-08T13:28:49.3980713\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "17bf8e209fe996394d2525d38e3c629386057c6d0d1d706c0b472cee262883b2"
     },
@@ -1198,7 +1192,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Netherlands\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-11T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-12T10:45:51.7593115\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "68967f88d74561d47749b8f91b863a623604efa1ad34b6d18531edbc27889ffb"
     },
@@ -1209,18 +1203,16 @@
       "locations": [
         "Remote - Germany",
         "Remote - Netherlands",
-        "Remote - Poland",
-        "Remote - Switzerland",
-        "Remote - Ukraine"
+        "Remote - Poland"
       ],
       "url": "https://jobs.nvidia.com/careers/job/893397787393",
       "requestedLocation": "Poland",
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-09-22T00:00:00.0000000\u002B00:00",
+      "postedAtCandidate": "2026-10-19T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-21T12:47:17.7811091\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
-      "contentHash": "39004ca3f690046dd2208d74a40b8f5980d5be828335871f35681c919a844be8"
+      "contentHash": "4a2969155c310ba90623b5d81d0e491f386cd85345fdb1717bbd1401e20f9359"
     },
     {
       "id": "893398080225",
@@ -1235,7 +1227,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-09T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-09T13:16:24.4781712\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "cba44660ac5e82fe8c3a47dff7ba6af9b924f0b3855d23d36f5389c12d9ad75f"
     },
@@ -1252,7 +1244,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-05T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-05T14:35:48.2839781\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "c839e6d54a4d6b0e96908de3df2d83c48f03fa7b455a78e027de52738d57baad"
     },
@@ -1269,7 +1261,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-06T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-05-11T09:59:44.1252516\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "2e2f5c6a7e3b870657a6e5866080d21da33db8b730de2d8b0b307e4516e78557"
     },
@@ -1287,10 +1279,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893398109856",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-12T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-12T15:21:49.5876413\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "207ffd3460081aa7d635433dc675761a8cec025b6943aad9780566c4c919ac0b"
     },
@@ -1306,7 +1298,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-29T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-29T12:52:02.4871298\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "be7c8a9af00b744da5fc449245813b0fb3306a572fe55efb383c7b57a6b78411"
     },
@@ -1322,10 +1314,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893396770971",
       "requestedLocation": "Switzerland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Zurich\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-07-28T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-07-28T19:52:20.7792575\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "c40afa1ce2bc16c051b2b3fe13fb71b624b75938550654a8d9e86fd0c80221aa"
     },
@@ -1342,7 +1334,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=France\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-01T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-01T13:18:53.8672362\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "bdd866765d3ca8e610bde8fe393a0f347f5d738e67894fae9cff59100cdc5b0d"
     },
@@ -1359,7 +1351,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-08-27T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-10-02T12:33:26.4469489\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "6cf9a18b6a9ac1bcbbecafb7f168978a2cbf265ba117921f4d984c98878249fd"
     },
@@ -1375,7 +1367,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Germany\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-08T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-08T11:19:02.3442836\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "ac6514f909fb1e70a600c2ff0cbdd2407872b045e327b415cfa3a0f297188dac"
     },
@@ -1392,7 +1384,7 @@
       "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=0\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-10-14T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-10T20:52:55.3167312\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "f2994447d1df101fd900d9f5d3b59353e90d5b676dc16bec94472a6ac5261af2"
     },
@@ -1406,10 +1398,10 @@
       ],
       "url": "https://jobs.nvidia.com/careers/job/893397606441",
       "requestedLocation": "United Kingdom",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=20\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=United%20Kingdom\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
       "postedAtCandidate": "2026-09-11T00:00:00.0000000\u002B00:00",
       "firstSeenAt": "2026-09-09T11:22:24.2258905\u002B00:00",
-      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "lastSeenAt": "2026-10-19T22:23:22.1629807\u002B00:00",
       "isActive": true,
       "contentHash": "0c3eaae354aab276b5f63f9374dd755c29489ec99ec734df7bf55275d980c515"
     },
@@ -2137,26 +2129,6 @@
       "contentHash": "01f1fea39bbf6786e685754b0e35ed07ff86730e92c7086fe90978b1b8f39460"
     },
     {
-      "id": "893391032265",
-      "title": "Senior CPU Performance Developer Technology Engineer",
-      "company": "NVIDIA",
-      "locations": [
-        "Germany, Wuerselen",
-        "Remote - Germany",
-        "Remote - Poland",
-        "Remote - Switzerland",
-        "UK, Bristol"
-      ],
-      "url": "https://jobs.nvidia.com/careers/job/893391032265",
-      "requestedLocation": "Poland",
-      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
-      "postedAtCandidate": "2026-09-23T00:00:00.0000000\u002B00:00",
-      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
-      "lastSeenAt": "2026-10-13T00:40:15.0949524\u002B00:00",
-      "isActive": false,
-      "contentHash": "2deafac378af13c82adc26471ba066ced4dfb4cd0f37d045d3dc33e80f06cf99"
-    },
-    {
       "id": "893397430729",
       "title": "Senior Data Center Ethernet Network Engineer",
       "company": "NVIDIA",
@@ -2567,6 +2539,24 @@
       "lastSeenAt": "2026-09-15T11:44:24.6586933\u002B00:00",
       "isActive": false,
       "contentHash": "a7686e06c0c79061b0f06de20232a1fda2e87df0bc90429e2cc9b8d7432cbbc7"
+    },
+    {
+      "id": "893391405393",
+      "title": "Senior Math Libraries Engineer \u2013 Emulation in AI and HPC",
+      "company": "NVIDIA",
+      "locations": [
+        "Remote - France",
+        "Remote - Germany",
+        "Remote - Poland"
+      ],
+      "url": "https://jobs.nvidia.com/careers/job/893391405393",
+      "requestedLocation": "Poland",
+      "searchUrl": "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com\u0026query=software%20engineer\u0026location=Poland\u0026start=10\u0026sort_by=relevance\u0026filter_distance=160\u0026filter_include_remote=1\u0026filter_include_relocation=1",
+      "postedAtCandidate": "2026-09-23T00:00:00.0000000\u002B00:00",
+      "firstSeenAt": "2026-04-20T17:01:52.1049750\u002B00:00",
+      "lastSeenAt": "2026-10-19T13:12:03.1698764\u002B00:00",
+      "isActive": false,
+      "contentHash": "a3957817f90c4343e8d17ebef7575210ca5f5ecf67e993ea3696f070db595c40"
     },
     {
       "id": "893395110079",
